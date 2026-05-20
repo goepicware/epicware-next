@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import ChatWidget from "@/components/layout/ChatWidget";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
 
 export const metadata: Metadata = {
   title: {
@@ -22,24 +16,20 @@ export const metadata: Metadata = {
   description:
     "Epicware helps local businesses in Singapore rank higher on Google Maps, get more reviews, and grow with AI-powered SEO services and software.",
   metadataBase: new URL("https://www.epicware.ai"),
-  openGraph: {
-    type: "website",
-    locale: "en_SG",
-    url: "https://www.epicware.ai",
-    siteName: "Epicware",
-  },
+  openGraph: { type: "website", locale: "en_SG", url: "https://www.epicware.ai", siteName: "Epicware" },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <ChatWidget />
+      </body>
     </html>
   );
 }
