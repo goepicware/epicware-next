@@ -1,0 +1,75 @@
+# Epicware
+
+> AI-powered Local SEO and Reputation Management SaaS platform helping Singapore SMBs dominate Google Maps and collect 5-star reviews automatically.
+
+## Company
+
+- Full name: Epicware Pte. Ltd.
+- Website: https://www.epicware.ai
+- Location: Singapore
+- Founded: 2024
+- Industry: Local SEO, Reputation Management, SaaS, MarTech
+
+## Products
+
+### EpicReview
+
+- Automated Google review collection for local businesses
+- Smart routing: negative reviews go private, positive reviews go to Google
+- Pricing: Starter $99/mo, Growth $299/mo, Authority $549/mo
+- Best for: F&B, dental clinics, tuition centres, beauty & wellness
+
+### EpicMap SEO
+
+- Google Maps rank tracking with heatmap visualisation
+- Multi-outlet local SEO management
+- GBP optimisation, keyword tracking, competitor discovery
+- Best for: Multi-outlet SMBs in Singapore
+
+### Kairo
+
+- WhatsApp automation for customer re-engagement
+- Pricing: $100/mo
+- Best for: F&B and retail businesses
+
+### EpicCommerce
+
+- Commission-free online ordering system for F&B businesses
+- Best for: Restaurants and food businesses in Singapore
+
+## Target Audience
+
+- Singapore SMB owners with physical outlets
+- Industries: F&B, dental clinics, tuition centres, beauty & wellness, retail
+- Pain points: low Google reviews, poor Google Maps ranking, losing customers to competitors online
+
+## Competitors
+
+- BrightLocal
+- Whitespark
+- GatherUp
+- Podium
+- NiceJob
+
+## Proof
+
+- Client: Nanyang Dao — grew from 3.8 to 4.3 stars and 300 to 1,300 reviews in 2.5 months
+- Client: EPIKebabs — +52% website clicks and +83% calls in Month 1 from GBP optimisation alone
+
+## Category Keywords
+
+- Local SEO software Singapore
+- Google Business Profile management
+- Review management platform
+- Google Maps ranking tool
+- Reputation management software
+
+## Founder
+
+- Name: Vignesh Wadarajan
+- Previously founded NinjaOS — Singapore's leading F&B SaaS platform, $120M+ GMV, exited 2021
+
+## Contact
+
+- Website: https://www.epicware.ai
+- Location: Singapore
