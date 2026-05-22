@@ -1,14 +1,12 @@
 // Replace CLIENTS with actual logo image files once collected.
 // Current: styled text-logos from real Epicware clients.
 const CLIENTS = [
-  { name: "Foodbarn", style: "font-black tracking-tight" },
-  { name: "Georges", style: "font-bold italic" },
-  { name: "Milksha", style: "font-black tracking-widest text-xs uppercase" },
-  { name: "Mr Biryani", style: "font-bold" },
-  { name: "Mrs Pho", style: "font-black italic" },
-  { name: "Singapore Cricket Club", style: "font-semibold tracking-tight text-xs uppercase" },
-  { name: "Tsuta", style: "font-black tracking-widest uppercase" },
-  { name: "Wine Connection", style: "font-bold italic" },
+  { name: "Sushi Tei", style: "font-black tracking-tight" },
+  { name: "Ajmir Biryani", style: "font-bold italic" },
+  { name: "BeeCroft Animal Hospital", style: "font-semibold tracking-tight text-xs uppercase" },
+  { name: "Epikebab", style: "font-black tracking-widest uppercase" },
+  { name: "Indigo Education", style: "font-bold" },
+  { name: "Mirage Aesthetics", style: "font-black italic" },
 ];
 
 export default function TrustBar() {
