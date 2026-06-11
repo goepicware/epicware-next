@@ -3,6 +3,7 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import ServicesGrid from "@/components/category/ServicesGrid";
 import FinalCTA from "@/components/home/FinalCTA";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "Reputation Management Singapore — Grow Reviews & Remove Bad Ones | Epicware",
@@ -27,10 +28,10 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://www.epicware.ai",
+    url: "https://epicware.ai",
   },
-  areaServed: { "@type": "City", name: "Singapore" },
-  url: "https://www.epicware.ai/reputation-management-singapore",
+  areaServed: { "@type": "Country", name: "Singapore" },
+  url: "https://epicware.ai/reputation-management-singapore",
 };
 
 const CHILD_SERVICES = [
@@ -88,18 +89,16 @@ export default function ReputationManagementPage() {
             Your Google rating decides whether customers choose you or the business across the street.
             In Singapore&apos;s dense market, one bad review is visible to everyone within a 1km radius.
             Epicware&apos;s platform generates reviews, responds with AI, and removes the ones that shouldn&apos;t be there — all from one dashboard.
-            Call us at <a href="tel:+6590013157" className="underline font-semibold">+65 9001 3157</a> or book a free demo below.
           </>
         }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
         ctaSecondary={{ label: "Get Free GBP Audit", href: "/audit" }}
         trustSignals={[
-          "500+ Outlet Profiles Managed",
-          "Pay $0 If Bad Review Stays Up",
-          "Platform Always On",
-          "Singapore-Built · No Agency",
+          "500+ Outlets Managed",
+          "Bad Review Removal Guaranteed",
+          "Singapore-Built",
+          "Active in SG · MY · UAE · UK · US",
         ]}
-        overlayClass="bg-gradient-to-r from-black/80 via-black/65 to-black/40"
         imageSrc="/assets/review-management-illustration.png"
       />
 
@@ -186,8 +185,7 @@ export default function ReputationManagementPage() {
                 Review Generation Campaigns
               </Link>{" "}
               automate the ask. The platform sends personalised WhatsApp and email messages to your customers after a visit or
-              purchase — at exactly the right time, when the experience is still fresh. Clients consistently see their monthly
-              review count double within the first 60 days.
+              purchase — at exactly the right time, when the experience is still fresh.
             </p>
             <p>
               Once you have strong reviews, put them to work. The{" "}
@@ -195,7 +193,7 @@ export default function ReputationManagementPage() {
                 Wall of Love (Review Widgets)
               </Link>{" "}
               feature automatically pulls your best Google reviews onto your website — no manual updates, always live.
-              Visitors see social proof on the pages that matter most before they ever call or book. Finally,{" "}
+              Finally,{" "}
               <Link href="/reputation-management-singapore/reputation-analytics" className="text-primary font-medium hover:underline">
                 Reputation Analytics Dashboard
               </Link>{" "}
@@ -216,16 +214,22 @@ export default function ReputationManagementPage() {
             <p>
               Singapore&apos;s geography creates a reputation dynamic unlike any other market. The city is dense. A single
               1-star review is visible to every potential customer within a 1km radius — an entire HDB estate, a whole
-              commercial block. One unfair review can reach thousands of people who search &ldquo;best [your category] near me&rdquo;
+              commercial block. One unfair review can reach thousands of people who search for your category
               in Tampines, Jurong, Ang Mo Kio, or Clementi without you ever knowing it happened.
             </p>
             <p>
-              Multi-outlet businesses face the biggest challenge. F&B groups running three to ten restaurants, salon chains
+              Multi-outlet businesses face the biggest challenge. F&amp;B groups running three to ten restaurants, salon chains
               across multiple districts, and clinic networks managing several branches — each with its own Google Business
               Profile, its own reviews, and its own reputation risks. Epicware was built specifically for this. A single
               dashboard manages every outlet simultaneously, with individual analytics per location and unified campaigns
-              that run across all of them at once. Businesses we serve span Singapore, Malaysia, UAE, UK, and the US —
-              the platform works wherever your customers leave Google reviews.
+              that run across all of them at once. Businesses we serve span Singapore, Malaysia, UAE, UK, and the US.
+            </p>
+            <p>
+              The{" "}
+              <Link href="/products/epicreview" className="text-primary font-medium hover:underline">
+                EpicReview product
+              </Link>{" "}
+              is the technology layer behind these services — a self-serve platform you can access directly without any agency involvement.
             </p>
           </div>
         </div>
@@ -264,8 +268,9 @@ export default function ReputationManagementPage() {
         services={CHILD_SERVICES}
       />
 
-      {/* Final CTA */}
       <FinalCTA />
+      <StickyMobileCTA />
+      <div className="h-20 lg:hidden" />
     </>
   );
 }

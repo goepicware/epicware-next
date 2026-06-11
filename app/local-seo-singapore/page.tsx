@@ -3,6 +3,7 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import ServicesGrid from "@/components/category/ServicesGrid";
 import FinalCTA from "@/components/home/FinalCTA";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "Local SEO Singapore — Rank Higher on Google Maps | Epicware",
@@ -27,10 +28,10 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://www.epicware.ai",
+    url: "https://epicware.ai",
   },
-  areaServed: { "@type": "City", name: "Singapore" },
-  url: "https://www.epicware.ai/local-seo-singapore",
+  areaServed: { "@type": "Country", name: "Singapore" },
+  url: "https://epicware.ai/local-seo-singapore",
 };
 
 const CHILD_SERVICES = [
@@ -44,35 +45,35 @@ const CHILD_SERVICES = [
     name: "GBP Post Scheduling",
     href: "/local-seo-singapore/gbp-post-scheduling",
     description:
-      "Regular GBP posts signal activity to Google and keep your profile fresh for searchers. Epicware auto-generates and schedules posts so you never fall behind.",
+      "AI-generated weekly posts published to your Google Business Profile automatically. A freshness signal that supports rank without you lifting a finger.",
   },
   {
     name: "GBP Setup & Onboarding",
     href: "/local-seo-singapore/gbp-setup",
     description:
-      "New to Google Business Profile or taking over a neglected one? We handle the setup, verification, and baseline optimisation so you start ranking from day one.",
+      "Full GBP creation, category selection, verification, and initial optimisation for new or unclaimed profiles. Get it right from day one.",
   },
   {
     name: "Local Rank Tracking (EpicMap)",
     href: "/local-seo-singapore/local-rank-tracking",
     description:
-      "EpicMap shows exactly where your business ranks on the Google Maps grid — by keyword, by district, by day. See the gaps. Fix them. Watch the map fill in.",
+      "Visual map grid showing your Google Maps rank at every point across Singapore. See exactly where you appear — and where you don't.",
   },
   {
     name: "Citation Building",
     href: "/local-seo-singapore/citation-building",
     description:
-      "Consistent business listings across Singapore directories, review platforms, and data aggregators strengthen your local authority and help Google trust your NAP data.",
+      "Inconsistent NAP across Singapore's directories is a hidden rank penalty. Epicware audits and corrects your citations across 40+ platforms.",
   },
   {
     name: "Competitor Analysis",
     href: "/local-seo-singapore/competitor-analysis",
     description:
-      "See exactly what your top-ranking competitors are doing — their review counts, posting frequency, category choices, and keyword rankings — so you can close the gap.",
+      "See exactly why competitors rank above you — reviews, categories, photos, posting frequency — and close those gaps systematically.",
   },
 ];
 
-export default function LocalSEOPage() {
+export default function LocalSeoSingaporePage() {
   return (
     <>
       <script
@@ -82,24 +83,16 @@ export default function LocalSEOPage() {
 
       <CategoryHero
         badge="LOCAL SEO · SINGAPORE"
-        h1="Local SEO Services in Singapore — Get Found When It Matters Most"
-        subtitle={
-          <>
-            The three businesses in the Google Maps 3-Pack get 85% of local clicks. The rest get almost nothing.
-            Epicware&apos;s Local SEO platform manages your GBP, tracks your rank across every Singapore district,
-            and builds the infrastructure that puts you in those top three spots — and keeps you there.
-            Call us at <a href="tel:+6590013157" className="underline font-semibold">+65 9001 3157</a> or start with a free GBP audit.
-          </>
-        }
+        h1="Local SEO Singapore — Rank Higher on Google Maps"
+        subtitle="Get found when Singapore customers search for businesses like yours. Epicware's Local SEO services cover every factor that determines your Google Maps rank — from GBP optimisation to citation building to competitor analysis."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
-        ctaSecondary={{ label: "Get Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
-          "200+ Businesses Ranked",
-          "Free 19-Point GBP Audit",
-          "Singapore-Built Platform",
-          "No Agency Retainers",
+          "19-Point GBP Audit",
+          "Singapore-Built",
+          "AI-Native",
+          "No Agency Retainer",
         ]}
-        overlayClass="bg-gradient-to-r from-black/80 via-black/60 to-black/35"
         imageSrc="/assets/epicmap-before-after.png"
       />
 
@@ -107,149 +100,90 @@ export default function LocalSEOPage() {
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            When someone in Tampines searches &ldquo;best mee pok near me&rdquo;, the three businesses that appear
-            in the Google Maps 3-Pack get the vast majority of clicks. The rest get almost nothing. Local SEO in
-            Singapore is not about being somewhere on the first page — it is about being in the top three on the map,
-            in the right district, when the right person is searching. Most SMB owners do not know where they actually
-            rank, let alone why a competitor with fewer reviews consistently outranks them. The answer is almost always
-            a combination of GBP completeness, posting frequency, and citation consistency — three things Epicware
-            manages automatically, without you needing to touch your Google account daily.
+            Google Maps is where Singapore customers make decisions about local businesses. The 3-Pack — the top 3 results
+            that appear in the map section — captures over 70% of clicks. If your business is not in those top 3 spots for
+            your main keywords and your district, you are invisible to the majority of customers searching for exactly what
+            you offer. Every factor that determines your Maps rank is documented, measurable, and improvable.
+            Epicware&apos;s Local SEO services cover all of them.
           </p>
         </div>
       </section>
 
-      {/* H2: What problems */}
+      {/* Why Local SEO Matters */}
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            What Local SEO Problems Are You Facing?
-          </h2>
+          <h2 className="font-display text-foreground mb-6">Why Local SEO Matters in Singapore</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              The most common problem is an incomplete Google Business Profile. Most SMBs set up a GBP once,
-              verify the address, add a phone number, and never touch it again. Google weighs GBP completeness
-              heavily — missing categories, no weekly posts, zero Q&amp;A entries, outdated photos, unused attributes.
-              Every blank field is a ranking signal you are leaving on the table.
+              Singapore&apos;s market is hyperlocal. Rank is determined not just by category and relevance — it changes
+              by the searcher&apos;s location. A business in Tampines may rank 1st for customers searching within Tampines
+              but 15th for customers searching from Pasir Ris, 2km away. Without district-level rank tracking, you
+              can&apos;t see this gap — and without a systematic optimisation process, you can&apos;t close it.
             </p>
             <p>
-              The second problem is not knowing where you actually rank. You might check your own profile and
-              see your business appear in position three — but that is only because Google shows your location
-              relative to where you are searching from. A customer in a different part of your district might
-              see you in position eight or not at all. Without a rank-tracking grid, you are flying blind.
+              The factors that determine your rank include your Google Business Profile completeness, photo count and
+              recency, review count and rating, posting frequency, NAP consistency across the web, and your category
+              selection. Most Singapore SMBs have addressed some of these. The businesses in the top 3 have addressed
+              all of them.
             </p>
             <p>
-              Singapore&apos;s density makes this harder. In a city where competing businesses are sometimes
-              within the same building, GBP rank is decided by very small margins — review velocity, posting
-              consistency, citation accuracy, and how well your profile matches the exact keywords your customers
-              type. A competitor who posts twice a week and has 50 more reviews than you will consistently
-              outrank you even if your actual business is better.
+              See how{" "}
+              <Link href="/products/epicmap" className="text-primary font-medium hover:underline">EpicMap</Link>{" "}
+              tracks your rank position across every Singapore district, updated weekly.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: Our Services */}
+      {/* How Epicware Approaches Local SEO */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            Our Local SEO Services
-          </h2>
+          <h2 className="font-display text-foreground mb-6">How Epicware Approaches Local SEO</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware&apos;s Local SEO module starts with{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
-                GBP Optimisation
-              </Link>
-              . The platform runs a 19-point audit across every profile you manage, flags critical gaps,
-              and auto-generates improvements — primary and secondary category selections, attribute additions,
-              Q&amp;A entries, photo uploads, and a posting schedule. Whether you have one outlet or ten,
-              every profile stays fully optimised without you logging into Google daily.
+              Epicware starts with a 19-point GBP audit to identify every gap in your Google Business Profile. The highest-impact
+              fixes are applied first — categories, hours, photos, and NAP consistency — then the platform maintains and improves
+              your profile automatically over time. Weekly AI-generated posts, monthly citation scans, and continuous rank tracking
+              via EpicMap mean your Local SEO is always running, not just during the onboarding sprint.
             </p>
             <p>
-              Regular GBP posts are one of the most overlooked ranking signals. Epicware&apos;s{" "}
-              <Link href="/local-seo-singapore/gbp-post-scheduling" className="text-primary font-medium hover:underline">
-                GBP Post Scheduling
-              </Link>{" "}
-              generates posts automatically from your business data and schedules them at the right frequency.
-              New businesses or those migrating from an old profile start with{" "}
-              <Link href="/local-seo-singapore/gbp-setup" className="text-primary font-medium hover:underline">
-                GBP Setup &amp; Onboarding
-              </Link>
-              , where the platform handles verification, initial optimisation, and connects everything
-              to the Epicware dashboard in under 48 hours.
-            </p>
-            <p>
-              The most powerful feature for serious local SEO is{" "}
-              <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary font-medium hover:underline">
-                Local Rank Tracking (EpicMap)
-              </Link>
-              . EpicMap shows exactly where your business ranks on a geographic grid — by keyword, by district,
-              by day. You can see whether you rank in the top three in Bedok but drop to position seven in
-              the next postal district, and exactly which keywords are driving the gap.
-            </p>
-            <p>
-              Underpinning all of this is{" "}
-              <Link href="/local-seo-singapore/citation-building" className="text-primary font-medium hover:underline">
-                Citation Building
-              </Link>
-              , which ensures your business name, address, and phone number appear consistently across Singapore
-              directories, review platforms, and local data aggregators. Inconsistent citations confuse Google
-              and dilute your local authority. Finally,{" "}
-              <Link href="/local-seo-singapore/competitor-analysis" className="text-primary font-medium hover:underline">
-                Competitor Analysis
-              </Link>{" "}
-              shows you exactly what your top-ranking competitors are doing — review counts, posting frequency,
-              category choices — so you know precisely what to fix first.
+              For multi-outlet businesses, every location is managed from the same dashboard. Competitor analysis runs per location
+              so you know exactly who you are competing against in Ang Mo Kio vs. Jurong vs. Tampines — and what each of those
+              competitors is doing differently.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: For Singapore */}
+      {/* Pricing */}
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            Local SEO for Singapore SMBs
-          </h2>
-          <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+          <h2 className="font-display text-foreground mb-6">Pricing</h2>
+          <div className="prose prose-lg max-w-none text-muted-foreground">
             <p>
-              Singapore is one of the most competitive local search environments in the world. The country is
-              small and dense, which means the same Google Maps 3-Pack covers a neighbourhood of thousands.
-              A restaurant in Jurong competes with dozens of others for a small geographic radius. A clinic in
-              Tampines needs to rank for every relevant keyword across the entire estate, not just one street.
-            </p>
-            <p>
-              Epicware tracks rank across Singapore&apos;s key districts — Jurong, Tampines, Woodlands, Ang Mo Kio,
-              Toa Payoh, Clementi, Orchard, Bedok, and Yishun — with individual reporting per location.
-              Multi-outlet businesses get a unified dashboard showing how each branch performs against its
-              local competitors, with data updated daily rather than in monthly snapshots.
+              Local SEO services are included in Epicware&apos;s Foundation plan and above. See full plan details at{" "}
+              <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
+              No setup fees on Foundation plan. Cancel anytime.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: Why Choose Us */}
+      {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            Why Choose Epicware for Local SEO
-          </h2>
+          <h2 className="font-display text-foreground mb-6">Why Epicware — Not an Agency</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Most local SEO tools are built for the US or UK market and adapted for Asia as an afterthought.
-              Epicware was built from the ground up for Singapore — the right categories, the right directories,
-              the right rank-tracking grid density for a city-state where a 2km difference changes your competitive
-              landscape entirely.
+              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a self-serve dashboard
+              that runs automatically — no retainer, no waiting on someone else&apos;s team, no monthly report that is
+              already out of date. You log in, you see your data, you take action.
             </p>
             <p>
-              The platform was built by the team behind NinjaOS, which served F&amp;B businesses across Singapore
-              and processed over $120M in GMV before its 2021 exit. We know the SMB market here. And because Epicware
-              is a platform — not an agency — you get real-time data, self-serve controls, and results that do not
-              stop when someone goes on leave.{" "}
-              <Link href="/" className="text-primary font-medium hover:underline">
-                See the full Epicware platform
-              </Link>
-              .
+              The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in
+              GMV before its 2021 exit. Epicware is Singapore-built, used by businesses in SG · MY · UAE · UK · US. See the
+              full platform overview at{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">epicware.ai</Link>.
             </p>
           </div>
         </div>
@@ -261,6 +195,8 @@ export default function LocalSEOPage() {
       />
 
       <FinalCTA />
+      <StickyMobileCTA />
+      <div className="h-20 lg:hidden" />
     </>
   );
 }

@@ -3,16 +3,17 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import ServicesGrid from "@/components/category/ServicesGrid";
 import FinalCTA from "@/components/home/FinalCTA";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Business Growth Tools Singapore — Email, Social & SEO in One Platform | Epicware",
+  title: "Growth Tools Singapore — Email Marketing, Social Scheduling & SEO | Epicware",
   description:
-    "EpicEngage email marketing, EpicSocial scheduling & Website SEO Builder — all inside Epicware. Convert local visibility into loyal customers. Start free.",
+    "Epicware's Growth Tools automate customer retention for Singapore SMBs — email campaigns, social scheduling, and website SEO. Keep customers coming back.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools" },
   openGraph: {
-    title: "Growth Tools for Singapore Businesses | Epicware",
+    title: "Growth Tools Singapore — Email Marketing & Social Scheduling | Epicware",
     description:
-      "Getting found is step one. Epicware's Growth Tools — email marketing, social scheduling & website SEO — convert local visibility into repeat customers.",
+      "Epicware's Growth Tools automate customer retention for Singapore SMBs — email campaigns, social scheduling, and website SEO.",
     url: "https://www.epicware.ai/growth-tools",
   },
 };
@@ -20,37 +21,31 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Business Growth Tools Singapore",
-  serviceType: "Marketing & Growth Software",
+  name: "Growth Tools Singapore",
+  serviceType: "Digital Growth Tools",
   description:
-    "Business growth software for Singapore SMBs. Includes Website SEO Builder, EpicEngage email marketing automation, and EpicSocial social media post scheduling.",
+    "Email marketing automation, social media scheduling, and retention tools for Singapore SMBs. EpicEngage and EpicSocial products.",
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://www.epicware.ai",
+    url: "https://epicware.ai",
   },
-  areaServed: { "@type": "City", name: "Singapore" },
-  url: "https://www.epicware.ai/growth-tools",
+  areaServed: { "@type": "Country", name: "Singapore" },
+  url: "https://epicware.ai/growth-tools",
 };
 
 const CHILD_SERVICES = [
   {
-    name: "Website SEO Builder",
-    href: "/growth-tools/website-seo-builder",
-    description:
-      "Build a search-optimised website or fix the one you have. The SEO Builder handles meta tags, page structure, schema markup, and local keyword placement automatically.",
-  },
-  {
     name: "EpicEngage Email Marketing",
     href: "/growth-tools/epicengage-email-marketing",
     description:
-      "Automated email sequences that bring customers back. Post-visit follow-ups, review requests, promotions, and re-engagement campaigns — all triggered by customer behaviour.",
+      "Automated email campaigns triggered by customer behaviour — post-visit review requests, win-back offers, birthday greetings. Set it up once, runs forever.",
   },
   {
     name: "EpicSocial Social Scheduling",
     href: "/growth-tools/epicsocial-social-scheduling",
     description:
-      "AI-generated social media posts built from your Google Business Profile data. Scheduled and posted to Facebook and Instagram automatically — zero manual effort required.",
+      "AI-generated social posts scheduled across Facebook, Instagram, and GBP from one dashboard. A full week of content in one click.",
   },
 ];
 
@@ -64,168 +59,109 @@ export default function GrowthToolsPage() {
 
       <CategoryHero
         badge="GROWTH TOOLS · SINGAPORE"
-        h1="Growth Tools for Singapore Businesses — From Discovery to Loyal Customers"
-        subtitle={
-          <>
-            Getting found on Google Maps is only half the job. The other half is converting new visitors
-            into returning customers. Epicware&apos;s Growth Tools — email marketing, social scheduling,
-            and website SEO — run inside the same platform as your reviews and rankings, so nothing slips through the gaps.
-            Call <a href="tel:+6590013157" className="underline font-semibold">+65 9001 3157</a> or book a demo to see it live.
-          </>
-        }
+        h1="Growth Tools Singapore — Email Marketing, Social Scheduling & SEO"
+        subtitle="Getting found is step one. Keeping customers is step two. Epicware's Growth Tools automate the retention layer — email campaigns, social scheduling, and website SEO — so your business keeps growing after customers find you."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
-        ctaSecondary={{ label: "Get Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
-          "Email · Social · SEO in One Platform",
-          "No Extra Subscriptions",
+          "Email Automation",
+          "Social Scheduling",
           "Singapore-Built",
-          "No Agency Retainers",
+          "No Agency Retainer",
         ]}
-        overlayClass="bg-gradient-to-r from-black/80 via-black/60 to-black/35"
-        imageSrc="/assets/revenue-source-hero.png"
+        imageSrc="/assets/how-it-works-campaigns.png"
       />
 
       {/* Opening paragraph */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Most SMBs invest everything in getting discovered and nothing in what happens after.
-            No email follow-up when a customer visits. No social posts between the times a staff member
-            remembers. No SEO on the website that is supposed to convert the traffic their Google profile
-            attracts. The result is a leaky bucket — you are constantly spending effort to fill it with
-            new customers while existing ones leave without a reason to return. Epicware&apos;s Growth Tools
-            plug those gaps. They work inside the same platform as your Local SEO and reputation management
-            — because those three things together, running in parallel, are what actually compounds growth.
+            Most Singapore SMBs focus entirely on acquisition — getting new customers through the door. But acquiring a new
+            customer costs five times more than retaining an existing one. Epicware&apos;s Growth Tools close the retention
+            gap: automated email campaigns that bring customers back, social scheduling that keeps your brand visible, and
+            website SEO that converts the traffic you&apos;re already getting.
           </p>
         </div>
       </section>
 
-      {/* H2: What problems */}
+      {/* Why Retention Matters */}
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            What Growth Problems Are You Facing?
-          </h2>
+          <h2 className="font-display text-foreground mb-6">Why Retention Beats Acquisition</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              The most common growth problem for Singapore SMBs is customer retention. Acquisition is
-              expensive — whether through ads, promotions, or time spent on local SEO. Once you get a
-              customer through the door, keeping them should cost almost nothing. But without a system,
-              most customers just drift. They had a great experience, and then life moved on and they
-              went somewhere else next time simply because they forgot about you.
+              A customer who visits your Singapore restaurant once and never returns is a failed acquisition.
+              A customer who visits 10 times a year generates 10x the revenue from the same acquisition cost.
+              In F&amp;B, wellness, beauty, and professional services — the sectors where Epicware operates —
+              repeat customers are the foundation of a profitable business. The problem is that most SMBs have
+              no systematic way to stay in contact with customers after their first visit.
             </p>
             <p>
-              The second problem is an outdated or SEO-empty website. Many SMBs have a website that was
-              built once and never touched. No local keywords. No schema markup. No meta descriptions.
-              The site exists, but it does not rank and it does not convert. A Google Business Profile
-              sends traffic to a website — and if that website does not make a strong impression quickly,
-              the customer bounces and the GBP traffic is wasted.
-            </p>
-            <p>
-              The third problem is inconsistent social media. Every business knows they should post
-              regularly, and most do not because it takes time and creative energy that busy operators
-              simply do not have. Months go by without a post, customers assume the business is quiet
-              or has closed, and the algorithm stops showing the page to followers entirely.
+              Email is the highest-ROI retention channel when done right. A well-timed, personalised email to a customer
+              30 minutes after they leave your restaurant converts at 3–5x the rate of a cold campaign.
+              Social presence keeps your business top of mind between visits. Both are manageable — if automated.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: Our Services */}
+      {/* How the Growth Tools Work */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            Our Growth Tools
-          </h2>
+          <h2 className="font-display text-foreground mb-6">How Epicware&apos;s Growth Tools Work</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              The{" "}
-              <Link href="/growth-tools/website-seo-builder" className="text-primary font-medium hover:underline">
-                Website SEO Builder
-              </Link>{" "}
-              handles the technical and on-page SEO that most SMB websites are missing. It generates
-              meta titles and descriptions, adds local schema markup, structures headings around the
-              keywords your customers are searching, and flags any technical issues slowing the site
-              down. You do not need to be a web developer to use it — the platform walks you through
-              every step and applies the changes directly. A well-optimised website works alongside
-              your Google Business Profile to capture searchers at every stage of the decision process.
-            </p>
-            <p>
-              For customer retention,{" "}
               <Link href="/growth-tools/epicengage-email-marketing" className="text-primary font-medium hover:underline">
-                EpicEngage Email Marketing
+                EpicEngage
               </Link>{" "}
-              runs automated email sequences that trigger on customer behaviour. A post-visit email
-              that thanks a customer and asks for a review. A win-back campaign for customers who
-              have not returned in 60 days. A birthday promotion that lands on the right day without
-              anyone having to remember to send it. EpicEngage connects with your customer data
-              and runs these campaigns without manual input — so your retention system works
-              even when your team is focused on running the business.
+              connects to your customer database and triggers email campaigns based on behaviour. Post-visit review
+              requests. 60-day win-back offers. Birthday greetings. Re-engagement sequences for inactive subscribers.
+              Configure the sequences once — the platform runs them automatically. Singapore businesses using EpicEngage
+              typically see 30–40% open rates on warm lists. See also the{" "}
+              <Link href="/products/epicengage" className="text-primary font-medium hover:underline">EpicEngage product page</Link>.
             </p>
             <p>
-              For social media,{" "}
               <Link href="/growth-tools/epicsocial-social-scheduling" className="text-primary font-medium hover:underline">
-                EpicSocial Social Scheduling
+                EpicSocial
               </Link>{" "}
-              generates posts automatically using your Google Business Profile data — your business
-              category, your latest reviews, your promotions — and schedules them to Facebook and
-              Instagram at the right frequency. You review and approve before anything goes out.
-              No copywriting. No design time. No missed weeks. EpicSocial keeps your social
-              presence alive without adding to your workload.
+              generates a full week of social content from your business data in one click. Posts are scheduled across
+              Facebook, Instagram, and Google Business Profile simultaneously. Multi-outlet operators run different
+              content schedules per location from one account. See also the{" "}
+              <Link href="/products/epicsocial" className="text-primary font-medium hover:underline">EpicSocial product page</Link>.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: For Singapore */}
+      {/* Pricing */}
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            Growth Tools for Singapore SMBs
-          </h2>
-          <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+          <h2 className="font-display text-foreground mb-6">Pricing</h2>
+          <div className="prose prose-lg max-w-none text-muted-foreground">
             <p>
-              Singapore customers are digitally active. WhatsApp open rates are among the highest
-              in the world. Facebook and Instagram are used across age groups. Email marketing
-              that would see 20% open rates elsewhere regularly achieves 30–40% with a warm
-              customer list in Singapore. The engagement opportunity is there — it just needs a system.
-            </p>
-            <p>
-              The businesses we see growing fastest in Singapore are not spending more on ads.
-              They are working their existing customer base — email follow-ups, review requests,
-              social engagement — in a systematic way. Epicware&apos;s Growth Tools make that
-              systematic for SMBs serving customers in Singapore, Malaysia, UAE, UK, and the US.
-              Everything runs from the same dashboard as your reviews and rankings — one platform,
-              one login, full picture.
+              Growth Tools are available on Epicware&apos;s Growth plan and above. See full plan details at{" "}
+              <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
+              No setup fees on Foundation plan. Cancel anytime.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: Why Choose Us */}
+      {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            Why Choose Epicware for Growth Tools
-          </h2>
+          <h2 className="font-display text-foreground mb-6">Why Epicware — Not an Agency</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              The reason Epicware bundles growth tools with local SEO and reputation management
-              is that they only fully work when they are connected. A strong Google rating drives
-              more website visits — the Website SEO Builder converts those visits. A review request
-              campaign generates reviews — EpicEngage follows up with those customers to bring them
-              back. EpicSocial posts remind followers of the same quality you are showing on Google.
-              Running these separately, across different tools and subscriptions, breaks the loop.
-              Inside Epicware, they compound.
+              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a self-serve dashboard
+              that runs automatically — no retainer, no waiting on someone else&apos;s team, no monthly report that is
+              already out of date. You log in, you see your data, you take action.
             </p>
             <p>
-              No retainers. No agency. No waiting for someone else&apos;s team to make a change
-              before a promotion launches. Self-serve means the platform moves at the speed of
-              your business, not at the speed of someone else&apos;s schedule.{" "}
-              <Link href="/" className="text-primary font-medium hover:underline">
-                See the full Epicware platform
-              </Link>
-              .
+              The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in
+              GMV before its 2021 exit. Epicware is Singapore-built, used by businesses in SG · MY · UAE · UK · US. See the
+              full platform overview at{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">epicware.ai</Link>.
             </p>
           </div>
         </div>
@@ -237,6 +173,8 @@ export default function GrowthToolsPage() {
       />
 
       <FinalCTA />
+      <StickyMobileCTA />
+      <div className="h-20 lg:hidden" />
     </>
   );
 }

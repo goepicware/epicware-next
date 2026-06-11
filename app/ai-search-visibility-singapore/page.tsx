@@ -3,16 +3,17 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import ServicesGrid from "@/components/category/ServicesGrid";
 import FinalCTA from "@/components/home/FinalCTA";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "AI Search Visibility Singapore — Get Cited by ChatGPT & Google AI | Epicware",
+  title: "AI Search Visibility Singapore — GEO & AI Overview Optimisation | Epicware",
   description:
-    "Get your Singapore business cited in ChatGPT, Perplexity & Google AI Overviews. Epicware's GEO module is the only platform in SG built for AI-powered local search.",
+    "Get found by ChatGPT, Perplexity, and Google AI Overviews. Epicware optimises Singapore SMBs for the next generation of AI-powered local search.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore" },
   openGraph: {
-    title: "AI & GEO Search Visibility Singapore | Epicware",
+    title: "AI Search Visibility Singapore — GEO & AI Overview Optimisation | Epicware",
     description:
-      "AI search tools now answer 'best dentist in Clementi.' Is your business in the answer? Epicware's GEO module gets you cited in ChatGPT, Perplexity & Google AI Overviews.",
+      "Get found by ChatGPT, Perplexity, and Google AI Overviews. Epicware optimises Singapore SMBs for the next generation of AI-powered local search.",
     url: "https://www.epicware.ai/ai-search-visibility-singapore",
   },
 };
@@ -21,16 +22,16 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "AI Search Visibility Singapore",
-  serviceType: "AI & GEO Visibility",
+  serviceType: "GEO and AI Search Optimisation",
   description:
-    "GEO and AEO optimisation platform for Singapore SMBs. Gets businesses cited in ChatGPT, Perplexity, and Google AI Overviews through structured data, AI citation building, and answer engine optimisation.",
+    "GEO optimisation, AI citation building, and Answer Engine Optimisation for Singapore businesses. Get found by ChatGPT, Perplexity, and Google AI Overviews.",
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://www.epicware.ai",
+    url: "https://epicware.ai",
   },
-  areaServed: { "@type": "City", name: "Singapore" },
-  url: "https://www.epicware.ai/ai-search-visibility-singapore",
+  areaServed: { "@type": "Country", name: "Singapore" },
+  url: "https://epicware.ai/ai-search-visibility-singapore",
 };
 
 const CHILD_SERVICES = [
@@ -38,23 +39,23 @@ const CHILD_SERVICES = [
     name: "GEO / AI Overview Optimisation",
     href: "/ai-search-visibility-singapore/geo-optimisation",
     description:
-      "Structure your online presence so Google AI Overviews, ChatGPT, and Perplexity choose your business as a recommended answer when local queries are asked.",
+      "Structure your content and GBP to appear in Google's AI-generated search answers — the panel that now sits above organic results for local queries.",
   },
   {
     name: "AI Citation Building",
     href: "/ai-search-visibility-singapore/ai-citation-building",
     description:
-      "Build mentions and references across the platforms, directories, and structured data sources that AI systems trust — so your business gets pulled into AI-generated answers.",
+      "Build your presence on the sources ChatGPT, Perplexity, and Google AI draw from — so your business gets cited when AI answers questions about your category.",
   },
   {
     name: "AEO (Answer Engine Optimisation)",
     href: "/ai-search-visibility-singapore/aeo",
     description:
-      "Optimise your content and schema markup so AI engines can extract, understand, and cite your business as the authoritative answer to local intent queries.",
+      "Structure your online presence so AI assistants recommend your business by name when Singapore customers ask for recommendations.",
   },
 ];
 
-export default function AISearchVisibilityPage() {
+export default function AiSearchVisibilitySingaporePage() {
   return (
     <>
       <script
@@ -64,172 +65,121 @@ export default function AISearchVisibilityPage() {
 
       <CategoryHero
         badge="AI & GEO VISIBILITY · SINGAPORE"
-        h1="AI Search Visibility in Singapore — Show Up Where AI Answers Local Questions"
-        subtitle={
-          <>
-            ChatGPT, Perplexity, and Google AI Overviews now answer &ldquo;best dentist in Clementi&rdquo; and
-            &ldquo;top tuition centres in Tampines&rdquo; — without showing a single blue link.
-            If your business is not cited in those answers, you are invisible to a fast-growing share of
-            Singapore customers. Epicware&apos;s GEO module fixes that.
-            Call <a href="tel:+6590013157" className="underline font-semibold">+65 9001 3157</a> or book a demo.
-          </>
-        }
+        h1="AI & GEO Visibility Singapore — Get Found by ChatGPT and Google AI"
+        subtitle="ChatGPT, Perplexity, and Google's AI Overviews now answer Singapore local searches. If your business isn't optimised for these AI systems, you're invisible to the next generation of search."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
-        ctaSecondary={{ label: "Get Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
-          "GEO · AEO · AI Overviews",
-          "Only Platform in SG for AI Visibility",
+          "AI Overview Optimisation",
+          "Answer Engine Optimisation",
           "Singapore-Built",
-          "Self-Serve · No Agency",
+          "Citation Building",
         ]}
-        overlayClass="bg-gradient-to-r from-[#0d0a1a]/90 via-[#0d0a1a]/70 to-[#0d0a1a]/40"
-        imageSrc="/assets/epicseo-screen.png"
+        imageSrc="/assets/hero-image.jpg"
       />
 
       {/* Opening paragraph */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            The way people find local businesses is changing faster than most SMB owners realise.
-            Google&apos;s AI Overviews now appear above the traditional blue links for many local queries.
-            ChatGPT answers &ldquo;best clinic near Bedok MRT&rdquo; with a specific recommendation, not a list of
-            websites to visit. Perplexity tells users which restaurants in Jurong are worth trying.
-            These AI systems do not pull answers from Google rankings — they pull from structured data,
-            citations, and authoritative sources across the web. If your business has not been built into
-            those sources, you do not exist in the answers. Traditional SEO gets you onto Google&apos;s first
-            page. GEO gets you cited when AI systems answer the question directly.
+            Search behaviour in Singapore is changing. A growing share of local queries are now answered directly by AI
+            systems — Google&apos;s AI Overviews, ChatGPT with web search, and Perplexity — before a user ever clicks
+            on a standard search result. For Singapore SMBs, this creates a new visibility problem: the businesses that
+            appear in these AI-generated answers are there because their content and profiles are structured in ways that
+            AI systems can read, trust, and cite. Businesses that aren&apos;t optimised for this are invisible in the
+            answer, regardless of their traditional SEO rank.
           </p>
         </div>
       </section>
 
-      {/* H2: What problems */}
+      {/* The AI Search Shift */}
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            What AI Visibility Problems Are You Facing?
-          </h2>
+          <h2 className="font-display text-foreground mb-6">The AI Search Shift in Singapore</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              The biggest problem is not knowing this gap exists. Most Singapore SMBs are still optimising
-              entirely for traditional Google ranking — and traditional ranking still matters. But AI-generated
-              answers are now appearing at the very top of results pages, and businesses that do not appear in
-              those answers miss the customer before they ever reach the blue links.
+              When a Singapore user asks Google &ldquo;best paediatric dentist in Tampines&rdquo; or ChatGPT &ldquo;where
+              should I get a facial in Orchard Road,&rdquo; the AI generates a direct answer. That answer cites specific
+              businesses. The businesses cited are not necessarily the ones with the highest traditional SEO rank — they
+              are the ones whose information appears on sources that AI systems trust, structured in formats that AI can
+              parse.
             </p>
             <p>
-              The second problem is that the rules for AI visibility are different from traditional SEO.
-              Keyword density and backlinks matter far less. Structured data, factual consistency across
-              platforms, and citations in authoritative sources matter far more. AI systems need to be able
-              to extract clear, unambiguous information about your business — what you do, where you are,
-              what makes you different — from multiple corroborating sources before they will cite you in an answer.
-            </p>
-            <p>
-              Most businesses in Singapore have not even started thinking about this. That is both a problem
-              and an opportunity. The businesses that build AI visibility now will dominate AI-generated local
-              answers before competitors realise what happened.
+              GEO (Generative Engine Optimisation) is the discipline of optimising for this new layer of search.
+              It sits alongside traditional local SEO — not replacing it, but adding the AI visibility layer that is
+              increasingly determining which businesses customers discover first.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: Our Services */}
+      {/* How Epicware Approaches AI Visibility */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            Our AI &amp; GEO Visibility Services
-          </h2>
+          <h2 className="font-display text-foreground mb-6">How Epicware Approaches AI Visibility</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware&apos;s AI visibility module starts with{" "}
+              Epicware&apos;s AI visibility services operate across three layers:{" "}
               <Link href="/ai-search-visibility-singapore/geo-optimisation" className="text-primary font-medium hover:underline">
-                GEO / AI Overview Optimisation
-              </Link>
-              . This is the process of structuring your online presence so that Google&apos;s AI, ChatGPT,
-              and Perplexity can confidently recommend your business in response to local intent queries.
-              It covers structured data markup, content formatting, and making sure every key fact about
-              your business is consistently stated across every platform that AI systems use as a source.
-            </p>
-            <p>
-              Supporting that is{" "}
+                GEO Optimisation
+              </Link>{" "}
+              structures your web content and GBP for Google&apos;s AI Overview panel;{" "}
               <Link href="/ai-search-visibility-singapore/ai-citation-building" className="text-primary font-medium hover:underline">
                 AI Citation Building
-              </Link>
-              . Just as traditional local SEO requires citations in directories to build Google&apos;s trust
-              in your NAP data, AI citation building places your business in the platforms, publications,
-              and structured data sources that AI systems use as inputs. The goal is to make your business
-              appear as a credible, verifiable answer to relevant local queries — cited by multiple independent sources.
-            </p>
-            <p>
-              Completing the module is{" "}
+              </Link>{" "}
+              builds your presence on the specific platforms that ChatGPT and Perplexity draw from; and{" "}
               <Link href="/ai-search-visibility-singapore/aeo" className="text-primary font-medium hover:underline">
                 AEO (Answer Engine Optimisation)
-              </Link>
-              . AEO focuses specifically on making your content answerable — structuring information so AI
-              engines can extract clear answers to questions like &ldquo;which hair salon in Tampines has the
-              best reviews?&rdquo; or &ldquo;what is the best GP clinic near Woodlands MRT?&rdquo;
-              This requires specific schema markup, FAQ structures, and content that speaks directly to
-              the questions your target customers are already asking AI tools.
+              </Link>{" "}
+              applies structured data markup and content structuring so AI systems can confidently identify and recommend
+              your business by name.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: For Singapore */}
+      {/* Pricing */}
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            AI Search Visibility for Singapore SMBs
-          </h2>
-          <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+          <h2 className="font-display text-foreground mb-6">Pricing</h2>
+          <div className="prose prose-lg max-w-none text-muted-foreground">
             <p>
-              Singapore is an early adopter market. ChatGPT usage is high. Google AI Overviews are already
-              showing for local queries. Perplexity is gaining users who want direct answers instead of
-              link lists. The window to get ahead of this is now — before every competitor in your district
-              has also optimised for AI answers.
-            </p>
-            <p>
-              AI-generated answers for Singapore queries reference Singapore-specific sources: local review
-              platforms, local news sites, structured business directories, and Google Business Profiles.
-              Epicware builds visibility in exactly these sources — the ones that Singapore-focused AI
-              queries draw from — not generic global directories that carry no weight in local responses.
-              Clients across Singapore, Malaysia, UAE, UK, and the US use Epicware&apos;s GEO module to build
-              AI-visible businesses in their local markets.
+              AI Visibility services are available on Epicware&apos;s Growth plan and above. See full plan details at{" "}
+              <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
+              No setup fees on Foundation plan. Cancel anytime.
             </p>
           </div>
         </div>
       </section>
 
-      {/* H2: Why Choose Us */}
+      {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">
-            Why Choose Epicware for AI &amp; GEO Visibility
-          </h2>
+          <h2 className="font-display text-foreground mb-6">Why Epicware — Not an Agency</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              GEO and AEO are not services most Singapore agencies offer yet. Some will add them to a proposal
-              as a buzzword. Epicware has built a dedicated module because we use it ourselves — this site
-              is optimised for AI search, and the platform reflects what actually works based on real testing.
+              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a self-serve dashboard
+              that runs automatically — no retainer, no waiting on someone else&apos;s team, no monthly report that is
+              already out of date. You log in, you see your data, you take action.
             </p>
             <p>
-              We built the platform with a Singapore focus from day one: Singapore business categories,
-              Singapore-specific data sources, and Singapore local query patterns. No US tool re-skinned
-              for Asia. The team behind Epicware exited NinjaOS in 2021 after building a product used by
-              hundreds of Singapore F&amp;B businesses — we understand this market specifically.{" "}
-              <Link href="/" className="text-primary font-medium hover:underline">
-                See the full Epicware platform
-              </Link>
-              .
+              The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in
+              GMV before its 2021 exit. Epicware is Singapore-built, used by businesses in SG · MY · UAE · UK · US. See the
+              full platform overview at{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">epicware.ai</Link>.
             </p>
           </div>
         </div>
       </section>
 
       <ServicesGrid
-        heading="All AI & GEO Visibility Services"
+        heading="AI & GEO Visibility Services"
         services={CHILD_SERVICES}
       />
 
       <FinalCTA />
+      <StickyMobileCTA />
+      <div className="h-20 lg:hidden" />
     </>
   );
 }
