@@ -139,6 +139,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Authority pages
     { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/reseller`, lastModified: now, changeFrequency: "monthly", priority: 0.65 },
+
+    // Conversion pages
+    { url: `${BASE}/pricing`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/book-demo`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+
+    // Free tools
+    { url: `${BASE}/tools`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${BASE}/tools/google-review-reply-generator`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${BASE}/tools/google-review-request-generator`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${BASE}/tools/backlink-opportunity-finder`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+
+    // Legal
+    { url: `${BASE}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   // Singapore district pages

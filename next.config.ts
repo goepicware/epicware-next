@@ -28,6 +28,8 @@ const nextConfig: NextConfig = {
       { source: "/audit-lp", destination: "/audit", permanent: true },
       { source: "/resources/tools", destination: "/tools", permanent: true },
       { source: "/resources/blog", destination: "/blog", permanent: true },
+      // Old backlink tool URL → new canonical URL
+      { source: "/tools/backlink-dashboard", destination: "/tools/backlink-opportunity-finder", permanent: true },
     ];
   },
 };
