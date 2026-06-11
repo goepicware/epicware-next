@@ -39,7 +39,7 @@ export default function FinalCTA() {
             asChild
             variant="outline"
             size="lg"
-            className="rounded-full border-accent text-accent hover:bg-accent/10 h-14 px-8 font-semibold text-base"
+            className="rounded-full border-white/40 text-white hover:bg-white/10 h-14 px-8 font-semibold text-base"
           >
             <Link href="/audit">Get Free GBP Audit</Link>
           </Button>

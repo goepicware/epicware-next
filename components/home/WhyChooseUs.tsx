@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
                     >
                       <Icon className={`w-7 h-7 ${item.iconColor}`} />
                     </motion.div>
-                    <span className={`text-xs font-bold ${item.iconColor} bg-border/40 rounded-full px-3 py-1.5 border border-border/40`}>
+                    <span className="text-xs font-semibold text-foreground/70 bg-muted rounded-full px-3 py-1.5 border border-border/60">
                       {item.stat}
                     </span>
                   </div>
