@@ -28,8 +28,7 @@ const NAV = {
       { href: "/industries/healthcare-clinics", label: "Medical Clinics" },
       { href: "/industries/nail-hair-salons", label: "Hair & Beauty Salons" },
       { href: "/industries/tuition-centres", label: "Tuition Centres" },
-      { href: "/industries/dental-clinics", label: "Dental Clinics" },
-      { href: "/industries/car-workshops", label: "Car Workshops" },
+      { href: "/services", label: "View All Industries →" },
     ],
   },
   resources: {
@@ -198,7 +197,7 @@ export default function Header() {
                   <Button
                     asChild
                     variant="outline"
-                    className="w-full rounded-full border-accent text-accent h-14 font-semibold text-lg"
+                    className="w-full rounded-full border-foreground/20 text-foreground hover:bg-muted h-14 font-semibold text-lg"
                   >
                     <Link href="/audit" onClick={() => setMobileOpen(false)}>
                       Free Audit
