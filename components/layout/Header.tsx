@@ -11,8 +11,37 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+// Rich Products dropdown — 4 named SaaS modules
+const PRODUCTS = [
+  {
+    href: "/products/epicmap",
+    name: "EpicMap",
+    descriptor: "Rank Tracking · GBP Optimisation",
+    summary: "See where you rank across every Singapore district",
+  },
+  {
+    href: "/products/epicreview",
+    name: "EpicReview",
+    descriptor: "Review Management · Bad Review Removal",
+    summary: "Generate reviews, respond with AI, remove bad ones",
+  },
+  {
+    href: "/products/epicengage",
+    name: "EpicEngage",
+    descriptor: "Email Marketing",
+    summary: "Turn one-time customers into regulars automatically",
+  },
+  {
+    href: "/products/epicsocial",
+    name: "EpicSocial",
+    descriptor: "Social Scheduling · GBP Posts",
+    summary: "Stay visible without living on social media",
+  },
+];
+
+// Simple dropdowns — Services, Solutions, Resources
 const NAV = {
-  platform: {
+  services: {
     label: "Services",
     items: [
       { href: "/reputation-management-singapore", label: "Reputation Management" },
@@ -28,7 +57,7 @@ const NAV = {
       { href: "/industries/healthcare-clinics", label: "Medical Clinics" },
       { href: "/industries/nail-hair-salons", label: "Hair & Beauty Salons" },
       { href: "/industries/tuition-centres", label: "Tuition Centres" },
-      { href: "/services", label: "View All Industries →" },
+      { href: "/industries", label: "View All Industries →" },
     ],
   },
   resources: {
@@ -41,6 +70,73 @@ const NAV = {
   },
 };
 
+// Rich 2-column Products dropdown (mirrors Intercom/Linear style)
+function ProductsDropdown() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button className="flex items-center gap-1 px-5 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-muted/50">
+        Products
+        <ChevronDown
+          className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {open && (
+        <div className="absolute top-full left-0 pt-2 z-50">
+          <div className="bg-background/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-lg p-2 w-[560px]">
+            {/* Column headers */}
+            <div className="grid grid-cols-2 gap-4 px-3 py-1.5 mb-1">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/50">
+                Product
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/50">
+                What it does
+              </span>
+            </div>
+
+            {PRODUCTS.map((product) => (
+              <Link
+                key={product.href}
+                href={product.href}
+                className="grid grid-cols-2 gap-4 items-start px-3 py-2.5 rounded-xl hover:bg-muted/50 transition-colors duration-200 group"
+                onClick={() => setOpen(false)}
+              >
+                <div>
+                  <div className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {product.name}
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-0.5 leading-snug">
+                    {product.descriptor}
+                  </div>
+                </div>
+                <div className="text-sm text-muted-foreground leading-snug pt-0.5">
+                  {product.summary}
+                </div>
+              </Link>
+            ))}
+
+            <div className="border-t border-border/40 mt-1 pt-2 px-3 pb-1">
+              <Link
+                href="/products"
+                className="text-xs font-semibold text-primary hover:underline"
+                onClick={() => setOpen(false)}
+              >
+                View all products →
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Standard simple dropdown
 function DesktopDropdown({
   label,
   items,
@@ -92,6 +188,30 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Mobile nav groups — Products as flat list with descriptor, others standard
+  const mobileGroups = [
+    {
+      key: "products",
+      label: "Products",
+      items: PRODUCTS.map((p) => ({ href: p.href, label: `${p.name} — ${p.descriptor}` })),
+    },
+    {
+      key: "services",
+      label: "Services",
+      items: NAV.services.items,
+    },
+    {
+      key: "solutions",
+      label: "Solutions",
+      items: NAV.solutions.items,
+    },
+    {
+      key: "resources",
+      label: "Resources",
+      items: NAV.resources.items,
+    },
+  ];
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-4 px-4 lg:px-8">
       <div
@@ -115,15 +235,16 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-0.5">
-            <DesktopDropdown {...NAV.platform} />
+            <ProductsDropdown />
+            <DesktopDropdown {...NAV.services} />
             <DesktopDropdown {...NAV.solutions} />
-            <DesktopDropdown {...NAV.resources} />
             <Link
               href="/pricing"
               className="px-5 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-muted/50"
             >
               Pricing
             </Link>
+            <DesktopDropdown {...NAV.resources} />
           </nav>
 
           {/* Desktop dual CTAs */}
@@ -156,7 +277,7 @@ export default function Header() {
             <SheetContent side="right" className="w-full sm:w-[400px] p-0 border-l-0">
               <nav className="flex flex-col h-full bg-background">
                 <div className="flex-1 p-8 pt-16 space-y-1 overflow-y-auto">
-                  {Object.entries(NAV).map(([key, menu]) => (
+                  {mobileGroups.map(({ key, label, items }) => (
                     <div key={key} className="border-b border-border/30">
                       <button
                         onClick={() =>
@@ -164,14 +285,14 @@ export default function Header() {
                         }
                         className="flex items-center justify-between w-full py-4 text-2xl font-semibold text-foreground/80 hover:text-foreground transition-colors"
                       >
-                        {menu.label}
+                        {label}
                         <ChevronDown
                           className={`w-5 h-5 transition-transform duration-200 ${expandedMobile === key ? "rotate-180" : ""}`}
                         />
                       </button>
                       {expandedMobile === key && (
                         <div className="pb-4 pl-4 space-y-2">
-                          {menu.items.map((item) => (
+                          {items.map((item) => (
                             <Link
                               key={item.href}
                               href={item.href}
