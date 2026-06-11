@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import GoogleReviewsWidget from "@/components/home/GoogleReviewsWidget";
 
 const REVIEWS = [
   {
@@ -48,20 +49,15 @@ export default function SocialProof() {
           </h2>
         </motion.div>
 
-        {/* Google Reviews embed placeholder */}
+        {/* Google Reviews — EpicReview Wall of Love widget */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-14"
+          className="mb-14 overflow-hidden"
         >
-          {/* <!-- PASTE GOOGLE REVIEWS EMBED CODE HERE --> */}
-          <div className="bg-card border border-border/50 rounded-3xl p-8 text-center min-h-[120px] flex items-center justify-center">
-            <p className="text-muted-foreground text-sm italic">
-              Google Reviews embed — paste embed code here
-            </p>
-          </div>
+          <GoogleReviewsWidget />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
