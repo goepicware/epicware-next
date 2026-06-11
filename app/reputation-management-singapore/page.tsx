@@ -268,6 +268,19 @@ export default function ReputationManagementPage() {
         services={CHILD_SERVICES}
       />
 
+      {/* Cross-link to core Bad Review Removal service */}
+      <section className="py-8">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <p className="text-base text-muted-foreground">
+            Looking for Bad Review Removal specifically? See{" "}
+            <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+              Bad Review Removal Singapore
+            </Link>{" "}
+            — $200/review, pay on success.
+          </p>
+        </div>
+      </section>
+
       <FinalCTA />
       <StickyMobileCTA />
       <div className="h-20 lg:hidden" />
