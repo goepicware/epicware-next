@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "EpicEngage — Email Marketing for Singapore SMBs | Epicware",
@@ -245,6 +246,8 @@ export default function EpicEngagePage() {
       </section>
 
       <FinalCTA />
+      <StickyMobileCTA />
+      <div className="h-20 lg:hidden" />
     </>
   );
 }

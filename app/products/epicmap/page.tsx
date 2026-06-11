@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "EpicMap — Local Rank Tracking & GBP Optimisation Singapore | Epicware",
@@ -266,6 +267,9 @@ export default function EpicMapPage() {
       </section>
 
       <FinalCTA />
+      <StickyMobileCTA />
+      {/* bottom padding so sticky bar doesn't cover content on mobile */}
+      <div className="h-20 lg:hidden" />
     </>
   );
 }

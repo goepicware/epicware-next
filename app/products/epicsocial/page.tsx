@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "EpicSocial — Social Scheduling & GBP Post Management Singapore | Epicware",
@@ -253,6 +254,8 @@ export default function EpicSocialPage() {
       </section>
 
       <FinalCTA />
+      <StickyMobileCTA />
+      <div className="h-20 lg:hidden" />
     </>
   );
 }

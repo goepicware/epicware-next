@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FinalCTA from "@/components/home/FinalCTA";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "Epicware Products — EpicMap, EpicReview, EpicEngage, EpicSocial | Singapore",
@@ -239,6 +240,8 @@ export default function ProductsHubPage() {
       </section>
 
       <FinalCTA />
+      <StickyMobileCTA />
+      <div className="h-20 lg:hidden" />
     </>
   );
 }
