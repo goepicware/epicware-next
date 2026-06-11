@@ -13,7 +13,7 @@ import {
 
 const NAV = {
   platform: {
-    label: "Platform",
+    label: "Services",
     items: [
       { href: "/reputation-management-singapore", label: "Reputation Management" },
       { href: "/local-seo-singapore", label: "Local SEO Singapore" },
