@@ -12,22 +12,26 @@ export default function FinalCTA() {
 
       <div className="container mx-auto px-6 max-w-3xl relative z-10 text-center">
         <span className="text-xs font-bold uppercase tracking-widest text-accent mb-6 block">
-          Ready to Grow?
+          Get Started
         </span>
         <h2 className="font-display font-bold text-white mb-6 text-balance">
-          Let&apos;s get your business to the top of Google Maps
+          Ready to Own Your Local Search Results?
         </h2>
-        <p className="text-lg text-white/60 mb-10 leading-relaxed">
-          Book a free strategy call or run your Google Business Profile audit in 60 seconds — no commitment required.
+        <p className="text-lg text-white/60 mb-4 leading-relaxed">
+          Book a free 30-minute demo. We&apos;ll run a live GBP audit on your business
+          and show you exactly what&apos;s costing you customers right now.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <p className="text-sm text-white/40 mb-10">
+          No obligation. No agency pitch. Just the data.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <Button
             asChild
             size="lg"
             className="bg-white text-foreground hover:bg-white/90 h-14 px-8 rounded-full font-semibold text-base group"
           >
             <Link href="/book-demo#form" className="flex items-center gap-2">
-              Book a Strategy Call
+              Book My Free Demo →
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </Button>
@@ -40,6 +44,9 @@ export default function FinalCTA() {
             <Link href="/audit">Get Free GBP Audit</Link>
           </Button>
         </div>
+        <p className="text-xs text-white/30">
+          Or start with a free audit — no signup required → epicware.ai/audit
+        </p>
       </div>
     </section>
   );

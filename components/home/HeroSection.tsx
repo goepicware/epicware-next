@@ -2,56 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const STATS = [
-  { value: 500, suffix: "+", label: "Reviews Collected" },
-  { value: 200, suffix: "+", label: "Businesses Ranked" },
-  { value: 4.8, suffix: "★", label: "Avg Rating Lift", decimal: true },
+const TRUST_ITEMS = [
+  "500+ Outlets Managed",
+  "Bad Review Removal Guaranteed",
+  "Singapore-Built Platform",
+  "Active in SG · MY · UAE · UK · US",
 ];
-
-function AnimatedCounter({
-  value,
-  suffix,
-  decimal,
-}: {
-  value: number;
-  suffix: string;
-  decimal?: boolean;
-}) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
-  const [display, setDisplay] = useState(decimal ? "0.0" : "0");
-
-  useEffect(() => {
-    if (!inView) return;
-    const duration = 1400;
-    const steps = 40;
-    const stepMs = duration / steps;
-    let step = 0;
-    const timer = setInterval(() => {
-      step++;
-      const eased = 1 - Math.pow(1 - step / steps, 3);
-      setDisplay(
-        decimal
-          ? (value * eased).toFixed(1)
-          : Math.round(value * eased).toString()
-      );
-      if (step >= steps) clearInterval(timer);
-    }, stepMs);
-    return () => clearInterval(timer);
-  }, [inView, value, decimal]);
-
-  return (
-    <span ref={ref}>
-      {display}
-      {suffix}
-    </span>
-  );
-}
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 32 },
@@ -76,7 +36,7 @@ export default function HeroSection() {
           <div className="order-2 lg:order-1">
             <motion.div {...fadeUp(0)} className="inline-block mb-6">
               <span className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-5 py-2 text-sm font-semibold text-primary tracking-wide">
-                AI-POWERED GROWTH PLATFORM · SINGAPORE
+                LOCAL SEO & REPUTATION PLATFORM · SINGAPORE
               </span>
             </motion.div>
 
@@ -84,26 +44,25 @@ export default function HeroSection() {
               {...fadeUp(0.06)}
               className="font-display font-bold text-foreground mb-6 leading-[1.08]"
             >
-              Rank higher.{" "}
+              Singapore&apos;s #1 Local SEO &amp;{" "}
               <br className="hidden sm:block" />
-              Get more reviews.
+              <span className="gradient-text">Reputation Platform</span>
               <br />
-              <span className="gradient-text">Grow your local business.</span>
+              for SMBs
             </motion.h1>
 
             <motion.p
               {...fadeUp(0.12)}
               className="text-lg text-muted-foreground mb-10 leading-relaxed max-w-lg"
             >
-              Epicware combines done-for-you Local SEO, AI-powered reputation
-              management, and smart automation — so your business shows up
-              first when customers search.
+              Rank higher on Google Maps, generate more reviews, and remove bad ones —
+              all from one dashboard built for Singapore businesses.
             </motion.p>
 
             {/* CTAs */}
             <motion.div
               {...fadeUp(0.18)}
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              className="flex flex-col sm:flex-row gap-4 mb-10"
             >
               <Button
                 asChild
@@ -111,7 +70,7 @@ export default function HeroSection() {
                 className="bg-foreground hover:bg-foreground/90 text-background h-14 px-8 rounded-full font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-dramatic group"
               >
                 <Link href="/book-demo#form" className="flex items-center gap-2">
-                  Book a Strategy Call
+                  Book a Free Demo
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </Button>
@@ -121,27 +80,19 @@ export default function HeroSection() {
                 size="lg"
                 className="rounded-full border-accent text-accent hover:bg-accent/8 hover:text-accent h-14 px-8 font-semibold text-base"
               >
-                <Link href="/audit">Get Free GBP Audit</Link>
+                <Link href="/audit">Get Your Free GBP Audit →</Link>
               </Button>
             </motion.div>
 
-            {/* Animated stat chips */}
+            {/* Trust bar */}
             <motion.div {...fadeUp(0.24)} className="flex flex-wrap gap-3">
-              {STATS.map((stat) => (
+              {TRUST_ITEMS.map((item) => (
                 <div
-                  key={stat.label}
-                  className="bg-card/80 backdrop-blur-sm border border-border/60 rounded-2xl px-5 py-3.5 text-center shadow-card"
+                  key={item}
+                  className="flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-border/60 rounded-full px-4 py-2 shadow-card"
                 >
-                  <div className="text-xl font-bold font-display text-foreground mb-0.5">
-                    <AnimatedCounter
-                      value={stat.value}
-                      suffix={stat.suffix}
-                      decimal={stat.decimal}
-                    />
-                  </div>
-                  <div className="text-xs text-muted-foreground font-medium tracking-widest uppercase">
-                    {stat.label}
-                  </div>
+                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
+                  <span className="text-sm font-medium text-foreground/80">{item}</span>
                 </div>
               ))}
             </motion.div>
@@ -186,7 +137,7 @@ export default function HeroSection() {
                 </div>
               </motion.div>
 
-              {/* Floating badge — new review */}
+              {/* Floating badge — review removed */}
               <motion.div
                 initial={{ opacity: 0, x: 20, scale: 0.85 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -198,7 +149,7 @@ export default function HeroSection() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent" />
                   </span>
-                  <div className="text-sm font-semibold text-foreground">New 5★ review</div>
+                  <div className="text-sm font-semibold text-foreground">Review removed ✓</div>
                 </div>
               </motion.div>
             </div>
