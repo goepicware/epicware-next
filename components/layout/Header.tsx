@@ -12,41 +12,32 @@ import {
 } from "@/components/ui/sheet";
 
 const NAV = {
-  services: {
-    label: "Services",
+  platform: {
+    label: "Platform",
     items: [
-      { href: "/services/local-seo-singapore", label: "Local SEO Singapore" },
-      { href: "/services/google-business-profile-optimization", label: "GBP Optimisation" },
-      { href: "/services/reputation-management", label: "Reputation Management" },
-      { href: "/services/whatsapp-marketing-automation", label: "WhatsApp Automation" },
-      { href: "/services/online-ordering-system", label: "Online Ordering System" },
-      { href: "/products/epicsocial", label: "EpicSocial (Coming Soon)" },
+      { href: "/reputation-management-singapore", label: "Reputation Management" },
+      { href: "/local-seo-singapore", label: "Local SEO Singapore" },
+      { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
+      { href: "/growth-tools", label: "Growth Tools" },
     ],
   },
-  products: {
-    label: "Products",
+  solutions: {
+    label: "Solutions",
     items: [
-      { href: "/products/epicreview", label: "EpicReview" },
-      { href: "/products/local-seo", label: "Local SEO" },
-      { href: "/products/epicsocial", label: "EpicSocial (Coming Soon)" },
-    ],
-  },
-  industries: {
-    label: "Industries",
-    items: [
-      { href: "/industries/restaurants", label: "Restaurants" },
-      { href: "/industries/nail-hair-salons", label: "Nail & Hair Salons" },
+      { href: "/industries/restaurants", label: "F&B Restaurants" },
+      { href: "/industries/healthcare-clinics", label: "Medical Clinics" },
+      { href: "/industries/nail-hair-salons", label: "Hair & Beauty Salons" },
       { href: "/industries/tuition-centres", label: "Tuition Centres" },
-      { href: "/industries/healthcare-clinics", label: "Healthcare Clinics" },
-      { href: "/industries/wellness-centres", label: "Wellness Centres" },
+      { href: "/industries/dental-clinics", label: "Dental Clinics" },
+      { href: "/industries/car-workshops", label: "Car Workshops" },
     ],
   },
   resources: {
     label: "Resources",
     items: [
+      { href: "/blog", label: "Blog" },
       { href: "/resources/guides", label: "Guides" },
-      { href: "/resources/blog", label: "Blog" },
-      { href: "/tools", label: "Tools" },
+      { href: "/tools", label: "Free Tools" },
     ],
   },
 };
@@ -125,9 +116,8 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-0.5">
-            <DesktopDropdown {...NAV.services} />
-            <DesktopDropdown {...NAV.products} />
-            <DesktopDropdown {...NAV.industries} />
+            <DesktopDropdown {...NAV.platform} />
+            <DesktopDropdown {...NAV.solutions} />
             <DesktopDropdown {...NAV.resources} />
             <Link
               href="/pricing"
@@ -142,7 +132,7 @@ export default function Header() {
             <Button
               asChild
               variant="outline"
-              className="rounded-full border-accent text-accent hover:bg-accent/10 hover:text-accent h-11 px-5 font-semibold"
+              className="rounded-full border-foreground/20 text-foreground hover:bg-muted hover:border-foreground/30 h-11 px-5 font-semibold"
             >
               <Link href="/audit">Free Audit</Link>
             </Button>
