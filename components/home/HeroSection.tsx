@@ -37,8 +37,10 @@ export default function HeroSection() {
               {...fadeUp(0.06)}
               className="font-display font-bold text-foreground mb-6 leading-[1.08]"
             >
-              Singapore&apos;s #1 Local SEO &amp;{" "}
-              <br className="hidden sm:block" />
+              Singapore&apos;s #1
+              <br />
+              Local SEO &amp;
+              <br />
               <span className="gradient-text">Reputation Platform</span>
               <br />
               for SMBs
@@ -80,13 +82,12 @@ export default function HeroSection() {
             {/* Trust stats */}
             <motion.div {...fadeUp(0.24)} className="flex items-center gap-8 pt-2">
               <div>
-                <div className="text-4xl font-display font-bold text-foreground">500+</div>
+                <div className="text-4xl font-display font-bold text-foreground">50+</div>
                 <div className="text-sm text-muted-foreground mt-1">outlets managed</div>
               </div>
               <div className="w-px h-12 bg-border/60" />
               <div>
-                {/* TODO: replace with real number from Vignesh */}
-                <div className="text-4xl font-display font-bold text-foreground">200+</div>
+                <div className="text-4xl font-display font-bold text-foreground">100+</div>
                 <div className="text-sm text-muted-foreground mt-1">bad reviews removed</div>
               </div>
             </motion.div>
