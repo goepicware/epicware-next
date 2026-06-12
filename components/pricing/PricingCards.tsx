@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const PLANS = [
   {
@@ -26,6 +27,9 @@ const PLANS = [
     ],
     highlight: false,
     perOutlet: false,
+    gradient: "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
+    glowOpacity: 0.13,
+    borderWidth: "1px",
   },
   {
     name: "Authority",
@@ -34,7 +38,8 @@ const PLANS = [
     annualPrice: 509,
     subtitle: "Everything in Foundation, plus full Local SEO and rank tracking.",
     outcome: "Top 5 on Google Map Pack & AI search. Steady ranking lift.",
-    guarantee: "Rank Top 3 on Google Maps for 1 tracked keyword within 90 days — or we extend free until achieved.",
+    guarantee:
+      "Rank Top 3 on Google Maps for 1 tracked keyword within 90 days — or we extend free until achieved.",
     features: [
       "Complete GBP audit (80-point) + full optimisation",
       "5 SEO-optimised GBP posts per week",
@@ -49,15 +54,20 @@ const PLANS = [
     ],
     highlight: true,
     perOutlet: true,
+    gradient: "linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #a78bfa 100%)",
+    glowOpacity: 0.22,
+    borderWidth: "2px",
   },
   {
     name: "Domination",
     badge: "Best Value",
     monthlyPrice: 1500,
     annualPrice: 1275,
-    subtitle: "Everything in Authority, plus full AI search visibility and SEO content.",
+    subtitle:
+      "Everything in Authority, plus full AI search visibility and SEO content.",
     outcome: "Top 3 on Google Search, Maps & AI. Named by ChatGPT/Gemini.",
-    guarantee: "Rank Top 3 for 3 tracked keywords + cited by ChatGPT/Gemini within 120 days — or free until achieved.",
+    guarantee:
+      "Rank Top 3 for 3 tracked keywords + cited by ChatGPT/Gemini within 120 days — or free until achieved.",
     features: [
       "GEO/AEO AI Citation for 3 tracked keywords/month",
       "20 tracked keywords (full territory intelligence)",
@@ -72,15 +82,21 @@ const PLANS = [
     ],
     highlight: false,
     perOutlet: true,
+    gradient: "linear-gradient(135deg, #1d4ed8 0%, #4361ee 40%, #7c3aed 100%)",
+    glowOpacity: 0.13,
+    borderWidth: "1px",
   },
   {
     name: "Full Stack",
     badge: "New",
     monthlyPrice: 2200,
     annualPrice: 1870,
-    subtitle: "Everything in Domination, plus paid ad management across Meta and Google.",
-    outcome: "Immediate leads from day 1 + Top 3 on Google Search, Maps & AI. Organic and paid working together.",
-    guarantee: "Top 3 rankings within 120 days + measurable lead flow from ads within 30 days — or we extend free.",
+    subtitle:
+      "Everything in Domination, plus paid ad management across Meta and Google.",
+    outcome:
+      "Immediate leads from day 1 + Top 3 on Google Search, Maps & AI. Organic and paid working together.",
+    guarantee:
+      "Top 3 rankings within 120 days + measurable lead flow from ads within 30 days — or we extend free.",
     features: [
       "Meta (Facebook & Instagram) paid ad management",
       "Google Search & Display ad management",
@@ -92,8 +108,11 @@ const PLANS = [
     note: "Ad spend is billed separately and is not included in the monthly fee.",
     highlight: false,
     perOutlet: true,
+    gradient: "linear-gradient(135deg, #0f172a 0%, #1d4ed8 50%, #7c3aed 100%)",
+    glowOpacity: 0.13,
+    borderWidth: "1px",
   },
-];
+] as const;
 
 function formatPrice(p: number) {
   return p.toLocaleString("en-SG");
@@ -106,7 +125,9 @@ export default function PricingCards() {
     <div>
       {/* Toggle */}
       <div className="flex items-center justify-center gap-4 mb-10">
-        <span className={`text-sm font-semibold ${!annual ? "text-foreground" : "text-muted-foreground"}`}>
+        <span
+          className={`text-sm font-semibold ${!annual ? "text-foreground" : "text-muted-foreground"}`}
+        >
           Monthly
         </span>
         <button
@@ -118,7 +139,9 @@ export default function PricingCards() {
             className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform duration-200 ${annual ? "translate-x-6" : "translate-x-0"}`}
           />
         </button>
-        <span className={`text-sm font-semibold ${annual ? "text-foreground" : "text-muted-foreground"}`}>
+        <span
+          className={`text-sm font-semibold ${annual ? "text-foreground" : "text-muted-foreground"}`}
+        >
           Annual
           <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-xs font-bold">
             Save 15%
@@ -128,95 +151,137 @@ export default function PricingCards() {
 
       {/* Plan grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
-        {PLANS.map((plan) => (
-          <div
+        {PLANS.map((plan, index) => (
+          <motion.div
             key={plan.name}
-            className={`relative rounded-3xl flex flex-col ${
-              plan.highlight
-                ? "border-2 border-primary bg-primary/5 shadow-elegant"
-                : "border border-border/60 bg-card shadow-card"
-            }`}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: "easeOut", delay: index * 0.08 }}
+            className="relative group"
           >
-            {/* Badge */}
+            {/* Glow layer — blurred gradient halo behind the card */}
+            <div
+              className="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-300"
+              style={{
+                background: plan.gradient,
+                opacity: plan.glowOpacity,
+                filter: "blur(28px)",
+                transform: "scale(1.1)",
+              }}
+            />
+
+            {/* Badge — sits above the card, needs z-index */}
             {plan.badge && (
-              <div className="absolute -top-3.5 left-0 right-0 flex justify-center">
-                <span className={`inline-flex items-center px-4 py-1 rounded-full text-xs font-bold tracking-wide ${
-                  plan.highlight
-                    ? "bg-primary text-white"
-                    : plan.badge === "New"
-                    ? "bg-secondary text-white"
-                    : "bg-foreground text-background"
-                }`}>
+              <div className="absolute -top-3.5 left-0 right-0 flex justify-center z-20">
+                <span
+                  className={`inline-flex items-center px-4 py-1 rounded-full text-xs font-bold tracking-wide ${
+                    plan.highlight
+                      ? "bg-primary text-white"
+                      : plan.badge === "New"
+                        ? "bg-secondary text-white"
+                        : "bg-foreground text-background"
+                  }`}
+                >
                   {plan.badge}
                 </span>
               </div>
             )}
 
-            <div className="p-6 flex flex-col h-full">
-              {/* Plan name */}
-              <h3 className="font-display font-bold text-foreground text-xl mb-1">{plan.name}</h3>
-              <p className="text-sm text-muted-foreground mb-5 leading-snug">{plan.subtitle}</p>
-
-              {/* Price */}
-              <div className="mb-1">
-                <span className="font-display font-bold text-4xl text-foreground">
-                  ${formatPrice(annual ? plan.annualPrice : plan.monthlyPrice)}
-                </span>
-                <span className="text-muted-foreground text-sm ml-1">/mo</span>
-              </div>
-              {plan.perOutlet && (
-                <p className="text-xs text-muted-foreground mb-1">Includes 1 outlet · +$99/additional outlet</p>
-              )}
-              {annual && (
-                <p className="text-xs text-green-700 font-medium mb-4">
-                  Billed annually — save ${formatPrice((plan.monthlyPrice - plan.annualPrice) * 12)}/yr
+            {/* Foreground card — white interior, gradient border via background-clip */}
+            <div
+              className="relative rounded-3xl flex flex-col z-10 h-full transition-shadow duration-300 group-hover:shadow-elegant"
+              style={{
+                border: `${plan.borderWidth} solid transparent`,
+                background: `oklch(1 0 0) padding-box, ${plan.gradient} border-box`,
+                boxShadow: plan.highlight
+                  ? "0 10px 30px -10px rgba(92,36,76,0.18)"
+                  : "0 2px 8px rgba(0,0,0,0.05)",
+              }}
+            >
+              <div className="p-6 flex flex-col h-full">
+                {/* Plan name */}
+                <h3 className="font-display font-bold text-foreground text-xl mb-1">
+                  {plan.name}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-5 leading-snug">
+                  {plan.subtitle}
                 </p>
-              )}
-              {!annual && <div className="mb-4" />}
 
-              {/* CTA */}
-              <Link
-                href="/book-demo"
-                className={`inline-flex items-center justify-center gap-2 h-11 px-5 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 mb-6 ${
-                  plan.highlight
-                    ? "bg-primary text-white hover:bg-primary/90"
-                    : "bg-foreground text-background hover:bg-foreground/90"
-                }`}
-              >
-                Book Strategy Call <ArrowRight className="w-4 h-4" />
-              </Link>
-
-              {/* Features */}
-              <ul className="space-y-2.5 flex-1">
-                {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground/80 leading-snug">{f}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Outcome + Guarantee */}
-              {(plan.outcome || plan.guarantee) && (
-                <div className="mt-6 pt-5 border-t border-border/40 space-y-3">
-                  {plan.outcome && (
-                    <p className="text-xs font-semibold text-foreground leading-snug">
-                      <span className="text-primary">Outcome: </span>{plan.outcome}
-                    </p>
-                  )}
-                  {plan.guarantee && (
-                    <p className="text-xs text-muted-foreground leading-snug">
-                      <span className="font-semibold text-foreground">Guarantee: </span>{plan.guarantee}
-                    </p>
-                  )}
+                {/* Price */}
+                <div className="mb-1">
+                  <span className="font-display font-bold text-4xl text-foreground">
+                    ${formatPrice(annual ? plan.annualPrice : plan.monthlyPrice)}
+                  </span>
+                  <span className="text-muted-foreground text-sm ml-1">/mo</span>
                 </div>
-              )}
+                {plan.perOutlet && (
+                  <p className="text-xs text-muted-foreground mb-1">
+                    Includes 1 outlet · +$99/additional outlet
+                  </p>
+                )}
+                {annual && (
+                  <p className="text-xs text-green-700 font-medium mb-4">
+                    Billed annually — save $
+                    {formatPrice(
+                      (plan.monthlyPrice - plan.annualPrice) * 12
+                    )}
+                    /yr
+                  </p>
+                )}
+                {!annual && <div className="mb-4" />}
 
-              {plan.note && (
-                <p className="mt-4 text-xs text-muted-foreground italic">{plan.note}</p>
-              )}
+                {/* CTA */}
+                <Link
+                  href="/book-demo"
+                  className={`inline-flex items-center justify-center gap-2 h-11 px-5 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 mb-6 ${
+                    plan.highlight
+                      ? "bg-primary text-white hover:bg-primary/90"
+                      : "bg-foreground text-background hover:bg-foreground/90"
+                  }`}
+                >
+                  Book Strategy Call <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                {/* Features */}
+                <ul className="space-y-2.5 flex-1">
+                  {plan.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm text-foreground/80 leading-snug">
+                        {f}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Outcome + Guarantee */}
+                {(plan.outcome || plan.guarantee) && (
+                  <div className="mt-6 pt-5 border-t border-border/40 space-y-3">
+                    {plan.outcome && (
+                      <p className="text-xs font-semibold text-foreground leading-snug">
+                        <span className="text-primary">Outcome: </span>
+                        {plan.outcome}
+                      </p>
+                    )}
+                    {plan.guarantee && (
+                      <p className="text-xs text-muted-foreground leading-snug">
+                        <span className="font-semibold text-foreground">
+                          Guarantee:{" "}
+                        </span>
+                        {plan.guarantee}
+                      </p>
+                    )}
+                  </div>
+                )}
+
+                {"note" in plan && plan.note && (
+                  <p className="mt-4 text-xs text-muted-foreground italic">
+                    {plan.note}
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
@@ -224,16 +289,33 @@ export default function PricingCards() {
       <div className="rounded-3xl border border-border/60 bg-card p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <h3 className="font-display font-bold text-foreground text-xl">Enterprise</h3>
-            <span className="text-sm text-muted-foreground">Custom — $5,000–$10,000/month</span>
+            <h3 className="font-display font-bold text-foreground text-xl">
+              Enterprise
+            </h3>
+            <span className="text-sm text-muted-foreground">
+              Custom — $5,000–$10,000/month
+            </span>
           </div>
           <p className="text-sm text-muted-foreground mb-3 max-w-2xl">
-            Designed for large businesses and multi-location brands that need a dedicated account manager, custom integrations, API access, priority SLA, bespoke strategy, and multi-location management at scale.
+            Designed for large businesses and multi-location brands that need a
+            dedicated account manager, custom integrations, API access, priority
+            SLA, bespoke strategy, and multi-location management at scale.
           </p>
           <div className="flex flex-wrap gap-2">
-            {["Dedicated account manager", "Custom integrations & API", "Priority support & SLA", "Multi-location management", "Custom reporting", "Bespoke strategy"].map((f) => (
-              <span key={f} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-xs font-medium text-foreground/80 border border-border/60">
-                <CheckCircle2 className="w-3 h-3 text-primary" />{f}
+            {[
+              "Dedicated account manager",
+              "Custom integrations & API",
+              "Priority support & SLA",
+              "Multi-location management",
+              "Custom reporting",
+              "Bespoke strategy",
+            ].map((f) => (
+              <span
+                key={f}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-muted text-xs font-medium text-foreground/80 border border-border/60"
+              >
+                <CheckCircle2 className="w-3 h-3 text-primary" />
+                {f}
               </span>
             ))}
           </div>
@@ -248,7 +330,9 @@ export default function PricingCards() {
 
       {/* Add-ons */}
       <div className="rounded-3xl border border-border/60 bg-muted/30 p-8">
-        <h3 className="font-display font-semibold text-foreground text-lg mb-5">Add-Ons</h3>
+        <h3 className="font-display font-semibold text-foreground text-lg mb-5">
+          Add-Ons
+        </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {[
             {
@@ -270,10 +354,21 @@ export default function PricingCards() {
               highlight: false,
             },
           ].map((a) => (
-            <div key={a.name} className={`rounded-2xl p-5 border ${a.highlight ? "border-primary/30 bg-primary/5" : "border-border/60 bg-card"}`}>
-              <p className="font-semibold text-foreground text-sm mb-1">{a.name}</p>
-              <p className={`font-bold text-lg mb-2 ${a.highlight ? "text-primary" : "text-foreground"}`}>{a.price}</p>
-              <p className="text-xs text-muted-foreground leading-snug">{a.note}</p>
+            <div
+              key={a.name}
+              className={`rounded-2xl p-5 border ${a.highlight ? "border-primary/30 bg-primary/5" : "border-border/60 bg-card"}`}
+            >
+              <p className="font-semibold text-foreground text-sm mb-1">
+                {a.name}
+              </p>
+              <p
+                className={`font-bold text-lg mb-2 ${a.highlight ? "text-primary" : "text-foreground"}`}
+              >
+                {a.price}
+              </p>
+              <p className="text-xs text-muted-foreground leading-snug">
+                {a.note}
+              </p>
             </div>
           ))}
         </div>
