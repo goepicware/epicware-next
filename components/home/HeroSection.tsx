@@ -78,7 +78,7 @@ export default function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="rounded-full border-accent text-accent hover:bg-accent/8 hover:text-accent h-14 px-8 font-semibold text-base"
+                className="rounded-full h-14 px-8 font-semibold text-base border-[1.5px] border-[#185FA5] text-[#185FA5] bg-transparent hover:bg-[#185FA5] hover:text-white transition-colors duration-200"
               >
                 <Link href="/audit">Get Your Free GBP Audit →</Link>
               </Button>
