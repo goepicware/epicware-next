@@ -3,15 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const TRUST_ITEMS = [
-  "500+ Outlets Managed",
-  "Bad Review Removal Guaranteed",
-  "Singapore-Built Platform",
-  "Active in SG · MY · UAE · UK · US",
-];
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 32 },
@@ -84,17 +77,18 @@ export default function HeroSection() {
               </Button>
             </motion.div>
 
-            {/* Trust bar */}
-            <motion.div {...fadeUp(0.24)} className="flex flex-wrap gap-3">
-              {TRUST_ITEMS.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-border/60 rounded-full px-4 py-2 shadow-card"
-                >
-                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-sm font-medium text-foreground/80">{item}</span>
-                </div>
-              ))}
+            {/* Trust stats */}
+            <motion.div {...fadeUp(0.24)} className="flex items-center gap-8 pt-2">
+              <div>
+                <div className="text-4xl font-display font-bold text-foreground">500+</div>
+                <div className="text-sm text-muted-foreground mt-1">outlets managed</div>
+              </div>
+              <div className="w-px h-12 bg-border/60" />
+              <div>
+                {/* TODO: replace with real number from Vignesh */}
+                <div className="text-4xl font-display font-bold text-foreground">200+</div>
+                <div className="text-sm text-muted-foreground mt-1">bad reviews removed</div>
+              </div>
             </motion.div>
           </div>
 

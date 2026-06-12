@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
+import UrgencySection from "@/components/home/UrgencySection";
 import SocialProof from "@/components/home/SocialProof";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import NoRemovalNoFee from "@/components/home/NoRemovalNoFee";
 import SecondaryCategories from "@/components/home/SecondaryCategories";
+import DashboardScreenshot from "@/components/home/DashboardScreenshot";
 import CoreServices from "@/components/home/CoreServices";
+import MidPageCTA from "@/components/home/MidPageCTA";
 import IndustriesGrid from "@/components/home/IndustriesGrid";
 import AboutCredentials from "@/components/home/AboutCredentials";
 import FAQSection from "@/components/home/FAQSection";
@@ -93,31 +97,43 @@ export default function HomePage() {
       {/* 1. Hero */}
       <HeroSection />
 
-      {/* 2. Social Proof — review cards + Google Reviews embed placeholder */}
+      {/* 2. Urgency — after hero, before review grid */}
+      <UrgencySection />
+
+      {/* 3. Social Proof — review widget (deduplicated, 6 unique) */}
       <SocialProof />
 
-      {/* 3. Why Choose Us — 4 differentiators */}
+      {/* 4. Why Choose Us — 4 differentiators */}
       <WhyChooseUs />
 
-      {/* 4. Secondary Categories — 4 platform modules */}
+      {/* 5. No Removal No Fee — dark navy guarantee band */}
+      <NoRemovalNoFee />
+
+      {/* 6. Platform Modules — 4 category cards */}
       <SecondaryCategories />
 
-      {/* 5. Core Services — Bad Review Removal, GBP Optimisation, Review Management */}
+      {/* 7. Dashboard Screenshot — 16:9 placeholder, awaiting real EpicMap asset */}
+      <DashboardScreenshot />
+
+      {/* 8. Core Services — Bad Review Removal, GBP Optimisation, Review Management */}
       <CoreServices />
 
-      {/* 6. Featured Verticals — 8 industries */}
+      {/* 9. Mid-page CTA */}
+      <MidPageCTA />
+
+      {/* 10. Featured Verticals — 9 industries */}
       <IndustriesGrid />
 
-      {/* 7. About / Credentials */}
+      {/* 11. About / Credentials */}
       <AboutCredentials />
 
-      {/* 8. FAQ — accordion + FAQPage schema */}
+      {/* 12. FAQ — accordion + FAQPage schema */}
       <FAQSection />
 
-      {/* 9. Locations Trust Strip */}
+      {/* 13. Locations Trust Strip */}
       <LocationsStrip />
 
-      {/* 10. Final CTA */}
+      {/* 14. Final CTA */}
       <FinalCTA />
     </>
   );

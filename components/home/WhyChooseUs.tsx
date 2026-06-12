@@ -27,8 +27,8 @@ const DIFFERENTIATORS = [
     headline: "A Platform, Not an Agency. Your Dashboard, Not Our Retainer.",
     explanation:
       "Agencies sell your time back to you. Epicware gives you a self-serve platform that runs GBP optimisation, review generation, rank tracking, and post scheduling — without a monthly agency bill or waiting on someone else's team.",
-    iconColor: "text-accent",
-    iconBg: "bg-accent/10",
+    iconColor: "text-primary",
+    iconBg: "bg-primary/10",
     stat: "No retainers. Cancel anytime.",
   },
   {

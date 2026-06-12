@@ -10,6 +10,10 @@ import {
 
 const FAQS = [
   {
+    q: "Is removing Google reviews legal?",
+    a: "Yes. We only pursue removals through Google's official policy channels — flagging reviews that violate Google's own content policies: fake reviews, spam, conflicts of interest, off-topic content. No hacking, no suppression tricks. If it doesn't violate policy, we tell you upfront.",
+  },
+  {
     q: "How is Epicware different from hiring a local SEO agency?",
     a: "Agencies sell time. Epicware sells a platform. With an agency, you pay a monthly retainer for someone else to log into your Google account and make changes on a schedule. With Epicware, you get a self-serve dashboard where everything — GBP optimisation, review generation, rank tracking, post scheduling — runs automatically. You see the results in real time. No waiting for a monthly report. No retainer. Pay for what you use.",
   },

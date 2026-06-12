@@ -25,6 +25,7 @@ const WIDGET_SCRIPT = `
   function timeAgo(iso){if(!iso)return'';var d=new Date(iso);var s=Math.floor((Date.now()-d.getTime())/1000);if(s<60)return s+'s ago';var m=Math.floor(s/60);if(m<60)return m+'m ago';var h=Math.floor(m/60);if(h<24)return h+'h ago';var dd=Math.floor(h/24);if(dd<30)return dd+' days ago';var mo=Math.floor(dd/30);if(mo<12)return mo+' months ago';return Math.floor(mo/12)+' years ago';}
   function initial(n){return (n||'A').trim().charAt(0).toUpperCase();}
   function colorFor(n){var p=['#4F46E5','#0EA5E9','#10B981','#F59E0B','#EF4444','#8B5CF6','#EC4899'];return p[(n||'A').charCodeAt(0)%p.length];}
+  function deduplicateByName(reviews){var seen={};return reviews.filter(function(r){var n=(r.author_name||'').trim().toLowerCase();if(seen[n])return false;seen[n]=true;return true;}).slice(0,6);}
   function escapeHtml(s){return (s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 
   function cardHtml(r){
@@ -110,6 +111,7 @@ const WIDGET_SCRIPT = `
   function renderSingle(){
     var scope=(config.outlets&&config.outlets.indexOf(',') === -1&&config.outlets!=='all')?config.outlets:'all';
     fetchReviews(scope,function(reviews,ov){
+      reviews=deduplicateByName(reviews);
       var label=(config.outlets==='all')?'Overall Rating':'Google Reviews';
       container.innerHTML=renderByLayout(reviews,label,ov,'');
       bindReadMore(container);

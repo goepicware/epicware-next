@@ -12,6 +12,7 @@ const INDUSTRIES = [
   { emoji: "📚", label: "Tuition Centres", href: "/industries/tuition-centres" },
   { emoji: "💆", label: "Spas & Wellness", href: "/industries/wellness-centres" },
   { emoji: "🛍️", label: "Retail Stores", href: "/industries/retail-stores" },
+  { emoji: "🦵", label: "Physiotherapy", href: "/industries/physiotherapy" },
 ];
 
 export default function IndustriesGrid() {
@@ -31,7 +32,7 @@ export default function IndustriesGrid() {
           <h2 className="font-display text-foreground">Built for Your Industry</h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
           {INDUSTRIES.map((industry, i) => (
             <motion.div
               key={industry.href}

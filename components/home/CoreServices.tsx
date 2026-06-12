@@ -7,8 +7,8 @@ import { Trash2, MapPin, Star, ArrowRight } from "lucide-react";
 const SERVICES = [
   {
     icon: Trash2,
-    badge: "Unique — No Competitor Offers This",
-    badgeClass: "bg-primary/10 text-primary border-primary/20",
+    badge: "Only on Epicware",
+    badgeClass: "bg-[#185FA5]/10 text-[#185FA5] border-[#185FA5]/30",
     title: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     price: "$200 per review — pay only if removed",
@@ -78,7 +78,7 @@ export default function CoreServices() {
               >
                 <Link
                   href={service.href}
-                  className={`card-feature group block ${service.highlight ? "ring-2 ring-primary/20" : ""}`}
+                  className={`card-feature group block ${service.highlight ? "ring-[2px] ring-[#185FA5]" : ""}`}
                 >
                   <div className="card-feature-inner p-8 lg:p-10">
                     <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 lg:items-start">
