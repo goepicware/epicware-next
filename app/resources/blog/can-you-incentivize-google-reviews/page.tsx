@@ -18,9 +18,50 @@ const schema = {
   "url": "https://epicware.ai/resources/blog/can-you-incentivize-google-reviews"
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you incentivise Google reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google's review content policy explicitly prohibits offering anything of value in exchange for a Google review. This covers all forms of incentive — cash, discounts, free products, prize draws, loyalty points, and any other reward offered specifically in exchange for leaving a review, regardless of whether a specific star rating is specified."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as an incentive under Google's review policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An incentive is anything of value offered in exchange for a review: discounts on future visits, free items or services, prize draw entries, loyalty points, cash payments, and implied preferential treatment. Simply asking for a review, sending a follow-up message, providing a direct review link, or thanking a reviewer after they post does NOT count as an incentive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the consequences of incentivising Google reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google enforces its review policy through automated detection and manual review. Consequences include: removal of incentivised reviews (which can dramatically lower your rating overnight if a large portion were incentivised), Google Business Profile suspension removing your Maps presence entirely, and reputation risk if the incentive scheme is documented and reported by competitors or customers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get more reviews without incentivising customers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most effective approach is to fix the ask process: ask every satisfied customer (not just the most enthusiastic), ask at the right moment (immediately after the positive experience), use the right channel (WhatsApp in Singapore converts at 15–30%), and remove friction with a direct review link. Most customers who don't leave reviews simply weren't asked — not because they needed a financial incentive. A good ask process typically generates 3–5x more reviews than an incentive-based approach, without any policy risk."
+      }
+    }
+  ]
+};
+
 export default function Post() {
   return (
-    <BlogArticle
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BlogArticle
       schema={schema}
       badge="REVIEW POLICY"
       h1="Can You Incentivise Google Reviews? What the Policy Says"
@@ -89,5 +130,6 @@ export default function Post() {
         { title: "Customer Feedback System: Private vs Public Reviews", href: "/resources/blog/customer-feedback-system-private-vs-public-reviews" },
       ]}
     />
+    </>
   );
 }

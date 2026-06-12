@@ -18,9 +18,50 @@ const schema = {
   "url": "https://epicware.ai/resources/blog/review-gating-explained"
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is review gating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Review gating is the practice of screening customers before directing them to leave a public Google review — routing satisfied customers toward the review form while directing dissatisfied customers away from it. It is a policy violation under Google's review content guidelines, which explicitly prohibit businesses from discouraging negative reviews or selectively soliciting positive ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is review gating against Google's policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Google explicitly banned review gating in 2018 when it updated its guidelines to prohibit the practice. Google's policy states that businesses 'shouldn't discourage or prohibit negative reviews or selectively solicit positive reviews.' This applies regardless of how the gating is implemented — two-step satisfaction surveys, conditional ask language, or selective outreach all violate the same rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the risks of review gating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If Google determines a business has been gating reviews, the consequences can include: bulk removal of reviews collected through the gating process, flagging or suspension of the Google Business Profile, and competitor reports triggering a manual review by Google. A business that loses 80–100 reviews in a bulk removal faces a significant ranking and credibility setback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the compliant alternative to review gating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The compliant alternative is to ask every customer for a review, regardless of their expected sentiment. Send review requests to all customers after service — not a pre-screened subset. Use direct language: 'We'd appreciate your honest feedback on Google' rather than conditional language like 'if you were happy.' Accept that some customers will leave negative reviews, and respond to those professionally. A business with 200 genuine reviews including a few 2-star responses looks more credible than a business with 40 perfect 5-star reviews."
+      }
+    }
+  ]
+};
+
 export default function Post() {
   return (
-    <BlogArticle
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BlogArticle
       schema={schema}
       badge="REVIEW POLICY"
       h1="Review Gating Explained — What It Is and Why Google Bans It"
@@ -79,5 +120,6 @@ export default function Post() {
         { title: "Customer Feedback System: Private vs Public Reviews", href: "/resources/blog/customer-feedback-system-private-vs-public-reviews" },
       ]}
     />
+    </>
   );
 }

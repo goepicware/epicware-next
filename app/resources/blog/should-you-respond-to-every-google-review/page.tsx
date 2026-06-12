@@ -18,9 +18,50 @@ const schema = {
   "url": "https://epicware.ai/resources/blog/should-you-respond-to-every-google-review"
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should you respond to every Google review?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Responding to every review — positive and negative — sends two signals: to Google's algorithm (active engagement is a positive GBP prominence signal that improves Maps rank) and to future customers (a business that responds to all reviews looks attentive and professional). Unanswered reviews signal an unmonitored profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should you respond to a negative 1-star Google review?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keep your response to 2–3 sentences. Acknowledge without admitting fault ('I'm sorry your experience didn't meet expectations'), do not repeat the negative claim in your response, and take the conversation offline ('We'd welcome the chance to discuss this — please reach us at [contact]'). Never threaten, argue, or respond emotionally. Your response is read by every future customer who views your profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly should you respond to Google reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Respond within 24 hours to any new review, positive or negative. For negative reviews this is especially important — a review left unanswered for several days signals that the business didn't notice or didn't care. Set up review alert notifications in Google Business Profile Manager to be notified when new reviews arrive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does responding to Google reviews improve Maps ranking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Google treats active engagement with reviews as a positive signal for the prominence score that drives Google Maps rank. Profiles with consistent responses to reviews outrank equivalent profiles with none. Response quality also matters — templated identical responses are weighted less than specific, personalised replies."
+      }
+    }
+  ]
+};
+
 export default function Post() {
   return (
-    <BlogArticle
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BlogArticle
       schema={schema}
       badge="REVIEW MANAGEMENT"
       h1="Should You Respond to Every Google Review? The Answer Is Yes"
@@ -101,5 +142,6 @@ export default function Post() {
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/resources/blog/fake-or-unfair-google-reviews-what-to-do" },
       ]}
     />
+    </>
   );
 }
