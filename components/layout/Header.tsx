@@ -87,7 +87,7 @@ function ProductsDropdown() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 pt-2 z-50">
+        <div className="absolute top-full left-0 pt-2 z-[100]">
           <div className="bg-background/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-lg p-2 w-[560px]">
             {/* Column headers */}
             <div className="grid grid-cols-2 gap-4 px-3 py-1.5 mb-1">
@@ -158,7 +158,7 @@ function DesktopDropdown({
         />
       </button>
       {open && (
-        <div className="absolute top-full left-0 pt-2 z-50">
+        <div className="absolute top-full left-0 pt-2 z-[100]">
           <div className="bg-background/95 backdrop-blur-xl border border-border/50 rounded-xl shadow-lg py-2 min-w-[240px]">
             {items.map((item) => (
               <Link
@@ -213,11 +213,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-4 px-4 lg:px-8">
+    <header className={`fixed top-0 left-0 right-0 z-[100] py-4 px-4 lg:px-8 transition-all duration-700 ${scrolled ? "backdrop-blur-2xl" : ""}`}>
       <div
         className={`container mx-auto max-w-7xl px-6 lg:px-8 transition-all duration-700 rounded-full ${
           scrolled
-            ? "py-3 bg-background/80 backdrop-blur-2xl border border-border/50 shadow-lg"
+            ? "py-3 bg-background/80 border border-border/50 shadow-lg"
             : "py-3"
         }`}
       >
