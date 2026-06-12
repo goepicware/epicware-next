@@ -66,12 +66,12 @@ export default function DashboardScreenshot() {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <div className="relative w-full rounded-2xl overflow-hidden border border-border/50 shadow-premium bg-muted" style={{ aspectRatio: "16/9" }}>
+            <div className="relative w-full rounded-2xl overflow-hidden border border-border/50 shadow-premium bg-muted" style={{ aspectRatio: "4/3" }}>
               <Image
                 src={current.image}
                 alt={`${current.name} dashboard screenshot`}
                 fill
-                className="object-cover object-top"
+                className="object-contain"
                 priority={active === "epicmap"}
               />
             </div>
