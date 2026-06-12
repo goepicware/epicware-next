@@ -31,14 +31,9 @@ export default function ReviewReplyGenerator() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/chat`,
-        {
+        "/api/tools/chat", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             messages: [
               {
