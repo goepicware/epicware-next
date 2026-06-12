@@ -106,11 +106,11 @@ export default function HeroSection() {
               {/* Image */}
               <div className="relative rounded-[2rem] overflow-hidden shadow-premium ring-1 ring-primary/10">
                 <Image
-                  src="/assets/BusinessOwner.png"
-                  alt="Singapore business owner seeing results with Epicware"
+                  src="/assets/business-owner-male.png"
+                  alt="Singapore café owner growing his business with Epicware"
                   width={520}
-                  height={780}
-                  className="w-full h-auto object-cover"
+                  height={924}
+                  className="w-full h-auto object-cover object-top"
                   priority
                 />
               </div>
