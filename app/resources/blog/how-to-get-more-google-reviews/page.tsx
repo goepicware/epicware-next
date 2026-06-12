@@ -85,6 +85,8 @@ export default function Post() {
         { title: "Best Time to Ask for a Google Review", href: "/resources/blog/best-time-to-ask-for-a-google-review" },
         { title: "Google Review Request Templates", href: "/resources/blog/google-review-request-templates" },
         { title: "Review Velocity vs Total Review Count", href: "/resources/blog/review-velocity-vs-total-review-count" },
+        { title: "Google Reviews Strategy: 90-Day Plan", href: "/resources/blog/google-reviews-strategy" },
+        { title: "How to Create a Google Review Link and QR Code", href: "/resources/blog/how-to-create-google-review-link-qr-code" },
       ]}
     />
   );

@@ -87,6 +87,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Best Time to Ask for a Google Review", href: "/resources/blog/best-time-to-ask-for-a-google-review" },
         { title: "How to Get More Google Reviews", href: "/resources/blog/how-to-get-more-google-reviews" },
+        { title: "How to Create a Google Review Link and QR Code", href: "/resources/blog/how-to-create-google-review-link-qr-code" },
       ]}
     />
   );

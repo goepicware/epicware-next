@@ -77,6 +77,7 @@ export default function Post() {
       relatedPosts={[
         { title: "How Many Google Reviews Do You Need to Compete Locally?", href: "/resources/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
         { title: "Google Maps Ranking Factors Explained", href: "/resources/blog/google-maps-ranking-factors" },
+        { title: "Google Reviews Strategy: 90-Day Plan", href: "/resources/blog/google-reviews-strategy" },
       ]}
     />
   );

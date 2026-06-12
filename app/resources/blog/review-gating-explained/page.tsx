@@ -76,6 +76,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Can You Incentivise Google Reviews?", href: "/resources/blog/can-you-incentivize-google-reviews" },
         { title: "Google Review Policy Explained", href: "/resources/blog/google-review-policy-explained" },
+        { title: "Customer Feedback System: Private vs Public Reviews", href: "/resources/blog/customer-feedback-system-private-vs-public-reviews" },
       ]}
     />
   );

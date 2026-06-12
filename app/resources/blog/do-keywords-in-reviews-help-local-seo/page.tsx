@@ -68,6 +68,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Google Maps Ranking Factors Explained", href: "/resources/blog/google-maps-ranking-factors" },
         { title: "Review Velocity vs Total Review Count", href: "/resources/blog/review-velocity-vs-total-review-count" },
+        { title: "Do Photo Reviews Matter for Local SEO?", href: "/resources/blog/do-photo-reviews-matter-for-local-seo" },
       ]}
     />
   );

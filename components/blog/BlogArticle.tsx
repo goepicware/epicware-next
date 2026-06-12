@@ -4,7 +4,9 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 interface BlogArticleProps {
-  schema: object;
+  schema: Record<string, unknown>;
+  dateModified?: string;
+  ogImage?: string;
   badge: string;
   h1: string;
   publishDate: string;
@@ -17,10 +19,34 @@ interface BlogArticleProps {
   relatedPosts: { title: string; href: string }[];
 }
 
-export default function BlogArticle({ schema, badge, h1, publishDate, readTime, intro, body, ctaHref, ctaLabel, ctaContext, relatedPosts }: BlogArticleProps) {
+export default function BlogArticle({ schema, dateModified, ogImage, badge, h1, publishDate, readTime, intro, body, ctaHref, ctaLabel, ctaContext, relatedPosts }: BlogArticleProps) {
+  const datePublished = schema.datePublished as string | undefined;
+  const publisher = schema.publisher as Record<string, unknown> | undefined;
+  const schemaUrl = (schema.url as string | undefined)?.replace(
+    "https://epicware.ai/",
+    "https://www.epicware.ai/"
+  );
+
+  const enhancedSchema = {
+    ...schema,
+    "@type": "BlogPosting",
+    url: schemaUrl,
+    dateModified: dateModified ?? datePublished,
+    ...(ogImage
+      ? { image: { "@type": "ImageObject", url: ogImage, width: 1200, height: 630 } }
+      : {}),
+    publisher: {
+      ...publisher,
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.epicware.ai/logo.png",
+      },
+    },
+  };
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedSchema) }} />
 
       {/* Hero */}
       <section className="hero-gradient pt-28 pb-12">

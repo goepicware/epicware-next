@@ -86,6 +86,7 @@ export default function Post() {
         { title: "Review Gating Explained", href: "/resources/blog/review-gating-explained" },
         { title: "How to Get More Google Reviews", href: "/resources/blog/how-to-get-more-google-reviews" },
         { title: "Google Review Policy Explained", href: "/resources/blog/google-review-policy-explained" },
+        { title: "Customer Feedback System: Private vs Public Reviews", href: "/resources/blog/customer-feedback-system-private-vs-public-reviews" },
       ]}
     />
   );

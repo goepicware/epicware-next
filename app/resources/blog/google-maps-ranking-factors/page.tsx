@@ -76,6 +76,8 @@ export default function Post() {
       relatedPosts={[
         { title: "Review Velocity vs Total Review Count", href: "/resources/blog/review-velocity-vs-total-review-count" },
         { title: "How Many Google Reviews Do You Need to Compete Locally?", href: "/resources/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
+        { title: "Reviews vs Rating — What Matters More for Maps Rank?", href: "/resources/blog/reviews-vs-rating-what-matters-more" },
+        { title: "Do Photo Reviews Matter for Local SEO?", href: "/resources/blog/do-photo-reviews-matter-for-local-seo" },
       ]}
     />
   );

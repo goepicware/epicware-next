@@ -81,6 +81,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Review Velocity vs Total Review Count", href: "/resources/blog/review-velocity-vs-total-review-count" },
         { title: "Google Maps Ranking Factors Explained", href: "/resources/blog/google-maps-ranking-factors" },
+        { title: "Reviews vs Rating — What Matters More for Maps Rank?", href: "/resources/blog/reviews-vs-rating-what-matters-more" },
       ]}
     />
   );
