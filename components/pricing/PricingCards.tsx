@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 
 const PLANS = [
   {
@@ -27,9 +26,6 @@ const PLANS = [
     ],
     highlight: false,
     perOutlet: false,
-    gradient: "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
-    glowOpacity: 0.13,
-    borderWidth: "1px",
   },
   {
     name: "Authority",
@@ -54,9 +50,6 @@ const PLANS = [
     ],
     highlight: true,
     perOutlet: true,
-    gradient: "linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #a78bfa 100%)",
-    glowOpacity: 0.22,
-    borderWidth: "2px",
   },
   {
     name: "Domination",
@@ -82,9 +75,6 @@ const PLANS = [
     ],
     highlight: false,
     perOutlet: true,
-    gradient: "linear-gradient(135deg, #1d4ed8 0%, #4361ee 40%, #7c3aed 100%)",
-    glowOpacity: 0.13,
-    borderWidth: "1px",
   },
   {
     name: "Full Stack",
@@ -108,11 +98,8 @@ const PLANS = [
     note: "Ad spend is billed separately and is not included in the monthly fee.",
     highlight: false,
     perOutlet: true,
-    gradient: "linear-gradient(135deg, #0f172a 0%, #1d4ed8 50%, #7c3aed 100%)",
-    glowOpacity: 0.13,
-    borderWidth: "1px",
   },
-] as const;
+];
 
 function formatPrice(p: number) {
   return p.toLocaleString("en-SG");
@@ -151,28 +138,11 @@ export default function PricingCards() {
 
       {/* Plan grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
-        {PLANS.map((plan, index) => (
-          <motion.div
-            key={plan.name}
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: "easeOut", delay: index * 0.08 }}
-            className="relative group"
-          >
-            {/* Glow layer — blurred gradient halo behind the card */}
-            <div
-              className="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-300"
-              style={{
-                background: plan.gradient,
-                opacity: plan.glowOpacity,
-                filter: "blur(28px)",
-                transform: "scale(1.1)",
-              }}
-            />
-
-            {/* Badge — sits above the card, needs z-index */}
+        {PLANS.map((plan) => (
+          <div key={plan.name} className="relative">
+            {/* Badge */}
             {plan.badge && (
-              <div className="absolute -top-3.5 left-0 right-0 flex justify-center z-20">
+              <div className="absolute -top-3.5 left-0 right-0 flex justify-center z-10">
                 <span
                   className={`inline-flex items-center px-4 py-1 rounded-full text-xs font-bold tracking-wide ${
                     plan.highlight
@@ -187,16 +157,11 @@ export default function PricingCards() {
               </div>
             )}
 
-            {/* Foreground card — white interior, gradient border via background-clip */}
+            {/* Card */}
             <div
-              className="relative rounded-3xl flex flex-col z-10 h-full transition-shadow duration-300 group-hover:shadow-elegant"
-              style={{
-                border: `${plan.borderWidth} solid transparent`,
-                background: `oklch(1 0 0) padding-box, ${plan.gradient} border-box`,
-                boxShadow: plan.highlight
-                  ? "0 10px 30px -10px rgba(92,36,76,0.18)"
-                  : "0 2px 8px rgba(0,0,0,0.05)",
-              }}
+              className={`rounded-3xl border bg-card flex flex-col h-full transition-shadow duration-300 hover:shadow-card-hover ${
+                plan.highlight ? "border-primary/40" : "border-border/60"
+              }`}
             >
               <div className="p-6 flex flex-col h-full">
                 {/* Plan name */}
@@ -281,7 +246,7 @@ export default function PricingCards() {
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
