@@ -3,32 +3,31 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Monitor } from "lucide-react";
 
 const PRODUCTS = [
   {
     id: "epicmap",
     name: "EpicMap",
     tagline: "Google Maps rank tracking & grid intelligence",
-    image: "/assets/epicmap-screen.png",
+    image: "/assets/EpicMaps.png",
   },
   {
     id: "epicreview",
     name: "EpicReview",
     tagline: "Review collection, responses & reputation management",
-    image: "/assets/epicreview-screen.png",
+    image: "/assets/EpicReview.png",
   },
   {
     id: "epicengage",
     name: "EpicEngage",
     tagline: "Email, SMS & WhatsApp broadcast campaigns",
-    image: null,
+    image: "/assets/EpicEngage.png",
   },
   {
     id: "epicsocial",
     name: "EpicSocial",
     tagline: "Social media scheduling & content management",
-    image: null,
+    image: "/assets/EpicSocial.png",
   },
 ] as const;
 
@@ -53,11 +52,6 @@ export default function DashboardScreenshot() {
                 }`}
               >
                 {p.name}
-                {p.image === null && (
-                  <span className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold tracking-wide bg-amber-100 text-amber-700 border border-amber-200">
-                    SOON
-                  </span>
-                )}
               </button>
             ))}
           </div>
@@ -73,22 +67,13 @@ export default function DashboardScreenshot() {
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div className="relative w-full rounded-2xl overflow-hidden border border-border/50 shadow-premium bg-muted" style={{ aspectRatio: "16/9" }}>
-              {current.image ? (
-                <Image
-                  src={current.image}
-                  alt={`${current.name} dashboard screenshot`}
-                  fill
-                  className="object-cover object-top"
-                  priority={active === "epicmap"}
-                />
-              ) : (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-muted-foreground">
-                  <Monitor className="w-12 h-12 opacity-30" />
-                  <p className="text-sm font-medium opacity-50">
-                    {current.name} Dashboard — screenshot coming soon
-                  </p>
-                </div>
-              )}
+              <Image
+                src={current.image}
+                alt={`${current.name} dashboard screenshot`}
+                fill
+                className="object-cover object-top"
+                priority={active === "epicmap"}
+              />
             </div>
 
             <p className="text-center text-muted-foreground mt-4 text-sm">
