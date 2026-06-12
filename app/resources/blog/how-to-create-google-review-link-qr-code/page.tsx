@@ -34,6 +34,14 @@ export default function Post() {
       }
       body={
         <>
+          <div className="not-prose rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">TL;DR</p>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li>• Get your review link from business.google.com → select your profile → &quot;Share review form.&quot; Test it before using it anywhere.</li>
+              <li>• Convert it to a QR code at any free generator — download at 300 DPI minimum for print, and test on both iPhone and Android before printing.</li>
+              <li>• QR codes convert at 2–3% (passive). Use them as a supplement to WhatsApp campaigns, not as your primary review strategy.</li>
+            </ul>
+          </div>
           <h2>What a Review Link Is and Why It Matters</h2>
           <p>A review link is a URL that, when opened, takes the customer directly to the Google review pop-up for your specific business. Without a direct link, customers have to: search for your business name, find your GBP profile, scroll to reviews, and click &quot;Write a review.&quot; Many stop somewhere in this process.</p>
           <p>A review link removes all those steps. It opens the review form directly. This friction reduction meaningfully increases completion rates — particularly from customers who are willing to leave a review but won&apos;t go hunting for the form.</p>

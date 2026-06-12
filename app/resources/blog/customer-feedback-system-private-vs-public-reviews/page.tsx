@@ -34,6 +34,14 @@ export default function Post() {
       }
       body={
         <>
+          <div className="not-prose rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">TL;DR</p>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li>• Run private surveys (NPS, CSAT) and public Google review requests as two separate, parallel channels — both are fully compliant.</li>
+              <li>• The compliance line: don&apos;t route customers based on their survey score. Every customer gets both invitations regardless of their private rating.</li>
+              <li>• Private negative feedback catches service problems before they reach Google as 1-star reviews — it&apos;s operationally valuable, not just a compliance exercise.</li>
+            </ul>
+          </div>
           <h2>Why Businesses Need Both</h2>
           <p>Private feedback serves a different purpose than public reviews. Public reviews influence customer acquisition — they affect who chooses to visit your business. Private feedback influences operational improvement — it tells you what to fix before problems become public.</p>
           <p>A customer who had a 7/10 experience is unlikely to leave a Google review unprompted. But if you send them a post-visit NPS survey, they&apos;ll often tell you exactly what could have been better. That feedback is valuable for training, process improvement, and identifying recurring issues — even if it never becomes a public review.</p>

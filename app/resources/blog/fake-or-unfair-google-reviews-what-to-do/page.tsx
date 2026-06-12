@@ -34,6 +34,14 @@ export default function Post() {
       }
       body={
         <>
+          <div className="not-prose rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">TL;DR</p>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li>• Only reviews that violate a specific Google policy qualify for removal — fake accounts, conflicts of interest, false factual claims, personal attacks, spam.</li>
+              <li>• The flag button alone rarely succeeds. Effective removal requires a formal submission through Google&apos;s business support channel with a specific policy citation and evidence.</li>
+              <li>• Respond professionally to the review publicly while waiting for removal — every future customer who visits your profile will read that response.</li>
+            </ul>
+          </div>
           <h2>What Counts as a Fake or Unfair Review</h2>
           <p>Not all negative reviews are removable — but some clearly are. Google&apos;s review policy identifies several categories that qualify for removal:</p>
           <ul>

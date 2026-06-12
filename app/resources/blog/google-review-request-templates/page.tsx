@@ -34,6 +34,14 @@ export default function Post() {
       }
       body={
         <>
+          <div className="not-prose rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">TL;DR</p>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li>• WhatsApp converts at 15–30% in Singapore — far higher than email (3–5%) or QR codes (2–3%). Make it your primary channel.</li>
+              <li>• Effective templates are short (2–3 sentences), personalised (customer name + specific service), and ask for honest feedback — never a specific star rating.</li>
+              <li>• Never pre-screen (&quot;if you were happy...&quot;), never request 5 stars, never include multiple platforms in one message — all reduce conversions or violate Google&apos;s policy.</li>
+            </ul>
+          </div>
           <h2>What Makes a Review Request Work</h2>
           <p>Effective review requests share four characteristics:</p>
           <ul>

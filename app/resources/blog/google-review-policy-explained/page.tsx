@@ -34,6 +34,14 @@ export default function Post() {
       }
       body={
         <>
+          <div className="not-prose rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">TL;DR</p>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li>• Google only removes reviews that violate one of seven specific content policies: spam, off-topic content, illegal content, personal attacks, conflicts of interest, restricted content, or misrepresentation.</li>
+              <li>• Conflicts of interest (competitor-posted, ex-employee attacks) and false factual claims are the most actionable categories for Singapore SMBs.</li>
+              <li>• A genuine negative opinion from a real customer — even an unfair one — cannot be removed under any policy. You can respond to it, but not remove it.</li>
+            </ul>
+          </div>
           <h2>Why Google&apos;s Review Policy Matters</h2>
           <p>Google does not remove reviews simply because a business owner disputes them. The company&apos;s position is that authentic reviews — even negative ones — are valuable to consumers making decisions. Removal is only available for content that violates their published policies.</p>
           <p>This means the path to removal runs through policy, not preference. You need to identify which specific rule the review breaks, and frame your removal request accordingly.</p>

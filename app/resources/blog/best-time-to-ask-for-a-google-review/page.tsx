@@ -34,6 +34,14 @@ export default function Post() {
       }
       body={
         <>
+          <div className="not-prose rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">TL;DR</p>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li>• Ask within 15–60 minutes of service completion — that&apos;s when satisfaction peaks and the experience is still fresh.</li>
+              <li>• Conversion rates drop by roughly 60% after 24 hours. Timing the ask is often worth more than the message itself.</li>
+              <li>• Industry windows differ: restaurants (30 min post-meal), clinics (next morning), salons (immediately after result), car workshops (1–2 hours after pickup).</li>
+            </ul>
+          </div>
           <h2>The Psychology of the Ask</h2>
           <p>Customer satisfaction follows a predictable curve after a service interaction. It peaks immediately after the positive experience — the meal was great, the cut looks perfect, the procedure went smoothly. From that peak, satisfaction gradually declines as other things occupy the customer&apos;s attention.</p>
           <p>The ideal ask window is when satisfaction is at or near its peak and when the customer still has your business in their active memory. This window is short: typically 15 minutes to 2 hours post-service. After 24 hours, conversion rates drop by roughly 60%.</p>

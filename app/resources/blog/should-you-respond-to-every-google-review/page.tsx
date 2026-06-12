@@ -34,6 +34,14 @@ export default function Post() {
       }
       body={
         <>
+          <div className="not-prose rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">TL;DR</p>
+            <ul className="space-y-2 text-sm text-foreground/80">
+              <li>• Yes — respond to every review, positive and negative. Consistent responses improve Maps rank and signal professionalism to every potential customer who reads your profile.</li>
+              <li>• For negative reviews: acknowledge without admitting fault, keep to 2–3 sentences, take the conversation offline. Never argue publicly.</li>
+              <li>• Respond within 24 hours. A review left unanswered for days signals an unmonitored profile — which is itself a reputational problem.</li>
+            </ul>
+          </div>
           <h2>Why Responding Matters: The Two Signals</h2>
           <p>Review responses send two distinct signals. The first is to Google&apos;s algorithm: active engagement with reviews is treated as a positive GBP signal, contributing to the prominence score that drives Maps rank. Profiles that have consistent responses to reviews outrank equivalent profiles with none.</p>
           <p>The second signal is to humans: every person who views your GBP profile reads your responses. A business that responds to every review — positive and negative — looks attentive and professional. A business with dozens of unanswered reviews looks indifferent.</p>
