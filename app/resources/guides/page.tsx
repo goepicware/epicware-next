@@ -24,14 +24,16 @@ const GUIDES = [
       "The tactics that drive local customer acquisition for Singapore SMBs in 2026 — from GBP optimisation to AI search visibility. Updated June 2026.",
     href: "/resources/guides/local-business-playbook-2026",
     readTime: "12 min",
+    cta: "Read guide →",
   },
   {
     badge: "RESTAURANTS",
-    title: "Restaurant Digital Growth Guide — Rank Higher, Get More Reviews, Fill Tables",
+    title: "The Complete Restaurant Digital Growth Guide",
     summary:
-      "A complete playbook for Singapore restaurant owners covering Google Maps rank, review generation, and reputation management. The full 4-layer growth architecture from reputation to direct revenue.",
+      "A structured framework covering Google Maps visibility, commission-free ordering, WhatsApp automation, and retention strategies for restaurant operators. Covers the full 4-layer growth architecture from reputation to direct revenue.",
     href: "/resources/guides/restaurant-digital-growth-guide",
     readTime: "10 min",
+    cta: "Read guide →",
   },
   {
     badge: "BAD REVIEW REMOVAL",
@@ -40,6 +42,16 @@ const GUIDES = [
       "Everything Singapore business owners need to know about removing fake, malicious, and policy-violating Google reviews. The process, the policy, and when to use a professional service.",
     href: "/resources/guides/bad-review-removal-guide",
     readTime: "8 min",
+    cta: "Read guide →",
+  },
+  {
+    badge: "BLOG",
+    title: "Google Maps Ranking Factors Explained — Where Reviews Fit In",
+    summary:
+      "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence — and exactly how reviews influence visibility, recency, and local search rank.",
+    href: "/resources/blog/google-maps-ranking-factors",
+    readTime: "6 min",
+    cta: "Read article →",
   },
 ];
 
@@ -47,6 +59,7 @@ const BADGE_COLORS: Record<string, string> = {
   "LOCAL SEO": "bg-primary/10 text-primary border-primary/20",
   "RESTAURANTS": "bg-emerald-500/10 text-emerald-700 border-emerald-500/20",
   "BAD REVIEW REMOVAL": "bg-rose-500/10 text-rose-600 border-rose-500/20",
+  "BLOG": "bg-blue-500/10 text-blue-600 border-blue-500/20",
 };
 
 export default function GuidesHubPage() {
@@ -96,7 +109,7 @@ export default function GuidesHubPage() {
                   {guide.summary}
                 </p>
                 <span className="text-sm font-semibold text-primary group-hover:underline">
-                  Read guide →
+                  {guide.cta}
                 </span>
               </Link>
             );
