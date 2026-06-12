@@ -198,15 +198,26 @@ export default function BadReviewRemovalSingaporePage() {
         </div>
       </section>
 
-      {/* Related guide */}
+      {/* Further reading */}
       <section className="py-10 border-t border-border/40">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
-          <p className="text-sm text-muted-foreground">
-            Read our complete guide:{" "}
-            <Link href="/resources/guides/bad-review-removal-guide" className="text-primary font-medium hover:underline">
-              How to Remove Bad Google Reviews in Singapore →
-            </Link>
-          </p>
+        <div className="container mx-auto px-6 max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4 text-center">Further Reading</p>
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3">
+            {[
+              { label: "Complete Removal Guide", href: "/resources/guides/bad-review-removal-guide" },
+              { label: "How to Remove Bad Google Reviews", href: "/resources/blog/how-to-remove-bad-google-reviews" },
+              { label: "Fake or Unfair Reviews: What to Do", href: "/resources/blog/fake-or-unfair-google-reviews-what-to-do" },
+              { label: "Google Review Policy Explained", href: "/resources/blog/google-review-policy-explained" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-primary hover:underline bg-primary/5 border border-primary/15 rounded-full px-4 py-1.5 transition-colors hover:bg-primary/10"
+              >
+                {item.label} →
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
