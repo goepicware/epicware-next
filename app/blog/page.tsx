@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 };
 
 const posts = [
+  { title: "10 Best AI Local SEO Agencies in Singapore for 2026 (Ranked)", summary: "How to choose between Singapore's top AI local SEO agencies and platforms. Ranked by AI capability, review management, GBP expertise, and Singapore track record.", href: "/resources/blog/top-10-ai-local-seo-agencies-singapore-2026" },
   { title: "Fake or Unfair Google Reviews: What Singapore Businesses Can Do", summary: "Step-by-step guide for dealing with fake, competitor-posted, or policy-violating Google reviews.", href: "/resources/blog/fake-or-unfair-google-reviews-what-to-do" },
   { title: "Google Review Policy Explained — What Qualifies for Removal", summary: "Complete breakdown of Google's review content policies. Know which reviews violate policy and can be removed.", href: "/resources/blog/google-review-policy-explained" },
   { title: "Google Reviews Strategy: 90-Day Framework for Singapore SMBs", summary: "A structured 90-day framework to build review velocity, protect your rating, and rank higher on Google Maps.", href: "/resources/blog/google-reviews-strategy" },
