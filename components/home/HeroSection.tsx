@@ -46,7 +46,7 @@ export default function HeroSection() {
             >
               Singapore&apos;s #1 Local SEO &amp;{" "}
               <br className="hidden sm:block" />
-              <span className="gradient-text">Reputation Platform</span>
+              <span style={{background:"linear-gradient(90deg,#7C3AED 0%,#185FA5 100%)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>Reputation Platform</span>
               <br />
               for SMBs
             </motion.h1>
