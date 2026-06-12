@@ -99,6 +99,30 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* How Epicware compares */}
+      <section className="py-12 border-t border-border/40">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <p className="text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-4">How We Compare</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { label: "Epicware vs BirdEye", href: "/comparison/epicware-vs-birdeye" },
+              { label: "Epicware vs BrightLocal", href: "/comparison/epicware-vs-brightlocal" },
+              { label: "Epicware vs Yext", href: "/comparison/epicware-vs-yext" },
+              { label: "Epicware vs GradeUs", href: "/comparison/epicware-vs-gradeus" },
+              { label: "EpicReview vs QR Code Review", href: "/comparison/epicreview-vs-qr-code-review" },
+            ].map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="text-sm font-medium text-primary hover:underline bg-primary/5 border border-primary/15 rounded-full px-4 py-1.5 transition-colors hover:bg-primary/10"
+              >
+                {c.label} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <FinalCTA />
       <StickyMobileCTA />
       <div className="h-20 lg:hidden" />

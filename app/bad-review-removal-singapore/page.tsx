@@ -198,6 +198,18 @@ export default function BadReviewRemovalSingaporePage() {
         </div>
       </section>
 
+      {/* Related guide */}
+      <section className="py-10 border-t border-border/40">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <p className="text-sm text-muted-foreground">
+            Read our complete guide:{" "}
+            <Link href="/resources/guides/bad-review-removal-guide" className="text-primary font-medium hover:underline">
+              How to Remove Bad Google Reviews in Singapore →
+            </Link>
+          </p>
+        </div>
+      </section>
+
       <FinalCTA />
       <StickyMobileCTA />
       <div className="h-20 lg:hidden" />

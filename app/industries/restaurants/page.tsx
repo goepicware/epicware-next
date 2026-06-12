@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -117,7 +118,10 @@ export default function RestaurantsPage() {
           stays up. EpicMap tracks your Maps rank across every Singapore district where
           your restaurant appears in searches, showing you exactly which keywords and
           locations to improve. For restaurant groups, all outlets are managed from one
-          dashboard.
+          dashboard.{" "}
+          <Link href="/resources/guides/restaurant-digital-growth-guide" className="text-primary font-medium hover:underline">
+            Read the Restaurant Digital Growth Guide →
+          </Link>
         </p>
       }
       services={services}

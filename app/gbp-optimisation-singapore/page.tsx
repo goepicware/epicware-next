@@ -207,6 +207,10 @@ export default function GbpOptimisationSingaporePage() {
             <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">Local SEO Singapore</Link>
             {" "}and{" "}
             <Link href="/products/epicmap" className="text-primary font-medium hover:underline">EpicMap rank tracking</Link>.
+            {" "}Also useful:{" "}
+            <Link href="/use-cases/rank-higher-on-google-maps" className="text-primary font-medium hover:underline">how to rank higher on Google Maps</Link>
+            {" "}and{" "}
+            <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">managing multiple GBP locations</Link>.
           </p>
         </div>
       </section>

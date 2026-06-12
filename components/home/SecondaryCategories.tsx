@@ -9,6 +9,7 @@ const CATEGORIES = [
     icon: Star,
     title: "Reputation Management",
     href: "/reputation-management-singapore",
+    cta: "Manage Your Reputation",
     description:
       "Negative reviews cost you walk-ins. One 2-star review visible to everyone within a 1km radius can wipe out a week of marketing spend. Epicware's Reputation Management suite handles review generation, AI-written responses, real-time monitoring, and — uniquely — bad review removal. Stop managing your reputation manually. Let the platform do it.",
     iconColor: "text-primary",
@@ -20,6 +21,7 @@ const CATEGORIES = [
     icon: MapPin,
     title: "Local SEO Services",
     href: "/local-seo-singapore",
+    cta: "Rank on Google Maps",
     description:
       "Showing up on Google Maps when someone searches \"best [your business] near me\" isn't luck — it's infrastructure. Epicware's Local SEO module optimises your Google Business Profile, tracks your rank across Singapore districts, builds citations, and schedules GBP posts on autopilot. Set it up once. The platform handles the rest.",
     iconColor: "text-secondary",
@@ -31,6 +33,7 @@ const CATEGORIES = [
     icon: Sparkles,
     title: "AI & GEO Visibility",
     href: "/ai-search-visibility-singapore",
+    cta: "Get Cited by AI Search",
     description:
       "Google's AI Overviews, ChatGPT, and Perplexity are replacing the first page of search results. When someone asks an AI \"which dental clinic should I go to in Clementi?\", is your business in the answer? Epicware's GEO module gets you cited in AI-generated responses — the next frontier of local visibility that most Singapore businesses haven't even heard of yet.",
     iconColor: "text-accent",
@@ -42,6 +45,7 @@ const CATEGORIES = [
     icon: Zap,
     title: "Growth Tools",
     href: "/growth-tools",
+    cta: "Grow Your Customer Base",
     description:
       "Getting found is step one. Converting visitors into loyal customers is step two. Epicware's Growth Tools — EpicEngage email marketing, EpicSocial scheduling, and Website SEO Builder — close the loop between discovery and retention, all inside the same platform you already use for reviews and rankings.",
     iconColor: "text-secondary",
@@ -107,7 +111,7 @@ export default function SecondaryCategories() {
                       <p className="text-muted-foreground leading-relaxed mb-4">{cat.description}</p>
                     </div>
                     <div className="flex items-center gap-2 text-sm font-semibold text-primary mt-auto pt-4 border-t border-border/30">
-                      Learn more
+                      {cat.cta}
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>

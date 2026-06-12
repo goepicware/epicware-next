@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ShieldCheck, Users, Award, Globe } from "lucide-react";
 
@@ -38,6 +39,10 @@ export default function AboutCredentials() {
             and bad review removal in one self-serve dashboard. No agency retainers.
             No waiting on someone else&apos;s team. Just a platform that works.
           </p>
+
+          <Link href="/about" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline mb-8">
+            Read the full Epicware story →
+          </Link>
 
           {/* Credentials grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
