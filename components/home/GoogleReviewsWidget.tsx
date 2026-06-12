@@ -5,7 +5,6 @@ import Script from "next/script";
 const WIDGET_SCRIPT = `
 (function() {
   var container = document.getElementById('epic-walloflove');
-  if (!container) return;
   var config = {
     layout: container.dataset.layout || 'masonry',
     mode: container.dataset.mode || 'single',
@@ -25,7 +24,6 @@ const WIDGET_SCRIPT = `
   function timeAgo(iso){if(!iso)return'';var d=new Date(iso);var s=Math.floor((Date.now()-d.getTime())/1000);if(s<60)return s+'s ago';var m=Math.floor(s/60);if(m<60)return m+'m ago';var h=Math.floor(m/60);if(h<24)return h+'h ago';var dd=Math.floor(h/24);if(dd<30)return dd+' days ago';var mo=Math.floor(dd/30);if(mo<12)return mo+' months ago';return Math.floor(mo/12)+' years ago';}
   function initial(n){return (n||'A').trim().charAt(0).toUpperCase();}
   function colorFor(n){var p=['#4F46E5','#0EA5E9','#10B981','#F59E0B','#EF4444','#8B5CF6','#EC4899'];return p[(n||'A').charCodeAt(0)%p.length];}
-  function deduplicateByName(reviews){var seen={};return reviews.filter(function(r){var n=(r.author_name||'').trim().toLowerCase();if(seen[n])return false;seen[n]=true;return true;}).slice(0,6);}
   function escapeHtml(s){return (s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 
   function cardHtml(r){
@@ -54,22 +52,22 @@ const WIDGET_SCRIPT = `
     });
   }
 
-  function headerHtml(label,ov,writeUrl){
+  function headerHtml(label, ov, writeUrl){
     if(!config.showHeader) return '';
-    var btn=(config.showWriteReview&&writeUrl)?'<a class="epic-write" href="'+writeUrl+'" target="_blank" rel="noopener">Write a Review</a>':'';
+    var btn = (config.showWriteReview && writeUrl) ? '<a class="epic-write" href="'+writeUrl+'" target="_blank" rel="noopener">Write a Review</a>' : '';
     return '<div class="epic-header"><div><div class="epic-h-label">'+label+'</div><div class="epic-h-rating"><span class="epic-h-num">'+(ov.avg_rating||0)+'</span>'+stars(Math.round(ov.avg_rating||0))+'<span class="epic-h-count">('+(ov.total||0)+')</span></div></div>'+btn+'</div>';
   }
 
-  function renderGrid(reviews,label,ov,writeUrl){
-    var html=headerHtml(label,ov,writeUrl);
+  function renderGrid(reviews, label, ov, writeUrl){
+    var html=headerHtml(label, ov, writeUrl);
     html+='<div class="epic-wall '+config.layout+'">';
     reviews.forEach(function(r){html+=cardHtml(r);});
     html+='</div>';
     return html;
   }
 
-  function renderCarousel(reviews,label,ov,writeUrl){
-    var html=headerHtml(label,ov,writeUrl);
+  function renderCarousel(reviews, label, ov, writeUrl){
+    var html=headerHtml(label, ov, writeUrl);
     html+='<div class="epic-carousel">';
     reviews.forEach(function(r){html+=cardHtml(r);});
     html+='</div>';
@@ -91,28 +89,31 @@ const WIDGET_SCRIPT = `
   }
 
   function scopeParams(){
-    if(!config.outlets||config.outlets==='all') return '';
+    if(!config.outlets || config.outlets === 'all') return '';
     return '&outlet_ids='+encodeURIComponent(config.outlets);
   }
-
-  function fetchReviews(outletId,cb){
-    var url='https://uthqjaflckswjjgokjdw.supabase.co/functions/v1/get-wall-of-love?limit='+config.limit;
-    if(outletId&&outletId!=='all'){url+='&outlet_id='+encodeURIComponent(outletId);}
-    else{url+=scopeParams();}
-    fetch(url).then(function(r){return r.json();}).then(function(d){cb(d.reviews||[],d.overall||{avg_rating:0,total:0});});
+  function fetchReviews(outletId, cb){
+    var url = 'https://uthqjaflckswjjgokjdw.supabase.co/functions/v1/get-wall-of-love?limit='+config.limit;
+    if(outletId && outletId !== 'all'){
+      url += '&outlet_id='+encodeURIComponent(outletId);
+    } else {
+      url += scopeParams();
+    }
+    fetch(url)
+      .then(function(r){return r.json();}).then(function(d){cb(d.reviews||[],d.overall||{avg_rating:0,total:0});});
   }
 
-  function renderByLayout(reviews,label,ov,writeUrl){
+  function renderByLayout(reviews, label, ov, writeUrl){
     if(config.layout==='marquee'){return renderMarquee(reviews);}
     if(config.layout==='carousel'){return renderCarousel(reviews,label,ov,writeUrl);}
     return renderGrid(reviews,label,ov,writeUrl);
   }
 
   function renderSingle(){
-    var scope=(config.outlets&&config.outlets.indexOf(',') === -1&&config.outlets!=='all')?config.outlets:'all';
-    fetchReviews(scope,function(reviews,ov){
-      reviews=deduplicateByName(reviews);
-      var label=(config.outlets==='all')?'Overall Rating':'Google Reviews';
+    var scope = (config.outlets && config.outlets.indexOf(',') === -1 && config.outlets !== 'all')
+      ? config.outlets : 'all';
+    fetchReviews(scope, function(reviews, ov){
+      var label = (config.outlets==='all') ? 'Overall Rating' : 'Google Reviews';
       container.innerHTML=renderByLayout(reviews,label,ov,'');
       bindReadMore(container);
     });
@@ -120,37 +121,41 @@ const WIDGET_SCRIPT = `
 
   function renderMultiTab(){
     var url='https://uthqjaflckswjjgokjdw.supabase.co/functions/v1/get-wall-of-love?limit='+config.limit+'&include_outlets=true'+scopeParams();
-    fetch(url).then(function(r){return r.json();}).then(function(d){
-      var allOutlets=d.outlets||[];var ov=d.overall||{avg_rating:0,total:0};
-      var isAllScope=!config.outlets||config.outlets==='all';
-      var initialId='all';
-      var tabs='<div class="epic-tabs">';
-      var allLabel=isAllScope?'All Reviews':'All Selected';
-      tabs+='<button class="epic-tab active" data-id="all" data-write="">'+GOOGLE_G+'<span>'+allLabel+'</span><span class="epic-tab-rating">'+(ov.avg_rating||0)+'\\u2605</span></button>';
-      allOutlets.forEach(function(o){
-        tabs+='<button class="epic-tab" data-id="'+o.id+'" data-write="'+(o.google_maps_url||'')+'">'+GOOGLE_G+'<span>'+escapeHtml(o.outlet_name)+'</span><span class="epic-tab-rating">'+(o.avg_rating||0)+'\\u2605</span></button>';
-      });
-      tabs+='</div>';
-      container.innerHTML=tabs+'<div class="epic-tab-body"></div>';
-      var body=container.querySelector('.epic-tab-body');
-      function fetchAndRender(outletId,writeUrl){
-        fetchReviews(outletId,function(reviews,ovv){
-          body.innerHTML=renderByLayout(reviews,outletId==='all'?'Overall Rating':'Google Reviews',ovv,writeUrl);
-          bindReadMore(body);
+    fetch(url)
+      .then(function(r){return r.json();}).then(function(d){
+        var allOutlets=d.outlets||[]; var ov=d.overall||{avg_rating:0,total:0};
+        var isAllScope = !config.outlets || config.outlets === 'all';
+        var initialId = 'all';
+        var tabs='<div class="epic-tabs">';
+        var allLabel = isAllScope ? 'All Reviews' : 'All Selected';
+        tabs+='<button class="epic-tab active" data-id="all" data-write="">'+GOOGLE_G+'<span>'+allLabel+'</span><span class="epic-tab-rating">'+(ov.avg_rating||0)+'★</span></button>';
+        allOutlets.forEach(function(o){
+          tabs+='<button class="epic-tab" data-id="'+o.id+'" data-write="'+(o.google_maps_url||'')+'">'+GOOGLE_G+'<span>'+escapeHtml(o.outlet_name)+'</span><span class="epic-tab-rating">'+(o.avg_rating||0)+'★</span></button>';
         });
-      }
-      function setActiveTab(el){
-        container.querySelectorAll('.epic-tab').forEach(function(x){x.classList.remove('active');});
-        el.classList.add('active');
-      }
-      fetchAndRender(initialId,'');
-      container.querySelectorAll('.epic-tab').forEach(function(t){
-        t.addEventListener('click',function(){setActiveTab(t);fetchAndRender(t.dataset.id,t.dataset.write||'');});
+        tabs+='</div>';
+        container.innerHTML=tabs+'<div class="epic-tab-body"></div>';
+        var body=container.querySelector('.epic-tab-body');
+        function fetchAndRender(outletId, writeUrl){
+          fetchReviews(outletId,function(reviews,ovv){
+            body.innerHTML=renderByLayout(reviews, outletId==='all'?'Overall Rating':'Google Reviews', ovv, writeUrl);
+            bindReadMore(body);
+          });
+        }
+        function setActiveTab(el){
+          container.querySelectorAll('.epic-tab').forEach(function(x){x.classList.remove('active');});
+          el.classList.add('active');
+        }
+        fetchAndRender(initialId, '');
+        container.querySelectorAll('.epic-tab').forEach(function(t){
+          t.addEventListener('click',function(){
+            setActiveTab(t);
+            fetchAndRender(t.dataset.id, t.dataset.write||'');
+          });
+        });
       });
-    });
   }
 
-  if(config.mode==='multi-tab'){renderMultiTab();}else{renderSingle();}
+  if(config.mode==='multi-tab'){renderMultiTab();} else {renderSingle();}
 })();
 `;
 
@@ -208,7 +213,7 @@ export default function GoogleReviewsWidget() {
         data-theme="light"
         data-limit="12"
         data-style="rounded"
-        data-rows="3"
+        data-rows="2"
         data-show-header="true"
         data-show-write-review="true"
       />
