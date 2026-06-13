@@ -118,38 +118,6 @@ export default function EpicReviewPage() {
         </div>
       </section>
 
-      {/* Bad Review Removal highlight */}
-      <section className="py-10 lg:py-14 section-gradient-1">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <div className="rounded-3xl border border-primary/20 bg-primary/5 p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <Star className="w-6 h-6 text-primary fill-primary" />
-              <h2 className="font-display text-foreground text-xl font-bold">
-                Bad Review Removal — $200/review, Pay on Success Only
-              </h2>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              This is EpicReview&apos;s unique differentiator. No other platform in Singapore offers
-              productised bad review removal at a fixed price with success-only payment. We submit
-              policy-violation flags to Google, escalate unresponsive cases, and follow through
-              until the review is removed. If the review stays up, you pay nothing.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Eligible reviews include: fake reviews from competitors, reviews that violate
-              Google&apos;s content policies, reviews posted by people who never visited, and reviews
-              containing false factual claims. See the full service at{" "}
-              <Link
-                href="/bad-review-removal-singapore"
-                className="text-primary font-medium hover:underline"
-              >
-                Bad Review Removal Singapore
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* What EpicReview Does */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
@@ -267,6 +235,38 @@ export default function EpicReviewPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bad Review Removal highlight */}
+      <section className="py-10 lg:py-14">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <div className="rounded-3xl border border-primary/20 bg-primary/5 p-8">
+            <div className="flex items-center gap-3 mb-4">
+              <Star className="w-6 h-6 text-primary fill-primary" />
+              <h2 className="font-display text-foreground text-xl font-bold">
+                Bad Review Removal — $200/review, Pay on Success Only
+              </h2>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              This is EpicReview&apos;s unique differentiator. No other platform in Singapore offers
+              productised bad review removal at a fixed price with success-only payment. We submit
+              policy-violation flags to Google, escalate unresponsive cases, and follow through
+              until the review is removed. If the review stays up, you pay nothing.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Eligible reviews include: fake reviews from competitors, reviews that violate
+              Google&apos;s content policies, reviews posted by people who never visited, and reviews
+              containing false factual claims. See the full service at{" "}
+              <Link
+                href="/bad-review-removal-singapore"
+                className="text-primary font-medium hover:underline"
+              >
+                Bad Review Removal Singapore
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
