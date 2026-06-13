@@ -99,7 +99,7 @@ export default function EpicMapPage() {
           "No Agency Retainer",
           "500+ Outlets Managed",
         ]}
-        imageSrc="/assets/epicmap-before-after.png"
+        imageSrc="/assets/EpicMapImageforweb.png"
       />
 
       {/* Opening paragraph */}
