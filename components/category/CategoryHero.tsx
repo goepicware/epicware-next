@@ -113,24 +113,30 @@ export default function CategoryHero({
             </motion.div>
           </div>
 
-          {/* Right: contained image */}
+          {/* Right: blended image */}
           <motion.div
             className="order-1 lg:order-2 flex justify-center lg:justify-end"
-            initial={{ opacity: 0, x: 50, scale: 0.95 }}
+            initial={{ opacity: 0, x: 60, scale: 0.95 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative w-full max-w-[500px]">
-              {/* Glow halo */}
-              <div className="absolute inset-[-6%] rounded-[2.5rem] bg-gradient-to-br from-primary/25 via-secondary/15 to-accent/20 blur-3xl" />
-              {/* Image card */}
-              <div className="relative rounded-[1.5rem] overflow-hidden shadow-premium ring-1 ring-primary/10">
+            <div className="relative w-full max-w-[680px] lg:translate-x-8">
+              {/* Ambient glow underneath */}
+              <div className="absolute inset-[-15%] bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/15 blur-[80px] rounded-full" />
+              {/* Image faded into background with radial mask */}
+              <div
+                className="relative"
+                style={{
+                  maskImage: "radial-gradient(ellipse 88% 88% at 52% 48%, black 35%, transparent 78%)",
+                  WebkitMaskImage: "radial-gradient(ellipse 88% 88% at 52% 48%, black 35%, transparent 78%)",
+                }}
+              >
                 <Image
                   src={imageSrc}
                   alt=""
-                  width={600}
-                  height={460}
-                  className="w-full h-auto object-cover"
+                  width={760}
+                  height={580}
+                  className="w-full h-auto"
                   priority
                 />
               </div>
