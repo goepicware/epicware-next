@@ -187,7 +187,21 @@ export default function EpicReviewPage() {
       {/* How It Works */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-5xl">
-          <h2 className="font-display text-foreground mb-10 text-center">How It Works</h2>
+          <h2 className="font-display text-foreground mb-3 text-center">How It Works</h2>
+          <p className="text-center text-muted-foreground mb-8">See it in action — under 2 minutes</p>
+
+          {/* YouTube embed — lazy srcdoc pattern */}
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-premium mb-12" style={{ aspectRatio: "16/9" }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/lVOmixSrnOc?rel=0&modestbranding=1"
+              title="How EpicReview Works"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
