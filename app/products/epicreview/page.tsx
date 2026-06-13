@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, Star } from "lucide-react";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
@@ -179,6 +180,60 @@ export default function EpicReviewPage() {
               service handles the submission, escalation, and follow-up. $200 per review removed.
               You pay only on success.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-10 lg:py-14">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <h2 className="font-display text-foreground mb-10 text-center">How It Works</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                step: 1,
+                title: "Customer scans your QR",
+                description:
+                  "A branded standee at the table or counter captures them at peak happiness — right after a great experience. No staff involvement needed.",
+                image: "/assets/how-it-works-scan-qr.png",
+                alt: "Branded QR standee at restaurant table for review collection",
+              },
+              {
+                step: 2,
+                title: "Smart filter routes the review",
+                description:
+                  "Happy customers go straight to Google. Unhappy ones are caught privately — protecting your public rating automatically.",
+                image: "/assets/epicreview-screen.png",
+                alt: "EpicReview smart filter routing happy and unhappy customers",
+              },
+              {
+                step: 3,
+                title: "Reward brings them back",
+                description:
+                  "A gamified spin-the-wheel reward makes reviewing fun — and drives repeat visits through earned vouchers.",
+                image: "/assets/how-it-works-spin.png",
+                alt: "Spin the wheel gamification reward screen",
+              },
+            ].map(({ step, title, description, image, alt }) => (
+              <div key={step} className="rounded-2xl border border-border/60 bg-card overflow-hidden flex flex-col">
+                <div className="bg-muted/40 flex items-center justify-center p-6 min-h-[240px]">
+                  <Image
+                    src={image}
+                    alt={alt}
+                    width={280}
+                    height={220}
+                    className="max-h-[220px] w-auto object-contain"
+                  />
+                </div>
+                <div className="p-6 flex flex-col gap-3">
+                  <div className="w-9 h-9 rounded-full bg-foreground text-background flex items-center justify-center text-sm font-bold shrink-0">
+                    {step}
+                  </div>
+                  <h3 className="font-semibold text-foreground">{title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
