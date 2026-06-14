@@ -26,6 +26,16 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "SEO vs Local SEO: The Difference That Could Be Costing You Walk-In Customers",
+    summary:
+      "Traffic went up but calls didn't? You might be playing the wrong game. Here's the distinction between SEO and Local SEO — and which one Singapore SMBs should prioritise.",
+    href: "/resources/blog/seo-vs-local-seo",
+    category: "LOCAL SEO",
+    date: "Jun 2026",
+    readTime: "6 min",
+    isNew: true,
+  },
+  {
     title: "10 Best AI Local SEO Agencies in Singapore for 2026 (Ranked)",
     summary:
       "How to choose between Singapore's top AI local SEO agencies and platforms. Ranked by AI capability, review management, GBP expertise, and Singapore track record.",
