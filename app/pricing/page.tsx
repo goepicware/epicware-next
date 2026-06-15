@@ -17,9 +17,145 @@ export const metadata: Metadata = {
   },
 };
 
+const schemaFAQ = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is there a lock-in contract?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. All plans are month-to-month. You can cancel anytime with 30 days' notice. We keep clients with results, not contracts.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What counts as an 'outlet'?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "One outlet = one physical business location or Google Business Profile. If you have 3 restaurant branches, that's 3 outlets. The Authority, Domination, and Full Stack plans include 1 outlet with additional outlets at $99/month each.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does bad review removal billing work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You pay $200 only when a review is successfully removed from Google. If a review stays up, you pay nothing. We handle the escalation process — flagging, appeals, support tickets.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does the annual discount work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Annual plans are billed once a year at 15% off. You pay upfront for 12 months and save compared to monthly billing.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happens after I book a strategy call?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A member of the Epicware team will review your Google Business Profile, your current ratings, and your competitors before the call. The call is 30–45 minutes and we'll tell you exactly where you stand and what to prioritise.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I upgrade or downgrade my plan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. You can move between plans at the start of your next billing cycle. Upgrades take effect immediately and we prorate the difference.",
+      },
+    },
+  ],
+};
+
+const schemaPricing = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Epicware Pricing Plans",
+  description: "Local SEO and Reputation Management subscription plans for Singapore SMBs.",
+  url: "https://www.epicware.ai/pricing",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Product",
+        name: "Foundation",
+        description: "Review management, GBP optimisation, and rank tracking for a single outlet.",
+        offers: {
+          "@type": "Offer",
+          price: "149",
+          priceCurrency: "SGD",
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "149", priceCurrency: "SGD", unitCode: "MON" },
+          url: "https://www.epicware.ai/pricing",
+          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Product",
+        name: "Authority",
+        description: "Full Local SEO and rank tracking with EpicMap, EpicReview, and EpicSocial.",
+        offers: {
+          "@type": "Offer",
+          price: "599",
+          priceCurrency: "SGD",
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "599", priceCurrency: "SGD", unitCode: "MON" },
+          url: "https://www.epicware.ai/pricing",
+          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Product",
+        name: "Domination",
+        description: "Full AI search visibility and SEO content on top of the Authority plan.",
+        offers: {
+          "@type": "Offer",
+          price: "1500",
+          priceCurrency: "SGD",
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "1500", priceCurrency: "SGD", unitCode: "MON" },
+          url: "https://www.epicware.ai/pricing",
+          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Product",
+        name: "Full Stack",
+        description: "Everything in Domination plus paid ad management across Meta and Google.",
+        offers: {
+          "@type": "Offer",
+          price: "2200",
+          priceCurrency: "SGD",
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "2200", priceCurrency: "SGD", unitCode: "MON" },
+          url: "https://www.epicware.ai/pricing",
+          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+        },
+      },
+    },
+  ],
+};
+
 export default function PricingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaPricing) }} />
+
       {/* Hero */}
       <section className="hero-gradient pt-28 pb-14">
         <div className="container mx-auto px-6 max-w-4xl text-center">
