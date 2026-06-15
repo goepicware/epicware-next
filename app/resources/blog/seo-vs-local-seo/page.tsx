@@ -53,6 +53,14 @@ export default function Post() {
           </p>
         </>
       }
+      ctaHref="/products/epicmap"
+      ctaLabel="See Your Map Pack Rank"
+      ctaContext="EpicMap shows where your business ranks on Google Maps across your entire service area — block by block. Free to try."
+      relatedPosts={[
+        { title: "Google Maps Ranking Factors Explained", href: "/resources/blog/google-maps-ranking-factors" },
+        { title: "How Many Google Reviews Do You Need to Compete Locally?", href: "/resources/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
+        { title: "Review Management Singapore", href: "/resources/blog/review-management-singapore" },
+      ]}
       body={
         <>
           <h2>What Is SEO?</h2>
