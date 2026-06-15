@@ -14,7 +14,7 @@ const fadeUp = (delay: number) => ({
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center hero-gradient overflow-hidden pt-24 pb-16">
+    <section className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
       {/* Background gradient orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[130px]" />
@@ -22,11 +22,11 @@ export default function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-primary/5 blur-[90px]" />
       </div>
 
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen items-stretch">
 
           {/* ── Left: text ── */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 flex flex-col justify-center px-8 lg:px-16 xl:px-24 pt-28 pb-16 lg:py-32">
             <motion.div {...fadeUp(0)} className="inline-block mb-6">
               <span className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-5 py-2 text-sm font-semibold text-primary tracking-wide">
                 LOCAL SEO & REPUTATION PLATFORM · SINGAPORE
@@ -100,63 +100,60 @@ export default function HeroSection() {
 
           {/* ── Right: hero image ── */}
           <motion.div
-            className="order-1 lg:order-2 flex justify-center lg:justify-end"
-            initial={{ opacity: 0, x: 50, scale: 0.97 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
+            className="order-1 lg:order-2 relative flex items-stretch self-stretch"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative w-full max-w-[560px] lg:max-w-[640px]">
-              {/* Subtle glow behind image */}
-              <div className="absolute inset-[-4%] rounded-[2rem] bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/15 blur-3xl" />
-
-              {/* Image with left-edge fade blend */}
-              <div className="relative rounded-[1.5rem] overflow-hidden shadow-premium">
-                <Image
-                  src="/assets/HeroBanner.png"
-                  alt="Singapore SMB owner growing their business with Epicware"
-                  width={800}
-                  height={560}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
-                {/* Left gradient fade — blends image into background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/10 to-transparent pointer-events-none" />
-                {/* Bottom fade */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none" />
-              </div>
-
-              {/* Floating badge — Google rating */}
-              <motion.div
-                initial={{ opacity: 0, x: -20, scale: 0.85 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute -left-4 top-[35%] bg-card/95 backdrop-blur-md border border-border/60 rounded-2xl px-4 py-3 shadow-elegant"
-              >
-                <div className="flex items-center gap-2.5">
-                  <span className="text-xl">⭐</span>
-                  <div>
-                    <div className="text-sm font-bold text-foreground leading-none mb-0.5">4.9 Rating</div>
-                    <div className="text-xs text-muted-foreground">on Google</div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Floating badge — review removed */}
-              <motion.div
-                initial={{ opacity: 0, x: 20, scale: 0.85 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.25, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute -right-4 top-[15%] bg-card/95 backdrop-blur-md border border-border/60 rounded-2xl px-4 py-2.5 shadow-elegant"
-              >
-                <div className="flex items-center gap-2">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent" />
-                  </span>
-                  <div className="text-sm font-semibold text-foreground">Review removed ✓</div>
-                </div>
-              </motion.div>
+            {/* Full-height image — no border, no card */}
+            <div className="relative w-full overflow-hidden">
+              <Image
+                src="/assets/HeroBanner.png"
+                alt="Singapore SMB owner growing their business with Epicware"
+                width={800}
+                height={900}
+                className="w-full h-full object-cover object-center"
+                priority
+              />
+              {/* Left fade — blends into text column */}
+              <div className="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent pointer-events-none" />
+              {/* Top fade */}
+              <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-transparent pointer-events-none" />
+              {/* Bottom fade */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
             </div>
+
+            {/* Floating badge — Google rating */}
+            <motion.div
+              initial={{ opacity: 0, x: -20, scale: 0.85 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute left-6 top-[38%] bg-card/95 backdrop-blur-md border border-border/60 rounded-2xl px-4 py-3 shadow-elegant"
+            >
+              <div className="flex items-center gap-2.5">
+                <span className="text-xl">⭐</span>
+                <div>
+                  <div className="text-sm font-bold text-foreground leading-none mb-0.5">4.9 Rating</div>
+                  <div className="text-xs text-muted-foreground">on Google</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Floating badge — review removed */}
+            <motion.div
+              initial={{ opacity: 0, x: 20, scale: 0.85 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.25, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute right-6 top-[18%] bg-card/95 backdrop-blur-md border border-border/60 rounded-2xl px-4 py-2.5 shadow-elegant"
+            >
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent" />
+                </span>
+                <div className="text-sm font-semibold text-foreground">Review removed ✓</div>
+              </div>
+            </motion.div>
           </motion.div>
 
         </div>
