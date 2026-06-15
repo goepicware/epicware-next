@@ -112,15 +112,11 @@ export default function HeroSection() {
                 alt="Singapore SMB owner growing their business with Epicware"
                 width={800}
                 height={900}
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-right"
                 priority
               />
-              {/* Left fade — blends into text column */}
-              <div className="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent pointer-events-none" />
-              {/* Top fade */}
-              <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-transparent pointer-events-none" />
-              {/* Bottom fade */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
+              {/* Subtle left edge fade only — no whitewash */}
+              <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/10 to-transparent [mask-image:linear-gradient(to_right,black_0%,transparent_35%)] pointer-events-none" />
             </div>
 
             {/* Floating badge — Google rating */}
