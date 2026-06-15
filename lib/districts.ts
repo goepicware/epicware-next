@@ -237,6 +237,144 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Tuition Centres", href: "/industries/tuition-centres" },
     ],
   },
+  {
+    slug: "marina-bay",
+    name: "Marina Bay",
+    badge: "LOCAL SEO · MARINA BAY · SINGAPORE",
+    h1: "Local SEO & Reputation Management in Marina Bay",
+    subtitle:
+      "Marina Bay is Singapore's financial heartland — home to the CBD, Marina Bay Sands, and thousands of professionals who decide where to eat, drink, and do business based on what they find on Google Maps. Epicware helps Marina Bay businesses own the 3-Pack for the city's most competitive searches.",
+    openingParagraph:
+      "Marina Bay draws a dual customer base: the corporate lunch crowd from the financial towers along Raffles Place and Shenton Way, and the evening diners and visitors drawn by Marina Bay Sands and the waterfront promenade. Searches happen at both ends of the day — 'best lunch near Raffles Place MRT' at noon and 'rooftop bar Marina Bay' at 7pm. Both are decided in the Google Maps 3-Pack, often within seconds. A business that ranks first captures the walk-in. A business that ranks fourth is invisible. Epicware manages your GBP optimisation, review velocity, and rank tracking across the Marina Bay grid so that when those searches happen, your business is in the frame and your reviews make the decision easy.",
+    whyMatter:
+      "The Marina Bay office crowd is time-poor and phone-first. A restaurant with 20 reviews and a 3.6 rating does not compete against a competitor with 200 reviews and a 4.5 — regardless of food quality — because most customers never get past the Maps listing. Review velocity matters more in Marina Bay than in most Singapore districts because a fresh professional population cycles through the area constantly and relies almost entirely on Google to navigate it. Businesses that keep their GBP active, their reviews current, and their listing complete consistently outrank competitors with better product but worse online presence.",
+    keyBusinessTypes: ["Premium F&B Restaurants", "Corporate Caterers", "Hotel Bars & Lounges", "Law Firms", "Wealth Management Offices"],
+    nearbyDistricts: [
+      { name: "Bugis", slug: "bugis" },
+      { name: "Orchard", slug: "orchard" },
+      { name: "Novena", slug: "novena" },
+    ],
+    keyIndustries: [
+      { label: "Restaurants", href: "/industries/restaurants" },
+      { label: "Wellness Centres", href: "/industries/wellness-centres" },
+      { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
+    ],
+  },
+  {
+    slug: "jurong-east",
+    name: "Jurong East",
+    badge: "LOCAL SEO · JURONG EAST · SINGAPORE",
+    h1: "Local SEO & Reputation Management in Jurong East",
+    subtitle:
+      "Jurong East is Singapore's largest regional commercial hub outside the CBD — anchored by JEM, Westgate, and IMM with one of the busiest MRT interchanges in the west. SMBs here compete against established mall tenants in a high-footfall, search-driven environment where Google Maps rank directly determines who gets the walk-in.",
+    openingParagraph:
+      "Jurong East MRT is the commercial gateway to Singapore's west. The interchange channels commuters from Boon Lay, Jurong West, Clementi, and Buona Vista through a corridor lined with JEM, Westgate, and IMM — creating a sustained flow of customers throughout the day and on weekends. For businesses in this catchment, the volume of potential customers is enormous, but so is the competition. A café at JEM competes not only with the coffee chain next door but with every category-relevant business within a 2km radius. Google Maps rank is the primary way customers resolve that competition. Epicware runs GBP optimisation, review generation, and rank tracking for Jurong East businesses so you place in the top three for your category at this key node — ahead of the chains, not buried behind them.",
+    whyMatter:
+      "Jurong East's high footfall masks a decisive challenge: customers in transit compare options on their phones while moving, and they make choices in under a minute. A business that ranks third in the Maps 3-Pack instead of first loses a substantial portion of potential clicks before the customer even arrives. Review recency is also a critical signal here — a restaurant with 15 reviews from last month outperforms one with 100 reviews from two years ago in Google's ranking algorithm. Businesses that invest in consistent review generation stay ahead of competitors who let their profile go stale.",
+    keyBusinessTypes: ["F&B Restaurants", "Retail Shops", "Tuition Centres", "Medical Clinics", "Beauty Salons"],
+    nearbyDistricts: [
+      { name: "Clementi", slug: "clementi" },
+      { name: "Jurong", slug: "jurong" },
+      { name: "Buona Vista", slug: "buona-vista" },
+    ],
+    keyIndustries: [
+      { label: "Restaurants", href: "/industries/restaurants" },
+      { label: "Tuition Centres", href: "/industries/tuition-centres" },
+      { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
+    ],
+  },
+  {
+    slug: "paya-lebar",
+    name: "Paya Lebar",
+    badge: "LOCAL SEO · PAYA LEBAR · SINGAPORE",
+    h1: "Local SEO & Reputation Management in Paya Lebar",
+    subtitle:
+      "Paya Lebar has transformed from a quiet residential estate into one of Singapore's most active commercial corridors — anchored by Paya Lebar Quarter (PLQ), Paya Lebar Square, and SingPost Centre. The influx of office workers and upgraded retail has created a competitive local search environment where GBP visibility directly translates to foot traffic.",
+    openingParagraph:
+      "Paya Lebar Quarter brought a new professional class into a district that previously served a quieter residential base. Office workers from PLQ's towers search for F&B options, wellness services, and everyday conveniences on Google Maps at lunch and after work. At the same time, the longstanding HDB community in the surrounding Geylang and Aljunied corridor continues to rely on Google reviews as a trust signal for neighbourhood businesses. Epicware manages GBP optimisation, review generation, and rank tracking for Paya Lebar businesses navigating both customer segments — so your profile ranks for the searches that drive footfall across this hybrid district, whether the customer is a PLQ professional on a 45-minute lunch or a resident choosing a weekend dinner spot.",
+    whyMatter:
+      "Paya Lebar is at an inflection point. The professional class brought by PLQ has higher digital expectations and higher review standards than the district's traditional customer base. A business with no photos, an incomplete GBP, and a 3.8 rating will be passed over by the PLQ lunch crowd even if it is genuinely excellent — because they have no other way to know. Getting your GBP profile to accurately reflect your quality is the highest-leverage action a Paya Lebar business can take right now, before the local search market becomes as saturated as the malls themselves.",
+    keyBusinessTypes: ["F&B Restaurants", "Fitness & Wellness Studios", "Beauty Salons", "SME Offices", "Retail Stores"],
+    nearbyDistricts: [
+      { name: "Bugis", slug: "bugis" },
+      { name: "Tampines", slug: "tampines" },
+      { name: "Bedok", slug: "bedok" },
+    ],
+    keyIndustries: [
+      { label: "Restaurants", href: "/industries/restaurants" },
+      { label: "Wellness Centres", href: "/industries/wellness-centres" },
+      { label: "Hair & Beauty Salons", href: "/industries/nail-hair-salons" },
+    ],
+  },
+  {
+    slug: "bugis",
+    name: "Bugis",
+    badge: "LOCAL SEO · BUGIS · SINGAPORE",
+    h1: "Local SEO & Reputation Management in Bugis",
+    subtitle:
+      "Bugis sits at the intersection of heritage and commerce — shophouses alongside modern malls, local hawkers next to international chains, and a constant mix of Singaporeans and international visitors navigating the same search results. In this crowded corridor, the businesses that show up first and review best take the walk-in.",
+    openingParagraph:
+      "Bugis Junction, Bugis+, and the Arab Street and Haji Lane corridor draw a distinctive blend of customers: weekend shoppers, tourists searching for authentic Singapore experiences, and locals who grew up in the area. Search behaviour in Bugis is more exploratory than in purely residential districts — someone searching 'best café Bugis' or 'restaurant Haji Lane' is in discovery mode, comparing multiple options across Google Maps before choosing. The businesses that win these searches are the ones that appear prominently, have recent reviews with enough depth to build trust, and respond to every review in a way that signals an attentive operation. Epicware tracks your Bugis Map Pack rank, optimises your GBP profile for the search terms that drive foot traffic, and manages your review programme so you stand out in one of Singapore's most visited corridors.",
+    whyMatter:
+      "Bugis is one of the few Singapore districts where tourists and locals compete for the same search visibility. A business that ranks well for local searches also captures visitor traffic — and a visitor leaving a review reaches an audience well beyond the neighbourhood. Review quality matters more here than in most residential areas because out-of-town customers have no prior knowledge of your business and rely entirely on Google ratings and review content to make their decision. A single stretch of unmanaged negative reviews, left without a response, can visibly shift the impression your listing makes on customers who have nothing else to go on.",
+    keyBusinessTypes: ["F&B Restaurants", "Cafés & Bars", "Boutique Retail", "Beauty & Wellness Studios", "Heritage & Cultural Tours"],
+    nearbyDistricts: [
+      { name: "Marina Bay", slug: "marina-bay" },
+      { name: "Paya Lebar", slug: "paya-lebar" },
+      { name: "Orchard", slug: "orchard" },
+    ],
+    keyIndustries: [
+      { label: "Restaurants", href: "/industries/restaurants" },
+      { label: "Hair & Beauty Salons", href: "/industries/nail-hair-salons" },
+      { label: "Retail Stores", href: "/industries/retail-stores" },
+    ],
+  },
+  {
+    slug: "novena",
+    name: "Novena",
+    badge: "LOCAL SEO · NOVENA · SINGAPORE",
+    h1: "Local SEO & Reputation Management in Novena",
+    subtitle:
+      "Novena is Singapore's medical district — home to Mount Elizabeth Novena Hospital, Novena Medical Centre, and dozens of specialist clinics. For healthcare providers and the businesses that serve them, reputation and Google Maps visibility are not optional marketing. They are the primary factor determining whether a patient books an appointment.",
+    openingParagraph:
+      "Patients searching for a doctor, dentist, or specialist in Novena search very differently from customers looking for a restaurant. They search by condition, by procedure, by insurance panel, and above all by reputation. A clinic with a 4.2 rating and 15 reviews does not just rank lower than a competitor with 4.8 and 200 reviews — it is actively disqualified by patients making decisions about their health and family. Beyond the medical cluster, Novena's upscale residential base and Velocity Mall draw a professional, high-income customer segment that applies the same scrutiny to every local business they consider. Epicware manages GBP optimisation, review generation, and bad review removal for Novena businesses — with particular expertise in the reputation-sensitive healthcare context where a single unfair review can affect real patient decisions.",
+    whyMatter:
+      "Novena's concentration of healthcare providers creates one of Singapore's most review-sensitive local search environments. An inaccurate or unfair negative review on a clinic's Google profile can deter dozens of prospective patients who cannot independently verify the claim. Google's own review removal process is opaque and slow to navigate for individual businesses. Epicware's bad review removal service — $200 per review removed, pay on success — is particularly high-value for Novena clinics and specialist practices that need their online reputation to accurately reflect the quality of care they provide, not the agenda of a disgruntled or fraudulent reviewer.",
+    keyBusinessTypes: ["Medical Specialist Clinics", "Dental Clinics", "Physiotherapy Centres", "Pharmacies", "Health & Wellness Studios"],
+    nearbyDistricts: [
+      { name: "Bishan", slug: "bishan" },
+      { name: "Toa Payoh", slug: "toa-payoh" },
+      { name: "Orchard", slug: "orchard" },
+    ],
+    keyIndustries: [
+      { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
+      { label: "Dental Clinics", href: "/industries/dental-clinics" },
+      { label: "Physiotherapy", href: "/industries/physiotherapy" },
+    ],
+  },
+  {
+    slug: "bishan",
+    name: "Bishan",
+    badge: "LOCAL SEO · BISHAN · SINGAPORE",
+    h1: "Local SEO & Reputation Management in Bishan",
+    subtitle:
+      "Bishan is one of Singapore's most established mature estates — a self-contained community anchored by Junction 8 mall and surrounded by one of the highest concentrations of families in the central region. SMBs here serve a loyal, neighbourhood-first customer base that discovers and evaluates local businesses through Google Maps.",
+    openingParagraph:
+      "Bishan's residents are characterised by high homeownership, dense family networks, and long community ties. Unlike CBD-adjacent districts where customers rotate frequently, Bishan businesses build relationships with customers who return regularly over years — and those returning customers form strong, lasting opinions. Google reviews are the digital record of those opinions, visible to every new family moving into the estate and to every resident deciding where to send their children for tuition, where to see a doctor, or where to have dinner. Junction 8 anchors the retail and F&B scene, but the surrounding HDB blocks contain a dense network of independent businesses that compete on trust as much as on product. Epicware helps Bishan businesses build that trust systematically — through review generation, GBP optimisation, and rank tracking across the central catchment that reaches into Ang Mo Kio and Toa Payoh.",
+    whyMatter:
+      "Word of mouth in a mature estate like Bishan travels faster and sticks longer than in transient districts. A business that earns a strong Google reputation in Bishan compounds it over time as the community grows around it. The families here are also willing to travel slightly for a business they trust — making your Google Maps rank relevant beyond Bishan's immediate boundary into the Thomson, Ang Mo Kio, and Toa Payoh triangle. Getting into the Maps 3-Pack for your category before competitors do is the highest-return local SEO move available to a Bishan business right now.",
+    keyBusinessTypes: ["Tuition Centres", "F&B Restaurants", "Medical Clinics", "Childcare Centres", "Retail Shops"],
+    nearbyDistricts: [
+      { name: "Novena", slug: "novena" },
+      { name: "Ang Mo Kio", slug: "ang-mo-kio" },
+      { name: "Toa Payoh", slug: "toa-payoh" },
+    ],
+    keyIndustries: [
+      { label: "Tuition Centres", href: "/industries/tuition-centres" },
+      { label: "Restaurants", href: "/industries/restaurants" },
+      { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
+    ],
+  },
 ];
 
 export function getDistrict(slug: string): DistrictData | undefined {
