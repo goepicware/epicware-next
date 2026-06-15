@@ -112,7 +112,7 @@ export default function HeroSection() {
               {/* Image with left-edge fade blend */}
               <div className="relative rounded-[1.5rem] overflow-hidden shadow-premium">
                 <Image
-                  src="/assets/hero-image.jpg"
+                  src="/assets/HeroBanner.png"
                   alt="Singapore SMB owner growing their business with Epicware"
                   width={800}
                   height={560}
