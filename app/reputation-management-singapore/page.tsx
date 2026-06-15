@@ -6,7 +6,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Reputation Management Singapore — Grow Reviews & Remove Bad Ones | Epicware",
+  title: "Reputation Management Singapore — Grow Your Reviews | Epicware",
   description:
     "Singapore's only platform combining review generation, AI responses, bad review removal & analytics in one dashboard. Protect your Google rating. Start free.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore" },

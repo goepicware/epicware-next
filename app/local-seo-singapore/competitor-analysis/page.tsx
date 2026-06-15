@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Competitor Analysis Singapore — See Why Competitors Outrank You | Epicware",
+  title: "Competitor Analysis Singapore — Outrank Competitors | Epicware",
   description:
     "Per-keyword, per-district competitor analysis showing exactly why businesses rank above you on Google Maps — and how to close the gap.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/competitor-analysis" },

@@ -20,7 +20,7 @@ export async function generateMetadata({
   const d = getDistrict(slug);
   if (!d) return {};
   return {
-    title: `Local SEO ${d.name} Singapore — Google Maps Rank & Review Management | Epicware`,
+    title: `Local SEO ${d.name} Singapore — Google Maps & Reviews | Epicware`,
     description: `Epicware helps ${d.name} businesses rank higher on Google Maps, generate more reviews, and remove bad ones. Singapore-built platform for ${d.name} SMBs.`,
     alternates: {
       canonical: `https://www.epicware.ai/locations/singapore/${slug}`,

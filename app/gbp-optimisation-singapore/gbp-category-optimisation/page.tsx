@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GBP Category Optimisation Singapore — Fix Your Google Business Categories | Epicware",
+  title: "GBP Category Optimisation Singapore | Epicware",
   description:
     "Your primary GBP category is the most important rank factor. Epicware audits and corrects your primary and secondary categories for maximum Singapore Maps rank.",
   alternates: { canonical: "https://www.epicware.ai/gbp-optimisation-singapore/gbp-category-optimisation" },

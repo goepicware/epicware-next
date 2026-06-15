@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "EpicSocial Social Scheduling Singapore — AI Social Media Management | Epicware",
+  title: "EpicSocial Social Scheduling Singapore — AI Posts | Epicware",
   description:
     "AI-generated social posts scheduled across Facebook, Instagram, and GBP from one dashboard. A full week of content in one click for Singapore SMBs.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools/epicsocial-social-scheduling" },

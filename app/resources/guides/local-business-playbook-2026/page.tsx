@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
-  title: "Local Business Playbook 2026 — Google Maps & Reputation Management | Epicware",
+  title: "Local Business Playbook 2026 — Google Maps & Reviews | Epicware",
   description: "The 2026 guide to local SEO for Singapore SMBs. AI search, Google Maps, GBP optimisation, and reputation management strategies that work in the current landscape.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/local-business-playbook-2026" },
   openGraph: {

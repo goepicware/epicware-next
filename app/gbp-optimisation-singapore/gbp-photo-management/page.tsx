@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GBP Photo Management Singapore — Optimise Your Google Business Photos | Epicware",
+  title: "GBP Photo Management Singapore — Business Photos | Epicware",
   description:
     "Google uses photo count and recency as rank signals. Epicware manages your GBP photo library with geo-tagged uploads and regular refresh to keep your profile active.",
   alternates: { canonical: "https://www.epicware.ai/gbp-optimisation-singapore/gbp-photo-management" },

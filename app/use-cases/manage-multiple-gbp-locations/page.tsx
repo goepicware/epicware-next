@@ -7,7 +7,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Manage Multiple Google Business Profiles — Multi-Outlet Dashboard | Epicware",
+  title: "Manage Multiple Google Business Profiles | Epicware",
   description:
     "Epicware's multi-outlet dashboard manages review generation, GBP optimisation, and rank tracking across all your Singapore outlets from one login.",
   alternates: {

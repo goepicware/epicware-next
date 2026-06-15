@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GBP Post Scheduling Singapore — AI-Generated Weekly Google Posts | Epicware",
+  title: "GBP Post Scheduling Singapore — AI Weekly Posts | Epicware",
   description:
     "Keep your Google Business Profile fresh with weekly AI-generated posts published automatically. A rank freshness signal that requires nothing from you.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/gbp-post-scheduling" },

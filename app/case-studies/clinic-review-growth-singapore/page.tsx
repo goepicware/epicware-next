@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
-  title: "Clinic Review Growth Singapore — Removing Fake Reviews & Building Trust | Epicware",
+  title: "Clinic Review Growth Singapore — Case Study | Epicware",
   description: "How a Singapore GP clinic removed 3 fake reviews, raised their Google rating to 4.7, and built a consistent review generation system with Epicware.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/clinic-review-growth-singapore" },
   openGraph: {

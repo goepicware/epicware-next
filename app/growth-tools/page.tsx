@@ -6,7 +6,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Growth Tools Singapore — Email Marketing, Social Scheduling & SEO | Epicware",
+  title: "Growth Tools Singapore — Email, Social & SEO | Epicware",
   description:
     "Epicware's Growth Tools automate customer retention for Singapore SMBs — email campaigns, social scheduling, and website SEO. Keep customers coming back.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools" },

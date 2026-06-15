@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Fake Review Removal Singapore — Remove Competitor & Bot Reviews | Epicware",
+  title: "Fake Review Removal Singapore — Remove Bot Reviews | Epicware",
   description:
     "Remove fake Google reviews posted by competitors, bots, or non-customers. $200 per review, pay on success. Singapore's only guaranteed removal service.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/fake-review-removal" },

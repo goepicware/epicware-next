@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GBP Optimisation Singapore — Google Business Profile Experts | Epicware",
+  title: "GBP Optimisation Singapore — Business Profile Experts | Epicware",
   description:
     "Complete 19-point Google Business Profile optimisation for Singapore SMBs. Fix every rank factor and track improvement weekly with EpicMap.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/gbp-optimisation" },

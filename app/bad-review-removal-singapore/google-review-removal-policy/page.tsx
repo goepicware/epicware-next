@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Google Review Removal Policy Singapore — What Can Be Removed | Epicware",
+  title: "Google Review Removal Policy — What Can Be Removed | Epicware",
   description:
     "Which Singapore Google reviews can be removed under Google's content policies? Free assessment before any payment. $200 per review removed, pay on success.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/google-review-removal-policy" },

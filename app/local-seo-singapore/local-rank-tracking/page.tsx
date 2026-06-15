@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Local Rank Tracking Singapore — Google Maps Position Tracking | Epicware",
+  title: "Local Rank Tracking Singapore — Google Maps Positions | Epicware",
   description:
     "Visual map grid showing your Google Maps rank across every Singapore district. See exactly where you win and where competitors beat you.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/local-rank-tracking" },

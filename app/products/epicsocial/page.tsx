@@ -6,7 +6,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "EpicSocial — Social Scheduling & GBP Post Management Singapore | Epicware",
+  title: "EpicSocial — Social Scheduling & GBP Posts Singapore | Epicware",
   description:
     "Schedule social posts and GBP updates from one dashboard. EpicSocial keeps Singapore SMBs visible on Facebook, Instagram, and Google without the grind.",
   alternates: { canonical: "https://www.epicware.ai/products/epicsocial" },

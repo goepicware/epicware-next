@@ -4,7 +4,7 @@ import BacklinkTool from "@/components/tools/BacklinkTool";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Free Backlink Opportunity Finder for SaaS & Local Businesses | Epicware",
+  title: "Free Backlink Opportunity Finder — SaaS & Local | Epicware",
   description:
     "AI-powered backlink finder. Discover listicles and roundups where your brand should be mentioned, with pre-written outreach emails included.",
   alternates: { canonical: "https://www.epicware.ai/tools/backlink-opportunity-finder" },

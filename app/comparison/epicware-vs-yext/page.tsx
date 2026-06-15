@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs Yext — Singapore Local SEO & Listings Management | Epicware",
+  title: "Epicware vs Yext — Local SEO & Listings Comparison | Epicware",
   description: "Compare Epicware and Yext for Singapore SMBs. Listing management, review management, and pricing model compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-yext" },
   openGraph: {

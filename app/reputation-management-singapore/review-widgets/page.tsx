@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Review Widgets Singapore — Embed Google Reviews on Your Website | Epicware",
+  title: "Review Widgets Singapore — Embed Google Reviews | Epicware",
   description:
     "Display your best Google reviews on your website automatically. Live, auto-updating review widgets for Singapore SMBs. No manual updates.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/review-widgets" },

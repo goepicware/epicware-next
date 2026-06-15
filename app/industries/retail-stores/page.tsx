@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Retail Stores Singapore — Drive In-Store Traffic | Epicware",
+  title: "Local SEO for Retail Stores Singapore | Epicware",
   description:
     "Epicware helps Singapore retail stores rank higher on Google Maps, manage customer reviews, and stay visible when shoppers search for products and stores nearby.",
   alternates: {

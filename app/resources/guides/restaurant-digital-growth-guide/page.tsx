@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
-  title: "Restaurant Digital Growth Guide — Google Maps, Reviews & Local SEO | Epicware",
+  title: "Restaurant Digital Growth Guide — Google Maps & SEO | Epicware",
   description: "The complete digital growth playbook for Singapore restaurant owners. GBP optimisation, review generation, and bad review removal strategies for F&B businesses.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/restaurant-digital-growth-guide" },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs QR Code Reviews — Automated vs Manual Review Collection | Epicware",
+  title: "Epicware vs QR Code Reviews — Automated vs Manual | Epicware",
   description: "Compare Epicware's automated WhatsApp review campaigns against QR code review collection. Response rates, automation, and multi-outlet support compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicreview-vs-qr-code-review" },
   openGraph: {

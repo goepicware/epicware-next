@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Reputation Analytics Singapore — Track Reviews, Ratings & Sentiment | Epicware",
+  title: "Reputation Analytics Singapore — Reviews & Sentiment | Epicware",
   description:
     "Live reputation analytics dashboard for Singapore SMBs. Track review velocity, rating trends, response rates, and competitor comparison across all outlets.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/reputation-analytics" },

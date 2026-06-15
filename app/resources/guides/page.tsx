@@ -4,7 +4,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Guides — Google Reviews & Local SEO Playbooks for Singapore SMBs | Epicware",
+  title: "Guides — Google Reviews & Local SEO Playbooks | Epicware",
   description:
     "In-depth playbooks you can action immediately. Covers Google Maps ranking, bad review removal, and local SEO for Singapore restaurants, clinics, and SMBs.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides" },
