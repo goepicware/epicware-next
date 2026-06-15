@@ -80,15 +80,20 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Trust stats */}
-            <motion.div {...fadeUp(0.24)} className="flex items-center gap-8 pt-2">
+            <motion.div {...fadeUp(0.24)} className="flex items-center gap-6 pt-2 flex-wrap">
               <div>
-                <div className="text-4xl font-display font-bold text-foreground">50+</div>
+                <div className="text-3xl font-display font-bold text-foreground">50+</div>
                 <div className="text-sm text-muted-foreground mt-1">outlets managed</div>
               </div>
-              <div className="w-px h-12 bg-border/60" />
+              <div className="w-px h-10 bg-border/60" />
               <div>
-                <div className="text-4xl font-display font-bold text-foreground">100+</div>
-                <div className="text-sm text-muted-foreground mt-1">bad reviews removed</div>
+                <div className="text-3xl font-display font-bold text-foreground">100+</div>
+                <div className="text-sm text-muted-foreground mt-1">reputation issues handled</div>
+              </div>
+              <div className="w-px h-10 bg-border/60" />
+              <div>
+                <div className="text-sm font-semibold text-foreground">Built for</div>
+                <div className="text-3xl font-display font-bold text-foreground leading-none">SMBs</div>
               </div>
             </motion.div>
           </div>
@@ -96,24 +101,28 @@ export default function HeroSection() {
           {/* ── Right: hero image ── */}
           <motion.div
             className="order-1 lg:order-2 flex justify-center lg:justify-end"
-            initial={{ opacity: 0, x: 50, scale: 0.95 }}
+            initial={{ opacity: 0, x: 50, scale: 0.97 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative w-full max-w-[360px] lg:max-w-[420px]">
-              {/* Glow halo */}
-              <div className="absolute inset-[-6%] rounded-[2.5rem] bg-gradient-to-br from-primary/25 via-secondary/15 to-accent/20 blur-3xl" />
+            <div className="relative w-full max-w-[560px] lg:max-w-[640px]">
+              {/* Subtle glow behind image */}
+              <div className="absolute inset-[-4%] rounded-[2rem] bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/15 blur-3xl" />
 
-              {/* Image */}
-              <div className="relative rounded-[2rem] overflow-hidden shadow-premium ring-1 ring-primary/10">
+              {/* Image with left-edge fade blend */}
+              <div className="relative rounded-[1.5rem] overflow-hidden shadow-premium">
                 <Image
-                  src="/assets/BusinessOwner.png"
-                  alt="Singapore business owner seeing results with Epicware"
-                  width={520}
-                  height={780}
+                  src="/assets/hero-image.jpg"
+                  alt="Singapore SMB owner growing their business with Epicware"
+                  width={800}
+                  height={560}
                   className="w-full h-auto object-cover"
                   priority
                 />
+                {/* Left gradient fade — blends image into background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/10 to-transparent pointer-events-none" />
+                {/* Bottom fade */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Floating badge — Google rating */}
@@ -121,7 +130,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -20, scale: 0.85 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute -left-8 top-[38%] bg-card/95 backdrop-blur-md border border-border/60 rounded-2xl px-4 py-3 shadow-elegant"
+                className="absolute -left-4 top-[35%] bg-card/95 backdrop-blur-md border border-border/60 rounded-2xl px-4 py-3 shadow-elegant"
               >
                 <div className="flex items-center gap-2.5">
                   <span className="text-xl">⭐</span>
@@ -137,7 +146,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: 20, scale: 0.85 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.25, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute -right-6 top-[18%] bg-card/95 backdrop-blur-md border border-border/60 rounded-2xl px-4 py-2.5 shadow-elegant"
+                className="absolute -right-4 top-[15%] bg-card/95 backdrop-blur-md border border-border/60 rounded-2xl px-4 py-2.5 shadow-elegant"
               >
                 <div className="flex items-center gap-2">
                   <span className="relative flex h-2.5 w-2.5">
