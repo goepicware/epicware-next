@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "How Fast Should You Respond to Google Reviews? | Epicware",
   description: "The ideal response time for positive and negative Google reviews — and what happens when you leave reviews unanswered for days.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/how-fast-should-you-respond-to-google-reviews" },
+  openGraph: {
+    title: "How Fast Should You Respond to Google Reviews? | Epicware",
+    description: "The ideal response time for positive and negative Google reviews — and what happens when you leave reviews unanswered for days.",
+    url: "https://www.epicware.ai/resources/blog/how-fast-should-you-respond-to-google-reviews",
+  },
 };
 
 const schema = {

@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Epicware vs QR Code Reviews — Automated vs Manual Review Collection | Epicware",
   description: "Compare Epicware's automated WhatsApp review campaigns against QR code review collection. Response rates, automation, and multi-outlet support compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicreview-vs-qr-code-review" },
+  openGraph: {
+    title: "Epicware vs QR Code Reviews — Automated vs Manual Review Collection",
+    description: "Compare Epicware's automated WhatsApp review campaigns against QR code review collection. Response rates, automation, and multi-outlet support compared.",
+    url: "https://www.epicware.ai/comparison/epicreview-vs-qr-code-review",
+  },
 };
 
 const schema = {

@@ -83,7 +83,7 @@ export default function EpicEngagePage() {
 
       <CategoryHero
         badge="EPICENGAGE · EMAIL MARKETING"
-        h1="EpicEngage — Turn One-Time Customers Into Regulars"
+        h1="EpicEngage — Email Marketing for Singapore SMBs"
         subtitle={
           <>
             Getting a new customer costs five times more than keeping an existing one. EpicEngage

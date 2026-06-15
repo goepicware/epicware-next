@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Restaurant Multi-Outlet Growth Singapore — Google Maps & Reviews Case Study | Epicware",
   description: "How a Singapore F&B group managing 6 outlets grew from 45 to 200+ reviews per outlet, improved Maps rank, and centralised reputation management with Epicware.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/restaurant-multi-outlet-growth-singapore" },
+  openGraph: {
+    title: "Restaurant Multi-Outlet Growth Singapore — Google Maps & Reviews Case Study",
+    description: "How a Singapore F&B group managing 6 outlets grew from 45 to 200+ reviews per outlet, improved Maps rank, and centralised reputation management with Epicware.",
+    url: "https://www.epicware.ai/case-studies/restaurant-multi-outlet-growth-singapore",
+  },
 };
 
 const schema = {

@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Review Management for Singapore SMBs — What It Involves | Epicware",
   description: "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews. The practical guide for SMB owners.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/review-management-singapore" },
+  openGraph: {
+    title: "Review Management for Singapore SMBs — What It Involves | Epicware",
+    description: "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews. The practical guide for SMB owners.",
+    url: "https://www.epicware.ai/resources/blog/review-management-singapore",
+  },
 };
 
 const schema = {

@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Do Keywords in Google Reviews Help Local SEO? | Epicware",
   description: "Learn whether keywords mentioned in customer reviews affect Google Maps rankings. The nuanced answer and what it means for your review strategy.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/do-keywords-in-reviews-help-local-seo" },
+  openGraph: {
+    title: "Do Keywords in Google Reviews Help Local SEO? | Epicware",
+    description: "Learn whether keywords mentioned in customer reviews affect Google Maps rankings. The nuanced answer and what it means for your review strategy.",
+    url: "https://www.epicware.ai/resources/blog/do-keywords-in-reviews-help-local-seo",
+  },
 };
 
 const schema = {

@@ -8,7 +8,7 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Local SEO for Singapore SMBs — Solutions by Industry | Epicware",
   description:
-    "Epicware's Local SEO and Reputation Management platform serves F&B, healthcare, beauty, tuition, dental, auto, retail, physiotherapy, and wellness businesses across Singapore.",
+    "Epicware's Local SEO and Reputation Management platform serves F&B, healthcare, beauty, tuition, dental, auto, retail, and wellness businesses across Singapore.",
   alternates: {
     canonical: "https://www.epicware.ai/industries",
   },

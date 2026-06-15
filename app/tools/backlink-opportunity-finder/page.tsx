@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default function BacklinkOpportunityFinderPage() {
   return (
     <>
+      <h1 className="sr-only">Free Backlink Opportunity Finder</h1>
       <BacklinkTool />
 
       <section className="py-12 border-t border-border/40">

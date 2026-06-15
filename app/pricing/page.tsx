@@ -163,7 +163,7 @@ export default function PricingPage() {
             TRANSPARENT PRICING · NO LOCK-IN
           </div>
           <h1 className="font-display font-bold text-foreground mb-5 leading-tight">
-            Plans for Every Stage of Growth
+            Local SEO &amp; Reputation Management Pricing — Singapore
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
             From getting your first 50 reviews to dominating Google Search, Maps, and AI results — pick the plan that matches where you are today.

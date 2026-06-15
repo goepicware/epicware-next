@@ -9,7 +9,7 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Manage Multiple Google Business Profiles — Multi-Outlet Dashboard | Epicware",
   description:
-    "Epicware's multi-outlet dashboard manages review generation, GBP optimisation, and rank tracking across all your Singapore outlets from one login. No more logging in separately.",
+    "Epicware's multi-outlet dashboard manages review generation, GBP optimisation, and rank tracking across all your Singapore outlets from one login.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/manage-multiple-gbp-locations",
   },

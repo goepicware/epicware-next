@@ -24,8 +24,10 @@ const nextConfig: NextConfig = {
       // Old comparison URLs
       { source: "/comparison/epiccommerce-vs-delivery-platforms", destination: "/contact", permanent: true },
       { source: "/comparison/kairo-vs-manual-whatsapp", destination: "/contact", permanent: true },
+      // /audit redirect (page doesn't exist — send to GBP audit service page)
+      { source: "/audit", destination: "/gbp-optimisation-singapore/gbp-audit", permanent: true },
       // Short URL aliases
-      { source: "/audit-lp", destination: "/audit", permanent: true },
+      { source: "/audit-lp", destination: "/gbp-optimisation-singapore/gbp-audit", permanent: true },
       { source: "/resources/tools", destination: "/tools", permanent: true },
       { source: "/resources/blog", destination: "/blog", permanent: true },
       // Old backlink tool URL → new canonical URL

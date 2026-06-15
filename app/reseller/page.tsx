@@ -6,8 +6,13 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: "Epicware Reseller Programme — Partner Revenue Share | Epicware",
-  description: "Become an Epicware reseller. Offer Local SEO, reputation management, and bad review removal under your brand or Epicware's. Tiered revenue share model. Singapore-based partners welcome.",
+  description: "Become an Epicware reseller. Offer Local SEO, reputation management, and bad review removal under your brand or Epicware's. Tiered revenue share. SG partners welcome.",
   alternates: { canonical: "https://www.epicware.ai/reseller" },
+  openGraph: {
+    title: "Epicware Reseller Programme — Partner Revenue Share",
+    description: "Become an Epicware reseller. Offer Local SEO, reputation management, and bad review removal under your brand or Epicware's. Tiered revenue share. SG partners welcome.",
+    url: "https://www.epicware.ai/reseller",
+  },
 };
 
 const schema = {

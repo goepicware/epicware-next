@@ -9,7 +9,7 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Rank Higher on Google Maps in Singapore — Local SEO Platform | Epicware",
   description:
-    "Epicware helps Singapore SMBs rank higher in Google Maps search results through GBP optimisation, review velocity, and rank tracking. See exactly where you rank — and fix it.",
+    "Epicware helps Singapore SMBs rank higher on Google Maps through GBP optimisation, review velocity, and rank tracking. See exactly where you rank — and fix it.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/rank-higher-on-google-maps",
   },

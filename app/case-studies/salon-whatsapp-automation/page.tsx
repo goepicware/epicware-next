@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Salon Local SEO & Reviews Singapore — Google Maps Rank Case Study | Epicware",
   description: "How a Singapore hair salon chain improved their Google Maps rank and grew to 150+ reviews per outlet using Epicware's review generation and GBP optimisation.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/salon-whatsapp-automation" },
+  openGraph: {
+    title: "Salon Local SEO & Reviews Singapore — Google Maps Rank Case Study",
+    description: "How a Singapore hair salon chain improved their Google Maps rank and grew to 150+ reviews per outlet using Epicware's review generation and GBP optimisation.",
+    url: "https://www.epicware.ai/case-studies/salon-whatsapp-automation",
+  },
 };
 
 const schema = {

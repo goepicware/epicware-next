@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Google Review Policy Explained — What Gets Removed & Why | Epicware",
   description: "Complete breakdown of Google's review content policies for Singapore business owners. Know exactly which reviews violate policy and can be removed.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/google-review-policy-explained" },
+  openGraph: {
+    title: "Google Review Policy Explained — What Gets Removed & Why | Epicware",
+    description: "Complete breakdown of Google's review content policies for Singapore business owners. Know exactly which reviews violate policy and can be removed.",
+    url: "https://www.epicware.ai/resources/blog/google-review-policy-explained",
+  },
 };
 
 const schema = {

@@ -9,7 +9,7 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Improve Your Google Rating Singapore — From 3.9 to 4.5+ | Epicware",
   description:
-    "Epicware helps Singapore businesses improve their Google star rating by removing bad reviews and generating more positive ones. Raise your rating above 4.5 in 90 days.",
+    "Epicware helps Singapore businesses improve their Google star rating by removing bad reviews and generating more positive ones. Raise your rating above 4.5.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/improve-google-rating",
   },

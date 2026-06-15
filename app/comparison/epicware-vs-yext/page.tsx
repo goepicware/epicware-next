@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Epicware vs Yext — Singapore Local SEO & Listings Management | Epicware",
   description: "Compare Epicware and Yext for Singapore SMBs. Listing management, review management, and pricing model compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-yext" },
+  openGraph: {
+    title: "Epicware vs Yext — Singapore Local SEO & Listings Management",
+    description: "Compare Epicware and Yext for Singapore SMBs. Listing management, review management, and pricing model compared.",
+    url: "https://www.epicware.ai/comparison/epicware-vs-yext",
+  },
 };
 
 const schema = {

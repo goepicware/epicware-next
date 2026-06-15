@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "How Many Google Reviews Do You Need to Compete Locally? | Epicware",
   description: "Benchmarks for review count by industry and Singapore district. How many reviews your business needs to appear in the Google Maps 3-Pack.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
+  openGraph: {
+    title: "How Many Google Reviews Do You Need to Compete Locally? | Epicware",
+    description: "Benchmarks for review count by industry and Singapore district. How many reviews your business needs to appear in the Google Maps 3-Pack.",
+    url: "https://www.epicware.ai/resources/blog/how-many-google-reviews-do-you-need-to-compete-locally",
+  },
 };
 
 const schema = {

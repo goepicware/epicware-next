@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "How to Remove Bad Google Reviews in Singapore — The Complete Guide | Epicware",
   description: "Learn exactly how to remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. Step-by-step process and professional removal service.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/how-to-remove-bad-google-reviews" },
+  openGraph: {
+    title: "How to Remove Bad Google Reviews in Singapore — The Complete Guide | Epicware",
+    description: "Learn exactly how to remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. Step-by-step process and professional removal service.",
+    url: "https://www.epicware.ai/resources/blog/how-to-remove-bad-google-reviews",
+  },
 };
 
 const schema = {

@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "How to Create a Google Review Link & QR Code for Your Business | Epicware",
   description: "Step-by-step guide to generate your Google review link and create a QR code for your business. Use at checkout, on receipts, or in your window.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/how-to-create-google-review-link-qr-code" },
+  openGraph: {
+    title: "How to Create a Google Review Link & QR Code for Your Business | Epicware",
+    description: "Step-by-step guide to generate your Google review link and create a QR code for your business. Use at checkout, on receipts, or in your window.",
+    url: "https://www.epicware.ai/resources/blog/how-to-create-google-review-link-qr-code",
+  },
 };
 
 const schema = {

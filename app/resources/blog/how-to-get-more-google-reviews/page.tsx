@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "How to Get More Google Reviews — Ethical Methods That Work | Epicware",
   description: "A structured framework for increasing Google reviews for your Singapore business. WhatsApp templates, timing strategies, and automation options.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/how-to-get-more-google-reviews" },
+  openGraph: {
+    title: "How to Get More Google Reviews — Ethical Methods That Work | Epicware",
+    description: "A structured framework for increasing Google reviews for your Singapore business. WhatsApp templates, timing strategies, and automation options.",
+    url: "https://www.epicware.ai/resources/blog/how-to-get-more-google-reviews",
+  },
 };
 
 const schema = {

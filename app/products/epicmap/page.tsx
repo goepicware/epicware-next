@@ -83,7 +83,7 @@ export default function EpicMapPage() {
 
       <CategoryHero
         badge="EPICMAP · LOCAL RANK TRACKING"
-        h1="EpicMap — See Where You Rank and Fix It Automatically"
+        h1="EpicMap — Local Rank Tracking & GBP Optimisation for Singapore"
         subtitle={
           <>
             Most Singapore SMB owners assume they appear when someone nearby searches their

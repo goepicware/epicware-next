@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Epicware vs Birdeye — Singapore Local SEO & Reputation Management | Epicware",
   description: "Compare Epicware and Birdeye for Singapore SMBs. Platform origin, pricing model, bad review removal, and Singapore-specific local SEO features compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-birdeye" },
+  openGraph: {
+    title: "Epicware vs Birdeye — Singapore Local SEO & Reputation Management",
+    description: "Compare Epicware and Birdeye for Singapore SMBs. Platform origin, pricing model, bad review removal, and Singapore-specific local SEO features compared.",
+    url: "https://www.epicware.ai/comparison/epicware-vs-birdeye",
+  },
 };
 
 const schema = {

@@ -84,7 +84,7 @@ export default function EpicReviewPage() {
 
       <CategoryHero
         badge="EPICREVIEW · REPUTATION MANAGEMENT"
-        h1="EpicReview — More Reviews, Better Responses, Bad Ones Removed"
+        h1="EpicReview — Review Management & Bad Review Removal for Singapore"
         subtitle={
           <>
             Your Google rating is the most visible trust signal a potential customer sees before

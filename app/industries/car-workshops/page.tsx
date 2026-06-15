@@ -4,7 +4,7 @@ import IndustryPage from "@/components/industries/IndustryPage";
 export const metadata: Metadata = {
   title: "Local SEO for Car Workshops Singapore — Rank Higher on Google Maps | Epicware",
   description:
-    "Epicware helps Singapore car workshops, mechanics, and auto service centres rank higher on Google Maps, generate trust-building reviews, and remove fake bad reviews from competitors.",
+    "Epicware helps Singapore car workshops and auto service centres rank higher on Google Maps, generate trust-building reviews, and remove fake bad reviews.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/car-workshops",
   },

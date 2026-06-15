@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Restaurant Digital Growth Guide — Google Maps, Reviews & Local SEO | Epicware",
   description: "The complete digital growth playbook for Singapore restaurant owners. GBP optimisation, review generation, and bad review removal strategies for F&B businesses.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/restaurant-digital-growth-guide" },
+  openGraph: {
+    title: "Restaurant Digital Growth Guide — Google Maps, Reviews & Local SEO",
+    description: "The complete digital growth playbook for Singapore restaurant owners. GBP optimisation, review generation, and bad review removal strategies for F&B businesses.",
+    url: "https://www.epicware.ai/resources/guides/restaurant-digital-growth-guide",
+  },
 };
 
 const schema = {

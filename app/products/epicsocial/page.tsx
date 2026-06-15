@@ -8,7 +8,7 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "EpicSocial — Social Scheduling & GBP Post Management Singapore | Epicware",
   description:
-    "Schedule social posts and Google Business Profile updates from one dashboard. EpicSocial keeps Singapore SMBs visible on Facebook, Instagram, and Google without the grind.",
+    "Schedule social posts and GBP updates from one dashboard. EpicSocial keeps Singapore SMBs visible on Facebook, Instagram, and Google without the grind.",
   alternates: { canonical: "https://www.epicware.ai/products/epicsocial" },
   openGraph: {
     title: "EpicSocial — Stay Visible Without Living on Social Media | Epicware",
@@ -83,7 +83,7 @@ export default function EpicSocialPage() {
 
       <CategoryHero
         badge="EPICSOCIAL · SOCIAL SCHEDULING"
-        h1="EpicSocial — Stay Visible Without Living on Social Media"
+        h1="EpicSocial — Social Scheduling & GBP Posts for Singapore"
         subtitle={
           <>
             Posting consistently on Facebook, Instagram, and Google Business Profile is what keeps

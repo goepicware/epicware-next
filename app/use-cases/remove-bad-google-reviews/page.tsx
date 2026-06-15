@@ -9,7 +9,7 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Remove Bad Google Reviews Singapore — $200/Review, Pay on Success | Epicware",
   description:
-    "Remove fake, malicious, or policy-violating Google reviews. Epicware's bad review removal service is $200/review with success-only payment. Singapore's only productised removal service.",
+    "Remove fake, malicious, or policy-violating Google reviews. $200/review, pay on success only. Singapore's only productised bad review removal service.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/remove-bad-google-reviews",
   },

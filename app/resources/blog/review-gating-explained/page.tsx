@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Review Gating Explained — What It Is and Why It Violates Google Policy | Epicware",
   description: "Review gating is the practice of only directing happy customers to Google reviews. It violates Google policy and can get your profile suspended.",
   alternates: { canonical: "https://www.epicware.ai/resources/blog/review-gating-explained" },
+  openGraph: {
+    title: "Review Gating Explained — What It Is and Why It Violates Google Policy | Epicware",
+    description: "Review gating is the practice of only directing happy customers to Google reviews. It violates Google policy and can get your profile suspended.",
+    url: "https://www.epicware.ai/resources/blog/review-gating-explained",
+  },
 };
 
 const schema = {

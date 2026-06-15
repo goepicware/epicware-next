@@ -17,7 +17,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 export const metadata: Metadata = {
   title: "Local SEO & Reputation Management Platform for SMBs | Epicware",
   description:
-    "Singapore's #1 Local SEO & Reputation Management platform for SMBs. Rank higher on Google Maps, generate more reviews, and remove bad ones — all in one dashboard. Serving SG, MY, UAE, UK, US.",
+    "Singapore's #1 Local SEO & Reputation Management platform for SMBs. Rank higher on Google Maps, generate more reviews, and remove bad ones — all in one dashboard.",
   openGraph: {
     title: "Local SEO & Reputation Management Platform for SMBs | Epicware",
     description:
