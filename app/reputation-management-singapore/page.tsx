@@ -91,7 +91,7 @@ export default function ReputationManagementPage() {
             Epicware&apos;s platform generates reviews, responds with AI, and removes the ones that shouldn&apos;t be there — all from one dashboard.
           </>
         }
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Get Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "500+ Outlets Managed",

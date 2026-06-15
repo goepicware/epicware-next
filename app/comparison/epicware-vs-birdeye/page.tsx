@@ -50,7 +50,7 @@ export default function Page() {
       competitorSummary="Birdeye is a US-based reputation management platform with strong SMS and email review generation, AI responses, and broad CRM integrations. Primarily designed for the US market, with limited adaptation for Singapore-specific channels and local SEO requirements."
       features={features}
       verdict={
-        <p>Birdeye is a capable platform for US businesses. For Singapore SMBs, Epicware&apos;s advantages are meaningful: WhatsApp is Singapore&apos;s dominant messaging channel (Birdeye uses SMS), bad review removal is productised (Birdeye doesn&apos;t offer it), and the GBP optimisation is built for Singapore&apos;s hyperlocal environment. See <a href="/pricing">pricing</a> or <a href="/book-demo">book a free demo</a>.</p>
+        <p>Birdeye is a capable platform for US businesses. For Singapore SMBs, Epicware&apos;s advantages are meaningful: WhatsApp is Singapore&apos;s dominant messaging channel (Birdeye uses SMS), bad review removal is productised (Birdeye doesn&apos;t offer it), and the GBP optimisation is built for Singapore&apos;s hyperlocal environment. See <a href="/pricing">pricing</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
     />
   );

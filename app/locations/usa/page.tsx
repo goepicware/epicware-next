@@ -83,7 +83,7 @@ export default function USAPage() {
         badge="EPICWARE · UNITED STATES"
         h1="Local SEO & Reputation Management for US SMBs"
         subtitle="Epicware manages Google Business Profiles, review campaigns, and bad review removal for US businesses — the same platform trusted by 500+ outlets across Singapore, Malaysia, and the UAE."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "US Market Ready",
@@ -194,7 +194,7 @@ export default function USAPage() {
             </Link>
             . Ready to start?{" "}
             <Link
-              href="/book-demo"
+              href="/book-demo#form"
               className="text-primary font-medium hover:underline"
             >
               Book a free demo

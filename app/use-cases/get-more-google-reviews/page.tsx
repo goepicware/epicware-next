@@ -76,7 +76,7 @@ export default function GetMoreGoogleReviewsPage() {
         badge="GET MORE REVIEWS · SINGAPORE"
         h1="Get More Google Reviews for Your Singapore Business — Automated, Not Manual"
         subtitle="Most Singapore SMBs get reviews by accident — a happy customer who remembered. Epicware's automated review campaigns turn every satisfied customer into a reviewer. 15–30% conversion rate on WhatsApp requests."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "15-30% WhatsApp Conversion",
@@ -172,7 +172,7 @@ export default function GetMoreGoogleReviewsPage() {
               size="lg"
               className="bg-foreground hover:bg-foreground/90 text-background h-14 px-8 rounded-full font-semibold text-base group"
             >
-              <Link href="/book-demo" className="flex items-center gap-2">
+              <Link href="/book-demo#form" className="flex items-center gap-2">
                 Book a Free Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>

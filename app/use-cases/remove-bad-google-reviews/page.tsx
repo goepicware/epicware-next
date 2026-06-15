@@ -85,7 +85,7 @@ export default function RemoveBadGoogleReviewsPage() {
         badge="REMOVE BAD REVIEWS · SINGAPORE"
         h1="How to Remove Bad Google Reviews From Your Singapore Business"
         subtitle="Not every negative review deserves to be there. Fake reviews from competitors, policy-violating attacks, and reviews from people who never visited can all be removed. Epicware handles the entire removal process — you pay $200 only if the review comes down."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "$200/Review · Pay on Success",
@@ -192,7 +192,7 @@ export default function RemoveBadGoogleReviewsPage() {
               size="lg"
               className="rounded-full bg-transparent border border-foreground/30 text-foreground hover:bg-muted h-14 px-8 font-semibold text-base"
             >
-              <Link href="/book-demo">Book a Free Demo</Link>
+              <Link href="/book-demo#form">Book a Free Demo</Link>
             </Button>
           </div>
         </div>

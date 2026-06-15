@@ -25,7 +25,7 @@ export default function BacklinkOpportunityFinderPage() {
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <p className="text-muted-foreground text-sm mb-4">
             Want Epicware to build backlinks for your Singapore business?{" "}
-            <Link href="/book-demo" className="text-primary font-medium hover:underline">
+            <Link href="/book-demo#form" className="text-primary font-medium hover:underline">
               Book a strategy call →
             </Link>
           </p>

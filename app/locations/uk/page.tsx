@@ -83,7 +83,7 @@ export default function UKPage() {
         badge="EPICWARE · UNITED KINGDOM"
         h1="Local SEO & Reputation Management for UK SMBs"
         subtitle="Epicware's platform serves UK businesses with the same tools that manage 500+ Singapore outlets — GBP optimisation, review generation, and bad review removal."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "London & UK Market",
@@ -195,7 +195,7 @@ export default function UKPage() {
             </Link>
             . Ready to start?{" "}
             <Link
-              href="/book-demo"
+              href="/book-demo#form"
               className="text-primary font-medium hover:underline"
             >
               Book a free demo

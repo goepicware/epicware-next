@@ -113,7 +113,7 @@ export default function SingaporeHubPage() {
         badge="EPICWARE · SINGAPORE"
         h1="Local SEO & Reputation Management for Singapore SMBs"
         subtitle="Epicware is Singapore-built. Every product, every service, and every case study is built for the Singapore SMB market — not adapted from a US or UK tool."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "Singapore-Built",

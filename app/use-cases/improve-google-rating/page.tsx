@@ -76,7 +76,7 @@ export default function ImproveGoogleRatingPage() {
         badge="IMPROVE GOOGLE RATING · SINGAPORE"
         h1="Improve Your Google Rating in Singapore — The Two-Part Fix"
         subtitle="A rating below 4.0 costs you customers. Epicware improves your Google rating through two simultaneous actions: removing the reviews that shouldn't be there, and generating more positive reviews from your satisfied customers."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "Dual Approach",
@@ -198,7 +198,7 @@ export default function ImproveGoogleRatingPage() {
               size="lg"
               className="bg-foreground hover:bg-foreground/90 text-background h-14 px-8 rounded-full font-semibold text-base group"
             >
-              <Link href="/book-demo" className="flex items-center gap-2">
+              <Link href="/book-demo#form" className="flex items-center gap-2">
                 Book a Free Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>

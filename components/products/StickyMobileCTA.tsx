@@ -9,7 +9,7 @@ interface StickyMobileCTAProps {
 }
 
 export default function StickyMobileCTA({
-  demoHref = "/book-demo",
+  demoHref = "/book-demo#form",
   auditHref = "/audit",
 }: StickyMobileCTAProps) {
   return (

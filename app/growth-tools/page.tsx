@@ -61,7 +61,7 @@ export default function GrowthToolsPage() {
         badge="GROWTH TOOLS · SINGAPORE"
         h1="Growth Tools Singapore — Email Marketing, Social Scheduling & SEO"
         subtitle="Getting found is step one. Keeping customers is step two. Epicware's Growth Tools automate the retention layer — email campaigns, social scheduling, and website SEO — so your business keeps growing after customers find you."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "Email Automation",

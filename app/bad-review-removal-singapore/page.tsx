@@ -69,7 +69,7 @@ export default function BadReviewRemovalSingaporePage() {
         badge="BAD REVIEW REMOVAL · SINGAPORE"
         h1="Bad Review Removal Singapore — $200 Per Review, Pay on Success"
         subtitle="One fake review from a competitor or a disgruntled non-customer can drop your Google rating below 4.0 and cost you thousands in lost business. Epicware removes it. If the review stays up, you pay nothing."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "$200/Review · Pay on Success",

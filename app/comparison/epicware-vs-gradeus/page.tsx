@@ -51,7 +51,7 @@ export default function Page() {
       competitorSummary="Grade.us is a white-label review management platform primarily used by agencies to manage clients' review programs. Individual businesses typically access Grade.us's capabilities through an agency that has purchased the platform and resells access — adding a layer between the business and the tool."
       features={features}
       verdict={
-        <p>Grade.us is a capable review platform but its agency-first model means Singapore SMBs pay an intermediary. Epicware gives direct access to the same capabilities plus bad review removal and Singapore-specific GBP optimisation — without the agency layer. See <a href="/pricing">pricing</a> or <a href="/book-demo">book a free demo</a>.</p>
+        <p>Grade.us is a capable review platform but its agency-first model means Singapore SMBs pay an intermediary. Epicware gives direct access to the same capabilities plus bad review removal and Singapore-specific GBP optimisation — without the agency layer. See <a href="/pricing">pricing</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
     />
   );

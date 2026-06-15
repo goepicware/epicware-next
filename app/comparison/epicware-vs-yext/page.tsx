@@ -50,7 +50,7 @@ export default function Page() {
       competitorSummary="Yext is an enterprise listings management platform that synchronises business data across hundreds of global directories. It's designed for large brands managing hundreds of locations across multiple countries. Its strength is breadth of directory coverage, not deep optimisation of any single channel."
       features={features}
       verdict={
-        <p>Yext is the right tool for enterprise brands managing hundreds of locations across global directories. For Singapore SMBs, Epicware delivers better results on the channel that matters most: Google Maps. See <a href="/local-seo-singapore">local SEO Singapore</a> or <a href="/book-demo">book a free demo</a>.</p>
+        <p>Yext is the right tool for enterprise brands managing hundreds of locations across global directories. For Singapore SMBs, Epicware delivers better results on the channel that matters most: Google Maps. See <a href="/local-seo-singapore">local SEO Singapore</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
     />
   );

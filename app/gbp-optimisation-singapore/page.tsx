@@ -75,7 +75,7 @@ export default function GbpOptimisationSingaporePage() {
         badge="GBP OPTIMISATION · SINGAPORE"
         h1="GBP Optimisation Singapore — Rank Higher on Google Maps"
         subtitle="Your Google Business Profile is the single most important local SEO asset you own. Most Singapore SMBs have profiles that are incomplete, inconsistent, or simply not optimised to rank. Epicware's 19-point audit fixes all of it — automatically."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "19-Point GBP Audit",

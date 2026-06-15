@@ -77,7 +77,7 @@ export default function ResellerPage() {
         h1="Become an Epicware Reseller — Revenue Share for Partners"
         subtitle="Agencies, consultants, and business networks that serve Singapore or Asian SMBs can resell Epicware under their own brand or ours. Tiered revenue share. No inventory. No fulfilment."
         ctaPrimary={{ label: "Apply to Become a Reseller", href: "/contact" }}
-        ctaSecondary={{ label: "Book a Partner Demo", href: "/book-demo" }}
+        ctaSecondary={{ label: "Book a Partner Demo", href: "/book-demo#form" }}
         trustSignals={["Tiered Revenue Share", "White-Label Available", "Singapore-Built", "Active in SG · MY · UAE · UK · US"]}
         imageSrc="/assets/epicmap-before-after.png"
       />
@@ -189,7 +189,7 @@ export default function ResellerPage() {
               className="inline-flex items-center justify-center h-12 px-7 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-all duration-300 hover:scale-105">
               Apply to Become a Reseller →
             </Link>
-            <Link href="/book-demo"
+            <Link href="/book-demo#form"
               className="inline-flex items-center justify-center h-12 px-7 rounded-full border border-border/60 text-foreground font-medium text-sm hover:border-primary/30 transition-all duration-300">
               Book a Partner Demo
             </Link>

@@ -811,7 +811,7 @@ export default function Post() {
             </p>
           </>
         }
-        ctaHref="/book-demo"
+        ctaHref="/book-demo#form"
         ctaLabel="See Epicware on Your Business"
         ctaContext="Epicware is the only AI local SEO platform on this list. Book a free demo — we'll show your actual GBP data, rank position across Singapore, and review gaps on screen. No slides, no pitch deck."
         relatedPosts={[

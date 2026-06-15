@@ -197,7 +197,7 @@ export default function PricingCards() {
 
                 {/* CTA */}
                 <Link
-                  href="/book-demo"
+                  href="/book-demo#form"
                   className={`inline-flex items-center justify-center gap-2 h-11 px-5 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 mb-6 ${
                     plan.highlight
                       ? "bg-primary text-white hover:bg-primary/90"

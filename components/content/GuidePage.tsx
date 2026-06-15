@@ -22,7 +22,7 @@ export default function GuidePage({ schema, badge, h1, subtitle, trustSignals, i
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <CategoryHero badge={badge} h1={h1} subtitle={subtitle}
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={trustSignals} imageSrc={imageSrc} />
       <article className="py-12 lg:py-16">

@@ -50,7 +50,7 @@ export default function Page() {
       competitorSummary="BrightLocal is a UK-based local SEO platform primarily designed for agencies managing multiple client accounts. Its strengths are in reporting, citation auditing, and white-label client dashboards. It provides data and tracking; execution is typically done by the agency using the data."
       features={features}
       verdict={
-        <p>BrightLocal is a respected tool for agencies managing local SEO reporting. For Singapore SMB owners who want results rather than reports, Epicware&apos;s action-first approach delivers faster outcomes. You don&apos;t need to know what to fix — Epicware fixes it. See <a href="/gbp-optimisation-singapore">GBP Optimisation Singapore</a> or <a href="/book-demo">book a free demo</a>.</p>
+        <p>BrightLocal is a respected tool for agencies managing local SEO reporting. For Singapore SMB owners who want results rather than reports, Epicware&apos;s action-first approach delivers faster outcomes. You don&apos;t need to know what to fix — Epicware fixes it. See <a href="/gbp-optimisation-singapore">GBP Optimisation Singapore</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
     />
   );

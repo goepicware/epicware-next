@@ -67,7 +67,7 @@ export default function AiSearchVisibilitySingaporePage() {
         badge="AI & GEO VISIBILITY · SINGAPORE"
         h1="AI & GEO Visibility Singapore — Get Found by ChatGPT and Google AI"
         subtitle="ChatGPT, Perplexity, and Google's AI Overviews now answer Singapore local searches. If your business isn't optimised for these AI systems, you're invisible to the next generation of search."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "AI Overview Optimisation",

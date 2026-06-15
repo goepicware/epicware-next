@@ -85,7 +85,7 @@ export default function LocalSeoSingaporePage() {
         badge="LOCAL SEO · SINGAPORE"
         h1="Local SEO Singapore — Rank Higher on Google Maps"
         subtitle="Get found when Singapore customers search for businesses like yours. Epicware's Local SEO services cover every factor that determines your Google Maps rank — from GBP optimisation to citation building to competitor analysis."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "19-Point GBP Audit",

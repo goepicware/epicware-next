@@ -27,12 +27,12 @@ function Cell({ val }: { val: string | boolean }) {
   return <span className="text-sm text-muted-foreground">{val}</span>;
 }
 
-export default function ComparisonPage({ schema, badge, h1, subtitle, trustSignals, competitorName, epicwareSummary, competitorSummary, features, verdict, ctaHref = "/book-demo" }: ComparisonPageProps) {
+export default function ComparisonPage({ schema, badge, h1, subtitle, trustSignals, competitorName, epicwareSummary, competitorSummary, features, verdict, ctaHref = "/book-demo#form" }: ComparisonPageProps) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <CategoryHero badge={badge} h1={h1} subtitle={subtitle}
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={trustSignals} imageSrc="/assets/epicmap-before-after.png" />
 

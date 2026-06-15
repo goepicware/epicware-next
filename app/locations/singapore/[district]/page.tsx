@@ -100,7 +100,7 @@ export default async function DistrictPage({
         badge={d.badge}
         h1={d.h1}
         subtitle={d.subtitle}
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "Singapore-Built",

@@ -27,7 +27,7 @@ export default function MidPageCTA() {
             size="lg"
             className="bg-foreground hover:bg-foreground/90 text-background h-13 px-8 rounded-full font-semibold text-base transition-all duration-300 hover:scale-105 group"
           >
-            <Link href="/book-demo" className="flex items-center gap-2">
+            <Link href="/book-demo#form" className="flex items-center gap-2">
               Book a Free Demo
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>

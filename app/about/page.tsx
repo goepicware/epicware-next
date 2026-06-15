@@ -84,7 +84,7 @@ export default function AboutPage() {
             Epicware is a Singapore-built platform for Local SEO and Reputation Management. We help SMBs rank higher on Google Maps, generate more reviews, and remove bad ones — from one dashboard.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/book-demo"
+            <Link href="/book-demo#form"
               className="inline-flex items-center justify-center h-12 px-7 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-all duration-300 hover:scale-105">
               Book a Free Demo →
             </Link>

@@ -76,7 +76,7 @@ export default function RankHigherOnGoogleMapsPage() {
         badge="RANK HIGHER · GOOGLE MAPS"
         h1="Rank Higher on Google Maps in Singapore — See Your Position, Fix the Gaps"
         subtitle="The Google Maps 3-Pack captures over 70% of clicks for local searches. Epicware's EpicMap shows you exactly where you rank across every Singapore district — and fixes the gaps automatically."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "Visual Map Grid Tracking",
@@ -171,7 +171,7 @@ export default function RankHigherOnGoogleMapsPage() {
               size="lg"
               className="bg-foreground hover:bg-foreground/90 text-background h-14 px-8 rounded-full font-semibold text-base group"
             >
-              <Link href="/book-demo" className="flex items-center gap-2">
+              <Link href="/book-demo#form" className="flex items-center gap-2">
                 Book a Free Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>

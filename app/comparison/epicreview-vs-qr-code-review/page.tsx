@@ -51,7 +51,7 @@ export default function Page() {
       competitorSummary="QR code review collection places a scannable code at checkout, on tables, or on receipts. Customers who notice the code and choose to scan it are directed to your Google review form. No personalisation, no timing control, no automation."
       features={features}
       verdict={
-        <p>QR code review collection is passive — it depends on customers taking initiative. For businesses that need consistent review velocity, Epicware&apos;s automated campaigns outperform by 5–10x. For multi-outlet businesses, managing 10 QR codes vs one Epicware dashboard is not comparable. See <a href="/reputation-management-singapore/review-generation">review generation campaigns</a> or <a href="/book-demo">book a free demo</a>.</p>
+        <p>QR code review collection is passive — it depends on customers taking initiative. For businesses that need consistent review velocity, Epicware&apos;s automated campaigns outperform by 5–10x. For multi-outlet businesses, managing 10 QR codes vs one Epicware dashboard is not comparable. See <a href="/reputation-management-singapore/review-generation">review generation campaigns</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
     />
   );

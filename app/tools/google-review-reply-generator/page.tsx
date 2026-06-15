@@ -152,7 +152,7 @@ export default function GoogleReviewReplyGeneratorPage() {
         </div>
       </section>
 
-      <Link href="/book-demo" className="hidden" aria-hidden>Book a demo</Link>
+      <Link href="/book-demo#form" className="hidden" aria-hidden>Book a demo</Link>
       <StickyMobileCTA />
       <div className="h-20 lg:hidden" />
     </>

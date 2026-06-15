@@ -91,7 +91,7 @@ export default function EpicSocialPage() {
             keeps every platform active — so you just approve and move on.
           </>
         }
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
           "Singapore-Built",
@@ -238,7 +238,7 @@ export default function EpicSocialPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/book-demo"
+              href="/book-demo#form"
               className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-foreground text-background font-semibold text-base hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
             >
               Book My Free Demo →

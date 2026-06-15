@@ -57,7 +57,7 @@ export default function IndustryPage({
         badge={badge}
         h1={h1}
         subtitle={subtitle}
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo" }}
+        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={trustSignals}
         imageSrc={imageSrc}
@@ -164,7 +164,7 @@ export default function IndustryPage({
               </Link>{" "}
               or{" "}
               <Link
-                href="/book-demo"
+                href="/book-demo#form"
                 className="text-primary font-medium hover:underline"
               >
                 book a free demo

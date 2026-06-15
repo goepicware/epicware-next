@@ -180,7 +180,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Link
-              href="/book-demo"
+              href="/book-demo#form"
               className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-foreground text-background font-semibold text-base hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
             >
               Book a Free Demo <ArrowRight className="w-5 h-5" />
@@ -360,7 +360,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/book-demo"
+              href="/book-demo#form"
               className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-foreground text-background font-semibold text-base hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
             >
               Book My Free Demo <ArrowRight className="w-5 h-5" />
