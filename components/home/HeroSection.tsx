@@ -120,30 +120,26 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1.0, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="relative h-[420px] lg:h-[520px]">
-            {/* Soft glow behind image — blends into background */}
-            <div className="absolute -inset-8 rounded-[40px] bg-gradient-to-br from-violet-200/50 via-white to-teal-200/50 blur-3xl pointer-events-none" />
+          <div className="relative">
+            {/* Soft ambient glow behind image */}
+            <div className="absolute -inset-10 rounded-[48px] bg-gradient-to-br from-violet-200/50 via-white/40 to-teal-200/50 blur-3xl pointer-events-none" />
 
-            {/* Image block */}
-            <div className="relative h-full w-full overflow-hidden rounded-[32px]">
+            {/* Image wrapper — no border, soft rounded edge */}
+            <div className="relative h-[420px] lg:h-[520px] overflow-hidden rounded-[36px]">
               <Image
                 src="/assets/HeroBanner.png"
                 alt="Singapore SMB owner growing their business with Epicware"
                 width={1672}
                 height={941}
-                className="relative z-10 h-full w-full rounded-[32px] object-cover object-center shadow-2xl"
+                className="h-full w-full object-cover object-center"
                 priority
               />
-              {/* Left-edge fade — blends image into the lavender background */}
-              <div
-                className="absolute inset-0 z-20 rounded-[32px] pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(to right, #fbfbff 0%, rgba(251,251,255,0.35) 18%, transparent 42%)",
-                }}
-              />
-              {/* Hairline border for definition without a hard card edge */}
-              <div className="absolute inset-0 z-20 rounded-[32px] ring-1 ring-black/5 pointer-events-none" />
+
+              {/* Soft fade into page background on the left edge */}
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#fbfbff] via-[#fbfbff]/70 to-transparent" />
+
+              {/* Very subtle overall polish */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-teal-100/10" />
             </div>
           </div>
         </motion.div>
