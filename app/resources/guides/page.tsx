@@ -49,7 +49,7 @@ const GUIDES = [
     title: "Google Maps Ranking Factors Explained — Where Reviews Fit In",
     summary:
       "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence — and exactly how reviews influence visibility, recency, and local search rank.",
-    href: "/resources/blog/google-maps-ranking-factors",
+    href: "/blog/google-maps-ranking-factors",
     readTime: "6 min",
     cta: "Read article →",
   },

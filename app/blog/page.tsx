@@ -29,7 +29,7 @@ const posts = [
     title: "SEO vs Local SEO: The Difference That Could Be Costing You Walk-In Customers",
     summary:
       "Traffic went up but calls didn't? You might be playing the wrong game. Here's the distinction between SEO and Local SEO — and which one Singapore SMBs should prioritise.",
-    href: "/resources/blog/seo-vs-local-seo",
+    href: "/blog/seo-vs-local-seo",
     category: "LOCAL SEO",
     date: "Jun 2026",
     readTime: "6 min",
@@ -39,7 +39,7 @@ const posts = [
     title: "10 Best AI Local SEO Agencies in Singapore for 2026 (Ranked)",
     summary:
       "How to choose between Singapore's top AI local SEO agencies and platforms. Ranked by AI capability, review management, GBP expertise, and Singapore track record.",
-    href: "/resources/blog/top-10-ai-local-seo-agencies-singapore-2026",
+    href: "/blog/top-10-ai-local-seo-agencies-singapore-2026",
     category: "LOCAL SEO",
     date: "Jun 2026",
     readTime: "9 min",
@@ -49,7 +49,7 @@ const posts = [
     title: "Fake or Unfair Google Reviews: What Singapore Businesses Can Do",
     summary:
       "Step-by-step guide for dealing with fake, competitor-posted, or policy-violating Google reviews.",
-    href: "/resources/blog/fake-or-unfair-google-reviews-what-to-do",
+    href: "/blog/fake-or-unfair-google-reviews-what-to-do",
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",
     readTime: "6 min",
@@ -59,7 +59,7 @@ const posts = [
     title: "Google Review Policy Explained — What Qualifies for Removal",
     summary:
       "Complete breakdown of Google's review content policies. Know which reviews violate policy and can be removed.",
-    href: "/resources/blog/google-review-policy-explained",
+    href: "/blog/google-review-policy-explained",
     category: "REVIEW POLICY",
     date: "Jun 2026",
     readTime: "5 min",
@@ -69,7 +69,7 @@ const posts = [
     title: "Google Reviews Strategy: 90-Day Framework for Singapore SMBs",
     summary:
       "A structured 90-day framework to build review velocity, protect your rating, and rank higher on Google Maps.",
-    href: "/resources/blog/google-reviews-strategy",
+    href: "/blog/google-reviews-strategy",
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",
     readTime: "8 min",
@@ -79,7 +79,7 @@ const posts = [
     title: "How to Remove Bad Google Reviews From Your Singapore Business",
     summary:
       "Exactly how to remove fake, malicious, or policy-violating Google reviews. Step-by-step process and professional removal service.",
-    href: "/resources/blog/how-to-remove-bad-google-reviews",
+    href: "/blog/how-to-remove-bad-google-reviews",
     category: "BAD REVIEW REMOVAL",
     date: "Jun 2026",
     readTime: "7 min",
@@ -89,7 +89,7 @@ const posts = [
     title: "Google Maps Ranking Factors Explained — Where Reviews Fit In",
     summary:
       "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence.",
-    href: "/resources/blog/google-maps-ranking-factors",
+    href: "/blog/google-maps-ranking-factors",
     category: "LOCAL SEO",
     date: "Jun 2026",
     readTime: "6 min",
@@ -99,7 +99,7 @@ const posts = [
     title: "How to Get More Google Reviews — Ethical Methods That Actually Work",
     summary:
       "A structured framework for increasing Google reviews. WhatsApp templates, timing strategies, and automation options.",
-    href: "/resources/blog/how-to-get-more-google-reviews",
+    href: "/blog/how-to-get-more-google-reviews",
     category: "REVIEW GENERATION",
     date: "Jun 2026",
     readTime: "7 min",
@@ -109,7 +109,7 @@ const posts = [
     title: "Best Time to Ask for a Google Review — Timing Strategies by Industry",
     summary:
       "When to ask for a Google review to maximise response rates. Industry-specific timing windows for restaurants, clinics, and salons.",
-    href: "/resources/blog/best-time-to-ask-for-a-google-review",
+    href: "/blog/best-time-to-ask-for-a-google-review",
     category: "REVIEW GENERATION",
     date: "Jun 2026",
     readTime: "5 min",
@@ -119,7 +119,7 @@ const posts = [
     title: "Google Review Request Templates — WhatsApp, Email & SMS",
     summary:
       "Ready-to-use templates for Google review requests. Tested formats that convert satisfied customers into reviewers.",
-    href: "/resources/blog/google-review-request-templates",
+    href: "/blog/google-review-request-templates",
     category: "REVIEW GENERATION",
     date: "Jun 2026",
     readTime: "5 min",
@@ -129,7 +129,7 @@ const posts = [
     title: "How to Create a Google Review Link and QR Code",
     summary:
       "Step-by-step guide to generate your Google review link and create a QR code for your business.",
-    href: "/resources/blog/how-to-create-google-review-link-qr-code",
+    href: "/blog/how-to-create-google-review-link-qr-code",
     category: "REVIEW GENERATION",
     date: "Jun 2026",
     readTime: "4 min",
@@ -139,7 +139,7 @@ const posts = [
     title: "Should You Respond to Every Google Review? The Answer Is Yes",
     summary:
       "Why responding to every Google review — including positive ones — improves your local SEO rank.",
-    href: "/resources/blog/should-you-respond-to-every-google-review",
+    href: "/blog/should-you-respond-to-every-google-review",
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",
     readTime: "5 min",
@@ -149,7 +149,7 @@ const posts = [
     title: "Review Velocity vs Total Review Count — Which Matters More for Google Maps?",
     summary:
       "Whether Google Maps ranking is driven more by review count or review recency.",
-    href: "/resources/blog/review-velocity-vs-total-review-count",
+    href: "/blog/review-velocity-vs-total-review-count",
     category: "LOCAL SEO",
     date: "Jun 2026",
     readTime: "5 min",
@@ -159,7 +159,7 @@ const posts = [
     title: "Do Keywords in Google Reviews Help Local SEO?",
     summary:
       "Whether keywords in customer reviews affect Google Maps rankings. The nuanced answer.",
-    href: "/resources/blog/do-keywords-in-reviews-help-local-seo",
+    href: "/blog/do-keywords-in-reviews-help-local-seo",
     category: "LOCAL SEO",
     date: "Jun 2026",
     readTime: "5 min",
@@ -168,7 +168,7 @@ const posts = [
   {
     title: "How Many Google Reviews Do You Need to Compete on Google Maps?",
     summary: "Benchmarks for review count by industry and Singapore district.",
-    href: "/resources/blog/how-many-google-reviews-do-you-need-to-compete-locally",
+    href: "/blog/how-many-google-reviews-do-you-need-to-compete-locally",
     category: "LOCAL SEO",
     date: "Jun 2026",
     readTime: "5 min",
@@ -178,7 +178,7 @@ const posts = [
     title: "Can You Incentivise Google Reviews? What the Policy Says",
     summary:
       "Google's policy on incentivised reviews explained. What counts as an incentive and the risks involved.",
-    href: "/resources/blog/can-you-incentivize-google-reviews",
+    href: "/blog/can-you-incentivize-google-reviews",
     category: "REVIEW POLICY",
     date: "Jun 2026",
     readTime: "5 min",
@@ -188,7 +188,7 @@ const posts = [
     title: "Review Gating Explained — What It Is and Why Google Bans It",
     summary:
       "Review gating only directs happy customers to Google reviews. It violates Google policy.",
-    href: "/resources/blog/review-gating-explained",
+    href: "/blog/review-gating-explained",
     category: "REVIEW POLICY",
     date: "Jun 2026",
     readTime: "4 min",
@@ -198,7 +198,7 @@ const posts = [
     title: "Do Photo Reviews Matter for Local SEO?",
     summary:
       "How customer photos in Google reviews affect your local search visibility and click-through rate.",
-    href: "/resources/blog/do-photo-reviews-matter-for-local-seo",
+    href: "/blog/do-photo-reviews-matter-for-local-seo",
     category: "LOCAL SEO",
     date: "Jun 2026",
     readTime: "4 min",
@@ -207,7 +207,7 @@ const posts = [
   {
     title: "How Fast Should You Respond to Google Reviews?",
     summary: "The ideal response time for positive and negative Google reviews.",
-    href: "/resources/blog/how-fast-should-you-respond-to-google-reviews",
+    href: "/blog/how-fast-should-you-respond-to-google-reviews",
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",
     readTime: "3 min",
@@ -217,7 +217,7 @@ const posts = [
     title: "Reviews vs Rating: Which Matters More for Google Maps Rank?",
     summary:
       "Does Google Maps rank favour high review count or high star rating? The research-based answer.",
-    href: "/resources/blog/reviews-vs-rating-what-matters-more",
+    href: "/blog/reviews-vs-rating-what-matters-more",
     category: "LOCAL SEO",
     date: "Jun 2026",
     readTime: "4 min",
@@ -227,7 +227,7 @@ const posts = [
     title: "Customer Feedback System — Private vs Public Reviews",
     summary:
       "How to design a system that captures private feedback and generates public Google reviews without violating policy.",
-    href: "/resources/blog/customer-feedback-system-private-vs-public-reviews",
+    href: "/blog/customer-feedback-system-private-vs-public-reviews",
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",
     readTime: "5 min",
@@ -237,7 +237,7 @@ const posts = [
     title: "Review Management for Singapore SMBs — What It Actually Involves",
     summary:
       "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews.",
-    href: "/resources/blog/review-management-singapore",
+    href: "/blog/review-management-singapore",
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",
     readTime: "5 min",

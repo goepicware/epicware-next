@@ -6,13 +6,13 @@ const PREVIEW_POSTS = [
     category: "Local SEO",
     title: "Google Maps Ranking Factors: The Complete 2026 Guide",
     readTime: "8 min read",
-    href: "/resources/blog/google-maps-ranking-factors",
+    href: "/blog/google-maps-ranking-factors",
   },
   {
     category: "Reviews",
     title: "How to Get More Google Reviews (Without Breaking Policy)",
     readTime: "6 min read",
-    href: "/resources/blog/how-to-get-more-google-reviews",
+    href: "/blog/how-to-get-more-google-reviews",
   },
   {
     category: "Strategy",

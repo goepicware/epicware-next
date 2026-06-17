@@ -30,6 +30,8 @@ const nextConfig: NextConfig = {
       { source: "/audit-lp", destination: "/gbp-optimisation-singapore/gbp-audit", permanent: true },
       { source: "/resources/tools", destination: "/tools", permanent: true },
       { source: "/resources/blog", destination: "/blog", permanent: true },
+      // Blog posts moved from /resources/blog/[slug] → /blog/[slug]
+      { source: "/resources/blog/:slug*", destination: "/blog/:slug*", permanent: true },
       // Old backlink tool URL → new canonical URL
       { source: "/tools/backlink-dashboard", destination: "/tools/backlink-opportunity-finder", permanent: true },
     ];

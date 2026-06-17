@@ -205,9 +205,9 @@ export default function BadReviewRemovalSingaporePage() {
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3">
             {[
               { label: "Complete Removal Guide", href: "/resources/guides/bad-review-removal-guide" },
-              { label: "How to Remove Bad Google Reviews", href: "/resources/blog/how-to-remove-bad-google-reviews" },
-              { label: "Fake or Unfair Reviews: What to Do", href: "/resources/blog/fake-or-unfair-google-reviews-what-to-do" },
-              { label: "Google Review Policy Explained", href: "/resources/blog/google-review-policy-explained" },
+              { label: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
+              { label: "Fake or Unfair Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
+              { label: "Google Review Policy Explained", href: "/blog/google-review-policy-explained" },
             ].map((item) => (
               <Link
                 key={item.href}

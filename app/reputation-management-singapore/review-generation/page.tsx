@@ -82,15 +82,15 @@ export default function ReviewGenerationPage() {
             Reputation Management Singapore
           </Link>{" "}
           suite. Further reading:{" "}
-          <Link href="/resources/blog/how-to-get-more-google-reviews" className="text-primary font-medium hover:underline">
+          <Link href="/blog/how-to-get-more-google-reviews" className="text-primary font-medium hover:underline">
             how to get more Google reviews
           </Link>
           {", "}
-          <Link href="/resources/blog/google-review-request-templates" className="text-primary font-medium hover:underline">
+          <Link href="/blog/google-review-request-templates" className="text-primary font-medium hover:underline">
             review request templates
           </Link>
           {", and "}
-          <Link href="/resources/blog/best-time-to-ask-for-a-google-review" className="text-primary font-medium hover:underline">
+          <Link href="/blog/best-time-to-ask-for-a-google-review" className="text-primary font-medium hover:underline">
             the best time to ask for a review
           </Link>
           .
