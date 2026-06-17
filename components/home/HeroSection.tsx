@@ -131,6 +131,7 @@ export default function HeroSection() {
                 alt="Singapore SMB owner growing their business with Epicware"
                 width={1672}
                 height={941}
+                sizes="(max-width: 1024px) 100vw, 52vw"
                 className="h-full w-full object-cover object-center"
                 priority
               />

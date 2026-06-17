@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/home/HeroSection";
 import UrgencySection from "@/components/home/UrgencySection";
-import SocialProof from "@/components/home/SocialProof";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
-import NoRemovalNoFee from "@/components/home/NoRemovalNoFee";
-import DashboardScreenshot from "@/components/home/DashboardScreenshot";
-import CoreServices from "@/components/home/CoreServices";
-import MidPageCTA from "@/components/home/MidPageCTA";
-import IndustriesGrid from "@/components/home/IndustriesGrid";
-import AboutCredentials from "@/components/home/AboutCredentials";
-import FAQSection from "@/components/home/FAQSection";
-import LocationsStrip from "@/components/home/LocationsStrip";
-import FinalCTA from "@/components/home/FinalCTA";
+
+// Below-fold sections loaded as async chunks to free the main thread for LCP paint
+const SocialProof = dynamic(() => import("@/components/home/SocialProof"));
+const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs"));
+const DashboardScreenshot = dynamic(() => import("@/components/home/DashboardScreenshot"));
+const CoreServices = dynamic(() => import("@/components/home/CoreServices"));
+const NoRemovalNoFee = dynamic(() => import("@/components/home/NoRemovalNoFee"));
+const MidPageCTA = dynamic(() => import("@/components/home/MidPageCTA"));
+const IndustriesGrid = dynamic(() => import("@/components/home/IndustriesGrid"));
+const AboutCredentials = dynamic(() => import("@/components/home/AboutCredentials"));
+const FAQSection = dynamic(() => import("@/components/home/FAQSection"));
+const LocationsStrip = dynamic(() => import("@/components/home/LocationsStrip"));
+const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
 export const metadata: Metadata = {
   title: "AI-Powered Local SEO Agency with Reputation Management Platform | Epicware",

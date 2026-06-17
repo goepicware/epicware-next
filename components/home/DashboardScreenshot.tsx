@@ -71,8 +71,8 @@ export default function DashboardScreenshot() {
                 src={current.image}
                 alt={`${current.name} dashboard screenshot`}
                 fill
+                sizes="(max-width: 1024px) 100vw, 56vw"
                 className="object-contain"
-                priority={active === "epicmap"}
               />
             </div>
 
