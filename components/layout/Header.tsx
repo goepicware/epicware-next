@@ -276,7 +276,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full sm:w-[400px] p-0 border-l-0">
               <nav className="flex flex-col h-full bg-background">
-                <div className="flex-1 p-8 pt-16 space-y-1 overflow-y-auto">
+                <div className="flex-1 p-8 pt-6 space-y-1 overflow-y-auto">
                   {mobileGroups.map(({ key, label, items }) => (
                     <div key={key} className="border-b border-border/30">
                       <button

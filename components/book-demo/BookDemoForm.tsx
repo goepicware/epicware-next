@@ -75,24 +75,20 @@ export default function BookDemoForm() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/send-contact-email`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
-          },
-          body: JSON.stringify({
-            fullName: formData.fullName,
-            phone: formData.phone,
-            email: formData.email,
-            companyName: formData.companyName,
-            industry: formData.industry,
-            interestedIn: formData.interests,
-          }),
-        }
-      );
+      const res = await fetch("/api/book-demo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          phone: formData.phone,
+          email: formData.email,
+          companyName: formData.companyName,
+          industry: formData.industry,
+          revenueRange: formData.revenueRange,
+          outlets: formData.outlets,
+          interestedIn: formData.interests,
+        }),
+      });
       if (!res.ok) throw new Error("Failed");
       setStatus("success");
       setFormData({ fullName: "", phone: "", email: "", companyName: "", industry: "", revenueRange: "", outlets: "", interests: [] });
