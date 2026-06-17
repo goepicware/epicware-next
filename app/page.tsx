@@ -4,7 +4,6 @@ import UrgencySection from "@/components/home/UrgencySection";
 import SocialProof from "@/components/home/SocialProof";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import NoRemovalNoFee from "@/components/home/NoRemovalNoFee";
-import SecondaryCategories from "@/components/home/SecondaryCategories";
 import DashboardScreenshot from "@/components/home/DashboardScreenshot";
 import CoreServices from "@/components/home/CoreServices";
 import MidPageCTA from "@/components/home/MidPageCTA";
@@ -103,19 +102,16 @@ export default function HomePage() {
       {/* 3. Social Proof — review widget (deduplicated, 6 unique) */}
       <SocialProof />
 
-      {/* 4. Why Choose Us — 4 differentiators */}
+      {/* 4. Platform differentiation — 4 premium light cards */}
       <WhyChooseUs />
 
       {/* 5. No Removal No Fee — dark navy guarantee band */}
       <NoRemovalNoFee />
 
-      {/* 6. Platform Modules — 4 category cards */}
-      <SecondaryCategories />
-
-      {/* 7. Dashboard Screenshot — 16:9 placeholder, awaiting real EpicMap asset */}
+      {/* 6. Dashboard Screenshot */}
       <DashboardScreenshot />
 
-      {/* 8. Core Services — Bad Review Removal, GBP Optimisation, Review Management */}
+      {/* 7. Core Services — Bad Review Removal, GBP Optimisation, Review Management */}
       <CoreServices />
 
       {/* 9. Mid-page CTA */}
