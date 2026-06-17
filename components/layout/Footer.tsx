@@ -60,6 +60,7 @@ const FOOTER_LINKS = {
       { href: "/blog", label: "Blog" },
       { href: "/resources/guides", label: "Guides" },
       { href: "/tools", label: "Free Tools" },
+      { href: "/local-growth", label: "Local Growth Platform" },
       { href: "/contact", label: "Contact" },
       { href: "/terms", label: "Terms & Conditions" },
       { href: "/privacy", label: "Privacy Policy" },
