@@ -105,16 +105,16 @@ export default function HomePage() {
       {/* 4. Platform differentiation — 4 premium light cards */}
       <WhyChooseUs />
 
-      {/* 5. No Removal No Fee — dark navy guarantee band */}
-      <NoRemovalNoFee />
-
-      {/* 6. Dashboard Screenshot */}
+      {/* 5. Dashboard Screenshot */}
       <DashboardScreenshot />
 
-      {/* 7. Core Services — Bad Review Removal, GBP Optimisation, Review Management */}
+      {/* 6. Core Services — Bad Review Removal, GBP Optimisation, Review Management */}
       <CoreServices />
 
-      {/* 9. Mid-page CTA */}
+      {/* 7. No Removal No Fee — dark navy guarantee band */}
+      <NoRemovalNoFee />
+
+      {/* 8. Mid-page CTA */}
       <MidPageCTA />
 
       {/* 10. Featured Verticals — 9 industries */}
