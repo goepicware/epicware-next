@@ -8,7 +8,7 @@ const CREDENTIALS = [
   { icon: ShieldCheck, label: "Google Business Profile Partner" },
   { icon: Globe, label: "Active in SG · MY · UAE · UK · US" },
   { icon: Award, label: "Founded by NinjaOS team — $120M GMV exit" },
-  { icon: Users, label: "500+ outlet profiles managed" },
+  { icon: Users, label: "50+ outlet profiles managed" },
 ];
 
 export default function AboutCredentials() {
