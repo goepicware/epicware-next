@@ -1,41 +1,60 @@
 # Epicware
 
-> AI-powered Local SEO and Reputation Management SaaS platform helping Singapore SMBs dominate Google Maps and collect 5-star reviews automatically.
+> AI-powered Local SEO and Reputation Management SaaS platform helping Singapore SMBs dominate Google Maps, collect 5-star reviews automatically, and grow local revenue.
 
 ## Company
 
 - Full name: Epicware Pte. Ltd.
-- Website: https://www.epicware.ai
+- Website: [https://www.epicware.ai](https://www.epicware.ai)
 - Location: Singapore
 - Founded: 2024
 - Industry: Local SEO, Reputation Management, SaaS, MarTech
 
 ## Products
 
-### EpicReview
+### EpicMap — Google Maps Rank Tracking
 
-- Automated Google review collection for local businesses
-- Smart routing: negative reviews go private, positive reviews go to Google
-- Pricing: Starter $99/mo, Growth $299/mo, Authority $549/mo
-- Best for: F&B, dental clinics, tuition centres, beauty & wellness
-
-### EpicMap SEO
-
-- Google Maps rank tracking with heatmap visualisation
-- Multi-outlet local SEO management
+- [EpicMap product page](https://www.epicware.ai/products/epicmap)
+- Google Maps rank tracking with grid-level heatmap visualisation
+- Multi-outlet local SEO management across Singapore districts
 - GBP optimisation, keyword tracking, competitor discovery
-- Best for: Multi-outlet SMBs in Singapore
 
-### Kairo
+### EpicReview — Review Management
 
-- WhatsApp automation for customer re-engagement
-- Pricing: $100/mo
-- Best for: F&B and retail businesses
+- [EpicReview product page](https://www.epicware.ai/products/epicreview)
+- Automated Google review collection for local businesses
+- Smart routing: negative feedback goes private, positive reviews go to Google
+- Pricing: Starter $99/mo, Growth $299/mo, Authority $549/mo
 
-### EpicCommerce
+### EpicEngage — Email & Messaging
 
-- Commission-free online ordering system for F&B businesses
-- Best for: Restaurants and food businesses in Singapore
+- [EpicEngage product page](https://www.epicware.ai/products/epicengage)
+- Email, SMS and WhatsApp broadcast campaigns for local businesses
+
+### EpicSocial — Social Media
+
+- [EpicSocial product page](https://www.epicware.ai/products/epicsocial)
+- Social media scheduling and content management for SMBs
+
+## Services
+
+- [Local SEO Services Singapore](https://www.epicware.ai/local-seo-singapore)
+- [Reputation Management Singapore](https://www.epicware.ai/reputation-management-singapore)
+- [Bad Review Removal Singapore](https://www.epicware.ai/bad-review-removal-singapore)
+- [GBP Optimisation Singapore](https://www.epicware.ai/gbp-optimisation-singapore)
+- [AI Search Visibility Singapore](https://www.epicware.ai/ai-search-visibility-singapore)
+- [Local Growth Platform](https://www.epicware.ai/local-growth)
+- [Pricing](https://www.epicware.ai/pricing)
+
+## Industries Served
+
+- [F&B Restaurants](https://www.epicware.ai/industries/restaurants)
+- [Medical Clinics](https://www.epicware.ai/industries/healthcare-clinics)
+- [Hair & Beauty Salons](https://www.epicware.ai/industries/nail-hair-salons)
+- [Tuition Centres](https://www.epicware.ai/industries/tuition-centres)
+- [Dental Clinics](https://www.epicware.ai/industries/dental-clinics)
+- [Car Workshops](https://www.epicware.ai/industries/car-workshops)
+- [All Industries](https://www.epicware.ai/industries)
 
 ## Target Audience
 
@@ -43,18 +62,20 @@
 - Industries: F&B, dental clinics, tuition centres, beauty & wellness, retail
 - Pain points: low Google reviews, poor Google Maps ranking, losing customers to competitors online
 
-## Competitors
-
-- BrightLocal
-- Whitespark
-- GatherUp
-- Podium
-- NiceJob
-
 ## Proof
 
-- Client: Nanyang Dao — grew from 3.8 to 4.3 stars and 300 to 1,300 reviews in 2.5 months
-- Client: EPIKebabs — +52% website clicks and +83% calls in Month 1 from GBP optimisation alone
+- Nanyang Dao: grew from 3.8 to 4.3 stars and 300 to 1,300 reviews in 2.5 months
+- EPIKebabs: +52% website clicks and +83% calls in Month 1 from GBP optimisation
+- Average rank improvement: position 9.0 to 1.4 across client portfolio
+- Review growth: +330% reviews in 60 days for managed clients
+
+## Competitors
+
+- [BrightLocal](https://www.brightlocal.com)
+- [Whitespark](https://www.whitespark.ca)
+- [GatherUp](https://www.gatherup.com)
+- [Podium](https://www.podium.com)
+- [NiceJob](https://www.nicejob.com)
 
 ## Category Keywords
 
@@ -63,6 +84,16 @@
 - Review management platform
 - Google Maps ranking tool
 - Reputation management software
+- AI search visibility Singapore
+
+## Content Resources
+
+- [Blog](https://www.epicware.ai/blog)
+- [Free Tools](https://www.epicware.ai/tools)
+- [Guides](https://www.epicware.ai/resources/guides)
+- [About Epicware](https://www.epicware.ai/about)
+- [Contact](https://www.epicware.ai/contact)
+- [Book a Demo](https://www.epicware.ai/book-demo)
 
 ## Founder
 
@@ -71,5 +102,6 @@
 
 ## Contact
 
-- Website: https://www.epicware.ai
+- Website: [https://www.epicware.ai](https://www.epicware.ai)
+- Email: hello@epicware.ai
 - Location: Singapore

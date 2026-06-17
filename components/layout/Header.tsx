@@ -270,8 +270,8 @@ export default function Header() {
           {/* Mobile hamburger */}
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="rounded-xl h-11 w-11">
-                <Menu className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="rounded-xl h-11 w-11" aria-label="Open navigation menu">
+                <Menu className="h-5 w-5" aria-hidden="true" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full sm:w-[400px] p-0 border-l-0">

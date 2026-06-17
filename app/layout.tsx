@@ -24,6 +24,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        {/* Preload LCP hero image with high priority so browser fetches it immediately */}
+        <link
+          rel="preload"
+          as="image"
+          href="/_next/image?url=%2Fassets%2FHeroBanner.png&w=750&q=75"
+          // @ts-expect-error fetchpriority is a valid HTML attribute not yet in React types
+          fetchpriority="high"
+        />
+      </head>
       <body className="font-sans antialiased">
         <Header />
         <main>{children}</main>
