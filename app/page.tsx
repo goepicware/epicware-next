@@ -14,11 +14,11 @@ import LocationsStrip from "@/components/home/LocationsStrip";
 import FinalCTA from "@/components/home/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Reputation Management Platform for SMBs | Epicware",
+  title: "AI-Powered Local SEO Agency with Reputation Management Platform | Epicware",
   description:
     "Singapore's #1 Local SEO & Reputation Management platform for SMBs. Rank higher on Google Maps, generate more reviews, and remove bad ones — all in one dashboard.",
   openGraph: {
-    title: "Local SEO & Reputation Management Platform for SMBs | Epicware",
+    title: "AI-Powered Local SEO Agency with Reputation Management Platform | Epicware",
     description:
       "Rank higher on Google Maps, generate more reviews, and remove bad ones — all from one dashboard built for Singapore businesses.",
     url: "https://www.epicware.ai",
