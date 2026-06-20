@@ -102,6 +102,24 @@ export default function ReputationManagementPage() {
         imageSrc="/assets/review-management-illustration.png"
       />
 
+      {/* Overview Video */}
+      <section className="py-10 lg:py-14">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <div className="relative w-full overflow-hidden rounded-2xl shadow-lg aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/Q7-2KGxsqOo?autoplay=1&mute=1&rel=0&modestbranding=1"
+              title="Epicware Reputation Management Overview"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+          <p className="mt-3 text-sm text-muted-foreground text-center">
+            Playing without sound — click the video to watch with audio.
+          </p>
+        </div>
+      </section>
+
       {/* Opening paragraph */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
