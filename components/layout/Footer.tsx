@@ -32,6 +32,7 @@ const FOOTER_LINKS = {
   services: {
     heading: "Services",
     items: [
+      { href: "/audit-landing", label: "Free Local SEO Audit 🎯" },
       { href: "/reputation-management-singapore", label: "Reputation Management" },
       { href: "/local-seo-singapore", label: "Local SEO Services" },
       { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
