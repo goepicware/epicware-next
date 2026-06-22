@@ -43,9 +43,7 @@ export default function HeroSection() {
             className="font-bold text-gray-950 leading-[1.08] tracking-[-0.035em] mb-6"
             style={{ fontSize: "clamp(2.5rem, 4.5vw, 3.75rem)" }}
           >
-            Singapore&apos;s&nbsp;#1
-            <br />
-            Local SEO&nbsp;&amp;
+            Local SEO Agency&nbsp;&amp;
             <br />
             <span
               className="bg-clip-text text-transparent"
@@ -54,10 +52,10 @@ export default function HeroSection() {
                   "linear-gradient(100deg, #7C3AED 0%, #A855F7 40%, #14B8A6 100%)",
               }}
             >
-              Reputation Platform
+              Reputation Management
             </span>
             <br />
-            for&nbsp;SMBs
+            Platform
           </motion.h1>
 
           {/* Subheadline */}
