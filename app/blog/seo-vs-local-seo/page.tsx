@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "SEO vs Local SEO: The Difference That Could Be Costing You Walk-In Customers | Epicware",
+  title: "SEO vs Local SEO: The Difference That Could Be Costing You Walk-In Customers",
   description:
     "SEO and Local SEO are not the same game. If your traffic went up but calls didn't — here's the distinction that explains why, and what Singapore SMBs should prioritise.",
   alternates: { canonical: "https://www.epicware.ai/blog/seo-vs-local-seo" },

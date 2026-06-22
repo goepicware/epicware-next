@@ -6,7 +6,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "EpicEngage — Email Marketing for Singapore SMBs | Epicware",
+  title: "EpicEngage — Email Marketing for Singapore SMBs",
   description:
     "Automated email campaigns that turn one-time customers into regulars. EpicEngage is built for Singapore local businesses — no agency, no retainer.",
   alternates: { canonical: "https://www.epicware.ai/products/epicengage" },

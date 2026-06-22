@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Do Keywords in Google Reviews Help Local SEO? | Epicware",
+  title: "Do Keywords in Google Reviews Help Local SEO?",
   description: "Learn whether keywords mentioned in customer reviews affect Google Maps rankings. The nuanced answer and what it means for your review strategy.",
   alternates: { canonical: "https://www.epicware.ai/blog/do-keywords-in-reviews-help-local-seo" },
   openGraph: {

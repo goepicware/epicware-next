@@ -6,7 +6,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "AI Search Visibility Singapore — GEO & AI Overviews | Epicware",
+  title: "AI Search Visibility Singapore — GEO & AI Overviews",
   description:
     "Get found by ChatGPT, Perplexity, and Google AI Overviews. Epicware optimises Singapore SMBs for the next generation of AI-powered local search.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore" },

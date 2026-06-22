@@ -5,7 +5,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "GBP Optimisation Singapore — 19-Point Audit & Rank Tracking | Epicware",
+  title: "GBP Optimisation Singapore — 19-Point Audit & Rank Tracking",
   description:
     "Complete Google Business Profile optimisation for Singapore SMBs. 19-point audit, weekly AI posts, multi-outlet management. Rank higher on Google Maps.",
   alternates: { canonical: "https://www.epicware.ai/gbp-optimisation-singapore" },

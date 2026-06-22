@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Review Generation Singapore — WhatsApp Automation | Epicware",
+  title: "Review Generation Singapore — WhatsApp Automation",
   description:
     "Turn happy customers into Google reviews automatically. WhatsApp and email review request campaigns timed perfectly for Singapore SMBs.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/review-generation" },

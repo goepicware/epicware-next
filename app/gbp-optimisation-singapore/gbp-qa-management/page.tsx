@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GBP Q&A Management Singapore — Profile Optimisation | Epicware",
+  title: "GBP Q&A Management Singapore — Profile Optimisation",
   description:
     "Seed keyword-rich Q&A, answer public questions, and remove competitor-planted content from your Google Business Profile Q&A section.",
   alternates: { canonical: "https://www.epicware.ai/gbp-optimisation-singapore/gbp-qa-management" },

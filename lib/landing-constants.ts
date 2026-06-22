@@ -12,7 +12,7 @@ export const LANDING = {
     trustLine: "Free. No credit card. No pressure. Results in 24 hours.",
     gridCaption:
       "This is what your Google Maps visibility looks like right now — block by block.",
-    whatsapp: { label: "Prefer to chat? → WhatsApp us", href: "https://wa.me/6500000000" },
+    whatsapp: { label: "Chat on WhatsApp", href: "https://wa.me/6590013157?text=Enquiring%20from%20your%20website%20on%20Local%20SEO" },
   },
 
   education: {
@@ -141,7 +141,7 @@ export const LANDING = {
     sub: "Takes 30 seconds. We'll have your EpicMap grid ready within 24 hours.",
     submitCta: "Send Me My Free Audit →",
     trustMicro: "🔒 Your info is private. No spam. No hard sell.",
-    whatsapp: { label: "Prefer WhatsApp? Chat with us directly →", href: "https://wa.me/6500000000" },
+    whatsapp: { label: "Prefer WhatsApp? Chat with us directly →", href: "https://wa.me/6590013157?text=Enquiring%20from%20your%20website%20on%20Local%20SEO" },
     successMsg: "✅ You're in! We'll have your EpicMap grid ready within 24 hours. Check your WhatsApp.",
     businessTypes: ["F&B / Restaurant", "Medical Clinic", "Beauty Salon", "Tuition Centre", "Car Workshop", "Other"],
   },
@@ -168,7 +168,7 @@ export const LANDING = {
     stakes:
       "Every day you're invisible on Google Maps, a competitor near you is getting that call instead.",
     cta: "Get My Free Local SEO Audit →",
-    whatsapp: { label: "Or message us on WhatsApp →", href: "https://wa.me/6500000000" },
+    whatsapp: { label: "Or message us on WhatsApp →", href: "https://wa.me/6590013157?text=Enquiring%20from%20your%20website%20on%20Local%20SEO" },
     footer: "Epicware · AI-Powered Local SEO · Singapore · epicware.ai",
   },
 } as const;

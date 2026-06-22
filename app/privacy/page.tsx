@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Epicware",
+  title: "Privacy Policy",
   description: "Epicware's Privacy Policy — how we collect, store, and use your data as a Singapore-based Local SEO platform.",
   alternates: { canonical: "https://www.epicware.ai/privacy" },
 };

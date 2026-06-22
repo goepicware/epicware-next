@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Review Gating Explained — What It Is and Why It Violates Google Policy | Epicware",
+  title: "Review Gating Explained — What It Is and Why It Violates Google Policy",
   description: "Review gating is the practice of only directing happy customers to Google reviews. It violates Google policy and can get your profile suspended.",
   alternates: { canonical: "https://www.epicware.ai/blog/review-gating-explained" },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "How Many Google Reviews Do You Need to Compete Locally? | Epicware",
+  title: "How Many Google Reviews Do You Need to Compete Locally?",
   description: "Benchmarks for review count by industry and Singapore district. How many reviews your business needs to appear in the Google Maps 3-Pack.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
   openGraph: {

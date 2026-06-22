@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Citation Building Singapore — Local Directory NAP | Epicware",
+  title: "Citation Building Singapore — Local Directory NAP",
   description:
     "Fix inconsistent business listings across 40+ Singapore directories. NAP consistency is a hidden rank factor most SMBs overlook.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/citation-building" },

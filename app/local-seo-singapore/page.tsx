@@ -6,7 +6,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO Singapore — Rank Higher on Google Maps | Epicware",
+  title: "Local SEO Singapore — Rank Higher on Google Maps",
   description:
     "Epicware's Local SEO platform manages your GBP, tracks rank across Singapore districts, builds citations, and posts on autopilot. Start your free GBP audit.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore" },

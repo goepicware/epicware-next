@@ -5,7 +5,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Reputation Management Services Singapore | Epicware",
+  title: "Local SEO & Reputation Management Services Singapore",
   description:
     "Epicware's full service suite for Singapore SMBs — review management, GBP optimisation, bad review removal, and growth tools. One platform. No agency retainer.",
   alternates: { canonical: "https://www.epicware.ai/services" },

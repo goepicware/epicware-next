@@ -7,7 +7,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Rank Higher on Google Maps in Singapore | Epicware",
+  title: "Rank Higher on Google Maps in Singapore",
   description:
     "Epicware helps Singapore SMBs rank higher on Google Maps through GBP optimisation, review velocity, and rank tracking. See exactly where you rank — and fix it.",
   alternates: {

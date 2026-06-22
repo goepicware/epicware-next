@@ -7,7 +7,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Get More Google Reviews for Your Singapore Business | Epicware",
+  title: "Get More Google Reviews for Your Singapore Business",
   description:
     "Epicware automates Google review generation for Singapore SMBs with WhatsApp and email campaigns timed for maximum conversion. Get more 5-star reviews in 30 days.",
   alternates: {

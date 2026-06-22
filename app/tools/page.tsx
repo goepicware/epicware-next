@@ -5,7 +5,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Free Local SEO Tools for Singapore SMBs | Epicware",
+  title: "Free Local SEO Tools for Singapore SMBs",
   description:
     "Free, practical tools to help you get more Google reviews, visibility, and repeat customers. No signup required.",
   alternates: { canonical: "https://www.epicware.ai/tools" },

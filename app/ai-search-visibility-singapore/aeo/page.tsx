@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "AEO Singapore — Answer Engine Optimisation | Epicware",
+  title: "AEO Singapore — Answer Engine Optimisation",
   description:
     "Structure your online presence so AI assistants recommend your business by name. Answer Engine Optimisation for Singapore SMBs.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore/aeo" },

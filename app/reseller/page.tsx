@@ -5,7 +5,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Epicware Reseller Programme — Partner Revenue Share | Epicware",
+  title: "Epicware Reseller Programme — Partner Revenue Share",
   description: "Become an Epicware reseller. Offer Local SEO, reputation management, and bad review removal under your brand or Epicware's. Tiered revenue share. SG partners welcome.",
   alternates: { canonical: "https://www.epicware.ai/reseller" },
   openGraph: {

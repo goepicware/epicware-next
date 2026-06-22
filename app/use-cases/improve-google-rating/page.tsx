@@ -7,7 +7,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Improve Your Google Rating Singapore — From 3.9 to 4.5+ | Epicware",
+  title: "Improve Your Google Rating Singapore — From 3.9 to 4.5+",
   description:
     "Epicware helps Singapore businesses improve their Google star rating by removing bad reviews and generating more positive ones. Raise your rating above 4.5.",
   alternates: {

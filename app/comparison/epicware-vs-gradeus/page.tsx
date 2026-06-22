@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs Grade.us — Review Management Comparison | Epicware",
+  title: "Epicware vs Grade.us — Review Management Comparison",
   description: "Compare Epicware and Grade.us for review management. Features, pricing, bad review removal, and Singapore market suitability compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-gradeus" },
   openGraph: {

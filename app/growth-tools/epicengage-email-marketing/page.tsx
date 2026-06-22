@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "EpicEngage Email Marketing Singapore — Retention | Epicware",
+  title: "EpicEngage Email Marketing Singapore — Retention",
   description:
     "Automated email campaigns triggered by customer behaviour for Singapore SMBs. Post-visit requests, win-back offers, birthday greetings — all on autopilot.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools/epicengage-email-marketing" },

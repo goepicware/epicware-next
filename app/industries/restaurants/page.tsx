@@ -3,7 +3,7 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for F&B Restaurants Singapore — More Reviews | Epicware",
+  title: "Local SEO for F&B Restaurants Singapore — More Reviews",
   description:
     "Epicware helps Singapore restaurants generate more Google reviews, rank higher on Maps, and remove fake bad reviews. Multi-outlet dashboard for restaurant groups.",
   alternates: {

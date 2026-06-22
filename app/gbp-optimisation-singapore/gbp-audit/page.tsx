@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GBP Audit Singapore — 19-Point Business Profile Audit | Epicware",
+  title: "GBP Audit Singapore — 19-Point Business Profile Audit",
   description:
     "Find every rank factor you're missing. Epicware's 19-point GBP audit scores every element by impact and gives you an impact-ranked fix list.",
   alternates: { canonical: "https://www.epicware.ai/gbp-optimisation-singapore/gbp-audit" },

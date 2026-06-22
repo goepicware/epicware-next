@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Customer Feedback System — Private vs Public Reviews | Epicware",
+  title: "Customer Feedback System — Private vs Public Reviews",
   description: "How to design a customer feedback system that captures private feedback and generates public Google reviews — without violating review gating policy.",
   alternates: { canonical: "https://www.epicware.ai/blog/customer-feedback-system-private-vs-public-reviews" },
   openGraph: {

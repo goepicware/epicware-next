@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Review Management for Singapore SMBs — What It Involves | Epicware",
+  title: "Review Management for Singapore SMBs — What It Involves",
   description: "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews. The practical guide for SMB owners.",
   alternates: { canonical: "https://www.epicware.ai/blog/review-management-singapore" },
   openGraph: {

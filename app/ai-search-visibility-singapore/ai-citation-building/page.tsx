@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "AI Citation Building Singapore — ChatGPT & Perplexity | Epicware",
+  title: "AI Citation Building Singapore — ChatGPT & Perplexity",
   description:
     "Build your business presence on the sources AI systems trust — so you get cited when ChatGPT, Perplexity, and Google AI answer local Singapore questions.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore/ai-citation-building" },

@@ -5,7 +5,7 @@ import BookDemoForm from "@/components/book-demo/BookDemoForm";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Book a Free Strategy Call | Epicware",
+  title: "Book a Free Strategy Call",
   description:
     "Book a free strategy call with Epicware. We'll assess your current growth stage and recommend the most suitable system for your business.",
   alternates: { canonical: "https://www.epicware.ai/book-demo" },

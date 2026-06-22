@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Top 10 AI-Powered Local SEO Agencies in Singapore (2026 Guide) | Epicware",
+  title: "Top 10 AI-Powered Local SEO Agencies in Singapore (2026 Guide)",
   description:
     "Not every agency that claims AI-powered SEO delivers real results. We ranked Singapore's top 10 AI local SEO agencies for 2026 by real performance, AI capabilities, tools, and results-driven strategies.",
   alternates: {

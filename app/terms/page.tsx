@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Epicware",
+  title: "Terms of Service",
   description: "Epicware's Terms of Service — the terms governing use of the Epicware Local SEO and Reputation Management platform.",
   alternates: { canonical: "https://www.epicware.ai/terms" },
 };

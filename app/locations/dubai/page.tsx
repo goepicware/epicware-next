@@ -6,7 +6,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Reputation Management Dubai — Epicware Platform | Epicware",
+  title: "Local SEO & Reputation Management Dubai — Epicware Platform",
   description:
     "Epicware helps Dubai and UAE SMBs rank higher on Google Maps, manage reviews, and remove bad ones. Singapore-built platform for the UAE market.",
   alternates: {

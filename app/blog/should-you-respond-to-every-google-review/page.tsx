@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Should You Respond to Every Google Review? (Short Answer: Yes) | Epicware",
+  title: "Should You Respond to Every Google Review? (Short Answer: Yes)",
   description: "Why responding to every Google review — including positive ones — improves your local SEO rank and converts more profile views into visits.",
   alternates: { canonical: "https://www.epicware.ai/blog/should-you-respond-to-every-google-review" },
   openGraph: {

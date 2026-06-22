@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Do Photo Reviews Matter for Local SEO? | Epicware",
+  title: "Do Photo Reviews Matter for Local SEO?",
   description: "How customer photos in Google reviews affect your local search visibility and click-through rate. The evidence and practical implications.",
   alternates: { canonical: "https://www.epicware.ai/blog/do-photo-reviews-matter-for-local-seo" },
   openGraph: {

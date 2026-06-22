@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs BrightLocal — Local SEO Comparison | Epicware",
+  title: "Epicware vs BrightLocal — Local SEO Comparison",
   description: "Compare Epicware and BrightLocal for Singapore local SEO. GBP optimisation, review management, rank tracking, and bad review removal compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-brightlocal" },
   openGraph: {

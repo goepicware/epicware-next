@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "How to Hire a Local SEO Agency in Singapore (And What to Avoid) | Epicware",
+  title: "How to Hire a Local SEO Agency in Singapore (And What to Avoid)",
   description:
     "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, red flags to avoid, and how to evaluate agencies versus platforms.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-hire-local-seo-agency-singapore" },

@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Google Reviews Singapore — Manage & Generate Reviews | Epicware",
+  title: "Google Reviews Singapore — Manage & Generate Reviews",
   description:
     "Build your Google rating systematically. Review generation, real-time monitoring, and AI responses across all your Singapore outlets.",
   alternates: { canonical: "https://www.epicware.ai/review-management-singapore/google-reviews" },

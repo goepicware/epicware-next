@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GEO Optimisation Singapore — Appear in Google AI Overviews | Epicware",
+  title: "GEO Optimisation Singapore — Appear in Google AI Overviews",
   description:
     "Optimise your content and GBP to appear in Google's AI Overviews for Singapore local searches. Structure your presence for the AI-generated answer panel.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore/geo-optimisation" },
