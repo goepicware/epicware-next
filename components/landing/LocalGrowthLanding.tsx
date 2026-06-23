@@ -645,7 +645,7 @@ function AIWins() {
         </svg>
       ),
       query: "healthy kebab in singapore",
-      cite: "EPIKebabs appears in Google's AI Mode Overview with photo, 4.7★ rating, and click-through",
+      cite: "EPIKebabs cited in Google's AI Overview — named alongside top picks for fresh, preservative-free meat",
       screenshot: "/assets/wins/ai-mode.jpeg",
       badge: "AI Mode",
       hex: "#34A853",
