@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
 
@@ -591,6 +592,7 @@ function AIWins() {
       ),
       query: "top animal hospital in singapore",
       cite: "Our client cited in Google's AI Overview — above the blue links",
+      screenshot: "/assets/wins/ai-overview.png",
       badge: "AI Overview",
       hex: "#4285F4",
       bgHex: "#4285F410",
@@ -609,8 +611,9 @@ function AIWins() {
           </defs>
         </svg>
       ),
-      query: "best animal hospital in singapore",
-      cite: "Client listed by name in Gemini with location, specialities, and why they stand out",
+      query: "best healthy kebab in singapore",
+      cite: "EPIKebabs ranked #1 in Gemini with photo, rating, map — and listed as top macro-friendly pick",
+      screenshot: "/assets/wins/gemini.png",
       badge: "Gemini",
       hex: "#8B5CF6",
       bgHex: "#8B5CF610",
@@ -624,7 +627,8 @@ function AIWins() {
         </svg>
       ),
       query: "best healthy kebab in singapore",
-      cite: "EPIKebabs cited #5 by ChatGPT for keto / strict diet seekers — with specific menu advice",
+      cite: "EPIKebabs cited by ChatGPT for keto / strict diet seekers — with specific menu advice",
+      screenshot: "/assets/wins/chatgpt.jpeg",
       badge: "ChatGPT",
       hex: "#10B981",
       bgHex: "#10B98110",
@@ -641,7 +645,8 @@ function AIWins() {
         </svg>
       ),
       query: "healthy kebab in singapore",
-      cite: "EPIKebabs appears in Google's new AI Mode Overview with photo, 4.7★ rating, and click-through",
+      cite: "EPIKebabs appears in Google's AI Mode Overview with photo, 4.7★ rating, and click-through",
+      screenshot: "/assets/wins/ai-mode.jpeg",
       badge: "AI Mode",
       hex: "#34A853",
       bgHex: "#34A85310",
@@ -675,14 +680,14 @@ function AIWins() {
           {platforms.map((p, i) => (
             <motion.div key={p.name} {...fadeUp(0.07 + i * 0.07)}>
               <div
-                className="h-full rounded-2xl border p-6 flex flex-col gap-4"
+                className="h-full rounded-2xl border p-5 flex flex-col gap-3"
                 style={{ borderColor: p.borderHex, background: p.bgHex }}
               >
                 {/* Header */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center"
+                      className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
                       style={{ background: p.hex + "18", border: `1px solid ${p.hex}25` }}
                     >
                       {p.icon}
@@ -690,7 +695,7 @@ function AIWins() {
                     <span className="text-white/70 text-[0.8rem] font-semibold">{p.name}</span>
                   </div>
                   <span
-                    className="text-[10px] font-bold rounded-full px-2.5 py-1 tracking-wide"
+                    className="text-[10px] font-bold rounded-full px-2.5 py-1 tracking-wide shrink-0"
                     style={{ color: p.hex, background: p.hex + "18", border: `1px solid ${p.hex}30` }}
                   >
                     {p.badge}
@@ -703,6 +708,19 @@ function AIWins() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
                   </svg>
                   <span className="text-white/45 text-[11px] font-mono">{p.query}</span>
+                </div>
+
+                {/* Screenshot embed */}
+                <div className="relative w-full overflow-hidden rounded-xl border border-white/[0.08]" style={{ aspectRatio: "16/9" }}>
+                  <Image
+                    src={p.screenshot}
+                    alt={`${p.name} result for ${p.query}`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                  {/* subtle gradient fade at bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Result */}
@@ -721,59 +739,60 @@ function AIWins() {
 
         {/* GBP Rating improvement card */}
         <motion.div {...fadeUp(0.35)}>
-          <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6">
-            <div className="flex flex-col md:flex-row md:items-center gap-6">
-              {/* Label */}
-              <div className="shrink-0">
-                <p className="text-amber-400/70 text-[10px] font-semibold tracking-widest uppercase mb-1">GBP Reputation Win</p>
-                <p className="text-white/80 text-[0.9rem] font-bold leading-snug max-w-xs">
-                  Negative reviews removed → ratings & trust restored
-                </p>
+          <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+              {/* Screenshot side */}
+              <div className="relative md:w-1/2 h-48 md:h-auto overflow-hidden">
+                <Image
+                  src="/assets/wins/gbp-rating.png"
+                  alt="Beecroft Animal Hospital GBP rating improvement"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/30 pointer-events-none" />
               </div>
 
-              <div className="hidden md:block w-px h-14 bg-white/10 shrink-0" />
-
-              {/* Before/after */}
-              <div className="flex items-center gap-4 flex-wrap">
-                <div className="text-center">
-                  <p className="text-[10px] font-semibold text-red-400 tracking-wider uppercase mb-1">Before</p>
-                  <p className="text-3xl font-bold text-white leading-none">3.8</p>
-                  <div className="flex gap-px mt-1.5 justify-center">
-                    {[1,2,3].map(i => <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
-                    {[4,5].map(i => <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="rgba(255,255,255,0.12)"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
-                  </div>
-                  <p className="text-white/30 text-[10px] mt-1">427 reviews</p>
+              {/* Stats side */}
+              <div className="p-6 flex flex-col gap-4 md:w-1/2">
+                <div>
+                  <p className="text-amber-400/70 text-[10px] font-semibold tracking-widest uppercase mb-1">GBP Reputation Win</p>
+                  <p className="text-white/80 text-[0.9rem] font-bold leading-snug">
+                    Negative reviews removed → ratings & trust restored
+                  </p>
                 </div>
 
-                <svg className="w-6 h-6 text-white/20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-
-                <div className="text-center">
-                  <p className="text-[10px] font-semibold text-emerald-400 tracking-wider uppercase mb-1">After</p>
-                  <p className="text-3xl font-bold text-emerald-300 leading-none">3.9</p>
-                  <div className="flex gap-px mt-1.5 justify-center">
-                    {[1,2,3,4].map(i => <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
-                    {[5].map(i => <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="rgba(255,255,255,0.12)"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
+                <div className="flex items-center gap-4">
+                  <div className="text-center">
+                    <p className="text-[10px] font-semibold text-red-400 tracking-wider uppercase mb-1">Before</p>
+                    <p className="text-3xl font-bold text-white leading-none">3.8</p>
+                    <div className="flex gap-px mt-1.5 justify-center">
+                      {[1,2,3].map(i => <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
+                      {[4,5].map(i => <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="rgba(255,255,255,0.12)"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
+                    </div>
+                    <p className="text-white/30 text-[10px] mt-1">427 reviews</p>
                   </div>
-                  <p className="text-emerald-400/80 text-[10px] mt-1">441 reviews</p>
+                  <svg className="w-5 h-5 text-white/20 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                  <div className="text-center">
+                    <p className="text-[10px] font-semibold text-emerald-400 tracking-wider uppercase mb-1">After</p>
+                    <p className="text-3xl font-bold text-emerald-300 leading-none">3.9</p>
+                    <div className="flex gap-px mt-1.5 justify-center">
+                      {[1,2,3,4].map(i => <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
+                      {[5].map(i => <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="rgba(255,255,255,0.12)"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>)}
+                    </div>
+                    <p className="text-emerald-400/80 text-[10px] mt-1">441 reviews</p>
+                  </div>
                 </div>
 
-                <div className="hidden md:block w-px h-12 bg-white/10 shrink-0" />
-
-                <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    <span className="text-white/55 text-[11px]">Negative reviews successfully removed</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    <span className="text-white/55 text-[11px]">+14 new genuine reviews added</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                    <span className="text-white/55 text-[11px]">Pay $0 if reviews don't come down</span>
-                  </div>
+                <div className="flex flex-col gap-1.5">
+                  {["Negative reviews successfully removed", "+14 new genuine reviews added", "Pay $0 if reviews don't come down"].map((t, i) => (
+                    <div key={t} className="flex items-center gap-2">
+                      <div className={`w-1.5 h-1.5 rounded-full shrink-0 ${i === 2 ? "bg-amber-400" : "bg-emerald-400"}`} />
+                      <span className="text-white/55 text-[11px]">{t}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
