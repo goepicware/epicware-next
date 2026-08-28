@@ -61,7 +61,6 @@ const FOOTER_LINKS = {
       { href: "/reseller", label: "Reseller Programme" },
       { href: "/creators", label: "Become a Creator" },
       { href: "/blog", label: "Blog" },
-      { href: "/blog/why-review-recency-matters-for-local-rankings", label: "↳ Review Recency & Rankings" },
       { href: "/resources/guides", label: "Guides" },
       { href: "/tools", label: "Free Tools" },
       { href: "/local-growth", label: "Local Growth Platform" },
