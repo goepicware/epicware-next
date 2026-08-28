@@ -32,12 +32,13 @@ const FOOTER_LINKS = {
   services: {
     heading: "Services",
     items: [
-      { href: "/audit-landing", label: "Free Local SEO Audit 🎯" },
+      { href: "/free-audit", label: "Free Local SEO Audit 🎯" },
       { href: "/reputation-management-singapore", label: "Reputation Management" },
       { href: "/local-seo-singapore", label: "Local SEO Services" },
       { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
       { href: "/growth-tools", label: "Growth Tools" },
       { href: "/bad-review-removal-singapore", label: "Bad Review Removal ⭐" },
+      { href: "/remove-review", label: "Remove a Bad Review" },
       { href: "/pricing", label: "Pricing" },
     ],
   },
@@ -58,13 +59,25 @@ const FOOTER_LINKS = {
     items: [
       { href: "/about", label: "About" },
       { href: "/reseller", label: "Reseller Programme" },
+      { href: "/creators", label: "Become a Creator" },
       { href: "/blog", label: "Blog" },
+      { href: "/blog/why-review-recency-matters-for-local-rankings", label: "↳ Review Recency & Rankings" },
       { href: "/resources/guides", label: "Guides" },
       { href: "/tools", label: "Free Tools" },
       { href: "/local-growth", label: "Local Growth Platform" },
       { href: "/contact", label: "Contact" },
       { href: "/terms", label: "Terms & Conditions" },
       { href: "/privacy", label: "Privacy Policy" },
+    ],
+  },
+  compare: {
+    heading: "Compare",
+    items: [
+      { href: "/comparison/epicware-vs-birdeye", label: "vs Birdeye" },
+      { href: "/comparison/epicware-vs-brightlocal", label: "vs BrightLocal" },
+      { href: "/comparison/epicware-vs-gradeus", label: "vs Grade.us" },
+      { href: "/comparison/epicware-vs-yext", label: "vs Yext" },
+      { href: "/comparison/epicreview-vs-qr-code-review", label: "vs QR Code Reviews" },
     ],
   },
 };
@@ -117,7 +130,7 @@ export default function Footer() {
 
           {/* Link columns */}
           <div className="lg:col-span-9">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {Object.entries(FOOTER_LINKS).map(([key, col]) => (
                 <div key={key}>
                   <h4 className="text-xs font-bold uppercase tracking-widest text-foreground mb-6">
