@@ -357,8 +357,20 @@ async function generateReport(
     ? `"${kw2}" and "${kw3}" return ${secondKwLevel} competition in your area today`
     : `"${kw2}" returns ${secondKwLevel} competition in your area today`;
 
+  // Mirrors the same 4.0 threshold used by the "Google Rating (4.0+)" health
+  // check above (line ~285) — this opening line was previously hardcoded to
+  // always call the rating "a strong trust signal," even for a 1★ rating,
+  // directly contradicting that check's own "suppresses Map Pack rankings"
+  // verdict on the same report.
+  const ratingLine =
+    snap.reviewCount === 0
+      ? `${leadName}, you don't have any reviews yet — that's the first gap to close.`
+      : snap.rating >= 4.0
+        ? `${leadName}, your ${snap.rating}★ rating across ${snap.reviewCount} reviews is a strong trust signal.`
+        : `${leadName}, your ${snap.rating}★ rating across ${snap.reviewCount} reviews is actively working against you — it's below Google's 4.0 trust threshold and suppresses your Map Pack ranking.`;
+
   const aiSummary =
-    `${leadName}, your ${snap.rating}★ rating across ${snap.reviewCount} reviews is a strong trust signal. ` +
+    `${ratingLine} ` +
     `But for "${kw1}" — your core category term — ${centreRank > 0 ? `you rank #${centreRank} right at ${neighbourhood}` : `you're invisible right at ${neighbourhood}`}, and are invisible at ${invisibleGridPoints} of ${totalGridPoints} grid points across the surrounding area. ` +
     `The business sitting above you — ${comp1TopName} with ${comp1TopReviews} reviews — isn't winning on better service. It's winning on SEO infrastructure built over a longer runway. ` +
     `Meanwhile, ${competitionLine} — that's your next 60 days of growth sitting unclaimed.`;
