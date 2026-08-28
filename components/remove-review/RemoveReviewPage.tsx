@@ -26,7 +26,7 @@ const fadeUp = (delay = 0) => ({
 // Replace each instance with final confirmed copy before launch.
 function Verify({ text }: { text: string }) {
   return (
-    <mark className="not-italic bg-yellow-300 text-yellow-900 text-[11px] font-mono font-bold px-1.5 py-0.5 rounded border border-yellow-500/40 mx-0.5 whitespace-nowrap">
+    <mark className="not-italic bg-yellow-300 text-yellow-900 text-[11px] font-mono font-bold px-1.5 py-0.5 rounded border border-yellow-500/40 mx-0.5 inline-block">
       ⚠ VERIFY: {text}
     </mark>
   );
