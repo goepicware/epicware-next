@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import ChatWidget from "./ChatWidget";
 
 // Routes that render without the global nav/footer
-const STANDALONE_PREFIXES = ["/free-audit", "/audit-landing", "/remove-review"];
+const STANDALONE_PREFIXES = ["/free-audit", "/audit-landing", "/remove-review", "/ai-visibility"];
 
 export default function ClientLayoutWrapper({
   children,
