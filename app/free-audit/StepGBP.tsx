@@ -29,12 +29,11 @@ function isValidGBPUrl(url: string): boolean {
 
 interface Props {
   onConfirm: (snap: GBPSnapshot, placeId: string, websiteUrl: string) => void;
-  initialQuery?: string;
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function StepGBP({ onConfirm, initialQuery }: Props) {
+export default function StepGBP({ onConfirm }: Props) {
   // Maps SDK state
   const [mapsReady, setMapsReady] = useState(false);
   const autocompleteRef = useRef<google.maps.places.AutocompleteService | null>(null);
@@ -79,16 +78,6 @@ export default function StepGBP({ onConfirm, initialQuery }: Props) {
         // Maps failed to load — Path A silently unavailable
       });
   }, []);
-
-  // Prefill the search box from /ai-visibility's ?business= handoff, once the
-  // Places SDK has loaded. Only triggers the search — the user still picks
-  // their business from the autocomplete dropdown, same as manual entry.
-  useEffect(() => {
-    if (mapsReady && initialQuery && initialQuery.trim() && !query) {
-      handleQueryChange(initialQuery);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mapsReady]);
 
   // Debounced autocomplete (Path A)
   const handleQueryChange = useCallback((value: string) => {

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,18 +13,6 @@ import StepKeywords from "./StepKeywords";
 import StepLocation from "./StepLocation";
 import type { GBPSnapshot, EnrichedKeyword } from "./types";
 import { trackEvent } from "@/lib/meta-tracking";
-
-// Matches the declare-global pattern already used in components/home/VideoSection.tsx.
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
-// No Google Ads conversion ID is configured yet — this stays a documented
-// no-op until one is supplied and set as NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID
-// in the environment. Flagged back per the build spec rather than guessed.
-const GOOGLE_ADS_CONVERSION_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID ?? "";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -496,17 +483,6 @@ const STEP_LABELS = ["Business", "Keywords", "Location", "Your Details", "Report
 
 export default function FreeAuditWizard() {
   const [step, setStep] = useState<WizardStep>(1);
-  const searchParams = useSearchParams();
-  const prefillBusiness = searchParams.get("business") ?? "";
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "audit_step_reached", {
-        step,
-        step_label: STEP_LABELS[step - 1],
-      });
-    }
-  }, [step]);
 
   // Step 1
   const [gbpSnapshot, setGbpSnapshot] = useState<GBPSnapshot | null>(null);
@@ -661,12 +637,6 @@ export default function FreeAuditWizard() {
         content_category: report.gbpCategory || undefined,
       },
     });
-
-    // Google Ads conversion — wizard completion (report generated), not
-    // landing-page CTA click. No-op until GOOGLE_ADS_CONVERSION_ID is set.
-    if (typeof window !== "undefined" && window.gtag && GOOGLE_ADS_CONVERSION_ID) {
-      window.gtag("event", "conversion", { send_to: GOOGLE_ADS_CONVERSION_ID });
-    }
 
     // Send report summary email to customer (fire and forget)
     fetch("/api/audit/send-report-email", {
@@ -949,7 +919,7 @@ ${result.enrichedKeywords.length > 0 ? `
       )}
 
       {/* Step 1 */}
-      {step === 1 && <StepGBP onConfirm={handleConfirmBusiness} initialQuery={prefillBusiness} />}
+      {step === 1 && <StepGBP onConfirm={handleConfirmBusiness} />}
 
       {/* Step 2 */}
       {step === 2 && gbpSnapshot && (
