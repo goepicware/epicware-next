@@ -367,7 +367,7 @@ function HowItWorksSection() {
                     <div className="md:hidden absolute left-6 top-12 bottom-0 w-px bg-border/60 -translate-x-1/2" />
                   )}
 
-                  <div className="md:mt-4 pb-8 md:pb-0 flex-1 min-w-0">
+                  <div className="md:mt-4 pb-8 md:pb-0 flex-1 min-w-0 w-full">
                     <h3 className="font-semibold text-foreground mb-2 text-[1.05rem]">
                       {step.title}
                     </h3>
