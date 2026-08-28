@@ -100,9 +100,9 @@ export default function LeadstackForm() {
 
       <div className="space-y-1.5">
         <label htmlFor="ls-phone" className="text-sm font-medium text-foreground">
-          Phone <span className="text-muted-foreground font-normal text-xs">Optional</span>
+          Phone <span className="text-destructive">*</span>
         </label>
-        <input id="ls-phone" name="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+65 9123 4567" className={inputClass} />
+        <input id="ls-phone" name="phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+65 9123 4567" className={inputClass} />
       </div>
 
       <div className="space-y-1.5">
