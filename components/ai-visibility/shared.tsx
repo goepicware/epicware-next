@@ -17,3 +17,42 @@ export function Verify({ text }: { text: string }) {
     </mark>
   );
 }
+
+// Placeholder for a citation/proof screenshot that hasn't been sourced yet.
+// Keeps the Citation Wall / Exhibit layout shippable while specific client
+// screenshots are still being collected — swap for a real <Image> per row
+// once the file lands in public/assets/ai-visibility/.
+export function PhotoPlaceholder({ label, className = "" }: { label: string; className?: string }) {
+  return (
+    <div
+      className={`flex items-center justify-center bg-muted border border-dashed border-border text-center px-3 ${className}`}
+    >
+      <span className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+        ⚠ Screenshot pending — {label}
+      </span>
+    </div>
+  );
+}
+
+// "Verified" stamp badge shared by CitationWall + ExhibitTestimonial. Uses
+// the existing --accent (light teal) token as the closest "muted green"
+// available in the current palette — no new color introduced.
+export function VerifiedStamp({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`inline-flex items-center gap-1 rounded-full border border-accent/60 bg-accent/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground ${className}`}
+    >
+      <svg viewBox="0 0 20 20" fill="none" className="w-3 h-3 text-accent-foreground" aria-hidden="true">
+        <path
+          d="M7.5 10.5l2 2 4-5"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="10" cy="10" r="8.25" stroke="currentColor" strokeWidth="1.4" />
+      </svg>
+      Verified
+    </span>
+  );
+}
