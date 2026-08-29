@@ -2,12 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeUp, PhotoPlaceholder } from "./shared";
+import { fadeUp } from "./shared";
 import { AI_VISIBILITY } from "@/lib/ai-visibility-constants";
-
-// Photo research came up short on an authentic (non-staged) dental/clinic
-// candidate — labeled placeholder instead of a staged stock pick.
-const NO_PHOTO_LABEL = "who-clinic-dental.jpg";
 
 export default function WhoItsFor() {
   const { kicker, heading, lead, verticals } = AI_VISIBILITY.whoItsFor;
@@ -27,23 +23,17 @@ export default function WhoItsFor() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
           {verticals.map((v, i) => (
             <motion.div key={v.label} {...fadeUp(0.05 * i)} className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-card">
-              {v.photo === NO_PHOTO_LABEL ? (
-                <PhotoPlaceholder label={`${v.label} — no authentic candid photo found`} className="h-full" />
-              ) : (
-                <>
-                  <Image
-                    src={`/assets/ai-visibility/${v.photo}`}
-                    alt={v.label}
-                    fill
-                    sizes="(max-width: 1024px) 45vw, 22vw"
-                    className="object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-3">
-                    <p className="text-white text-[13.5px] font-semibold">{v.label}</p>
-                  </div>
-                </>
-              )}
+              <Image
+                src={`/assets/ai-visibility/${v.photo}`}
+                alt={v.label}
+                fill
+                sizes="(max-width: 1024px) 45vw, 22vw"
+                className="object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-3">
+                <p className="text-white text-[13.5px] font-semibold">{v.label}</p>
+              </div>
             </motion.div>
           ))}
         </div>

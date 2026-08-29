@@ -1,5 +1,3 @@
-import { ImageOff } from "lucide-react";
-
 // Shared motion + placeholder helpers for the /ai-visibility landing page.
 
 export const fadeUp = (delay = 0) => ({
@@ -28,21 +26,5 @@ export function PendingFlag({ text }: { text: string }) {
     <span className="inline-block mt-3 text-[11px] font-bold text-luxury-gold border border-dashed border-luxury-gold/50 px-2.5 py-1 rounded-lg">
       {text}
     </span>
-  );
-}
-
-// Clearly labeled placeholder for an image slot with no authentic stock photo
-// available (research came up short on non-staged candidates for this brief
-// rather than forcing a mediocre stock pick — per the build spec's own
-// instruction). Fills the same box a real <Image> would occupy.
-export function PhotoPlaceholder({ label, className = "" }: { label: string; className?: string }) {
-  return (
-    <div
-      className={`flex flex-col items-center justify-center gap-2 border-2 border-dashed border-yellow-400 bg-yellow-50 rounded-2xl p-6 text-center ${className}`}
-    >
-      <ImageOff className="w-6 h-6 text-yellow-600" />
-      <p className="text-xs font-bold text-yellow-800 uppercase tracking-widest">Photo needed</p>
-      <p className="text-xs text-yellow-700 leading-relaxed max-w-[16rem]">{label}</p>
-    </div>
   );
 }
