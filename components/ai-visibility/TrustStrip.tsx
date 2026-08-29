@@ -1,16 +1,29 @@
 "use client";
 
-import { Check } from "lucide-react";
 import { Verify } from "./shared";
 import { AI_VISIBILITY, TODO_AUDIT_COUNT } from "@/lib/ai-visibility-constants";
 
+// Sits directly under the dark hero, continuing the same dark band per the
+// mockup (trust strip and hero read as one continuous zone).
 export default function TrustStrip() {
   return (
-    <div className="border-y border-border/40 bg-muted/30 py-4">
-      <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-2.5 text-sm text-muted-foreground text-center">
-        <Check className="w-3.5 h-3.5 text-primary shrink-0" />
-        {TODO_AUDIT_COUNT ? <span>{TODO_AUDIT_COUNT}</span> : <Verify text="audit count" />}
-        <span>{AI_VISIBILITY.trustStrip.suffix}</span>
+    <div className="relative bg-gradient-to-br from-[#1a0a14] via-[#0d0a1a] to-[#0d0d0d] pb-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-wrap justify-between gap-x-6 gap-y-3 pt-5 border-t border-white/10">
+          <p className="text-[13.5px] text-white/60">
+            {TODO_AUDIT_COUNT ? (
+              <b className="text-white font-bold">{TODO_AUDIT_COUNT}</b>
+            ) : (
+              <Verify text="audit count" />
+            )}{" "}
+            Singapore businesses audited
+          </p>
+          {AI_VISIBILITY.trustStrip.map((item) => (
+            <p key={item.label} className="text-[13.5px] text-white/60">
+              <b className="text-white font-bold">{item.value}</b> {item.label}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );

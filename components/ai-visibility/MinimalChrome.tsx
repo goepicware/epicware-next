@@ -22,9 +22,9 @@ export function MinimalHeader() {
         <a
           href="#audit-form"
           onClick={handleClick}
-          className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-foreground text-background text-sm font-semibold hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
+          className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-luxury-gold text-luxury-gold-foreground text-sm font-bold hover:-translate-y-0.5 transition-transform duration-200"
         >
-          Free Audit
+          Get my audit
         </a>
       </div>
     </header>

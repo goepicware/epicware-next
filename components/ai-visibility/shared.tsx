@@ -14,9 +14,20 @@ export const fadeUp = (delay = 0) => ({
 // local `Verify` component (duplicated here, not imported).
 export function Verify({ text }: { text: string }) {
   return (
-    <mark className="not-italic bg-yellow-300 text-yellow-900 text-[11px] font-mono font-bold px-1.5 py-0.5 rounded border border-yellow-500/40 mx-0.5 whitespace-nowrap">
+    <mark className="not-italic bg-yellow-300 text-yellow-900 text-[11px] font-mono font-bold px-1.5 py-0.5 rounded border border-yellow-500/40 mx-0.5 inline-block">
       ⚠ VERIFY: {text}
     </mark>
+  );
+}
+
+// Small dashed-border tag for copy that's live in draft form but pending
+// confirmation (as opposed to Verify, which marks a value with no copy at
+// all yet). Matches the mockup's .verify-flag on the Guarantee section.
+export function PendingFlag({ text }: { text: string }) {
+  return (
+    <span className="inline-block mt-3 text-[11px] font-bold text-luxury-gold border border-dashed border-luxury-gold/50 px-2.5 py-1 rounded-lg">
+      {text}
+    </span>
   );
 }
 

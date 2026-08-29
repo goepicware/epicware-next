@@ -1,11 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight } from "lucide-react";
 
 // Mobile-only sticky CTA — appears after 25% scroll, hides once the
-// id="audit-form" section is on screen. Scrolls in-page (the form lives on
-// this same page, unlike v1's route link to /free-audit).
+// id="audit-form" section is on screen. Scrolls in-page.
 export default function StickyAuditBar() {
   const [visible, setVisible] = useState(false);
   const [formInView, setFormInView] = useState(false);
@@ -42,17 +40,13 @@ export default function StickyAuditBar() {
 
   return (
     <div className={`fixed bottom-0 inset-x-0 z-50 md:hidden transition-transform duration-300 ${show ? "translate-y-0" : "translate-y-full"}`}>
-      <div className="bg-background/95 backdrop-blur-xl border-t border-border/50 px-4 py-3 flex items-center justify-between gap-3">
-        <div>
-          <p className="text-sm font-bold text-foreground leading-tight">Does your name come up in AI search?</p>
-          <p className="text-xs text-muted-foreground mt-0.5">Free · 60 seconds</p>
-        </div>
+      <div className="bg-gradient-to-br from-[#1a0a14] via-[#0d0a1a] to-[#0d0d0d] px-4 py-3 shadow-[0_-10px_30px_rgba(0,0,0,0.25)]">
         <a
           href="#audit-form"
           onClick={handleClick}
-          className="shrink-0 inline-flex items-center gap-1.5 h-10 px-5 rounded-full bg-foreground text-background text-sm font-semibold hover:bg-foreground/90 transition-colors"
+          className="block text-center bg-luxury-gold text-luxury-gold-foreground py-3.5 rounded-xl font-bold text-[14.5px]"
         >
-          Check Now <ArrowRight className="w-3.5 h-3.5" />
+          Show me my results ↓
         </a>
       </div>
     </div>

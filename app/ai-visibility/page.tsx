@@ -2,17 +2,15 @@ import type { Metadata } from "next";
 import { MinimalHeader, MinimalFooter } from "@/components/ai-visibility/MinimalChrome";
 import Hero from "@/components/ai-visibility/Hero";
 import TrustStrip from "@/components/ai-visibility/TrustStrip";
-import ShiftSection from "@/components/ai-visibility/ShiftSection";
+import ShiftBand from "@/components/ai-visibility/ShiftBand";
 import FeatureGrid from "@/components/ai-visibility/FeatureGrid";
-import SampleReport from "@/components/ai-visibility/SampleReport";
-import Guarantee from "@/components/ai-visibility/Guarantee";
 import WhoItsFor from "@/components/ai-visibility/WhoItsFor";
 import HowItWorks from "@/components/ai-visibility/HowItWorks";
-import ObjectionHandling from "@/components/ai-visibility/ObjectionHandling";
-import ProofSection from "@/components/ai-visibility/ProofSection";
+import ObjectionList from "@/components/ai-visibility/ObjectionList";
+import Guarantee from "@/components/ai-visibility/Guarantee";
 import FinalCTA from "@/components/ai-visibility/FinalCTA";
 import StickyAuditBar from "@/components/ai-visibility/StickyAuditBar";
-import { AI_VISIBILITY, SHOW_PROOF_SECTION } from "@/lib/ai-visibility-constants";
+import { AI_VISIBILITY } from "@/lib/ai-visibility-constants";
 
 export const metadata: Metadata = {
   title: "AI Search Visibility Check Singapore — Free 60-Second Audit",
@@ -44,14 +42,12 @@ export default function AIVisibilityPage() {
       <MinimalHeader />
       <Hero />
       <TrustStrip />
-      <ShiftSection />
+      <ShiftBand />
       <FeatureGrid />
-      <SampleReport />
-      <Guarantee />
       <WhoItsFor />
       <HowItWorks />
-      <ObjectionHandling />
-      {SHOW_PROOF_SECTION && <ProofSection />}
+      <ObjectionList />
+      <Guarantee />
       <FinalCTA />
       <MinimalFooter />
       <StickyAuditBar />

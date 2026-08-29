@@ -100,9 +100,9 @@ export default function LeadstackForm() {
 
       <div className="space-y-1.5">
         <label htmlFor="ls-phone" className="text-sm font-medium text-foreground">
-          Phone <span className="text-destructive">*</span>
+          Phone
         </label>
-        <input id="ls-phone" name="phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+65 9123 4567" className={inputClass} />
+        <input id="ls-phone" name="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+65 9123 4567" className={inputClass} />
       </div>
 
       <div className="space-y-1.5">
@@ -117,9 +117,9 @@ export default function LeadstackForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="inline-flex items-center justify-center gap-2 w-full h-12 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 disabled:opacity-60 transition-all duration-300 hover:scale-[1.01]"
+        className="inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl bg-luxury-gold text-luxury-gold-foreground font-bold text-sm hover:-translate-y-0.5 disabled:opacity-60 disabled:hover:translate-y-0 transition-transform duration-200"
       >
-        {submitting ? "Sending…" : "Send message"}
+        {submitting ? "Sending…" : "Run my free audit →"}
       </button>
 
       <p className="text-center text-xs text-muted-foreground">Free · 60 seconds · No credit card</p>
