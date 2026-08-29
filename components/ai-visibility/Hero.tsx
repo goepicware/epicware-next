@@ -58,11 +58,11 @@ export default function Hero() {
 
           <motion.div {...fadeUp(0.25)} className="hidden lg:block relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)]">
             <Image
-              src="/assets/ai-visibility/hero-owner-phone.jpg"
-              alt="A Singapore small-business owner checking their phone"
+              src="/assets/ai-visibility/hero-chatgpt-search.jpg"
+              alt="A real ChatGPT search for &ldquo;best cafe in Tanjong Pagar&rdquo; recommending a specific business"
               fill
               sizes="460px"
-              className="object-cover"
+              className="object-cover object-top"
               priority
             />
             <div className="absolute left-4 bottom-4 flex items-center gap-2 bg-black/70 backdrop-blur-md text-white px-3.5 py-2.5 rounded-xl text-xs font-semibold">
