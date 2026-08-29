@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeUp } from "./shared";
-import AuditReportMock from "./AuditReportMock";
+import SampleReport from "./SampleReport";
 import { AI_VISIBILITY } from "@/lib/ai-visibility-constants";
 
 export default function FeatureGrid() {
@@ -25,13 +25,13 @@ export default function FeatureGrid() {
           ))}
         </div>
 
-        <motion.div {...fadeUp(0.2)} className="mt-11">
-          <AuditReportMock />
-          <p className="text-xs text-muted-foreground leading-relaxed mt-4 max-w-2xl">
-            {features.reportCaption}{" "}
-            <em className="not-italic text-muted-foreground/70">(Illustrative mock — replaced with your live audit on submission.)</em>
-          </p>
-        </motion.div>
+        <motion.p {...fadeUp(0.15)} className="text-center text-muted-foreground text-[15px] leading-relaxed max-w-2xl mx-auto mt-14 mb-6">
+          {features.reportCaption}
+        </motion.p>
+
+        <div className="max-w-2xl mx-auto">
+          <SampleReport />
+        </div>
       </div>
     </section>
   );

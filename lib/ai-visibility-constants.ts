@@ -13,12 +13,12 @@ export const DEFAULT_HEADLINE_VARIANT: keyof typeof HEADLINE_VARIANTS = "default
 
 export const TODO_AUDIT_COUNT: string | null = null; // e.g. "500+"
 
-// Draft guarantee copy — shown live with a PendingFlag badge until the exact
-// legally-safe wording is confirmed (see Guarantee.tsx). Once confirmed, just
-// edit this text directly and drop the PendingFlag from Guarantee.tsx.
-export const GUARANTEE_DRAFT = {
-  title: "Genuinely free. No strings.",
-  body: "If you want help implementing what the audit finds, book a call. If not, keep the report and do it yourself.",
+// Confirmed real wording — already live in the actual product, not a
+// placeholder (see Guarantee.tsx).
+export const GUARANTEE = {
+  title: "90-Day Top-3 Guarantee",
+  body: "Rank top 3 on Google Maps for 2 of your keywords within 90 days — or we extend free.",
+  sub: "The audit itself costs nothing either way: keep the report and do it yourself, or book a call for help implementing it.",
 };
 
 // No Google Ads conversion ID configured yet — LeadstackForm.tsx reads this
