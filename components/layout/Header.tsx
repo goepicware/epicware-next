@@ -239,6 +239,12 @@ export default function Header() {
             <DesktopDropdown {...NAV.services} />
             <DesktopDropdown {...NAV.solutions} />
             <Link
+              href="/case-studies"
+              className="px-5 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-muted/50"
+            >
+              Case Studies
+            </Link>
+            <Link
               href="/pricing"
               className="px-5 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-muted/50"
             >
@@ -254,7 +260,7 @@ export default function Header() {
               variant="outline"
               className="rounded-full border-foreground/20 text-foreground hover:bg-muted hover:border-foreground/30 h-11 px-5 font-semibold"
             >
-              <Link href="/audit">Free Audit</Link>
+              <Link href="/free-audit">Free Audit</Link>
             </Button>
             <Button
               asChild
@@ -307,6 +313,13 @@ export default function Header() {
                     </div>
                   ))}
                   <Link
+                    href="/case-studies"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-4 text-2xl font-semibold text-foreground/80 hover:text-foreground transition-colors border-b border-border/30"
+                  >
+                    Case Studies
+                  </Link>
+                  <Link
                     href="/pricing"
                     onClick={() => setMobileOpen(false)}
                     className="block py-4 text-2xl font-semibold text-foreground/80 hover:text-foreground transition-colors border-b border-border/30"
@@ -320,7 +333,7 @@ export default function Header() {
                     variant="outline"
                     className="w-full rounded-full border-foreground/20 text-foreground hover:bg-muted h-14 font-semibold text-lg"
                   >
-                    <Link href="/audit" onClick={() => setMobileOpen(false)}>
+                    <Link href="/free-audit" onClick={() => setMobileOpen(false)}>
                       Free Audit
                     </Link>
                   </Button>
