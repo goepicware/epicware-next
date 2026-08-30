@@ -16,13 +16,13 @@ const FOOTER_LINKS = {
   services: {
     heading: "Services",
     items: [
-      { href: "/free-audit", label: "Free Local SEO Audit 🎯" },
-      { href: "/ai-visibility", label: "Free AI Search Audit ✨" },
+      { href: "/free-audit", label: "Free Local SEO Audit" },
+      { href: "/ai-visibility", label: "Free AI Search Audit" },
       { href: "/reputation-management-singapore", label: "Reputation Management" },
       { href: "/local-seo-singapore", label: "Local SEO Services" },
       { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
       { href: "/growth-tools", label: "Growth Tools" },
-      { href: "/bad-review-removal-singapore", label: "Bad Review Removal ⭐" },
+      { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
       { href: "/remove-review", label: "Remove a Bad Review" },
       { href: "/pricing", label: "Pricing" },
     ],
