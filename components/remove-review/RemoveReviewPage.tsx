@@ -322,7 +322,7 @@ function HowItWorksSection() {
           If the review qualifies, we submit a targeted removal request citing the
           specific policy violation — not a generic flag. We escalate through
           Google&apos;s support channels if the first attempt is rejected. Typical
-          turnaround: <Verify text="turnaround time" />.
+          turnaround: within 1 week to 2 months.
         </>
       ),
     },
@@ -333,8 +333,7 @@ function HowItWorksSection() {
         <>
           You pay $200 upfront per review — we file and escalate through Google&apos;s
           process. If it doesn&apos;t come down, you get a full refund. No partial
-          outcomes, no &ldquo;it&apos;s under review forever.&rdquo;{" "}
-          <Verify text="confirm where in the funnel payment is actually collected — this page or a follow-up call/invoice" />
+          outcomes, no &ldquo;it&apos;s under review forever.&rdquo;
         </>
       ),
     },
@@ -540,7 +539,7 @@ const FAQS = [
     a: (
       <>
         Timelines vary depending on the review type and whether escalation is required.
-        Typical turnaround: <Verify text="turnaround time" />. We keep you updated at
+        Typical turnaround: within 1 week to 2 months. We keep you updated at
         each stage rather than leaving you in the dark.
       </>
     ),
