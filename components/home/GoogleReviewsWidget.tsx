@@ -177,6 +177,7 @@ const WIDGET_STYLES = `
 #epic-walloflove .epic-marquee{display:flex;flex-direction:column;gap:16px;overflow:hidden;padding:8px 0}
 #epic-walloflove .epic-marquee-row{display:flex;gap:16px;animation:epic-mq-l 40s linear infinite;width:max-content}
 #epic-walloflove .epic-marquee-row.reverse{animation-name:epic-mq-r}
+#epic-walloflove .epic-marquee-row:hover,#epic-walloflove .epic-marquee-row:focus-within,#epic-walloflove .epic-marquee-row:active{animation-play-state:paused}
 @keyframes epic-mq-l{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes epic-mq-r{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 #epic-walloflove .epic-card{background:#fff;border:1px solid #F3F4F6;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);padding:16px;width:280px;min-width:280px;display:flex;flex-direction:column;gap:10px;flex-shrink:0}

@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeUp, PhotoPlaceholder, VerifiedStamp } from "./shared";
+import { fadeUp, PhotoPlaceholder, VerifiedStamp } from "@/components/ai-visibility/shared";
 import { CITATIONS, type Citation } from "@/lib/ai-visibility-constants";
 
 function scrollToForm(e: React.MouseEvent) {
@@ -11,8 +12,16 @@ function scrollToForm(e: React.MouseEvent) {
   document.getElementById("audit-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-export default function CitationWall() {
+type CitationWallProps = {
+  // Default preserves the original /ai-visibility behavior: scroll to the
+  // in-page "#audit-form" section. Pass a real route (e.g. "/free-audit")
+  // for pages — like the homepage — that don't have that form on-page.
+  ctaHref?: string;
+};
+
+export default function CitationWall({ ctaHref = "#audit-form" }: CitationWallProps) {
   const [active, setActive] = useState<Citation | null>(null);
+  const ctaScrollsInPage = ctaHref.startsWith("#");
 
   return (
     <section className="py-20 lg:py-28 bg-muted/30">
@@ -77,13 +86,22 @@ export default function CitationWall() {
           <p className="text-muted-foreground text-[15px] mb-4">
             Six clients. Six industries. One system — and it keeps a receipt every time it works.
           </p>
-          <a
-            href="#audit-form"
-            onClick={scrollToForm}
-            className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm px-6 py-3 hover:opacity-90 transition-opacity"
-          >
-            See how this looks for your business →
-          </a>
+          {ctaScrollsInPage ? (
+            <a
+              href={ctaHref}
+              onClick={scrollToForm}
+              className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm px-6 py-3 hover:opacity-90 transition-opacity"
+            >
+              See how this looks for your business →
+            </a>
+          ) : (
+            <Link
+              href={ctaHref}
+              className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm px-6 py-3 hover:opacity-90 transition-opacity"
+            >
+              See how this looks for your business →
+            </Link>
+          )}
         </motion.div>
       </div>
 

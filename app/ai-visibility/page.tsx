@@ -4,7 +4,7 @@ import Hero from "@/components/ai-visibility/Hero";
 import TrustStrip from "@/components/ai-visibility/TrustStrip";
 import ShiftBand from "@/components/ai-visibility/ShiftBand";
 import FeatureGrid from "@/components/ai-visibility/FeatureGrid";
-import CitationWall from "@/components/ai-visibility/CitationWall";
+import CitationWall from "@/components/shared/CitationWall";
 import ExhibitTestimonial from "@/components/ai-visibility/ExhibitTestimonial";
 import WhoItsFor from "@/components/ai-visibility/WhoItsFor";
 import HowItWorks from "@/components/ai-visibility/HowItWorks";

@@ -4,7 +4,10 @@ import HeroSection from "@/components/home/HeroSection";
 import UrgencySection from "@/components/home/UrgencySection";
 
 // Below-fold sections loaded as async chunks to free the main thread for LCP paint
+const VideoSection = dynamic(() => import("@/components/home/VideoSection"));
+const LocalGrowthWorkflowSection = dynamic(() => import("@/components/home/LocalGrowthWorkflowSection"));
 const SocialProof = dynamic(() => import("@/components/home/SocialProof"));
+const CitationWall = dynamic(() => import("@/components/shared/CitationWall"));
 const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs"));
 const DashboardScreenshot = dynamic(() => import("@/components/home/DashboardScreenshot"));
 const CoreServices = dynamic(() => import("@/components/home/CoreServices"));
@@ -17,17 +20,17 @@ const LocationsStrip = dynamic(() => import("@/components/home/LocationsStrip"))
 const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
 export const metadata: Metadata = {
-  title: "Local SEO Agency & Reputation Management Singapore",
+  title: "AI-Powered Local SEO Agency with Reputation Management Platform",
   description:
-    "Rank higher on Google Maps, build 5-star reviews, and remove fake ones. Epicware is Singapore's AI-powered local SEO Agency & reputation management platform.",
+    "Rank higher on Google Maps, build 5-star reviews, and remove fake ones. Epicware is Singapore's AI-powered local SEO & reputation management platform.",
   openGraph: {
-    title: "Local SEO Agency & Reputation Management Singapore | Epicware",
+    title: "AI-Powered Local SEO Agency with Reputation Management Platform | Epicware",
     description:
-      "Rank higher on Google Maps, build 5-star reviews, and remove fake ones. Epicware is Singapore's AI-powered local SEO Agency & reputation management platform.",
+      "Rank higher on Google Maps, build 5-star reviews, and remove fake ones. Epicware is Singapore's AI-powered local SEO & reputation management platform.",
     url: "https://www.epicware.ai",
     images: [
       {
-        url: "https://www.epicware.ai/assets/og-homepage.png",
+        url: "https://www.epicware.ai/assets/HeroBanner.png",
         width: 1200,
         height: 630,
         alt: "Epicware — Local SEO & Reputation Management Platform",
@@ -102,8 +105,17 @@ export default function HomePage() {
       {/* 2. Urgency — after hero, before review grid */}
       <UrgencySection />
 
-      {/* 3. Social Proof — review widget (deduplicated, 6 unique) */}
+      {/* 2b. Social Proof — review widget (broad, familiar proof first) */}
       <SocialProof />
+
+      {/* 2c. Citation Wall — verified AI-search citations (specific proof, right after reviews) */}
+      <CitationWall ctaHref="/free-audit" />
+
+      {/* 3. Click-to-play YouTube demo */}
+      <VideoSection />
+
+      {/* 4. Complete Local Growth Workflow — 5-block guided system */}
+      <LocalGrowthWorkflowSection />
 
       {/* 4. Platform differentiation — 4 premium light cards */}
       <WhyChooseUs />
