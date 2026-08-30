@@ -66,7 +66,7 @@ export default function WorkflowAccordion() {
   const baseId = useId();
 
   return (
-    <div className="bg-white border-y border-gray-100 divide-y divide-gray-100">
+    <div className="bg-white border-y border-gray-100 divide-y divide-gray-100 pb-14 lg:pb-20">
       {STEPS.map((step, i) => {
         const isOpen = openIndex === i;
         const headerId = `${baseId}-header-${i}`;

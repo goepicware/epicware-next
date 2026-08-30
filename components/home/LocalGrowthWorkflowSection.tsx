@@ -64,21 +64,13 @@ function StepBadge({ n, color }: { n: number; color: string }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   SECTION INTRO — eyebrow + headline + stepper
+   SECTION INTRO — eyebrow + headline
 ═══════════════════════════════════════════════════════════════════ */
-const STEPS = [
-  { label: "Google Profile",     color: "bg-violet-500" },
-  { label: "Reviews",            color: "bg-amber-500"  },
-  { label: "Local Rankings",     color: "bg-emerald-500"},
-  { label: "Website + AI",       color: "bg-blue-500"   },
-  { label: "Social Distribution",color: "bg-rose-500"   },
-];
-
 function WorkflowIntro() {
   return (
     <div className="bg-white pt-24 pb-14 lg:pt-32 lg:pb-20">
       <div className="mx-auto max-w-7xl px-6">
-        <motion.div {...fadeIn(0)} className="text-center max-w-3xl mx-auto mb-12">
+        <motion.div {...fadeIn(0)} className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-primary mb-6">
             The Epicware Approach
           </div>
@@ -92,21 +84,6 @@ function WorkflowIntro() {
             From Google Maps optimisation to AI visibility, reviews, content, and social media,
             we build the full discovery system that helps customers find you, trust you, and choose you.
           </p>
-        </motion.div>
-
-        {/* Stepper */}
-        <motion.div {...fadeIn(0.1)} className="flex flex-wrap gap-2.5 justify-center">
-          {STEPS.map((step, i) => (
-            <div
-              key={step.label}
-              className="flex items-center gap-2 rounded-full border border-gray-100 bg-gray-50 px-4 py-2 shadow-sm"
-            >
-              <div className={`w-5 h-5 rounded-full flex items-center justify-center text-white text-[11px] font-bold ${step.color}`}>
-                {i + 1}
-              </div>
-              <span className="text-[0.8rem] font-semibold text-gray-700">{step.label}</span>
-            </div>
-          ))}
         </motion.div>
       </div>
     </div>
