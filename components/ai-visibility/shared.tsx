@@ -34,10 +34,12 @@ export function PhotoPlaceholder({ label, className = "" }: { label: string; cla
   );
 }
 
-// "Verified" stamp badge shared by CitationWall + ExhibitTestimonial. Uses
-// the existing --accent (light teal) token as the closest "muted green"
+// "Verified" stamp badge shared by CitationWall + ExhibitTestimonial (and,
+// with a custom label, RemovalLog on /remove-review — same token, reused
+// rather than a second green badge invented for that page). Uses the
+// existing --accent (light teal) token as the closest "muted green"
 // available in the current palette — no new color introduced.
-export function VerifiedStamp({ className = "" }: { className?: string }) {
+export function VerifiedStamp({ className = "", label = "Verified" }: { className?: string; label?: string }) {
   return (
     <span
       className={`inline-flex items-center gap-1 rounded-full border border-accent/60 bg-accent/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground ${className}`}
@@ -52,7 +54,7 @@ export function VerifiedStamp({ className = "" }: { className?: string }) {
         />
         <circle cx="10" cy="10" r="8.25" stroke="currentColor" strokeWidth="1.4" />
       </svg>
-      Verified
+      {label}
     </span>
   );
 }

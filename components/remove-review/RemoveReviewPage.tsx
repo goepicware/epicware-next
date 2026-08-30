@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import LeadStackForm from "./LeadStackForm";
 import MockReviewCard from "./MockReviewCard";
+import RemovalLog from "./RemovalLog";
 import StickyRemoveBar from "./StickyRemoveBar";
 
 // Scroll-triggered fade-up — same easing used across the site
@@ -131,10 +132,11 @@ function TrustStrip() {
               {s}
             </span>
           ))}
-          {/* ⚠ PLACEHOLDER — replace with verified removal count before launch */}
+          {/* Ties to the documented case in RemovalLog below — not a
+              site-wide estimate, just the number we can actually show. */}
           <span className="flex items-center gap-1.5">
             <Check className="w-3.5 h-3.5 text-primary shrink-0" />
-            <Verify text="removal count" /> reviews removed
+            15+ reviews removed
           </span>
         </div>
       </div>
@@ -678,6 +680,7 @@ export default function RemoveReviewPage() {
       <CredibilitySection />
       <HowItWorksSection />
       <ProofSection />
+      <RemovalLog />
       <PricingSection />
       <RiskReversalSection />
       <FAQSection />
