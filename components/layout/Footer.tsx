@@ -89,7 +89,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-base text-muted-foreground mb-8 leading-relaxed">
-              Local SEO & Reputation Management Platform for Singapore SMBs.
+              Local SEO & Reputation Management Platform for Local SMBs, Everywhere.
             </p>
             <div className="flex flex-col gap-4">
               <a
