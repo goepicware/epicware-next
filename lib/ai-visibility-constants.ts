@@ -26,13 +26,15 @@ export const GUARANTEE = {
 // page so Google's bidding isn't learning from two half-sized data sets.
 export const GOOGLE_ADS_CONVERSION_ID = "AW-18302464942/q1pgCKvf_OocEK7npZdE";
 
-// Citation Wall — six real client AI/SERP citation screenshots. Typed array
-// so a 7th client is a one-line addition, not new JSX. `image: null` means
-// the raw screenshot hasn't been sourced yet — CitationWall.tsx falls back
-// to PhotoPlaceholder for that row until it's dropped into
-// public/assets/ai-visibility/ and this field is filled in.
+// Citation Wall — six real client AI/SERP citation screenshots. Client
+// business names are never used anywhere here (clients asked not to be
+// named) — `id` is a generic vertical-based slug, not an identifier tied to
+// any business. `image: null` means the raw screenshot hasn't been sourced
+// yet — CitationWall.tsx falls back to PhotoPlaceholder for that row until
+// it's dropped into public/assets/ai-visibility/ and this field is filled
+// in.
 export type Citation = {
-  client: string;
+  id: string;
   vertical: string;
   platform: string;
   query: string;
@@ -44,80 +46,79 @@ export type Citation = {
 
 export const CITATIONS: Citation[] = [
   {
-    client: "Fundamental Aesthetic Medical Clinic",
+    id: "case-vertical-aesthetic",
     vertical: "Aesthetic Clinic · Orchard",
     platform: "Google SERP",
     query: "exosome skin booster singapore",
     result: "#1 result",
     date: "Aug 2026",
-    image: "/assets/ai-visibility/citation-fundamental-aesthetic.jpg",
-    imageAlt:
-      "Google search results showing Fundamental Aesthetic Medical Clinic ranked #1 for \"exosome skin booster singapore\"",
+    image: "/assets/ai-visibility/citation-case-vertical-aesthetic.jpg",
+    imageAlt: "Aesthetic clinic ranking #1 for exosome skin booster singapore",
   },
   {
-    client: "Catnap Lair",
+    id: "case-furniture-mattress",
     vertical: "Furniture & Mattress · Ubi",
     platform: "Google SERP + GBP",
     query: "dozi mattress singapore",
     result: "#1 GBP ranking",
     date: "Aug 2026",
-    image: "/assets/ai-visibility/citation-catnap-lair.jpg",
-    imageAlt: "Google Business Profile ranking showing Catnap Lair #1 for \"dozi mattress singapore\"",
+    image: "/assets/ai-visibility/citation-case-furniture-mattress.jpg",
+    imageAlt: "Furniture and mattress retailer ranking #1 on Google Business Profile for dozi mattress singapore",
   },
   {
-    client: "EPIKebabs",
+    id: "case-fnb-kebabs",
     vertical: "F&B · Kebabs",
     platform: "ChatGPT",
     query: "healthy kebab options in Singapore",
     result: "Named a healthy pick",
     date: "Apr 2026",
-    image: "/assets/ai-visibility/citation-epikebabs.jpg",
-    imageAlt: "Raw ChatGPT screenshot naming EPIKebabs a healthy pick for \"healthy kebab options in Singapore\"",
+    image: "/assets/ai-visibility/citation-case-fnb-kebabs.jpg",
+    imageAlt: "Raw ChatGPT screenshot naming a Singapore kebab shop a healthy pick for healthy kebab options in Singapore",
   },
   {
-    client: "Atelier By The Bay",
+    id: "case-fine-dining",
     vertical: "Fine Dining · Changi",
     platform: "AI Overview + SERP",
     query: "fine dining rooftop fusion restaurant in Changi",
     result: "#1 · 31 citations in July",
     date: "Aug 2026",
-    image: "/assets/ai-visibility/citation-atelier-by-the-bay.jpg",
-    imageAlt:
-      "Google AI Overview and search results citing Atelier By The Bay for \"fine dining rooftop fusion restaurant in Changi\"",
+    image: "/assets/ai-visibility/citation-case-fine-dining.jpg",
+    imageAlt: "Fine dining restaurant cited #1 in Google AI Overview for fine dining rooftop fusion restaurant in Changi",
   },
   {
-    client: "Team Salon (VivoCity)",
+    id: "case-hair-salon",
     vertical: "Hair Salon · Aveda",
     platform: "AI Mode",
     query: "organic hair salon harbourfront singapore",
     result: "#1 result",
     date: "Aug 2026",
-    image: "/assets/ai-visibility/citation-team-salon.jpg",
-    imageAlt: "Google AI Mode result ranking Team Salon (VivoCity) #1 for \"organic hair salon harbourfront singapore\"",
+    image: "/assets/ai-visibility/citation-case-hair-salon.jpg",
+    imageAlt: "Hair salon ranking #1 in Google AI Mode for organic hair salon harbourfront singapore",
   },
   {
-    client: "World Technologies",
+    id: "case-industrial-b2b",
     vertical: "Industrial B2B · Water Treatment",
     platform: "AI Overview + SERP",
     query: "RO plant CIP cleaning services singapore",
     result: "#1, held 14 days",
     date: "Aug 2026",
-    image: "/assets/ai-visibility/citation-world-technologies.jpg",
-    imageAlt:
-      "Google AI Overview and search results ranking World Technologies #1 for \"RO plant CIP cleaning services singapore\"",
+    image: "/assets/ai-visibility/citation-case-industrial-b2b.jpg",
+    imageAlt: "Industrial water treatment company ranking #1 in Google AI Overview for RO plant CIP cleaning services singapore",
   },
 ];
 
-// Exhibit — testimonial spotlight. Confirmed with the client: attribute the
-// WhatsApp quote to the business name only, not the personal contact's name.
+// Exhibit — testimonial spotlight. Client asked not to be named (business or
+// contact) — every field here is a generic descriptor, never an identifier.
 export const EXHIBIT = {
   quote:
     "Yes. We are pleased with your hard work. Over here, we received quality leads from the website.",
-  businessName: "Fundamental Aesthetic Medical Clinic",
-  quoteAttribution: "Fundamental Aesthetic Medical Clinic",
+  fileTag: "Aesthetic Clinic · Domination Plan",
+  attributionName: "Aesthetic Clinic Owner",
+  attributionLocation: "Orchard & Hougang, Singapore",
+  avatarInitials: "AC",
   startedLabel: "Started Jun 2026",
-  proofImage: "/assets/ai-visibility/exhibit-fundamental-aesthetic-proof.jpg" as string | null,
-  proofImageAlt: "Fundamental Aesthetic Medical Clinic ranked #1 for \"exosome skin booster singapore\", captured live",
+  proofImage: "/assets/ai-visibility/exhibit-case-vertical-aesthetic-proof.jpg" as string | null,
+  proofImageAlt: "Aesthetic clinic AI citation screenshot",
   proofCaption: "Same clinic, ranking #1 for \"exosome skin booster singapore\" — captured live, Aug 2026.",
   stats: [
     { num: "2", label: "Outlets ranked" },

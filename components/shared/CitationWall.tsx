@@ -42,7 +42,7 @@ export default function CitationWall({ ctaHref = "#audit-form" }: CitationWallPr
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
           {CITATIONS.map((c, i) => (
             <motion.button
-              key={c.client}
+              key={c.id}
               type="button"
               {...fadeUp(0.06 * i)}
               onClick={() => setActive(c)}
@@ -59,7 +59,7 @@ export default function CitationWall({ ctaHref = "#audit-form" }: CitationWallPr
                     loading="lazy"
                   />
                 ) : (
-                  <PhotoPlaceholder label={c.client} className="w-full h-44" />
+                  <PhotoPlaceholder label={c.vertical} className="w-full h-44" />
                 )}
                 <VerifiedStamp className="absolute top-2.5 left-2.5 bg-background/90 backdrop-blur-sm" />
                 <span className="absolute top-2.5 right-2.5 rounded-full bg-background/90 backdrop-blur-sm border border-border px-2 py-0.5 text-[10px] font-display font-semibold uppercase tracking-wider text-foreground">
@@ -71,8 +71,9 @@ export default function CitationWall({ ctaHref = "#audit-form" }: CitationWallPr
                 <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
                   {c.vertical}
                 </div>
-                <div className="font-semibold text-foreground mt-0.5">{c.client}</div>
-                <div className="text-sm text-muted-foreground mt-1 italic">&ldquo;{c.query}&rdquo;</div>
+                <div className="font-display italic text-foreground text-[1.05rem] leading-snug mt-1">
+                  &ldquo;{c.query}&rdquo;
+                </div>
                 <div className="flex items-center justify-between mt-3 pt-3 border-t border-dashed border-border text-[11px] font-semibold uppercase tracking-wide">
                   <span className="text-primary">{c.result}</span>
                   <span className="text-muted-foreground">{c.date}</span>
@@ -130,14 +131,15 @@ export default function CitationWall({ ctaHref = "#audit-form" }: CitationWallPr
                   className="w-full h-auto"
                 />
               ) : (
-                <PhotoPlaceholder label={active.client} className="w-full h-64" />
+                <PhotoPlaceholder label={active.vertical} className="w-full h-64" />
               )}
               <div className="p-5">
                 <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
                   {active.vertical} · {active.platform}
                 </div>
-                <div className="font-semibold text-foreground mt-0.5">{active.client}</div>
-                <div className="text-sm text-muted-foreground mt-1 italic">&ldquo;{active.query}&rdquo;</div>
+                <div className="font-display italic text-foreground text-[1.05rem] leading-snug mt-1">
+                  &ldquo;{active.query}&rdquo;
+                </div>
               </div>
               <button
                 type="button"

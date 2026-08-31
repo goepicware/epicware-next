@@ -6,13 +6,6 @@ import { fadeUp, PhotoPlaceholder } from "./shared";
 import { EXHIBIT } from "@/lib/ai-visibility-constants";
 
 export default function ExhibitTestimonial() {
-  const initials = EXHIBIT.businessName
-    .split(" ")
-    .filter((w) => /^[A-Z]/.test(w))
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("");
-
   return (
     <section className="py-20 lg:py-28">
       <div className="max-w-6xl mx-auto px-6">
@@ -35,6 +28,9 @@ export default function ExhibitTestimonial() {
           {/* Left: quote */}
           <div className="p-8 lg:p-10 flex flex-col gap-6 border-b md:border-b-0 md:border-r border-border/60">
             <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+                {EXHIBIT.fileTag}
+              </span>
               <VerifiedWhatsApp />
             </div>
 
@@ -44,10 +40,11 @@ export default function ExhibitTestimonial() {
 
             <div className="flex items-center gap-3.5 pt-5 border-t border-border/60 mt-auto">
               <div className="w-11 h-11 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0">
-                {initials}
+                {EXHIBIT.avatarInitials}
               </div>
               <div className="min-w-0">
-                <div className="font-semibold text-foreground text-sm">{EXHIBIT.quoteAttribution}</div>
+                <div className="font-semibold text-foreground text-sm">{EXHIBIT.attributionName}</div>
+                <div className="text-xs text-muted-foreground">{EXHIBIT.attributionLocation}</div>
               </div>
               <div className="ml-auto shrink-0 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground border border-border rounded-full px-2.5 py-1">
                 {EXHIBIT.startedLabel}
@@ -67,7 +64,7 @@ export default function ExhibitTestimonial() {
                   className="w-full h-auto"
                 />
               ) : (
-                <PhotoPlaceholder label={EXHIBIT.businessName} className="w-full h-56" />
+                <PhotoPlaceholder label={EXHIBIT.fileTag} className="w-full h-56" />
               )}
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed">↑ {EXHIBIT.proofCaption}</p>
