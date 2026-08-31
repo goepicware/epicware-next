@@ -90,7 +90,7 @@ export default function WorkflowAccordion() {
                   >
                     {step.num}
                   </span>
-                  <span className="flex-1 min-w-0">
+                  <span className="flex-1 min-w-0 text-center">
                     <span className="block font-bold text-gray-950 text-[1.05rem] leading-tight">
                       {step.title}
                     </span>
