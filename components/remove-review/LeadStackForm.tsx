@@ -4,8 +4,19 @@ import { useId, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { trackEvent } from "@/lib/meta-tracking";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 const FORM_ID = "nelz1TUKVkt30P8LxELP";
 const SUBMIT_URL = `https://atomos-one.vercel.app/api/forms/${FORM_ID}/submit`;
+
+// Same "EW | Lead Form Submit" conversion action as /ai-visibility's
+// GOOGLE_ADS_CONVERSION_ID (lib/ai-visibility-constants.ts) — intentionally
+// one shared label across both landing pages, not per-page.
+const GOOGLE_ADS_CONVERSION_LABEL = "AW-18302464942/q1pgCKvf_OocEK7npZdE";
 
 const inputClass =
   "flex h-11 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors";
@@ -61,6 +72,10 @@ export default function LeadStackForm({ id }: LeadStackFormProps) {
       });
       const body: SubmitResponse = await res.json();
       if (!res.ok) throw new Error(body.error || "Submission failed");
+
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "conversion", { send_to: GOOGLE_ADS_CONVERSION_LABEL });
+      }
 
       if (body.redirectUrl) {
         window.location.href = body.redirectUrl;

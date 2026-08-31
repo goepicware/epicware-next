@@ -21,9 +21,10 @@ export const GUARANTEE = {
   sub: "The audit itself costs nothing either way: keep the report and do it yourself, or book a call for help implementing it.",
 };
 
-// No Google Ads conversion ID configured yet — LeadstackForm.tsx reads this
-// and no-ops the conversion call until it's set.
-export const GOOGLE_ADS_CONVERSION_ID = "";
+// Shared "EW | Lead Form Submit" conversion action — same label used by
+// /remove-review's LeadStackForm.tsx, deliberately not split per landing
+// page so Google's bidding isn't learning from two half-sized data sets.
+export const GOOGLE_ADS_CONVERSION_ID = "AW-18302464942/q1pgCKvf_OocEK7npZdE";
 
 // Citation Wall — six real client AI/SERP citation screenshots. Typed array
 // so a 7th client is a one-line addition, not new JSX. `image: null` means

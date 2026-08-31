@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import ChatWidget from "@/components/layout/ChatWidget";
+import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -29,21 +27,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <head>
-        {/* Preload LCP hero image with high priority so browser fetches it immediately */}
-        <link
-          rel="preload"
-          as="image"
-          href="/_next/image?url=%2Fassets%2FHeroBanner.png&w=750&q=75"
-          // @ts-expect-error fetchpriority is a valid HTML attribute not yet in React types
-          fetchpriority="high"
-        />
-      </head>
       <body className="font-sans antialiased">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ChatWidget />
+        {/* Meta Pixel noscript fallback — for browsers with JS disabled */}
+        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
+          <noscript>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              height="1"
+              width="1"
+              style={{ display: "none" }}
+              src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_META_PIXEL_ID}&ev=PageView&noscript=1`}
+              alt=""
+            />
+          </noscript>
+        )}
+        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
         <SpeedInsights />
         {/* Google Analytics */}
         <Script
@@ -56,8 +54,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-7F3MHETL6F');
+            gtag('config', 'AW-18302464942');
           `}
         </Script>
+        {/* Microsoft Clarity */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xtz7ugpkxl");`}
+        </Script>
+        {/* Meta Pixel — base init only; PageView fired via trackPageView() hook for dedup */}
+        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
+          <Script id="meta-pixel" strategy="afterInteractive">
+            {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${process.env.NEXT_PUBLIC_META_PIXEL_ID}');`}
+          </Script>
+        )}
       </body>
     </html>
   );

@@ -3,6 +3,17 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+// Contact Us stays on its own conversion label — mostly organic, lower-intent
+// traffic that shouldn't be mixed into the ad-driven "EW | Lead Form Submit"
+// action Google bids on for /remove-review and /ai-visibility.
+const GOOGLE_ADS_CONVERSION_LABEL = "AW-18302464942/WMlDCNbP7tMcEK7npZdE";
+
 const INDUSTRIES = [
   "F&B/Restaurant",
   "Medical Clinic",
@@ -71,6 +82,11 @@ export default function ContactForm() {
         }
       );
       if (!res.ok) throw new Error("Failed");
+
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "conversion", { send_to: GOOGLE_ADS_CONVERSION_LABEL });
+      }
+
       setStatus("success");
       setForm({ fullName: "", phone: "+65 ", email: "", companyName: "", industry: "", revenueRange: "", outlets: "", interestedIn: "" });
     } catch {
