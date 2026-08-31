@@ -670,15 +670,15 @@ export default function EpiKebabsCaseStudyPage() {
             <p className="text-[15px] text-muted-foreground mb-6">Sample outlet data over the same period:</p>
             <ul className="space-y-2.5 mb-8">
               <li className="text-[15px] leading-relaxed text-foreground/90">
-                <strong className="text-foreground">Aperia Mall:</strong> 1,515 Business Profile interactions
+                <strong className="text-foreground">One outlet:</strong> 1,515 Business Profile interactions
                 (Mar–Jul 2026), with monthly interactions rising steadily month over month
               </li>
               <li className="text-[15px] leading-relaxed text-foreground/90">
-                <strong className="text-foreground">Aperia Mall:</strong> 277 website clicks direct from the
+                <strong className="text-foreground">Same outlet:</strong> 277 website clicks direct from the
                 Business Profile
               </li>
               <li className="text-[15px] leading-relaxed text-foreground/90">
-                <strong className="text-foreground">Sunshine Plaza:</strong> 93 calls generated directly from the
+                <strong className="text-foreground">A second outlet:</strong> 93 calls generated directly from the
                 Business Profile (Mar–Aug 2026), trending upward
               </li>
             </ul>
@@ -687,19 +687,19 @@ export default function EpiKebabsCaseStudyPage() {
                 src="epikebabs-gbp-interactions-aperia.jpg"
                 w={1500}
                 h={817}
-                alt="Google Business Profile interactions chart for EPIKebabs Aperia Mall showing 1,515 interactions"
+                alt="Google Business Profile interactions chart for an EPIKebabs outlet showing 1,515 interactions"
               />
               <Figure
                 src="epikebabs-gbp-website-clicks-aperia.jpg"
                 w={1500}
                 h={814}
-                alt="Google Business Profile website clicks chart for EPIKebabs Aperia Mall showing 277 clicks"
+                alt="Google Business Profile website clicks chart for an EPIKebabs outlet showing 277 clicks"
               />
               <Figure
                 src="epikebabs-gbp-calls-sunshine.jpg"
                 w={1500}
                 h={817}
-                alt="Google Business Profile calls chart for EPIKebabs Sunshine Plaza showing 93 calls"
+                alt="Google Business Profile calls chart for an EPIKebabs outlet showing 93 calls"
               />
             </div>
           </div>
