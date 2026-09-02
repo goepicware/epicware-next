@@ -3,15 +3,43 @@
 import { useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import {
+  isPriceIncreaseLive,
+  PRICE_INCREASES,
+  PRICE_INCREASE_LABEL,
+} from "@/lib/price-increase";
 
-const PLANS = [
+type Feature = string | { label: string; isNew: true };
+
+function NewChip() {
+  return (
+    <span className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full bg-secondary text-white text-[10px] font-bold leading-none tracking-wide align-middle">
+      New
+    </span>
+  );
+}
+
+const PLANS: Array<{
+  name: string;
+  badge: string | null;
+  monthlyPrice: number;
+  annualPrice: number;
+  subtitle: string;
+  outcome: string | null;
+  guarantee: string | null;
+  features: Feature[];
+  note?: string;
+  highlight: boolean;
+  perOutlet: boolean;
+}> = [
   {
     name: "Foundation",
     badge: null,
-    monthlyPrice: 149,
-    annualPrice: 127,
-    subtitle: "Everything to collect reviews and respond automatically.",
-    outcome: null,
+    monthlyPrice: 299,
+    annualPrice: 254,
+    subtitle: "Reviews, local visibility, and social content — fully automated.",
+    outcome:
+      "Better visibility on Google Maps with an active, optimised profile — plus a reliable reputation management process running in the background.",
     guarantee: null,
     features: [
       "4–5 star review collection via QR standee",
@@ -23,6 +51,11 @@ const PLANS = [
       "Wall of Love embeddable widget",
       "Multi-platform dashboard",
       "5,000 emails / month",
+      "Google Business Profile Optimization",
+      "2 SEO-optimised posts per week",
+      "Keyword research",
+      "Competitor keyword research",
+      { label: "AI Social Media Generator & Scheduler", isNew: true },
     ],
     highlight: false,
     perOutlet: false,
@@ -37,8 +70,10 @@ const PLANS = [
     guarantee:
       "Rank Top 3 on Google Maps for 1 tracked keyword within 90 days — or we extend free until achieved.",
     features: [
+      { label: "1x Bad Review Removal/month (worth $200)", isNew: true },
       "Complete GBP audit (80-point) + full optimisation",
       "5 SEO-optimised GBP posts per week",
+      { label: "AI Social Media Generator & Scheduler", isNew: true },
       "Blue Ocean keyword research",
       "Local Maps grid scan",
       "Ranking intelligence dashboard",
@@ -62,14 +97,17 @@ const PLANS = [
     guarantee:
       "Rank Top 3 for 3 tracked keywords + cited by ChatGPT/Gemini within 120 days — or free until achieved.",
     features: [
+      { label: "5x Bad Review Removal/month (worth $1,000)", isNew: true },
       "GEO/AEO AI Citation for 3 tracked keywords/month",
       "20 tracked keywords (full territory intelligence)",
       "10 SEO blog posts per month",
+      { label: "AI Social Media Generator & Scheduler", isNew: true },
       "Website SEO for 20 keywords",
       "GEO Audit",
       "GEO Implementation (content, schema & authority signals for LLM recommendation)",
       "Monthly GEO Monitoring Report",
       "Link building (authority signals)",
+      { label: "20x Backlinks/month", isNew: true },
       "Dedicated growth strategist",
       "Monthly Revenue Impact Report",
     ],
@@ -79,8 +117,8 @@ const PLANS = [
   {
     name: "Full Stack",
     badge: "New",
-    monthlyPrice: 2200,
-    annualPrice: 1870,
+    monthlyPrice: 3800,
+    annualPrice: 3230,
     subtitle:
       "Everything in Domination, plus paid ad management across Meta and Google.",
     outcome:
@@ -88,11 +126,14 @@ const PLANS = [
     guarantee:
       "Top 3 rankings within 120 days + measurable lead flow from ads within 30 days — or we extend free.",
     features: [
+      { label: "5x Bad Review Removal/month (worth $1,000)", isNew: true },
       "Meta (Facebook & Instagram) paid ad management",
       "Google Search & Display ad management",
       "Ad creative strategy + copy (EPIC Framework)",
+      { label: "AI Social Media Generator & Scheduler", isNew: true },
       "Monthly ad performance reporting",
       "Retargeting campaigns (website + review audiences)",
+      { label: "20x Backlinks/month", isNew: true },
       "Ad spend billed separately",
     ],
     note: "Ad spend is billed separately and is not included in the monthly fee.",
@@ -107,9 +148,49 @@ function formatPrice(p: number) {
 
 export default function PricingCards() {
   const [annual, setAnnual] = useState(false);
+  const live = isPriceIncreaseLive();
+
+  // After the cutoff, swap in the new prices so cards update automatically.
+  const effectivePlans = PLANS.map((plan) => {
+    const increase = PRICE_INCREASES[plan.name];
+    if (live && increase) {
+      return { ...plan, monthlyPrice: increase.newMonthly, annualPrice: increase.newAnnual };
+    }
+    return plan;
+  });
 
   return (
     <div>
+      {/* Price-increase notice — auto-hides after Sept 15, 2026 */}
+      {!live && (
+        <div className="mb-8 flex flex-col sm:flex-row items-center justify-center gap-2 rounded-2xl border border-amber-200 bg-amber-50 px-6 py-4 text-center">
+          <div className="flex items-center gap-2 shrink-0">
+            <svg
+              className="w-4 h-4 text-amber-600 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span className="text-sm font-bold text-amber-900">
+              Prices increase {PRICE_INCREASE_LABEL}
+            </span>
+          </div>
+          <span className="hidden sm:inline text-amber-400">—</span>
+          <span className="text-sm text-amber-800">
+            Authority rises to <strong>$899/mo</strong>, Domination to{" "}
+            <strong>$1,800/mo</strong>.{" "}
+            <strong>Lock in current rates by booking today.</strong>
+          </span>
+        </div>
+      )}
+
       {/* Toggle */}
       <div className="flex items-center justify-center gap-4 mb-10">
         <span
@@ -138,7 +219,7 @@ export default function PricingCards() {
 
       {/* Plan grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
-        {PLANS.map((plan) => (
+        {effectivePlans.map((plan) => (
           <div key={plan.name} className="relative">
             {/* Badge */}
             {plan.badge && (
@@ -179,6 +260,19 @@ export default function PricingCards() {
                   </span>
                   <span className="text-muted-foreground text-sm ml-1">/mo</span>
                 </div>
+
+                {/* Future price line — only shown before the cutoff, only on affected plans */}
+                {!live && PRICE_INCREASES[plan.name] && (
+                  <p className="text-xs font-medium text-amber-600 mb-1">
+                    ${formatPrice(
+                      annual
+                        ? PRICE_INCREASES[plan.name].newAnnual
+                        : PRICE_INCREASES[plan.name].newMonthly
+                    )}
+                    /mo from {PRICE_INCREASE_LABEL}
+                  </p>
+                )}
+
                 {plan.perOutlet && (
                   <p className="text-xs text-muted-foreground mb-1">
                     Includes 1 outlet · +$99/additional outlet
@@ -209,14 +303,19 @@ export default function PricingCards() {
 
                 {/* Features */}
                 <ul className="space-y-2.5 flex-1">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground/80 leading-snug">
-                        {f}
-                      </span>
-                    </li>
-                  ))}
+                  {plan.features.map((f) => {
+                    const label = typeof f === "string" ? f : f.label;
+                    const isNew = typeof f === "object" && f.isNew;
+                    return (
+                      <li key={label} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground/80 leading-snug">
+                          {label}
+                          {isNew && <NewChip />}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
 
                 {/* Outcome + Guarantee */}
