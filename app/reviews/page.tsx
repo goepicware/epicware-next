@@ -48,30 +48,58 @@ export const metadata: Metadata = {
 };
 
 type ReviewItem = {
-  text: string;
+  name: string;
+  isLocalGuide?: boolean;
+  when: string;
+  text?: string;
   tag?: string;
   featured?: boolean;
+  starOnly?: boolean;
 };
 
 const REVIEWS: ReviewItem[] = [
   {
-    text: "We recently worked with this team to build our restaurant delivery website, and the experience was excellent from start to finish. They were easy to communicate with, understood exactly what we needed, and handled everything professionally and efficiently. The final website turned out clean, user-friendly, and perfect for our delivery operations.",
-    tag: "F&B · Delivery Website",
+    name: "Sy Lilin",
+    when: "7 days ago",
+    text: "We engaged Epicware for our medical aesthetic clinic and it ranked within top 3 within 1–2 months, exceeded our expectations. They are knowledgeable for SEO and google ranking. Thank u.",
+    tag: "Medical Aesthetic Clinic",
   },
   {
-    text: "Fast, intuitive, and easy to use on any device. Since launching with Epicware, ordering has become noticeably more seamless.",
-    tag: "F&B · Online Ordering",
+    name: "Vasan Rajenthiran",
+    when: "4 weeks ago",
+    starOnly: true,
   },
   {
+    name: "Simon Chan",
+    isLocalGuide: true,
+    when: "16 weeks ago",
+    text: "Great follow up! Love the professionalism of these guys!",
+    tag: "SMB Client",
+  },
+  {
+    name: "James H",
+    when: "21 weeks ago",
     text: "Honestly didn't expect results this fast. Within the first month our Google Business Profile was generating significantly more calls and website clicks across all our outlets — and we hadn't even started on review management yet.",
     tag: "Multi-Outlet Business",
   },
   {
-    text: "Great follow up! Love the professionalism of these guys.",
-    tag: "SMB Client",
+    name: "siva bala",
+    isLocalGuide: true,
+    when: "21 weeks ago",
+    text: "We recently worked with this website creation team to build our restaurant delivery website, and the experience was excellent from start to finish. They were easy to communicate with, understood exactly what we needed, and handled everything professionally and efficiently. The final website turned out clean, user-friendly, and perfect for our delivery operations.",
+    tag: "F&B, Delivery Website",
   },
   {
-    text: "Standard local agencies cost SGD 3,000–5,000/month. Epicware's plans start at SGD 149/month — no lock-in contracts.",
+    name: "Gavin NG",
+    isLocalGuide: true,
+    when: "21 weeks ago",
+    text: "Fast, intuitive, and easy to use on any device. Since launching with Epicware, ordering has become noticeably more seamless.",
+    tag: "F&B, Online Ordering",
+  },
+  {
+    name: "Hazel Johnson",
+    when: "15 weeks ago",
+    text: "Standard local agencies cost SGD 3,000–5,000/month, whereas Epicware's plans start at SGD 149/month with no lock-in contracts.",
     featured: true,
   },
 ];
@@ -79,8 +107,8 @@ const REVIEWS: ReviewItem[] = [
 const reviewSchema = REVIEWS.map((r) => ({
   "@type": "Review",
   reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-  author: { "@type": "Person", name: "Google User" },
-  reviewBody: r.text,
+  author: { "@type": "Person", name: r.name },
+  ...(r.text ? { reviewBody: r.text } : {}),
 }));
 
 const aggregateSchema = {
@@ -150,18 +178,46 @@ export default async function ReviewsPage() {
       {/* ── Reviews grid ── */}
       <section id="reviews-grid" className="py-16 lg:py-20 bg-muted/30">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
-            {REVIEWS.filter((r) => !r.featured).map((r) => (
-              <div key={r.text} className="bg-card border border-border/60 rounded-2xl p-6 shadow-card flex flex-col gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+            {REVIEWS.filter((r) => !r.featured && !r.starOnly).map((r) => (
+              <div key={r.name} className="bg-card border border-border/60 rounded-2xl p-6 shadow-card flex flex-col gap-4">
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-luxury-gold text-luxury-gold" />
                   ))}
                 </div>
                 <p className="text-[15px] text-foreground/90 leading-relaxed flex-1">&ldquo;{r.text}&rdquo;</p>
-                <div className="flex items-center justify-between pt-3 border-t border-dashed border-border text-[11px] font-semibold uppercase tracking-wide">
-                  <span className="text-primary">Verified Google Review</span>
-                  {r.tag && <span className="text-muted-foreground">{r.tag}</span>}
+                <div className="flex items-start justify-between gap-3 pt-3 border-t border-dashed border-border">
+                  <div>
+                    <div className="text-[13px] font-semibold text-foreground">
+                      {r.name}
+                      {r.isLocalGuide && <span className="text-muted-foreground font-normal"> · Local Guide</span>}
+                    </div>
+                    <div className="text-[11px] text-muted-foreground mt-0.5">{r.when}</div>
+                  </div>
+                  {r.tag && (
+                    <span className="text-[11px] font-semibold uppercase tracking-wide text-primary text-right shrink-0">
+                      {r.tag}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+
+            {/* Compact star-only card — no written review text, don't fabricate quote copy */}
+            {REVIEWS.filter((r) => r.starOnly).map((r) => (
+              <div
+                key={r.name}
+                className="self-start bg-card border border-border/60 rounded-2xl p-6 shadow-card flex flex-col items-center justify-center gap-3 text-center"
+              >
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-luxury-gold text-luxury-gold" />
+                  ))}
+                </div>
+                <div>
+                  <div className="text-[13px] font-semibold text-foreground">{r.name}</div>
+                  <div className="text-[11px] text-muted-foreground mt-0.5">{r.when}</div>
                 </div>
               </div>
             ))}
@@ -170,7 +226,7 @@ export default async function ReviewsPage() {
           {/* Pull-quote */}
           {REVIEWS.filter((r) => r.featured).map((r) => (
             <div
-              key={r.text}
+              key={r.name}
               className="rounded-3xl bg-gradient-to-br from-[#1a0a14] via-[#0d0a1a] to-[#0d0d0d] px-8 py-12 lg:px-14 lg:py-14 text-center"
             >
               <div className="flex items-center justify-center gap-1 mb-6">
@@ -182,7 +238,7 @@ export default async function ReviewsPage() {
                 &ldquo;{r.text}&rdquo;
               </blockquote>
               <span className="text-[11px] font-semibold uppercase tracking-wide text-white/50">
-                Verified Google Review
+                {r.name} · {r.when}
               </span>
             </div>
           ))}
