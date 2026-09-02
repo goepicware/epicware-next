@@ -77,7 +77,7 @@ const HERO_STATS = [
 ];
 
 const AT_A_GLANCE: { label: string; value: string }[] = [
-  { label: "Client", value: "A Singapore restaurant chain (anonymised at client's request)" },
+  { label: "Client", value: "A Singapore restaurant chain" },
   { label: "Industry", value: "F&B / Quick Service Restaurant (Halal, MUIS-certified)" },
   { label: "Locations", value: "5 outlets across Singapore" },
   { label: "Engagement", value: "March 2026 – ongoing" },
