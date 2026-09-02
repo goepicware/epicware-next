@@ -245,6 +245,12 @@ export default function Header() {
             >
               Pricing
             </Link>
+            <Link
+              href="/reviews"
+              className="px-5 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-muted/50"
+            >
+              Reviews
+            </Link>
             <DesktopDropdown {...NAV.resources} />
           </nav>
 
@@ -313,6 +319,13 @@ export default function Header() {
                     className="block py-4 text-2xl font-semibold text-foreground/80 hover:text-foreground transition-colors border-b border-border/30"
                   >
                     Pricing
+                  </Link>
+                  <Link
+                    href="/reviews"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-4 text-2xl font-semibold text-foreground/80 hover:text-foreground transition-colors border-b border-border/30"
+                  >
+                    Reviews
                   </Link>
                 </div>
                 <div className="p-8 border-t border-border/30 flex flex-col gap-3">
