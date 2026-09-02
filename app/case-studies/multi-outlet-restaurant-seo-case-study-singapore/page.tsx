@@ -11,15 +11,15 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "F&B Local SEO Case Study Singapore: EPIKebabs | Epicware",
+  title: "Multi-Outlet F&B Local SEO Case Study Singapore | Epicware",
   description:
-    "How Epicware grew EPIKebabs' organic traffic 24%, won #1 Google rankings and AI Overview citations across 5 Singapore outlets. Real local SEO results.",
-  alternates: { canonical: "https://www.epicware.ai/case-studies/epikebabs-local-seo-singapore" },
+    "How Epicware grew a 5-outlet Singapore restaurant chain's organic traffic 24%, won #1 Google rankings and AI Overview citations. Real local SEO results.",
+  alternates: { canonical: "https://www.epicware.ai/case-studies/multi-outlet-restaurant-seo-case-study-singapore" },
   openGraph: {
-    title: "F&B Local SEO Case Study Singapore: EPIKebabs | Epicware",
+    title: "Multi-Outlet F&B Local SEO Case Study Singapore | Epicware",
     description:
-      "How Epicware grew EPIKebabs' organic traffic 24%, won #1 Google rankings and AI Overview citations across 5 Singapore outlets. Real local SEO results.",
-    url: "https://www.epicware.ai/case-studies/epikebabs-local-seo-singapore",
+      "How Epicware grew a 5-outlet Singapore restaurant chain's organic traffic 24%, won #1 Google rankings and AI Overview citations. Real local SEO results.",
+    url: "https://www.epicware.ai/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
   },
 };
 
@@ -27,23 +27,23 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "From Kebab Shop to Category Leader: How EPIKebabs Won Google Maps, Google Search and AI Search Across 5 Singapore Outlets",
+    "How a 5-Outlet Singapore Restaurant Chain Became the Answer on Google Maps, Search and AI Overviews",
   description:
-    "How Epicware grew EPIKebabs' organic traffic 24%, won #1 Google rankings and AI Overview citations across 5 Singapore outlets. Real local SEO results.",
+    "How Epicware grew a 5-outlet Singapore restaurant chain's organic traffic 24%, won #1 Google rankings and AI Overview citations. Real local SEO results.",
   datePublished: "2026-08-30",
   author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/case-studies/epikebabs-local-seo-singapore",
+  url: "https://epicware.ai/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
 };
 
 const FAQS = [
   {
-    q: "How long did it take to see results for EPIKebabs?",
+    q: "How long did it take to see results for this client?",
     a: "The engagement started in March 2026. Google Business Profile interactions and call volume began improving within the first two to three months, while ranking gains and AI Overview citations built through months four to six. Local SEO compounds — the six-month curve is steeper than the three-month curve.",
   },
   {
     q: "Can Epicware manage multiple outlets on one account?",
-    a: "Yes. EPIKebabs runs five outlets through a single Epicware dashboard, with individual keyword strategies, posting schedules and review workflows per location. Our platform is built for multi-outlet SMBs.",
+    a: "Yes. This client runs five outlets through a single Epicware dashboard, with individual keyword strategies, posting schedules and review workflows per location. Our platform is built for multi-outlet SMBs.",
   },
   {
     q: "How do you rank a business inside AI Overviews and ChatGPT?",
@@ -77,9 +77,9 @@ const HERO_STATS = [
 ];
 
 const AT_A_GLANCE: { label: string; value: string }[] = [
-  { label: "Client", value: "EPIKebabs — epikebabs.com" },
+  { label: "Client", value: "A Singapore restaurant chain (anonymised at client's request)" },
   { label: "Industry", value: "F&B / Quick Service Restaurant (Halal, MUIS-certified)" },
-  { label: "Locations", value: "5 outlets: Sunshine Plaza, Aperia Mall, CIMB Plaza, East Village, Galaxis" },
+  { label: "Locations", value: "5 outlets across Singapore" },
   { label: "Engagement", value: "March 2026 – ongoing" },
   {
     label: "Services",
@@ -91,8 +91,8 @@ const AT_A_GLANCE: { label: string; value: string }[] = [
 
 const CHALLENGES = [
   {
-    title: "Rank for high-difficulty kebab keywords.",
-    body: 'Terms like "best kebab in Singapore", "halal kebab Singapore" and "kebab delivery Singapore" are among the most competitive F&B queries in the market — dominated by listicles, Tripadvisor, Reddit threads and food blogs, not restaurant websites.',
+    title: "Rank for high-difficulty category keywords.",
+    body: "The terms that define this category are among the most competitive F&B queries in the Singapore market — dominated by listicles, Tripadvisor, Reddit threads and food blogs, not restaurant websites.",
   },
   {
     title: "Grow calls, orders and footfall — not just impressions.",
@@ -100,29 +100,22 @@ const CHALLENGES = [
   },
   {
     title: "Get found in AI search.",
-    body: "Customers no longer just type into Google. They ask ChatGPT, Gemini, Perplexity and Google AI Overviews where to eat. EPIKebabs needed to be the answer, not a competitor.",
+    body: "Customers no longer just type into Google. They ask ChatGPT, Gemini, Perplexity and Google AI Overviews where to eat. The brand needed to be the answer, not a competitor.",
   },
   {
     title: "Fix the reputation layer.",
-    body: "Five outlets meant five Google Business Profiles, five review streams, and a growing pile of negative reviews — including reviews that violated Google's own policies but were still costing the business customers every day they stayed up.",
+    body: "Five outlets meant five Google Business Profiles and multiple review streams that required consistent reputation management.",
   },
 ];
 
 const KEYWORD_RANKINGS: { keyword: string; position: string; where: string }[] = [
-  { keyword: "order kebab", position: "#1", where: "Organic" },
-  { keyword: "halal snack pack singapore", position: "#1", where: "Organic (blog) + Business Profile panel" },
-  { keyword: "big loaded kebabs", position: "#1 & #2", where: "Local Map Pack (CIMB Plaza + Aperia Mall)" },
-  { keyword: "best kebab in singapore", position: "Cited", where: "AI Overview + Top Kebab Spots" },
-  { keyword: "healthy kebab in singapore", position: "Cited", where: "AI Overview (first listed)" },
-  { keyword: "kebab near me", position: "#4", where: "Organic" },
-  { keyword: "shawarma in singapore", position: "#6", where: "Organic (blog)" },
-];
-
-const SUPPLEMENTARY_PROOF = [
-  { src: "epikebabs-serp-order-kebab.jpg", w: 1500, h: 712, caption: '"order kebab" — #1', alt: "Google search result showing EPIKebabs ranked #1 for \"order kebab\"" },
-  { src: "epikebabs-serp-halal-snack-pack.jpg", w: 1500, h: 760, caption: '"halal snack pack singapore" — #1', alt: "Google search result showing EPIKebabs ranked #1 for \"halal snack pack singapore\"" },
-  { src: "epikebabs-serp-kebab-near-me.jpg", w: 1500, h: 903, caption: '"kebab near me" — #4', alt: "Google search result showing EPIKebabs ranked #4 for \"kebab near me\"" },
-  { src: "epikebabs-serp-shawarma.jpg", w: 1500, h: 929, caption: '"shawarma in singapore" — #6', alt: "Google search result showing EPIKebabs ranked #6 for \"shawarma in singapore\"" },
+  { keyword: "Top transactional term", position: "#1", where: "Organic" },
+  { keyword: "Long-tail blog term", position: "#1", where: "Organic (blog) + Business Profile panel" },
+  { keyword: "Signature category term", position: "#1 & #2", where: "Local Map Pack (2 outlets)" },
+  { keyword: "Flagship category term", position: "Cited", where: "AI Overview" },
+  { keyword: "Secondary category term", position: "Cited", where: "AI Overview (first listed)" },
+  { keyword: "“Near me” local term", position: "#4", where: "Organic" },
+  { keyword: "Adjacent category term", position: "#6", where: "Organic (blog)" },
 ];
 
 const BUSINESS_IMPACT = [
@@ -137,7 +130,7 @@ const BUSINESS_IMPACT = [
 const WHY_IT_WORKED = [
   {
     title: "We treated five outlets as five businesses, not one.",
-    body: "Each profile got its own keyword identity, its own catchment strategy and its own posting cadence. That's why two EPIKebabs outlets can hold #1 and #2 in the same Map Pack instead of cannibalising each other.",
+    body: "Each profile got its own keyword identity, its own catchment strategy and its own posting cadence. That's why two of the client's outlets can hold #1 and #2 in the same Map Pack instead of cannibalising each other.",
   },
   {
     title: "We optimised for AI engines from day one.",
@@ -242,7 +235,7 @@ function CtaBanner({
   );
 }
 
-export default function EpiKebabsCaseStudyPage() {
+export default function MultiOutletRestaurantCaseStudyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -258,13 +251,13 @@ export default function EpiKebabsCaseStudyPage() {
             className="font-display font-bold text-foreground leading-[1.1] tracking-[-0.02em] mb-6"
             style={{ fontSize: "clamp(2rem, 4vw, 3.1rem)" }}
           >
-            From Kebab Shop to Category Leader: How EPIKebabs Won Google Maps, Google Search and AI Search Across 5
-            Singapore Outlets
+            How a 5-Outlet Singapore Restaurant Chain Became the Answer on Google Maps, Search and AI Overviews
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-            EPIKebabs came to Epicware wanting more orders, more calls, and rankings on kebab keywords that bigger
-            brands had locked up for years. Six months in, they own the #1 spot for their highest-intent search
-            terms, get cited by name in Google&rsquo;s AI Overviews, and take 100+ direct online orders a day.
+            This restaurant chain came to Epicware wanting more orders, more calls, and stronger visibility on the
+            highest-value search terms in their category. Six months in, they own the #1 spot for their
+            highest-intent search terms, get cited by name in Google&rsquo;s AI Overviews, and take 100+ direct
+            online orders a day.
           </p>
 
           <div className="mb-10">
@@ -290,7 +283,7 @@ export default function EpiKebabsCaseStudyPage() {
             w={1500}
             h={610}
             priority
-            alt="Google Search Console showing EPIKebabs 13.6K clicks and 280K impressions over six months"
+            alt="Google Search Console showing this client's 13.6K clicks and 280K impressions over six months"
             caption="Google Search Console — 6-month performance: 13.6K clicks / 280K impressions / 4.8% CTR / 8.4 avg. position"
           />
         </div>
@@ -316,15 +309,15 @@ export default function EpiKebabsCaseStudyPage() {
           <h2 className="font-display font-bold text-foreground text-2xl lg:text-3xl mb-6">The Client</h2>
           <div className="space-y-4 border-l-2 border-primary/40 pl-6">
             <p className="text-foreground/90 text-[17px] leading-relaxed">
-              EPIKebabs has been serving Singapore since 2012 — halal-certified doner kebabs, big portions, and a
-              menu of inventions you won&rsquo;t find anywhere else, from the Indomeeat™ to the Kilo Kebab™. Five
-              outlets across the island, a loyal following of over 1,000 recommendations across Google, Facebook,
-              Instagram, Grab and Tripadvisor, and a delivery operation that runs islandwide.
+              This Singapore restaurant chain has built a loyal following over more than a decade — a well-loved
+              menu, generous portions, and a handful of signature dishes customers travel for. Five outlets across
+              the island, over 1,000 recommendations across Google, Facebook, Instagram, Grab and Tripadvisor, and a
+              delivery operation that runs islandwide.
             </p>
             <p className="text-muted-foreground text-[17px] leading-relaxed">
               Strong brand. Strong product. But strong product doesn&rsquo;t automatically mean strong search
               visibility — and in Singapore&rsquo;s F&amp;B market, if you&rsquo;re not in the Map Pack when someone
-              searches &ldquo;kebab near me&rdquo; at 8pm, you don&rsquo;t exist.
+              searches for your category at 8pm, you don&rsquo;t exist.
             </p>
           </div>
         </div>
@@ -334,7 +327,7 @@ export default function EpiKebabsCaseStudyPage() {
       <section className="py-16 lg:py-20 bg-muted/30">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-display font-bold text-foreground text-2xl lg:text-3xl mb-3">The Challenge</h2>
-          <p className="text-muted-foreground text-[15px] mb-8">EPIKebabs came to Epicware in March 2026 with four clear goals:</p>
+          <p className="text-muted-foreground text-[15px] mb-8">The brand came to Epicware in March 2026 with four clear goals:</p>
 
           <ol className="space-y-6 mb-8">
             {CHALLENGES.map((c, i) => (
@@ -351,7 +344,7 @@ export default function EpiKebabsCaseStudyPage() {
 
           <p className="text-muted-foreground text-[15px] leading-relaxed mb-10">
             Add to that a multi-outlet structure where each location competes in a different catchment, and the same
-            keyword can rank #1 in Kallang and be invisible in Raffles Place.
+            keyword can rank #1 in one neighbourhood and be invisible in another.
           </p>
 
           <CtaBanner
@@ -368,7 +361,7 @@ export default function EpiKebabsCaseStudyPage() {
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-display font-bold text-foreground text-2xl lg:text-3xl mb-3">The Strategy</h2>
           <p className="text-muted-foreground text-[15px] mb-10">
-            Epicware ran EPIKebabs through the full local growth workflow — the same five-stage system we use for
+            Epicware ran this brand through the full local growth workflow — the same five-stage system we use for
             every multi-outlet SMB.
           </p>
 
@@ -383,9 +376,8 @@ export default function EpiKebabsCaseStudyPage() {
                     19-point GBP audit
                   </Link>
                   : categories, services, attributes, hours, descriptions, photos and conversion actions. Each
-                  profile was then given its own keyword identity so the outlets stopped competing with each other —
-                  Sunshine Plaza positioned on &ldquo;Best Kebab in Singapore&rdquo;, Aperia Mall on &ldquo;Healthy
-                  Kebab Near Singapore&rdquo;, and so on.
+                  outlet was given its own location and search-intent strategy to improve local relevance and
+                  minimise keyword cannibalisation between outlets.
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
                   Then we kept feeding them. Fresh GBP posts scheduled twice weekly per outlet, each built around a
@@ -413,12 +405,13 @@ export default function EpiKebabsCaseStudyPage() {
                   <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
                     Bad Review Removal
                   </Link>{" "}
-                  service. We also identified and handled negative SEO activity targeting the brand.
+                  service. Potential reputation and search-quality issues affecting the brand were also identified
+                  and addressed.
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
-                  <strong className="text-foreground">Result:</strong> 5+ negative reviews removed per outlet, and an
-                  average rating lift of +0.5 stars across the portfolio — with ratings now sitting at 4.8★ (CIMB
-                  Plaza), 4.7★ (Aperia Mall) and 4.6★ (Sunshine Plaza, across 760 reviews).
+                  <strong className="text-foreground">Result:</strong> Multiple policy-violating reviews removed per
+                  outlet, and an average rating lift of +0.5 stars across the portfolio — with outlet ratings now
+                  ranging from 4.6 to 4.8 stars, and the flagship location alone carrying 760+ reviews.
                 </p>
               </div>
             </div>
@@ -433,10 +426,9 @@ export default function EpiKebabsCaseStudyPage() {
                   fights, and which competitors were eating specific catchments.
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
-                  The keyword strategy split into three tiers: high-intent transactional terms (&ldquo;order
-                  kebab&rdquo;, &ldquo;kebab delivery Singapore&rdquo;), local discovery terms (&ldquo;kebab near
-                  me&rdquo;, &ldquo;halal food near me Singapore&rdquo;), and category-defining terms (&ldquo;best
-                  kebab in Singapore&rdquo;, &ldquo;halal shawarma Singapore&rdquo;).
+                  The keyword strategy split into three tiers: high-intent transactional terms, local discovery
+                  terms, and category-defining terms — each mapped and tracked outlet by outlet using EpicMap grid
+                  tracking.
                 </p>
               </div>
             </div>
@@ -452,8 +444,8 @@ export default function EpiKebabsCaseStudyPage() {
                   </Link>{" "}
                   identified gaps in site architecture, schema, internal linking and AI crawlability. From there we
                   rebuilt the page structure, wrote citation-ready content designed to be quoted by AI engines, and
-                  published blog articles targeting long-tail commercial queries — including a Halal Snack Pack
-                  article and a Chicken Shawarma guide that now rank on page one on their own merit.
+                  published blog articles targeting long-tail commercial queries — including two long-tail guides
+                  built around signature menu items that now rank on page one on their own merit.
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
                   We also ran conversion rate optimisation across the ordering journey, tightening the path from
@@ -521,7 +513,7 @@ export default function EpiKebabsCaseStudyPage() {
                 src="epikebabs-gsc-6month-overview.jpg"
                 w={1500}
                 h={610}
-                alt="Google Search Console showing EPIKebabs 13.6K clicks and 280K impressions over six months"
+                alt="Google Search Console showing this client's 13.6K clicks and 280K impressions over six months"
                 caption="Google Search Console 6-month clicks and impressions graph"
               />
             </div>
@@ -562,7 +554,7 @@ export default function EpiKebabsCaseStudyPage() {
                 src="epikebabs-ga4-traffic-comparison.jpg"
                 w={1500}
                 h={792}
-                alt="GA4 showing EPIKebabs organic search traffic up 24.1% and organic social up 69.3%"
+                alt="GA4 showing this client's organic search traffic up 24.1% and organic social up 69.3%"
               />
             </div>
           </div>
@@ -585,32 +577,22 @@ export default function EpiKebabsCaseStudyPage() {
             </div>
 
             <p className="text-[15px] leading-relaxed text-foreground/90 mb-6">
-              EPIKebabs is now cited by name in Google AI Overviews for its core category queries:
+              The brand is now cited by name in Google&rsquo;s AI Overviews for its two highest-value category
+              queries — named directly in the answer, and listed first among recommended options in both cases.
             </p>
-            <ul className="space-y-3 mb-8">
-              <li className="text-[15px] leading-relaxed text-foreground/90">
-                <strong className="text-foreground">&ldquo;best kebab in singapore&rdquo;</strong> — EPIKebabs is
-                named in the AI Overview as one of the best kebab spots in Singapore, and listed first under
-                &ldquo;Top Kebab Spots in Singapore&rdquo; with all four outlets referenced.
-              </li>
-              <li className="text-[15px] leading-relaxed text-foreground/90">
-                <strong className="text-foreground">&ldquo;healthy kebab in singapore&rdquo;</strong> — EPIKebabs is
-                the first brand cited in the AI Overview, listed first under &ldquo;Top Healthy Kebab Spots&rdquo;.
-              </li>
-            </ul>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               <Figure
                 src="epikebabs-ai-overview-best-kebab.jpg"
                 w={1500}
                 h={746}
-                alt="Google AI Overview for 'best kebab in singapore' citing EPIKebabs"
+                alt="Google AI Overview citing this client by name for its flagship category query"
               />
               <Figure
                 src="epikebabs-ai-overview-healthy-kebab.jpg"
                 w={1500}
                 h={890}
-                alt="Google AI Overview for 'healthy kebab in singapore' citing EPIKebabs first"
+                alt="Google AI Overview citing this client first for a secondary category query"
               />
             </div>
 
@@ -634,7 +616,7 @@ export default function EpiKebabsCaseStudyPage() {
                 <tbody className="divide-y divide-border/60">
                   {KEYWORD_RANKINGS.map((row) => (
                     <tr key={row.keyword}>
-                      <td className="px-5 py-3 text-foreground italic">&ldquo;{row.keyword}&rdquo;</td>
+                      <td className="px-5 py-3 text-foreground">{row.keyword}</td>
                       <td className="px-5 py-3 font-bold text-primary whitespace-nowrap">{row.position}</td>
                       <td className="px-5 py-3 text-muted-foreground">{row.where}</td>
                     </tr>
@@ -644,24 +626,16 @@ export default function EpiKebabsCaseStudyPage() {
             </div>
 
             <p className="text-[15px] leading-relaxed text-foreground/90 mb-6">
-              Two of the five outlets now hold the top two positions in the local Map Pack for &ldquo;big loaded
-              kebabs&rdquo; — pushing established competitors below the fold.
+              Two of the five outlets now hold the top two positions in the local Map Pack for their signature
+              category term — pushing established competitors below the fold.
             </p>
 
-            <div className="mb-8">
-              <Figure
-                src="epikebabs-map-pack-big-loaded-kebabs.jpg"
-                w={1500}
-                h={845}
-                alt="Google Maps Map Pack for 'big loaded kebabs' showing EPIKebabs at #1 and #2"
-              />
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {SUPPLEMENTARY_PROOF.map((p) => (
-                <Figure key={p.src} src={p.src} w={p.w} h={p.h} alt={p.alt} caption={p.caption} />
-              ))}
-            </div>
+            <Figure
+              src="epikebabs-map-pack-big-loaded-kebabs.jpg"
+              w={1500}
+              h={845}
+              alt="Google Maps Map Pack showing this client's outlets holding #1 and #2 for their signature category term"
+            />
           </div>
 
           {/* GBP Performance */}
@@ -687,19 +661,19 @@ export default function EpiKebabsCaseStudyPage() {
                 src="epikebabs-gbp-interactions-aperia.jpg"
                 w={1500}
                 h={817}
-                alt="Google Business Profile interactions chart for an EPIKebabs outlet showing 1,515 interactions"
+                alt="Google Business Profile interactions chart for one of this client's outlets showing 1,515 interactions"
               />
               <Figure
                 src="epikebabs-gbp-website-clicks-aperia.jpg"
                 w={1500}
                 h={814}
-                alt="Google Business Profile website clicks chart for an EPIKebabs outlet showing 277 clicks"
+                alt="Google Business Profile website clicks chart for the same outlet showing 277 clicks"
               />
               <Figure
                 src="epikebabs-gbp-calls-sunshine.jpg"
                 w={1500}
                 h={817}
-                alt="Google Business Profile calls chart for an EPIKebabs outlet showing 93 calls"
+                alt="Google Business Profile calls chart for a second outlet showing 93 calls"
               />
             </div>
           </div>
@@ -711,9 +685,8 @@ export default function EpiKebabsCaseStudyPage() {
               <StatRow stats={BUSINESS_IMPACT} cols={3} />
             </div>
             <p className="text-[15px] leading-relaxed text-muted-foreground mb-10">
-              Direct online orders matter more than they look. Every order that comes through EPIKebabs&rsquo; own
-              channel instead of a third-party aggregator is an order that keeps its margin, its customer data, and
-              its repeat-purchase relationship.
+              Growing direct-order channels can help F&amp;B brands reduce their reliance on third-party aggregators
+              while strengthening direct customer relationships.
             </p>
           </div>
 
@@ -787,7 +760,7 @@ export default function EpiKebabsCaseStudyPage() {
         </div>
         <div className="max-w-3xl mx-auto px-6 relative z-10 text-center">
           <h2 className="font-display font-bold text-white mb-6 text-2xl lg:text-4xl text-balance">
-            Ready to own your category the way EPIKebabs owns kebabs?
+            Ready to become the answer in your category?
           </h2>
           <p className="text-white/60 text-lg mb-3 leading-relaxed">
             Book a free 30-minute demo and we&rsquo;ll run a live audit on your Google Business Profile, local

@@ -108,6 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/google-review-request-templates`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog/how-to-create-google-review-link-qr-code`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog/should-you-respond-to-every-google-review`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/why-review-recency-matters-for-local-rankings`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog/review-velocity-vs-total-review-count`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog/do-keywords-in-reviews-help-local-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog/how-many-google-reviews-do-you-need-to-compete-locally`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -135,6 +136,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/case-studies/restaurant-multi-outlet-growth-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies/clinic-review-growth-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies/salon-whatsapp-automation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/case-studies/multi-outlet-restaurant-seo-case-study-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Authority pages
     { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -144,6 +146,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/pricing`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/book-demo`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+
+    // Free audit funnel
+    { url: `${BASE}/free-audit`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
 
     // Free tools
     { url: `${BASE}/tools`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },

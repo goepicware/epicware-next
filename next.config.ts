@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "maps.googleapis.com",
       },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+      },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
     ],
   },
   async redirects() {
@@ -34,6 +42,12 @@ const nextConfig: NextConfig = {
       { source: "/resources/blog/:slug*", destination: "/blog/:slug*", permanent: true },
       // Old backlink tool URL → new canonical URL
       { source: "/tools/backlink-dashboard", destination: "/tools/backlink-opportunity-finder", permanent: true },
+      // Case study anonymised at client's request — URL no longer names the client
+      {
+        source: "/case-studies/epikebabs-local-seo-singapore",
+        destination: "/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
+        permanent: true,
+      },
     ];
   },
 };

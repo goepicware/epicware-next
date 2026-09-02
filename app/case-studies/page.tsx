@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 const CASE_STUDIES = [
   {
-    href: "/case-studies/epikebabs-local-seo-singapore",
+    href: "/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
     badge: "F&B · Singapore · 5 Outlets",
-    title: "From Kebab Shop to Category Leader: How EPIKebabs Won Google Maps, Google Search and AI Search",
+    title: "How a 5-Outlet Singapore Restaurant Chain Became the Answer on Google Maps, Search and AI Overviews",
     result: "+24.1% organic traffic, #1 rankings, AI Overview citations",
   },
   {
@@ -45,7 +45,7 @@ export default function CaseStudiesIndexPage() {
           Real Singapore SMBs. Real Local SEO Results.
         </h1>
         <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-14">
-          From kebab shops to clinics to salons — see exactly what Epicware did, and the numbers it produced.
+          From restaurant chains to clinics to salons — see exactly what Epicware did, and the numbers it produced.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
