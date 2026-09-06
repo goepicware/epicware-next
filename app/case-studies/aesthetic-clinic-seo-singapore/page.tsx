@@ -589,6 +589,69 @@ export default function AestheticClinicSEOCaseStudyPage() {
                 </p>
               </div>
             </div>
+
+            <p className="text-xs text-muted-foreground italic mt-8 mb-5">
+              Live screenshots below — the clinic&rsquo;s name and Business Profile details are blurred throughout,
+              consistent with the disclosure above.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <Figure
+                src="ranking-hougang-map-pack-serp.png"
+                w={1200}
+                h={828}
+                alt="Google local map pack and organic search results for 'hougang aesthetic clinic', with the clinic's listing blurred, showing a number 1 organic ranking badge"
+                caption="#1 Local Map Pack + #1 organic — “hougang aesthetic clinic”"
+              />
+              <Figure
+                src="ranking-hougang-organic-serp.png"
+                w={1693}
+                h={798}
+                alt="Google organic search results for 'aesthetic clinic in hougang' with the top-ranking clinic listing blurred"
+                caption="#1 organic — “aesthetic clinic in hougang”"
+              />
+              <Figure
+                src="ranking-hougang-map-pack-secondary.png"
+                w={1642}
+                h={861}
+                alt="Google local map pack for 'aesthetic clinic in hougang' showing the clinic in the number 2 position, listing blurred"
+                caption="#2 Local Map Pack — “aesthetic clinic in hougang”"
+              />
+              <Figure
+                src="ranking-device-keyword-serp-profile.png"
+                w={1735}
+                h={852}
+                alt="Google search results and Business Profile panel for the 'helios 785 pico laser' device keyword, with the clinic's profile details blurred"
+                caption="#1 organic + Business Profile — “helios 785 pico laser”"
+              />
+              <Figure
+                src="ranking-orchard-map-pack.png"
+                w={1498}
+                h={844}
+                alt="Google local map pack for 'aesthetic medical clinic in Orchard' showing the clinic in the number 3 position, listing blurred"
+                caption="#3 Local Map Pack — “aesthetic medical clinic in Orchard”"
+              />
+              <Figure
+                src="ranking-orchard-organic-serp-4.png"
+                w={1288}
+                h={897}
+                alt="Google organic search results for 'aesthetic medical clinic in orchard' with the clinic's number 4 listing blurred"
+                caption="#4 organic — “aesthetic medical clinic in orchard”"
+              />
+              <Figure
+                src="ranking-orchard-organic-serp-5.png"
+                w={1317}
+                h={807}
+                alt="Google organic search results for 'aesthetic clinic orchard' with the clinic's number 5 listing blurred"
+                caption="#5 organic — “aesthetic clinic orchard”"
+              />
+              <Figure
+                src="ranking-chatgpt-recommendation.png"
+                w={973}
+                h={775}
+                alt="ChatGPT response recommending a best aesthetic medical clinic in Orchard, Singapore, with the clinic's name blurred"
+                caption="#1 recommendation in ChatGPT — “which is the best aesthetic medical clinic in orchard”"
+              />
+            </div>
           </div>
 
           {/* Search Visibility */}
