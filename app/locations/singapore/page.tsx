@@ -6,7 +6,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Singapore Local Business Growth Platform | Epicware",
+  title: "Singapore Local Business Growth Platform",
   description:
     "Explore Epicware's local growth solutions for businesses across Singapore. Improve Google Maps visibility, manage reviews, grow your online reputation, and discover local SEO solutions by district.",
   alternates: {
