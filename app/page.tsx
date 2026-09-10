@@ -20,13 +20,13 @@ const LocationsStrip = dynamic(() => import("@/components/home/LocationsStrip"))
 const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
 export const metadata: Metadata = {
-  title: "AI-Powered Local SEO Agency with Reputation Management Platform",
+  title: "AI SEO Marketing Agency in Singapore with Reputation Management Platform",
   description:
-    "Rank higher on Google Maps, build 5-star reviews, and remove fake ones. Epicware is Singapore's AI-powered local SEO & reputation management platform.",
+    "Epicware is an SEO marketing agency in Singapore and reputation management platform helping businesses rank higher on Google and manage their online reputation.",
   openGraph: {
-    title: "AI-Powered Local SEO Agency with Reputation Management Platform | Epicware",
+    title: "AI SEO Marketing Agency in Singapore with Reputation Management Platform | Epicware",
     description:
-      "Rank higher on Google Maps, build 5-star reviews, and remove fake ones. Epicware is Singapore's AI-powered local SEO & reputation management platform.",
+      "Epicware is an SEO marketing agency in Singapore and reputation management platform helping businesses rank higher on Google and manage their online reputation.",
     url: "https://www.epicware.ai",
     images: [
       {

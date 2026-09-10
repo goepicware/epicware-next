@@ -6,16 +6,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Reputation Management Singapore — GBP Experts",
+  title: "Singapore Local Business Growth Platform | Epicware",
   description:
-    "Epicware's Local SEO and Reputation Management platform for Singapore SMBs. GBP optimisation, review management, and bad review removal across all districts.",
+    "Explore Epicware's local growth solutions for businesses across Singapore. Improve Google Maps visibility, manage reviews, grow your online reputation, and discover local SEO solutions by district.",
   alternates: {
     canonical: "https://www.epicware.ai/locations/singapore",
   },
   openGraph: {
-    title: "Local SEO & Reputation Management Singapore | Epicware",
+    title: "Singapore Local Business Growth Platform | Epicware",
     description:
-      "Epicware's Local SEO and Reputation Management platform for Singapore SMBs. GBP optimisation, review management, and bad review removal.",
+      "Explore Epicware's local growth solutions for businesses across Singapore. Improve Google Maps visibility, manage reviews, grow your online reputation, and discover local SEO solutions by district.",
     url: "https://www.epicware.ai/locations/singapore",
   },
 };
@@ -111,7 +111,7 @@ export default function SingaporeHubPage() {
 
       <CategoryHero
         badge="EPICWARE · SINGAPORE"
-        h1="Local SEO & Reputation Management for Singapore SMBs"
+        h1="Local Business Growth Solutions Across Singapore"
         subtitle="Epicware is Singapore-built. Every product, every service, and every case study is built for the Singapore SMB market — not adapted from a US or UK tool."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
