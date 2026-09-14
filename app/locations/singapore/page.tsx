@@ -79,7 +79,7 @@ const SERVICES = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, pay on success. Singapore's only productised bad review removal service.",
+      "$200/review, refunded if not removed within 3 months. Singapore's only productised bad review removal service.",
   },
   {
     label: "Local SEO Singapore",

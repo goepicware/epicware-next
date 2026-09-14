@@ -47,7 +47,7 @@ const products = [
   },
   {
     name: "Bad Review Removal",
-    description: "$200 per review, pay on success. Assessment, formal submission, and systematic escalation through all available Google support channels.",
+    description: "$200 per review, refunded if not removed within 3 months. Assessment, formal submission, and systematic escalation through all available Google support channels.",
   },
 ];
 
@@ -62,7 +62,7 @@ const principles = [
   },
   {
     title: "Aligned incentives",
-    description: "Bad review removal is pay-on-success. There is no charge if the review stays up. This means we only pursue removals we believe have a genuine case — and we have a direct financial incentive to succeed.",
+    description: "Bad review removal is $200 upfront, refunded in full if the review isn't removed within 3 months. This means we only pursue removals we believe have a genuine case — and we have a direct financial incentive to succeed.",
   },
 ];
 

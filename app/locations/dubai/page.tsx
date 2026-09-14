@@ -49,7 +49,7 @@ const SERVICES = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, pay on success. Remove fake or policy-violating reviews from your Dubai GBP.",
+      "$200/review, refunded if not removed within 3 months. Remove fake or policy-violating reviews from your Dubai GBP.",
   },
   {
     label: "Local Rank Tracking",

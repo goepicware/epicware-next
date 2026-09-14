@@ -5,11 +5,11 @@ import ServiceChildPage from "@/components/services/ServiceChildPage";
 export const metadata: Metadata = {
   title: "Fake Review Removal Singapore — Remove Bot Reviews",
   description:
-    "Remove fake Google reviews posted by competitors, bots, or non-customers. $200 per review, pay on success. Singapore's only guaranteed removal service.",
+    "Remove fake Google reviews posted by competitors, bots, or non-customers. $200 per review, refunded if not removed within 3 months. Singapore's only guaranteed removal service.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/fake-review-removal" },
   openGraph: {
     title: "Fake Review Removal Singapore | Epicware",
-    description: "Remove fake Google reviews posted by competitors, bots, or non-customers. $200, pay on success.",
+    description: "Remove fake Google reviews posted by competitors, bots, or non-customers. $200, refunded if not removed within 3 months.",
     url: "https://www.epicware.ai/bad-review-removal-singapore/fake-review-removal",
   },
 };
@@ -19,7 +19,7 @@ const schema = {
   "@type": "Service",
   name: "Fake Review Removal Singapore",
   serviceType: "Fake Review Removal",
-  description: "Remove fake Google reviews from competitors, bots, or non-customers. $200 per review, pay on success only.",
+  description: "Remove fake Google reviews from competitors, bots, or non-customers. $200 per review, refunded in full if not removed within 3 months.",
   provider: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
   areaServed: { "@type": "Country", name: "Singapore" },
   url: "https://epicware.ai/bad-review-removal-singapore/fake-review-removal",
@@ -31,8 +31,8 @@ export default function FakeReviewRemovalPage() {
       schema={schema}
       badge="FAKE REVIEW REMOVAL · SINGAPORE"
       h1="Fake Review Removal Singapore — Remove Reviews Posted by Non-Customers"
-      subtitle="Competitor-posted reviews, bot reviews, and reviews from people who have never visited your business are removable under Google's content policies. Epicware identifies and removes them. $200 per review, pay on success."
-      trustSignals={["$200/Review · Pay on Success", "Competitor Attack Removal", "Singapore-Built", "24-Hour Initiation"]}
+      subtitle="Competitor-posted reviews, bot reviews, and reviews from people who have never visited your business are removable under Google's content policies. Epicware identifies and removes them. $200 per review, charged upfront and refunded if not removed within 3 months."
+      trustSignals={["$200/Review · Refund Guarantee", "Competitor Attack Removal", "Singapore-Built", "24-Hour Initiation"]}
       imageSrc="/assets/review-management-illustration.png"
       openingParagraph="Fake reviews are a real problem for Singapore businesses competing in dense local categories. A competitor can post a fake 1-star review on a Friday night, and by Monday it is visible to every potential customer in your district. Epicware identifies, documents, and removes them."
       whenTitle="How to Identify a Fake Review"
@@ -62,15 +62,15 @@ export default function FakeReviewRemovalPage() {
           <p>
             For coordinated fake review attacks (multiple fake reviews posted within a short window), Epicware
             submits batch removal requests and escalates through Google&apos;s business channels. If Google rejects
-            the first request, we escalate with additional evidence. You pay $200 per review removed — nothing if
-            the review stays.
+            the first request, we escalate with additional evidence. You pay $200 per review, charged upfront —
+            refunded in full if the review isn&apos;t removed within 3 months.
           </p>
         </div>
       }
       pricingContent={
         <p>
-          <strong>$200 per fake review removed, pay on success only.</strong> No upfront fees. No retainer. You pay
-          only when the review is gone. See full platform pricing at{" "}
+          <strong>$200 per fake review, charged upfront — refunded in full if not removed within 3 months.</strong> No
+          retainer. See full platform pricing at{" "}
           <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
         </p>
       }

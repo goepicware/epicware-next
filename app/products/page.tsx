@@ -51,7 +51,7 @@ const PRODUCTS = [
       "Automated review request campaigns (WhatsApp + email)",
       "AI-generated personalised review responses",
       "Real-time review monitoring across all outlets",
-      "Bad Review Removal ($200/review, pay on success) ⭐",
+      "Bad Review Removal ($200/review, refunded if not removed in 3 months) ⭐",
     ],
     accent: "from-primary/10 to-secondary/5",
     badge: "Reputation",

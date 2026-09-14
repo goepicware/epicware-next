@@ -194,8 +194,8 @@ export default function ReputationManagementPage() {
                 Bad Review Removal
               </Link>{" "}
               service in Singapore. We identify the specific Google content policy violation, submit a formal removal request
-              through the correct channels, and escalate if the first request is rejected. You pay $200 per review — but only
-              if the review is successfully removed. Zero risk. Zero retainer.
+              through the correct channels, and escalate if the first request is rejected. You pay $200 per review, charged
+              upfront — refunded in full if it isn&apos;t removed within 3 months. Zero retainer.
             </p>
             <p>
               On the proactive side,{" "}
@@ -270,7 +270,7 @@ export default function ReputationManagementPage() {
               GMV before its 2021 exit. We are operators who have managed reputations for restaurants, clinics, salons,
               and tuition centres across Singapore. No retainers. No waiting for someone else&apos;s team. Just a platform
               that works. And if you are worried about a specific bad review right now — our removal service guarantees
-              you pay nothing unless it is gone.{" "}
+              a full refund if it isn&apos;t removed within 3 months.{" "}
               <Link href="/" className="text-primary font-medium hover:underline">
                 See the full Epicware platform
               </Link>
@@ -294,7 +294,7 @@ export default function ReputationManagementPage() {
             <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
               Bad Review Removal Singapore
             </Link>{" "}
-            — $200/review, pay on success.
+            — $200/review, refunded if not removed within 3 months.
           </p>
         </div>
       </section>

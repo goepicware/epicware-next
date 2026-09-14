@@ -30,7 +30,7 @@ export default function Page() {
       badge="BAD REVIEW REMOVAL GUIDE"
       h1="Bad Review Removal Guide — Remove Google Reviews the Right Way"
       subtitle="Everything Singapore business owners need to know about removing fake, malicious, and policy-violating Google reviews. The process, the policy, and the professional option."
-      trustSignals={["$200/Review · Pay on Success", "Singapore-Built", "Free Assessment", "All Industries"]}
+      trustSignals={["$200/Review · Refund Guarantee", "Singapore-Built", "Free Assessment", "All Industries"]}
       imageSrc="/assets/review-management-illustration.png"
       intro={
         <>
@@ -102,7 +102,7 @@ export default function Page() {
         </>
       }
       ctaHref="/bad-review-removal-singapore"
-      ctaLabel="Remove Bad Reviews Now — $200, Pay on Success"
+      ctaLabel="Remove Bad Reviews Now — $200, Refunded If Not Removed"
     />
   );
 }

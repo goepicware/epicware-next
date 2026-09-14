@@ -28,7 +28,7 @@ const features = [
   { feature: "Primary user", epicware: "SMB owners", competitor: "Agencies / SEO professionals" },
   { feature: "WhatsApp review requests", epicware: true, competitor: false },
   { feature: "Automated review campaigns", epicware: true, competitor: "Basic" },
-  { feature: "Bad review removal", epicware: "$200/review, pay on success", competitor: false },
+  { feature: "Bad review removal", epicware: "$200/review, refunded if not removed in 3 months", competitor: false },
   { feature: "GBP hyperlocal rank tracking", epicware: "Grid-level maps", competitor: "Rank reports" },
   { feature: "GBP audit and optimisation", epicware: "19-point, action-focused", competitor: "Reporting-focused" },
   { feature: "Citation building", epicware: "Singapore directories", competitor: "US/UK directories primarily" },

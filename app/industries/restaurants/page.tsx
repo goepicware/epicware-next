@@ -38,7 +38,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, pay on success. Removes fake, competitor-posted, or policy-violating reviews.",
+      "$200/review, refunded if not removed within 3 months. Removes fake, competitor-posted, or policy-violating reviews.",
   },
   {
     label: "GBP Optimisation",
@@ -114,8 +114,8 @@ export default function RestaurantsPage() {
           satisfaction is highest. The AI response module replies to every review with
           a personalised response that acknowledges what the customer said. For fake,
           competitor-posted, or policy-violating reviews, Epicware&apos;s Bad Review
-          Removal service removes them at $200/review with no charge if the review
-          stays up. EpicMap tracks your Maps rank across every Singapore district where
+          Removal service removes them at $200/review, charged upfront and refunded
+          if the review stays up after 3 months. EpicMap tracks your Maps rank across every Singapore district where
           your restaurant appears in searches, showing you exactly which keywords and
           locations to improve. For restaurant groups, all outlets are managed from one
           dashboard.{" "}

@@ -31,7 +31,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, pay on success. Remove competitor attacks and false claims about your workshop.",
+      "$200/review, refunded if not removed within 3 months. Remove competitor attacks and false claims about your workshop.",
   },
   {
     label: "Review Generation",
@@ -108,7 +108,7 @@ export default function CarWorkshopsPage() {
           Epicware&apos;s review generation sends WhatsApp review requests after every
           completed job — when the customer has their car back and is satisfied. Bad
           Review Removal handles competitor attacks, false claims, and
-          policy-violating reviews at $200/review with success-only payment. GBP
+          policy-violating reviews at $200/review, charged upfront and refunded if not removed within 3 months. GBP
           Optimisation ensures your workshop&apos;s profile lists every service type
           (servicing, tyres, aircon, bodywork, diagnostics) so you appear in the right
           searches. EpicMap tracks your rank for every relevant auto service keyword

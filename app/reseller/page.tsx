@@ -62,7 +62,7 @@ const resellableProducts = [
   { name: "EpicReview", description: "Automated WhatsApp and email review generation campaigns" },
   { name: "EpicResponse", description: "AI review response across all client locations" },
   { name: "EpicMap", description: "Hyperlocal Google Maps rank tracking" },
-  { name: "Bad Review Removal", description: "$200/review, pay on success — share the margin with your client or pass through at cost" },
+  { name: "Bad Review Removal", description: "$200/review, refunded if not removed in 3 months — share the margin with your client or pass through at cost" },
   { name: "GBP Optimisation", description: "19-point Google Business Profile audit and implementation" },
   { name: "EpicSocial", description: "Social media content management for local businesses" },
 ];

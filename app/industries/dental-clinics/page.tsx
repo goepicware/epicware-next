@@ -37,7 +37,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, pay on success. Protect your clinic's reputation from fake reviews.",
+      "$200/review, refunded if not removed within 3 months. Protect your clinic's reputation from fake reviews.",
   },
   {
     label: "Review Generation",

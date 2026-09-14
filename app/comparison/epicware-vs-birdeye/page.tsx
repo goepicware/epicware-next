@@ -27,7 +27,7 @@ const features = [
   { feature: "Built for Singapore market", epicware: true, competitor: false },
   { feature: "WhatsApp review requests", epicware: true, competitor: false },
   { feature: "SMS review requests", epicware: "Available", competitor: "Primary channel" },
-  { feature: "Bad review removal service", epicware: "$200/review, pay on success", competitor: false },
+  { feature: "Bad review removal service", epicware: "$200/review, refunded if not removed in 3 months", competitor: false },
   { feature: "GBP hyperlocal rank tracking", epicware: "Grid-level, per district", competitor: "Basic rank monitoring" },
   { feature: "AI review response", epicware: true, competitor: true },
   { feature: "Multi-outlet dashboard", epicware: true, competitor: true },

@@ -88,7 +88,7 @@ export default function Post() {
       }
       ctaHref="/bad-review-removal-singapore"
       ctaLabel="Remove Reviews Dragging Your Rating Down"
-      ctaContext="Month 3's protection phase is most effective when you can remove reviews that shouldn't be there. Epicware handles removals at $200/review, pay on success."
+      ctaContext="Month 3's protection phase is most effective when you can remove reviews that shouldn't be there. Epicware handles removals at $200/review, refunded if not removed within 3 months."
       relatedPosts={[
         { title: "Review Velocity vs Total Review Count", href: "/blog/review-velocity-vs-total-review-count" },
         { title: "How to Get More Google Reviews", href: "/blog/how-to-get-more-google-reviews" },

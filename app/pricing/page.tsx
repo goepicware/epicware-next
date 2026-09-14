@@ -7,7 +7,7 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Epicware Pricing — Local SEO & Reputation Management Plans | Singapore",
   description:
-    "Simple, transparent pricing for Singapore SMBs. Foundation to Full Stack. No lock-in contracts. Bad review removal $200/review pay on success.",
+    "Simple, transparent pricing for Singapore SMBs. Foundation to Full Stack. No lock-in contracts. Bad review removal $200/review, refunded if not removed within 3 months.",
   alternates: { canonical: "https://www.epicware.ai/pricing" },
   openGraph: {
     title: "Epicware Pricing — Local SEO & Reputation Management Plans | Singapore",
@@ -169,7 +169,7 @@ export default function PricingPage() {
             From getting your first 50 reviews to dominating Google Search, Maps, and AI results — pick the plan that matches where you are today.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
-            {["No lock-in contracts", "Cancel anytime", "Bad review removal $200 pay-on-success"].map((t) => (
+            {["No lock-in contracts", "Cancel anytime", "Bad review removal $200, refunded if not removed"].map((t) => (
               <span key={t} className="inline-flex items-center gap-1.5 bg-muted/60 rounded-full px-3 py-1 text-xs font-medium">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />{t}
               </span>
@@ -201,7 +201,7 @@ export default function PricingPage() {
               },
               {
                 q: "How does bad review removal billing work?",
-                a: "You pay $200 only when a review is successfully removed from Google. If a review stays up, you pay nothing. We handle the escalation process — flagging, appeals, support tickets.",
+                a: "You pay $200 upfront per review. If it isn't removed from Google within 3 months, you get a full refund. We handle the escalation process — flagging, appeals, support tickets.",
               },
               {
                 q: "How does the annual discount work?",

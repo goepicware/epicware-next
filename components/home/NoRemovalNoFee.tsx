@@ -24,11 +24,11 @@ export default function NoRemovalNoFee() {
           className="text-center mb-12"
         >
           <h2 className="font-display font-bold text-white text-4xl lg:text-5xl mb-5">
-            No removal. No fee.
+            No removal. Full refund.
           </h2>
           <p className="text-white/65 text-lg max-w-2xl mx-auto leading-relaxed">
-            Bad review removal across Singapore. If the review doesn&apos;t come down,
-            you don&apos;t pay. No upsell. No retainer. That&apos;s the deal.
+            Bad review removal across Singapore. $200 per review, charged upfront. If
+            it doesn&apos;t come down within 3 months, you get a full refund. No upsell. No retainer.
           </p>
         </motion.div>
 

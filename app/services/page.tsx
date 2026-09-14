@@ -307,7 +307,7 @@ export default function ServicesPage() {
                 </h3>
                 <p className="text-muted-foreground text-base leading-relaxed flex-1">
                   The only productised bad review removal service in Singapore. Fake, malicious, or
-                  policy-violating reviews — we fight them. <strong>$200/review, pay only on success.</strong>
+                  policy-violating reviews — we fight them. <strong>$200/review, refunded if not removed within 3 months.</strong>
                 </p>
                 <div className="flex items-center gap-2 text-sm font-semibold text-primary pt-4 border-t border-border/30">
                   See Bad Review Removal <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />

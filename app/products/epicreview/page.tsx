@@ -31,7 +31,7 @@ const schema = {
     "@type": "Offer",
     price: "0",
     priceCurrency: "SGD",
-    description: "See pricing at epicware.ai/pricing. Bad Review Removal: $200/review, pay on success.",
+    description: "See pricing at epicware.ai/pricing. Bad Review Removal: $200/review, refunded if not removed within 3 months.",
   },
   provider: {
     "@type": "Organization",
@@ -60,7 +60,7 @@ const FEATURES = [
   {
     name: "Bad Review Removal ⭐",
     description:
-      "$200/review, pay on success only. Policy-based removal of fake, competitor-posted, or guideline-violating reviews.",
+      "$200/review, refunded in full if not removed within 3 months. Policy-based removal of fake, competitor-posted, or guideline-violating reviews.",
   },
   {
     name: "Review Analytics",
@@ -145,8 +145,8 @@ export default function EpicReviewPage() {
               >
                 Bad Review Removal
               </Link>{" "}
-              service handles the submission, escalation, and follow-up. $200 per review removed.
-              You pay only on success.
+              service handles the submission, escalation, and follow-up. $200 per review, charged
+              upfront — refunded in full if it isn't removed within 3 months.
             </p>
           </div>
         </div>
@@ -246,14 +246,15 @@ export default function EpicReviewPage() {
             <div className="flex items-center gap-3 mb-4">
               <Star className="w-6 h-6 text-primary fill-primary" />
               <h2 className="font-display text-foreground text-xl font-bold">
-                Bad Review Removal — $200/review, Pay on Success Only
+                Bad Review Removal — $200/review, Refunded If Not Removed
               </h2>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
               This is EpicReview&apos;s unique differentiator. No other platform in Singapore offers
-              productised bad review removal at a fixed price with success-only payment. We submit
+              productised bad review removal at a fixed price with a refund guarantee. We submit
               policy-violation flags to Google, escalate unresponsive cases, and follow through
-              until the review is removed. If the review stays up, you pay nothing.
+              until the review is removed. $200 is charged upfront — if the review stays up after
+              3 months, you get a full refund.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Eligible reviews include: fake reviews from competitors, reviews that violate
@@ -321,7 +322,7 @@ export default function EpicReviewPage() {
             </Link>
             . No setup fees. Cancel anytime.{" "}
             <strong className="text-foreground">
-              Bad Review Removal is $200/review — you pay only when the review is successfully removed.
+              Bad Review Removal is $200/review, charged upfront — refunded in full if the review isn't removed within 3 months.
             </strong>{" "}
             No monthly retainer. No hidden fees.
           </p>

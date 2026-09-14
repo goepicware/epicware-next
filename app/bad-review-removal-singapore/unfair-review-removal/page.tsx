@@ -5,11 +5,11 @@ import ServiceChildPage from "@/components/services/ServiceChildPage";
 export const metadata: Metadata = {
   title: "Unfair Review Removal Singapore — Malicious Reviews",
   description:
-    "Challenge ex-employee attacks, dispute-motivated 1-star reviews, and reviews with false factual claims. $200 per review, pay on success.",
+    "Challenge ex-employee attacks, dispute-motivated 1-star reviews, and reviews with false factual claims. $200 per review, refunded if not removed within 3 months.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/unfair-review-removal" },
   openGraph: {
     title: "Unfair Review Removal Singapore | Epicware",
-    description: "Challenge ex-employee attacks and reviews containing false factual claims. $200, pay on success.",
+    description: "Challenge ex-employee attacks and reviews containing false factual claims. $200, refunded if not removed within 3 months.",
     url: "https://www.epicware.ai/bad-review-removal-singapore/unfair-review-removal",
   },
 };
@@ -19,7 +19,7 @@ const schema = {
   "@type": "Service",
   name: "Unfair Review Removal Singapore",
   serviceType: "Unfair Review Removal",
-  description: "Remove malicious, misleading, and unfair Google reviews. $200 per review, pay on success only.",
+  description: "Remove malicious, misleading, and unfair Google reviews. $200 per review, refunded in full if not removed within 3 months.",
   provider: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
   areaServed: { "@type": "Country", name: "Singapore" },
   url: "https://epicware.ai/bad-review-removal-singapore/unfair-review-removal",
@@ -31,8 +31,8 @@ export default function UnfairReviewRemovalPage() {
       schema={schema}
       badge="UNFAIR REVIEW REMOVAL · SINGAPORE"
       h1="Unfair Review Removal Singapore — Fight Reviews That Misrepresent Your Business"
-      subtitle="Ex-employee attacks, dispute-motivated 1-star reviews, and reviews containing false factual claims can be challenged. Epicware identifies the policy violation and submits the removal. $200 per review, pay on success."
-      trustSignals={["$200/Review · Pay on Success", "False Claim Removal", "Singapore-Built", "Ex-Employee Reviews"]}
+      subtitle="Ex-employee attacks, dispute-motivated 1-star reviews, and reviews containing false factual claims can be challenged. Epicware identifies the policy violation and submits the removal. $200 per review, charged upfront and refunded if not removed within 3 months."
+      trustSignals={["$200/Review · Refund Guarantee", "False Claim Removal", "Singapore-Built", "Ex-Employee Reviews"]}
       imageSrc="/assets/review-management-illustration.png"
       openingParagraph="Not every unfair review is removable. But several categories do violate Google's content policies — and those can be challenged. Epicware identifies whether your specific review qualifies before any work begins."
       whenTitle="Which Unfair Reviews Are Removable"
@@ -66,7 +66,7 @@ export default function UnfairReviewRemovalPage() {
       }
       pricingContent={
         <p>
-          <strong>$200 per unfair review removed, pay on success only.</strong> No upfront fees. See full pricing at{" "}
+          <strong>$200 per unfair review, charged upfront — refunded in full if not removed within 3 months.</strong> See full pricing at{" "}
           <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
         </p>
       }

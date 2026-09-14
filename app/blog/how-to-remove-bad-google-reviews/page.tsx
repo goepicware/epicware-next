@@ -103,12 +103,12 @@ export default function Post() {
 
           <h2>What Epicware Does Differently</h2>
           <p>Each review is assessed individually. Epicware identifies the strongest policy angle for each specific review — not a generic &quot;spam&quot; claim, but the most defensible violation category with the highest historical removal rate. Submissions are framed with correct policy language. All available escalation channels are pursued systematically.</p>
-          <p>The $200/review pay-on-success model means there&apos;s a direct financial incentive to succeed. If the review stays up, there&apos;s no charge.</p>
+          <p>The $200/review fee is charged upfront and refunded in full if the review isn&apos;t removed within 3 months — giving us a direct financial incentive to succeed.</p>
         </>
       }
       ctaHref="/bad-review-removal-singapore"
-      ctaLabel="Remove Your Bad Reviews — $200, Pay on Success"
-      ctaContext="Epicware handles the full removal process — from assessment to escalation. No charge if the review stays up."
+      ctaLabel="Remove Your Bad Reviews — $200, Refunded If Not Removed"
+      ctaContext="Epicware handles the full removal process — from assessment to escalation. Refunded in full if the review stays up after 3 months."
       relatedPosts={[
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
         { title: "Google Review Policy Explained", href: "/blog/google-review-policy-explained" },

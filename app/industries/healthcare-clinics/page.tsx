@@ -31,7 +31,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, pay on success. Critical for healthcare where one bad review costs dozens of patients.",
+      "$200/review, refunded if not removed within 3 months. Critical for healthcare where one bad review costs dozens of patients.",
   },
   {
     label: "Review Generation",
@@ -111,8 +111,8 @@ export default function HealthcareClinicsPage() {
           email after confirmed appointments, phrased to comply with healthcare review
           guidelines — no incentivisation, just a simple request at the right time.
           For fake or policy-violating reviews, the Bad Review Removal service assesses
-          each case and submits removal requests at $200/review with success-only
-          payment. GBP Optimisation covers healthcare-specific profile elements:
+          each case and submits removal requests at $200/review, charged upfront and
+          refunded if not removed within 3 months. GBP Optimisation covers healthcare-specific profile elements:
           specialties listed, services described correctly, insurance accepted,
           consultation hours complete. Multi-branch clinic groups manage all profiles
           from one dashboard.

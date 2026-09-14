@@ -4,14 +4,14 @@ import RemoveReviewPage from "@/components/remove-review/RemoveReviewPage";
 export const metadata: Metadata = {
   title: "Remove a Bad Google Review | Epicware Singapore",
   description:
-    "Got an unfair Google review? Epicware assesses it for free and files for removal through official Google channels. Pay only if the review is removed.",
+    "Got an unfair Google review? Epicware assesses it for free and files for removal through official Google channels. $200 charged upfront, refunded in full if not removed within 3 months.",
   alternates: {
     canonical: "https://www.epicware.ai/remove-review",
   },
   openGraph: {
     title: "Remove a Bad Google Review | Epicware Singapore",
     description:
-      "Free assessment. Pay only if the review is removed. Singapore-based team helping clinics, F&B, and service businesses.",
+      "Free assessment. $200 charged upfront, refunded in full if not removed within 3 months. Singapore-based team helping clinics, F&B, and service businesses.",
     url: "https://www.epicware.ai/remove-review",
     siteName: "Epicware",
     type: "website",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Remove a Bad Google Review | Epicware Singapore",
     description:
-      "Free assessment. Pay only if the review is removed. Singapore-based team.",
+      "Free assessment. $200 charged upfront, refunded if not removed within 3 months. Singapore-based team.",
     images: ["https://www.epicware.ai/assets/epicmap-screen.png"],
   },
 };
@@ -111,7 +111,7 @@ const serviceSchema = {
     name: "Singapore",
   },
   description:
-    "Official Google policy-based review removal service for Singapore businesses. Free assessment, pay only if removed.",
+    "Official Google policy-based review removal service for Singapore businesses. Free assessment, $200 per review charged upfront, refunded if not removed within 3 months.",
   serviceType: "Reputation Management",
 };
 

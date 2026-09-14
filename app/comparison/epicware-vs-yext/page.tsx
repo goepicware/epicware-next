@@ -29,7 +29,7 @@ const features = [
   { feature: "Listings management", epicware: "Google-focused", competitor: "Broad global directories" },
   { feature: "WhatsApp review requests", epicware: true, competitor: false },
   { feature: "Automated review generation", epicware: true, competitor: "Limited" },
-  { feature: "Bad review removal", epicware: "$200/review, pay on success", competitor: false },
+  { feature: "Bad review removal", epicware: "$200/review, refunded if not removed in 3 months", competitor: false },
   { feature: "GBP hyperlocal rank tracking", epicware: true, competitor: "Basic" },
   { feature: "AI review response", epicware: true, competitor: true },
   { feature: "Pricing model", epicware: "SMB-accessible, SGD", competitor: "Enterprise pricing, USD" },

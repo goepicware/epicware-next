@@ -7,16 +7,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Remove Bad Google Reviews Singapore — Pay on Success",
+  title: "Remove Bad Google Reviews Singapore — Refunded If Not Removed",
   description:
-    "Remove fake, malicious, or policy-violating Google reviews. $200/review, pay on success only. Singapore's only productised bad review removal service.",
+    "Remove fake, malicious, or policy-violating Google reviews. $200/review, refunded in full if not removed within 3 months. Singapore's only productised bad review removal service.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/remove-bad-google-reviews",
   },
   openGraph: {
     title: "Remove Bad Google Reviews Singapore | Epicware",
     description:
-      "Remove fake, malicious, or policy-violating Google reviews. $200/review, pay on success.",
+      "Remove fake, malicious, or policy-violating Google reviews. $200/review, refunded if not removed within 3 months.",
     url: "https://www.epicware.ai/use-cases/remove-bad-google-reviews",
   },
 };
@@ -27,7 +27,7 @@ const schema = {
   name: "Remove Bad Google Reviews Singapore",
   serviceType: "Bad Review Removal",
   description:
-    "Productised Google review removal service for Singapore businesses. $200 per review, pay only on success.",
+    "Productised Google review removal service for Singapore businesses. $200 per review, refunded if not removed within 3 months.",
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
@@ -60,7 +60,7 @@ const STEPS = [
     number: "4",
     title: "Resolution",
     description:
-      "Google issues a final ruling. If the review is removed, you pay $200. If it stays up after all escalation paths are exhausted, you pay nothing.",
+      "Google issues a final ruling. You're charged $200 upfront when the case begins. If the review stays up after all escalation paths are exhausted within 3 months, you get a full refund.",
   },
 ];
 
@@ -84,14 +84,14 @@ export default function RemoveBadGoogleReviewsPage() {
       <CategoryHero
         badge="REMOVE BAD REVIEWS · SINGAPORE"
         h1="How to Remove Bad Google Reviews From Your Singapore Business"
-        subtitle="Not every negative review deserves to be there. Fake reviews from competitors, policy-violating attacks, and reviews from people who never visited can all be removed. Epicware handles the entire removal process — you pay $200 only if the review comes down."
+        subtitle="Not every negative review deserves to be there. Fake reviews from competitors, policy-violating attacks, and reviews from people who never visited can all be removed. Epicware handles the entire removal process — $200 charged upfront, refunded in full if the review isn't removed within 3 months."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
-          "$200/Review · Pay on Success",
+          "$200/Review · Refund Guarantee",
           "Singapore's Only Productised Removal",
           "24-Hour Initiation",
-          "No Charge if Review Stays",
+          "Refunded if Review Stays",
         ]}
         imageSrc="/assets/review-management-illustration.png"
       />

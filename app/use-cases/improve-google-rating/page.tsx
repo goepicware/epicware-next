@@ -48,7 +48,7 @@ const STEPS = [
     number: "2",
     title: "Removal",
     description:
-      "Removal requests filed for eligible reviews — $200/review, pay on success. Reviews that drag your rating down and violate policy are targeted first.",
+      "Removal requests filed for eligible reviews — $200/review, refunded if not removed within 3 months. Reviews that drag your rating down and violate policy are targeted first.",
   },
   {
     number: "3",
@@ -127,8 +127,8 @@ export default function ImproveGoogleRatingPage() {
               <p className="text-base text-muted-foreground leading-relaxed">
                 Fake reviews, competitor attacks, and policy-violating reviews are
                 removable. Epicware assesses each review, identifies the policy
-                violation, and submits removal requests at $200/review with
-                success-only payment. Removing 2–3 bad reviews can move your average
+                violation, and submits removal requests at $200/review, charged
+                upfront and refunded if not removed within 3 months. Removing 2–3 bad reviews can move your average
                 rating by 0.2–0.4 stars immediately.
               </p>
               <Link

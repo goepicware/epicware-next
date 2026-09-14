@@ -171,7 +171,7 @@ function Problem() {
     },
     {
       title: "Reviews Killing Your Revenue",
-      body: "A handful of fake or unfair reviews drops your rating and your revenue. Most businesses respond professionally. We get them removed — or you pay nothing.",
+      body: "A handful of fake or unfair reviews drops your rating and your revenue. Most businesses respond professionally. We get them removed — or refund the $200 fee in full.",
       stat: "1★ review can cost 22% in revenue",
       hex: "#f59e0b",
     },
@@ -363,7 +363,7 @@ function Pillars() {
       num: "03",
       title: "Bad Review Removal",
       sub: "Policy-Violating & Fake Review Defence",
-      body: "Most agencies tell you to 'respond professionally.' We actually get fake, malicious, and policy-violating reviews removed. You only pay if the review comes down. Zero risk.",
+      body: "Most agencies tell you to 'respond professionally.' We actually get fake, malicious, and policy-violating reviews removed. $200 per review, charged upfront — refunded in full if it doesn't come down within 3 months.",
       proof: "100+ reviews removed · Pay $0 if we fail",
       hex: "#10b981",
       checks: ["Review policy analysis", "Flagging & dispute filing", "Case tracking & follow-up", "Reputation risk monitoring", "No removal = no charge"],

@@ -5,7 +5,7 @@ import ServiceChildPage from "@/components/services/ServiceChildPage";
 export const metadata: Metadata = {
   title: "Google Review Removal Policy — What Can Be Removed",
   description:
-    "Which Singapore Google reviews can be removed under Google's content policies? Free assessment before any payment. $200 per review removed, pay on success.",
+    "Which Singapore Google reviews can be removed under Google's content policies? Free assessment before any payment. $200 per review, refunded if not removed within 3 months.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/google-review-removal-policy" },
   openGraph: {
     title: "Google Review Removal Policy Singapore | Epicware",
@@ -32,7 +32,7 @@ export default function GoogleReviewRemovalPolicyPage() {
       badge="GOOGLE REVIEW POLICY · SINGAPORE"
       h1="Google Review Removal Policy — Which Singapore Reviews Can Be Challenged"
       subtitle="Google has specific content policies that determine which reviews can be removed. Understanding these policies is the difference between a successful removal and wasting time on one that will fail."
-      trustSignals={["Policy Experts", "$200/Review Pay on Success", "Singapore-Built", "Free Assessment"]}
+      trustSignals={["Policy Experts", "$200/Review, Refund Guarantee", "Singapore-Built", "Free Assessment"]}
       imageSrc="/assets/review-management-illustration.png"
       openingParagraph="Most Singapore SMB owners who try to remove a bad review click the flag button, get a generic rejection, and assume nothing can be done. In most cases, the rejection happened because the request didn't cite the correct policy violation. Epicware knows which violation to cite — and how to document it correctly."
       whenTitle="Google's Content Policy — What Qualifies"
@@ -70,8 +70,8 @@ export default function GoogleReviewRemovalPolicyPage() {
       pricingContent={
         <p>
           Free assessment to confirm which reviews qualify before any payment.{" "}
-          <strong>$200 per review removed, pay on success only.</strong> No upfront fees. See full platform pricing
-          at{" "}
+          <strong>$200 per review, charged upfront — refunded in full if not removed within 3 months.</strong> See
+          full platform pricing at{" "}
           <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
         </p>
       }

@@ -402,7 +402,7 @@ export default function PricingCards() {
             {
               name: "Bad Review Removal",
               price: "$200 / review",
-              note: "Pay only if successfully removed. No charge if the review stays up.",
+              note: "Charged upfront. Refunded in full if not removed within 3 months.",
               highlight: true,
             },
             {

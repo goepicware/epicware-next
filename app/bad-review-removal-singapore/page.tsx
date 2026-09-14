@@ -5,14 +5,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Bad Review Removal Singapore — $200/Review, Pay on Success",
+  title: "Bad Review Removal Singapore — $200/Review, Refunded If Not Removed",
   description:
-    "Remove fake, malicious, or policy-violating Google reviews. Singapore's only fixed-price bad review removal service. $200/review. Pay only when it's gone.",
+    "Remove fake, malicious, or policy-violating Google reviews. Singapore's only fixed-price bad review removal service. $200/review, charged upfront — refunded in full if not removed within 3 months.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore" },
   openGraph: {
-    title: "Bad Review Removal Singapore — $200/Review, Pay on Success | Epicware",
+    title: "Bad Review Removal Singapore — $200/Review, Refunded If Not Removed | Epicware",
     description:
-      "Remove fake, malicious, or policy-violating Google reviews. $200/review. Pay only when it's gone.",
+      "Remove fake, malicious, or policy-violating Google reviews. $200/review, charged upfront — refunded in full if not removed within 3 months.",
     url: "https://www.epicware.ai/bad-review-removal-singapore",
   },
 };
@@ -23,7 +23,7 @@ const schema = {
   name: "Bad Review Removal Singapore",
   serviceType: "Bad Review Removal",
   description:
-    "Remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. $200 per review, pay on success only.",
+    "Remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. $200 per review, refunded in full if not removed within 3 months.",
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
@@ -67,12 +67,12 @@ export default function BadReviewRemovalSingaporePage() {
 
       <CategoryHero
         badge="BAD REVIEW REMOVAL · SINGAPORE"
-        h1="Bad Review Removal Singapore — $200 Per Review, Pay on Success"
-        subtitle="One fake review from a competitor or a disgruntled non-customer can drop your Google rating below 4.0 and cost you thousands in lost business. Epicware removes it. If the review stays up, you pay nothing."
+        h1="Bad Review Removal Singapore — $200 Per Review, Refunded If Not Removed"
+        subtitle="One fake review from a competitor or a disgruntled non-customer can drop your Google rating below 4.0 and cost you thousands in lost business. Epicware removes it. $200 charged upfront — refunded in full if it isn't removed within 3 months."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
         trustSignals={[
-          "$200/Review · Pay on Success",
+          "$200/Review · Refund Guarantee",
           "Singapore-Built",
           "Removal Initiated Within 24 Hours",
           "500+ Outlets Protected",
@@ -125,7 +125,7 @@ export default function BadReviewRemovalSingaporePage() {
               <li><strong>Assessment</strong> — we review the flagged review, identify the specific Google policy violation, and confirm eligibility</li>
               <li><strong>Submission</strong> — we submit a formal removal request through Google&apos;s business channels with the correct violation framing</li>
               <li><strong>Escalation</strong> — if the first request is rejected, we escalate through additional channels and re-submit with supplementary evidence</li>
-              <li><strong>Follow-through</strong> — we track the case until Google issues a final resolution. If the review is removed, you are invoiced $200. If it stays up, you pay nothing.</li>
+              <li><strong>Follow-through</strong> — we track the case until Google issues a final resolution. You're charged $200 upfront when the case begins. If the review isn't removed within 3 months, you get a full refund.</li>
             </ol>
             <p>
               Timeline: removal is typically initiated within 24 hours of submission. Resolution time varies depending on
@@ -141,9 +141,9 @@ export default function BadReviewRemovalSingaporePage() {
           <h2 className="font-display text-foreground mb-6">Pricing</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              <strong>$200 per review, pay on success only.</strong> There are no upfront fees, no retainers, no monthly
-              subscriptions. You only pay when a review is successfully removed. If Google rejects the removal request and
-              we exhaust all escalation paths, you pay nothing. For businesses with multiple reviews to challenge, we assess
+              <strong>$200 per review, charged upfront.</strong> There are no retainers, no monthly
+              subscriptions. If Google rejects the removal request and we exhaust all escalation paths and the review isn&apos;t
+              removed within 3 months, you get a full refund. For businesses with multiple reviews to challenge, we assess
               each one individually. See full platform pricing at{" "}
               <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
             </p>
@@ -166,8 +166,8 @@ export default function BadReviewRemovalSingaporePage() {
               before its 2021 exit. Epicware is Singapore-built, used by businesses in SG · MY · UAE · UK · US.
             </p>
             <p>
-              Bad Review Removal is the only service of its kind in Singapore with a success-only payment model. No other
-              platform or agency offers this guarantee. See the full platform overview at{" "}
+              Bad Review Removal is the only service of its kind in Singapore with this refund guarantee. No other
+              platform or agency offers it. See the full platform overview at{" "}
               <Link href="/" className="text-primary font-medium hover:underline">epicware.ai</Link>.
             </p>
           </div>

@@ -43,7 +43,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, pay on success for fake or policy-violating reviews.",
+      "$200/review, refunded if not removed within 3 months, for fake or policy-violating reviews.",
   },
   {
     label: "GBP Optimisation",
