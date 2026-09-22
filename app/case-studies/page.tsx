@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 
 const CASE_STUDIES = [
   {
+    href: "/case-studies/hair-salon-seo-singapore",
+    badge: "Hair & Beauty · Singapore · 2 Mall Outlets",
+    title: "Rankings Don't Fill Chairs. Bookings Do.",
+    result: "+283% website users, #1 rankings, 5x engagement",
+  },
+  {
     href: "/case-studies/aesthetic-clinic-seo-singapore",
     badge: "Medical Aesthetics · Singapore · 2 Outlets",
     title: "Top 3 in 60 Days: How a Singapore Medical Aesthetic Clinic Won Orchard and Hougang",
