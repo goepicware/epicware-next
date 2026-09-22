@@ -38,19 +38,19 @@ const articleSchema = {
 const FAQS = [
   {
     q: "How long does SEO take for a hair salon in Singapore?",
-    a: "Team Salon's engagement began in May 2026, and the results above were measured across July and August — roughly three to four months in. In general, expect early Google Business Profile and long-tail movement within 6–10 weeks, and competitive service keywords to build over three to six months. Salons tend to see returns faster than most categories because local search intent converts quickly.",
+    a: "This salon's engagement began in May 2026, and the results above were measured across July and August — roughly three to four months in. In general, expect early Google Business Profile and long-tail movement within 6–10 weeks, and competitive service keywords to build over three to six months. Salons tend to see returns faster than most categories because local search intent converts quickly.",
   },
   {
     q: "Do I need SEO if my salon already gets bookings from Instagram?",
-    a: "They solve different problems. Social builds awareness among people who weren't looking for you. Search captures people who are actively looking right now and choosing between you and three competitors. For Team Salon, organic search drove 71.75% of all website users — a volume of active, high-intent demand that social was not reaching.",
+    a: "They solve different problems. Social builds awareness among people who weren't looking for you. Search captures people who are actively looking right now and choosing between you and three competitors. For this salon, organic search drove 71.75% of all website users — a volume of active, high-intent demand that social was not reaching.",
   },
   {
     q: "Can you manage more than one salon outlet?",
-    a: "Yes. Team Salon runs both outlets through a single Epicware dashboard, each with its own keyword strategy, Google Business Profile workflow, posting schedule and review pipeline. We currently manage 50+ outlet profiles across five markets.",
+    a: "Yes. This client runs both outlets through a single Epicware dashboard, each with its own keyword strategy, Google Business Profile workflow, posting schedule and review pipeline. We currently manage 50+ outlet profiles across five markets.",
   },
   {
     q: "Can you get my salon recommended by ChatGPT and AI Overviews?",
-    a: "It's a dedicated workstream, not an add-on. It requires AI-crawlable site architecture, correct structured data, content written the way language models extract answers, and consistent entity signals and brand mentions across the sources those models draw from. Team Salon's AI assistant traffic grew 320%, with engagement events from that channel up 633%.",
+    a: "It's a dedicated workstream, not an add-on. It requires AI-crawlable site architecture, correct structured data, content written the way language models extract answers, and consistent entity signals and brand mentions across the sources those models draw from. This client's AI assistant traffic grew 320%, with engagement events from that channel up 633%.",
   },
   {
     q: "Can negative Google reviews actually be removed?",
@@ -80,7 +80,7 @@ const HERO_STATS = [
 ];
 
 const AT_A_GLANCE: { label: string; value: string }[] = [
-  { label: "Client", value: "Team Salon — teamsalon.com.sg" },
+  { label: "Client", value: "Name withheld at client's request" },
   { label: "Industry", value: "Hair & Beauty — organic / Aveda salon" },
   { label: "Locations", value: "2 outlets — VivoCity and Jem" },
   { label: "Engagement", value: "May 2026 – ongoing" },
@@ -117,7 +117,7 @@ const KEYWORD_RANKINGS: { keyword: string; result: string; image: string; alt: s
     keyword: "aveda salon singapore",
     result: "#1 organic",
     image: "ranking-aveda-salon-singapore.png",
-    alt: "Google search results for 'aveda salon singapore' showing Team Salon ranking #1 organically",
+    alt: "Google search results for 'aveda salon singapore' showing the client's listing ranking #1 organically, business name blurred",
     w: 754,
     h: 493,
   },
@@ -125,7 +125,7 @@ const KEYWORD_RANKINGS: { keyword: string; result: string; image: string; alt: s
     keyword: "aveda salon harbourfront mrt",
     result: "#1 organic + #1 Local Map Pack",
     image: "ranking-aveda-salon-harbourfront-mrt.png",
-    alt: "Google local map pack and search results for 'aveda salon harbourfront mrt' showing Team Salon at VivoCity ranking #1",
+    alt: "Google local map pack and search results for 'aveda salon harbourfront mrt' showing the client's VivoCity outlet ranking #1, business name blurred",
     w: 806,
     h: 612,
   },
@@ -133,7 +133,7 @@ const KEYWORD_RANKINGS: { keyword: string; result: string; image: string; alt: s
     keyword: "vivocity hair salon",
     result: "#1 organic + #2 Local Map Pack",
     image: "ranking-vivocity-hair-salon.png",
-    alt: "Google local map pack and search results for 'vivocity hair salon' showing Team Salon in the map pack and ranking #1 organically",
+    alt: "Google local map pack and search results for 'vivocity hair salon' showing the client's listing in the map pack and ranking #1 organically, business name blurred",
     w: 1082,
     h: 646,
   },
@@ -141,7 +141,7 @@ const KEYWORD_RANKINGS: { keyword: string; result: string; image: string; alt: s
     keyword: "hair salon jurong east mrt",
     result: "#1 organic",
     image: "ranking-hair-salon-jurong-east-mrt.png",
-    alt: "Google search results for 'hair salon jurong east mrt' showing Team Salon ranking #1 organically",
+    alt: "Google search results for 'hair salon jurong east mrt' showing the client's listing ranking #1 organically, business name blurred",
     w: 762,
     h: 537,
   },
@@ -149,7 +149,7 @@ const KEYWORD_RANKINGS: { keyword: string; result: string; image: string; alt: s
     keyword: "hair salon jem singapore",
     result: "#2 and #3 organic",
     image: "ranking-hair-salon-jem-singapore.png",
-    alt: "Google search results for 'hair salon jem singapore' showing Team Salon Jem ranking in the top organic positions",
+    alt: "Google search results for 'hair salon jem singapore' showing the client's Jem outlet ranking in the top organic positions, business name blurred",
     w: 840,
     h: 634,
   },
@@ -157,7 +157,7 @@ const KEYWORD_RANKINGS: { keyword: string; result: string; image: string; alt: s
     keyword: "hair salon price list",
     result: "#4 organic",
     image: "ranking-hair-salon-price-list.png",
-    alt: "Google search results for 'hair salon price list' showing Team Salon Singapore ranking #4 organically",
+    alt: "Google search results for 'hair salon price list' showing the client's listing ranking #4 organically, business name blurred",
     w: 732,
     h: 522,
   },
@@ -179,7 +179,7 @@ const WHY_IT_WORKED = [
   },
   {
     title: "We competed where we could win.",
-    body: "Organic colour, Aveda treatments and mall-catchment intent instead of “hair salon Singapore.” Lower search volume, far higher intent, and a searcher who has already chosen the category Team Salon leads in.",
+    body: "Organic colour, Aveda treatments and mall-catchment intent instead of “hair salon Singapore.” Lower search volume, far higher intent, and a searcher who has already chosen the category this salon leads in.",
   },
   {
     title: "We separated the two outlets from day one.",
@@ -343,6 +343,9 @@ export default function HairSalonCaseStudyPage() {
               </div>
             ))}
           </dl>
+          <p className="text-xs text-muted-foreground italic mt-4">
+            The salon&rsquo;s name is withheld at its request. Outlets, timeline and results are reported as-is.
+          </p>
         </div>
       </section>
 
@@ -369,7 +372,7 @@ export default function HairSalonCaseStudyPage() {
               the next result.
             </p>
             <p className="text-muted-foreground text-[17px] leading-relaxed">
-              Team Salon had the harder half of that equation solved already. Two outlets in prime mall locations,
+              This salon had the harder half of that equation solved already. Two outlets in prime mall locations,
               an Aveda partnership, a genuine organic positioning, and a base of loyal clients. What it didn&rsquo;t
               have was visibility at the point of decision.
             </p>
@@ -436,8 +439,8 @@ export default function HairSalonCaseStudyPage() {
               <div>
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Built a differentiated keyword strategy</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90">
-                  Rather than fighting for generic head terms, we built the strategy around what actually makes Team
-                  Salon different: organic and ammonia-free colour, Aveda treatments, specific hair concerns, and
+                  Rather than fighting for generic head terms, we built the strategy around what actually makes this
+                  salon different: organic and ammonia-free colour, Aveda treatments, specific hair concerns, and
                   hyper-local mall-catchment intent. Lower competition, dramatically higher purchase intent, and a
                   searcher who has already self-selected for a premium organic salon. Each outlet was then given its
                   own keyword identity and local landing structure, so VivoCity and Jem stopped cannibalising each
@@ -551,7 +554,7 @@ export default function HairSalonCaseStudyPage() {
             <p className="text-[15px] leading-relaxed text-foreground/90 mb-8">
               Look at what these rankings have in common: they&rsquo;re the searches a customer makes when
               they&rsquo;re already close to booking. Someone searching &ldquo;aveda salon harbourfront mrt&rdquo;
-              isn&rsquo;t browsing — they&rsquo;re standing at an MRT station deciding where to walk. Team Salon now
+              isn&rsquo;t browsing — they&rsquo;re standing at an MRT station deciding where to walk. This salon now
               owns both the organic result and the Map Pack for that search. Both outlets hold first-position
               organic rankings in their own catchment, and &ldquo;aveda salon singapore&rdquo; at #1 isn&rsquo;t a
               local search — that&rsquo;s the whole island.
@@ -643,7 +646,7 @@ export default function HairSalonCaseStudyPage() {
             </div>
             <p className="text-[15px] leading-relaxed text-foreground/90">
               Organic search now accounts for <strong className="text-foreground">71.75% of all website users</strong>{" "}
-              — Team Salon&rsquo;s single largest acquisition channel by a wide margin, and the one with the lowest
+              — this salon&rsquo;s single largest acquisition channel by a wide margin, and the one with the lowest
               cost per visitor of anything in the mix.
             </p>
           </div>
@@ -777,7 +780,7 @@ export default function HairSalonCaseStudyPage() {
           </div>
 
           <p className="text-[15px] leading-relaxed text-foreground/90 mb-4">
-            That chain is visible in the data. Impressions up 181% put Team Salon in front of a far wider set of
+            That chain is visible in the data. Impressions up 181% put this salon in front of a far wider set of
             searchers. Clicks up 209% turned that exposure into visits. Engagement events up 500% show those
             visitors moving through the site rather than bouncing. And returning users up 306% alongside direct
             traffic up 406% show the same people coming back — the behaviour that precedes a booking in a considered
