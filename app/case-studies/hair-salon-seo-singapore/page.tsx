@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Hair Salon SEO Case Study Singapore: 283% Growth | Epicware",
+  title: "Hair Salon SEO Case Study Singapore: 283% Growth",
   description:
     "How Epicware grew a two-outlet Singapore hair salon's organic traffic 263% and first-page rankings 272% in four months — and turned it into booked chairs.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/hair-salon-seo-singapore" },
