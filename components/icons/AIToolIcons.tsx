@@ -18,16 +18,21 @@ export function GeminiIcon({ className }: IconProps) {
 
 export function PerplexityIcon({ className }: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
-      <path d="M12 3v18M4.5 8.5 12 3l7.5 5.5M4.5 8.5v9L12 21l7.5-3.5v-9M4.5 8.5 12 12l7.5-3.5M12 12v9" strokeLinejoin="round" strokeLinecap="round" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 1.5 13.8 8.6 21 6.3 16.9 12 21 17.7 13.8 15.4 12 22.5 10.2 15.4 3 17.7 7.1 12 3 6.3 10.2 8.6 12 1.5Z" />
     </svg>
   );
 }
 
 export function ClaudeIcon({ className }: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" className={className} aria-hidden="true">
-      <path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.93 4.93l3.54 3.54M15.53 15.53l3.54 3.54M4.93 19.07l3.54-3.54M15.53 8.47l3.54-3.54" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <rect x="10.7" y="2" width="2.6" height="8.2" rx="1.3" />
+      <rect x="10.7" y="2" width="2.6" height="8.2" rx="1.3" transform="rotate(60 12 12)" />
+      <rect x="10.7" y="2" width="2.6" height="8.2" rx="1.3" transform="rotate(120 12 12)" />
+      <rect x="10.7" y="2" width="2.6" height="8.2" rx="1.3" transform="rotate(180 12 12)" />
+      <rect x="10.7" y="2" width="2.6" height="8.2" rx="1.3" transform="rotate(240 12 12)" />
+      <rect x="10.7" y="2" width="2.6" height="8.2" rx="1.3" transform="rotate(300 12 12)" />
     </svg>
   );
 }

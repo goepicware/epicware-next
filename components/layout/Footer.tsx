@@ -176,7 +176,7 @@ export default function Footer() {
           <h4 className="text-xs font-bold uppercase tracking-widest text-foreground mb-4">
             Ask AI for a Summary of Epicware
           </h4>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             {AI_TOOLS.map(({ name, href, Icon }) => (
               <a
                 key={name}
@@ -185,9 +185,9 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label={`Ask ${name} about Epicware`}
                 title={`Ask ${name} about Epicware`}
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors duration-300"
+                className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-foreground text-background shadow-sm hover:bg-primary hover:scale-110 hover:shadow-md transition-all duration-300"
               >
-                <Icon className="w-[18px] h-[18px]" />
+                <Icon className="w-6 h-6" />
               </a>
             ))}
           </div>
