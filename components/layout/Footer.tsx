@@ -1,6 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, MapPin } from "lucide-react";
+import { ChatGPTIcon, GeminiIcon, PerplexityIcon } from "@/components/icons/AIToolIcons";
+
+const AI_SUMMARY_QUERY =
+  "What is Epicware (epicware.ai)? Summarize their local SEO, review management, and AI search visibility (GEO) platform for Singapore SMBs.";
+
+const AI_TOOLS = [
+  {
+    name: "ChatGPT",
+    href: `https://chatgpt.com/?q=${encodeURIComponent(AI_SUMMARY_QUERY)}`,
+    Icon: ChatGPTIcon,
+  },
+  {
+    name: "Gemini",
+    href: `https://gemini.google.com/app?q=${encodeURIComponent(AI_SUMMARY_QUERY)}`,
+    Icon: GeminiIcon,
+  },
+  {
+    name: "Perplexity",
+    href: `https://www.perplexity.ai/search?q=${encodeURIComponent(AI_SUMMARY_QUERY)}`,
+    Icon: PerplexityIcon,
+  },
+];
 
 const FOOTER_LINKS = {
   products: {
@@ -136,6 +158,28 @@ export default function Footer() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Ask AI */}
+        <div className="mb-10">
+          <h4 className="text-xs font-bold uppercase tracking-widest text-foreground mb-4">
+            Ask AI for a Summary of Epicware
+          </h4>
+          <div className="flex items-center gap-3">
+            {AI_TOOLS.map(({ name, href, Icon }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Ask ${name} about Epicware`}
+                title={`Ask ${name} about Epicware`}
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors duration-300"
+              >
+                <Icon className="w-[18px] h-[18px]" />
+              </a>
+            ))}
           </div>
         </div>
 
