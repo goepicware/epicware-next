@@ -23,3 +23,20 @@ export function PerplexityIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function ClaudeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" className={className} aria-hidden="true">
+      <path d="M12 2v5M12 17v5M2 12h5M17 12h5M4.93 4.93l3.54 3.54M15.53 15.53l3.54 3.54M4.93 19.07l3.54-3.54M15.53 8.47l3.54-3.54" />
+    </svg>
+  );
+}
+
+export function GrokIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 2 3 8.5l3.4 10.5L12 22l5.6-3 3.4-10.5L12 2Zm0 2.47 6.9 5.02-2.64 8.1H7.74l-2.64-8.1L12 4.47Z" />
+      <path d="M12 8.5 9 13h2.2l-1.1 3.5L15 12h-2.2l1.1-3.5Z" />
+    </svg>
+  );
+}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, MapPin } from "lucide-react";
-import { ChatGPTIcon, GeminiIcon, PerplexityIcon } from "@/components/icons/AIToolIcons";
+import { ChatGPTIcon, GeminiIcon, PerplexityIcon, ClaudeIcon, GrokIcon } from "@/components/icons/AIToolIcons";
 
 const AI_SUMMARY_QUERY =
   "What is Epicware (epicware.ai)? Summarize their local SEO, review management, and AI search visibility (GEO) platform for Singapore SMBs.";
@@ -21,6 +21,16 @@ const AI_TOOLS = [
     name: "Perplexity",
     href: `https://www.perplexity.ai/search?q=${encodeURIComponent(AI_SUMMARY_QUERY)}`,
     Icon: PerplexityIcon,
+  },
+  {
+    name: "Claude",
+    href: `https://claude.ai/new?q=${encodeURIComponent(AI_SUMMARY_QUERY)}`,
+    Icon: ClaudeIcon,
+  },
+  {
+    name: "Grok",
+    href: `https://grok.com/?q=${encodeURIComponent(AI_SUMMARY_QUERY)}`,
+    Icon: GrokIcon,
   },
 ];
 
