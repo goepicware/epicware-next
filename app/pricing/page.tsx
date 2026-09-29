@@ -23,6 +23,30 @@ const schemaFAQ = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "How much does local SEO cost for a small business in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Epicware's Foundation plan starts at $149/month and covers review management, GBP optimisation, and rank tracking for one outlet. The Authority plan at $599/month adds AI social content scheduling, full local SEO, and EpicMap rank tracking. There are no setup fees and no lock-in contracts on any plan.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which Epicware plan is right for a clinic or restaurant with one or two outlets?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most single-outlet clinics, restaurants, and salons start on the Foundation plan ($149/month), which covers review management, GBP optimisation, and rank tracking. If you need AI-generated social content or competitor analysis across districts, the Authority plan ($599/month) is the next step. Additional outlets can be added to any plan at $99/month each.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Epicware cheaper than hiring a local SEO agency in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. A typical Singapore local SEO agency retainer runs $800–$2,500/month, with no guaranteed results and no bad review removal service included. Epicware's Foundation plan starts at $149/month. Bad review removal is separate at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Is there a lock-in contract?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -42,7 +66,7 @@ const schemaFAQ = {
       name: "How does bad review removal billing work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You pay $200 only when a review is successfully removed from Google. If a review stays up, you pay nothing. We handle the escalation process — flagging, appeals, support tickets.",
+        text: "You pay $200 upfront per review. If it isn't removed from Google within 3 months, you get a full refund. We handle the escalation process — flagging, appeals, support tickets.",
       },
     },
     {
@@ -139,9 +163,69 @@ const schemaPricing = {
         description: "Everything in Domination plus paid ad management across Meta and Google.",
         offers: {
           "@type": "Offer",
-          price: "2200",
+          price: "3800",
           priceCurrency: "SGD",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "2200", priceCurrency: "SGD", unitCode: "MON" },
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "3800", priceCurrency: "SGD", unitCode: "MON" },
+          url: "https://www.epicware.ai/pricing",
+          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+        },
+      },
+    },
+  ],
+};
+
+const schemaAddOns = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Epicware Add-Ons",
+  description: "Optional add-on services available with any Epicware plan.",
+  url: "https://www.epicware.ai/pricing",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Product",
+        name: "Bad Review Removal",
+        description: "Charged upfront. Refunded in full if not removed within 3 months.",
+        offers: {
+          "@type": "Offer",
+          price: "200",
+          priceCurrency: "SGD",
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "200", priceCurrency: "SGD", unitText: "per review" },
+          url: "https://www.epicware.ai/pricing",
+          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Product",
+        name: "10-Page Website Build",
+        description: "A professionally designed 10-page website, built for local SEO and conversions.",
+        offers: {
+          "@type": "Offer",
+          price: "3000",
+          priceCurrency: "SGD",
+          url: "https://www.epicware.ai/pricing",
+          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Product",
+        name: "WordPress Maintenance",
+        description: "Ongoing updates, security hardening, backups, and performance monitoring for your WordPress site.",
+        offers: {
+          "@type": "Offer",
+          price: "500",
+          priceCurrency: "SGD",
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "500", priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
           seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
@@ -155,6 +239,7 @@ export default function PricingPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaPricing) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaAddOns) }} />
 
       {/* Hero */}
       <section className="hero-gradient pt-28 pb-14">
@@ -188,9 +273,21 @@ export default function PricingPage() {
       {/* FAQ */}
       <section className="section-gradient-2 py-14 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display font-bold text-foreground text-2xl mb-8 text-center">Common Questions</h2>
+          <h2 className="font-display font-bold text-foreground text-2xl mb-8 text-center">Common questions about Epicware pricing</h2>
           <div className="space-y-5">
             {[
+              {
+                q: "How much does local SEO cost for a small business in Singapore?",
+                a: "Epicware's Foundation plan starts at $149/month and covers review management, GBP optimisation, and rank tracking for one outlet. The Authority plan at $599/month adds AI social content scheduling, full local SEO, and EpicMap rank tracking. There are no setup fees and no lock-in contracts on any plan.",
+              },
+              {
+                q: "Which Epicware plan is right for a clinic or restaurant with one or two outlets?",
+                a: "Most single-outlet clinics, restaurants, and salons start on the Foundation plan ($149/month), which covers review management, GBP optimisation, and rank tracking. If you need AI-generated social content or competitor analysis across districts, the Authority plan ($599/month) is the next step. Additional outlets can be added to any plan at $99/month each.",
+              },
+              {
+                q: "Is Epicware cheaper than hiring a local SEO agency in Singapore?",
+                a: "Yes. A typical Singapore local SEO agency retainer runs $800–$2,500/month, with no guaranteed results and no bad review removal included. Epicware's Foundation plan starts at $149/month. Bad review removal is separate at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
+              },
               {
                 q: "Is there a lock-in contract?",
                 a: "No. All plans are month-to-month. You can cancel anytime with 30 days' notice. We keep clients with results, not contracts.",

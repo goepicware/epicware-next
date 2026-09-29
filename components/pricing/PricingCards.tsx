@@ -406,15 +406,15 @@ export default function PricingCards() {
               highlight: true,
             },
             {
-              name: "Additional Outlet",
-              price: "+$99 / outlet / month",
-              note: "Add any number of additional outlets to any plan.",
+              name: "10-Page Website Build",
+              price: "$3,000 one-time",
+              note: "A professionally designed 10-page website, built for local SEO and conversions.",
               highlight: false,
             },
             {
               name: "WordPress Maintenance",
-              price: "$1,500 one-time",
-              note: "Full WordPress site audit, update, and security hardening.",
+              price: "$500 / month",
+              note: "Ongoing updates, security hardening, backups, and performance monitoring for your WordPress site.",
               highlight: false,
             },
           ].map((a) => (
