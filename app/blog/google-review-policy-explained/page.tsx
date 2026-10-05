@@ -99,6 +99,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
         { title: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
+        { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
       ]}
     />
   );

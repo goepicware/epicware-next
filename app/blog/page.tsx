@@ -31,6 +31,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals",
+    summary:
+      "What counts as spam on Google Maps, the evidence to gather before you report anything, how to file each report type, when to escalate to a Business Redressal Complaint, and how to build a persistence system that actually gets results.",
+    href: "/blog/google-maps-spam-reporting",
+    image: "/assets/blog/google-maps-spam-reporting/hero-google-maps-navigation.jpg",
+    category: "REPUTATION MANAGEMENT",
+    date: "Oct 2026",
+    readTime: "10 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
     title: "SEO Tips for Small Business Owners: Rank Locally, Build Reviews, and Show Up in AI Search",
     summary:
       "A beginner-friendly, outcome-focused list of SEO tips for small business owners — Google Business Profile, review generation, local content, schema markup, and AI search visibility, with a concrete first action for each.",

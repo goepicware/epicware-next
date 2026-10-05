@@ -95,6 +95,7 @@ export default function Post() {
         { title: "Google Review Policy Explained", href: "/blog/google-review-policy-explained" },
         { title: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
         { title: "How Fast Should You Respond to Google Reviews?", href: "/blog/how-fast-should-you-respond-to-google-reviews" },
+        { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
       ]}
     />
   );

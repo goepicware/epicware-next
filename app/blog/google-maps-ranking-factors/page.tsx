@@ -83,6 +83,7 @@ export default function Post() {
         { title: "How Many Google Reviews Do You Need to Compete Locally?", href: "/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
         { title: "Reviews vs Rating — What Matters More for Maps Rank?", href: "/blog/reviews-vs-rating-what-matters-more" },
         { title: "Do Photo Reviews Matter for Local SEO?", href: "/blog/do-photo-reviews-matter-for-local-seo" },
+        { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
       ]}
     />
   );

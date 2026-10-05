@@ -113,6 +113,7 @@ export default function Post() {
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
         { title: "Google Review Policy Explained", href: "/blog/google-review-policy-explained" },
         { title: "Improve Your Google Rating in Singapore", href: "/use-cases/improve-google-rating" },
+        { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
       ]}
     />
   );
