@@ -31,6 +31,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "Clinic Owners: 2–4 Week Checklist to Change Google Categories Safely",
+    summary:
+      "How to pick the right primary category for your clinic, keep treatments under Services instead of categories, map categories for multi-specialty practices, and the checklist to follow before changing anything so you don't trigger re-verification or a ranking drop.",
+    href: "/blog/clinic-google-categories",
+    image: "/assets/blog/clinic-google-categories/hero-clinic-waiting-room.jpg",
+    category: "GBP OPTIMISATION",
+    date: "Oct 2026",
+    readTime: "9 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
     title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals",
     summary:
       "What counts as spam on Google Maps, the evidence to gather before you report anything, how to file each report type, when to escalate to a Business Redressal Complaint, and how to build a persistence system that actually gets results.",

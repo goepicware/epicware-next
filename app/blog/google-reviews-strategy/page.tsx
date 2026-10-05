@@ -93,6 +93,7 @@ export default function Post() {
         { title: "Review Velocity vs Total Review Count", href: "/blog/review-velocity-vs-total-review-count" },
         { title: "How to Get More Google Reviews", href: "/blog/how-to-get-more-google-reviews" },
         { title: "Best Time to Ask for a Google Review", href: "/blog/best-time-to-ask-for-a-google-review" },
+        { title: "Clinic Owners: 2–4 Week Checklist to Change Google Categories Safely", href: "/blog/clinic-google-categories" },
       ]}
     />
   );
