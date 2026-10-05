@@ -31,6 +31,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "Restaurant Menu SEO for Multi-Location Operators",
+    summary:
+      "An operator-friendly playbook to get your menu found on Search, Maps, and AI — the exact fields an SEO-ready menu page needs, how to implement Menu/MenuItem JSON-LD, keeping GBP in sync, menu engineering, and an audit cadence that keeps it all accurate.",
+    href: "/blog/restaurant-menu-seo",
+    image: "/assets/blog/restaurant-menu-seo/hero-restaurant-menu-table.jpg",
+    category: "LOCAL SEO",
+    date: "Oct 2026",
+    readTime: "10 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
     title: "Clinic Owners: 2–4 Week Checklist to Change Google Categories Safely",
     summary:
       "How to pick the right primary category for your clinic, keep treatments under Services instead of categories, map categories for multi-specialty practices, and the checklist to follow before changing anything so you don't trigger re-verification or a ranking drop.",
