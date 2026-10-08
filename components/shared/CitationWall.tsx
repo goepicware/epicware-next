@@ -17,29 +17,34 @@ type CitationWallProps = {
   // in-page "#audit-form" section. Pass a real route (e.g. "/free-audit")
   // for pages — like the homepage — that don't have that form on-page.
   ctaHref?: string;
+  // Pages that supply their own section heading (so they control the H2
+  // sequence) can hide this component's built-in eyebrow/H2/intro block.
+  hideIntro?: boolean;
 };
 
-export default function CitationWall({ ctaHref = "#audit-form" }: CitationWallProps) {
+export default function CitationWall({ ctaHref = "#audit-form", hideIntro = false }: CitationWallProps) {
   const [active, setActive] = useState<Citation | null>(null);
   const ctaScrollsInPage = ctaHref.startsWith("#");
 
   return (
     <section className="py-20 lg:py-28 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6">
-        <motion.div {...fadeUp()} className="max-w-2xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">
-            Verified AI search results
-          </span>
-          <h2 className="font-display text-foreground">
-            AI is already recommending our clients. Here&rsquo;s the proof — with dates.
-          </h2>
-          <p className="text-muted-foreground text-[15px] leading-relaxed mt-4">
-            Every card below is a live screenshot, captured within 30–60 days of a client starting with us. No stock
-            photos, no mockups — click any result to see it full-size.
-          </p>
-        </motion.div>
+        {!hideIntro && (
+          <motion.div {...fadeUp()} className="max-w-2xl">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">
+              Verified AI search results
+            </span>
+            <h2 className="font-display text-foreground">
+              AI is already recommending our clients. Here&rsquo;s the proof — with dates.
+            </h2>
+            <p className="text-muted-foreground text-[15px] leading-relaxed mt-4">
+              Every card below is a live screenshot, captured within 30–60 days of a client starting with us. No
+              stock photos, no mockups — click any result to see it full-size.
+            </p>
+          </motion.div>
+        )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ${hideIntro ? "" : "mt-10"}`}>
           {CITATIONS.map((c, i) => (
             <motion.button
               key={c.id}
