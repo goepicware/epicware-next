@@ -63,7 +63,7 @@ export default function GbpAuditPage() {
             The audit output is a prioritised action list — you address critical items first, then work down the
             impact scale. For businesses that want Epicware to apply the fixes directly, the platform handles the
             changes via API. Get your{" "}
-            <Link href="/audit" className="text-primary font-medium hover:underline">free GBP audit</Link>{" "}
+            <Link href="/free-audit" className="text-primary font-medium hover:underline">free GBP audit</Link>{" "}
             to see your results immediately.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function GbpAuditPage() {
             GBP Optimisation Singapore
           </Link>{" "}
           service. Get a{" "}
-          <Link href="/audit" className="text-primary font-medium hover:underline">free GBP audit</Link>{" "}
+          <Link href="/free-audit" className="text-primary font-medium hover:underline">free GBP audit</Link>{" "}
           to see your results immediately.
         </>
       }

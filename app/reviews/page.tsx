@@ -99,7 +99,7 @@ const REVIEWS: ReviewItem[] = [
   {
     name: "Hazel Johnson",
     when: "15 weeks ago",
-    text: "Standard local agencies cost SGD 3,000–5,000/month, whereas Epicware's plans start at SGD 149/month with no lock-in contracts.",
+    text: "Standard local agencies cost SGD 3,000–5,000/month, whereas Epicware's plans start at SGD 299/month with no lock-in contracts.",
     featured: true,
   },
 ];

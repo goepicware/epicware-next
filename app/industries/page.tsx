@@ -113,7 +113,7 @@ export default function IndustriesHubPage() {
               size="lg"
               className="rounded-full bg-transparent border border-foreground/30 text-foreground hover:bg-muted h-14 px-8 font-semibold text-base"
             >
-              <Link href="/audit">Free GBP Audit</Link>
+              <Link href="/free-audit">Free GBP Audit</Link>
             </Button>
           </div>
         </div>

@@ -20,7 +20,7 @@ export async function generateMetadata({
   const d = getDistrict(slug);
   if (!d) return {};
   return {
-    title: `Local SEO ${d.name} Singapore — Google Maps & Reviews | Epicware`,
+    title: `Local SEO ${d.name} Singapore — Google Maps & Reviews`,
     description: `Epicware helps ${d.name} businesses rank higher on Google Maps, generate more reviews, and remove bad ones. Singapore-built platform for ${d.name} SMBs.`,
     alternates: {
       canonical: `https://www.epicware.ai/locations/singapore/${slug}`,
@@ -101,12 +101,12 @@ export default async function DistrictPage({
         h1={d.h1}
         subtitle={d.subtitle}
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Singapore-Built",
           "Bad Review Removal Guaranteed",
-          "500+ Outlets Managed",
-          "No Agency Retainer",
+          "50+ Outlets Managed",
+          "Live Dashboard Included",
         ]}
         imageSrc="/assets/epicmap-before-after.png"
       />
@@ -219,14 +219,21 @@ export default async function DistrictPage({
             >
               Singapore local SEO coverage
             </Link>
-            . See all Singapore district pages or explore{" "}
+            . See all Singapore district pages, explore{" "}
             <Link
               href="/local-seo-singapore"
               className="text-primary font-medium hover:underline"
             >
               Local SEO Singapore
             </Link>{" "}
-            services.
+            services, or see{" "}
+            <Link
+              href="/seo-agency-singapore"
+              className="text-primary font-medium hover:underline"
+            >
+              Epicware&apos;s SEO agency services
+            </Link>
+            .
           </p>
         </div>
       </section>

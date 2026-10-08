@@ -84,7 +84,7 @@ export default function GoogleReviewRemovalPolicyPage() {
             Bad Review Removal Singapore
           </Link>{" "}
           service. Start with a{" "}
-          <Link href="/audit" className="text-primary font-medium hover:underline">free assessment</Link>{" "}
+          <Link href="/free-audit" className="text-primary font-medium hover:underline">free assessment</Link>{" "}
           to identify which of your reviews are removable.
         </>
       }

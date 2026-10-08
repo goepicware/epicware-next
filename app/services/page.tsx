@@ -186,7 +186,7 @@ export default function ServicesPage() {
               Book a Free Demo <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/audit"
+              href="/free-audit"
               className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-border text-foreground font-semibold text-base hover:bg-muted transition-colors duration-200"
             >
               Free GBP Audit
@@ -366,7 +366,7 @@ export default function ServicesPage() {
               Book My Free Demo <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/audit"
+              href="/free-audit"
               className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-border text-foreground font-semibold text-base hover:bg-muted transition-colors duration-200"
             >
               Or get a free GBP audit first
