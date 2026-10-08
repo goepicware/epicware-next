@@ -155,12 +155,17 @@ export default function AiSearchVisibilitySingaporePage() {
       {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">Why Epicware — Not an Agency</h2>
+          <h2 className="font-display text-foreground mb-6">An SEO Agency With Its Own Software</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a self-serve dashboard
-              that runs automatically — no retainer, no waiting on someone else&apos;s team, no monthly report that is
-              already out of date. You log in, you see your data, you take action.
+              Epicware is an SEO agency with its own software. Not a generic SEO tool. Our team does the work —
+              GBP optimisation, review generation, rank tracking, AI citation monitoring — and you get the live
+              dashboard we built to run it on, so there&apos;s no waiting on someone else&apos;s schedule and no
+              monthly report that&apos;s already out of date. AI visibility is one part of{" "}
+              <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+                our full SEO services
+              </Link>
+              , alongside Google Search, Maps, and reputation management.
             </p>
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in

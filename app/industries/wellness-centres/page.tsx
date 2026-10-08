@@ -84,7 +84,7 @@ export default function WellnessCentresPage() {
         "Therapist Reviews",
         "Ambiance Photos",
         "Singapore-Built",
-        "No Agency Retainer",
+        "Live Dashboard Included",
       ]}
       imageSrc="/assets/hero-image.jpg"
       openingParagraph="A spa with a luxurious interior and skilled therapists that doesn't appear in Google Maps searches for 'massage near me in Singapore' is invisible to its most valuable customers — first-time visitors who haven't been recommended by a friend. In the wellness category, the customer's decision is driven by photos (does this look like the experience I want?) and reviews (do therapists here actually deliver?). Epicware manages both dimensions: GBP photo optimisation that showcases your space, and review generation that captures positive client experiences before they fade."

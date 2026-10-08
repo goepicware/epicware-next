@@ -86,7 +86,7 @@ export default function NailHairSalonsPage() {
         "Appointment Booking Intent",
         "Stylist-Specific Reviews",
         "Singapore-Built",
-        "No Agency Retainer",
+        "Live Dashboard Included",
       ]}
       imageSrc="/assets/hero-image.jpg"
       openingParagraph="When someone searches 'hair colouring salon near Tampines' or 'nail art in Jurong', they are ready to book. The salon that appears in the Google Maps 3-Pack with before-and-after photos, 80+ reviews, and a 4.7 rating wins that booking. Epicware's platform manages the review generation, GBP photo management, and rank tracking that keeps salons visible in the local searches that drive appointments. For salon chains with multiple outlets, one dashboard manages every location."

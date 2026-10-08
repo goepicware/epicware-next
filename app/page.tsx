@@ -50,7 +50,7 @@ const organizationSchema = {
   url: "https://www.epicware.ai",
   logo: "https://www.epicware.ai/assets/epicware-logo.png",
   description:
-    "Singapore's #1 Local SEO and Reputation Management platform for SMBs. GBP optimisation, review management, bad review removal, and AI GEO visibility — all in one self-serve dashboard.",
+    "Singapore's #1 Local SEO and Reputation Management platform for SMBs. GBP optimisation, review management, bad review removal, and AI GEO visibility — all in one live client dashboard.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Singapore",

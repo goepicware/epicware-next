@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="text-gray-500 text-[1.02rem] leading-relaxed max-w-2xl">
-            Not another agency. Not another generic SEO tool. Epicware connects Google Maps, AI
+            An SEO agency with its own software. Not a generic SEO tool. Epicware connects Google Maps, AI
             search visibility, reviews, and reputation into one local growth platform.
           </p>
         </motion.div>

@@ -926,7 +926,7 @@ function FAQ() {
     },
     {
       q: "How is Epicware different from an agency or other SEO tools?",
-      a: "Agencies charge retainers and make you wait on their team. Generic SEO tools give you data but not execution. Epicware is a self-serve platform that actually does the work — optimises your GBP, generates your reviews, removes bad ones, posts your content, and tracks your rankings — all in one dashboard.",
+      a: "Most agencies make you wait on their team, and generic SEO tools give you data but not execution. Epicware is an SEO agency with its own software — our team actually does the work — optimises your GBP, generates your reviews, removes bad ones, posts your content, and tracks your rankings — and you watch it all happen live in one dashboard.",
     },
   ];
 
@@ -990,7 +990,7 @@ function ClosingCTA() {
             Book a free 30-minute audit. We'll run a live scan on your Google Business Profile
             and show you exactly what's costing you customers right now.
           </p>
-          <p className="text-white/30 text-sm mb-10">No obligation. No agency pitch. Just the data.</p>
+          <p className="text-white/30 text-sm mb-10">No obligation. No hard pitch. Just the data.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <PrimaryCTA label="Get My Free Audit →" />
             <SecondaryCTA label="Book a Strategy Call" />

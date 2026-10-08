@@ -89,7 +89,7 @@ export default function UKPage() {
           "London & UK Market",
           "Singapore-Built",
           "AI-Native",
-          "No Agency Retainer",
+          "Live Dashboard Included",
         ]}
         imageSrc="/assets/epicmap-before-after.png"
       />

@@ -89,7 +89,7 @@ export default function USAPage() {
           "US Market Ready",
           "Singapore-Built",
           "AI-Native",
-          "No Agency Retainer",
+          "Live Dashboard Included",
         ]}
         imageSrc="/assets/epicmap-before-after.png"
       />

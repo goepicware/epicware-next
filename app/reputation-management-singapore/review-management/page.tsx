@@ -32,7 +32,7 @@ export default function ReviewManagementPage() {
       badge="REVIEW MANAGEMENT · SINGAPORE"
       h1="Review Management Singapore — Monitor Every Review in Real Time"
       subtitle="Missing a negative review for 48 hours in Singapore's dense market can cost you dozens of customers. Epicware monitors every Google Business Profile in your portfolio and alerts you instantly."
-      trustSignals={["Real-Time Alerts", "Multi-Outlet Dashboard", "Singapore-Built", "No Agency Retainer"]}
+      trustSignals={["Real-Time Alerts", "Multi-Outlet Dashboard", "Singapore-Built", "Live Dashboard Included"]}
       imageSrc="/assets/review-management-illustration.png"
       openingParagraph="Your Google reviews are live marketing material. Every response you give — or don't give — is visible to every future customer who reads your profile. Epicware monitors every review across all your outlets so nothing slips through."
       whenTitle="When You Need Review Management"

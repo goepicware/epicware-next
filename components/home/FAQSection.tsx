@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: "How is Epicware different from hiring a local SEO agency?",
-    a: "Agencies sell time. Epicware sells a platform. With an agency, you pay a monthly retainer for someone else to log into your Google account and make changes on a schedule. With Epicware, you get a self-serve dashboard where everything — GBP optimisation, review generation, rank tracking, post scheduling — runs automatically. You see the results in real time. No waiting for a monthly report. No retainer. Pay for what you use.",
+    a: "Most agencies sell time. Epicware is an SEO agency with its own software. Our team does the work — GBP optimisation, review generation, rank tracking, post scheduling — and you get the live dashboard we built to run it on, so you see the results in real time instead of waiting for a monthly report.",
   },
   {
     q: "Can you actually remove a bad Google review?",

@@ -30,7 +30,7 @@ export default function Page() {
       badge="RESTAURANT GUIDE · SINGAPORE"
       h1="Restaurant Digital Growth Guide — Rank Higher, Get More Reviews, Fill Tables"
       subtitle="A complete playbook for Singapore restaurant owners covering Google Maps rank, review generation, and reputation management."
-      trustSignals={["Singapore F&B Market", "500+ Outlets Managed", "No Agency Retainer", "Bad Review Removal Available"]}
+      trustSignals={["Singapore F&B Market", "500+ Outlets Managed", "Live Dashboard Included", "Bad Review Removal Available"]}
       imageSrc="/assets/review-management-illustration.png"
       intro={
         <>

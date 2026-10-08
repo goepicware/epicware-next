@@ -160,11 +160,11 @@ export default function ReviewManagementSingaporePage() {
       {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">Why Epicware — Not an Agency</h2>
+          <h2 className="font-display text-foreground mb-6">An SEO Agency With Its Own Software</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a self-serve dashboard
-              that runs automatically — no retainer, no waiting on someone else&apos;s team, no monthly report that is
+              Epicware is an SEO agency with its own software. Not a generic SEO tool. Our team does the work —
+              no hourly billing, no waiting on someone else&apos;s team, no monthly report that is
               already out of date.
             </p>
             <p>

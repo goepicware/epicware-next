@@ -32,7 +32,7 @@ export default function ReviewGenerationPage() {
       badge="REVIEW GENERATION · SINGAPORE"
       h1="Review Generation Singapore — Turn Happy Customers Into Google Reviews"
       subtitle="Most Singapore SMBs collect reviews by accident. The ones with 200+ reviews got there by system. Epicware's automated WhatsApp and email campaigns ask at exactly the right moment."
-      trustSignals={["WhatsApp + Email Campaigns", "Timing Optimised", "Singapore-Built", "No Agency Retainer"]}
+      trustSignals={["WhatsApp + Email Campaigns", "Timing Optimised", "Singapore-Built", "Live Dashboard Included"]}
       imageSrc="/assets/review-management-illustration.png"
       openingParagraph="Review count is a credibility signal. A business with 8 reviews and a 4.9 star rating does not feel as trustworthy as one with 150 reviews and a 4.6. Singapore customers judge volume alongside rating. Businesses that ask for reviews at the right moment convert far more often than those who ask days later or never ask at all."
       whenTitle="When You Need Review Generation"

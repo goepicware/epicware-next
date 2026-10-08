@@ -96,7 +96,7 @@ export default function EpicEngagePage() {
         trustSignals={[
           "Singapore-Built",
           "AI-Native",
-          "No Agency Retainer",
+          "Live Dashboard Included",
           "Behaviour-Triggered",
         ]}
         imageSrc="/assets/how-it-works-campaigns.png"
@@ -236,7 +236,7 @@ export default function EpicEngagePage() {
               Book My Free Demo →
             </Link>
             <Link
-              href="/audit"
+              href="/free-audit"
               className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-border text-foreground font-semibold text-base hover:bg-muted transition-colors duration-200"
             >
               Start with a free audit

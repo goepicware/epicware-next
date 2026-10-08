@@ -32,7 +32,7 @@ export default function EpicEngageEmailMarketingPage() {
       badge="EPICENGAGE · GROWTH TOOLS"
       h1="EpicEngage Email Marketing Singapore — Keep Customers Coming Back Automatically"
       subtitle="Getting a new customer costs five times more than keeping an existing one. EpicEngage runs automated email campaigns for Singapore SMBs — triggered by customer behaviour, requiring nothing from you after setup."
-      trustSignals={["Behaviour-Triggered Campaigns", "30-40% Open Rates", "Singapore-Built", "No Agency Retainer"]}
+      trustSignals={["Behaviour-Triggered Campaigns", "30-40% Open Rates", "Singapore-Built", "Live Dashboard Included"]}
       imageSrc="/assets/how-it-works-campaigns.png"
       openingParagraph="Most Singapore SMBs focus entirely on acquisition — getting new customers through the door. But acquiring a new customer costs five times more than retaining an existing one. Email marketing is the most cost-effective retention channel when done right — personal, timely, and triggered by actual behaviour."
       whenTitle="When You Need Email Marketing"

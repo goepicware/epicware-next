@@ -767,7 +767,7 @@ export default function MultiOutletRestaurantCaseStudyPage() {
             rankings, reviews and AI visibility — then show you the biggest opportunities you&rsquo;re currently
             missing.
           </p>
-          <p className="text-sm text-white/40 mb-10">No obligation. No agency pitch. Just the data.</p>
+          <p className="text-sm text-white/40 mb-10">No obligation. No hard pitch. Just the data.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
             <Button asChild className="bg-white text-foreground hover:bg-white/90 h-13 px-7 rounded-full font-semibold">
               <Link href="/book-demo#form">Book My Free Demo →</Link>

@@ -261,9 +261,14 @@ export default function ReputationManagementPage() {
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is a platform, not an agency. That matters because agencies sell time — their time. They log in,
-              make manual changes, and send you a monthly report. Epicware gives you a self-serve dashboard that runs
-              your reputation management automatically, 24 hours a day, whether you are at your outlet or not.
+              Epicware is an SEO agency with its own software. That matters because most agencies sell time — their
+              time. They log in, make manual changes, and send you a monthly report. Epicware&apos;s team runs your
+              reputation management on the live dashboard we built ourselves, automatically, 24 hours a day, whether
+              you are at your outlet or not. Reputation is one part of{" "}
+              <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+                SEO agency Singapore
+              </Link>{" "}
+              services covering Search, Maps, and AI visibility too.
             </p>
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in

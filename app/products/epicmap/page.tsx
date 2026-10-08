@@ -96,7 +96,7 @@ export default function EpicMapPage() {
         trustSignals={[
           "Singapore-Built",
           "AI-Native",
-          "No Agency Retainer",
+          "Live Dashboard Included",
           "500+ Outlets Managed",
         ]}
         imageSrc="/assets/EpicMapImageforweb.png"
@@ -231,7 +231,7 @@ export default function EpicMapPage() {
               GBP Optimisation
             </Link>
             . If you are new to local SEO, start with a{" "}
-            <Link href="/audit" className="text-primary font-medium hover:underline">
+            <Link href="/free-audit" className="text-primary font-medium hover:underline">
               free GBP audit
             </Link>{" "}
             — EpicMap runs the same audit live on your profile during the demo.
@@ -257,7 +257,7 @@ export default function EpicMapPage() {
               Book My Free Demo →
             </Link>
             <Link
-              href="/audit"
+              href="/free-audit"
               className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-border text-foreground font-semibold text-base hover:bg-muted transition-colors duration-200"
             >
               Start with a free audit

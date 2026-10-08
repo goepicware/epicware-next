@@ -89,7 +89,7 @@ export default function MalaysiaPage() {
           "KL + Penang + JB",
           "Same Platform as Singapore",
           "AI-Native",
-          "No Agency Retainer",
+          "Live Dashboard Included",
         ]}
         imageSrc="/assets/epicmap-before-after.png"
       />

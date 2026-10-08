@@ -22,7 +22,7 @@ const TRUST = [
   "500+ Outlets Managed",
   "Singapore-Built",
   "AI-Native",
-  "No Agency Retainer",
+  "Live Dashboard Included",
 ];
 
 const PRODUCTS = [
@@ -128,7 +128,7 @@ export default function ProductsHubPage() {
               size="lg"
               className="rounded-full border-border text-foreground hover:bg-muted h-14 px-8 font-semibold text-base"
             >
-              <Link href="/audit">Free GBP Audit</Link>
+              <Link href="/free-audit">Free GBP Audit</Link>
             </Button>
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
@@ -233,7 +233,7 @@ export default function ProductsHubPage() {
               size="lg"
               className="rounded-full border-border text-foreground hover:bg-muted h-14 px-8 font-semibold"
             >
-              <Link href="/audit">Or start with a free audit</Link>
+              <Link href="/free-audit">Or start with a free audit</Link>
             </Button>
           </div>
         </div>

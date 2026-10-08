@@ -91,7 +91,7 @@ export default function LocalSeoSingaporePage() {
           "19-Point GBP Audit",
           "Singapore-Built",
           "AI-Native",
-          "No Agency Retainer",
+          "Live Dashboard Included",
         ]}
         imageSrc="/assets/epicmap-before-after.png"
       />
@@ -172,12 +172,17 @@ export default function LocalSeoSingaporePage() {
       {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">Why Epicware — Not an Agency</h2>
+          <h2 className="font-display text-foreground mb-6">Why choose an SEO agency with its own platform?</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a self-serve dashboard
-              that runs automatically — no retainer, no waiting on someone else&apos;s team, no monthly report that is
-              already out of date. You log in, you see your data, you take action.
+              Epicware is an SEO agency with its own software — not a generic SEO tool, and not a typical
+              retainer-and-report setup either. Our team does the work: GBP optimisation, review generation, rank
+              tracking, no waiting on someone else&apos;s schedule, no monthly report that&apos;s already out of
+              date. You log in, you see your data, you take action. For the full picture of how we work as a{" "}
+              <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+                Singapore SEO agency
+              </Link>
+              , see what&apos;s included across Google Search, Maps, AI search, and reputation.
             </p>
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in

@@ -30,6 +30,8 @@ interface IndustryPageProps {
   howEpicwareHelps: React.ReactNode;
   services: ServiceLink[];
   locationLinks: LocationLink[];
+  faqs?: { q: string; a: string }[];
+  faqHeading?: string;
 }
 
 export default function IndustryPage({
@@ -45,20 +47,40 @@ export default function IndustryPage({
   howEpicwareHelps,
   services,
   locationLinks,
+  faqs,
+  faqHeading,
 }: IndustryPageProps) {
+  const schemaFAQ = faqs
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map(({ q, a }) => ({
+          "@type": "Question",
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      {schemaFAQ && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+        />
+      )}
 
       <CategoryHero
         badge={badge}
         h1={h1}
         subtitle={subtitle}
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={trustSignals}
         imageSrc={imageSrc}
       />
@@ -91,6 +113,25 @@ export default function IndustryPage({
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      {faqs && faqs.length > 0 && (
+        <section className="py-14 lg:py-20">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <h2 className="font-display font-bold text-foreground text-2xl mb-8 text-center">
+              {faqHeading ?? "Common questions"}
+            </h2>
+            <div className="space-y-5">
+              {faqs.map(({ q, a }) => (
+                <div key={q} className="rounded-2xl border border-border/60 bg-card p-5">
+                  <p className="font-semibold text-foreground text-sm mb-2">{q}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Services grid */}
       <section className="py-10 lg:py-14 section-gradient-1">
@@ -146,14 +187,13 @@ export default function IndustryPage({
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
           <h2 className="font-display text-foreground mb-6">
-            Why Epicware — Not an Agency
+            An SEO Agency With Its Own Software
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is a platform, not an agency. Agencies sell their team&apos;s
-              time. Epicware gives you a self-serve dashboard that runs review
-              generation, GBP optimisation, and reputation management automatically
-              — 24 hours a day, whether you are at your outlet or not.
+              Epicware is an SEO agency with its own software. Our team runs review
+              generation, GBP optimisation, and reputation management on the live
+              dashboard we built ourselves — 24 hours a day, whether you are at your outlet or not.
             </p>
             <p>
               Built by the team behind NinjaOS ($120M GMV, F&amp;B SaaS, 2021 exit).

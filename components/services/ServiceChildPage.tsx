@@ -21,6 +21,7 @@ interface ServiceChildPageProps {
   parentHref: string;
   parentLabel: string;
   parentSentence: React.ReactNode;
+  faqs?: { q: string; a: string }[];
 }
 
 export default function ServiceChildPage({
@@ -37,20 +38,39 @@ export default function ServiceChildPage({
   howContent,
   pricingContent,
   parentSentence,
+  faqs,
 }: ServiceChildPageProps) {
+  const schemaFAQ = faqs
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map(({ q, a }) => ({
+          "@type": "Question",
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      {schemaFAQ && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+        />
+      )}
 
       <CategoryHero
         badge={badge}
         h1={h1}
         subtitle={subtitle}
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={trustSignals}
         imageSrc={imageSrc}
       />
@@ -97,11 +117,11 @@ export default function ServiceChildPage({
       {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">Why Epicware — Not an Agency</h2>
+          <h2 className="font-display text-foreground mb-6">An SEO Agency With Its Own Software</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a
-              self-serve dashboard that runs automatically — no retainer, no waiting on someone
+              Epicware is an SEO agency with its own software. Not a generic SEO tool. Our team does
+              the work on the live dashboard we built ourselves — no hourly billing, no waiting on someone
               else&apos;s team, no monthly report that is already out of date. You log in, you see
               your data, you take action.
             </p>
@@ -117,6 +137,23 @@ export default function ServiceChildPage({
           </div>
         </div>
       </section>
+
+      {/* FAQ (rendered when faqs prop is provided) */}
+      {faqs && faqs.length > 0 && (
+        <section className="py-14 lg:py-20">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <h2 className="font-display font-bold text-foreground text-2xl mb-8 text-center">Common questions</h2>
+            <div className="space-y-5">
+              {faqs.map(({ q, a }) => (
+                <div key={q} className="rounded-2xl border border-border/60 bg-card p-5">
+                  <p className="font-semibold text-foreground text-sm mb-2">{q}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Parent link */}
       <section className="py-6 lg:py-8">
@@ -145,7 +182,7 @@ export default function ServiceChildPage({
               Book My Free Demo →
             </Link>
             <Link
-              href="/audit"
+              href="/free-audit"
               className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-border text-foreground font-semibold text-base hover:bg-muted transition-colors duration-200"
             >
               Start with a free audit

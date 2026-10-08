@@ -22,7 +22,7 @@ export default function FinalCTA() {
           and show you exactly what&apos;s costing you customers right now.
         </p>
         <p className="text-sm text-white/40 mb-10">
-          No obligation. No agency pitch. Just the data.
+          No obligation. No hard pitch. Just the data.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <Button
@@ -40,7 +40,7 @@ export default function FinalCTA() {
             size="lg"
             className="rounded-full bg-transparent border border-white/40 text-white hover:bg-white/10 h-14 px-8 font-semibold text-base"
           >
-            <Link href="/audit">Get Free GBP Audit</Link>
+            <Link href="/free-audit">Get Free GBP Audit</Link>
           </Button>
         </div>
         <p className="text-xs text-white/30">
