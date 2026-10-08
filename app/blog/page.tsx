@@ -31,6 +31,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "Don't Fill All Nine: Audit Your Google Business Secondary Categories",
+    summary:
+      "A practical audit guide for Google Business secondary categories — the IS/HAS test for deciding what stays, how many to actually use, common mistakes like category stuffing, and how category availability changes across regions for multi-location businesses.",
+    href: "/blog/secondary-categories-google-business",
+    image: "/assets/blog/secondary-categories-google-business/hero-bakery-counter.jpg",
+    category: "GBP OPTIMISATION",
+    date: "Oct 2026",
+    readTime: "9 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
     title: "Restaurant Menu SEO for Multi-Location Operators",
     summary:
       "An operator-friendly playbook to get your menu found on Search, Maps, and AI — the exact fields an SEO-ready menu page needs, how to implement Menu/MenuItem JSON-LD, keeping GBP in sync, menu engineering, and an audit cadence that keeps it all accurate.",

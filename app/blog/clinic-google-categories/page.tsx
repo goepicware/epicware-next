@@ -467,6 +467,7 @@ export default function Post() {
           { title: "Improve Your Google Rating Singapore — From 3.9 to 4.5+", href: "/use-cases/improve-google-rating" },
           { title: "Google Reviews Strategy: 90-Day Framework for Singapore SMBs", href: "/blog/google-reviews-strategy" },
           { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
+          { title: "Don't Fill All Nine: Audit Your Google Business Secondary Categories", href: "/blog/secondary-categories-google-business" },
         ]}
       />
     </>
