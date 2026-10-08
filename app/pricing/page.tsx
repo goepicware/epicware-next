@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PricingCards from "@/components/pricing/PricingCards";
+import WhyEpicware from "@/components/pricing/WhyEpicware";
+import AddOns from "@/components/pricing/AddOns";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
@@ -17,83 +19,59 @@ export const metadata: Metadata = {
   },
 };
 
+// Single source of truth for the pricing FAQ — drives both the visible
+// accordion below and the FAQPage JSON-LD, so the two can never drift apart.
+const FAQS: { q: string; a: string }[] = [
+  {
+    q: "I've been burned by an SEO agency before. Why is Epicware different?",
+    a: "Most agencies sell advice and leave the implementation to you, start their guarantee clock in month 2, and lock you into 6–12 months prepaid. On Domination and above, Epicware publishes every page, blog post and schema change for you, starts your guarantee on day 1, and works month to month. If we miss the ranking target, we keep working free until it's achieved.",
+  },
+  {
+    q: "How much does local SEO cost for a small business in Singapore?",
+    a: "Epicware's Foundation plan starts at $299/month and covers review management, GBP optimisation, and rank tracking for one outlet. The Authority plan at $899/month adds AI social content scheduling, full local SEO, and EpicMap rank tracking. There are no setup fees and no lock-in contracts on any plan.",
+  },
+  {
+    q: "Which Epicware plan is right for a clinic or restaurant with one or two outlets?",
+    a: "Most single-outlet clinics, restaurants, and salons start on the Foundation plan ($299/month), which covers review management, GBP optimisation, and rank tracking. If you need AI-generated social content or competitor analysis across districts, the Authority plan ($899/month) is the next step. Additional outlets can be added to any plan at $99/month each.",
+  },
+  {
+    q: "Is Epicware cheaper than hiring a local SEO agency in Singapore?",
+    a: "Yes. A typical Singapore local SEO agency retainer runs $800–$2,500/month, with no guaranteed results and no bad review removal included. Epicware's Foundation plan starts at $299/month. Bad review removal is separate at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
+  },
+  {
+    q: "Is there a lock-in contract?",
+    a: "No. All plans are month-to-month. You can cancel anytime with 30 days' notice. We keep clients with results, not contracts.",
+  },
+  {
+    q: "What counts as an 'outlet'?",
+    a: "One outlet = one physical business location or Google Business Profile. If you have 3 restaurant branches, that's 3 outlets. The Authority, Domination, and Full Stack plans include 1 outlet with additional outlets at $99/month each.",
+  },
+  {
+    q: "How does bad review removal billing work?",
+    a: "You pay $200 upfront per review. If it isn't removed from Google within 3 months, you get a full refund. We handle the escalation process — flagging, appeals, support tickets.",
+  },
+  {
+    q: "How does the annual discount work?",
+    a: "Toggle to Annual on the pricing cards above. Annual plans are billed once a year at 15% off. You pay upfront for 12 months and save compared to monthly billing.",
+  },
+  {
+    q: "What happens after I book a strategy call?",
+    a: "A member of the Epicware team will review your Google Business Profile, your current ratings, and your competitors before the call. We come prepared. The call is 30–45 minutes and we'll tell you exactly where you stand and what to prioritise.",
+  },
+  {
+    q: "Can I upgrade or downgrade my plan?",
+    a: "Yes. You can move between plans at the start of your next billing cycle. Upgrades take effect immediately and we prorate the difference.",
+  },
+];
+
 const schemaFAQ = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does local SEO cost for a small business in Singapore?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Epicware's Foundation plan starts at $149/month and covers review management, GBP optimisation, and rank tracking for one outlet. The Authority plan at $599/month adds AI social content scheduling, full local SEO, and EpicMap rank tracking. There are no setup fees and no lock-in contracts on any plan.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which Epicware plan is right for a clinic or restaurant with one or two outlets?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most single-outlet clinics, restaurants, and salons start on the Foundation plan ($149/month), which covers review management, GBP optimisation, and rank tracking. If you need AI-generated social content or competitor analysis across districts, the Authority plan ($599/month) is the next step. Additional outlets can be added to any plan at $99/month each.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Epicware cheaper than hiring a local SEO agency in Singapore?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. A typical Singapore local SEO agency retainer runs $800–$2,500/month, with no guaranteed results and no bad review removal service included. Epicware's Foundation plan starts at $149/month. Bad review removal is separate at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a lock-in contract?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. All plans are month-to-month. You can cancel anytime with 30 days' notice. We keep clients with results, not contracts.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What counts as an 'outlet'?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "One outlet = one physical business location or Google Business Profile. If you have 3 restaurant branches, that's 3 outlets. The Authority, Domination, and Full Stack plans include 1 outlet with additional outlets at $99/month each.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How does bad review removal billing work?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "You pay $200 upfront per review. If it isn't removed from Google within 3 months, you get a full refund. We handle the escalation process — flagging, appeals, support tickets.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How does the annual discount work?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Annual plans are billed once a year at 15% off. You pay upfront for 12 months and save compared to monthly billing.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What happens after I book a strategy call?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A member of the Epicware team will review your Google Business Profile, your current ratings, and your competitors before the call. The call is 30–45 minutes and we'll tell you exactly where you stand and what to prioritise.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I upgrade or downgrade my plan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. You can move between plans at the start of your next billing cycle. Upgrades take effect immediately and we prorate the difference.",
-      },
-    },
-  ],
+  mainEntity: FAQS.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const schemaPricing = {
@@ -112,9 +90,9 @@ const schemaPricing = {
         description: "Review management, GBP optimisation, and rank tracking for a single outlet.",
         offers: {
           "@type": "Offer",
-          price: "149",
+          price: "299",
           priceCurrency: "SGD",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "149", priceCurrency: "SGD", unitCode: "MON" },
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "299", priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
           seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
@@ -129,9 +107,9 @@ const schemaPricing = {
         description: "Full Local SEO and rank tracking with EpicMap, EpicReview, and EpicSocial.",
         offers: {
           "@type": "Offer",
-          price: "599",
+          price: "899",
           priceCurrency: "SGD",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "599", priceCurrency: "SGD", unitCode: "MON" },
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "899", priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
           seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
@@ -242,15 +220,15 @@ export default function PricingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaAddOns) }} />
 
       {/* Hero */}
-      <section className="hero-gradient pt-28 pb-14">
+      <section className="hero-gradient pt-20 pb-8">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-5">
+          <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-3">
             TRANSPARENT PRICING · NO LOCK-IN
           </div>
-          <h1 className="font-display font-bold text-foreground mb-5 leading-tight">
+          <h1 className="font-display font-bold text-foreground mb-3 leading-tight">
             Local SEO &amp; Reputation Management Pricing — Singapore
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-4">
             From getting your first 50 reviews to dominating Google Search, Maps, and AI results — pick the plan that matches where you are today.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
@@ -264,55 +242,28 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing cards */}
-      <section className="py-14 lg:py-20">
+      <section className="pt-6 lg:pt-8">
         <div className="container mx-auto px-6 max-w-7xl">
           <PricingCards />
         </div>
       </section>
+
+      {/* Add-ons */}
+      <section className="pb-14 lg:pb-20">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <AddOns />
+        </div>
+      </section>
+
+      {/* Tried SEO before? */}
+      <WhyEpicware />
 
       {/* FAQ */}
       <section className="section-gradient-2 py-14 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
           <h2 className="font-display font-bold text-foreground text-2xl mb-8 text-center">Common questions about Epicware pricing</h2>
           <div className="space-y-5">
-            {[
-              {
-                q: "How much does local SEO cost for a small business in Singapore?",
-                a: "Epicware's Foundation plan starts at $149/month and covers review management, GBP optimisation, and rank tracking for one outlet. The Authority plan at $599/month adds AI social content scheduling, full local SEO, and EpicMap rank tracking. There are no setup fees and no lock-in contracts on any plan.",
-              },
-              {
-                q: "Which Epicware plan is right for a clinic or restaurant with one or two outlets?",
-                a: "Most single-outlet clinics, restaurants, and salons start on the Foundation plan ($149/month), which covers review management, GBP optimisation, and rank tracking. If you need AI-generated social content or competitor analysis across districts, the Authority plan ($599/month) is the next step. Additional outlets can be added to any plan at $99/month each.",
-              },
-              {
-                q: "Is Epicware cheaper than hiring a local SEO agency in Singapore?",
-                a: "Yes. A typical Singapore local SEO agency retainer runs $800–$2,500/month, with no guaranteed results and no bad review removal included. Epicware's Foundation plan starts at $149/month. Bad review removal is separate at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
-              },
-              {
-                q: "Is there a lock-in contract?",
-                a: "No. All plans are month-to-month. You can cancel anytime with 30 days' notice. We keep clients with results, not contracts.",
-              },
-              {
-                q: "What counts as an 'outlet'?",
-                a: "One outlet = one physical business location or Google Business Profile. If you have 3 restaurant branches, that's 3 outlets. The Authority, Domination, and Full Stack plans include 1 outlet with additional outlets at $99/month each.",
-              },
-              {
-                q: "How does bad review removal billing work?",
-                a: "You pay $200 upfront per review. If it isn't removed from Google within 3 months, you get a full refund. We handle the escalation process — flagging, appeals, support tickets.",
-              },
-              {
-                q: "How does the annual discount work?",
-                a: "Toggle to Annual on the pricing cards above. Annual plans are billed once a year at 15% off. You pay upfront for 12 months and save compared to monthly billing.",
-              },
-              {
-                q: "What happens after I book a strategy call?",
-                a: "A member of the Epicware team will review your Google Business Profile, your current ratings, and your competitors before the call. We come prepared. The call is 30–45 minutes and we'll tell you exactly where you stand and what to prioritise.",
-              },
-              {
-                q: "Can I upgrade or downgrade my plan?",
-                a: "Yes. You can move between plans at the start of your next billing cycle. Upgrades take effect immediately and we prorate the difference.",
-              },
-            ].map(({ q, a }) => (
+            {FAQS.map(({ q, a }) => (
               <div key={q} className="rounded-2xl border border-border/60 bg-card p-5">
                 <p className="font-semibold text-foreground text-sm mb-2">{q}</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">{a}</p>

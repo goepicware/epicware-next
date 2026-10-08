@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
 import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 import {
   Search, MapPin, Loader2, AlertCircle, Star, ChevronRight,
@@ -34,6 +35,8 @@ interface Props {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function StepGBP({ onConfirm }: Props) {
+  const searchParams = useSearchParams();
+
   // Maps SDK state
   const [mapsReady, setMapsReady] = useState(false);
   const autocompleteRef = useRef<google.maps.places.AutocompleteService | null>(null);
@@ -110,6 +113,13 @@ export default function StepGBP({ onConfirm }: Props) {
         }
       );
     }, 300);
+  }, []);
+
+  // Pre-fill the business search from ?business= (e.g. the /pricing audit form)
+  useEffect(() => {
+    const business = searchParams.get("business");
+    if (business) handleQueryChange(business);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Fetch Place Details when a prediction is selected (Path A)

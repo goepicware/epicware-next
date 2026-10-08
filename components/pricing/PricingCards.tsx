@@ -52,7 +52,7 @@ const PLANS: Array<{
       "Multi-platform dashboard",
       "5,000 emails / month",
       "Google Business Profile Optimization",
-      "2 SEO-optimised posts per week",
+      "5 SEO-optimised posts per week",
       "Keyword research",
       "Competitor keyword research",
       { label: "AI Social Media Generator & Scheduler", isNew: true },
@@ -107,7 +107,7 @@ const PLANS: Array<{
       "GEO Implementation (content, schema & authority signals for LLM recommendation)",
       "Monthly GEO Monitoring Report",
       "Link building (authority signals)",
-      { label: "20x Backlinks/month", isNew: true },
+      { label: "DA20+ backlinks every month", isNew: true },
       "Dedicated growth strategist",
       "Monthly Revenue Impact Report",
     ],
@@ -133,7 +133,7 @@ const PLANS: Array<{
       { label: "AI Social Media Generator & Scheduler", isNew: true },
       "Monthly ad performance reporting",
       "Retargeting campaigns (website + review audiences)",
-      { label: "20x Backlinks/month", isNew: true },
+      { label: "DA20+ backlinks every month", isNew: true },
       "Ad spend billed separately",
     ],
     note: "Ad spend is billed separately and is not included in the monthly fee.",
@@ -216,6 +216,9 @@ export default function PricingCards() {
           </span>
         </span>
       </div>
+      <p className="text-center text-xs text-muted-foreground -mt-6 mb-10">
+        Annual is optional. Monthly is always available, cancel anytime with 30 days&apos; notice.
+      </p>
 
       {/* Plan grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
@@ -390,52 +393,6 @@ export default function PricingCards() {
         >
           Contact Us <ArrowRight className="w-4 h-4" />
         </Link>
-      </div>
-
-      {/* Add-ons */}
-      <div className="rounded-3xl border border-border/60 bg-muted/30 p-8">
-        <h3 className="font-display font-semibold text-foreground text-lg mb-5">
-          Add-Ons
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {[
-            {
-              name: "Bad Review Removal",
-              price: "$200 / review",
-              note: "Charged upfront. Refunded in full if not removed within 3 months.",
-              highlight: true,
-            },
-            {
-              name: "10-Page Website Build",
-              price: "$3,000 one-time",
-              note: "A professionally designed 10-page website, built for local SEO and conversions.",
-              highlight: false,
-            },
-            {
-              name: "WordPress Maintenance",
-              price: "$500 / month",
-              note: "Ongoing updates, security hardening, backups, and performance monitoring for your WordPress site.",
-              highlight: false,
-            },
-          ].map((a) => (
-            <div
-              key={a.name}
-              className={`rounded-2xl p-5 border ${a.highlight ? "border-primary/30 bg-primary/5" : "border-border/60 bg-card"}`}
-            >
-              <p className="font-semibold text-foreground text-sm mb-1">
-                {a.name}
-              </p>
-              <p
-                className={`font-bold text-lg mb-2 ${a.highlight ? "text-primary" : "text-foreground"}`}
-              >
-                {a.price}
-              </p>
-              <p className="text-xs text-muted-foreground leading-snug">
-                {a.note}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </div>
   );

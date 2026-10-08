@@ -32,6 +32,22 @@
   --color-luxury-grey: var(--luxury-grey);
   --color-charcoal: var(--charcoal);
 
+  /* "Why Epicware" section tokens — plum/cream/white reuse the tokens above */
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-plum-light: var(--plum-light);
+  --color-plum-line: var(--plum-line);
+  --color-loss: var(--loss);
+  --color-loss-text: var(--loss-text);
+  --color-loss-soft: var(--loss-soft);
+  --color-loss-tint: var(--loss-tint);
+  --color-body-2: var(--body-2);
+  --color-muted-2: var(--muted-2);
+  --color-rank-green: var(--rank-green);
+  --color-rank-amber: var(--rank-amber);
+  --color-rank-orange: var(--rank-orange);
+  --color-rank-red: var(--rank-red);
+
   /* Font families */
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-space-grotesk), var(--font-inter), system-ui, sans-serif;
@@ -101,6 +117,22 @@
   --input: oklch(0.922 0 0);
   --ring: oklch(0.361 0.092 330.6);
   --radius: 1rem;
+
+  /* "Why Epicware" section tokens */
+  --ink: #1B1520;
+  --ink-2: #2A2230;
+  --plum-light: #74406B;
+  --plum-line: #7E4E76;
+  --loss: #C2410C;
+  --loss-text: #B4410E;
+  --loss-soft: #E08E62;
+  --loss-tint: #FBE7DC;
+  --body-2: #4A4250;
+  --muted-2: #6E6573;
+  --rank-green: #2F7D45;
+  --rank-amber: #C99A1E;
+  --rank-orange: #D2691E;
+  --rank-red: #B3261E;
 }
 
 @layer base {
@@ -263,3 +295,76 @@
 ::-webkit-scrollbar-track { background: var(--color-muted); }
 ::-webkit-scrollbar-thumb { background: color-mix(in oklch, var(--muted-foreground) 20%, transparent); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: color-mix(in oklch, var(--muted-foreground) 40%, transparent); }
+
+/* Hero section CSS animations — replaces framer-motion in critical path */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroImageIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.hero-fade-up {
+  animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-image-in {
+  animation: heroImageIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* "Why Epicware" (/pricing) section animations */
+@keyframes whyRowIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes whyDotIn {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes whySealSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.why-row-in {
+  animation: whyRowIn 0.3s ease-out both;
+}
+.why-dot-in {
+  animation: whyDotIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.why-seal-ring {
+  animation: whySealSpin 18s linear infinite;
+}
+.why-timeline-col {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s ease-out;
+}
+.why-timeline-col[data-revealed="true"] {
+  clip-path: inset(0 0 0 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-row-in,
+  .why-dot-in,
+  .why-seal-ring {
+    animation: none !important;
+  }
+  .why-timeline-col {
+    transition: none !important;
+    clip-path: inset(0 0 0 0) !important;
+  }
+}
+
+/* Tilted cards (receipt, audit preview) — flat below 900px and under reduced motion */
+.why-tilt {
+  transform: none;
+}
+@media (min-width: 900px) {
+  .why-tilt {
+    transform: rotate(var(--tilt, 0deg));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .why-tilt {
+    transform: none !important;
+  }
+}
