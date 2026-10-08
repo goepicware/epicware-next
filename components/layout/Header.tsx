@@ -44,6 +44,7 @@ const NAV = {
   services: {
     label: "Services",
     items: [
+      { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
       { href: "/reputation-management-singapore", label: "Reputation Management" },
       { href: "/local-seo-singapore", label: "Local SEO Singapore" },
       { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },

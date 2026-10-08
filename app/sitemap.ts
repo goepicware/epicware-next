@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
 
     // Core money pages
+    { url: `${BASE}/seo-agency-singapore`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/bad-review-removal-singapore`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE}/gbp-optimisation-singapore`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/review-management-singapore`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },

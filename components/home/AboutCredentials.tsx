@@ -30,13 +30,16 @@ export default function AboutCredentials() {
             Built by Operators, Not Agencies.
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-            Epicware is a Singapore-built Local SEO and Reputation Management platform
-            serving SMBs across Singapore, Malaysia, UAE, the UK, and the US. Founded by
+            Epicware is a Singapore-built{" "}
+            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+              SEO agency in Singapore
+            </Link>{" "}
+            with its own software, serving SMBs across Singapore, Malaysia, UAE, the UK, and the US. Founded by
             the team behind NinjaOS — an F&amp;B SaaS platform that processed over $120M in
             GMV before its 2021 exit — Epicware is built by operators who understand what
-            it takes to grow a local business, not just rank it. We&apos;re the only platform
+            it takes to grow a local business, not just rank it. We&apos;re the only team
             in Singapore that combines GBP optimisation, AI-powered review management,
-            and bad review removal in one self-serve dashboard. No agency retainers.
+            and bad review removal in one live client dashboard. No agency retainers.
             No waiting on someone else&apos;s team. Just a platform that works.
           </p>
 
