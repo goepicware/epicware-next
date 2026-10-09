@@ -134,6 +134,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/comparison/epicware-vs-gradeus`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Case studies
+    { url: `${BASE}/case-studies/aesthetic-clinic-seo-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies/restaurant-multi-outlet-growth-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies/clinic-review-growth-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies/salon-whatsapp-automation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

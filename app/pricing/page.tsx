@@ -245,6 +245,13 @@ export default function PricingPage() {
       <section className="pt-6 lg:pt-8">
         <div className="container mx-auto px-6 max-w-7xl">
           <PricingCards />
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            See{" "}
+            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+              what our SEO services include
+            </Link>{" "}
+            on the plans above.
+          </p>
         </div>
       </section>
 
