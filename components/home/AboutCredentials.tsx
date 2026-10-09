@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldCheck, Users, Award, Globe } from "lucide-react";
+import { Star, Users, Award, Globe } from "lucide-react";
 
 const CREDENTIALS = [
-  { icon: ShieldCheck, label: "Google Business Profile Partner" },
+  { icon: Star, label: "5.0★ on Google" },
   { icon: Globe, label: "Active in SG · MY · UAE · UK · US" },
   { icon: Award, label: "Founded by NinjaOS team — $120M GMV exit" },
   { icon: Users, label: "50+ outlet profiles managed" },
@@ -27,7 +27,7 @@ export default function AboutCredentials() {
             About Epicware
           </span>
           <h2 className="font-display text-foreground mb-6">
-            Built by Operators, Not Agencies.
+            Built by Operators Who Run the Software Too.
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg mb-8">
             Epicware is a Singapore-built{" "}
