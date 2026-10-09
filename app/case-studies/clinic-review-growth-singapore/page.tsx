@@ -73,6 +73,7 @@ export default function Page() {
           <h2>What Happened With Patient Inquiries</h2>
           <p>The clinic operator reported a noticeable increase in new patient enquiries from Google Maps in the month after the rating crossed 4.5 — which they attributed to the improved Maps rank and the higher star rating visible in search results. The 4.5+ threshold appears to be a meaningful consumer perception point in the healthcare category.</p>
           <p>For more detail on the bad review removal process, see <a href="/bad-review-removal-singapore">bad review removal Singapore</a>.</p>
+          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
         </>
       }
       ctaHref="/bad-review-removal-singapore"

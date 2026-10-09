@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -91,7 +92,12 @@ export default function DentalClinicsPage() {
         "Bad Review Protection",
       ]}
       imageSrc="/assets/hero-image.jpg"
-      openingParagraph="Dental patients are among the most research-intensive healthcare consumers in Singapore. Before a wisdom tooth extraction or Invisalign consultation, they read every review, compare clinic prices, look at before-and-after photos, and check whether a dentist specialises in their needed procedure. A dental clinic that ranks in the top 3 for 'Invisalign clinic Tampines' or 'emergency dentist Jurong' captures patients who are ready to book. Without that visibility, even the most skilled dentist loses patients to a competitor with better Google Maps presence."
+      openingParagraph={
+        <>
+          Dental patients are among the most research-intensive healthcare consumers in Singapore. Before a wisdom tooth extraction or Invisalign consultation, they read every review, compare clinic prices, look at before-and-after photos, and check whether a dentist specialises in their needed procedure. A dental clinic that ranks in the top 3 for 'Invisalign clinic Tampines' or 'emergency dentist Jurong' captures patients who are ready to book. Without that visibility, even the most skilled dentist loses patients to a competitor with better Google Maps presence.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="The Dental Clinic Reputation Challenge"
       challengesContent={
         <p>

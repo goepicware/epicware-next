@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -89,7 +90,12 @@ export default function PhysiotherapyPage() {
         "Multi-Clinic Support",
       ]}
       imageSrc="/assets/hero-image.jpg"
-      openingParagraph="Physiotherapy patients in Singapore search by condition: 'knee physio near me', 'back pain physiotherapy Ang Mo Kio', 'sports injury rehab Singapore'. A physio clinic that ranks for the right condition-specific keywords in its catchment area captures both self-referred patients and doctor-referral patients who do their own research before booking. Epicware's platform optimises your GBP for the condition-specific searches your patients are using and builds the review profile that converts those searches into appointments."
+      openingParagraph={
+        <>
+          Physiotherapy patients in Singapore search by condition: 'knee physio near me', 'back pain physiotherapy Ang Mo Kio', 'sports injury rehab Singapore'. A physio clinic that ranks for the right condition-specific keywords in its catchment area captures both self-referred patients and doctor-referral patients who do their own research before booking. Epicware's platform optimises your GBP for the condition-specific searches your patients are using and builds the review profile that converts those searches into appointments.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="The Physiotherapy Visibility Challenge"
       challengesContent={
         <p>

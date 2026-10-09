@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -89,7 +90,12 @@ export default function CarWorkshopsPage() {
         "Multi-Location Support",
       ]}
       imageSrc="/assets/hero-image.jpg"
-      openingParagraph="When a car owner's check engine light comes on or their COE renewal is due, they open Google Maps and search 'car workshop near me'. The workshop that appears in the top 3 with the most credible reviews gets the call. In Singapore's competitive auto service market, trust is the primary purchase driver — and trust starts with Google reviews. A workshop with a 4.6 rating and 95 reviews converts dramatically better than one with 12 reviews and a 3.8, even if the quality of service is identical."
+      openingParagraph={
+        <>
+          When a car owner's check engine light comes on or their COE renewal is due, they open Google Maps and search 'car workshop near me'. The workshop that appears in the top 3 with the most credible reviews gets the call. In Singapore's competitive auto service market, trust is the primary purchase driver — and trust starts with Google reviews. A workshop with a 4.6 rating and 95 reviews converts dramatically better than one with 12 reviews and a 3.8, even if the quality of service is identical.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="Why Auto Workshops Get Hit by Bad Reviews"
       challengesContent={
         <p>

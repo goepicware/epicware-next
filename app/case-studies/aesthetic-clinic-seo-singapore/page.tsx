@@ -179,6 +179,7 @@ const IS_THIS_YOU = [
 ];
 
 const RELATED_READING: { href: string; label: string }[] = [
+  { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
   { href: "/local-seo-singapore", label: "Local SEO Services" },
   { href: "/gbp-optimisation-singapore", label: "GBP Optimisation" },
   { href: "/review-management-singapore", label: "Review Management" },

@@ -92,7 +92,12 @@ export default function RestaurantsPage() {
         "500+ Outlets Managed",
       ]}
       imageSrc="/assets/review-management-illustration.png"
-      openingParagraph="A food court stall, a single-outlet restaurant, and an F&B group with eight locations all face the same problem: Singapore diners search Google Maps before they decide where to eat. The business that appears in the top three for 'restaurant near me' in the diner's location gets most of the clicks. Epicware manages every factor that determines that rank — reviews, GBP completeness, post frequency, and citation consistency — so your restaurant shows up when hungry customers are looking."
+      openingParagraph={
+        <>
+          A food court stall, a single-outlet restaurant, and an F&B group with eight locations all face the same problem: Singapore diners search Google Maps before they decide where to eat. The business that appears in the top three for 'restaurant near me' in the diner's location gets most of the clicks. Epicware manages every factor that determines that rank — reviews, GBP completeness, post frequency, and citation consistency — so your restaurant shows up when hungry customers are looking.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="The Challenges Singapore Restaurants Face Online"
       challengesContent={
         <p>

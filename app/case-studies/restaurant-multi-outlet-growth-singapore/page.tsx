@@ -73,6 +73,7 @@ export default function Page() {
 
           <h2>What&apos;s Next</h2>
           <p>The group is now in the process of onboarding EpicMap to track district-level rank for each outlet — identifying specific geographic pockets where rank is still below position 3 and targeting GBP post content at those areas. Two outlets have also engaged Epicware&apos;s bad review removal service for reviews assessed as competitor-posted.</p>
+          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
         </>
       }
       ctaHref="/industries/restaurants"

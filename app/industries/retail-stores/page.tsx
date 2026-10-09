@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -89,7 +90,12 @@ export default function RetailStoresPage() {
         "Multi-Location Retail",
       ]}
       imageSrc="/assets/hero-image.jpg"
-      openingParagraph="When a shopper searches 'mobile phone accessories near me' or 'art supplies shop in Ang Mo Kio', they use Google Maps to decide which store to visit. A retail store with accurate hours, high-quality product photos, 60+ reviews, and regular GBP posts converts that search into a walk-in. Retail is intensely location-dependent, and Google Maps rank within the immediate catchment area determines foot traffic volume. Epicware's platform manages every GBP signal that affects that rank."
+      openingParagraph={
+        <>
+          When a shopper searches 'mobile phone accessories near me' or 'art supplies shop in Ang Mo Kio', they use Google Maps to decide which store to visit. A retail store with accurate hours, high-quality product photos, 60+ reviews, and regular GBP posts converts that search into a walk-in. Retail is intensely location-dependent, and Google Maps rank within the immediate catchment area determines foot traffic volume. Epicware's platform manages every GBP signal that affects that rank.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="Retail-Specific Reputation Challenges"
       challengesContent={
         <p>

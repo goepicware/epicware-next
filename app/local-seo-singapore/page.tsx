@@ -34,6 +34,53 @@ const serviceSchema = {
   url: "https://epicware.ai/local-seo-singapore",
 };
 
+const schemaFAQ = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why does local SEO matter for Singapore businesses?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Google Maps 3-Pack captures over 70% of clicks for local searches in Singapore. Rank shifts by the searcher's location — a business in Tampines may rank 1st within Tampines but 15th from Pasir Ris, 2km away. Without district-level optimisation, you're invisible in parts of your own catchment area where customers are actively searching for exactly what you offer.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What factors determine Google Maps ranking in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Google considers your Business Profile completeness, primary category selection, photo count and recency, review count and star rating, review response rate, GBP post frequency, NAP (name, address, phone) consistency across directories, and keyword signals in your Q&A and description. Most Singapore SMBs have addressed some of these — the businesses in the top 3 have addressed all of them.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to rank higher on Google Maps in Singapore?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Profile fixes from Epicware's 19-point audit typically produce visible rank movement within 4–8 weeks for the highest-impact changes (category, NAP, photos). Review volume improvements take 3–6 months to compound meaningfully. Ongoing optimisation — weekly AI posts, monthly citation scans, continuous rank tracking — keeps improving your position over time.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between local SEO and regular SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Local SEO optimises for Google Maps and the local 3-Pack — the map results that appear above organic links for location-based queries. Regular SEO targets organic web rankings. For Singapore SMBs, the Google Maps 3-Pack is almost always more valuable: it captures more clicks, drives direct calls and visits, and is determined by GBP factors that most competitors haven't fully optimised. See our full SEO services at /seo-agency-singapore for how the two work together.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does local SEO cost for a Singapore business?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Epicware's Foundation plan starts at $149/month and includes GBP optimisation, citation building, and rank tracking for one outlet. No setup fees, no lock-in contracts. Additional outlets can be added at $99/month each. See full pricing at epicware.ai/pricing.",
+      },
+    },
+  ],
+};
+
 const CHILD_SERVICES = [
   {
     name: "GBP Optimisation",
@@ -80,6 +127,10 @@ export default function LocalSeoSingaporePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+      />
 
       <CategoryHero
         badge="LOCAL SEO · SINGAPORE"
@@ -91,7 +142,7 @@ export default function LocalSeoSingaporePage() {
           "19-Point GBP Audit",
           "Singapore-Built",
           "AI-Native",
-          "Live Dashboard Included",
+          "No Agency Retainer",
         ]}
         imageSrc="/assets/epicmap-before-after.png"
       />
@@ -112,7 +163,7 @@ export default function LocalSeoSingaporePage() {
       {/* Why Local SEO Matters */}
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">Why Local SEO Matters in Singapore</h2>
+          <h2 className="font-display text-foreground mb-6">Why does local SEO matter for Singapore businesses?</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
               Singapore&apos;s market is hyperlocal. Rank is determined not just by category and relevance — it changes
@@ -138,7 +189,7 @@ export default function LocalSeoSingaporePage() {
       {/* How Epicware Approaches Local SEO */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">How Epicware Approaches Local SEO</h2>
+          <h2 className="font-display text-foreground mb-6">How does Epicware&apos;s local SEO work in practice?</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
               Epicware starts with a 19-point GBP audit to identify every gap in your Google Business Profile. The highest-impact
@@ -158,7 +209,7 @@ export default function LocalSeoSingaporePage() {
       {/* Pricing */}
       <section className="py-10 lg:py-14 section-gradient-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">Pricing</h2>
+          <h2 className="font-display text-foreground mb-6">How much does local SEO cost for a Singapore business?</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground">
             <p>
               Local SEO services are included in Epicware&apos;s Foundation plan and above. See full plan details at{" "}
@@ -172,17 +223,12 @@ export default function LocalSeoSingaporePage() {
       {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">Why choose an SEO agency with its own platform?</h2>
+          <h2 className="font-display text-foreground mb-6">Why use a local SEO platform instead of a Singapore agency?</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is an SEO agency with its own software — not a generic SEO tool, and not a typical
-              retainer-and-report setup either. Our team does the work: GBP optimisation, review generation, rank
-              tracking, no waiting on someone else&apos;s schedule, no monthly report that&apos;s already out of
-              date. You log in, you see your data, you take action. For the full picture of how we work as a{" "}
-              <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
-                Singapore SEO agency
-              </Link>
-              , see what&apos;s included across Google Search, Maps, AI search, and reputation.
+              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a self-serve dashboard
+              that runs automatically — no retainer, no waiting on someone else&apos;s team, no monthly report that is
+              already out of date. You log in, you see your data, you take action.
             </p>
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in
@@ -190,6 +236,21 @@ export default function LocalSeoSingaporePage() {
               full platform overview at{" "}
               <Link href="/" className="text-primary font-medium hover:underline">epicware.ai</Link>.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-14 lg:py-20">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="font-display font-bold text-foreground text-2xl mb-8 text-center">Common questions about local SEO in Singapore</h2>
+          <div className="space-y-5">
+            {schemaFAQ.mainEntity.map(({ name, acceptedAnswer }) => (
+              <div key={name} className="rounded-2xl border border-border/60 bg-card p-5">
+                <p className="font-semibold text-foreground text-sm mb-2">{name}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

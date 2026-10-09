@@ -73,6 +73,7 @@ export default function Post() {
           <h2>The Hyperlocal Problem</h2>
           <p>In Singapore, Google Maps rank changes dramatically every 500 metres. A business ranked #1 for &quot;restaurant&quot; in the Tampines MRT area may rank #4 just 800 metres away near Tampines Mall. This is the hyperlocal problem — and it&apos;s why rank tracking using a single search point gives a misleading picture of your actual visibility.</p>
           <p>EpicMap tracks your rank at a grid level across your district, showing exactly where you&apos;re visible in the top 3 and where you&apos;re not. This matters because the majority of Maps clicks go to positions 1–3. Position 4 and beyond effectively don&apos;t exist for most searches.</p>
+          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for how Maps rank fits into the bigger picture.</p>
         </>
       }
       ctaHref="/gbp-optimisation-singapore"

@@ -480,6 +480,13 @@ export default function Post() {
               — EpicMap geogrid scan, GBP health check, and competitor gap analysis, delivered
               within 24 hours.
             </p>
+            <p>
+              Epicware is the{" "}
+              <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+                AI-powered SEO agency
+              </Link>{" "}
+              entry on this list.
+            </p>
           </>
         }
         ctaHref="/audit-landing"

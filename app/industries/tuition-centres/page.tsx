@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -90,7 +91,12 @@ export default function TuitionCentresPage() {
         "Trial Class Conversion",
       ]}
       imageSrc="/assets/hero-image.jpg"
-      openingParagraph="Every Singapore parent searching 'primary school maths tuition near Tampines' or 'secondary English tutor near me' is looking for one thing: proof that the centre they choose will help their child. Google reviews are that proof. A tuition centre with 60 reviews averaging 4.7 stars, recent posts showing student results, and a complete GBP profile with subjects listed converts trial class enquiries at a significantly higher rate than a competitor with 8 reviews and an empty profile."
+      openingParagraph={
+        <>
+          Every Singapore parent searching 'primary school maths tuition near Tampines' or 'secondary English tutor near me' is looking for one thing: proof that the centre they choose will help their child. Google reviews are that proof. A tuition centre with 60 reviews averaging 4.7 stars, recent posts showing student results, and a complete GBP profile with subjects listed converts trial class enquiries at a significantly higher rate than a competitor with 8 reviews and an empty profile.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="Why Tuition Centre Reputation Management Is Different"
       challengesContent={
         <p>

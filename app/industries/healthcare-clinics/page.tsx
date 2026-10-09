@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -90,7 +91,12 @@ export default function HealthcareClinicsPage() {
         "Multi-Clinic Dashboard",
       ]}
       imageSrc="/assets/hero-image.jpg"
-      openingParagraph="When a patient searches 'GP clinic near me' in Singapore, they are choosing someone to trust with their health. The clinic that appears first in Google Maps with 100+ reviews and a 4.7 rating earns that trust before the patient even walks in. A competitor clinic with similar quality but 15 reviews and a 3.9 rating loses that patient every time. Healthcare is the category where reputation management matters most — and where a single unfair review causes the greatest harm."
+      openingParagraph={
+        <>
+          When a patient searches 'GP clinic near me' in Singapore, they are choosing someone to trust with their health. The clinic that appears first in Google Maps with 100+ reviews and a 4.7 rating earns that trust before the patient even walks in. A competitor clinic with similar quality but 15 reviews and a 3.9 rating loses that patient every time. Healthcare is the category where reputation management matters most — and where a single unfair review causes the greatest harm.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="Why Clinic Reputation Needs Proactive Management"
       challengesContent={
         <p>

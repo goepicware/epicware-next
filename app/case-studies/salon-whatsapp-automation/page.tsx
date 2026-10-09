@@ -70,6 +70,7 @@ export default function Page() {
           <h2>What&apos;s Next</h2>
           <p>The salon group is now exploring Epicware&apos;s EpicSocial product to manage Instagram content across their 4 outlets from the same dashboard — creating a unified content strategy that reinforces their Google presence with social proof from before/after salon photos and client features.</p>
           <p>EpicMap was recently onboarded to track rank at a grid level across each outlet&apos;s district — identifying the specific streets and MRT catchment zones where rank still falls below position 3.</p>
+          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
         </>
       }
       ctaHref="/industries/nail-hair-salons"

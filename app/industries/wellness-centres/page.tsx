@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -87,7 +88,12 @@ export default function WellnessCentresPage() {
         "Live Dashboard Included",
       ]}
       imageSrc="/assets/hero-image.jpg"
-      openingParagraph="A spa with a luxurious interior and skilled therapists that doesn't appear in Google Maps searches for 'massage near me in Singapore' is invisible to its most valuable customers — first-time visitors who haven't been recommended by a friend. In the wellness category, the customer's decision is driven by photos (does this look like the experience I want?) and reviews (do therapists here actually deliver?). Epicware manages both dimensions: GBP photo optimisation that showcases your space, and review generation that captures positive client experiences before they fade."
+      openingParagraph={
+        <>
+          A spa with a luxurious interior and skilled therapists that doesn't appear in Google Maps searches for 'massage near me in Singapore' is invisible to its most valuable customers — first-time visitors who haven't been recommended by a friend. In the wellness category, the customer's decision is driven by photos (does this look like the experience I want?) and reviews (do therapists here actually deliver?). Epicware manages both dimensions: GBP photo optimisation that showcases your space, and review generation that captures positive client experiences before they fade.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="The Reputation Challenge for Wellness Businesses"
       challengesContent={
         <p>

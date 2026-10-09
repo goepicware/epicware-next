@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
@@ -89,7 +90,12 @@ export default function NailHairSalonsPage() {
         "Live Dashboard Included",
       ]}
       imageSrc="/assets/hero-image.jpg"
-      openingParagraph="When someone searches 'hair colouring salon near Tampines' or 'nail art in Jurong', they are ready to book. The salon that appears in the Google Maps 3-Pack with before-and-after photos, 80+ reviews, and a 4.7 rating wins that booking. Epicware's platform manages the review generation, GBP photo management, and rank tracking that keeps salons visible in the local searches that drive appointments. For salon chains with multiple outlets, one dashboard manages every location."
+      openingParagraph={
+        <>
+          When someone searches 'hair colouring salon near Tampines' or 'nail art in Jurong', they are ready to book. The salon that appears in the Google Maps 3-Pack with before-and-after photos, 80+ reviews, and a 4.7 rating wins that booking. Epicware's platform manages the review generation, GBP photo management, and rank tracking that keeps salons visible in the local searches that drive appointments. For salon chains with multiple outlets, one dashboard manages every location.
+           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+        </>
+      }
       challengesTitle="What Makes Salon Reputation Different"
       challengesContent={
         <p>
