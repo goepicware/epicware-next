@@ -5,14 +5,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Reputation Management Services Singapore",
+  title: { absolute: "Services: SEO, Local SEO, AI Search & Reviews | Epicware" },
   description:
-    "Epicware's full service suite for Singapore SMBs — review management, GBP optimisation, bad review removal, and growth tools. One platform. No agency retainer.",
+    "Every Epicware service in one place: SEO, local SEO, Google Business Profile, AI search optimisation, review management and bad review removal.",
   alternates: { canonical: "https://www.epicware.ai/services" },
   openGraph: {
-    title: "Local SEO & Reputation Management Services Singapore | Epicware",
+    title: "Services: SEO, Local SEO, AI Search & Reviews | Epicware",
     description:
-      "Epicware's full service suite for Singapore SMBs — review management, GBP optimisation, bad review removal, AI visibility, and growth tools.",
+      "Every Epicware service in one place: SEO, local SEO, Google Business Profile, AI search optimisation, review management and bad review removal.",
     url: "https://www.epicware.ai/services",
   },
 };

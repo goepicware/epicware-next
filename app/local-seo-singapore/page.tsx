@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO Services in Singapore",
+  title: { absolute: "AI-Powered Local SEO Agency in Singapore | Epicware" },
   description:
-    "Get expert Local SEO services in Singapore with Epicware seo solutions. Optimize your Google Business Profile, improve local rankings and automate posts to attract more customers.",
+    "Epicware is an AI-powered local SEO agency in Singapore. Our local SEO services cover your Google Business Profile, citations and Maps rank by district.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore" },
   openGraph: {
-    title: "Local SEO Services in Singapore | Epicware",
+    title: "AI-Powered Local SEO Agency in Singapore | Epicware",
     description:
-      "Get expert Local SEO services in Singapore with Epicware seo solutions. Optimize your Google Business Profile, improve local rankings and automate posts to attract more customers.",
+      "Epicware is an AI-powered local SEO agency in Singapore. Our local SEO services cover your Google Business Profile, citations and Maps rank by district.",
     url: "https://www.epicware.ai/local-seo-singapore",
   },
 };

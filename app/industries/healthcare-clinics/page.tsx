@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Medical Clinics Singapore",
+  title: { absolute: "Clinic SEO Singapore | Medical Clinic Marketing | Epicware" },
   description:
-    "Epicware helps Singapore GP clinics, specialist clinics, and polyclinics rank higher on Google Maps, generate verified patient reviews, and remove fake bad reviews.",
+    "SEO and reputation management for Singapore medical clinics: rank for 'clinic near me', protect your Google rating and show up in AI answers.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/healthcare-clinics",
   },
   openGraph: {
-    title: "Local SEO for Medical Clinics Singapore | Epicware",
+    title: "Clinic SEO Singapore | Medical Clinic Marketing | Epicware",
     description:
-      "Epicware helps Singapore GP clinics rank higher on Google Maps, generate verified patient reviews, and remove fake bad reviews.",
+      "SEO and reputation management for Singapore medical clinics: rank for 'clinic near me', protect your Google rating and show up in AI answers.",
     url: "https://www.epicware.ai/industries/healthcare-clinics",
   },
 };

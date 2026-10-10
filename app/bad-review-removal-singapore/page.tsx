@@ -5,14 +5,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Bad Review Removal Singapore — $200/Review, Refunded If Not Removed",
+  title: { absolute: "Bad Google Review Removal in Singapore | Epicware" },
   description:
-    "Remove fake, malicious, or policy-violating Google reviews. Singapore's only fixed-price bad review removal service. $200/review, charged upfront — refunded in full if not removed within 3 months.",
+    "Remove fake, malicious and policy-violating Google reviews in Singapore. Free eligibility check, formal Google requests and escalation until a decision.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore" },
   openGraph: {
-    title: "Bad Review Removal Singapore — $200/Review, Refunded If Not Removed | Epicware",
+    title: "Bad Google Review Removal in Singapore | Epicware",
     description:
-      "Remove fake, malicious, or policy-violating Google reviews. $200/review, charged upfront — refunded in full if not removed within 3 months.",
+      "Remove fake, malicious and policy-violating Google reviews in Singapore. Free eligibility check, formal Google requests and escalation until a decision.",
     url: "https://www.epicware.ai/bad-review-removal-singapore",
   },
 };

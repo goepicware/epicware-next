@@ -5,12 +5,12 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "About Epicware — Singapore Local SEO Platform",
-  description: "Epicware was founded by the team behind NinjaOS ($120M GMV, 2021 exit). A Singapore-built platform for Local SEO and Reputation Management. Active globally.",
+  title: { absolute: "About Epicware | Singapore AI Marketing Agency & Team" },
+  description: "Epicware was founded by the team behind NinjaOS. Meet the Singapore team behind our AI-powered SEO, local SEO and reputation management work.",
   alternates: { canonical: "https://www.epicware.ai/about" },
   openGraph: {
-    title: "About Epicware — Singapore-Built Local SEO & Reputation Management Platform",
-    description: "Epicware was founded by the team behind NinjaOS ($120M GMV, 2021 exit). A Singapore-built platform for Local SEO and Reputation Management. Active globally.",
+    title: "About Epicware | Singapore AI Marketing Agency & Team",
+    description: "Epicware was founded by the team behind NinjaOS. Meet the Singapore team behind our AI-powered SEO, local SEO and reputation management work.",
     url: "https://www.epicware.ai/about",
   },
 };

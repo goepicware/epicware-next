@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Physiotherapy Clinics Singapore",
+  title: { absolute: "Physiotherapy SEO Singapore | Epicware" },
   description:
-    "Epicware helps Singapore physiotherapy clinics rank higher on Google Maps, generate verified patient reviews, and manage their online reputation.",
+    "Local SEO for Singapore physiotherapy clinics: rank for 'physio near me', build patient reviews and stay visible across Google Maps and AI search.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/physiotherapy",
   },
   openGraph: {
-    title: "Local SEO for Physiotherapy Clinics Singapore | Epicware",
+    title: "Physiotherapy SEO Singapore | Epicware",
     description:
-      "Epicware helps Singapore physiotherapy clinics rank higher on Google Maps for condition-specific searches.",
+      "Local SEO for Singapore physiotherapy clinics: rank for 'physio near me', build patient reviews and stay visible across Google Maps and AI search.",
     url: "https://www.epicware.ai/industries/physiotherapy",
   },
 };

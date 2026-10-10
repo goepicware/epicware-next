@@ -7,16 +7,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Manage Multiple Google Business Profiles",
+  title: { absolute: "Manage Multiple Google Business Profiles | Epicware" },
   description:
-    "Epicware's multi-outlet dashboard manages review generation, GBP optimisation, and rank tracking across all your Singapore outlets from one login.",
+    "Run every outlet's Google Business Profile, reviews and Maps rankings from one dashboard. Built for F&B groups, clinic networks and salon chains.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/manage-multiple-gbp-locations",
   },
   openGraph: {
     title: "Manage Multiple Google Business Profiles | Epicware",
     description:
-      "Epicware's multi-outlet dashboard manages review generation, GBP optimisation, and rank tracking across all your outlets from one login.",
+      "Run every outlet's Google Business Profile, reviews and Maps rankings from one dashboard. Built for F&B groups, clinic networks and salon chains.",
     url: "https://www.epicware.ai/use-cases/manage-multiple-gbp-locations",
   },
 };

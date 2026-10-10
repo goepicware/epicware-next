@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Real Local SEO & Reputation Results | Epicware",
+  title: { absolute: "SEO Case Studies Singapore | Real Results | Epicware" },
   description:
-    "See how Singapore SMBs across F&B, healthcare, and beauty grew their Google Maps rank, reviews, and AI search visibility with Epicware.",
+    "See how Singapore restaurants, clinics and salons won #1 Google Maps rankings, more reviews and AI search citations with Epicware. Real numbers.",
   alternates: { canonical: "https://www.epicware.ai/case-studies" },
 };
 

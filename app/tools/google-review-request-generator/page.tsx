@@ -5,13 +5,13 @@ import ReviewRequestGenerator from "@/components/tools/ReviewRequestGenerator";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Free Google Review Request Message Generator",
+  title: { absolute: "Free Google Review Request Generator | Epicware" },
   description:
-    "Create effective WhatsApp, SMS, and email messages to ask customers for Google reviews without sounding awkward.",
+    "Create WhatsApp, SMS and email messages that ask customers for a Google review, with your review link built in. Free, no signup.",
   alternates: { canonical: "https://www.epicware.ai/tools/google-review-request-generator" },
   openGraph: {
-    title: "Free Google Review Request Message Generator | Epicware",
-    description: "Create effective WhatsApp, SMS, and email messages to ask customers for Google reviews.",
+    title: "Free Google Review Request Generator | Epicware",
+    description: "Create WhatsApp, SMS and email messages that ask customers for a Google review, with your review link built in. Free, no signup.",
     url: "https://www.epicware.ai/tools/google-review-request-generator",
   },
 };

@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Review Generation Singapore — WhatsApp Automation",
+  title: { absolute: "Automated Review Request Campaigns | Epicware" },
   description:
-    "Turn happy customers into Google reviews automatically. WhatsApp and email review request campaigns timed perfectly for Singapore SMBs.",
+    "Automated WhatsApp and email review requests sent at the right moment after each visit, so happy customers leave more 5-star Google reviews.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/review-generation" },
   openGraph: {
-    title: "Review Generation Singapore | Epicware",
-    description: "Turn happy customers into Google reviews automatically with timed WhatsApp and email campaigns.",
+    title: "Automated Review Request Campaigns | Epicware",
+    description: "Automated WhatsApp and email review requests sent at the right moment after each visit, so happy customers leave more 5-star Google reviews.",
     url: "https://www.epicware.ai/reputation-management-singapore/review-generation",
   },
 };

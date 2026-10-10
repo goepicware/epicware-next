@@ -5,14 +5,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Review Management Singapore — Monitor & Respond",
+  title: { absolute: "Google Review Management Services Singapore | Epicware" },
   description:
-    "Real-time Google review monitoring, AI-powered responses, and automated review generation for Singapore SMBs. Manage all outlets from one dashboard.",
+    "Our team monitors every Google review across your outlets, replies fast with AI-drafted responses and grows your rating with review campaigns.",
   alternates: { canonical: "https://www.epicware.ai/review-management-singapore" },
   openGraph: {
-    title: "Review Management Singapore — Monitor, Respond & Generate Reviews | Epicware",
+    title: "Google Review Management Services Singapore | Epicware",
     description:
-      "Real-time Google review monitoring, AI-powered responses, and automated review generation for Singapore SMBs.",
+      "Our team monitors every Google review across your outlets, replies fast with AI-drafted responses and grows your rating with review campaigns.",
     url: "https://www.epicware.ai/review-management-singapore",
   },
 };

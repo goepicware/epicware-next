@@ -6,16 +6,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Reputation Management Malaysia",
+  title: { absolute: "AI Local SEO & Reputation Management Malaysia | Epicware" },
   description:
-    "Epicware's Local SEO platform for Malaysia SMBs. GBP optimisation, review management, and bad review removal across KL, Penang, and Malaysian cities.",
+    "Epicware helps Malaysian businesses rank on Google Maps, grow and protect their Google reviews, and get recommended by AI search.",
   alternates: {
     canonical: "https://www.epicware.ai/locations/malaysia",
   },
   openGraph: {
-    title: "Local SEO & Reputation Management Malaysia | Epicware",
+    title: "AI Local SEO & Reputation Management Malaysia | Epicware",
     description:
-      "Epicware's Local SEO platform for Malaysia SMBs. GBP optimisation, review management, and bad review removal across KL, Penang, and Malaysian cities.",
+      "Epicware helps Malaysian businesses rank on Google Maps, grow and protect their Google reviews, and get recommended by AI search.",
     url: "https://www.epicware.ai/locations/malaysia",
   },
 };

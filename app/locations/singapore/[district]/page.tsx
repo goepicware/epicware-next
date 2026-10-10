@@ -11,6 +11,59 @@ export async function generateStaticParams() {
   return DISTRICTS.map((d) => ({ district: d.slug }));
 }
 
+const DISTRICT_META: Record<string, { title: string; description: string }> = {
+  jurong: {
+    title: "AI SEO Agency in Jurong | Epicware",
+    description:
+      "Rank higher on Google Maps in Jurong. Our Singapore SEO team helps businesses near JEM, Westgate and IMM win local searches and more reviews.",
+  },
+  tampines: {
+    title: "AI SEO Agency in Tampines | Epicware",
+    description:
+      "Get found on Google Maps in Tampines. Our SEO team helps businesses near Tampines Mall and Our Tampines Hub win local searches and reviews.",
+  },
+  woodlands: {
+    title: "AI SEO Agency in Woodlands | Epicware",
+    description:
+      "Rank higher on Google Maps in Woodlands. Our SEO team helps businesses near Causeway Point win local searches, more reviews and repeat visits.",
+  },
+  "ang-mo-kio": {
+    title: "AI SEO Agency in Ang Mo Kio | Epicware",
+    description:
+      "Get found on Google Maps in Ang Mo Kio. Our SEO team helps businesses near AMK Hub rank in the 3-Pack and grow their Google reviews.",
+  },
+  "toa-payoh": {
+    title: "AI SEO Agency in Toa Payoh | Epicware",
+    description:
+      "Rank higher on Google Maps in Toa Payoh. Our SEO team helps businesses around Toa Payoh Central and HDB Hub win nearby searches and reviews.",
+  },
+  clementi: {
+    title: "AI SEO Agency in Clementi | Epicware",
+    description:
+      "Get found on Google Maps in Clementi. Our SEO team helps tuition centres, clinics and eateries near Clementi Mall win local searches and reviews.",
+  },
+  "buona-vista": {
+    title: "AI SEO Agency in Buona Vista | Epicware",
+    description:
+      "Rank higher on Google Maps in Buona Vista. Our SEO team helps businesses around one-north and The Star Vista win local searches and reviews.",
+  },
+  orchard: {
+    title: "AI SEO Agency in Orchard | Epicware",
+    description:
+      "Stand out on Google Maps in Orchard. Our SEO team helps clinics, salons and retailers near ION and Paragon rank higher and grow their reviews.",
+  },
+  bedok: {
+    title: "AI SEO Agency in Bedok | Epicware",
+    description:
+      "Get found on Google Maps in Bedok. Our SEO team helps businesses near Bedok Mall and Bedok Interchange win local searches and reviews.",
+  },
+  yishun: {
+    title: "AI SEO Agency in Yishun | Epicware",
+    description:
+      "Rank higher on Google Maps in Yishun. Our SEO team helps businesses near Northpoint City win nearby searches and more Google reviews.",
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -19,15 +72,17 @@ export async function generateMetadata({
   const { district: slug } = await params;
   const d = getDistrict(slug);
   if (!d) return {};
+  const meta = DISTRICT_META[slug];
+  if (!meta) return {};
   return {
-    title: `Local SEO ${d.name} Singapore — Google Maps & Reviews`,
-    description: `Epicware helps ${d.name} businesses rank higher on Google Maps, generate more reviews, and remove bad ones. Singapore-built platform for ${d.name} SMBs.`,
+    title: { absolute: meta.title },
+    description: meta.description,
     alternates: {
       canonical: `https://www.epicware.ai/locations/singapore/${slug}`,
     },
     openGraph: {
-      title: `Local SEO ${d.name} Singapore | Epicware`,
-      description: `Rank higher on Google Maps in ${d.name}. Review management, GBP optimisation, and bad review removal for ${d.name} businesses.`,
+      title: meta.title,
+      description: meta.description,
       url: `https://www.epicware.ai/locations/singapore/${slug}`,
     },
   };

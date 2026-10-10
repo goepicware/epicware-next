@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
-  title: "Bad Review Removal Guide — Remove Google Reviews",
-  description: "The complete guide to removing bad Google reviews from your Singapore business. Policy violations, removal process, escalation paths, and professional removal service.",
+  title: { absolute: "Bad Review Removal Guide: Remove Google Reviews | Epicware" },
+  description: "The complete guide to removing bad Google reviews: which reviews qualify, how to report them, how to escalate and what to do when Google says no.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/bad-review-removal-guide" },
   openGraph: {
-    title: "Bad Review Removal Guide — How to Remove Google Reviews in Singapore",
-    description: "The complete guide to removing bad Google reviews from your Singapore business. Policy violations, removal process, escalation paths, and professional removal service.",
+    title: "Bad Review Removal Guide: Remove Google Reviews | Epicware",
+    description: "The complete guide to removing bad Google reviews: which reviews qualify, how to report them, how to escalate and what to do when Google says no.",
     url: "https://www.epicware.ai/resources/guides/bad-review-removal-guide",
   },
 };

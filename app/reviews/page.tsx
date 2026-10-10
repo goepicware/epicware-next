@@ -35,14 +35,14 @@ async function getLiveRating(): Promise<{ value: number; count: number; isLive: 
 }
 
 export const metadata: Metadata = {
-  title: "Epicware Reviews — Real Client Results, Verified on Google",
+  title: { absolute: "Epicware Reviews | What Our Clients Say" },
   description:
-    "See what Epicware clients say on Google — real, verified reviews from F&B, clinics, salons, and service businesses that got found on Google, cited by AI, and chosen every time.",
+    "Read what Singapore business owners say about working with Epicware on local SEO, Google reviews, AI search and bad review removal.",
   alternates: { canonical: "https://www.epicware.ai/reviews" },
   openGraph: {
-    title: "Epicware Reviews — Real Client Results, Verified on Google",
+    title: "Epicware Reviews | What Our Clients Say",
     description:
-      "See what Epicware clients say on Google — real, verified reviews from local businesses getting found on Google, cited by AI, and chosen every time.",
+      "Read what Singapore business owners say about working with Epicware on local SEO, Google reviews, AI search and bad review removal.",
     url: "https://www.epicware.ai/reviews",
   },
 };

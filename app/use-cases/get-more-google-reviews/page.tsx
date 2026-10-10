@@ -7,16 +7,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Get More Google Reviews for Your Singapore Business",
+  title: { absolute: "Get More Google Reviews the Right Way | Epicware" },
   description:
-    "Epicware automates Google review generation for Singapore SMBs with WhatsApp and email campaigns timed for maximum conversion. Get more 5-star reviews in 30 days.",
+    "Earn more genuine 5-star Google reviews with timed WhatsApp and email requests. No bought or fake reviews, just a system happy customers use.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/get-more-google-reviews",
   },
   openGraph: {
-    title: "Get More Google Reviews for Your Singapore Business | Epicware",
+    title: "Get More Google Reviews the Right Way | Epicware",
     description:
-      "Epicware automates Google review generation for Singapore SMBs with WhatsApp and email campaigns timed for maximum conversion.",
+      "Earn more genuine 5-star Google reviews with timed WhatsApp and email requests. No bought or fake reviews, just a system happy customers use.",
     url: "https://www.epicware.ai/use-cases/get-more-google-reviews",
   },
 };

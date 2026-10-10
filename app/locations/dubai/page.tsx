@@ -6,16 +6,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Reputation Management Dubai — Epicware Platform",
+  title: { absolute: "AI Local SEO & Reputation Management Dubai | Epicware" },
   description:
-    "Epicware helps Dubai and UAE SMBs rank higher on Google Maps, manage reviews, and remove bad ones. Singapore-built platform for the UAE market.",
+    "Get your Dubai business found on Google Maps and recommended by AI search, with review management and policy-based bad review removal.",
   alternates: {
     canonical: "https://www.epicware.ai/locations/dubai",
   },
   openGraph: {
-    title: "Local SEO & Reputation Management Dubai | Epicware",
+    title: "AI Local SEO & Reputation Management Dubai | Epicware",
     description:
-      "Epicware helps Dubai and UAE SMBs rank higher on Google Maps, manage reviews, and remove bad ones.",
+      "Get your Dubai business found on Google Maps and recommended by AI search, with review management and policy-based bad review removal.",
     url: "https://www.epicware.ai/locations/dubai",
   },
 };

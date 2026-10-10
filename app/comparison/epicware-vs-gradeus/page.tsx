@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs Grade.us — Review Management Comparison",
-  description: "Compare Epicware and Grade.us for review management. Features, pricing, bad review removal, and Singapore market suitability compared.",
+  title: { absolute: "Grade.us Alternative | Epicware vs Grade.us Compared" },
+  description: "Looking for a Grade.us alternative? Compare Epicware and Grade.us on review generation, reporting dashboards and done-for-you local SEO.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-gradeus" },
   openGraph: {
-    title: "Epicware vs Grade.us — Review Management Platform Comparison",
-    description: "Compare Epicware and Grade.us for review management. Features, pricing, bad review removal, and Singapore market suitability compared.",
+    title: "Grade.us Alternative | Epicware vs Grade.us Compared",
+    description: "Looking for a Grade.us alternative? Compare Epicware and Grade.us on review generation, reporting dashboards and done-for-you local SEO.",
     url: "https://www.epicware.ai/comparison/epicware-vs-gradeus",
   },
 };

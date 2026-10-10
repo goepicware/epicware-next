@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "AI Search Visibility Singapore — GEO & AI Overviews",
+  title: { absolute: "GEO & AEO Agency in Singapore | AI Visibility | Epicware" },
   description:
-    "Get found by ChatGPT, Perplexity, and Google AI Overviews. Epicware optimises Singapore SMBs for the next generation of AI-powered local search.",
+    "Epicware is a GEO and AEO agency in Singapore. We build your AI visibility so ChatGPT, Gemini, Perplexity and Google AI Overviews recommend you.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore" },
   openGraph: {
-    title: "AI Search Visibility Singapore — GEO & AI Overview Optimisation | Epicware",
+    title: "GEO & AEO Agency in Singapore | AI Visibility | Epicware",
     description:
-      "Get found by ChatGPT, Perplexity, and Google AI Overviews. Epicware optimises Singapore SMBs for the next generation of AI-powered local search.",
+      "Epicware is a GEO and AEO agency in Singapore. We build your AI visibility so ChatGPT, Gemini, Perplexity and Google AI Overviews recommend you.",
     url: "https://www.epicware.ai/ai-search-visibility-singapore",
   },
 };

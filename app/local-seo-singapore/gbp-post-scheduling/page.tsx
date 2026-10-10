@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GBP Post Scheduling Singapore — AI Weekly Posts",
+  title: { absolute: "Google Business Profile Post Scheduling | Epicware" },
   description:
-    "Keep your Google Business Profile fresh with weekly AI-generated posts published automatically. A rank freshness signal that requires nothing from you.",
+    "Fresh, keyword-led Google Business Profile posts every week, written and scheduled by our team to keep your profile active and ranking on Maps.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/gbp-post-scheduling" },
   openGraph: {
-    title: "GBP Post Scheduling Singapore | Epicware",
-    description: "Weekly AI-generated Google Business Profile posts published automatically.",
+    title: "Google Business Profile Post Scheduling | Epicware",
+    description: "Fresh, keyword-led Google Business Profile posts every week, written and scheduled by our team to keep your profile active and ranking on Maps.",
     url: "https://www.epicware.ai/local-seo-singapore/gbp-post-scheduling",
   },
 };

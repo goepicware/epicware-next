@@ -4,13 +4,13 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Contact Epicware | Book a Strategy Call",
+  title: { absolute: "Contact Epicware | Singapore SEO & Digital Marketing Team" },
   description:
-    "Get in touch with the Epicware team. Book a free strategy call to discuss Local SEO, review management, and reputation growth for your Singapore business.",
+    "Talk to Epicware's Singapore team about SEO, Google Maps, AI search or reviews. Email hello@epicware.ai, WhatsApp us or book a free strategy call.",
   alternates: { canonical: "https://www.epicware.ai/contact" },
   openGraph: {
-    title: "Contact Epicware | Book a Strategy Call",
-    description: "Book a free strategy call. We'll assess your current growth stage and recommend the right plan.",
+    title: "Contact Epicware | Singapore SEO & Digital Marketing Team",
+    description: "Talk to Epicware's Singapore team about SEO, Google Maps, AI search or reviews. Email hello@epicware.ai, WhatsApp us or book a free strategy call.",
     url: "https://www.epicware.ai/contact",
   },
 };

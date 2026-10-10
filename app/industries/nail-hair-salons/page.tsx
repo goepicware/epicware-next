@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Hair & Beauty Salons Singapore",
+  title: { absolute: "Salon SEO Singapore | Hair & Nail Salon Marketing | Epicware" },
   description:
-    "Epicware helps Singapore hair salons, nail salons, and beauty studios rank higher on Google Maps, generate more reviews, and keep their booking calendar full.",
+    "Local SEO for Singapore hair and nail salons: top 3 on Google Maps, more 5-star reviews through WhatsApp and steady bookings from 'salon near me'.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/nail-hair-salons",
   },
   openGraph: {
-    title: "Local SEO for Hair & Beauty Salons Singapore | Epicware",
+    title: "Salon SEO Singapore | Hair & Nail Salon Marketing | Epicware",
     description:
-      "Epicware helps Singapore hair salons and beauty studios rank higher on Google Maps, generate more reviews, and keep their booking calendar full.",
+      "Local SEO for Singapore hair and nail salons: top 3 on Google Maps, more 5-star reviews through WhatsApp and steady bookings from 'salon near me'.",
     url: "https://www.epicware.ai/industries/nail-hair-salons",
   },
 };

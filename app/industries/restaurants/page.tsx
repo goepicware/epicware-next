@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for F&B Restaurants Singapore — More Reviews",
+  title: { absolute: "Restaurant SEO Singapore | Google Maps & Reviews | Epicware" },
   description:
-    "Epicware helps Singapore restaurants generate more Google reviews, rank higher on Maps, and remove fake bad reviews. Multi-outlet dashboard for restaurant groups.",
+    "Restaurant SEO for Singapore F&B: rank in the Google Maps 3-Pack, grow reviews at every outlet and get recommended by AI for 'near me' searches.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/restaurants",
   },
   openGraph: {
-    title: "Local SEO for F&B Restaurants Singapore | Epicware",
+    title: "Restaurant SEO Singapore | Google Maps & Reviews | Epicware",
     description:
-      "Epicware helps Singapore restaurants generate more Google reviews, rank higher on Maps, and remove fake bad reviews.",
+      "Restaurant SEO for Singapore F&B: rank in the Google Maps 3-Pack, grow reviews at every outlet and get recommended by AI for 'near me' searches.",
     url: "https://www.epicware.ai/industries/restaurants",
   },
 };

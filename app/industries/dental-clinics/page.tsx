@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Dental Clinics Singapore — More Patients",
+  title: { absolute: "Dental SEO Singapore | Get More Patients | Epicware" },
   description:
-    "Epicware helps Singapore dental clinics rank higher on Google Maps, generate patient reviews, and remove fake bad reviews. Build trust before patients visit.",
+    "Dental SEO for Singapore practices: rank on Google Maps for 'dentist near me', grow 5-star reviews and turn searches into booked appointments.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/dental-clinics",
   },
   openGraph: {
-    title: "Local SEO for Dental Clinics Singapore | Epicware",
+    title: "Dental SEO Singapore | Get More Patients | Epicware",
     description:
-      "Epicware helps Singapore dental clinics rank higher on Google Maps for procedure-specific searches and generate patient reviews.",
+      "Dental SEO for Singapore practices: rank on Google Maps for 'dentist near me', grow 5-star reviews and turn searches into booked appointments.",
     url: "https://www.epicware.ai/industries/dental-clinics",
   },
 };

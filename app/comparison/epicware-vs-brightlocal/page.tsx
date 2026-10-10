@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs BrightLocal — Local SEO Comparison",
-  description: "Compare Epicware and BrightLocal for Singapore local SEO. GBP optimisation, review management, rank tracking, and bad review removal compared.",
+  title: { absolute: "Epicware vs BrightLocal | Local SEO Tools Compared" },
+  description: "Epicware vs BrightLocal: local rank tracking, citations, review management and done-for-you service compared side by side.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-brightlocal" },
   openGraph: {
-    title: "Epicware vs BrightLocal — Singapore Local SEO Platform Comparison",
-    description: "Compare Epicware and BrightLocal for Singapore local SEO. GBP optimisation, review management, rank tracking, and bad review removal compared.",
+    title: "Epicware vs BrightLocal | Local SEO Tools Compared",
+    description: "Epicware vs BrightLocal: local rank tracking, citations, review management and done-for-you service compared side by side.",
     url: "https://www.epicware.ai/comparison/epicware-vs-brightlocal",
   },
 };

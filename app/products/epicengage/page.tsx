@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "EpicEngage — Email Marketing for Singapore SMBs",
+  title: { absolute: "EpicEngage | Email & WhatsApp Marketing for Local Business" },
   description:
-    "Automated email campaigns that turn one-time customers into regulars. EpicEngage is built for Singapore local businesses — no agency, no retainer.",
+    "EpicEngage sends email and WhatsApp campaigns that bring customers back, using the same customer list as your review requests.",
   alternates: { canonical: "https://www.epicware.ai/products/epicengage" },
   openGraph: {
-    title: "EpicEngage — Turn One-Time Customers Into Regulars | Epicware",
+    title: "EpicEngage | Email & WhatsApp Marketing for Local Business",
     description:
-      "Getting a new customer costs 5x more than keeping an existing one. EpicEngage keeps your best customers coming back automatically.",
+      "EpicEngage sends email and WhatsApp campaigns that bring customers back, using the same customer list as your review requests.",
     url: "https://www.epicware.ai/products/epicengage",
   },
 };

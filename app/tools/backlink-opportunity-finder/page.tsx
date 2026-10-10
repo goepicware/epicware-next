@@ -4,13 +4,13 @@ import BacklinkTool from "@/components/tools/BacklinkTool";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Free Backlink Opportunity Finder — SaaS & Local",
+  title: { absolute: "Free Backlink Opportunity Finder | Epicware" },
   description:
-    "AI-powered backlink finder. Discover listicles and roundups where your brand should be mentioned, with pre-written outreach emails included.",
+    "Find link and citation opportunities your competitors have and you don't. A free backlink opportunity finder for local businesses.",
   alternates: { canonical: "https://www.epicware.ai/tools/backlink-opportunity-finder" },
   openGraph: {
-    title: "Free Backlink Opportunity Finder for SaaS & Local Businesses | Epicware",
-    description: "Find listicles mentioning your competitors and get pre-written outreach copy — free.",
+    title: "Free Backlink Opportunity Finder | Epicware",
+    description: "Find link and citation opportunities your competitors have and you don't. A free backlink opportunity finder for local businesses.",
     url: "https://www.epicware.ai/tools/backlink-opportunity-finder",
   },
 };

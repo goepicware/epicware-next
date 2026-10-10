@@ -15,14 +15,14 @@ import StickyAuditBar from "@/components/ai-visibility/StickyAuditBar";
 import { AI_VISIBILITY } from "@/lib/ai-visibility-constants";
 
 export const metadata: Metadata = {
-  title: "AI Search Visibility Check Singapore — Free 60-Second Audit",
+  title: { absolute: "Free AI Visibility Audit & Checker | Epicware" },
   description:
-    "See if ChatGPT, Claude, Gemini and Perplexity recommend your business. Free 60-second AI visibility + Google Maps ranking audit for Singapore SMBs.",
+    "Check how ChatGPT, Gemini, Perplexity and Google AI Overviews see your business with a free AI visibility audit built for Singapore businesses.",
   alternates: { canonical: "https://www.epicware.ai/ai-visibility" },
   openGraph: {
-    title: "AI Search Visibility Check Singapore — Free 60-Second Audit | Epicware",
+    title: "Free AI Visibility Audit & Checker | Epicware",
     description:
-      "See if ChatGPT, Claude, Gemini and Perplexity recommend your business. Free 60-second AI visibility + Google Maps ranking audit for Singapore SMBs.",
+      "Check how ChatGPT, Gemini, Perplexity and Google AI Overviews see your business with a free AI visibility audit built for Singapore businesses.",
     url: "https://www.epicware.ai/ai-visibility",
   },
 };

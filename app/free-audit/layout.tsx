@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Google Business Profile Audit | Epicware",
+  title: { absolute: "Free SEO & Google Business Profile Audit | Epicware" },
   description:
-    "See exactly where your business ranks across Singapore — block by block. Free GBP audit with heatmap, competitor analysis, and AI visibility score.",
+    "Get a free audit of your Google rankings, Google Business Profile, reviews and AI search visibility. See your biggest gaps and quick wins. No signup.",
   alternates: { canonical: "https://www.epicware.ai/free-audit" },
   openGraph: {
-    title: "Free Google Business Profile Audit | Epicware",
+    title: "Free SEO & Google Business Profile Audit | Epicware",
     description:
-      "See exactly where your business ranks across Singapore — block by block. Free GBP audit with heatmap, competitor analysis, and AI visibility score.",
+      "Get a free audit of your Google rankings, Google Business Profile, reviews and AI search visibility. See your biggest gaps and quick wins. No signup.",
     url: "https://www.epicware.ai/free-audit",
   },
   robots: { index: true, follow: true },

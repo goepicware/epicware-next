@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Growth Tools Singapore — Email, Social & SEO",
+  title: { absolute: "Growth Tools for Local Businesses | Epicware" },
   description:
-    "Epicware's Growth Tools automate customer retention for Singapore SMBs — email campaigns, social scheduling, and website SEO. Keep customers coming back.",
+    "Email, WhatsApp and social media tools that turn SEO insights into repeat customers: EpicEngage campaigns and EpicSocial scheduling.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools" },
   openGraph: {
-    title: "Growth Tools Singapore — Email Marketing & Social Scheduling | Epicware",
+    title: "Growth Tools for Local Businesses | Epicware",
     description:
-      "Epicware's Growth Tools automate customer retention for Singapore SMBs — email campaigns, social scheduling, and website SEO.",
+      "Email, WhatsApp and social media tools that turn SEO insights into repeat customers: EpicEngage campaigns and EpicSocial scheduling.",
     url: "https://www.epicware.ai/growth-tools",
   },
 };

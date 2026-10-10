@@ -20,7 +20,7 @@ const LocationsStrip = dynamic(() => import("@/components/home/LocationsStrip"))
 const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
 export const metadata: Metadata = {
-  title: "AI-Powered Digital Marketing Agency in Singapore",
+  title: { absolute: "AI-Powered Digital Marketing Agency in Singapore | Epicware" },
   description:
     "Epicware is an AI-powered digital marketing agency in Singapore: SEO, Google Maps, AI search and reviews, run by our team on our own AI software.",
   openGraph: {

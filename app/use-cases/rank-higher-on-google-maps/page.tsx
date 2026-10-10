@@ -7,16 +7,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Rank Higher on Google Maps in Singapore",
+  title: { absolute: "Rank Higher on Google Maps in Singapore | Epicware" },
   description:
-    "Epicware helps Singapore SMBs rank higher on Google Maps through GBP optimisation, review velocity, and rank tracking. See exactly where you rank — and fix it.",
+    "Why you're not in the Google Maps 3-Pack yet, and the exact steps our team takes to fix it: profile, reviews, citations and district tracking.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/rank-higher-on-google-maps",
   },
   openGraph: {
     title: "Rank Higher on Google Maps in Singapore | Epicware",
     description:
-      "Epicware helps Singapore SMBs rank higher in Google Maps through GBP optimisation, review velocity, and rank tracking.",
+      "Why you're not in the Google Maps 3-Pack yet, and the exact steps our team takes to fix it: profile, reviews, citations and district tracking.",
     url: "https://www.epicware.ai/use-cases/rank-higher-on-google-maps",
   },
 };

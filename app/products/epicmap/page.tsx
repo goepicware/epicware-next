@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "EpicMap — Local Rank Tracking & GBP Optimisation Singapore",
+  title: { absolute: "EpicMap | Google Maps Rank Tracker & Grid Heatmaps" },
   description:
-    "See where you rank on Google Maps across every Singapore district. EpicMap tracks your position, audits your GBP, and fixes the gaps automatically.",
+    "EpicMap tracks your Google Maps rank on a grid across every area you serve, by keyword and competitor. The rank tracking software behind our SEO team.",
   alternates: { canonical: "https://www.epicware.ai/products/epicmap" },
   openGraph: {
-    title: "EpicMap — See Where You Rank and Fix It Automatically | Epicware",
+    title: "EpicMap | Google Maps Rank Tracker & Grid Heatmaps",
     description:
-      "Most Singapore SMBs don't know they're invisible to customers 2km away. EpicMap shows you exactly where — and closes the gap.",
+      "EpicMap tracks your Google Maps rank on a grid across every area you serve, by keyword and competitor. The rank tracking software behind our SEO team.",
     url: "https://www.epicware.ai/products/epicmap",
   },
 };

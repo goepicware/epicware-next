@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "GBP Optimisation Singapore — Business Profile Experts",
+  title: { absolute: "Google Business Profile Optimisation Service in Singapore" },
   description:
-    "Complete 19-point Google Business Profile optimisation for Singapore SMBs. Fix every rank factor and track improvement weekly with EpicMap.",
+    "Our team runs a 19-point Google Business Profile audit, fixes every gap and posts weekly, so you rank higher on Google Maps in Singapore.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/gbp-optimisation" },
   openGraph: {
-    title: "GBP Optimisation Singapore | Epicware",
-    description: "Complete 19-point Google Business Profile optimisation for Singapore SMBs.",
+    title: "Google Business Profile Optimisation Service in Singapore",
+    description: "Our team runs a 19-point Google Business Profile audit, fixes every gap and posts weekly, so you rank higher on Google Maps in Singapore.",
     url: "https://www.epicware.ai/local-seo-singapore/gbp-optimisation",
   },
 };

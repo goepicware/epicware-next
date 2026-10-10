@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "EpicEngage Email Marketing Singapore — Retention",
+  title: { absolute: "Email Marketing for Local Businesses | EpicEngage" },
   description:
-    "Automated email campaigns triggered by customer behaviour for Singapore SMBs. Post-visit requests, win-back offers, birthday greetings — all on autopilot.",
+    "Email campaigns built for local businesses: win-back offers, review requests and announcements, sent automatically with EpicEngage.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools/epicengage-email-marketing" },
   openGraph: {
-    title: "EpicEngage Email Marketing Singapore | Epicware",
-    description: "Automated email campaigns triggered by customer behaviour for Singapore SMBs.",
+    title: "Email Marketing for Local Businesses | EpicEngage",
+    description: "Email campaigns built for local businesses: win-back offers, review requests and announcements, sent automatically with EpicEngage.",
     url: "https://www.epicware.ai/growth-tools/epicengage-email-marketing",
   },
 };

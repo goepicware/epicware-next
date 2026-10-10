@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs QR Code Reviews — Automated vs Manual",
-  description: "Compare Epicware's automated WhatsApp review campaigns against QR code review collection. Response rates, automation, and multi-outlet support compared.",
+  title: { absolute: "EpicReview vs QR Code Review Cards | Comparison" },
+  description: "QR code review cards vs automated review requests: which brings in more Google reviews, and why timing beats table stands. Compare EpicReview.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicreview-vs-qr-code-review" },
   openGraph: {
-    title: "Epicware vs QR Code Reviews — Automated vs Manual Review Collection",
-    description: "Compare Epicware's automated WhatsApp review campaigns against QR code review collection. Response rates, automation, and multi-outlet support compared.",
+    title: "EpicReview vs QR Code Review Cards | Comparison",
+    description: "QR code review cards vs automated review requests: which brings in more Google reviews, and why timing beats table stands. Compare EpicReview.",
     url: "https://www.epicware.ai/comparison/epicreview-vs-qr-code-review",
   },
 };

@@ -5,13 +5,13 @@ import BookDemoForm from "@/components/book-demo/BookDemoForm";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Book a Free Strategy Call",
+  title: { absolute: "Book a Free Strategy Call | Epicware Singapore" },
   description:
-    "Book a free strategy call with Epicware. We'll assess your current growth stage and recommend the most suitable system for your business.",
+    "Book a free 30-minute strategy call. We'll audit your Google Business Profile live and show what's costing you customers on Google, Maps and AI.",
   alternates: { canonical: "https://www.epicware.ai/book-demo" },
   openGraph: {
-    title: "Book a Free Strategy Call | Epicware",
-    description: "We'll assess your current growth stage and recommend the most suitable system for your business.",
+    title: "Book a Free Strategy Call | Epicware Singapore",
+    description: "Book a free 30-minute strategy call. We'll audit your Google Business Profile live and show what's costing you customers on Google, Maps and AI.",
     url: "https://www.epicware.ai/book-demo",
   },
 };

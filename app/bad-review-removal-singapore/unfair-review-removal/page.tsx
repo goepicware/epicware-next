@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Unfair Review Removal Singapore — Malicious Reviews",
+  title: { absolute: "Unfair Google Review Removal Singapore | Epicware" },
   description:
-    "Challenge ex-employee attacks, dispute-motivated 1-star reviews, and reviews with false factual claims. $200 per review, refunded if not removed within 3 months.",
+    "Ex-employee attacks, dispute-driven 1-star reviews and false claims can break Google's policies. We check eligibility free and file the removal case.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/unfair-review-removal" },
   openGraph: {
-    title: "Unfair Review Removal Singapore | Epicware",
-    description: "Challenge ex-employee attacks and reviews containing false factual claims. $200, refunded if not removed within 3 months.",
+    title: "Unfair Google Review Removal Singapore | Epicware",
+    description: "Ex-employee attacks, dispute-driven 1-star reviews and false claims can break Google's policies. We check eligibility free and file the removal case.",
     url: "https://www.epicware.ai/bad-review-removal-singapore/unfair-review-removal",
   },
 };

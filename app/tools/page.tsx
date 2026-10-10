@@ -5,13 +5,13 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Free Local SEO Tools for Singapore SMBs",
+  title: { absolute: "Free SEO & Google Review Tools | Epicware" },
   description:
-    "Free, practical tools to help you get more Google reviews, visibility, and repeat customers. No signup required.",
+    "Free tools for local businesses: a Google review reply generator, a review request generator and a backlink opportunity finder. No signup needed.",
   alternates: { canonical: "https://www.epicware.ai/tools" },
   openGraph: {
-    title: "Free Local SEO Tools for Singapore SMBs | Epicware",
-    description: "Free tools for restaurants, salons, clinics and spas to improve Google reviews, online visibility, and customer engagement.",
+    title: "Free SEO & Google Review Tools | Epicware",
+    description: "Free tools for local businesses: a Google review reply generator, a review request generator and a backlink opportunity finder. No signup needed.",
     url: "https://www.epicware.ai/tools",
   },
 };

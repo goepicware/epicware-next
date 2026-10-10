@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Competitor Analysis Singapore — Outrank Competitors",
+  title: { absolute: "Local SEO Competitor Analysis Singapore | Epicware" },
   description:
-    "Per-keyword, per-district competitor analysis showing exactly why businesses rank above you on Google Maps — and how to close the gap.",
+    "See exactly why competitors outrank you on Google Maps, from reviews and categories to photos and posting, then close each gap outlet by outlet.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/competitor-analysis" },
   openGraph: {
-    title: "Competitor Analysis Singapore | Epicware",
-    description: "See exactly why competitors outrank you on Google Maps and how to close the gap.",
+    title: "Local SEO Competitor Analysis Singapore | Epicware",
+    description: "See exactly why competitors outrank you on Google Maps, from reviews and categories to photos and posting, then close each gap outlet by outlet.",
     url: "https://www.epicware.ai/local-seo-singapore/competitor-analysis",
   },
 };

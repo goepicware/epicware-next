@@ -6,16 +6,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO & Reputation Management UK — Google Maps for SMBs",
+  title: { absolute: "AI Local SEO & Review Management UK | Epicware" },
   description:
-    "Epicware helps UK SMBs — particularly in London — rank higher on Google Maps, generate more reviews, and manage their online reputation. Same platform as Singapore.",
+    "Local SEO, Google review management and AI search visibility for UK businesses, from single shops to multi-location brands.",
   alternates: {
     canonical: "https://www.epicware.ai/locations/uk",
   },
   openGraph: {
-    title: "Local SEO & Reputation Management UK | Epicware",
+    title: "AI Local SEO & Review Management UK | Epicware",
     description:
-      "Epicware helps UK SMBs rank higher on Google Maps, generate more reviews, and manage their online reputation.",
+      "Local SEO, Google review management and AI search visibility for UK businesses, from single shops to multi-location brands.",
     url: "https://www.epicware.ai/locations/uk",
   },
 };

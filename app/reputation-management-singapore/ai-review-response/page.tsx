@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "AI Review Response Singapore — Replies to Every Review",
+  title: { absolute: "AI Review Responses for Google Reviews | Epicware" },
   description:
-    "Auto-generate personalised, brand-consistent replies to every Google review. Not templates — AI that reads each review and writes a real response.",
+    "Personalised, on-brand replies to every Google review, drafted by AI in seconds and approved by you. No more pasting the same generic reply.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/ai-review-response" },
   openGraph: {
-    title: "AI Review Response Singapore | Epicware",
-    description: "Auto-generate personalised, brand-consistent replies to every Google review.",
+    title: "AI Review Responses for Google Reviews | Epicware",
+    description: "Personalised, on-brand replies to every Google review, drafted by AI in seconds and approved by you. No more pasting the same generic reply.",
     url: "https://www.epicware.ai/reputation-management-singapore/ai-review-response",
   },
 };

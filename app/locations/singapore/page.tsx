@@ -6,16 +6,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Singapore Local Business Growth Platform",
+  title: { absolute: "Singapore Areas We Serve | Local SEO by District | Epicware" },
   description:
-    "Explore Epicware's local growth solutions for businesses across Singapore. Improve Google Maps visibility, manage reviews, grow your online reputation, and discover local SEO solutions by district.",
+    "See how Epicware's SEO team helps businesses rank on Google Maps in Jurong, Tampines, Orchard, Woodlands and more Singapore districts.",
   alternates: {
     canonical: "https://www.epicware.ai/locations/singapore",
   },
   openGraph: {
-    title: "Singapore Local Business Growth Platform | Epicware",
+    title: "Singapore Areas We Serve | Local SEO by District | Epicware",
     description:
-      "Explore Epicware's local growth solutions for businesses across Singapore. Improve Google Maps visibility, manage reviews, grow your online reputation, and discover local SEO solutions by district.",
+      "See how Epicware's SEO team helps businesses rank on Google Maps in Jurong, Tampines, Orchard, Woodlands and more Singapore districts.",
     url: "https://www.epicware.ai/locations/singapore",
   },
 };

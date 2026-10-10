@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "EpicSocial — Social Scheduling & GBP Posts Singapore",
+  title: { absolute: "EpicSocial | AI Social Media Content & Scheduling" },
   description:
-    "Schedule social posts and GBP updates from one dashboard. EpicSocial keeps Singapore SMBs visible on Facebook, Instagram, and Google without the grind.",
+    "EpicSocial turns your SEO keywords, offers and FAQs into AI-written social posts, captions and a publishing calendar your team approves.",
   alternates: { canonical: "https://www.epicware.ai/products/epicsocial" },
   openGraph: {
-    title: "EpicSocial — Stay Visible Without Living on Social Media | Epicware",
+    title: "EpicSocial | AI Social Media Content & Scheduling",
     description:
-      "Posting consistently is what keeps your business visible. EpicSocial schedules everything — you just approve it.",
+      "EpicSocial turns your SEO keywords, offers and FAQs into AI-written social posts, captions and a publishing calendar your team approves.",
     url: "https://www.epicware.ai/products/epicsocial",
   },
 };

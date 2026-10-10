@@ -7,14 +7,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "EpicReview — Review Management & Bad Reviews Singapore",
+  title: { absolute: "EpicReview | Google Review Management Software" },
   description:
-    "Generate more Google reviews, respond automatically, and remove fake or unfair ones. EpicReview manages your reputation 24/7 for Singapore SMBs.",
+    "EpicReview monitors reviews across outlets, drafts AI replies and runs WhatsApp and email review requests. The review software our team uses.",
   alternates: { canonical: "https://www.epicware.ai/products/epicreview" },
   openGraph: {
-    title: "EpicReview — More Reviews, Better Responses, Bad Ones Removed | Epicware",
+    title: "EpicReview | Google Review Management Software",
     description:
-      "Your Google rating is your most visible trust signal. EpicReview automates the good and fights the bad — so you don't have to.",
+      "EpicReview monitors reviews across outlets, drafts AI replies and runs WhatsApp and email review requests. The review software our team uses.",
     url: "https://www.epicware.ai/products/epicreview",
   },
 };

@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Reputation Analytics Singapore — Reviews & Sentiment",
+  title: { absolute: "Reputation Analytics Dashboard | Epicware" },
   description:
-    "Live reputation analytics dashboard for Singapore SMBs. Track review velocity, rating trends, response rates, and competitor comparison across all outlets.",
+    "Track review velocity, rating trends, response rate and competitor comparison for every outlet in one live reputation dashboard.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/reputation-analytics" },
   openGraph: {
-    title: "Reputation Analytics Singapore | Epicware",
-    description: "Live reputation analytics dashboard — review velocity, rating trends, competitor comparison.",
+    title: "Reputation Analytics Dashboard | Epicware",
+    description: "Track review velocity, rating trends, response rate and competitor comparison for every outlet in one live reputation dashboard.",
     url: "https://www.epicware.ai/reputation-management-singapore/reputation-analytics",
   },
 };

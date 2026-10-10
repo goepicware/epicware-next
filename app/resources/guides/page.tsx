@@ -4,14 +4,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Guides — Google Reviews & Local SEO Playbooks",
+  title: { absolute: "Free Local SEO & Reputation Guides | Epicware" },
   description:
-    "In-depth playbooks you can action immediately. Covers Google Maps ranking, bad review removal, and local SEO for Singapore restaurants, clinics, and SMBs.",
+    "In-depth free guides for Singapore businesses: the 2026 local business playbook, restaurant digital growth and the complete bad review removal guide.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides" },
   openGraph: {
-    title: "Epicware Guides — Local SEO Playbooks for Singapore SMBs",
+    title: "Free Local SEO & Reputation Guides | Epicware",
     description:
-      "In-depth playbooks you can action immediately. Google Maps, reviews, and local SEO for Singapore businesses.",
+      "In-depth free guides for Singapore businesses: the 2026 local business playbook, restaurant digital growth and the complete bad review removal guide.",
     url: "https://www.epicware.ai/resources/guides",
   },
 };

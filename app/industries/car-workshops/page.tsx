@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Car Workshops Singapore — Google Maps",
+  title: { absolute: "Car Workshop SEO Singapore | Epicware" },
   description:
-    "Epicware helps Singapore car workshops and auto service centres rank higher on Google Maps, generate trust-building reviews, and remove fake bad reviews.",
+    "Get your car workshop found for 'car servicing near me' in Singapore, with Google Maps ranking, review growth and AI search visibility.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/car-workshops",
   },
   openGraph: {
-    title: "Local SEO for Car Workshops Singapore | Epicware",
+    title: "Car Workshop SEO Singapore | Epicware",
     description:
-      "Epicware helps Singapore car workshops rank higher on Google Maps and remove fake bad reviews from competitors.",
+      "Get your car workshop found for 'car servicing near me' in Singapore, with Google Maps ranking, review growth and AI search visibility.",
     url: "https://www.epicware.ai/industries/car-workshops",
   },
 };

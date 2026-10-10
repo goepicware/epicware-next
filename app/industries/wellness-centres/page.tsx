@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Spas & Wellness Centres Singapore",
+  title: { absolute: "Spa & Wellness SEO Singapore | Epicware" },
   description:
-    "Epicware helps Singapore spas and wellness centres rank higher on Google Maps, generate more reviews from satisfied clients, and manage their online reputation.",
+    "Local SEO for Singapore spas, massage and wellness centres: rank on Google Maps, grow trusted reviews and get recommended by AI search.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/wellness-centres",
   },
   openGraph: {
-    title: "Local SEO for Spas & Wellness Centres Singapore | Epicware",
+    title: "Spa & Wellness SEO Singapore | Epicware",
     description:
-      "Epicware helps Singapore spas and wellness centres rank higher on Google Maps and generate more reviews from satisfied clients.",
+      "Local SEO for Singapore spas, massage and wellness centres: rank on Google Maps, grow trusted reviews and get recommended by AI search.",
     url: "https://www.epicware.ai/industries/wellness-centres",
   },
 };

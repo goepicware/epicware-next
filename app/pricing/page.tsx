@@ -7,14 +7,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Epicware Pricing — Local SEO & Reputation Management Plans | Singapore",
+  title: { absolute: "Pricing: SEO, Local SEO & Reputation Plans | Epicware" },
   description:
-    "Simple, transparent pricing for Singapore SMBs. Foundation to Full Stack. No lock-in contracts. Bad review removal $200/review, refunded if not removed within 3 months.",
+    "Compare Epicware plans for local SEO, website SEO, AI search and review management. Clear monthly plans with no long lock-in. See what each includes.",
   alternates: { canonical: "https://www.epicware.ai/pricing" },
   openGraph: {
-    title: "Epicware Pricing — Local SEO & Reputation Management Plans | Singapore",
+    title: "Pricing: SEO, Local SEO & Reputation Plans | Epicware",
     description:
-      "Simple, transparent pricing for Singapore SMBs. Foundation to Full Stack. No lock-in contracts.",
+      "Compare Epicware plans for local SEO, website SEO, AI search and review management. Clear monthly plans with no long lock-in. See what each includes.",
     url: "https://www.epicware.ai/pricing",
   },
 };

@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Retail Stores Singapore",
+  title: { absolute: "Retail Store SEO Singapore | Local SEO for Shops | Epicware" },
   description:
-    "Epicware helps Singapore retail stores rank higher on Google Maps, manage customer reviews, and stay visible when shoppers search for products and stores nearby.",
+    "Bring more walk-ins to your Singapore shop with local SEO: Google Maps ranking, store details that match everywhere, reviews and AI search.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/retail-stores",
   },
   openGraph: {
-    title: "Local SEO for Retail Stores Singapore | Epicware",
+    title: "Retail Store SEO Singapore | Local SEO for Shops | Epicware",
     description:
-      "Epicware helps Singapore retail stores rank higher on Google Maps and stay visible when shoppers search for products nearby.",
+      "Bring more walk-ins to your Singapore shop with local SEO: Google Maps ranking, store details that match everywhere, reviews and AI search.",
     url: "https://www.epicware.ai/industries/retail-stores",
   },
 };

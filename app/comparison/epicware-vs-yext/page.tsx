@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs Yext — Local SEO & Listings Comparison",
-  description: "Compare Epicware and Yext for Singapore SMBs. Listing management, review management, and pricing model compared.",
+  title: { absolute: "Epicware vs Yext | Listings & Reputation Compared" },
+  description: "Comparing Epicware and Yext for listings, review management and AI search visibility. See which fits a local or multi-outlet business.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-yext" },
   openGraph: {
-    title: "Epicware vs Yext — Singapore Local SEO & Listings Management",
-    description: "Compare Epicware and Yext for Singapore SMBs. Listing management, review management, and pricing model compared.",
+    title: "Epicware vs Yext | Listings & Reputation Compared",
+    description: "Comparing Epicware and Yext for listings, review management and AI search visibility. See which fits a local or multi-outlet business.",
     url: "https://www.epicware.ai/comparison/epicware-vs-yext",
   },
 };

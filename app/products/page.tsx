@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Epicware Products — Local SEO & Reputation Tools | Singapore",
+  title: { absolute: "Epicware Solutions: EpicMap, EpicReview & More" },
   description:
-    "Four AI-native tools for Singapore SMBs. Rank higher, earn more reviews, remove bad ones, and grow — all from one platform. No agency. No retainer.",
+    "The AI software our team runs every client on: EpicMap rank tracking, EpicReview reviews, EpicEngage email and WhatsApp, and EpicSocial content.",
   alternates: { canonical: "https://www.epicware.ai/products" },
   openGraph: {
-    title: "Epicware Products — Four Tools. One Platform. Built for Singapore SMBs.",
+    title: "Epicware Solutions: EpicMap, EpicReview & More",
     description:
-      "EpicMap tracks your rank. EpicReview manages your reputation. EpicEngage keeps customers coming back. EpicSocial keeps you visible.",
+      "The AI software our team runs every client on: EpicMap rank tracking, EpicReview reviews, EpicEngage email and WhatsApp, and EpicSocial content.",
     url: "https://www.epicware.ai/products",
   },
 };

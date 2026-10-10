@@ -5,13 +5,13 @@ import ReviewReplyGenerator from "@/components/tools/ReviewReplyGenerator";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Free Google Review Reply Generator",
+  title: { absolute: "Free Google Review Reply & Response Generator | Epicware" },
   description:
-    "Generate professional replies to Google reviews instantly. Free tool for restaurants, salons, clinics, and local businesses.",
+    "Write a professional reply to any Google review in seconds. A free AI review reply generator for positive and negative reviews. No signup.",
   alternates: { canonical: "https://www.epicware.ai/tools/google-review-reply-generator" },
   openGraph: {
-    title: "Free Google Review Reply Generator | Epicware",
-    description: "Generate professional replies to Google reviews instantly. Free tool for local businesses.",
+    title: "Free Google Review Reply & Response Generator | Epicware",
+    description: "Write a professional reply to any Google review in seconds. A free AI review reply generator for positive and negative reviews. No signup.",
     url: "https://www.epicware.ai/tools/google-review-reply-generator",
   },
 };

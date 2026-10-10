@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Google Reviews Singapore — Manage & Generate Reviews",
+  title: { absolute: "Google Reviews Service Singapore | Epicware" },
   description:
-    "Build your Google rating systematically. Review generation, real-time monitoring, and AI responses across all your Singapore outlets.",
+    "Build your Google rating with a system: timed WhatsApp and email review requests, real-time monitoring and replies to every review, at every outlet.",
   alternates: { canonical: "https://www.epicware.ai/review-management-singapore/google-reviews" },
   openGraph: {
-    title: "Google Reviews Singapore | Epicware",
-    description: "Build your Google rating systematically with review generation, monitoring, and AI responses.",
+    title: "Google Reviews Service Singapore | Epicware",
+    description: "Build your Google rating with a system: timed WhatsApp and email review requests, real-time monitoring and replies to every review, at every outlet.",
     url: "https://www.epicware.ai/review-management-singapore/google-reviews",
   },
 };

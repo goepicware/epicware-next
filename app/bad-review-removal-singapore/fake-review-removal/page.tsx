@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "Fake Review Removal Singapore — Remove Bot Reviews",
+  title: { absolute: "Remove Fake Google Reviews in Singapore | Epicware" },
   description:
-    "Remove fake Google reviews posted by competitors, bots, or non-customers. $200 per review, refunded if not removed within 3 months. Singapore's only guaranteed removal service.",
+    "Fake reviews from competitors, bots or non-customers can be removed. We document the evidence and file structured cases with Google, attacks included.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/fake-review-removal" },
   openGraph: {
-    title: "Fake Review Removal Singapore | Epicware",
-    description: "Remove fake Google reviews posted by competitors, bots, or non-customers. $200, refunded if not removed within 3 months.",
+    title: "Remove Fake Google Reviews in Singapore | Epicware",
+    description: "Fake reviews from competitors, bots or non-customers can be removed. We document the evidence and file structured cases with Google, attacks included.",
     url: "https://www.epicware.ai/bad-review-removal-singapore/fake-review-removal",
   },
 };

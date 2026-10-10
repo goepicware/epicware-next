@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "EpicSocial Social Scheduling Singapore — AI Posts",
+  title: { absolute: "Social Media Scheduling for Local Businesses | EpicSocial" },
   description:
-    "AI-generated social posts scheduled across Facebook, Instagram, and GBP from one dashboard. A full week of content in one click for Singapore SMBs.",
+    "Plan, approve and schedule posts for Facebook, Instagram, TikTok and YouTube from one calendar, with AI-written captions from EpicSocial.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools/epicsocial-social-scheduling" },
   openGraph: {
-    title: "EpicSocial Social Scheduling Singapore | Epicware",
-    description: "AI-generated social posts scheduled across Facebook, Instagram, and GBP from one dashboard.",
+    title: "Social Media Scheduling for Local Businesses | EpicSocial",
+    description: "Plan, approve and schedule posts for Facebook, Instagram, TikTok and YouTube from one calendar, with AI-written captions from EpicSocial.",
     url: "https://www.epicware.ai/growth-tools/epicsocial-social-scheduling",
   },
 };

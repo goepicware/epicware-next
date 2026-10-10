@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Reputation Management Singapore — Grow Your Reviews",
+  title: { absolute: "Reputation Management Services in Singapore | Epicware" },
   description:
-    "Singapore's only platform combining review generation, AI responses, bad review removal & analytics in one dashboard. Protect your Google rating. Start free.",
+    "Online reputation management services in Singapore: our agency team grows your Google reviews, replies to every review and removes policy-breaking ones.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore" },
   openGraph: {
-    title: "Reputation Management Singapore | Epicware",
+    title: "Reputation Management Services in Singapore | Epicware",
     description:
-      "Generate more reviews, respond with AI, and remove bad ones — all from one self-serve platform built for Singapore SMBs.",
+      "Online reputation management services in Singapore: our agency team grows your Google reviews, replies to every review and removes policy-breaking ones.",
     url: "https://www.epicware.ai/reputation-management-singapore",
   },
 };

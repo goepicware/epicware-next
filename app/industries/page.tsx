@@ -6,16 +6,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Singapore SMBs — Solutions by Industry",
+  title: { absolute: "Industries We Serve | SEO for Local Businesses | Epicware" },
   description:
-    "Epicware's Local SEO and Reputation Management platform serves F&B, healthcare, beauty, tuition, dental, auto, retail, and wellness businesses across Singapore.",
+    "Local SEO and reputation management for restaurants, clinics, dental practices, salons, wellness centres, tuition centres, workshops and retail.",
   alternates: {
     canonical: "https://www.epicware.ai/industries",
   },
   openGraph: {
-    title: "Local SEO for Singapore SMBs — Solutions by Industry | Epicware",
+    title: "Industries We Serve | SEO for Local Businesses | Epicware",
     description:
-      "Epicware's Local SEO and Reputation Management platform serves F&B, healthcare, beauty, tuition, dental, auto, retail, physiotherapy, and wellness businesses across Singapore.",
+      "Local SEO and reputation management for restaurants, clinics, dental practices, salons, wellness centres, tuition centres, workshops and retail.",
     url: "https://www.epicware.ai/industries",
   },
 };

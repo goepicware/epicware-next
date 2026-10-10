@@ -3,16 +3,16 @@ import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Tuition Centres Singapore — More Bookings",
+  title: { absolute: "Tuition Centre SEO Singapore | Epicware" },
   description:
-    "Epicware helps Singapore tuition centres rank higher on Google Maps, generate parent reviews, and convert trial class searches into enrolled students.",
+    "Help parents find your tuition centre first. Local SEO, Google reviews and AI search visibility for Singapore tuition and enrichment centres.",
   alternates: {
     canonical: "https://www.epicware.ai/industries/tuition-centres",
   },
   openGraph: {
-    title: "Local SEO for Tuition Centres Singapore | Epicware",
+    title: "Tuition Centre SEO Singapore | Epicware",
     description:
-      "Epicware helps Singapore tuition centres rank higher on Google Maps and convert trial class searches into enrolled students.",
+      "Help parents find your tuition centre first. Local SEO, Google reviews and AI search visibility for Singapore tuition and enrichment centres.",
     url: "https://www.epicware.ai/industries/tuition-centres",
   },
 };

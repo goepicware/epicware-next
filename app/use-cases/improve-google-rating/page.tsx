@@ -7,16 +7,16 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Improve Your Google Rating Singapore — From 3.9 to 4.5+",
+  title: { absolute: "Improve Your Google Rating | Epicware" },
   description:
-    "Epicware helps Singapore businesses improve their Google star rating by removing bad reviews and generating more positive ones. Raise your rating above 4.5.",
+    "Raise your Google star rating the right way: more genuine reviews, faster replies and removal of reviews that break Google's policies.",
   alternates: {
     canonical: "https://www.epicware.ai/use-cases/improve-google-rating",
   },
   openGraph: {
-    title: "Improve Your Google Rating Singapore | Epicware",
+    title: "Improve Your Google Rating | Epicware",
     description:
-      "Epicware helps Singapore businesses improve their Google star rating by removing bad reviews and generating more positive ones.",
+      "Raise your Google star rating the right way: more genuine reviews, faster replies and removal of reviews that break Google's policies.",
     url: "https://www.epicware.ai/use-cases/improve-google-rating",
   },
 };

@@ -3,13 +3,13 @@ import Link from "next/link";
 import ServiceChildPage from "@/components/services/ServiceChildPage";
 
 export const metadata: Metadata = {
-  title: "AEO Singapore — Answer Engine Optimisation",
+  title: { absolute: "Answer Engine Optimisation (AEO) Singapore | Epicware" },
   description:
-    "Structure your online presence so AI assistants recommend your business by name. Answer Engine Optimisation for Singapore SMBs.",
+    "Structure your website with clear answers and schema so AI assistants like ChatGPT and Gemini can recommend your business by name.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore/aeo" },
   openGraph: {
-    title: "AEO Singapore — Answer Engine Optimisation | Epicware",
-    description: "Structure your online presence so AI assistants recommend your business by name.",
+    title: "Answer Engine Optimisation (AEO) Singapore | Epicware",
+    description: "Structure your website with clear answers and schema so AI assistants like ChatGPT and Gemini can recommend your business by name.",
     url: "https://www.epicware.ai/ai-search-visibility-singapore/aeo",
   },
 };

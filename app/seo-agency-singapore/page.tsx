@@ -36,12 +36,12 @@ import { isPriceIncreaseLive, PRICE_INCREASES } from "@/lib/price-increase";
 const CANONICAL = "https://www.epicware.ai/seo-agency-singapore";
 
 export const metadata: Metadata = {
-  title: "AI SEO Agency in Singapore | AI-Powered SEO Services",
+  title: { absolute: "Best SEO Agency in Singapore | AI-Powered | Epicware" },
   description:
     "Epicware is an AI-powered SEO agency in Singapore. Our SEO services rank you on Google, Google Maps and AI search, with live data and dated proof.",
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "AI SEO Agency in Singapore | AI-Powered SEO Services | Epicware",
+    title: "Best SEO Agency in Singapore | AI-Powered | Epicware",
     description:
       "Epicware is an AI-powered SEO agency in Singapore. Our SEO services rank you on Google, Google Maps and AI search, with live data and dated proof.",
     url: CANONICAL,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI SEO Agency in Singapore | AI-Powered SEO Services | Epicware",
+    title: "Best SEO Agency in Singapore | AI-Powered | Epicware",
     description:
       "Epicware is an AI-powered SEO agency in Singapore. Our SEO services rank you on Google, Google Maps and AI search, with live data and dated proof.",
   },

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
-  title: "Local Business Playbook 2026 — Google Maps & Reviews",
-  description: "The 2026 guide to local SEO for Singapore SMBs. AI search, Google Maps, GBP optimisation, and reputation management strategies that work in the current landscape.",
+  title: { absolute: "Local Business Playbook 2026 (Free Guide) | Epicware" },
+  description: "The 2026 playbook for local businesses: Google Business Profile, reviews, local SEO, AI search and the weekly routine that keeps you visible.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/local-business-playbook-2026" },
   openGraph: {
-    title: "Local Business Playbook 2026 — Google Maps & Reputation Management",
-    description: "The 2026 guide to local SEO for Singapore SMBs. AI search, Google Maps, GBP optimisation, and reputation management strategies that work in the current landscape.",
+    title: "Local Business Playbook 2026 (Free Guide) | Epicware",
+    description: "The 2026 playbook for local businesses: Google Business Profile, reviews, local SEO, AI search and the weekly routine that keeps you visible.",
     url: "https://www.epicware.ai/resources/guides/local-business-playbook-2026",
   },
 };

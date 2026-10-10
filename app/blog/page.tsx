@@ -5,14 +5,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: "Google Reviews & Local SEO Blog — Singapore SMB Insights",
+  title: { absolute: "Local SEO & Google Reviews Blog | Epicware" },
   description:
-    "Practical guides on Google Maps ranking, review generation, bad review removal, and Local SEO for Singapore SMBs. Written by the Epicware team.",
+    "Practical guides on Google Maps ranking, review generation, bad review removal, AI search and local SEO for Singapore SMBs, written by our team.",
   alternates: { canonical: "https://www.epicware.ai/blog" },
   openGraph: {
-    title: "Google Reviews & Local SEO Blog | Epicware",
+    title: "Local SEO & Google Reviews Blog | Epicware",
     description:
-      "Practical guides on Google Maps ranking, review generation, and bad review removal for Singapore SMBs.",
+      "Practical guides on Google Maps ranking, review generation, bad review removal, AI search and local SEO for Singapore SMBs, written by our team.",
     url: "https://www.epicware.ai/blog",
   },
 };
