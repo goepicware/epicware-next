@@ -17,20 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Core money pages
     { url: `${BASE}/seo-agency-singapore`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/bad-review-removal-singapore`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE}/gbp-optimisation-singapore`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/review-management-singapore`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
 
     // Core service children
     { url: `${BASE}/bad-review-removal-singapore/fake-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/bad-review-removal-singapore/unfair-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/bad-review-removal-singapore/google-review-removal-policy`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/gbp-optimisation-singapore/gbp-audit`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/gbp-optimisation-singapore/gbp-category-optimisation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/gbp-optimisation-singapore/gbp-photo-management`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/gbp-optimisation-singapore/gbp-qa-management`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/review-management-singapore/google-reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/review-management-singapore/negative-review-response`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/review-management-singapore/review-monitoring`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Products
     { url: `${BASE}/products`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
@@ -47,9 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/growth-tools`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // Reputation management children
-    { url: `${BASE}/reputation-management-singapore/review-management`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/reputation-management-singapore/ai-review-response`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/reputation-management-singapore/bad-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/reputation-management-singapore/review-generation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/reputation-management-singapore/review-widgets`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/reputation-management-singapore/reputation-analytics`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -59,7 +49,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/local-seo-singapore/gbp-post-scheduling`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/local-seo-singapore/gbp-setup`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/local-seo-singapore/local-rank-tracking`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/local-seo-singapore/citation-building`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/local-seo-singapore/competitor-analysis`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // AI & GEO children
@@ -120,6 +109,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/reviews-vs-rating-what-matters-more`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog/customer-feedback-system-private-vs-public-reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog/review-management-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/handle-negative-google-reviews-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/top-10-ai-local-seo-agencies-singapore-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/how-to-hire-local-seo-agency-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/10-gbp-optimisation-tips-every-local-business-needs`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/what-is-seo-local-business`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/seo-vs-local-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/seo-tips-small-business-owners`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/secondary-categories-google-business`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/restaurant-menu-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/clinic-google-categories`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/blog/google-maps-spam-reporting`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Guides
     { url: `${BASE}/resources/guides/restaurant-digital-growth-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -151,6 +151,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Free audit funnel
     { url: `${BASE}/free-audit`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/ai-visibility`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${BASE}/reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/case-studies`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/resources/guides`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${BASE}/creators`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Free tools
     { url: `${BASE}/tools`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
