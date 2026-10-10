@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: "How is Epicware different from hiring a local SEO agency?",
-    a: "Most agencies sell time. Epicware is an SEO agency with its own software. Our team does the work — GBP optimisation, review generation, rank tracking, post scheduling — and you get the live dashboard we built to run it on, so you see the results in real time instead of waiting for a monthly report.",
+    a: "Most agencies sell time. Epicware is a digital marketing agency with its own software — our team does the work (GBP optimisation, review generation, rank tracking, post scheduling) and you get the live dashboard we built to run it on, so you see the results in real time instead of waiting for a monthly report.",
   },
   {
     q: "Can you actually remove a bad Google review?",

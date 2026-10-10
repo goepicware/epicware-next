@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const fadeUp = (delay: number) => ({
@@ -38,8 +39,13 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="text-gray-500 text-[1.02rem] leading-relaxed max-w-2xl">
-            An SEO agency with its own software. Not a generic SEO tool. Epicware connects Google Maps, AI
-            search visibility, reviews, and reputation into one local growth platform.
+            A digital marketing agency with its own software. Not a generic SEO tool. Epicware connects Google
+            Maps, AI search visibility, reviews, and reputation into one local growth platform — including our
+            full{" "}
+            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+              SEO services
+            </Link>
+            .
           </p>
         </motion.div>
       </div>
