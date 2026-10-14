@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Accordion,
@@ -8,34 +9,76 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const FAQS = [
+const FAQS: { q: string; a: React.ReactNode; schemaText: string }[] = [
   {
-    q: "Is removing Google reviews legal?",
-    a: "Yes. We only pursue removals through Google's official policy channels — flagging reviews that violate Google's own content policies: fake reviews, spam, conflicts of interest, off-topic content. No hacking, no suppression tricks. If it doesn't violate policy, we tell you upfront.",
+    q: "What makes Epicware different from other digital marketing agencies in Singapore?",
+    a: "Three things. Our team works inside our own AI software, so you see live rankings, reviews and AI mentions instead of a monthly PDF. We cover Google Maps, your website, AI search and reviews together. And we show proof with dates: real screenshots of clients ranked #1 on Google and AI search.",
+    schemaText:
+      "Three things. Our team works inside our own AI software, so you see live rankings, reviews and AI mentions instead of a monthly PDF. We cover Google Maps, your website, AI search and reviews together. And we show proof with dates: real screenshots of clients ranked #1 on Google and AI search.",
   },
   {
-    q: "How is Epicware different from hiring a local SEO agency?",
-    a: "Most agencies sell time. Epicware is a digital marketing agency with its own software — our team does the work (GBP optimisation, review generation, rank tracking, post scheduling) and you get the live dashboard we built to run it on, so you see the results in real time instead of waiting for a monthly report.",
+    q: "Is Epicware an AI digital marketing agency?",
+    a: "Yes. Epicware is an AI-powered digital marketing agency in Singapore. Our team covers SEO, local SEO, AI search, reputation management and social content, and runs every account on our own AI software: EpicMap, EpicReview, EpicEngage and EpicSocial.",
+    schemaText:
+      "Yes. Epicware is an AI-powered digital marketing agency in Singapore. Our team covers SEO, local SEO, AI search, reputation management and social content, and runs every account on our own AI software: EpicMap, EpicReview, EpicEngage and EpicSocial.",
+  },
+  {
+    q: "What services does Epicware offer?",
+    a: (
+      <>
+        <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+          SEO services
+        </Link>{" "}
+        (technical SEO, on-page optimisation, content and link building), local SEO and Google
+        Business Profile optimisation, AI search optimisation (GEO), online reputation management,
+        review management and bad review removal. Most clients combine local SEO with website SEO
+        and reputation management.
+      </>
+    ),
+    schemaText:
+      "SEO services (technical SEO, on-page optimisation, content and link building), local SEO and Google Business Profile optimisation, AI search optimisation (GEO), online reputation management, review management and bad review removal. Most clients combine local SEO with website SEO and reputation management.",
+  },
+  {
+    q: "How long does it take to see results?",
+    a: "Google Maps rankings often move within 30–60 days, which is when the results on this page were captured. Website SEO usually shows movement in 3–6 months, and competitive keywords take 6–12 months. You can follow every change live in EpicMap.",
+    schemaText:
+      "Google Maps rankings often move within 30–60 days, which is when the results on this page were captured. Website SEO usually shows movement in 3–6 months, and competitive keywords take 6–12 months. You can follow every change live in EpicMap.",
+  },
+  {
+    q: "Can you get my business recommended by ChatGPT and Google AI Overviews?",
+    a: "Yes. AI tools recommend businesses they can verify across trusted sources: your website, Google Business Profile, reviews, directories and articles that mention you. Our AI search optimisation work strengthens all of them, and the proof section above shows clients cited by ChatGPT, AI Overviews and AI Mode.",
+    schemaText:
+      "Yes. AI tools recommend businesses they can verify across trusted sources: your website, Google Business Profile, reviews, directories and articles that mention you. Our AI search optimisation work strengthens all of them, and the proof section above shows clients cited by ChatGPT, AI Overviews and AI Mode.",
+  },
+  {
+    q: "Is removing Google reviews legal?",
+    a: "Yes. We only request removal of reviews that break Google's own content policies, such as fake reviews, spam, conflicts of interest or harassment. Requests go through Google's official channels. Genuine negative reviews that follow the rules stay up, so we help you reply to them well.",
+    schemaText:
+      "Yes. We only request removal of reviews that break Google's own content policies, such as fake reviews, spam, conflicts of interest or harassment. Requests go through Google's official channels. Genuine negative reviews that follow the rules stay up, so we help you reply to them well.",
   },
   {
     q: "Can you actually remove a bad Google review?",
-    a: "Yes — for reviews that violate Google's content policies (fake reviews, spam, conflict of interest, off-topic content). We identify the specific policy violation, submit a formal removal request through Google's official channels, and escalate if needed. You pay $200 per review only if it's successfully removed. We don't promise to remove every review — we promise to fight the ones that shouldn't be there.",
+    a: "If it breaks Google's policies, usually yes. We assess each review, file formal removal requests and escalate through Google's channels. You pay $200 per review, refunded in full if it isn't removed within 3 months.",
+    schemaText:
+      "If it breaks Google's policies, usually yes. We assess each review, file formal removal requests and escalate through Google's channels. You pay $200 per review, refunded in full if it isn't removed within 3 months.",
   },
   {
-    q: "How long does it take to see results on Google Maps?",
-    a: "Most clients see measurable rank improvement within 30–60 days of activating GBP optimisation and review generation. Google's algorithm weights review velocity, GBP completeness, and posting frequency — all of which Epicware manages from day one. The GBP Category Audit (free at epicware.ai/audit) shows you exactly where you're losing ground before you spend a dollar.",
+    q: "I have multiple outlets. Can you manage all of them?",
+    a: "Yes. Each outlet's Google Business Profile, rankings, reviews and posts are handled separately and reported side by side in one dashboard.",
+    schemaText:
+      "Yes. Each outlet's Google Business Profile, rankings, reviews and posts are handled separately and reported side by side in one dashboard.",
   },
   {
-    q: "I have multiple outlets. Can Epicware manage all of them?",
-    a: "Yes — multi-outlet management is one of Epicware's core strengths. Each additional outlet is $99/month. You get a single dashboard with unified analytics across all profiles, individual rank tracking per outlet, and the ability to post, respond to reviews, and run campaigns across all locations simultaneously. F&B chains, salon groups, and clinic networks are our highest-usage segment.",
+    q: "Do you only work with Singapore businesses?",
+    a: "Our team is based in Singapore and most clients are here, but we also run SEO for businesses in Malaysia, the UAE, the UK and the US.",
+    schemaText:
+      "Our team is based in Singapore and most clients are here, but we also run SEO for businesses in Malaysia, the UAE, the UK and the US.",
   },
   {
-    q: "Is Epicware only for Singapore businesses?",
-    a: "No. Epicware is Singapore-built and Singapore-native, but the platform serves businesses in Malaysia, the UAE, the UK, and the US. Local SEO fundamentals are the same everywhere — Google Business Profile, review velocity, citation consistency. The platform adapts to any market. Singapore is our home and our sharpest focus, but if you're an SMB anywhere in the world with a GBP listing, Epicware works for you.",
-  },
-  {
-    q: "What does onboarding look like? How long does setup take?",
-    a: "Most clients are fully set up within 48 hours. Onboarding involves connecting your Google Business Profile(s), completing a 19-point GBP audit, and activating your first review request campaign. Our team walks you through the setup on a live call if needed. For multi-outlet clients (5+ locations), we offer a managed onboarding service included in the Authority and Domination plans.",
+    q: "What does onboarding look like?",
+    a: "We get access to your Google Business Profile, Google Analytics 4, Search Console and website. Our team audits your profile, rankings and site, then sends you the keyword plan, profile updates and a 30-day posting calendar to approve before anything goes live.",
+    schemaText:
+      "We get access to your Google Business Profile, Google Analytics 4, Search Console and website. Our team audits your profile, rankings and site, then sends you the keyword plan, profile updates and a 30-day posting calendar to approve before anything goes live.",
   },
 ];
 
@@ -48,7 +91,7 @@ export default function FAQSection() {
       name: faq.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.a,
+        text: faq.schemaText,
       },
     })),
   };

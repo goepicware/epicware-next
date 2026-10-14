@@ -2,31 +2,65 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Trash2, MapPin, Star, ArrowRight } from "lucide-react";
+import { Search, MapPin, Building2, Sparkles, ShieldCheck, Star, ArrowRight } from "lucide-react";
 
 const SERVICES = [
   {
-    icon: Trash2,
-    badge: "Only on Epicware",
+    icon: Search,
+    badge: "Technical · On-Page · Content",
     badgeClass: "bg-[#185FA5]/10 text-[#185FA5] border-[#185FA5]/30",
-    title: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
-    cta: "Remove a Bad Review",
-    price: "$200 per review — refunded if not removed in 3 months",
-    body: "One fake review from a competitor. One angry ex-employee. One review that violates Google's own policies — but nobody told you how to fight it. Bad reviews don't just hurt your feelings; they cost you customers every single day they stay up. Epicware is the only platform in Singapore that offers productised Bad Review Removal: we identify policy violations, submit formal removal requests on your behalf, and escalate through Google's channels. You pay $200 per review upfront — refunded in full if it isn't removed within 3 months. Zero agency retainer.",
+    title: "SEO Services",
+    href: "/seo-agency-singapore",
+    cta: "Rank Your Website",
+    body: "Google Maps brings you nearby customers; your website brings everyone else. Our SEO services in Singapore get your site ranking for the searches your customers actually make, from \"best dentist in Tampines\" to \"aircon servicing near me\". We fix technical issues, optimise every page around one clear keyword, write service pages and blogs your customers want to read, and build high-authority backlinks and citations. Every ranking and lead is tracked live, so you always know what is working and what we are doing next.",
     iconColor: "text-primary",
     iconBg: "bg-primary/10",
     highlight: true,
   },
   {
     icon: MapPin,
-    badge: "19-Point GBP Audit",
+    badge: "Google Maps 3-Pack",
     badgeClass: "bg-secondary/10 text-secondary border-secondary/20",
-    title: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    title: "Local SEO",
+    href: "/local-seo-singapore",
+    cta: "Get Into the 3-Pack",
+    body: "When Singapore customers search \"near me\", the top three results on Google Maps get the first look, and rankings change street by street. As a local SEO agency, we work to put you in that 3-Pack for the keywords and districts that matter to your business. We map your visibility on a live grid with EpicMap, fix your Google Business Profile and citations, publish fresh posts every week, and track competitors outlet by outlet. Whether you serve one neighbourhood or the whole island, you see exactly where you rank.",
+    iconColor: "text-secondary",
+    iconBg: "bg-secondary/10",
+    highlight: false,
+  },
+  {
+    icon: Building2,
+    badge: "19-Point GBP Audit",
+    badgeClass: "bg-accent/10 text-accent-foreground border-accent/20",
+    title: "Google Business Profile Optimisation",
+    href: "/local-seo-singapore/gbp-optimisation",
     cta: "Optimise Your GBP",
-    price: null,
-    body: "Your Google Business Profile is the most valuable piece of digital real estate your business owns — and most SMBs are leaving 60% of it unused. Epicware's GBP Optimisation module runs a 19-point audit across every profile you manage, flags critical gaps, auto-generates weekly posts, and tracks your keyword rank across Singapore's districts on a live map grid. Whether you run one outlet or ten, every profile stays optimised and consistent — without you touching it daily.",
+    body: "Your Google Business Profile is the most valuable piece of digital real estate your business owns, and most SMBs leave much of it unused. Our team runs a 19-point audit on every profile you manage, fixes the gaps that hold your ranking back, publishes weekly posts and tracks your keyword rank across Singapore's districts on a live map grid. Whether you run one outlet or ten, every profile stays complete, consistent and active, without you having to touch it every day.",
+    iconColor: "text-accent",
+    iconBg: "bg-accent/10",
+    highlight: false,
+  },
+  {
+    icon: Sparkles,
+    badge: "ChatGPT · Gemini · AI Overviews",
+    badgeClass: "bg-primary/10 text-primary border-primary/30",
+    title: "AI Search Optimisation (GEO)",
+    href: "/ai-search-visibility-singapore",
+    cta: "Get Recommended by AI",
+    body: "Your customers no longer only Google you. They ask ChatGPT, Gemini, Perplexity and Google AI Overviews which clinic, salon or restaurant to choose, and the AI names just a few businesses. Our GEO and AEO team works to make yours one of them. We structure your website and Google Business Profile so AI can read and trust them, add the right schema, and earn mentions on the sites AI tools cite. Every win is tracked with a dated screenshot, so you see exactly when AI starts recommending you.",
+    iconColor: "text-primary",
+    iconBg: "bg-primary/10",
+    highlight: false,
+  },
+  {
+    icon: ShieldCheck,
+    badge: "Google · Facebook · TripAdvisor",
+    badgeClass: "bg-secondary/10 text-secondary border-secondary/20",
+    title: "Online Reputation Management",
+    href: "/reputation-management-singapore",
+    cta: "Protect Your Reputation",
+    body: "Customers check your star rating before they ever call you. One unanswered 1-star review or a fake attack from a competitor can quietly send them to the business next door. Our online reputation management team protects your rating across Google, Facebook and TripAdvisor: we monitor every outlet in real time, reply to every review in your brand voice, grow fresh 5-star reviews, and challenge fake or policy-breaking reviews through Google's official process. You get one live view of your reputation, outlet by outlet.",
     iconColor: "text-secondary",
     iconBg: "bg-secondary/10",
     highlight: false,
@@ -38,7 +72,6 @@ const SERVICES = [
     title: "Review Management",
     href: "/review-management-singapore",
     cta: "Automate Review Requests",
-    price: null,
     body: "More reviews. Better reviews. Faster responses. The three levers that determine whether you rank in the Google Maps 3-Pack or get buried by a competitor with half your quality. Epicware automates review request campaigns via WhatsApp and email, generates AI-written responses personalised to each review, and monitors every new review in real time across all your outlets. Stop chasing reviews manually — let the platform run the system while you run your business.",
     iconColor: "text-accent",
     iconBg: "bg-accent/10",
@@ -60,11 +93,15 @@ export default function CoreServices() {
           className="text-center mb-16"
         >
           <span className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary mb-5">
-            Core Services
+            Core Growth Services
           </span>
           <h2 className="font-display text-foreground max-w-2xl mx-auto">
-            The Services That Move the Needle
+            Our AI Powered Marketing Services in Singapore
           </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 leading-relaxed">
+            Everything a local business needs to get found on Google, recommended by AI and trusted by
+            customers, delivered by one Singapore team.
+          </p>
           <div className="divider-glow mx-auto w-24 mt-6" />
         </motion.div>
 
@@ -77,7 +114,7 @@ export default function CoreServices() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.7, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
               >
                 <Link
                   href={service.href}
@@ -104,9 +141,6 @@ export default function CoreServices() {
                         <h3 className="font-display font-bold text-foreground text-xl mb-2">
                           {service.title}
                         </h3>
-                        {service.price && (
-                          <p className="text-sm font-semibold text-primary mb-3">{service.price}</p>
-                        )}
                         <p className="text-muted-foreground leading-relaxed mb-5">{service.body}</p>
                         <div className="flex items-center gap-2 text-sm font-semibold text-primary">
                           {service.cta}

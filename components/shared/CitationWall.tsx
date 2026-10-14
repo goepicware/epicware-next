@@ -20,9 +20,12 @@ type CitationWallProps = {
   // Pages that supply their own section heading (so they control the H2
   // sequence) can hide this component's built-in eyebrow/H2/intro block.
   hideIntro?: boolean;
+  // Extra paragraph appended after the default intro copy, for pages that
+  // want to add page-specific framing without changing the shared H2/intro.
+  extraIntro?: string;
 };
 
-export default function CitationWall({ ctaHref = "#audit-form", hideIntro = false }: CitationWallProps) {
+export default function CitationWall({ ctaHref = "#audit-form", hideIntro = false, extraIntro }: CitationWallProps) {
   const [active, setActive] = useState<Citation | null>(null);
   const ctaScrollsInPage = ctaHref.startsWith("#");
 
@@ -41,6 +44,9 @@ export default function CitationWall({ ctaHref = "#audit-form", hideIntro = fals
               Every card below is a live screenshot, captured within 30–60 days of a client starting with us. No
               stock photos, no mockups — click any result to see it full-size.
             </p>
+            {extraIntro && (
+              <p className="text-muted-foreground text-[15px] leading-relaxed mt-4">{extraIntro}</p>
+            )}
           </motion.div>
         )}
 

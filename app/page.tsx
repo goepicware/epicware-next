@@ -10,9 +10,12 @@ const SocialProof = dynamic(() => import("@/components/home/SocialProof"));
 const CitationWall = dynamic(() => import("@/components/shared/CitationWall"));
 const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs"));
 const DashboardScreenshot = dynamic(() => import("@/components/home/DashboardScreenshot"));
+const CaseStudiesSlider = dynamic(() => import("@/components/home/CaseStudiesSlider"));
 const CoreServices = dynamic(() => import("@/components/home/CoreServices"));
+const ComparisonSection = dynamic(() => import("@/components/home/ComparisonSection"));
 const NoRemovalNoFee = dynamic(() => import("@/components/home/NoRemovalNoFee"));
 const MidPageCTA = dynamic(() => import("@/components/home/MidPageCTA"));
+const SeoAuditCTA = dynamic(() => import("@/components/home/SeoAuditCTA"));
 const IndustriesGrid = dynamic(() => import("@/components/home/IndustriesGrid"));
 const AboutCredentials = dynamic(() => import("@/components/home/AboutCredentials"));
 const FAQSection = dynamic(() => import("@/components/home/FAQSection"));
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
         url: "https://www.epicware.ai/assets/HeroBanner.png",
         width: 1200,
         height: 630,
-        alt: "Epicware — Local SEO & Reputation Management Platform",
+        alt: "Epicware, an AI-powered digital marketing agency in Singapore",
       },
     ],
   },
@@ -44,30 +47,35 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
   "@id": "https://www.epicware.ai/#organization",
-  name: "Epicware Pte. Ltd.",
-  alternateName: "Epicware",
-  url: "https://www.epicware.ai",
+  name: "Epicware",
+  legalName: "Epicware Pte Ltd",
+  url: "https://www.epicware.ai/",
   logo: "https://www.epicware.ai/assets/epicware-logo.png",
   description:
-    "Singapore's #1 Local SEO and Reputation Management platform for SMBs. GBP optimisation, review management, bad review removal, and AI GEO visibility — all in one live client dashboard.",
+    "Epicware is an AI-powered digital marketing agency in Singapore: SEO, Google Maps, AI search and reviews, run by our team on our own AI software.",
+  email: "hello@epicware.ai",
+  telephone: "+65 9001 3157",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "78 Shenton Way, #07-15",
     addressLocality: "Singapore",
+    postalCode: "079120",
     addressCountry: "SG",
   },
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "hello@epicware.ai",
-    telephone: "+6590013157",
-    contactType: "customer service",
-    areaServed: ["SG", "MY", "AE", "GB", "US"],
-  },
   areaServed: ["Singapore", "Malaysia", "United Arab Emirates", "United Kingdom", "United States"],
+  knowsAbout: [
+    "Search engine optimisation",
+    "Local SEO",
+    "Google Business Profile optimisation",
+    "Generative engine optimisation",
+    "Online reputation management",
+  ],
   sameAs: [
-    "https://www.youtube.com/@EpicwareAI/shorts",
-    "https://www.instagram.com/epicwareai/",
+    "https://share.google/K1DfMHlISqq4rUWnp",
+    "https://sg.linkedin.com/company/epicwareaisgL",
+    "https://clutch.co/profile/epicware-0",
   ],
 };
 
@@ -110,13 +118,19 @@ export default function HomePage() {
       <SocialProof />
 
       {/* 2c. Citation Wall — verified AI-search citations (specific proof, right after reviews) */}
-      <CitationWall ctaHref="/free-audit" />
+      <CitationWall
+        ctaHref="/free-audit"
+        extraIntro="As a leading AI powered digital marketing agency, Epicware leverages proprietary AI tools and automated workflows to deliver faster results, total search coverage, and transparent performance metrics."
+      />
 
       {/* 3. Click-to-play YouTube demo */}
       <VideoSection />
 
-      {/* 4. Complete Local Growth Workflow — 5-block guided system */}
+      {/* 4. Complete Local Growth Workflow — 6-block guided system */}
       <LocalGrowthWorkflowSection />
+
+      {/* 4b. Case studies slider — all published case studies */}
+      <CaseStudiesSlider />
 
       {/* 4. Platform differentiation — 4 premium light cards */}
       <WhyChooseUs />
@@ -124,8 +138,14 @@ export default function HomePage() {
       {/* 5. Dashboard Screenshot */}
       <DashboardScreenshot />
 
-      {/* 6. Core Services — Bad Review Removal, GBP Optimisation, Review Management */}
+      {/* 6. Core Growth Services — 6 service cards */}
       <CoreServices />
+
+      {/* 6b. Comparison — Why Epicware vs a typical SEO agency */}
+      <ComparisonSection />
+
+      {/* 6c. See what our SEO team would fix first */}
+      <SeoAuditCTA />
 
       {/* 7. No Removal No Fee — dark navy guarantee band */}
       <NoRemovalNoFee />

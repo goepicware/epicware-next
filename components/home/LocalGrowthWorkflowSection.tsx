@@ -78,11 +78,12 @@ function WorkflowIntro() {
             className="font-bold text-gray-950 leading-[1.1] tracking-[-0.03em] mb-5"
             style={{ fontSize: "clamp(1.9rem, 3.8vw, 3rem)" }}
           >
-            The Complete Local Growth Workflow
+            The Complete AI-Powered Growth Workflow
           </h2>
           <p className="text-gray-500 text-[1.02rem] leading-relaxed">
-            From Google Maps optimisation to AI visibility, reviews, content, and social media,
-            we build the full discovery system that helps customers find you, trust you, and choose you.
+            From Google Business Profile optimisation to AI search visibility, reviews, website SEO and
+            social content, our team builds the full discovery system that helps customers find you, trust
+            you and choose you.
           </p>
         </motion.div>
       </div>

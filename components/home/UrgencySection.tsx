@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -170,9 +171,17 @@ function ReputationUI() {
 const PILLARS = [
   {
     num: "01",
-    title: "Rank Higher on Google Maps",
-    description:
-      "Show up where customers are already searching. Increase calls, direction requests, and walk-ins by improving your local visibility in the Map Pack.",
+    title: "Rank Higher on SERP & Google Maps",
+    description: (
+      <>
+        Show up where customers are already searching. Our{" "}
+        <Link href="/seo-agency-singapore" className="text-violet-300 underline hover:text-violet-200">
+          SEO services
+        </Link>{" "}
+        put your business in the Google Maps 3-Pack, so you get more calls, direction requests and
+        walk-ins.
+      </>
+    ),
     tag: "Capture high-intent nearby customers",
     accentFrom: "from-violet-500",
     accentTo: "to-purple-600",
@@ -185,8 +194,16 @@ const PILLARS = [
   {
     num: "02",
     title: "Get Recommended by AI",
-    description:
-      "Appear in AI Overviews, ChatGPT, Gemini, and Perplexity when customers ask for the best businesses near them. The next generation of search — won now.",
+    description: (
+      <>
+        When customers ask ChatGPT, Gemini, Perplexity or Google AI Overviews for the best business
+        near them, your name should come up. Our{" "}
+        <Link href="/ai-search-visibility-singapore" className="text-teal-300 underline hover:text-teal-200">
+          AI search optimisation
+        </Link>{" "}
+        work makes that happen.
+      </>
+    ),
     tag: "Win the next generation of search",
     accentFrom: "from-teal-400",
     accentTo: "to-cyan-500",
@@ -199,8 +216,16 @@ const PILLARS = [
   {
     num: "03",
     title: "Protect & Grow Your Reputation",
-    description:
-      "Generate more 5-star reviews, manage negative sentiment, and build the trust customers need before they call, book, or visit your business.",
+    description: (
+      <>
+        We help you collect more 5-star reviews, reply to every review and deal with harmful ones, so
+        customers trust you before they call. See our{" "}
+        <Link href="/reputation-management-singapore" className="text-amber-300 underline hover:text-amber-200">
+          online reputation management
+        </Link>{" "}
+        service.
+      </>
+    ),
     tag: "Turn reviews into revenue",
     accentFrom: "from-amber-400",
     accentTo: "to-orange-400",
@@ -245,21 +270,20 @@ export default function UrgencySection() {
         <motion.div {...fadeUp(0)} className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.05] px-4 py-1.5 mb-6">
             <div className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-            <span className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">3 Growth Levers</span>
+            <span className="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/50">What Our AI Powered Marketing Agency Does</span>
           </div>
 
           <h2
             className="font-bold text-white leading-[1.1] tracking-[-0.03em] mb-5"
             style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)" }}
           >
-            Get found.{" "}
+            Marketing Services That Help Singapore Businesses{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(95deg, #a78bfa 0%, #38bdf8 50%, #34d399 100%)" }}
             >
-              Get chosen.
+              Get Found &amp; Chosen
             </span>
-            {" "}Get more revenue.
           </h2>
 
           <p className="text-white/50 text-[1.05rem] leading-relaxed max-w-2xl mx-auto">

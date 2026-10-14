@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Star, Users, Award, Globe } from "lucide-react";
+import { ShieldCheck, Users, Award, Globe } from "lucide-react";
 
 const CREDENTIALS = [
-  { icon: Star, label: "5.0★ on Google" },
+  { icon: ShieldCheck, label: "Google Business Profile specialists" },
   { icon: Globe, label: "Active in SG · MY · UAE · UK · US" },
-  { icon: Award, label: "Founded by NinjaOS team — $120M GMV exit" },
+  { icon: Award, label: "Founded by the NinjaOS team" },
   { icon: Users, label: "50+ outlet profiles managed" },
 ];
 
@@ -27,20 +27,15 @@ export default function AboutCredentials() {
             About Epicware
           </span>
           <h2 className="font-display text-foreground mb-6">
-            Built by Operators Who Run the Software Too.
+            A Digital Marketing Agency Built by Operators
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-            Epicware is a Singapore-built{" "}
-            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
-              SEO agency in Singapore
-            </Link>{" "}
-            with its own software, serving SMBs across Singapore, Malaysia, UAE, the UK, and the US. Founded by
-            the team behind NinjaOS — an F&amp;B SaaS platform that processed over $120M in
-            GMV before its 2021 exit — Epicware is built by operators who understand what
-            it takes to grow a local business, not just rank it. We&apos;re the only team
-            in Singapore that combines GBP optimisation, AI-powered review management,
-            and bad review removal in one live client dashboard. No agency retainers.
-            No waiting on someone else&apos;s team. Just a platform that works.
+            Epicware is a Singapore-based, AI-powered digital marketing agency serving local businesses
+            across Singapore, Malaysia, the UAE, the UK and the US. We were founded by the team behind
+            NinjaOS, an F&amp;B SaaS platform that processed over $120M in GMV before its 2021 exit.
+            We&apos;ve grown local businesses ourselves, not just ranked them. That&apos;s why every
+            client runs on our own AI software: an agency team doing the work, plus live data on every
+            ranking, review and AI mention.
           </p>
 
           <Link href="/about" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline mb-8">

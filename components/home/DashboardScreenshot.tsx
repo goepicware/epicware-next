@@ -38,6 +38,20 @@ export default function DashboardScreenshot() {
   return (
     <section className="py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-6 max-w-5xl">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">
+            Epicware AI-Powered System
+          </span>
+          <h2 className="font-display text-foreground max-w-2xl mx-auto">
+            The AI Software Behind Our Digital Marketing Agency
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-4 leading-relaxed">
+            Most digital marketing agencies send you a monthly PDF. Our team works inside our own AI
+            software, so every ranking, review and AI mention is tracked live, and you can see it too.
+          </p>
+        </div>
+
         {/* Tab bar */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-1 p-1 rounded-2xl bg-muted/60 border border-border/50">

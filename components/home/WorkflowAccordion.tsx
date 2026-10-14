@@ -11,6 +11,7 @@ import ReviewGrowthSection from "./ReviewGrowthSection";
 import LocalSEOMappingSection from "./LocalSEOMappingSection";
 import WebsiteAISection from "./WebsiteAISection";
 import SocialContentSection from "./SocialContentSection";
+import SEOServicesSection from "./SEOServicesSection";
 
 type Step = {
   num: string;
@@ -58,6 +59,13 @@ const STEPS: Step[] = [
     benefit: "Turn Local SEO Insights Into Social Content",
     badgeBg: "bg-rose-500",
     Panel: SocialContentSection,
+  },
+  {
+    num: "06",
+    title: "AI Powered SEO Services",
+    benefit: "Rank Your Website, Not Just Your Google Profile",
+    badgeBg: "bg-teal-600",
+    Panel: SEOServicesSection,
   },
 ];
 

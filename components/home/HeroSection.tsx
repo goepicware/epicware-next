@@ -18,39 +18,34 @@ export default function HeroSection() {
         {/* LEFT — Headline + CTAs */}
         <div className="order-2 lg:order-1 max-w-[600px]">
 
-          <div className="hero-fade-up mb-7" style={{ animationDelay: "0ms" }}>
+          <div className="hero-fade-up mb-5" style={{ animationDelay: "0ms" }}>
             <span className="inline-flex items-center gap-2 bg-white border border-violet-200 rounded-full px-4 py-1.5 text-[11px] font-semibold tracking-[0.1em] uppercase text-violet-600 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-violet-500 inline-block" />
-              Local SEO &amp; Reputation Platform · Singapore
+              AI-Powered Digital Marketing Agency · Singapore
             </span>
           </div>
 
-          <h1
-            className="hero-fade-up font-bold text-gray-950 leading-[1.08] tracking-[-0.035em] mb-6"
-            style={{ fontSize: "clamp(2.5rem, 4.5vw, 3.75rem)", animationDelay: "70ms" }}
+          <p
+            className="hero-fade-up font-semibold text-gray-500 mb-3"
+            style={{ fontSize: "1.05rem", animationDelay: "40ms" }}
           >
-            Get Found on Google.
-            <br />
-            <span
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  "linear-gradient(100deg, #7C3AED 0%, #A855F7 40%, #14B8A6 100%)",
-              }}
-            >
-              Get Cited by AI.
-            </span>
-            <br />
-            Get Chosen Every Time.
+            Get Found on Google. Get Cited by AI. Get Chosen Every Time.
+          </p>
+
+          <h1
+            className="hero-fade-up font-bold text-gray-950 leading-[1.1] tracking-[-0.035em] mb-6"
+            style={{ fontSize: "clamp(2.3rem, 4.2vw, 3.4rem)", animationDelay: "70ms" }}
+          >
+            AI-Powered Digital Marketing Agency in Singapore
           </h1>
 
           <p
             className="hero-fade-up text-[1.075rem] leading-[1.75] text-gray-500 mb-9 max-w-[460px]"
             style={{ animationDelay: "130ms" }}
           >
-            Rank higher on Google Maps, get recommended by ChatGPT and AI
-            search, generate more reviews, and remove bad ones — all from one
-            dashboard built for local businesses in Singapore and beyond.
+            From dominating Google Maps to getting recommended by ChatGPT and Gemini, Epicware
+            combines custom AI automation software with local SEO strategies to turn local
+            searches into revenue.
           </p>
 
           <div className="hero-fade-up flex flex-wrap gap-3 mb-10" style={{ animationDelay: "190ms" }}>
@@ -58,7 +53,7 @@ export default function HeroSection() {
               href="/book-demo#form"
               className="group inline-flex items-center gap-2 h-[52px] px-8 rounded-full bg-gray-950 text-white text-[0.9rem] font-semibold hover:bg-gray-800 transition-all duration-200 shadow-[0_4px_20px_rgba(0,0,0,0.18)] hover:shadow-[0_6px_28px_rgba(0,0,0,0.26)] hover:-translate-y-px"
             >
-              Book a Free Demo
+              Book a Free Strategy Call
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
             </Link>
 
@@ -66,7 +61,7 @@ export default function HeroSection() {
               href="/free-audit"
               className="inline-flex items-center gap-2 h-[52px] px-7 rounded-full border-[1.5px] border-[#185FA5] text-[#185FA5] text-[0.9rem] font-semibold bg-white hover:bg-[#185FA5] hover:text-white transition-all duration-200"
             >
-              Get Your Free GBP Audit →
+              Get Your Free SEO Audit →
             </Link>
           </div>
 
@@ -86,8 +81,8 @@ export default function HeroSection() {
             <div className="w-px h-9 bg-gray-200 shrink-0" />
 
             <div>
-              <p className="text-[0.75rem] text-gray-400 font-medium leading-none mb-1">Built for</p>
-              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">SMBs</p>
+              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">98%</p>
+              <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">client retention rate</p>
             </div>
           </div>
         </div>
@@ -100,7 +95,7 @@ export default function HeroSection() {
             <div className="relative h-[420px] lg:h-[520px] overflow-hidden rounded-[36px]">
               <Image
                 src="/assets/HeroBanner.webp"
-                alt="Singapore SMB owner growing their business with Epicware"
+                alt="AI Powered SEO Services in Singapore"
                 width={1448}
                 height={1086}
                 sizes="(max-width: 1024px) 100vw, 52vw"
