@@ -170,8 +170,8 @@ export default function ReviewManagementSingaporePage() {
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in GMV
               before its 2021 exit. Epicware is Singapore-built, used by businesses in SG · MY · UAE · UK · US. See the
-              full platform overview at{" "}
-              <Link href="/" className="text-primary font-medium hover:underline">epicware.ai</Link>.
+              full picture at{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">Epicware&apos;s digital marketing team</Link>.
             </p>
           </div>
         </div>

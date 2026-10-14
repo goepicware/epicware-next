@@ -79,6 +79,7 @@ export default function Page() {
           <h2>8. What Epicware Handles for You</h2>
           <p>For Singapore restaurants using Epicware&apos;s full suite: EpicReview runs the automated WhatsApp review campaigns, EpicResponse drafts and posts replies to every new review, EpicMap tracks rank across your district grid, and the bad review removal team handles any policy-violating reviews. The GBP optimisation audit covers all 19 factors across your profiles.</p>
           <p>Most operators see meaningful rank improvements and review velocity increases within the first 60 days of running the system.</p>
+          <p>See how <a href="/">Epicware, an AI-powered digital marketing agency in Singapore</a>, supports restaurant groups end to end.</p>
         </>
       }
       ctaHref="/industries/restaurants"

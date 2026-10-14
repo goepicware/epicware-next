@@ -277,9 +277,9 @@ export default function ReputationManagementPage() {
               that works. And if you are worried about a specific bad review right now — our removal service guarantees
               a full refund if it isn&apos;t removed within 3 months.{" "}
               <Link href="/" className="text-primary font-medium hover:underline">
-                See the full Epicware platform
+                Epicware, a digital marketing agency in Singapore
               </Link>
-              .
+              , covers all of it.
             </p>
           </div>
         </div>

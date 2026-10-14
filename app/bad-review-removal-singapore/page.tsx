@@ -167,8 +167,8 @@ export default function BadReviewRemovalSingaporePage() {
             </p>
             <p>
               Bad Review Removal is the only service of its kind in Singapore with this refund guarantee. No other
-              platform or agency offers it. See the full platform overview at{" "}
-              <Link href="/" className="text-primary font-medium hover:underline">epicware.ai</Link>.
+              platform or agency offers it. See the full picture at{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">AI marketing agency Epicware</Link>.
             </p>
           </div>
         </div>

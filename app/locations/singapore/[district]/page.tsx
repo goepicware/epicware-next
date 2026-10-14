@@ -11,6 +11,10 @@ export async function generateStaticParams() {
   return DISTRICTS.map((d) => ({ district: d.slug }));
 }
 
+// Districts named in the homepage internal-linking brief get an extra
+// contextual link back to / — not all districts, just these four.
+const HOMEPAGE_LINK_DISTRICTS = ["woodlands", "buona-vista", "bedok", "yishun"];
+
 const DISTRICT_META: Record<string, { title: string; description: string }> = {
   jurong: {
     title: "AI SEO Agency in Jurong | Epicware",
@@ -290,6 +294,15 @@ export default async function DistrictPage({
             </Link>
             .
           </p>
+          {HOMEPAGE_LINK_DISTRICTS.includes(slug) && (
+            <p className="text-base text-muted-foreground mt-4">
+              Looking for help beyond {d.name}? See how{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">
+                Epicware&apos;s digital marketing team
+              </Link>{" "}
+              supports local businesses across every district we serve.
+            </p>
+          )}
         </div>
       </section>
 

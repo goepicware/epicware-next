@@ -74,6 +74,7 @@ export default function Page() {
 
           <h2>Platform vs Agency Decision</h2>
           <p>Singapore SMBs choosing between a self-serve platform and a full-service agency should consider: volume of locations, internal capacity for ongoing management, and urgency of results. Platforms like Epicware provide the tools and automation; managed services provide the execution. Most businesses with 1–3 locations can achieve strong results using a platform approach. Groups with 5+ locations typically benefit from managed execution.</p>
+          <p>For a full picture of how we help local businesses grow, see <a href="/">Epicware&apos;s digital marketing team</a>.</p>
         </>
       }
       ctaHref="/services"
