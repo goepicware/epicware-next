@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -37,7 +38,9 @@ export default function Post() {
       intro={
         <>
           <p>
-            Hiring a local SEO agency in Singapore should be straightforward. It isn&apos;t. The market is full of
+            Hiring a{" "}
+            <Link href="/local-seo-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO agency in Singapore</Link>{" "}
+            should be straightforward. It isn&apos;t. The market is full of
             generalist agencies that treat local SEO as a checkbox — a GBP update here, a citation submission
             there — and charge S$800 to S$3,000 a month for work that moves nothing.
           </p>
@@ -80,7 +83,9 @@ export default function Post() {
 
           <h3>Google Business Profile Optimisation</h3>
           <p>
-            Your GBP is the single most important local SEO asset. A thorough audit covers every field: primary
+            Your{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profile</Link>{" "}
+            is the single most important local SEO asset. A thorough audit covers every field: primary
             and secondary categories, business description, services and attributes, photo volume and recency,
             opening hours, Q&amp;A, and post activity. Incomplete profiles rank lower because Google has less
             to match against search queries.
@@ -266,7 +271,8 @@ export default function Post() {
 
           <h2>The AI Search Question</h2>
           <p>
-            Any conversation about local SEO in Singapore in 2026 has to address AI search. Google AI Overviews
+            Any conversation about local SEO in Singapore in 2026 has to address AI search.{" "}
+            <Link href="/ai-search-visibility-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">Google AI Overviews</Link>{" "}
             now appear for a significant share of local queries. Perplexity and ChatGPT are answering
             &quot;best dentist near Orchard&quot; questions with specific recommendations — pulled from GBP
             data, review sentiment, and structured signals on your website.
@@ -298,6 +304,10 @@ export default function Post() {
             No agency or platform will score perfectly across all of these. But any credible option should
             be able to give you clear answers on the majority of them — and be honest about what they don&apos;t
             cover.
+          </p>
+          <p>
+            Before you sign, see how to spot{" "}
+            <Link href="/blog/which-local-seo-agencies-in-singapore-are-highly-rated" className="text-primary underline underline-offset-2 hover:text-primary/80">highly rated local SEO agencies</Link>.
           </p>
           <p>
             See how Epicware answers each of these as an{" "}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -57,8 +58,8 @@ export default function Post() {
           <p>Private survey tools (Typeform, Google Forms, SurveyMonkey, or purpose-built CRM tools) can automate post-service survey distribution via email. The data goes to your dashboard — not to Google.</p>
 
           <h2>Public Reviews: Google, Facebook</h2>
-          <p>Public review platforms — primarily Google, secondarily Facebook for Singapore businesses — shape your external reputation. These are the reviews potential customers read before making a decision to visit.</p>
-          <p>Your public review strategy should focus on volume, velocity, and response quality. Review requests should go to every customer through WhatsApp or email. Responses should be prompt and professional.</p>
+          <p><Link href="/blog/types-of-customer-review-platforms" className="text-primary font-medium hover:underline">Public review platforms</Link> — primarily Google, secondarily Facebook for Singapore businesses — shape your external reputation. These are the reviews potential customers read before making a decision to visit.</p>
+          <p>Your public review strategy should focus on volume, velocity, and response quality. <Link href="/reputation-management-singapore/review-generation" className="text-primary font-medium hover:underline">Review requests</Link> should go to every customer through WhatsApp or email. Responses should be prompt and professional.</p>
 
           <h2>The Critical Compliance Line</h2>
           <p>Running private surveys and public review requests simultaneously is fully compliant — as long as you don&apos;t route customers between the two systems based on their private survey score. The violation occurs when:</p>
@@ -81,6 +82,7 @@ export default function Post() {
           <h2>How This Builds Long-Term Rating Health</h2>
           <p>Businesses with structured private feedback systems tend to have healthier public ratings over time. The mechanism: private feedback catches service problems early, before they accumulate enough to generate a wave of negative public reviews. A recurring complaint identified through private surveys can be addressed operationally — reducing the probability that it reaches Google as a 1-star review.</p>
           <p>Combined with a consistent public review generation campaign, this creates a reinforcing system: more positive reviews from satisfied customers, fewer negative ones from issues that were caught and resolved privately.</p>
+          <p>Public reviews and private feedback both feed into <Link href="/blog/reputation-management-for-local-businesses" className="text-primary font-medium hover:underline">reputation management for local businesses</Link>.</p>
         </>
       }
       ctaHref="/reputation-management-singapore"

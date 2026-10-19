@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -33,41 +34,65 @@ export default function Post() {
       readTime="5 min read"
       intro={
         <>
-          <p>Review management is one of those terms that means different things to different people. For some, it means responding to negative reviews when they spot them. For others, it means running periodic campaigns to collect more reviews. Both are part of it — but review management as a practice covers more than either of these.</p>
-          <p>This guide breaks down what a complete review management system looks like for a Singapore SMB, what each component does, and how to choose between managing it yourself and using a platform or agency.</p>
+          <p>
+            <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+              Review management
+            </Link>{" "}
+            is one of those terms that means different things to different people. For some, it means responding to negative reviews when they spot them. For others, it means running periodic{" "}
+            <Link href="/reputation-management-singapore/review-generation" className="text-primary font-medium hover:underline">
+              review request campaigns
+            </Link>{" "}
+            to collect more reviews. Both are part of it — but review management as a practice covers more than either of these.
+          </p>
+          <p>
+            This guide breaks down what a complete review management system looks like for a Singapore SMB, what each component does, and how to choose between managing it yourself and hiring a{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              digital marketing agency
+            </Link>
+            .
+          </p>
         </>
       }
       body={
         <>
-          <h2>The Four Components of Review Management</h2>
-          <p>A complete review management system has four distinct functions: monitoring, responding, generating, and removing. Most businesses handle some of these informally. Few have a structured approach to all four.</p>
+          <h2>What are the four components of a complete review management system?</h2>
+          <p>A complete review management system has four distinct functions: monitoring, responding, generating, and removing. Most businesses handle some of these informally. Few have a structured approach to all four. Review management is one part of{" "}
+            <Link href="/blog/reputation-management-services-singapore" className="text-primary font-medium hover:underline">
+              what&apos;s included in reputation management
+            </Link>
+            .
+          </p>
 
-          <h2>1. Monitoring</h2>
+          <h2>What does review monitoring involve for a Singapore SMB?</h2>
           <p>Monitoring means knowing when a new review appears across all the platforms where your business is listed — primarily Google, but also Facebook, Grab, Yelp, or industry-specific platforms depending on your category.</p>
-          <p>Without systematic monitoring, reviews sit unread for days or weeks. A 1-star review that arrives on a Monday and isn&apos;t noticed until Thursday has spent four days visible to every potential customer with no response. For multi-outlet businesses, monitoring becomes significantly harder — manually checking 8 GBP profiles daily is neither scalable nor reliable.</p>
+          <p>Without systematic monitoring, reviews sit unread for days or weeks. A 1-star review that arrives on a Monday and isn&apos;t noticed until Thursday has spent four days visible to every potential customer with no response. For{" "}
+            <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+              multi-outlet businesses
+            </Link>
+            , monitoring becomes significantly harder — manually checking 8 GBP profiles daily is neither scalable nor reliable.</p>
           <p>Proper monitoring uses notification systems or a dashboard that aggregates all reviews into a single view, triggering an alert whenever something new arrives.</p>
 
-          <h2>2. Responding</h2>
+          <h2>How does responding to Google reviews affect your local SEO rank?</h2>
           <p>Responding to reviews is both a customer service function and an SEO function. Responses are indexed — they add relevant text to your profile. Consistent, prompt responses are a positive engagement signal to Google&apos;s local ranking algorithm.</p>
           <p>The standard: respond to every review within 24 hours (negative) or 72 hours (positive). The challenge for most businesses is volume and consistency — maintaining this standard across 50 new reviews per month, across multiple locations, without dedicated staff time.</p>
           <p>AI review response tools solve this: they draft responses in your brand voice for every new review, ready to approve or auto-publish. The time cost drops from 3–5 minutes per response to near-zero.</p>
 
-          <h2>3. Generating</h2>
+          <h2>What does a systematic Google review generation process look like?</h2>
           <p>Generating reviews means actively asking your customers to leave a review on Google — through WhatsApp, email, or in-person prompts at the right moment after their service. Most businesses don&apos;t do this systematically, which is why they accumulate reviews slowly.</p>
           <p>A systematic generation approach uses automation: when a transaction closes or an appointment completes, a personalised review request message is sent automatically. No manual staff action required. The conversion rate from WhatsApp campaigns in Singapore runs at 15–30% — meaning 1 in 3 to 1 in 6 customers who receive the request leave a review.</p>
 
-          <h2>4. Removing</h2>
+          <h2>When can you request removal of a Google review from your business profile?</h2>
           <p>Not all reviews should stay on your profile. Google&apos;s content policy identifies categories of reviews that qualify for removal: fake accounts, competitor-posted reviews, false factual claims, off-topic content, and personal attacks. These reviews don&apos;t represent genuine customer experiences and can be challenged for removal.</p>
           <p>The removal process involves flagging through Google&apos;s system and, where needed, submitting a formal removal request through business support with evidence of the policy violation. Success rates vary by violation type and evidence quality.</p>
 
-          <h2>The Multi-Outlet Problem</h2>
+          <h2>How does review management work at scale for multi-outlet Singapore businesses?</h2>
           <p>For Singapore businesses operating multiple outlets — F&amp;B groups, clinic networks, salon chains — the complexity of review management multiplies with each location. Each GBP profile needs monitoring, each receives reviews that need responses, each benefits from generation campaigns, and each may accumulate reviews that qualify for removal.</p>
           <p>Managing 8 locations manually requires roughly 5–10 hours per week just for responses and monitoring. A dashboard that aggregates all locations into a single view collapses this to under an hour.</p>
 
-          <h2>The Cost of Not Managing</h2>
+          <h2>What happens to your Google Maps position if you stop managing your reviews?</h2>
           <p>Businesses that don&apos;t manage their reviews consistently tend to see: declining Maps rank as competitors build velocity while they stagnate; a drifting rating as negative reviews accumulate without being challenged; and missed customer recovery opportunities where complaints that could have been resolved privately become permanent negative public reviews.</p>
 
-          <h2>Self-Serve Platform vs Managed Service</h2>
+          <h2>Should you use a self-serve review platform or a managed service in Singapore?</h2>
           <p>Epicware operates as a platform — businesses manage their review strategy through a dashboard, with automation handling the routine tasks. The managed service option is available for businesses that prefer to hand off entirely. Both options include all four review management components from a single interface.</p>
         </>
       }

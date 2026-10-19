@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -90,6 +91,8 @@ export default function Post() {
           </div>
           <h2>Why Responding Matters: The Two Signals</h2>
           <p>Review responses send two distinct signals. The first is to Google&apos;s algorithm: active engagement with reviews is treated as a positive GBP signal, contributing to the prominence score that drives Maps rank. Profiles that have consistent responses to reviews outrank equivalent profiles with none.</p>
+          <p>Replying is a core part of{" "}
+            <Link href="/review-management-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">review management</Link>.</p>
           <p>The second signal is to humans: every person who views your GBP profile reads your responses. A business that responds to every review — positive and negative — looks attentive and professional. A business with dozens of unanswered reviews looks indifferent.</p>
 
           <h2>How to Respond to 5-Star Reviews</h2>
@@ -113,7 +116,9 @@ export default function Post() {
           <p>Never be defensive. Even if you disagree with the observation, the response is read by hundreds of future customers — not just the reviewer.</p>
 
           <h2>How to Respond to 1-Star Reviews</h2>
-          <p>Negative review responses require the most care, because they have the highest audience. Anyone researching your business actively looks at how you handle complaints. The response guidelines:</p>
+          <p>
+            <Link href="/blog/handle-negative-google-reviews-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">Negative review responses</Link>{" "}
+            require the most care, because they have the highest audience. Anyone researching your business actively looks at how you handle complaints. The response guidelines:</p>
           <ul>
             <li><strong>Acknowledge without admitting</strong> — &quot;I&apos;m sorry to hear your experience didn&apos;t meet expectations.&quot; This is not an admission of fault; it&apos;s a professional acknowledgement.</li>
             <li><strong>Do not repeat the negative claim</strong> — if the reviewer says &quot;the food was cold,&quot; your response should not include &quot;cold food.&quot; Repetition amplifies the claim.</li>
@@ -136,7 +141,9 @@ export default function Post() {
 
           <h2>Why AI Response Tools Help</h2>
           <p>For businesses with high review volume or multiple outlets, manually writing responses to every review becomes unsustainable. AI review response tools draft professional replies in your brand voice — ready to post with a single click, or posted automatically. The quality matches manual responses without the time cost.</p>
-          <p>Epicware&apos;s AI review response monitors all your GBP profiles and drafts a response to every new review automatically.</p>
+          <p>Epicware&apos;s AI review response monitors all your GBP profiles and drafts a response to every new review automatically. Our{" "}
+            <Link href="/tools/google-review-reply-generator" className="text-primary underline underline-offset-2 hover:text-primary/80">free Google review reply generator</Link>{" "}
+            drafts one in seconds.</p>
         </>
       }
       ctaHref="/reputation-management-singapore/ai-review-response"

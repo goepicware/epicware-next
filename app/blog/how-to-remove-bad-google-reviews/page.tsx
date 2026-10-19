@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -39,11 +40,11 @@ export default function Post() {
       }
       body={
         <>
-          <h2>Why One Bad Review Matters More in Singapore</h2>
+          <h2>Why does one bad Google review have more impact in Singapore than in larger markets?</h2>
           <p>Singapore&apos;s compact geography concentrates search intent. A business in Tampines is visible to the entire east side of the island on Google Maps. One 1-star review from a fake or competitor-posted account isn&apos;t diluted across a large metropolitan area — it&apos;s prominently visible to your entire local customer base.</p>
           <p>For businesses in competitive categories — F&amp;B, healthcare, beauty, tuition — a single 1-star review that drags your rating below 4.0 can represent a measurable drop in enquiries. The cost of inaction is often higher than the cost of removal.</p>
 
-          <h2>Step 1: Know Which Reviews Are Removable</h2>
+          <h2>Which Google reviews qualify for removal under Google&apos;s policies?</h2>
           <p>Google removes reviews that violate its content policies. These fall into clear categories:</p>
           <ul>
             <li><strong>Fake and spam reviews</strong> — accounts with no review history, reviews that appear in coordination with others, copied text</li>
@@ -54,12 +55,12 @@ export default function Post() {
           </ul>
           <p>What is NOT removable: genuine negative opinions from real customers, even if you disagree with their account of events. Understanding this distinction before starting the process saves time.</p>
 
-          <h2>Step 2: Try the Google Flag Route</h2>
+          <h2>How do you flag a Google review for removal?</h2>
           <p>The first step is flagging the review through Google Maps or Business Profile Manager. In Google Maps, find the review, click the three vertical dots, and select &quot;Report review.&quot; In Business Profile Manager, navigate to Reviews, find the review, and click the flag icon.</p>
           <p>Select the most specific violation category available. Google&apos;s automated system reviews the flag — this is not a human review. The system checks the review against patterns and rejects the majority of flags, particularly on reviews that look superficially like genuine feedback.</p>
           <p>If the flag is rejected, you&apos;ll receive an email notification. Don&apos;t stop here. Rejection of a flag is not a final determination — it&apos;s the output of an automated classifier.</p>
 
-          <h2>Step 3: Submit a Formal Removal Request</h2>
+          <h2>What is a formal Google review removal request and how does it differ from flagging?</h2>
           <p>A formal removal request goes through Google&apos;s business support channel — separate from the flag system. This route reaches a human reviewer. You can provide:</p>
           <ul>
             <li>The specific Google policy your review violates (cite it by name)</li>
@@ -68,15 +69,15 @@ export default function Post() {
           </ul>
           <p>The quality of your submission determines the outcome. &quot;This review is fake&quot; without evidence is rejected. &quot;This review violates Google&apos;s Conflicts of Interest policy. The reviewer&apos;s profile shows 4 reviews of businesses in our category, all 5-star, and a 1-star review of our business. Their most recent positive review is for our direct competitor&quot; is actionable.</p>
 
-          <h2>Step 4: Escalate</h2>
+          <h2>What should you do when Google rejects your review removal request?</h2>
           <p>If the formal removal request is rejected, re-submit through a different support channel with supplementary evidence. Google&apos;s support structure has multiple entry points. A rejection on one channel doesn&apos;t preclude re-submission through another with additional context.</p>
           <p>For reviews where the evidence is clear — a spam account, a demonstrable competitor connection — escalation often succeeds after the initial submission fails. Persistence matters.</p>
 
-          <h2>Step 5: Respond Publicly While Waiting</h2>
+          <h2>Should you respond publicly to a bad review while the removal request is pending?</h2>
           <p>The removal process takes time. In the interim, a professional public response is necessary. Future readers see the review — they also see your response. A well-crafted reply that acknowledges the claim without accepting false premises, avoids repeating the negative content, and invites direct contact signals professionalism regardless of whether the review is eventually removed.</p>
           <p>Keep responses factual, brief, and constructive. The goal is not to win an argument with the reviewer — it&apos;s to demonstrate to future readers that your business takes feedback seriously and handles it professionally.</p>
 
-          <h2>What Increases Removal Success Rate</h2>
+          <h2>What increases your chances of successfully removing a Google review?</h2>
           <ul>
             <li><strong>Citing the exact policy</strong> — not &quot;this is fake&quot; but &quot;this violates the Conflicts of Interest policy&quot;</li>
             <li><strong>Providing specific evidence</strong> — reviewer profile screenshots, transaction records, photos</li>
@@ -84,7 +85,7 @@ export default function Post() {
             <li><strong>Timing</strong> — recent reviews have more escalation paths than reviews that are years old</li>
           </ul>
 
-          <h2>What Makes Removal Harder</h2>
+          <h2>What factors make a Google review harder to remove?</h2>
           <ul>
             <li><strong>Age of the review</strong> — reviews older than 18 months have fewer active escalation paths</li>
             <li><strong>Reviewer account age</strong> — established accounts with review history are harder to challenge than new accounts</li>
@@ -92,8 +93,11 @@ export default function Post() {
             <li><strong>No supporting evidence</strong> — without evidence of the policy violation, even genuine fake reviews can be hard to remove</li>
           </ul>
 
-          <h2>When to Use a Professional Service</h2>
-          <p>Epicware&apos;s bad review removal service charges $200 per review, with payment only on successful removal. The service is particularly worth using when:</p>
+          <h2>When is it worth using a professional Google review removal service?</h2>
+          <p>Epicware&apos;s{" "}
+            <Link href="/bad-review-removal-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">bad review removal service</Link>{" "}
+            handles the full process, from assessment to escalation; fees are on{" "}
+            <Link href="/pricing" className="text-primary underline underline-offset-2 hover:text-primary/80">our pricing page</Link>. The service is particularly worth using when:</p>
           <ul>
             <li>The DIY route has already failed once</li>
             <li>You have multiple reviews to challenge simultaneously</li>
@@ -101,13 +105,13 @@ export default function Post() {
             <li>You don&apos;t have time to manage the submission and escalation process</li>
           </ul>
 
-          <h2>What Epicware Does Differently</h2>
+          <h2>How does Epicware&apos;s Google review removal approach differ from DIY removal?</h2>
           <p>Each review is assessed individually. Epicware identifies the strongest policy angle for each specific review — not a generic &quot;spam&quot; claim, but the most defensible violation category with the highest historical removal rate. Submissions are framed with correct policy language. All available escalation channels are pursued systematically.</p>
           <p>The $200/review fee is charged upfront and refunded in full if the review isn&apos;t removed within 3 months — giving us a direct financial incentive to succeed.</p>
         </>
       }
       ctaHref="/bad-review-removal-singapore"
-      ctaLabel="Remove Your Bad Reviews — $200, Refunded If Not Removed"
+      ctaLabel="See Our Bad Review Removal Service"
       ctaContext="Epicware handles the full removal process — from assessment to escalation. Refunded in full if the review stays up after 3 months."
       relatedPosts={[
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },

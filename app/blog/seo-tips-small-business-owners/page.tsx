@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 const OG_IMAGE = "https://www.epicware.ai/assets/blog/seo-tips-small-business-owners/hero-small-business-owner-laptop.jpg";
@@ -136,7 +137,11 @@ export default function Post() {
             algorithm.
           </p>
           <p>
-            The professional way to diagnose this is through geogrid rank tracking. A geogrid simulates searches
+            The professional way to diagnose this is through{" "}
+            <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary font-medium hover:underline">
+              geogrid rank tracking
+            </Link>
+            . A geogrid simulates searches
             from dozens of precise GPS coordinates spread across your service area, then visualises the results as
             a heatmap. Green zones show where you dominate the Map Pack. Red zones reveal where you are invisible.
             This approach,{" "}
@@ -223,7 +228,11 @@ export default function Post() {
           <h3>The &quot;Set It and Forget It&quot; Failure Mode</h3>
           <p>
             Many small business owners claim their GBP during initial setup and never return. This is one of the
-            costliest passive mistakes in local SEO. Profile engagement metrics, including photo upload frequency
+            costliest passive mistakes in{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local SEO
+            </Link>
+            . Profile engagement metrics, including photo upload frequency
             and post frequency, account for a meaningful share of local ranking power according to{" "}
             <a href="https://www.localfalcon.com/blog/top-ranking-factors-for-local-seo-in-2025-tactics-you-cant-afford-to-ignore" target="_blank" rel="noopener noreferrer">
               Local Falcon&apos;s ranking factor analysis
@@ -251,7 +260,11 @@ export default function Post() {
 
           <h3>Your First Action, Right Now</h3>
           <p>
-            Open your GBP dashboard and complete every field currently marked incomplete. Then block a recurring
+            Open your{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              Google Business Profile
+            </Link>{" "}
+            dashboard and complete every field currently marked incomplete. Then block a recurring
             15-minute slot each week to publish one piece of content: a photo, an offer, or a brief update. That
             single habit, sustained consistently, builds compounding ranking momentum that a one-time setup never
             will.
@@ -375,7 +388,14 @@ export default function Post() {
             relevance without requiring a content team.
           </p>
           <p>
-            <strong>If you operate multiple outlets, treat each one as a separate business online.</strong> A salon
+            <strong>
+              If you operate{" "}
+              <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+                multiple outlets
+              </Link>
+              , treat each one as a separate business online.
+            </strong>{" "}
+            A salon
             group with locations in Jurong, Tampines, and Novena needs three GBP listings, three location pages,
             and three distinct review profiles. Merging them under one profile eliminates the proximity signals
             Google relies on most heavily post the 2025 update, and it is one of the most common and costly local
@@ -507,8 +527,12 @@ export default function Post() {
 
           <h3>Your First Action Takes Two Minutes</h3>
           <p>
-            Open ChatGPT or Gemini right now and search &quot;best [your category] in [your neighbourhood].&quot;
-            Note whether your business appears. If it does not, the first three variables to address are your GBP
+            Open ChatGPT or Gemini right now and search &quot;best [your category] in [your neighbourhood].&quot;{" "}
+            If you don&apos;t appear,{" "}
+            <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+              AI search optimisation
+            </Link>{" "}
+            is how you fix that. Note whether your business appears. If it does not, the first three variables to address are your GBP
             completeness, your review volume and recency, and your schema markup implementation. All three have
             been covered in this article. The work is already mapped out.
           </p>

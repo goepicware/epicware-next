@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -62,10 +63,18 @@ export default function Post() {
           </ul>
 
           <h2>How much does review count affect your Google Maps position?</h2>
-          <p>More reviews directly increase your prominence score. Google&apos;s algorithm treats review volume as a credibility signal — a business with 200 reviews is demonstrably more active and more frequently visited than one with 5. In competitive categories in Singapore, review count is often the deciding factor between ranking in the top 3 versus position 5–7.</p>
+          <p>
+            <Link href="/use-cases/get-more-google-reviews" className="text-primary font-medium hover:underline">
+              Getting more Google reviews
+            </Link>{" "}
+            directly increases your prominence score. Google&apos;s algorithm treats review volume as a credibility signal — a business with 200 reviews is demonstrably more active and more frequently visited than one with 5. In competitive categories in Singapore, review count is often the deciding factor between ranking in the top 3 versus position 5–7.</p>
 
           <h2>Why does an incomplete Google Business Profile hurt your Maps rank?</h2>
-          <p>A 19-point GBP audit covers every field that contributes to your relevance signal. Missing business hours mean Google can&apos;t confirm you&apos;re open when someone searches at 8pm. Missing service categories mean you don&apos;t appear for searches that should match your offering. Missing photos reduce click-through rate from Maps results, which is itself a ranking signal.</p>
+          <p>A{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              19-point GBP audit
+            </Link>{" "}
+            covers every field that contributes to your relevance signal. Missing business hours mean Google can&apos;t confirm you&apos;re open when someone searches at 8pm. Missing service categories mean you don&apos;t appear for searches that should match your offering. Missing photos reduce click-through rate from Maps results, which is itself a ranking signal.</p>
 
           <h2>Does posting on Google Business Profile improve your Maps ranking?</h2>
           <p>GBP posts — updates, offers, events — contribute to prominence. Google views active posting as a signal of a live, engaged business. Posting weekly or fortnightly keeps your profile active in Google&apos;s assessment. Posts also appear in your Maps listing and can drive clicks.</p>
@@ -73,6 +82,11 @@ export default function Post() {
           <h2>Why does your Google Maps rank change depending on where in Singapore someone searches?</h2>
           <p>In Singapore, Google Maps rank changes dramatically every 500 metres. A business ranked #1 for &quot;restaurant&quot; in the Tampines MRT area may rank #4 just 800 metres away near Tampines Mall. This is the hyperlocal problem — and it&apos;s why rank tracking using a single search point gives a misleading picture of your actual visibility.</p>
           <p>EpicMap tracks your rank at a grid level across your district, showing exactly where you&apos;re visible in the top 3 and where you&apos;re not. This matters because the majority of Maps clicks go to positions 1–3. Position 4 and beyond effectively don&apos;t exist for most searches.</p>
+          <p>Our{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local SEO services in Singapore
+            </Link>{" "}
+            work on the two factors you can influence, relevance and prominence, in every district you serve.</p>
         </>
       }
       ctaHref="/local-seo-singapore/gbp-optimisation"

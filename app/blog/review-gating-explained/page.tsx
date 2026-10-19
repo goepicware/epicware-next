@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -84,7 +85,9 @@ export default function Post() {
           <p>Review gating takes several forms:</p>
           <ul>
             <li><strong>The two-step survey:</strong> A customer receives a message asking &quot;How satisfied were you with your experience? Rate 1–5.&quot; Customers who respond 4–5 are sent a Google review link. Customers who respond 1–3 are sent a private feedback form instead.</li>
-            <li><strong>The satisfaction question:</strong> A staff member asks &quot;Were you happy with everything today?&quot; Only customers who say yes are handed a QR code or told about Google reviews.</li>
+            <li><strong>The satisfaction question:</strong> A staff member asks &quot;Were you happy with everything today?&quot; Only customers who say yes are handed a QR code or told about Google reviews. The compliant way to{" "}
+              <Link href="/use-cases/get-more-google-reviews" className="text-primary font-medium hover:underline">get more Google reviews</Link>{" "}
+              is to ask every customer.</li>
             <li><strong>The conditional ask:</strong> Review request messages that begin with &quot;If you were happy with your visit, we&apos;d love a Google review.&quot; The conditional phrasing effectively gates by implied satisfaction.</li>
             <li><strong>Selective outreach:</strong> A business manually selects which customers to send review requests to — choosing only those it believes had positive experiences.</li>
           </ul>
@@ -98,7 +101,9 @@ export default function Post() {
           <p>If Google determines that a business has been gating reviews, the consequences can be severe:</p>
           <ul>
             <li>Reviews collected through the gating process may be removed in bulk</li>
-            <li>The GBP profile may be flagged or suspended</li>
+            <li>The GBP profile may be flagged or suspended. If that happens, our{" "}
+              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">Google Business Profile optimisation</Link>{" "}
+              team can help with the appeal.</li>
             <li>Competitors who report the gating practice can trigger a manual review by Google</li>
           </ul>
           <p>A business with 150 reviews built through a two-step gating survey that receives a bulk removal could lose 80–100 reviews overnight — a significant ranking and credibility setback.</p>

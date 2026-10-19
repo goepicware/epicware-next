@@ -410,11 +410,7 @@ export default function Post() {
               taken down, so you&apos;re never paying for an outcome you didn&apos;t get. Beyond review
               removal, the platform gives multi-location businesses a single dashboard to monitor Google Maps
               rankings, flag suspicious edits to their own profiles, and manage review responses across every
-              outlet from one place through{" "}
-              <Link href="/products/epicmap" className="text-primary font-medium hover:underline">
-                EpicMap
-              </Link>{" "}
-              and{" "}
+              outlet from one place through EpicMap and{" "}
               <Link href="/products/epicreview" className="text-primary font-medium hover:underline">
                 EpicReview
               </Link>
@@ -422,7 +418,15 @@ export default function Post() {
             </p>
             <ul>
               <li><strong>Pay-on-success removal:</strong> you only pay when a fake or unfair review is actually taken down.</li>
-              <li><strong>Multi-location monitoring:</strong> track ranking and profile health across every outlet without checking each one manually.</li>
+              <li>
+                <strong>
+                  <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+                    Multi-location monitoring
+                  </Link>
+                  :
+                </strong>{" "}
+                track ranking and profile health across every outlet without checking each one manually.
+              </li>
               <li><strong>Ongoing profile protection:</strong> catch suspicious category changes or edits to your listing before they do damage.</li>
             </ul>
             <p>
@@ -502,8 +506,8 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/bad-review-removal-singapore"
-        ctaLabel="Remove Fake Reviews — $200, Refunded If Not Removed"
+        ctaHref="/bad-review-removal-singapore/fake-review-removal"
+        ctaLabel="See Our Fake Review Removal Service"
         ctaContext="Epicware handles evidence-backed removal requests and monitors your listings across every outlet, so spam and fake reviews don't sit there unresolved."
         relatedPosts={[
           { title: "Fake or Unfair Google Reviews: What Singapore Businesses Can Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -33,8 +34,8 @@ export default function Post() {
       readTime="4 min read"
       intro={
         <>
-          <p>A Google review that sits unanswered for a week tells a story to every person who reads it: nobody at this business is paying attention. For positive reviews, this is a missed engagement opportunity. For negative reviews, the silence amplifies the complaint.</p>
-          <p>Response speed is one of the most controllable aspects of your review management — and one of the most neglected.</p>
+          <p>A Google review that sits unanswered for a week tells a story to every person who reads it: nobody at this business is paying attention. For positive reviews, this is a missed engagement opportunity. For <Link href="/blog/handle-negative-google-reviews-singapore" className="text-primary font-medium hover:underline">negative reviews</Link>, the silence amplifies the complaint.</p>
+          <p>Response speed is one of the most controllable aspects of your <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">review management</Link> — and one of the most neglected.</p>
         </>
       }
       body={
@@ -69,8 +70,9 @@ export default function Post() {
           </ul>
 
           <h2>AI Review Response as a Solution</h2>
-          <p>For businesses with high review volume or multiple outlets, AI review response tools solve the scale problem. The AI monitors all GBP profiles, drafts a response to every new review in the business&apos;s tone, and presents it for approval or auto-posts it.</p>
+          <p>For businesses with high review volume or multiple outlets, <Link href="/reputation-management-singapore/ai-review-response" className="text-primary font-medium hover:underline">AI review response tools</Link> solve the scale problem. The AI monitors all GBP profiles, drafts a response to every new review in the business&apos;s tone, and presents it for approval or auto-posts it.</p>
           <p>The response quality matches what a skilled human would write — personalised, professional, and appropriately varied across review types. The time cost drops from minutes per review to seconds.</p>
+          <p>When you&apos;re short on time, our <Link href="/tools/google-review-reply-generator" className="text-primary font-medium hover:underline">free Google review reply generator</Link> gives you a first draft to edit.</p>
         </>
       }
       ctaHref="/reputation-management-singapore/ai-review-response"

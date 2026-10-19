@@ -132,6 +132,13 @@ export default function Post() {
               capabilities, tools &amp; automation, and results-driven strategies. And yes, one
               agency clearly stands above the rest.
             </p>
+            <p>
+              This list is written by Epicware, an{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">
+                AI-powered digital marketing agency in Singapore
+              </Link>
+              , so we&apos;ve included ourselves; judge us by the same checks.
+            </p>
           </>
         }
         body={
@@ -218,6 +225,16 @@ export default function Post() {
 
             {/* TOP 10 */}
             <h2>🏆 Top 10 AI-Powered Local SEO Agencies in Singapore</h2>
+            <p>
+              Our checklist for{" "}
+              <Link
+                href="/blog/which-local-seo-agencies-in-singapore-are-highly-rated"
+                className="text-primary font-medium hover:underline"
+              >
+                highly rated local SEO agencies
+              </Link>{" "}
+              helps you compare them.
+            </p>
 
             {/* #1 Epicware */}
             <h3>🥇 1. Epicware — Best Overall AI Local SEO Agency ⭐</h3>
@@ -239,6 +256,13 @@ export default function Post() {
               drives customers directly to your door.
             </p>
             <p><strong>Key Services:</strong> Local SEO, Google Business Profile Optimisation, Review Management, AI Automation, Citation Building</p>
+            <p>
+              Epicware&apos;s{" "}
+              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+                local SEO services
+              </Link>{" "}
+              include a rank grid for each outlet.
+            </p>
             <p>
               <strong>Best for:</strong> Restaurants, salons, clinics, and any local business
               that depends on foot traffic and calls.
@@ -448,7 +472,14 @@ export default function Post() {
               Ranking on Google Maps usually takes <strong>1 to 3 months</strong> to see
               noticeable improvements. In highly competitive industries, it may take 3 to 6
               months or more. With AI-powered SEO, the process can often be accelerated through
-              faster optimisation and data analysis.
+              faster optimisation and data analysis. A complete{" "}
+              <Link
+                href="/local-seo-singapore/gbp-optimisation"
+                className="text-primary font-medium hover:underline"
+              >
+                Google Business Profile
+              </Link>{" "}
+              is usually the fastest place to start.
             </p>
 
             <h3>Why are reviews important for Local SEO?</h3>

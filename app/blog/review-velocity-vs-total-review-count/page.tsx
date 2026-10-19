@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -42,7 +43,15 @@ export default function Post() {
           <h2>Defining Velocity vs Total Count</h2>
           <p><strong>Total review count</strong> is simply the number of reviews your business has accumulated over its lifetime. A business with 500 reviews has a high total count.</p>
           <p><strong>Review velocity</strong> is the rate at which new reviews arrive — typically measured as reviews per week or per month. A business receiving 5 new reviews every week has high velocity regardless of its total count.</p>
-          <p>Both matter to Google Maps rank. But they matter in different ways and at different stages of your competitive position.</p>
+          <p>Both matter to{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              Google Maps rank
+            </Link>
+            .{" "}
+            <Link href="/blog/why-review-recency-matters-for-local-rankings" className="text-primary font-medium hover:underline">
+              Review recency matters
+            </Link>{" "}
+            too: a review from last week counts for more than one from two years ago. But they matter in different ways and at different stages of your competitive position.</p>
 
           <h2>What Google&apos;s Algorithm Weights More Heavily</h2>
           <p>Google treats recent reviews as a stronger signal of current business activity than historical reviews. A profile that was highly active 18 months ago but has received no reviews since is treated as a declining or potentially closed business.</p>
@@ -54,6 +63,11 @@ export default function Post() {
             <li><strong>Restaurant A:</strong> 200 reviews, 4.5 rating — but the last review was 8 months ago</li>
             <li><strong>Restaurant B:</strong> 80 reviews, 4.3 rating — with 3 new reviews this week</li>
           </ul>
+          <p>A{" "}
+            <Link href="/local-seo-singapore/competitor-analysis" className="text-primary font-medium hover:underline">
+              local competitor analysis
+            </Link>{" "}
+            shows you this comparison for your own keywords.</p>
           <p>In most cases, Restaurant B will outrank Restaurant A for current searches. Google interprets Restaurant A&apos;s review gap as a signal of declining relevance. Restaurant B&apos;s recent activity signals a business that is currently open and serving customers.</p>
           <p>This pattern is consistent enough that businesses that go quiet on reviews for 6+ months often see noticeable rank declines even when their total count is high.</p>
 
@@ -65,6 +79,11 @@ export default function Post() {
             <li>Don&apos;t try to recover by getting 30 reviews in a single week — Google&apos;s spam detection may filter reviews that arrive in an unusual spike pattern</li>
           </ol>
           <p>Aim for a sustainable weekly rate rather than a one-time burst. A consistent 3–5 reviews per week is more valuable — and more credible to the algorithm — than 40 reviews arriving in 7 days.</p>
+          <p>If your velocity stalled after a bad patch, start with a{" "}
+            <Link href="/blog/reputation-recovery-strategy" className="text-primary font-medium hover:underline">
+              reputation recovery strategy
+            </Link>
+            .</p>
 
           <h2>The 5-Reviews-Per-Month Minimum Target</h2>
           <p>For most Singapore SMBs in competitive categories, 5 reviews per month is the minimum to maintain relevance. Below this threshold, the algorithm begins treating the business as less active than its competitors who are generating more regular activity.</p>
@@ -74,6 +93,11 @@ export default function Post() {
           <h2>When Total Count Matters More</h2>
           <p>Early in your competitive position — when you have fewer than 50 reviews and competitors have 200+ — closing the total count gap is your priority. A business with 20 reviews and strong velocity will not overtake a business with 300 reviews by velocity alone. Total count matters for establishing baseline credibility.</p>
           <p>Once you&apos;re in a competitive range (within 30–40% of the leading competitors), velocity becomes the primary differentiator.</p>
+          <p>We can{" "}
+            <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+              manage your Google reviews
+            </Link>{" "}
+            and keep review requests going out every month.</p>
         </>
       }
       ctaHref="/reputation-management-singapore/review-generation"

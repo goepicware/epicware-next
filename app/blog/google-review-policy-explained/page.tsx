@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -47,11 +48,15 @@ export default function Post() {
               <li>• A genuine negative opinion from a real customer — even an unfair one — cannot be removed under any policy. You can respond to it, but not remove it.</li>
             </ul>
           </div>
-          <h2>Why Google&apos;s Review Policy Matters</h2>
-          <p>Google does not remove reviews simply because a business owner disputes them. The company&apos;s position is that authentic reviews — even negative ones — are valuable to consumers making decisions. Removal is only available for content that violates their published policies.</p>
+          <h2>Why does understanding Google&apos;s review policy matter for Singapore business owners?</h2>
+          <p>Google does not remove reviews simply because a business owner disputes them. When a review does break the policy, our{" "}
+            <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+              bad review removal service
+            </Link>{" "}
+            prepares the evidence and files it for you. The company&apos;s position is that authentic reviews — even negative ones — are valuable to consumers making decisions. Removal is only available for content that violates their published policies.</p>
           <p>This means the path to removal runs through policy, not preference. You need to identify which specific rule the review breaks, and frame your removal request accordingly.</p>
 
-          <h2>Prohibited Content Categories</h2>
+          <h2>What content does Google&apos;s review policy prohibit?</h2>
           <h3>Spam and Fake Content</h3>
           <p>Reviews that are not based on a genuine customer experience. This includes reviews from accounts that appear to exist solely to post negative content, reviews that are clearly copied from other sources, and reviews where the same text appears across multiple businesses.</p>
 
@@ -73,24 +78,42 @@ export default function Post() {
           <h3>Misrepresentation</h3>
           <p>Reviews that impersonate another person, that claim to be from a professional capacity the reviewer doesn&apos;t have, or that misrepresent the reviewer&apos;s actual experience.</p>
 
-          <h2>The Category That Protects Most Businesses</h2>
+          <h2>Which Google review policy violation protects Singapore businesses most?</h2>
           <p><strong>Conflicts of interest</strong> is the most actionable category for Singapore SMBs. If you can demonstrate that a reviewer has a financial connection to a competing business — even through publicly available information like their review history across your competitors — this is a strong basis for removal.</p>
           <p>Look at the reviewer&apos;s profile. If they have reviewed multiple businesses in your category, and their reviews of your competitors are consistently positive while yours is the only negative, this pattern supports a conflict of interest claim.</p>
+          <p>Reviews from competitors, or from people who never visited, are the main target of{" "}
+            <Link href="/bad-review-removal-singapore/fake-review-removal" className="text-primary font-medium hover:underline">
+              fake review removal
+            </Link>.
+          </p>
 
-          <h2>False Factual Claims</h2>
+          <h2>Can you remove a Google review that contains false factual claims?</h2>
           <p>A review that states specific, demonstrably false facts can qualify for removal. &quot;They charged me $300 for a haircut&quot; when your price list shows $45 is a false factual claim. &quot;The food gave me food poisoning&quot; with no supporting context is harder to categorise as false versus as a genuine — if unverifiable — personal experience.</p>
           <p>The key word is factual. Opinions (&quot;the service was terrible&quot;) are not removable even if unfair. Facts (&quot;they don&apos;t accept cash&quot;) that are wrong can be challenged.</p>
 
-          <h2>What Does NOT Qualify</h2>
+          <h2>What types of negative Google reviews cannot be removed under any policy?</h2>
           <p>This is equally important to understand. Negative opinions from genuine customers are not removable under any circumstance. A 1-star review that says &quot;waited 45 minutes and the food was cold&quot; from someone who was actually there is authentic feedback, even if you dispute the account. You can respond to it. You cannot have it removed.</p>
 
-          <h2>How to Submit a Policy Violation Claim</h2>
-          <p>There are two paths: the flag button (via Google Maps or Business Profile Manager), and the formal business support channel. The flag button is automated — it uses machine learning to assess the claim and rejects the majority of submissions. The formal channel involves human review and allows you to provide context and evidence.</p>
+          <h2>How do you submit a Google review policy violation claim?</h2>
+          <p>There are two paths: the flag button (via Google Maps or Business Profile Manager), and the formal business support channel. Our guide on{" "}
+            <Link href="/blog/how-to-remove-bad-google-reviews" className="text-primary font-medium hover:underline">
+              how to remove bad Google reviews
+            </Link>{" "}
+            walks through both. The flag button is automated — it uses machine learning to assess the claim and rejects the majority of submissions. The formal channel involves human review and allows you to provide context and evidence.</p>
           <p>For any review worth removing, go to the formal channel. Cite the specific policy, provide evidence, and be factual. Emotional language reduces your chances. &quot;This reviewer is a competitor&quot; with a screenshot of their review history is more effective than &quot;this review is clearly fake.&quot;</p>
 
-          <h2>Success Rates by Violation Type</h2>
+          <h2>Which Google review violation types have the highest removal success rates?</h2>
           <p>Spam and fake content with clear evidence (bot-like account, copied text, suspicious timing) has a relatively high removal rate. Conflicts of interest with documented evidence also perform well. &quot;Unfair opinion&quot; submissions — where the business simply disagrees with the customer&apos;s account — are rejected almost universally.</p>
-          <p>The difference between a successful and unsuccessful submission is usually the quality of evidence and the precision of the policy citation, not the underlying merits of the case.</p>
+          <p>The difference between a successful and unsuccessful submission is usually the quality of evidence and the precision of the policy citation, not the underlying merits of the case. Epicware is a{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              digital marketing agency in Singapore
+            </Link>{" "}
+            that files policy-based removals for clinics, restaurants and salons.</p>
+          <p>If a review stays up, here&apos;s how to{" "}
+            <Link href="/blog/handle-negative-google-reviews-singapore" className="text-primary font-medium hover:underline">
+              handle negative Google reviews
+            </Link>{" "}
+            in public.</p>
         </>
       }
       ctaHref="/bad-review-removal-singapore"
@@ -100,7 +123,6 @@ export default function Post() {
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
         { title: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
         { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
-        { title: "Clinic Owners: 2–4 Week Checklist to Change Google Categories Safely", href: "/blog/clinic-google-categories" },
       ]}
     />
   );

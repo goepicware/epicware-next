@@ -105,11 +105,8 @@ export default function Post() {
             <p>
               Publish a canonical, crawlable HTML menu page, add Menu, MenuSection, and MenuItem JSON-LD
               schema, and keep that data synced with your Google Business Profile. This combination is the
-              fastest route to visibility across Search, Maps, AI overviews, and voice assistants for{" "}
-              <Link href="/industries/restaurants" className="text-primary font-medium hover:underline">
-                F&amp;B restaurants
-              </Link>
-              , and it&apos;s the single change that stops AI tools from recommending a competitor because
+              fastest route to visibility across Search, Maps, AI overviews, and voice assistants for
+              F&amp;B restaurants, and it&apos;s the single change that stops AI tools from recommending a competitor because
               your own data was inconsistent or invisible.
             </p>
             <p>
@@ -417,10 +414,14 @@ export default function Post() {
 
             <h2>Where does Epicware fit for multi-location menu SEO?</h2>
             <p>
-              Fixing menu SEO manually across several locations means repeating the same audit, the same
-              schema check, and the same GBP cleanup over and over, which is where a managed platform earns
-              its cost back in time alone. Epicware&apos;s relevant services line up directly with the
-              checklist in this guide:
+              Epicware is an{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">
+                AI-powered digital marketing agency in Singapore
+              </Link>{" "}
+              that helps restaurant groups solve exactly this problem. Fixing menu SEO manually across
+              several locations means repeating the same audit, the same schema check, and the same GBP
+              cleanup over and over, which is where a managed platform earns its cost back in time alone.
+              Epicware&apos;s relevant services line up directly with the checklist in this guide:
             </p>
             <ul>
               <li>GBP optimisation to resolve dish-name and pricing mismatches across locations.</li>
@@ -428,32 +429,24 @@ export default function Post() {
               <li>
                 <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
                   Bad review removal
-                </Link>
-                , priced at $200 per review, for unfair or fake reviews sitting next to your menu listings.
+                </Link>{" "}
+                for unfair or fake reviews sitting next to your menu listings.
               </li>
               <li>
                 <Link href="/products/epicmap" className="text-primary font-medium hover:underline">
                   EpicMap
                 </Link>{" "}
-                and{" "}
-                <Link href="/products/epicreview" className="text-primary font-medium hover:underline">
-                  EpicReview
-                </Link>
-                , the{" "}
-                <Link href="/products" className="text-primary font-medium hover:underline">
-                  product lines
-                </Link>{" "}
-                that handle rank tracking and review management day to day.
+                and EpicReview, the product lines that handle rank tracking and review management day to day.
               </li>
             </ul>
             <p>
               If you run one outlet with time to spare, the DIY path in this guide will get you most of the
               way there. If you&apos;re managing several locations, or simply don&apos;t have the hours to
-              chase schema validation and GBP sync every week, Epicware&apos;s plans start at{" "}
+              chase schema validation and GBP sync every week, Epicware&apos;s plans start with the{" "}
               <Link href="/pricing" className="text-primary font-medium hover:underline">
-                $299 per month with the Foundation tier
-              </Link>
-              . Request a{" "}
+                Foundation tier
+              </Link>{" "}
+              and scale up from there. Request a{" "}
               <Link href="/free-audit" className="text-primary font-medium hover:underline">
                 free audit
               </Link>{" "}

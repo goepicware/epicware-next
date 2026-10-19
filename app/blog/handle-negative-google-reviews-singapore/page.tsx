@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -51,7 +52,7 @@ export default function Post() {
       }
       body={
         <>
-          <h2>Why Your Response Matters More Than the Review Itself</h2>
+          <h2>Why does your response to a negative Google review matter more than the review itself?</h2>
           <p>
             Most business owners focus on the negative review — the words, the rating, the unfairness of it.
             But prospective customers read both the review and your response. A calm, professional reply to a
@@ -68,7 +69,7 @@ export default function Post() {
             Treat every public response as marketing copy. Because it is.
           </p>
 
-          <h2>The Four-Part Response Framework</h2>
+          <h2>What is the most effective framework for responding to negative Google reviews?</h2>
           <p>
             A good response to a negative Google review follows a consistent structure. This framework works
             across industries and review types — whether the complaint is legitimate, exaggerated, or plainly
@@ -107,7 +108,7 @@ export default function Post() {
             damaged by an aggressive response is you, not the reviewer. Future customers are the real audience.
           </p>
 
-          <h2>Response Templates for Common Singapore Review Scenarios</h2>
+          <h2>What are the best response templates for negative Google reviews in Singapore?</h2>
           <p>
             These templates are starting points — adapt them to your voice, but maintain the structure.
           </p>
@@ -149,7 +150,9 @@ export default function Post() {
 
           <h2>When Can You Request Removal?</h2>
           <p>
-            Not every negative review qualifies for removal — but some do. Google will act on reviews that
+            Not every negative review qualifies for removal under{" "}
+            <Link href="/blog/google-review-policy-explained" className="text-primary underline underline-offset-2 hover:text-primary/80">Google&apos;s review policy</Link>{" "}
+            — but some do. Google will act on reviews that
             violate its content policies. The key categories worth flagging:
           </p>
           <ul>
@@ -186,7 +189,7 @@ export default function Post() {
             or policy-violating — with specifics — improves your chances.
           </p>
 
-          <h2>What to Do When Removal Isn&apos;t Possible</h2>
+          <h2>What should you do when a negative Google review cannot be removed?</h2>
           <p>
             Most legitimate negative reviews won&apos;t be removed, even if you respond well and the
             complaint was unfair. The most effective strategy for these is dilution — generating a higher
@@ -205,8 +208,13 @@ export default function Post() {
             when a negative one appears are always reactive. The goal is to build a buffer before you
             need it.
           </p>
+          <p>
+            For a full playbook, see our{" "}
+            <Link href="/blog/negative-review-damage-control" className="text-primary underline underline-offset-2 hover:text-primary/80">negative review damage control</Link>{" "}
+            strategy.
+          </p>
 
-          <h2>The Mistakes That Make Things Worse</h2>
+          <h2>What mistakes make a negative Google review situation significantly worse?</h2>
           <p>
             These are the responses and tactics that businesses use in frustration — and that consistently
             backfire.
@@ -242,7 +250,7 @@ export default function Post() {
             matters: the reviewer has nothing to lose; you have your reputation to protect.
           </p>
 
-          <h2>How Negative Reviews Affect Your Google Maps Rank</h2>
+          <h2>How do negative Google reviews affect your Google Maps ranking in Singapore?</h2>
           <p>
             Rating and review sentiment are components of Google&apos;s prominence signal — which is one of
             the three factors that determine your Map Pack position. A low rating (below 4.0) or a high
@@ -256,10 +264,12 @@ export default function Post() {
             Google treats the profile overall.
           </p>
           <p>
-            Responding to negative reviews is not just reputation management. It&apos;s also local SEO.
+            Responding to negative reviews is not just{" "}
+            <Link href="/reputation-management-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">reputation management</Link>. It&apos;s also{" "}
+            <Link href="/local-seo-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link>.
           </p>
 
-          <h2>Building a Process, Not Just Reacting</h2>
+          <h2>How do you build a systematic process for handling negative Google reviews proactively?</h2>
           <p>
             The businesses that manage their reputation best in Singapore treat reviews as an ongoing
             operational system, not a crisis management task. That means:
@@ -282,6 +292,10 @@ export default function Post() {
               may violate policy and flagging them promptly, rather than discovering them weeks later.
             </li>
           </ul>
+          <p>
+            Clinics feel this most, because patients check reviews before booking; see{" "}
+            <Link href="/blog/why-negative-reviews-hurt-clinic-reputation" className="text-primary underline underline-offset-2 hover:text-primary/80">how reviews affect a clinic&apos;s bookings</Link>.
+          </p>
           <p>
             Most Singapore SMBs handle reviews reactively — they notice a negative review because a customer
             mentions it, or because the rating drops and they wonder why. A proactive system turns

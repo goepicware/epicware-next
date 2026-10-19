@@ -103,10 +103,7 @@ export default function Post() {
         intro={
           <>
             <p>
-              Pick the single, most specific primary category that describes what your{" "}
-              <Link href="/industries/healthcare-clinics" className="text-primary font-medium hover:underline">
-                clinic
-              </Link>{" "}
+              Pick the single, most specific primary category that describes what your clinic
               actually is, then use Services to list every treatment and procedure you offer. Add only a
               few extra categories, and only for genuinely separate departments. Category names vary by
               country and language, and switching one can trigger re-verification, so check your current
@@ -317,14 +314,30 @@ export default function Post() {
                 .
               </li>
               <li><strong>Rank tracking</strong> that shows whether a category or Services change actually moved visibility in Maps and Search.</li>
-              <li><strong>Review management tools</strong> that keep patient feedback in good standing while profile changes are underway.</li>
+              <li>
+                <strong>
+                  <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+                    Review management
+                  </Link>{" "}
+                  tools
+                </strong>{" "}
+                that keep patient feedback in good standing while profile changes are underway. Reviews
+                matter during any profile change; here&apos;s{" "}
+                <Link
+                  href="/blog/why-negative-reviews-hurt-clinic-reputation"
+                  className="text-primary font-medium hover:underline"
+                >
+                  what negative reviews do to a clinic&apos;s reputation
+                </Link>
+                .
+              </li>
             </ul>
             <p>
               The{" "}
               <Link href="/industries/healthcare-clinics" className="text-primary font-medium hover:underline">
-                clinic-focused guidance
+                local SEO for clinics
               </Link>{" "}
-              Epicware publishes reflects patterns seen across the outlets it manages, where a mismatched
+              guidance Epicware publishes reflects patterns seen across the outlets it manages, where a mismatched
               category is one of the more common and most fixable visibility problems a clinic can have.
             </p>
 
@@ -350,11 +363,7 @@ export default function Post() {
             <ul>
               <li>
                 <strong>GBP Optimisation</strong>, which reviews category accuracy, Services entries, and
-                profile completeness as part of a full{" "}
-                <Link href="/services" className="text-primary font-medium hover:underline">
-                  audit
-                </Link>
-                .
+                profile completeness as part of a full audit.
               </li>
               <li>
                 <strong>Bad Review Removal</strong>, priced per review with a refund if the review isn&apos;t
@@ -381,7 +390,11 @@ export default function Post() {
               <Link href="/pricing" className="text-primary font-medium hover:underline">
                 Foundation, Authority, and Domination plans
               </Link>
-              , each scaled to different levels of local SEO management. If your clinic&apos;s category
+              , each scaled to different levels of{" "}
+              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+                local SEO
+              </Link>{" "}
+              management. If your clinic&apos;s category
               history is unclear or a recent change hurt your rankings, request a{" "}
               <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
                 GBP optimisation review

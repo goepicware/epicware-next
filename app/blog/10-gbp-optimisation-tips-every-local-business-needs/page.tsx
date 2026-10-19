@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -97,11 +98,18 @@ export default function Post() {
 
           <h2>How does consistent GBP activity improve local search visibility?</h2>
           <p>
-            GBP optimisation is not a one-time setup — it is an ongoing signal of business activity.
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              GBP optimisation
+            </Link>{" "}
+            is not a one-time setup — it is an ongoing signal of business activity.
             Google&apos;s algorithm favours active, current profiles. Businesses that neglect their GBP
             for over six months often see a measurable reduction in local search impressions. Consistent
             updates tell Google your information is current and reliable, which directly improves your
-            position in local results and the Map Pack.
+            position in local results and the Map Pack. Regular posts, photos and replies all add to your{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local search visibility
+            </Link>
+            .
           </p>
           <ol>
             <li>
@@ -113,7 +121,11 @@ export default function Post() {
             <li>
               <strong>Post to your GBP at least weekly.</strong> Businesses that post twice or more per
               week see higher engagement than those posting less frequently. Use posts to highlight offers,
-              events, and new services.
+              events, and new services. Our{" "}
+              <Link href="/local-seo-singapore/gbp-post-scheduling" className="text-primary font-medium hover:underline">
+                GBP post scheduling
+              </Link>{" "}
+              service posts for you every week.
             </li>
             <li>
               <strong>Upload new photos bi-weekly.</strong> Profiles with more high-quality photos receive
@@ -210,8 +222,11 @@ export default function Post() {
               all listings for consistency.
             </li>
             <li>
-              <strong>Ignoring reviews and Q&amp;A.</strong> Businesses that do not respond to reviews risk
-              losing consumer trust. Unanswered questions in the Q&amp;A section deter potential customers
+              <strong>Ignoring reviews and Q&amp;A.</strong> Businesses that do not{" "}
+              <Link href="/blog/should-you-respond-to-every-google-review" className="text-primary font-medium hover:underline">
+                respond to reviews
+              </Link>{" "}
+              risk losing consumer trust. Unanswered questions in the Q&amp;A section deter potential customers
               before they ever contact you. Engage with all feedback promptly.
             </li>
             <li>
@@ -258,7 +273,12 @@ export default function Post() {
             Create and fully optimise a separate profile for each location. Each profile needs unique,
             accurate NAP information, categories specific to that location, and localised descriptions.
             Managing these through a central dashboard prevents data inconsistencies — which Google
-            penalises — while maintaining consistent branding across all locations.
+            penalises — while maintaining consistent branding across all locations. Each outlet needs its
+            own profile; see how to manage{" "}
+            <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+              multiple locations
+            </Link>{" "}
+            in one place.
           </p>
 
           <h3>Do photos on Google Business Profile actually improve your ranking?</h3>

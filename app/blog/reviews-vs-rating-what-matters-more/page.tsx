@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -35,6 +36,8 @@ export default function Post() {
         <>
           <p>Business owners often frame the question as a choice: should I focus on getting more reviews, or on protecting my star rating? In practice, both matter — but they matter differently depending on where you are in the competitive landscape.</p>
           <p>This guide explains what the evidence says about how Google Maps weights review count against star rating, and what the practical implications are for your strategy.</p>
+          <p>Both feed your{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Maps ranking</Link>.</p>
         </>
       }
       body={
@@ -51,7 +54,9 @@ export default function Post() {
           <h2>Count &gt; Rating in Early Competition</h2>
           <p>For businesses in the 0–100 review range, the strategic priority should be volume. Getting to 80–100 quality reviews matters more than achieving a perfect 5.0 average. This is because:</p>
           <ul>
-            <li>Businesses with very few reviews have high rating volatility — one negative review moves a 5.0 to 4.5</li>
+            <li>Businesses with very few reviews have high rating volatility — one negative review moves a 5.0 to 4.5, which is why{" "}
+              <Link href="/use-cases/get-more-google-reviews" className="text-primary underline underline-offset-2 hover:text-primary/80">getting more Google reviews</Link>{" "}
+              steadies your rating</li>
             <li>Google treats low review count as a weaker prominence signal regardless of rating</li>
             <li>Consumers instinctively distrust very high ratings with very few reviews (&quot;only 8 reviews and all 5-star? Suspicious&quot;)</li>
           </ul>
@@ -59,6 +64,8 @@ export default function Post() {
           <h2>The 4.0 Cliff</h2>
           <p>There is a practical threshold below which star rating becomes a significant problem regardless of review count: 4.0. Studies of consumer behaviour in local search consistently show that businesses below 4.0 stars see substantially lower click-through rates than those above it — even when their review count is competitive.</p>
           <p>A business at 3.8 stars with 200 reviews is disadvantaged both algorithmically and in consumer perception. This is when protecting your rating becomes the priority — either through negative review removal (where policy violations exist) or through an accelerated positive review generation campaign to dilute the low-rating reviews.</p>
+          <p>If your rating has already dropped, follow a{" "}
+            <Link href="/blog/reputation-recovery-strategy" className="text-primary underline underline-offset-2 hover:text-primary/80">reputation recovery strategy</Link>.</p>
 
           <h2>The 4.3–4.7 Sweet Spot</h2>
           <p>Counterintuitively, a perfect 5.0 rating is not always optimal. Consumer research consistently shows that buyers find ratings in the 4.3–4.7 range more credible than 5.0. A 5.0 average with any meaningful number of reviews is perceived as potentially filtered or manipulated. A 4.5 average signals genuine reviews with natural variation.</p>
@@ -69,7 +76,9 @@ export default function Post() {
           <ol>
             <li>Build review count through consistent, policy-compliant generation campaigns</li>
             <li>Maintain review velocity so the profile looks active</li>
-            <li>Remove policy-violating reviews that are dragging your rating down</li>
+            <li>Remove{" "}
+              <Link href="/blog/google-review-policy-explained" className="text-primary underline underline-offset-2 hover:text-primary/80">policy-violating reviews</Link>{" "}
+              that are dragging your rating down</li>
             <li>Respond to every review — positive and negative — to demonstrate active engagement</li>
           </ol>
           <p>Steps 1 and 2 deliver the greatest impact on Maps rank. Step 3 is particularly high-value when fake or competitor-posted reviews are the cause of a suppressed rating. Step 4 supports both rank and conversion.</p>

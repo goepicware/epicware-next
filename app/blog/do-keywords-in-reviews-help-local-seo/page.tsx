@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -46,7 +47,11 @@ export default function Post() {
           <h2>How Review Text Affects the Relevance Signal</h2>
           <p>Google&apos;s relevance signal draws from multiple sources: your GBP categories, your service descriptions, your website content, and — to some degree — the language used in customer reviews. Reviews are user-generated content that Google treats as third-party validation of what your business does.</p>
           <p>When searchers look for &quot;Japanese restaurant with omakase Tanjong Pagar,&quot; a restaurant whose reviews frequently mention &quot;omakase&quot; and &quot;Tanjong Pagar&quot; alongside high ratings is more relevant to that search than an identical restaurant whose reviews are generic (&quot;great food, nice service&quot;).</p>
-          <p>The effect is real but modest. Your GBP service descriptions and categories carry significantly more weight than review text for relevance.</p>
+          <p>The effect is real but modest. Your GBP service descriptions and{" "}
+            <Link href="/blog/secondary-categories-google-business" className="text-primary font-medium hover:underline">
+              business categories
+            </Link>{" "}
+            carry significantly more weight than review text for relevance.</p>
 
           <h2>Google&apos;s Review Highlights Feature</h2>
           <p>Google surfaces &quot;review highlights&quot; — common phrases from reviews — prominently on GBP profiles in search results. If ten reviews mention &quot;friendly staff,&quot; that phrase appears as a highlight beneath your profile. If five reviews mention &quot;affordable prices,&quot; that appears too.</p>
@@ -65,11 +70,32 @@ export default function Post() {
           <p>To put keyword optimisation in perspective: a business with 200 reviews that contain zero keywords outranks a business with 30 highly keyword-optimised reviews in most searches. Review volume and velocity are the dominant factors in the prominence score.</p>
           <p>Keyword density in reviews is a secondary optimisation — something to be aware of and naturally encouraged through your response strategy, but not the primary lever for local SEO improvement.</p>
           <p>The correct priority order: first build review volume (total count), then maintain velocity (consistent weekly arrivals), then protect rating (remove policy-violating reviews), and finally optimise responses for natural keyword inclusion. Most businesses don&apos;t get past step two — and steps one and two deliver 90% of the ranking benefit.</p>
+          <p>Photos are a separate question: whether{" "}
+            <Link href="/blog/do-photo-reviews-matter-for-local-seo" className="text-primary font-medium hover:underline">
+              photo reviews matter for local SEO
+            </Link>{" "}
+            depends on your industry. For the bigger picture, read our{" "}
+            <Link href="/blog/google-business-reviews-guide" className="text-primary font-medium hover:underline">
+              complete guide to Google Business reviews
+            </Link>
+            .</p>
         </>
       }
       ctaHref="/local-seo-singapore"
       ctaLabel="Local SEO Singapore"
-      ctaContext="Epicware's local SEO services cover GBP optimisation, review management, and rank tracking across Singapore districts."
+      ctaContext={
+        <>
+          Epicware&apos;s{" "}
+          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            local SEO services
+          </Link>{" "}
+          cover GBP optimisation,{" "}
+          <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+            Google review management
+          </Link>{" "}
+          and rank tracking across Singapore districts.
+        </>
+      }
       relatedPosts={[
         { title: "Google Maps Ranking Factors Explained", href: "/blog/google-maps-ranking-factors" },
         { title: "Review Velocity vs Total Review Count", href: "/blog/review-velocity-vs-total-review-count" },

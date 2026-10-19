@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -98,14 +99,14 @@ export default function Post() {
           <ul>
             <li><strong>Simply asking</strong> — requesting a review without any associated reward is always permitted</li>
             <li><strong>Sending a follow-up message</strong> — a polite WhatsApp or email asking for an honest review is not an incentive</li>
-            <li><strong>Making it easy</strong> — providing a direct review link, a QR code, or automated reminders does not incentivise in the policy sense</li>
+            <li><strong>Making it easy</strong> — providing <Link href="/blog/how-to-create-google-review-link-qr-code" className="text-primary underline underline-offset-2 hover:text-primary/80">a direct review link, a QR code</Link>, or automated reminders does not incentivise in the policy sense</li>
             <li><strong>Thanking a reviewer</strong> — responding to a review with gratitude after it&apos;s posted is not an incentive (the review already exists; no quid pro quo occurred)</li>
           </ul>
 
           <h2>The Risks of Violating This Policy</h2>
           <p>Google enforces its review policy through a combination of automated detection and manual review. The consequences of being caught incentivising reviews:</p>
           <ul>
-            <li><strong>Review removal</strong> — incentivised reviews identified by Google are removed. If a large portion of your reviews were incentivised, a mass removal can dramatically lower your rating overnight.</li>
+            <li><strong>Review removal</strong> — incentivised reviews identified by Google are removed under <Link href="/blog/google-review-policy-explained" className="text-primary underline underline-offset-2 hover:text-primary/80">Google&apos;s review policy</Link>. If a large portion of your reviews were incentivised, a mass removal can dramatically lower your rating overnight.</li>
             <li><strong>Profile suspension</strong> — repeat violations can result in your Google Business Profile being suspended, removing your Maps presence entirely.</li>
             <li><strong>Reputation risk</strong> — if the incentive scheme is documented (receipts, social media posts, staff instructions), competitors or disgruntled customers can use it to file a report with Google.</li>
           </ul>
@@ -127,7 +128,13 @@ export default function Post() {
       }
       ctaHref="/reputation-management-singapore/review-generation"
       ctaLabel="Ethical Review Generation Campaigns"
-      ctaContext="Epicware's review campaigns are policy-compliant — personalised, timely, and free of incentives."
+      ctaContext={
+        <>
+          Epicware, a <Link href="/" className="text-primary underline underline-offset-2 hover:text-primary/80">digital marketing agency in Singapore</Link>, runs{" "}
+          <Link href="/reputation-management-singapore/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">review campaigns</Link>{" "}
+          that are policy-compliant: personalised, timely and free of incentives.
+        </>
+      }
       relatedPosts={[
         { title: "Review Gating Explained", href: "/blog/review-gating-explained" },
         { title: "How to Get More Google Reviews", href: "/blog/how-to-get-more-google-reviews" },

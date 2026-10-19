@@ -478,8 +478,8 @@ export default function Post() {
             </p>
             <p>
               Beyond categories, our{" "}
-              <Link href="/services" className="text-primary font-medium hover:underline">
-                GBP Optimisation service
+              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+                our local SEO services
               </Link>{" "}
               covers the broader profile setup, and our{" "}
               <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">

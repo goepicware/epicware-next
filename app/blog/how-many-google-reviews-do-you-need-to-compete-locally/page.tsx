@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -40,7 +41,11 @@ export default function Post() {
       body={
         <>
           <h2>Why There Is No Single Answer</h2>
-          <p>Google Maps rank is competitive and hyperlocal. A restaurant in Clementi competes with Clementi restaurants — not restaurants in Bishan or Bedok. A physiotherapy clinic in the CBD competes with CBD clinics. Your benchmark is the review count of the businesses currently outranking you for your specific keyword in your specific area.</p>
+          <p>
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              Google Maps rank
+            </Link>{" "}
+            is competitive and hyperlocal. A restaurant in Clementi competes with Clementi restaurants — not restaurants in Bishan or Bedok. A physiotherapy clinic in the CBD competes with CBD clinics. Your benchmark is the review count of the businesses currently outranking you for your specific keyword in your specific area.</p>
           <p>A business with 50 reviews might be very competitive in a quieter residential neighbourhood. The same 50 reviews would be invisible in a high-competition commercial area.</p>
 
           <h2>How to Find Your Local Benchmark</h2>
@@ -51,7 +56,16 @@ export default function Post() {
             <li>Look at the top 3–5 results in the map pack</li>
             <li>Note their review count and average rating</li>
           </ol>
-          <p>This gives you the competitive ceiling for your specific location and keyword. If the top 3 businesses have 120, 95, and 87 reviews, your target to rank in the top 3 is roughly 80–100 reviews with a comparable rating.</p>
+          <p>This gives you the competitive ceiling for your specific location and keyword. If the top 3 businesses have 120, 95, and 87 reviews, your target to rank in the top 3 is roughly 80–100 reviews with a comparable rating. Check where you rank block by block with{" "}
+            <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary font-medium hover:underline">
+              local rank tracking
+            </Link>
+            . Count the reviews of the three businesses above you; a{" "}
+            <Link href="/local-seo-singapore/competitor-analysis" className="text-primary font-medium hover:underline">
+              local competitor analysis
+            </Link>{" "}
+            does this for every keyword.
+          </p>
 
           <h2>Singapore Benchmarks by Category</h2>
           <p>Based on Epicware&apos;s data across managed profiles in Singapore (as of mid-2026):</p>
@@ -74,7 +88,12 @@ export default function Post() {
 
           <h2>Why 50 Reviews at 4.7 Beats 300 Reviews at 3.8</h2>
           <p>Review count is not the only variable. A high review count paired with a low rating creates a mixed signal. Google&apos;s algorithm factors in both count and rating — and for humans viewing the profile, a 3.8-star business with many reviews is often less appealing than a 4.7-star business with fewer.</p>
-          <p>The practical implication: before running a review generation campaign, audit your existing reviews for removable policy violations. If you have 5 fake or competitor-posted reviews dragging your rating down, removing them before launching a generation campaign means your new reviews land on a cleaner baseline.</p>
+          <p>The practical implication: before running a review generation campaign, audit your existing reviews for removable policy violations. If you have 5 fake or competitor-posted reviews dragging your rating down, removing them before launching a generation campaign means your new reviews land on a cleaner baseline. Count also protects your rating, since one bad review can drop a 5.0 to 4.5 when you have only a few; see{" "}
+            <Link href="/blog/reviews-vs-rating-what-matters-more" className="text-primary font-medium hover:underline">
+              review count vs star rating
+            </Link>
+            .
+          </p>
 
           <h2>What to Do When You Are Far Behind</h2>
           <p>If your gap is very large — you have 15 reviews and the top competitors have 300 — a pure review generation approach will take time. In this scenario, combine review generation with GBP optimisation to improve your relevance and proximity signals while the count grows. A highly optimised GBP profile can rank above a less optimised profile even at lower review counts when the relevance match is strong.</p>

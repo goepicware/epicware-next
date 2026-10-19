@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -39,22 +40,26 @@ export default function Post() {
       }
       body={
         <>
-          <h2>Why Most Businesses Don&apos;t Have a Strategy</h2>
+          <h2>Why do most Singapore businesses lack a structured Google reviews strategy?</h2>
           <p>Reviews happen by accident for most SMBs. There&apos;s no process, no ask, no follow-up. The result is a profile that fills with reviews during busy periods and goes quiet for months at a time — which Google&apos;s algorithm treats as a signal of declining relevance.</p>
           <p>Review velocity — how consistently new reviews arrive — matters as much as total review count for Google Maps ranking. A business that generates 3–5 reviews every week outranks one that collected 200 reviews two years ago and has had none since.</p>
 
-          <h2>Month 1: Foundation</h2>
+          <h2>What should you do in the first 30 days of your Google reviews strategy?</h2>
           <h3>Week 1–2: Audit Your GBP</h3>
-          <p>Before focusing on reviews, ensure your Google Business Profile is complete. Missing business categories, incomplete service lists, and absent photos reduce your profile&apos;s relevance score — which limits how many potential customers even see your reviews in the first place.</p>
+          <p>Before focusing on reviews, ensure your{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profile</Link>{" "}
+            is complete. Missing business categories, incomplete service lists, and absent photos reduce your profile&apos;s relevance score — which limits how many potential customers even see your reviews in the first place.</p>
           <p>Check: business name, primary and secondary categories, full address and opening hours (including public holidays), all services listed with descriptions, minimum 15 photos including exterior, interior, and product/service shots.</p>
 
           <h3>Week 2: Identify Your Review Gap</h3>
           <p>Search for your main business keyword in your area on Google Maps. Look at the top 3 results. How many reviews do they have? What is their average rating? This is your competitive benchmark. The gap between their count and yours is your target.</p>
 
           <h3>Week 3–4: Launch Your First Review Campaign</h3>
-          <p>Set up your first WhatsApp review request campaign. Identify your 50 most recent customers and send a personalised message with your Google review link. Expect 15–30% to leave a review. This is your baseline measurement.</p>
+          <p>Set up your first{" "}
+            <Link href="/reputation-management-singapore/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">WhatsApp review request campaign</Link>
+            . Identify your 50 most recent customers and send a personalised message with your Google review link. Expect 15–30% to leave a review. This is your baseline measurement.</p>
 
-          <h2>Month 2: System</h2>
+          <h2>How do you build a systematic review generation process in month two?</h2>
           <h3>Automate Post-Service Review Requests</h3>
           <p>Manual review requests don&apos;t scale. The goal of Month 2 is to move from manual to automated — triggered by each completed transaction or appointment. The trigger point matters: the best time to ask is immediately after the positive interaction, not a day later.</p>
           <p>WhatsApp has the highest conversion rate in Singapore — 15–30% of recipients leave a review. Email sits at 3–5%. If you&apos;re not using WhatsApp for review requests, you&apos;re operating at a fraction of your potential rate.</p>
@@ -65,25 +70,31 @@ export default function Post() {
           <h3>Respond to Every Review</h3>
           <p>5-star reviews get short, personalised responses. 3-star reviews get an acknowledgement and an invitation to discuss further. 1-star reviews get a professional, non-defensive response that doesn&apos;t repeat the negative claim. Every response is public and will be read by future customers.</p>
 
-          <h2>Month 3: Protection</h2>
+          <h2>How do you protect your Google rating in month three of the strategy?</h2>
           <h3>Audit Existing Reviews for Policy Violations</h3>
           <p>With a growing review count, Month 3 is the time to audit what&apos;s already there. Are any of your existing reviews from competitor profiles? Are any from accounts with suspicious activity patterns? Reviews that shouldn&apos;t be there drag down your rating and should be challenged.</p>
 
           <h3>Remove Removable Reviews</h3>
-          <p>For any reviews that qualify for removal under Google&apos;s content policy, submit formal removal requests. Fake or competitor-posted reviews that have been sitting on your profile for months can be removed — they don&apos;t expire as a target.</p>
+          <p>For any reviews that qualify for removal under{" "}
+            <Link href="/blog/google-review-policy-explained" className="text-primary underline underline-offset-2 hover:text-primary/80">Google&apos;s content policy</Link>
+            , submit formal removal requests. Fake or competitor-posted reviews that have been sitting on your profile for months can be removed — they don&apos;t expire as a target.</p>
 
           <h3>Track Your Maps Rank</h3>
           <p>At the 90-day mark, search your main keyword from multiple points in your service area. Has your rank improved? A visual rank grid tool (like Epicware&apos;s EpicMap) shows your exact rank at a granular level — which streets you rank #1 on, and where you&apos;re still outside the top 3.</p>
 
-          <h2>The 90-Day Benchmarks</h2>
+          <h2>What results should you expect from a 90-day Google reviews strategy?</h2>
           <ul>
             <li><strong>Month 1:</strong> +15 reviews minimum from the initial campaign</li>
             <li><strong>Month 2:</strong> Consistent weekly review arrivals (3+ per week for most businesses)</li>
             <li><strong>Month 3:</strong> Rating above 4.5, rank improved for main keyword</li>
           </ul>
 
-          <h2>What Epicware Automates in This Framework</h2>
-          <p>EpicReview handles the review generation campaigns (WhatsApp and email), the AI review responses, and the bad review removal submissions. EpicMap handles the rank tracking at district level. The entire framework runs from one dashboard without requiring daily manual intervention.</p>
+          <h2>How does Epicware automate the 90-day review strategy framework?</h2>
+          <p>EpicReview handles the review generation campaigns (WhatsApp and email), the AI review responses, and the bad review removal submissions. EpicMap handles the{" "}
+            <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary underline underline-offset-2 hover:text-primary/80">rank tracking</Link>{" "}
+            at district level. The entire framework runs from one dashboard without requiring daily manual intervention. This 90-day framework is the one our{" "}
+            <Link href="/" className="text-primary underline underline-offset-2 hover:text-primary/80">digital marketing agency</Link>{" "}
+            runs for new clients.</p>
         </>
       }
       ctaHref="/bad-review-removal-singapore"
@@ -93,7 +104,6 @@ export default function Post() {
         { title: "Review Velocity vs Total Review Count", href: "/blog/review-velocity-vs-total-review-count" },
         { title: "How to Get More Google Reviews", href: "/blog/how-to-get-more-google-reviews" },
         { title: "Best Time to Ask for a Google Review", href: "/blog/best-time-to-ask-for-a-google-review" },
-        { title: "Clinic Owners: 2–4 Week Checklist to Change Google Categories Safely", href: "/blog/clinic-google-categories" },
       ]}
     />
   );

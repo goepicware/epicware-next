@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -61,6 +62,7 @@ export default function Post() {
             <li>Click &quot;Share review form&quot; — this gives you the direct review link</li>
           </ol>
           <p>Copy this link. This is your review link. Test it first by opening it in a browser to confirm it goes directly to your review form.</p>
+          <p>Pair the link with a message from our <Link href="/tools/google-review-request-generator" className="text-primary font-medium hover:underline">free Google review request generator</Link>.</p>
 
           <h2>Method 2: Construct It from Your Place ID</h2>
           <p>If you can&apos;t access Business Profile Manager, you can construct the review link manually using your Place ID:</p>
@@ -104,7 +106,16 @@ export default function Post() {
       }
       ctaHref="/reputation-management-singapore/review-generation"
       ctaLabel="Automate with WhatsApp Campaigns Instead"
-      ctaContext="QR codes require customers to take action on their own. WhatsApp campaigns push the ask directly to them at the right moment."
+      ctaContext={
+        <>
+          QR codes require customers to take action on their own. That&apos;s why automated
+          requests usually{" "}
+          <Link href="/use-cases/get-more-google-reviews" className="text-primary font-medium hover:underline">
+            get more Google reviews
+          </Link>
+          . WhatsApp campaigns push the ask directly to them at the right moment.
+        </>
+      }
       relatedPosts={[
         { title: "Google Review Request Templates", href: "/blog/google-review-request-templates" },
         { title: "How to Get More Google Reviews", href: "/blog/how-to-get-more-google-reviews" },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -61,7 +62,9 @@ export default function Post() {
 
           <h2>Salons and Beauty: Immediately After Seeing the Result</h2>
           <p>For beauty services — hair salons, nail studios, aesthetics — the satisfaction peak is immediate and visible. The moment a customer looks in the mirror and is pleased with their result is the highest-satisfaction point in the entire visit.</p>
-          <p>For in-person businesses, an in-salon QR code at checkout works during this window. A WhatsApp follow-up 30 minutes after departure captures customers who have had time to photograph and share their result — and are in an active sharing mindset.</p>
+          <p>For in-person businesses, an in-salon{" "}
+            <Link href="/blog/how-to-create-google-review-link-qr-code" className="text-primary underline underline-offset-2 hover:text-primary/80">QR code</Link>{" "}
+            at checkout works during this window. A WhatsApp follow-up 30 minutes after departure captures customers who have had time to photograph and share their result — and are in an active sharing mindset.</p>
 
           <h2>Car Workshops: Same Day as Pickup</h2>
           <p>Vehicle service satisfaction peaks at the moment of successful pickup — when the car drives smoothly and the anxiety of the repair is resolved. A WhatsApp message sent 1–2 hours after vehicle pickup, when the customer has driven the car and confirmed everything is working, catches this peak.</p>
@@ -86,11 +89,20 @@ export default function Post() {
           <h2>Auto-Timing via Epicware</h2>
           <p>Manual timing is difficult to maintain at scale. Epicware&apos;s EpicReview platform connects to your booking or POS system and automatically triggers review requests at the optimal moment for your business type. Each trigger is configurable — you set the timing window, and the system handles the rest. No staff intervention required.</p>
           <p>For multi-outlet businesses, this means consistent, well-timed review requests across every location without relying on individual staff to remember to ask.</p>
+          <p>Timing is one part of{" "}
+            <Link href="/use-cases/get-more-google-reviews" className="text-primary underline underline-offset-2 hover:text-primary/80">getting more Google reviews</Link>
+            ; asking every customer is the other.</p>
         </>
       }
       ctaHref="/reputation-management-singapore/review-generation"
       ctaLabel="Automate Review Request Timing"
-      ctaContext="Epicware's EpicReview automatically triggers review requests at the right moment after each customer interaction."
+      ctaContext={
+        <>
+          Epicware&apos;s{" "}
+          <Link href="/products/epicreview" className="text-primary underline underline-offset-2 hover:text-primary/80">EpicReview</Link>{" "}
+          automatically triggers review requests at the right moment after each customer interaction.
+        </>
+      }
       relatedPosts={[
         { title: "Google Review Request Templates", href: "/blog/google-review-request-templates" },
         { title: "How to Get More Google Reviews", href: "/blog/how-to-get-more-google-reviews" },

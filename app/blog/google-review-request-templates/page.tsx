@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
@@ -57,7 +58,8 @@ export default function Post() {
           </ul>
 
           <h2>WhatsApp Templates</h2>
-          <p>WhatsApp converts at 15–30% in Singapore — significantly higher than any other channel. Use these templates for post-service review requests.</p>
+          <p>WhatsApp converts at 15–30% in Singapore — significantly higher than any other channel. Use these templates for post-service review requests. Or generate your own with our{" "}
+            <Link href="/tools/google-review-request-generator" className="text-primary underline underline-offset-2 hover:text-primary/80">free Google review request generator</Link>.</p>
 
           <h3>Restaurant / F&amp;B</h3>
           <p><em>&quot;Hi [Name], hope you enjoyed dinner with us tonight! If you have a moment, sharing your experience on Google would mean a lot to our team: [review link]. Thank you for visiting [Restaurant Name]!&quot;</em></p>
@@ -83,7 +85,9 @@ export default function Post() {
 
           <h2>What to Avoid</h2>
           <ul>
-            <li><strong>Do not specify a star rating.</strong> &quot;Please leave us 5 stars&quot; violates Google&apos;s policy and can result in review removal or profile penalties.</li>
+            <li><strong>Do not specify a star rating.</strong> &quot;Please leave us 5 stars&quot;{" "}
+              <Link href="/blog/google-review-policy-explained" className="text-primary underline underline-offset-2 hover:text-primary/80">violates Google&apos;s policy</Link>{" "}
+              and can result in review removal or profile penalties.</li>
             <li><strong>Do not pre-screen.</strong> Asking &quot;Are you happy with your experience? If yes, please leave a review&quot; is review gating — a policy violation.</li>
             <li><strong>Do not include multiple links or platforms.</strong> One ask, one link. Adding Facebook, Yelp, and Google in the same message dilutes attention and reduces completions on all three.</li>
             <li><strong>Do not send to unhappy customers differently.</strong> Every customer should receive the same request. Routing satisfied customers to reviews and dissatisfied customers to a private form is review gating.</li>
@@ -96,7 +100,15 @@ export default function Post() {
       }
       ctaHref="/reputation-management-singapore/review-generation"
       ctaLabel="Automate Review Requests"
-      ctaContext="Epicware's WhatsApp campaigns are personalised per customer with your business's review link pre-loaded."
+      ctaContext={
+        <>
+          Our{" "}
+          <Link href="/" className="text-primary underline underline-offset-2 hover:text-primary/80">digital marketing team</Link>{" "}
+          sends{" "}
+          <Link href="/reputation-management-singapore/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">WhatsApp campaigns</Link>{" "}
+          personalised per customer, with your review link pre-loaded.
+        </>
+      }
       relatedPosts={[
         { title: "Best Time to Ask for a Google Review", href: "/blog/best-time-to-ask-for-a-google-review" },
         { title: "How to Get More Google Reviews", href: "/blog/how-to-get-more-google-reviews" },
