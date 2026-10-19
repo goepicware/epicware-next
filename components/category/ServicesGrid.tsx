@@ -8,6 +8,7 @@ export interface ServiceCard {
   name: string;
   description: string;
   href: string;
+  ctaLabel?: string;
 }
 
 interface ServicesGridProps {
@@ -50,7 +51,7 @@ export default function ServicesGrid({
                     {service.description}
                   </p>
                   <div className="flex items-center gap-2 text-sm font-semibold text-primary pt-3 border-t border-border/30">
-                    Learn More
+                    {service.ctaLabel ?? "Learn More"}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>

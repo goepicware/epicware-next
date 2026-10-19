@@ -9,6 +9,7 @@ export interface DistrictData {
   keyBusinessTypes: string[];
   nearbyDistricts: { name: string; slug: string }[];
   keyIndustries: { label: string; href: string }[];
+  agencyLink?: { href: string; anchor: string };
 }
 
 export const DISTRICTS: DistrictData[] = [
@@ -34,6 +35,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
       { label: "Hair & Beauty Salons", href: "/industries/nail-hair-salons" },
     ],
+    agencyLink: { href: "/seo-agency-singapore", anchor: "our AI-powered SEO agency" },
   },
   {
     slug: "tampines",
@@ -57,6 +59,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Restaurants", href: "/industries/restaurants" },
       { label: "Dental Clinics", href: "/industries/dental-clinics" },
     ],
+    agencyLink: { href: "/seo-agency-singapore", anchor: "Epicware's Singapore SEO agency" },
   },
   {
     slug: "woodlands",
@@ -79,6 +82,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Restaurants", href: "/industries/restaurants" },
       { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
     ],
+    agencyLink: { href: "/", anchor: "our AI-powered marketing agency" },
   },
   {
     slug: "ang-mo-kio",
@@ -99,9 +103,10 @@ export const DISTRICTS: DistrictData[] = [
     ],
     keyIndustries: [
       { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
-      { label: "Tuition Centres", href: "/industries/tuition-centres" },
       { label: "Physiotherapy", href: "/industries/physiotherapy" },
+      { label: "Restaurants", href: "/industries/restaurants" },
     ],
+    agencyLink: { href: "/seo-agency-singapore", anchor: "our AI SEO agency in Singapore" },
   },
   {
     slug: "toa-payoh",
@@ -125,6 +130,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Restaurants", href: "/industries/restaurants" },
       { label: "Hair & Beauty Salons", href: "/industries/nail-hair-salons" },
     ],
+    agencyLink: { href: "/seo-agency-singapore", anchor: "Epicware, an AI-powered SEO agency" },
   },
   {
     slug: "clementi",
@@ -143,10 +149,11 @@ export const DISTRICTS: DistrictData[] = [
       { name: "Buona Vista", slug: "buona-vista" },
     ],
     keyIndustries: [
-      { label: "Restaurants", href: "/industries/restaurants" },
       { label: "Tuition Centres", href: "/industries/tuition-centres" },
-      { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
+      { label: "Dental Clinics", href: "/industries/dental-clinics" },
+      { label: "Restaurants", href: "/industries/restaurants" },
     ],
+    agencyLink: { href: "/seo-agency-singapore", anchor: "our Singapore SEO team" },
   },
   {
     slug: "buona-vista",
@@ -168,8 +175,9 @@ export const DISTRICTS: DistrictData[] = [
     keyIndustries: [
       { label: "Restaurants", href: "/industries/restaurants" },
       { label: "Wellness Centres", href: "/industries/wellness-centres" },
-      { label: "Physiotherapy", href: "/industries/physiotherapy" },
+      { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
     ],
+    agencyLink: { href: "/", anchor: "our AI marketing agency in Singapore" },
   },
   {
     slug: "orchard",
@@ -192,6 +200,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Wellness Centres", href: "/industries/wellness-centres" },
       { label: "Hair & Beauty Salons", href: "/industries/nail-hair-salons" },
     ],
+    agencyLink: { href: "/seo-agency-singapore", anchor: "our SEO agency in Singapore" },
   },
   {
     slug: "bedok",
@@ -211,9 +220,10 @@ export const DISTRICTS: DistrictData[] = [
     ],
     keyIndustries: [
       { label: "Restaurants", href: "/industries/restaurants" },
-      { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
+      { label: "Car Workshops", href: "/industries/car-workshops" },
       { label: "Tuition Centres", href: "/industries/tuition-centres" },
     ],
+    agencyLink: { href: "/", anchor: "Epicware's digital marketing team" },
   },
   {
     slug: "yishun",
@@ -236,6 +246,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Restaurants", href: "/industries/restaurants" },
       { label: "Tuition Centres", href: "/industries/tuition-centres" },
     ],
+    agencyLink: { href: "/", anchor: "our AI-powered digital marketing agency" },
   },
   {
     slug: "marina-bay",

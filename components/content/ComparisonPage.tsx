@@ -5,7 +5,7 @@ import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
-interface Feature { feature: string; epicware: string | boolean; competitor: string | boolean }
+interface Feature { feature: ReactNode; epicware: string | boolean; competitor: string | boolean }
 
 interface ComparisonPageProps {
   schema: object;
@@ -14,11 +14,13 @@ interface ComparisonPageProps {
   subtitle: string;
   trustSignals: string[];
   competitorName: string;
-  epicwareSummary: string;
-  competitorSummary: string;
+  epicwareSummary: ReactNode;
+  competitorSummary: ReactNode;
   features: Feature[];
   verdict: ReactNode;
   ctaHref?: string;
+  faqs?: { q: string; a: ReactNode }[];
+  faqHeading?: string;
 }
 
 function Cell({ val }: { val: string | boolean }) {
@@ -27,13 +29,28 @@ function Cell({ val }: { val: string | boolean }) {
   return <span className="text-sm text-muted-foreground">{val}</span>;
 }
 
-export default function ComparisonPage({ schema, badge, h1, subtitle, trustSignals, competitorName, epicwareSummary, competitorSummary, features, verdict, ctaHref = "/book-demo#form" }: ComparisonPageProps) {
+export default function ComparisonPage({ schema, badge, h1, subtitle, trustSignals, competitorName, epicwareSummary, competitorSummary, features, verdict, ctaHref = "/book-demo#form", faqs, faqHeading }: ComparisonPageProps) {
+  const schemaFAQ = faqs
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map(({ q, a }) => ({
+          "@type": "Question",
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      {schemaFAQ && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
+      )}
       <CategoryHero badge={badge} h1={h1} subtitle={subtitle}
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={trustSignals} imageSrc="/assets/epicmap-before-after.png" />
 
       {/* Overview */}
@@ -87,6 +104,25 @@ export default function ComparisonPage({ schema, badge, h1, subtitle, trustSigna
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      {faqs && faqs.length > 0 && (
+        <section className="py-14 lg:py-20">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <h2 className="font-display font-bold text-foreground text-2xl mb-8 text-center">
+              {faqHeading ?? "Common questions about this comparison"}
+            </h2>
+            <div className="space-y-5">
+              {faqs.map(({ q, a }) => (
+                <div key={q} className="rounded-2xl border border-border/60 bg-card p-5">
+                  <p className="font-semibold text-foreground text-sm mb-2">{q}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <FinalCTA />
       <StickyMobileCTA />

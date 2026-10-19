@@ -3,28 +3,30 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import type { BreadcrumbItem } from "@/components/shared/Breadcrumbs";
 
 interface GuidePageProps {
   schema: object;
   badge: string;
   h1: string;
-  subtitle: string;
+  subtitle: ReactNode;
   trustSignals: string[];
   imageSrc?: string;
   intro: ReactNode;
   body: ReactNode;
   ctaHref: string;
   ctaLabel: string;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
-export default function GuidePage({ schema, badge, h1, subtitle, trustSignals, imageSrc = "/assets/epicmap-before-after.png", intro, body, ctaHref, ctaLabel }: GuidePageProps) {
+export default function GuidePage({ schema, badge, h1, subtitle, trustSignals, imageSrc = "/assets/epicmap-before-after.png", intro, body, ctaHref, ctaLabel, breadcrumbs }: GuidePageProps) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <CategoryHero badge={badge} h1={h1} subtitle={subtitle}
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
-        trustSignals={trustSignals} imageSrc={imageSrc} />
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
+        trustSignals={trustSignals} imageSrc={imageSrc} breadcrumbs={breadcrumbs} />
       <article className="py-12 lg:py-16">
         <div className="container mx-auto px-6 max-w-3xl">
           <div className="text-lg text-muted-foreground mb-8 space-y-4">{intro}</div>

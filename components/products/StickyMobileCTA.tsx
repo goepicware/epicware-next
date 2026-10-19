@@ -10,7 +10,7 @@ interface StickyMobileCTAProps {
 
 export default function StickyMobileCTA({
   demoHref = "/book-demo#form",
-  auditHref = "/audit",
+  auditHref = "/free-audit",
 }: StickyMobileCTAProps) {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">

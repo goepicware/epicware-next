@@ -4,6 +4,7 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import type { BreadcrumbItem } from "@/components/shared/Breadcrumbs";
 
 interface ServiceChildPageProps {
   schema: object;
@@ -22,6 +23,8 @@ interface ServiceChildPageProps {
   parentLabel: string;
   parentSentence: React.ReactNode;
   faqs?: { q: string; a: string }[];
+  breadcrumbLabel?: string;
+  breadcrumbParent?: { label: string; href: string };
 }
 
 export default function ServiceChildPage({
@@ -39,7 +42,17 @@ export default function ServiceChildPage({
   pricingContent,
   parentSentence,
   faqs,
+  breadcrumbLabel,
+  breadcrumbParent,
 }: ServiceChildPageProps) {
+  const breadcrumbs: BreadcrumbItem[] | undefined =
+    breadcrumbLabel && breadcrumbParent
+      ? [
+          { label: "Home", href: "/" },
+          { label: breadcrumbParent.label, href: breadcrumbParent.href },
+          { label: breadcrumbLabel },
+        ]
+      : undefined;
   const schemaFAQ = faqs
     ? {
         "@context": "https://schema.org",
@@ -73,6 +86,7 @@ export default function ServiceChildPage({
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={trustSignals}
         imageSrc={imageSrc}
+        breadcrumbs={breadcrumbs}
       />
 
       {/* Opening paragraph */}

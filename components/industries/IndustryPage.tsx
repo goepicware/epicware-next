@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import type { BreadcrumbItem } from "@/components/shared/Breadcrumbs";
 
 interface ServiceLink {
   label: string;
@@ -17,12 +18,14 @@ interface LocationLink {
   href: string;
 }
 
+type TrustSignal = string | { label: string; href: string };
+
 interface IndustryPageProps {
   schema: object;
   badge: string;
   h1: string;
   subtitle: React.ReactNode;
-  trustSignals: string[];
+  trustSignals: TrustSignal[];
   imageSrc?: string;
   openingParagraph: React.ReactNode;
   challengesTitle: string;
@@ -32,6 +35,7 @@ interface IndustryPageProps {
   locationLinks: LocationLink[];
   faqs?: { q: string; a: string }[];
   faqHeading?: string;
+  industryLabel?: string;
 }
 
 export default function IndustryPage({
@@ -49,7 +53,15 @@ export default function IndustryPage({
   locationLinks,
   faqs,
   faqHeading,
+  industryLabel,
 }: IndustryPageProps) {
+  const breadcrumbs: BreadcrumbItem[] | undefined = industryLabel
+    ? [
+        { label: "Home", href: "/" },
+        { label: "Industries", href: "/industries" },
+        { label: industryLabel },
+      ]
+    : undefined;
   const schemaFAQ = faqs
     ? {
         "@context": "https://schema.org",
@@ -83,6 +95,7 @@ export default function IndustryPage({
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={trustSignals}
         imageSrc={imageSrc}
+        breadcrumbs={breadcrumbs}
       />
 
       {/* Opening */}

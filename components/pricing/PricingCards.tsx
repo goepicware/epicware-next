@@ -10,6 +10,41 @@ import {
 } from "@/lib/price-increase";
 import { PLANS, formatPrice } from "@/lib/pricing-data";
 
+// Each of these feature names is linked only once across the page — in the
+// first plan where it appears — not in every plan that repeats it.
+// `match` tolerates the US/UK "optimization"/"optimisation" spelling used
+// interchangeably in the plan data.
+const FEATURE_LINKS: { match: RegExp; href: string; key: string }[] = [
+  { key: "gbp-opt", match: /Google Business Profile Optimi[sz]ation/i, href: "/local-seo-singapore/gbp-optimisation" },
+  { key: "local-seo", match: /local SEO/i, href: "/local-seo-singapore" },
+  { key: "ai-search", match: /AI search visibility/i, href: "/ai-search-visibility-singapore" },
+  { key: "bad-review", match: /Bad Review Removal/i, href: "/bad-review-removal-singapore" },
+  { key: "ai-review-response", match: /AI review responses/i, href: "/reputation-management-singapore/ai-review-response" },
+];
+
+function linkifyFeatureOnce(text: string, used: Set<string>) {
+  for (const { key, match, href } of FEATURE_LINKS) {
+    if (used.has(key)) continue;
+    const found = text.match(match);
+    if (!found || found.index === undefined) continue;
+    used.add(key);
+    const idx = found.index;
+    const matched = found[0];
+    const before = text.slice(0, idx);
+    const after = text.slice(idx + matched.length);
+    return (
+      <>
+        {before}
+        <Link href={href} className="text-primary font-medium hover:underline">
+          {matched}
+        </Link>
+        {after}
+      </>
+    );
+  }
+  return text;
+}
+
 function NewChip() {
   return (
     <span className="ml-1.5 inline-flex items-center px-1.5 py-0.5 rounded-full bg-secondary text-white text-[10px] font-bold leading-none tracking-wide align-middle">
@@ -21,6 +56,9 @@ function NewChip() {
 export default function PricingCards() {
   const [annual, setAnnual] = useState(false);
   const live = isPriceIncreaseLive();
+  // Tracks which feature names already got their one link, in plan order —
+  // each of FEATURE_LINKS is linked only once, in the first plan it appears.
+  const linkedFeatures = new Set<string>();
 
   // After the cutoff, swap in the new prices so cards update automatically.
   const effectivePlans = PLANS.map((plan) => {
@@ -125,7 +163,7 @@ export default function PricingCards() {
                   {plan.name}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-5 leading-snug">
-                  {plan.subtitle}
+                  {linkifyFeatureOnce(plan.subtitle, linkedFeatures)}
                 </p>
 
                 {/* Price */}
@@ -185,7 +223,7 @@ export default function PricingCards() {
                       <li key={label} className="flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground/80 leading-snug">
-                          {label}
+                          {linkifyFeatureOnce(label, linkedFeatures)}
                           {isNew && <NewChip />}
                         </span>
                       </li>

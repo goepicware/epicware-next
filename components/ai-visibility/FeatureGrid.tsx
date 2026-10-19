@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeUp } from "./shared";
 import SampleReport from "./SampleReport";
@@ -31,6 +32,13 @@ export default function FeatureGrid() {
 
         <div className="max-w-2xl mx-auto">
           <SampleReport />
+          <p className="text-center text-muted-foreground text-sm leading-relaxed mt-6">
+            Want us to fix what the check finds? See our{" "}
+            <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+              AI search visibility
+            </Link>{" "}
+            service.
+          </p>
         </div>
       </div>
     </section>

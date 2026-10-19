@@ -139,6 +139,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/case-studies/clinic-review-growth-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies/salon-whatsapp-automation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies/multi-outlet-restaurant-seo-case-study-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/case-studies/hair-salon-seo-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Authority pages
     { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

@@ -56,7 +56,7 @@ export const PLANS: Array<{
       "Rank Top 3 on Google Maps for 1 tracked keyword within 90 days — or we extend free until achieved.",
     features: [
       { label: "1x Bad Review Removal/month (worth $200)", isNew: true },
-      "Complete GBP audit (80-point) + full optimisation",
+      "Complete GBP audit (19-point) + full optimisation",
       "5 SEO-optimised GBP posts per week",
       { label: "AI Social Media Generator & Scheduler", isNew: true },
       "Blue Ocean keyword research",

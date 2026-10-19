@@ -38,7 +38,6 @@ export const AUDIT_PREVIEW_IMAGE: string | null = null;
 export const WHY_CONTENT = {
   receipt: {
     eyebrow: "TRIED SEO BEFORE?",
-    heading: "Then you've already paid the Agency Tax.",
     body: "You paid for a strategy. Then the work was handed back to you, the clock didn't start, and the contract wouldn't let you leave.",
     boldLine: "Look at the last line of the receipt.",
     header: "TYPICAL AGENCY RECEIPT",

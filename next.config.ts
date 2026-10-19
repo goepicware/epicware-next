@@ -66,6 +66,8 @@ const nextConfig: NextConfig = {
       { source: "/remove-review", destination: "/bad-review-removal-singapore", permanent: true },
       // Old URL variant found in Search Console
       { source: "/blog/do-keywords-in-google-reviews-help-local-SEO", destination: "/blog/do-keywords-in-reviews-help-local-seo", permanent: true },
+      // /local-seo-singapore now owns "local SEO agency Singapore"
+      { source: "/blog/local-seo-agency-singapore-epicware", destination: "/local-seo-singapore", permanent: true },
     ];
   },
 };

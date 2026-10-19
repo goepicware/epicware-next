@@ -3,6 +3,7 @@ import Link from "next/link";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import TableOfContents from "@/components/blog/TableOfContents";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 
 interface BlogArticleProps {
   schema: Record<string, unknown>;
@@ -71,8 +72,17 @@ export default function BlogArticle({
       />
 
       {/* Hero — full-width dark gradient header */}
-      <section className="hero-gradient pt-28 pb-14">
+      <section className="hero-gradient pt-24 pb-14">
         <div className="container mx-auto px-6 max-w-4xl">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Blog", href: "/blog" },
+              { label: h1 },
+            ]}
+          />
+        </div>
+        <div className="container mx-auto px-6 max-w-4xl pt-6">
           {/* Category badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 text-xs font-bold text-primary tracking-widest uppercase mb-6">
             {badge}

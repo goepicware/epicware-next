@@ -18,9 +18,6 @@ export default function AgencyTaxReceipt() {
             <span className="block text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4">
               {C.eyebrow}
             </span>
-            <h2 className="font-display font-bold text-ink leading-tight mb-5 text-[2.5rem] min-[900px]:text-[3.75rem]">
-              {C.heading}
-            </h2>
             <p className="text-body-2 text-lg leading-relaxed mb-4 max-w-xl">{C.body}</p>
             <p className="font-semibold text-ink text-lg">{C.boldLine}</p>
           </div>

@@ -5,6 +5,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Breadcrumbs, { type BreadcrumbItem } from "@/components/shared/Breadcrumbs";
+
+type TrustSignal = string | { label: string; href: string };
 
 interface CategoryHeroProps {
   badge: string;
@@ -12,9 +15,10 @@ interface CategoryHeroProps {
   subtitle: React.ReactNode;
   ctaPrimary: { label: string; href: string };
   ctaSecondary: { label: string; href: string };
-  trustSignals: string[];
+  trustSignals: TrustSignal[];
   overlayClass?: string; // unused after redesign — kept for API compatibility
   imageSrc?: string;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 export default function CategoryHero({
@@ -25,17 +29,24 @@ export default function CategoryHero({
   ctaSecondary,
   trustSignals,
   imageSrc = "/assets/hero-image.jpg",
+  breadcrumbs,
 }: CategoryHeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center hero-gradient overflow-hidden pt-24 pb-16">
-      {/* Ambient gradient orbs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[130px]" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-accent/8 blur-[110px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-primary/5 blur-[90px]" />
-      </div>
+    <section className="relative min-h-screen flex flex-col hero-gradient overflow-hidden pt-24 pb-16">
+      {breadcrumbs && breadcrumbs.length > 0 && (
+        <div className="relative z-10 shrink-0 container mx-auto px-6 max-w-7xl pt-4">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+      )}
+      <div className="relative flex-1 flex items-center">
+        {/* Ambient gradient orbs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[130px]" />
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-accent/8 blur-[110px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-primary/5 blur-[90px]" />
+        </div>
 
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left: text */}
@@ -101,15 +112,28 @@ export default function CategoryHero({
               transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-wrap gap-3"
             >
-              {trustSignals.map((signal) => (
-                <div
-                  key={signal}
-                  className="flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-border/60 rounded-full px-4 py-2 shadow-card"
-                >
-                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-sm font-medium text-foreground/80">{signal}</span>
-                </div>
-              ))}
+              {trustSignals.map((signal) => {
+                const isLinked = typeof signal !== "string";
+                const label = isLinked ? signal.label : signal;
+                return (
+                  <div
+                    key={label}
+                    className="flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-border/60 rounded-full px-4 py-2 shadow-card"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    {isLinked ? (
+                      <Link
+                        href={signal.href}
+                        className="text-sm font-medium text-foreground/80 hover:text-primary hover:underline"
+                      >
+                        {label}
+                      </Link>
+                    ) : (
+                      <span className="text-sm font-medium text-foreground/80">{label}</span>
+                    )}
+                  </div>
+                );
+              })}
             </motion.div>
           </div>
 
@@ -143,6 +167,7 @@ export default function CategoryHero({
             </div>
           </motion.div>
 
+        </div>
         </div>
       </div>
     </section>
