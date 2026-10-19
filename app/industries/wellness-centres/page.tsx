@@ -44,7 +44,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months, for fake or policy-violating reviews.",
+      "Refunded if not removed within 3 months, for fake or policy-violating reviews.",
   },
   {
     label: "GBP Optimisation",
@@ -78,6 +78,7 @@ export default function WellnessCentresPage() {
   return (
     <IndustryPage
       schema={schema}
+      industryLabel="Wellness Centres"
       badge="WELLNESS CENTRES · LOCAL SEO"
       h1="Local SEO for Spas & Wellness Centres Singapore — Fill Your Appointment Book"
       subtitle="Wellness decisions are personal and trust-driven. Singapore customers looking for a massage, facial, or wellness programme read reviews, look at photos, and compare therapists before booking. Epicware ensures they find you first."
@@ -90,21 +91,37 @@ export default function WellnessCentresPage() {
       imageSrc="/assets/hero-image.jpg"
       openingParagraph={
         <>
-          A spa with a luxurious interior and skilled therapists that doesn't appear in Google Maps searches for 'massage near me in Singapore' is invisible to its most valuable customers — first-time visitors who haven't been recommended by a friend. In the wellness category, the customer's decision is driven by photos (does this look like the experience I want?) and reviews (do therapists here actually deliver?). Epicware manages both dimensions: GBP photo optimisation that showcases your space, and review generation that captures positive client experiences before they fade.
+          A spa with a luxurious interior and skilled therapists that doesn't appear in Google Maps searches for 'massage near me in Singapore' is invisible to its most valuable customers — first-time visitors who haven't been recommended by a friend. In the wellness category, the customer's decision is driven by photos (does this look like the experience I want?) and reviews (do therapists here actually deliver?). Epicware manages both dimensions: GBP photo optimisation that showcases your space, and review generation that captures positive client experiences before they fade. Our{" "}
+          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO services in Singapore</Link>{" "}
+          help customers find you for each treatment you offer. Epicware, an{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">AI-powered marketing agency</Link>, helps spas and wellness centres manage their reviews and Google presence.
            See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="The Reputation Challenge for Wellness Businesses"
       challengesContent={
         <p>
-          Wellness businesses are disproportionately affected by negative reviews
+          Wellness businesses are disproportionately affected by{" "}
+          <Link
+            href="/blog/handle-negative-google-reviews-singapore"
+            className="text-primary font-medium hover:underline"
+          >
+            negative reviews
+          </Link>{" "}
           because the service experience is highly subjective. A client who expected
           more pressure from a massage, or who had a therapist mismatch, may leave a
           2-star review that brings down an otherwise excellent rating. Without a
           systematic positive review generation process, one bad week can move the
           needle on your average rating significantly. For centres with multiple
           therapists, reviews that name specific staff help convert new clients — but
-          only if those reviews are being actively generated.
+          only if those reviews are being actively generated. Our{" "}
+          <Link
+            href="/reputation-management-singapore"
+            className="text-primary font-medium hover:underline"
+          >
+            reputation management
+          </Link>{" "}
+          covers every review, good or bad.
         </p>
       }
       howEpicwareHelps={

@@ -84,6 +84,11 @@ export default function EpicMapPage() {
       <CategoryHero
         badge="EPICMAP · LOCAL RANK TRACKING"
         h1="EpicMap — Local Rank Tracking & GBP Optimisation for Singapore"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products", href: "/products" },
+          { label: "EpicMap" },
+        ]}
         subtitle={
           <>
             Most Singapore SMB owners assume they appear when someone nearby searches their
@@ -112,6 +117,13 @@ export default function EpicMapPage() {
             top three of the 3-Pack gets the vast majority of clicks. EpicMap makes this visible —
             then it runs the audits, fixes the GBP gaps, and tracks competitor positions so you know
             exactly what to do next to move up.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-6">
+            EpicMap is the rank tracking software Epicware, an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              AI-powered digital marketing agency in Singapore
+            </Link>
+            , uses to track client rankings.
           </p>
         </div>
       </section>
@@ -168,7 +180,11 @@ export default function EpicMapPage() {
           <h2 className="font-display text-foreground mb-6">How It Connects to the Rest of Epicware</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              EpicMap is Epicware&apos;s Local SEO engine. The rank data it produces feeds directly into
+              EpicMap is the engine behind our{" "}
+              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+                local SEO services
+              </Link>
+              . The rank data it produces feeds directly into
               your reputation and GBP strategy. When{" "}
               <Link href="/products/epicreview" className="text-primary font-medium hover:underline">
                 EpicReview
@@ -177,11 +193,7 @@ export default function EpicMapPage() {
               fix GBP issues flagged in the audit, EpicMap tracks the rank movement week by week.
             </p>
             <p>
-              EpicMap links to the full{" "}
-              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
-                Local SEO Singapore
-              </Link>{" "}
-              service category and the{" "}
+              EpicMap links to the full local SEO service category and the{" "}
               <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
                 GBP Optimisation service
               </Link>
@@ -202,7 +214,14 @@ export default function EpicMapPage() {
               epicware.ai/pricing
             </Link>
             . No setup fees. Cancel anytime. All plans include the 19-point GBP audit and visual
-            rank grid. Multi-outlet management is available on Pro plans and above.
+            rank grid.{" "}
+            <Link
+              href="/use-cases/manage-multiple-gbp-locations"
+              className="text-primary font-medium hover:underline"
+            >
+              Multi-outlet management
+            </Link>{" "}
+            is available on Pro plans and above.
           </p>
         </div>
       </section>
@@ -223,14 +242,7 @@ export default function EpicMapPage() {
             >
               Local Rank Tracking
             </Link>
-            {" "}and{" "}
-            <Link
-              href="/local-seo-singapore/gbp-optimisation"
-              className="text-primary font-medium hover:underline"
-            >
-              GBP Optimisation
-            </Link>
-            . If you are new to local SEO, start with a{" "}
+            {" "}and GBP Optimisation. If you are new to local SEO, start with a{" "}
             <Link href="/free-audit" className="text-primary font-medium hover:underline">
               free GBP audit
             </Link>{" "}

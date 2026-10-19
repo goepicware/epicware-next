@@ -80,6 +80,7 @@ export default function PhysiotherapyPage() {
   return (
     <IndustryPage
       schema={schema}
+      industryLabel="Physiotherapy"
       badge="PHYSIOTHERAPY · LOCAL SEO"
       h1="Local SEO for Physiotherapy Clinics Singapore — Visible When Patients Search for Recovery"
       subtitle="Patients searching for physiotherapy in Singapore often come with doctor referrals — but they still choose based on Google Maps reviews and proximity. Epicware helps physio clinics rank higher and convert that visibility into booked appointments."
@@ -92,7 +93,11 @@ export default function PhysiotherapyPage() {
       imageSrc="/assets/hero-image.jpg"
       openingParagraph={
         <>
-          Physiotherapy patients in Singapore search by condition: 'knee physio near me', 'back pain physiotherapy Ang Mo Kio', 'sports injury rehab Singapore'. A physio clinic that ranks for the right condition-specific keywords in its catchment area captures both self-referred patients and doctor-referral patients who do their own research before booking. Epicware's platform optimises your GBP for the condition-specific searches your patients are using and builds the review profile that converts those searches into appointments.
+          Physiotherapy patients in Singapore search by condition: 'knee physio near me', 'back pain physiotherapy Ang Mo Kio', 'sports injury rehab Singapore'. As a{" "}
+          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO agency in Singapore</Link>, we help patients find you by condition and area.{" "}
+          A physio clinic that ranks for the right condition-specific keywords in its catchment area captures both self-referred patients and doctor-referral patients who do their own research before booking. Epicware's platform optimises your GBP for the condition-specific searches your patients are using and builds the review profile that converts those searches into appointments. Epicware is a{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">digital marketing agency</Link>{" "}
+          that applies its clinic experience to physiotherapy practices.
            See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
@@ -106,7 +111,11 @@ export default function PhysiotherapyPage() {
           clinic with 50+ reviews mentioning specific conditions successfully treated
           (&apos;helped with my L4-L5 disc problem&apos;, &apos;recovered from ACL surgery faster than
           expected&apos;) converts high-intent searches more effectively than a competitor
-          with generic reviews.
+          with generic reviews. Our checklist to{" "}
+          <Link href="/blog/clinic-google-categories" className="text-primary font-medium hover:underline">
+            change Google categories safely
+          </Link>{" "}
+          applies to physio clinics too.
         </p>
       }
       howEpicwareHelps={

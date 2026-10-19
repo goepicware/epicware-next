@@ -32,7 +32,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months. Remove competitor attacks and false claims about your workshop.",
+      "Refunded if not removed within 3 months. Remove competitor attacks and false claims about your workshop.",
   },
   {
     label: "Review Generation",
@@ -80,6 +80,7 @@ export default function CarWorkshopsPage() {
   return (
     <IndustryPage
       schema={schema}
+      industryLabel="Car Workshops"
       badge="CAR WORKSHOPS · LOCAL SEO"
       h1="Local SEO for Car Workshops Singapore — Rank Higher, Earn More Service Jobs"
       subtitle={
@@ -97,20 +98,28 @@ export default function CarWorkshopsPage() {
         "Trust-Critical Industry",
         "Competitor Attack Removal",
         "Singapore-Built",
-        "Multi-Location Support",
+        { label: "Multi-Location Support", href: "/use-cases/manage-multiple-gbp-locations" },
       ]}
       imageSrc="/assets/hero-image.jpg"
       openingParagraph={
         <>
-          When a car owner's check engine light comes on or their COE renewal is due, they open Google Maps and search 'car workshop near me'. The workshop that appears in the top 3 with the most credible reviews gets the call. In Singapore's competitive auto service market, trust is the primary purchase driver — and trust starts with Google reviews. A workshop with a 4.6 rating and 95 reviews converts dramatically better than one with 12 reviews and a 3.8, even if the quality of service is identical.
+          When a car owner's check engine light comes on or their COE renewal is due, they open Google Maps and search 'car workshop near me'. The workshop that appears in the top 3 with the most credible reviews gets the call. In Singapore's competitive auto service market, trust is the primary purchase driver — and trust starts with Google reviews. A workshop with a 4.6 rating and 95 reviews converts dramatically better than one with 12 reviews and a 3.8, even if the quality of service is identical. Our{" "}
+          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO services</Link>{" "}
+          help drivers searching nearby find your workshop.
            See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="Why Auto Workshops Get Hit by Bad Reviews"
       challengesContent={
         <p>
-          Car workshops are disproportionately targeted by fake or unfair reviews.
-          Competitor attacks, disgruntled one-time customers who had unrealistic
+          Car workshops are disproportionately targeted by{" "}
+          <Link
+            href="/blog/fake-or-unfair-google-reviews-what-to-do"
+            className="text-primary font-medium hover:underline"
+          >
+            fake or unfair reviews
+          </Link>
+          . Competitor attacks, disgruntled one-time customers who had unrealistic
           expectations about repair costs, and reviews from insurance claim disputes
           can damage a workshop&apos;s reputation quickly. In a high-trust category where
           customers are spending $1,000–$5,000+ on repairs, one 1-star review claiming

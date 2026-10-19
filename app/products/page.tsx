@@ -6,14 +6,14 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "Epicware Solutions: EpicMap, EpicReview & More" },
+  title: "Epicware Products — Local SEO & Reputation Tools | Singapore",
   description:
-    "The AI software our team runs every client on: EpicMap rank tracking, EpicReview reviews, EpicEngage email and WhatsApp, and EpicSocial content.",
+    "Four AI-native tools for Singapore SMBs. Rank higher, earn more reviews, remove bad ones, and grow — all from one platform. No agency. No retainer.",
   alternates: { canonical: "https://www.epicware.ai/products" },
   openGraph: {
-    title: "Epicware Solutions: EpicMap, EpicReview & More",
+    title: "Epicware Products — Four Tools. One Platform. Built for Singapore SMBs.",
     description:
-      "The AI software our team runs every client on: EpicMap rank tracking, EpicReview reviews, EpicEngage email and WhatsApp, and EpicSocial content.",
+      "EpicMap tracks your rank. EpicReview manages your reputation. EpicEngage keeps customers coming back. EpicSocial keeps you visible.",
     url: "https://www.epicware.ai/products",
   },
 };
@@ -22,7 +22,7 @@ const TRUST = [
   "500+ Outlets Managed",
   "Singapore-Built",
   "AI-Native",
-  "Live Dashboard Included",
+  "No Agency Retainer",
 ];
 
 const PRODUCTS = [
@@ -51,7 +51,7 @@ const PRODUCTS = [
       "Automated review request campaigns (WhatsApp + email)",
       "AI-generated personalised review responses",
       "Real-time review monitoring across all outlets",
-      "Bad Review Removal ($200/review, refunded if not removed in 3 months) ⭐",
+      "Bad Review Removal ⭐",
     ],
     accent: "from-primary/10 to-secondary/5",
     badge: "Reputation",
@@ -152,7 +152,25 @@ export default function ProductsHubPage() {
             Most local SEO tools give you a dashboard full of numbers and leave you to figure out what
             to do next. Epicware&apos;s four products don&apos;t just show you the problem — they fix it. Each
             module is built for a specific job, and they all work together inside one platform. No
-            switching tabs. No agency middleman. No waiting on a monthly report.
+            switching tabs. Run by our own team: Epicware is an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              AI-powered digital marketing agency
+            </Link>{" "}
+            that built these tools for its clients. No waiting on a monthly report.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-6">
+            Two of them power our core services: EpicMap for{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local SEO services
+            </Link>{" "}
+            and EpicReview for{" "}
+            <Link
+              href="/reputation-management-singapore"
+              className="text-primary font-medium hover:underline"
+            >
+              online reputation management
+            </Link>
+            .
           </p>
         </div>
       </section>
@@ -196,7 +214,7 @@ export default function ProductsHubPage() {
                   className="bg-foreground hover:bg-foreground/90 text-background rounded-full font-semibold group self-start"
                 >
                   <Link href={product.href} className="flex items-center gap-2">
-                    Learn More
+                    Explore {product.name}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </Button>

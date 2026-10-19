@@ -97,6 +97,24 @@ export default function IndustriesHubPage() {
             The same platform. ICP-specific results. Choose your industry to see
             exactly how Epicware works for your business type.
           </p>
+          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+            Epicware is an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              AI-powered digital marketing agency in Singapore
+            </Link>{" "}
+            that adapts{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local SEO
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="/reputation-management-singapore"
+              className="text-primary font-medium hover:underline"
+            >
+              online reputation management
+            </Link>{" "}
+            to each industry below.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
@@ -124,22 +142,20 @@ export default function IndustriesHubPage() {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {INDUSTRIES.map((ind) => (
-              <Link
+              <div
                 key={ind.href}
-                href={ind.href}
-                className="rounded-2xl border border-border/60 bg-card p-7 hover:shadow-card transition-all duration-300 flex flex-col gap-4 group hover:-translate-y-1"
+                className="rounded-2xl border border-border/60 bg-card p-7 transition-all duration-300 flex flex-col gap-4"
               >
                 <div className="text-3xl">{ind.icon}</div>
-                <h2 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
-                  {ind.label}
+                <h2 className="font-semibold text-lg text-foreground">
+                  <Link href={ind.href} className="hover:text-primary hover:underline transition-colors">
+                    {ind.label}
+                  </Link>
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed flex-1">
                   {ind.pain}
                 </p>
-                <span className="text-sm font-semibold text-primary flex items-center gap-1">
-                  See How It Works <ArrowRight className="w-4 h-4" />
-                </span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

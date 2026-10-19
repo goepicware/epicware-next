@@ -56,7 +56,14 @@ export default function EpicEngageEmailMarketingPage() {
             EpicEngage connects to your customer database and triggers campaigns based on behaviour. A post-visit
             email asking for a review, 30 minutes after the customer leaves. A win-back offer after 60 days of no
             activity. A birthday greeting on the right day. A re-engagement sequence for customers who have not
-            opened your emails in 90 days.
+            opened your emails in 90 days. Each post-visit email can carry an{" "}
+            <Link
+              href="/reputation-management-singapore/review-generation"
+              className="text-primary font-medium hover:underline"
+            >
+              automated review request
+            </Link>
+            .
           </p>
           <p>
             Each sequence runs automatically once configured. Campaign analytics show open rates, click rates, and

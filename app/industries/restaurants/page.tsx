@@ -38,7 +38,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months. Removes fake, competitor-posted, or policy-violating reviews.",
+      "Refunded if not removed within 3 months. Removes fake, competitor-posted, or policy-violating reviews.",
   },
   {
     label: "GBP Optimisation",
@@ -60,7 +60,7 @@ const services = [
   },
   {
     label: "Multi-Outlet Management",
-    href: "/review-management-singapore",
+    href: "/use-cases/manage-multiple-gbp-locations",
     description:
       "Manage every outlet's reviews, rank, and reputation from one dashboard.",
   },
@@ -82,9 +82,24 @@ export default function RestaurantsPage() {
   return (
     <IndustryPage
       schema={schema}
+      industryLabel="Restaurants"
       badge="F&B RESTAURANTS · LOCAL SEO"
       h1="Local SEO for F&B Restaurants Singapore — Rank First, Fill Tables"
-      subtitle="In Singapore's F&B market, the difference between a full restaurant and an empty one is often two positions on Google Maps. Epicware helps restaurant owners and groups rank higher, generate more reviews, and protect their rating."
+      subtitle={
+        <>
+          In Singapore&apos;s F&amp;B market, the difference between a full restaurant and an
+          empty one is often two positions on Google Maps. Epicware, an{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">
+            AI-powered digital marketing agency in Singapore
+          </Link>
+          , helps restaurant owners and groups rank higher, generate more reviews, and protect
+          their rating. Our{" "}
+          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            local SEO
+          </Link>{" "}
+          work starts with your Google Business Profile and menu.
+        </>
+      }
       trustSignals={[
         "Multi-Outlet Dashboard",
         "Bad Review Removal Guaranteed",
@@ -127,6 +142,18 @@ export default function RestaurantsPage() {
           <Link href="/resources/guides/restaurant-digital-growth-guide" className="text-primary font-medium hover:underline">
             Read the Restaurant Digital Growth Guide →
           </Link>
+          {" "}See{" "}
+          <Link
+            href="/case-studies/multi-outlet-restaurant-seo-case-study-singapore"
+            className="text-primary font-medium hover:underline"
+          >
+            how a 5-outlet restaurant chain became the answer on Google Maps
+          </Link>{" "}
+          and AI Overviews. Menus matter too: our guide to{" "}
+          <Link href="/blog/restaurant-menu-seo" className="text-primary font-medium hover:underline">
+            restaurant menu SEO
+          </Link>{" "}
+          covers multi-outlet menus.
         </p>
       }
       services={services}

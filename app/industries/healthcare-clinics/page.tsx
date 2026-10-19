@@ -32,7 +32,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months. Critical for healthcare where one bad review costs dozens of patients.",
+      "Refunded if not removed within 3 months. Critical for healthcare where one bad review costs dozens of patients.",
   },
   {
     label: "Review Generation",
@@ -81,9 +81,27 @@ export default function HealthcareClinicsPage() {
   return (
     <IndustryPage
       schema={schema}
+      industryLabel="Medical Clinics"
       badge="MEDICAL CLINICS · LOCAL SEO"
       h1="Local SEO for Medical Clinics Singapore — Rank Higher, Build Patient Trust"
-      subtitle="Patients choose clinics based on Google reviews more than any other signal. One fake bad review from a competitor can cost you dozens of new patients. Epicware protects your clinic's reputation and keeps you visible when patients search nearby."
+      subtitle={
+        <>
+          Patients choose clinics based on Google reviews more than any other signal. One fake
+          bad review from a competitor can cost you dozens of new patients. Here&apos;s{" "}
+          <Link
+            href="/blog/why-negative-reviews-hurt-clinic-reputation"
+            className="text-primary font-medium hover:underline"
+          >
+            how clinic reviews affect reputation and bookings
+          </Link>
+          . Epicware, a{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">
+            digital marketing agency in Singapore
+          </Link>
+          , protects your clinic&apos;s reputation and keeps you visible when patients search
+          nearby.
+        </>
+      }
       trustSignals={[
         "Healthcare Trust Critical",
         "Bad Review Removal Available",
@@ -93,7 +111,9 @@ export default function HealthcareClinicsPage() {
       imageSrc="/assets/hero-image.jpg"
       openingParagraph={
         <>
-          When a patient searches 'GP clinic near me' in Singapore, they are choosing someone to trust with their health. The clinic that appears first in Google Maps with 100+ reviews and a 4.7 rating earns that trust before the patient even walks in. A competitor clinic with similar quality but 15 reviews and a 3.9 rating loses that patient every time. Healthcare is the category where reputation management matters most — and where a single unfair review causes the greatest harm.
+          When a patient searches 'GP clinic near me' in Singapore, they are choosing someone to trust with their health.{" "}
+          Our <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO services</Link> for clinics make sure the right details show when they do.{" "}
+          The clinic that appears first in Google Maps with 100+ reviews and a 4.7 rating earns that trust before the patient even walks in. A competitor clinic with similar quality but 15 reviews and a 3.9 rating loses that patient every time. Healthcare is the category where reputation management matters most — and where a single unfair review causes the greatest harm.
            See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
@@ -121,7 +141,14 @@ export default function HealthcareClinicsPage() {
           refunded if not removed within 3 months. GBP Optimisation covers healthcare-specific profile elements:
           specialties listed, services described correctly, insurance accepted,
           consultation hours complete. Multi-branch clinic groups manage all profiles
-          from one dashboard.
+          from one dashboard. See{" "}
+          <Link
+            href="/case-studies/clinic-review-growth-singapore"
+            className="text-primary font-medium hover:underline"
+          >
+            how a clinic network raised its Google rating to 4.7
+          </Link>
+          .
         </p>
       }
       services={services}

@@ -81,6 +81,7 @@ export default function TuitionCentresPage() {
   return (
     <IndustryPage
       schema={schema}
+      industryLabel="Tuition Centres"
       badge="TUITION CENTRES · LOCAL SEO"
       h1="Local SEO for Tuition Centres Singapore — Rank First When Parents Search"
       subtitle="Singapore parents searching for tuition for their children are among the most research-intensive customers in any local market. They read every review. They compare centres. The centre that ranks first with the most credible reviews wins the trial class."
@@ -93,7 +94,10 @@ export default function TuitionCentresPage() {
       imageSrc="/assets/hero-image.jpg"
       openingParagraph={
         <>
-          Every Singapore parent searching 'primary school maths tuition near Tampines' or 'secondary English tutor near me' is looking for one thing: proof that the centre they choose will help their child. Google reviews are that proof. A tuition centre with 60 reviews averaging 4.7 stars, recent posts showing student results, and a complete GBP profile with subjects listed converts trial class enquiries at a significantly higher rate than a competitor with 8 reviews and an empty profile.
+          Every Singapore parent searching 'primary school maths tuition near Tampines' or 'secondary English tutor near me' is looking for one thing: proof that the centre they choose will help their child. Google reviews are that proof.{" "}
+          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">Local SEO</Link> puts your centre in front of parents searching by subject and area.{" "}
+          A tuition centre with 60 reviews averaging 4.7 stars, recent posts showing student results, and a complete GBP profile with subjects listed converts trial class enquiries at a significantly higher rate than a competitor with 8 reviews and an empty profile. Parents compare centres online first, so Epicware, a{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">digital marketing agency in Singapore</Link>, focuses on reviews and local search.
            See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
@@ -106,7 +110,11 @@ export default function TuitionCentresPage() {
           centres before calling for a trial. This means that winning the Google Maps
           rank is only half the battle — your profile also needs to convert the click.
           A poor review response, a generic description, or missing subject information
-          loses the conversion even when the rank is right.
+          loses the conversion even when the rank is right. Our{" "}
+          <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+            reputation management
+          </Link>{" "}
+          keeps reviews from parents coming in and gets each one a reply.
         </p>
       }
       howEpicwareHelps={
@@ -117,7 +125,14 @@ export default function TuitionCentresPage() {
           most likely to recommend. GBP Optimisation ensures every subject, every
           level, and every special programme is listed and searchable. EpicMap tracks
           your rank for every relevant keyword (&apos;PSLE tuition Tampines&apos;, &apos;A level
-          chemistry tutor Singapore&apos;) so you know exactly where to improve.
+          chemistry tutor Singapore&apos;) so you know exactly where to improve. Use our{" "}
+          <Link
+            href="/blog/google-review-request-templates"
+            className="text-primary font-medium hover:underline"
+          >
+            review request templates
+          </Link>{" "}
+          to ask parents after results day.
         </p>
       }
       services={services}

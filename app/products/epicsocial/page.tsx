@@ -84,6 +84,11 @@ export default function EpicSocialPage() {
       <CategoryHero
         badge="EPICSOCIAL · SOCIAL SCHEDULING"
         h1="EpicSocial — Social Scheduling & GBP Posts for Singapore"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products", href: "/products" },
+          { label: "EpicSocial" },
+        ]}
         subtitle={
           <>
             Posting consistently on Facebook, Instagram, and Google Business Profile is what keeps
@@ -113,6 +118,13 @@ export default function EpicSocialPage() {
             the business is less active. EpicSocial breaks this pattern. It generates content from
             your business data, schedules it across platforms, and keeps your presence alive — without
             adding to your workload.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-6">
+            Epicware, a{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              digital marketing agency in Singapore
+            </Link>
+            , uses EpicSocial to keep client profiles posting regularly.
           </p>
         </div>
       </section>

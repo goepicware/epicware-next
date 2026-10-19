@@ -38,7 +38,7 @@ const services = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months. Protect your clinic's reputation from fake reviews.",
+      "Refunded if not removed within 3 months. Protect your clinic's reputation from fake reviews.",
   },
   {
     label: "Review Generation",
@@ -82,6 +82,7 @@ export default function DentalClinicsPage() {
   return (
     <IndustryPage
       schema={schema}
+      industryLabel="Dental Clinics"
       badge="DENTAL CLINICS · LOCAL SEO"
       h1="Local SEO for Dental Clinics Singapore — Visible When Patients Search for Treatment"
       subtitle={
@@ -103,7 +104,9 @@ export default function DentalClinicsPage() {
       imageSrc="/assets/hero-image.jpg"
       openingParagraph={
         <>
-          Dental patients are among the most research-intensive healthcare consumers in Singapore. Before a wisdom tooth extraction or Invisalign consultation, they read every review, compare clinic prices, look at before-and-after photos, and check whether a dentist specialises in their needed procedure. A dental clinic that ranks in the top 3 for 'Invisalign clinic Tampines' or 'emergency dentist Jurong' captures patients who are ready to book. Without that visibility, even the most skilled dentist loses patients to a competitor with better Google Maps presence.
+          Dental patients are among the most research-intensive healthcare consumers in Singapore. Before a wisdom tooth extraction or Invisalign consultation, they read every review, compare clinic prices, look at before-and-after photos, and check whether a dentist specialises in their needed procedure. A dental clinic that ranks in the top 3 for 'Invisalign clinic Tampines' or 'emergency dentist Jurong' captures patients who are ready to book. Without that visibility, even the most skilled dentist loses patients to a competitor with better Google Maps presence. Our{" "}
+          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO</Link>{" "}
+          work helps patients find you when they search by treatment.
            See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
@@ -115,8 +118,16 @@ export default function DentalClinicsPage() {
           staff can deter dozens of potential patients who are already nervous about
           dental visits. Dental clinics also face procedure-specific search intent — a
           patient looking for Invisalign is not searching the same terms as one looking
-          for a crown, and without the right GBP categories and service listings, you
-          miss both. Multi-location dental groups face all of this at scale.
+          for a crown, and without the right{" "}
+          <Link href="/blog/clinic-google-categories" className="text-primary font-medium hover:underline">
+            GBP categories
+          </Link>{" "}
+          and service listings, you
+          miss both. Multi-location dental groups face all of this at scale. Proactive{" "}
+          <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+            reputation management
+          </Link>{" "}
+          is essential, not optional, for Singapore dental clinics.
         </p>
       }
       howEpicwareHelps={

@@ -34,7 +34,21 @@ export default function EpicSocialSchedulingPage() {
       subtitle="Singapore SMBs know they should post regularly on Facebook, Instagram, and Google Business Profile. Most don't, because they don't have time. EpicSocial generates the content and schedules the posts — you just approve."
       trustSignals={["AI Content Generation", "Facebook + Instagram + GBP", "Singapore-Built", "Content Calendar"]}
       imageSrc="/assets/how-it-works-campaigns.png"
-      openingParagraph="A business that hasn't posted on Facebook in 3 months looks closed to a potential customer checking their page. A Google Business Profile with no recent posts loses rank advantage to competitors who post weekly. Social media consistency matters for both appearance and algorithm."
+      openingParagraph={
+        <>
+          A business that hasn't posted on Facebook in 3 months looks closed to a potential
+          customer checking their page. A Google Business Profile with no recent posts loses rank
+          advantage to competitors who post weekly. Our{" "}
+          <Link
+            href="/local-seo-singapore/gbp-post-scheduling"
+            className="text-primary font-medium hover:underline"
+          >
+            GBP post scheduling
+          </Link>{" "}
+          service handles that for you. Social media consistency matters for both appearance and
+          algorithm.
+        </>
+      }
       whenTitle="When You Need Social Scheduling"
       whenContent={
         <div className="space-y-4">
@@ -61,7 +75,14 @@ export default function EpicSocialSchedulingPage() {
           </p>
           <p>
             The content calendar shows all scheduled posts across all your outlets so you always know what is going
-            out. Multi-outlet operators can have different content schedules per location from one account. See also
+            out.{" "}
+            <Link
+              href="/use-cases/manage-multiple-gbp-locations"
+              className="text-primary font-medium hover:underline"
+            >
+              Multi-outlet operators
+            </Link>{" "}
+            can have different content schedules per location from one account. See also
             the{" "}
             <Link href="/products/epicsocial" className="text-primary font-medium hover:underline">EpicSocial product page</Link>.
           </p>

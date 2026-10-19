@@ -68,8 +68,18 @@ const FEATURES = [
   },
   {
     name: "Review Request Integration",
-    description:
-      "Post-visit emails connect directly to EpicReview&apos;s review request flow — one action serves two purposes.",
+    node: (
+      <>
+        Post-visit emails connect directly to EpicReview&apos;s{" "}
+        <Link
+          href="/reputation-management-singapore/review-generation"
+          className="text-primary hover:underline"
+        >
+          review request flow
+        </Link>{" "}
+        — one action serves two purposes.
+      </>
+    ),
   },
 ];
 
@@ -84,6 +94,11 @@ export default function EpicEngagePage() {
       <CategoryHero
         badge="EPICENGAGE · EMAIL MARKETING"
         h1="EpicEngage — Email Marketing for Singapore SMBs"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products", href: "/products" },
+          { label: "EpicEngage" },
+        ]}
         subtitle={
           <>
             Getting a new customer costs five times more than keeping an existing one. EpicEngage
@@ -112,6 +127,13 @@ export default function EpicEngagePage() {
             try someone else, and they never return. EpicEngage plugs that gap. It connects to your
             customer data and runs email sequences that feel personal, arrive at the right time,
             and bring customers back without anyone on your team having to remember to send anything.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-6">
+            Epicware, an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              AI marketing agency in Singapore
+            </Link>
+            , built EpicEngage to bring customers back after their first visit.
           </p>
         </div>
       </section>
@@ -160,7 +182,7 @@ export default function EpicEngagePage() {
               >
                 <CheckCircle2 className="w-5 h-5 text-primary mb-3" />
                 <h3 className="font-semibold text-foreground mb-2">{f.name}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{f.node ?? f.description}</p>
               </div>
             ))}
           </div>

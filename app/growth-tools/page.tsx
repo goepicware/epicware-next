@@ -40,12 +40,14 @@ const CHILD_SERVICES = [
     href: "/growth-tools/epicengage-email-marketing",
     description:
       "Automated email campaigns triggered by customer behaviour — post-visit review requests, win-back offers, birthday greetings. Set it up once, runs forever.",
+    ctaLabel: "EpicEngage email marketing",
   },
   {
     name: "EpicSocial Social Scheduling",
     href: "/growth-tools/epicsocial-social-scheduling",
     description:
       "AI-generated social posts scheduled across Facebook, Instagram, and GBP from one dashboard. A full week of content in one click.",
+    ctaLabel: "EpicSocial social scheduling",
   },
 ];
 
@@ -160,8 +162,8 @@ export default function GrowthToolsPage() {
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in
               GMV before its 2021 exit. Epicware is Singapore-built, used by businesses in SG · MY · UAE · UK · US. See the
-              full platform overview at{" "}
-              <Link href="/" className="text-primary font-medium hover:underline">epicware.ai</Link>.
+              full platform overview from{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">our digital marketing team</Link>.
             </p>
           </div>
         </div>

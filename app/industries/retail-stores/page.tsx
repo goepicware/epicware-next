@@ -80,9 +80,23 @@ export default function RetailStoresPage() {
   return (
     <IndustryPage
       schema={schema}
+      industryLabel="Retail Stores"
       badge="RETAIL STORES · LOCAL SEO"
       h1="Local SEO for Retail Stores Singapore — Rank Higher, Drive More In-Store Visits"
-      subtitle="Singapore shoppers search Google Maps before they visit. A retail store with updated hours, product photos, and strong reviews wins the visit over a competitor with an outdated profile. Epicware keeps your store profile current, reviewed, and visible."
+      subtitle={
+        <>
+          Singapore shoppers search Google Maps before they visit, so it pays to{" "}
+          <Link
+            href="/local-seo-singapore/gbp-optimisation"
+            className="text-primary font-medium hover:underline"
+          >
+            optimise your Google Business Profile
+          </Link>{" "}
+          for each store. A retail store with updated hours, product photos, and strong reviews
+          wins the visit over a competitor with an outdated profile. Epicware keeps your store
+          profile current, reviewed, and visible.
+        </>
+      }
       trustSignals={[
         "Opening Hours Accuracy",
         "Product Photos Managed",
@@ -92,7 +106,11 @@ export default function RetailStoresPage() {
       imageSrc="/assets/hero-image.jpg"
       openingParagraph={
         <>
-          When a shopper searches 'mobile phone accessories near me' or 'art supplies shop in Ang Mo Kio', they use Google Maps to decide which store to visit. A retail store with accurate hours, high-quality product photos, 60+ reviews, and regular GBP posts converts that search into a walk-in. Retail is intensely location-dependent, and Google Maps rank within the immediate catchment area determines foot traffic volume. Epicware's platform manages every GBP signal that affects that rank.
+          When a shopper searches 'mobile phone accessories near me' or 'art supplies shop in Ang Mo Kio', they use Google Maps to decide which store to visit. A retail store with accurate hours, high-quality product photos, 60+ reviews, and regular GBP posts converts that search into a walk-in. Retail is intensely location-dependent, and Google Maps rank within the immediate catchment area determines foot traffic volume. Epicware's platform manages every GBP signal that affects that rank.{" "}
+          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">Local SEO</Link>{" "}
+          helps shoppers find each of your stores. Our{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">digital marketing team</Link>{" "}
+          runs local SEO and reviews for retail brands across Singapore.
            See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
@@ -104,8 +122,14 @@ export default function RetailStoresPage() {
           — but often don&apos;t reflect the overall quality of the store. At the same time,
           happy customers rarely leave reviews unless asked. GBP hours accuracy is
           critical for retail — a wrong closing time on a public holiday sends a
-          customer to a closed store and results in a 1-star review. Multi-location
-          retail chains face all these challenges simultaneously across every outlet.
+          customer to a closed store and results in a 1-star review.{" "}
+          <Link
+            href="/use-cases/manage-multiple-gbp-locations"
+            className="text-primary font-medium hover:underline"
+          >
+            Multi-location retail chains
+          </Link>{" "}
+          face all these challenges simultaneously across every outlet.
         </p>
       }
       howEpicwareHelps={

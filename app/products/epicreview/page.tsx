@@ -44,6 +44,7 @@ const schema = {
 const FEATURES = [
   {
     name: "Review Request Campaigns",
+    href: "/reputation-management-singapore/review-generation",
     description:
       "Automated WhatsApp and email sequences timed for peak response — triggered after a visit, order, or appointment.",
   },
@@ -54,6 +55,7 @@ const FEATURES = [
   },
   {
     name: "Multi-Outlet Monitoring",
+    href: "/use-cases/manage-multiple-gbp-locations",
     description:
       "Real-time alerts across all your GBP profiles in one dashboard — no logging into five different accounts.",
   },
@@ -85,6 +87,11 @@ export default function EpicReviewPage() {
       <CategoryHero
         badge="EPICREVIEW · REPUTATION MANAGEMENT"
         h1="EpicReview — Review Management & Bad Review Removal for Singapore"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products", href: "/products" },
+          { label: "EpicReview" },
+        ]}
         subtitle={
           <>
             Your Google rating is the most visible trust signal a potential customer sees before
@@ -115,6 +122,13 @@ export default function EpicReviewPage() {
             AI-personalised replies, monitors all your outlets in real time, and removes the
             reviews that should not be there.
           </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-6">
+            EpicReview is the review software our{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              digital marketing team
+            </Link>{" "}
+            uses to run client review programmes.
+          </p>
         </div>
       </section>
 
@@ -138,13 +152,7 @@ export default function EpicReviewPage() {
               signal to Google and a visible trust indicator to anyone reading your profile.
             </p>
             <p>
-              For fake, unfair, or policy-violating reviews, EpicReview&apos;s{" "}
-              <Link
-                href="/bad-review-removal-singapore"
-                className="text-primary font-medium hover:underline"
-              >
-                Bad Review Removal
-              </Link>{" "}
+              For fake, unfair, or policy-violating reviews, EpicReview&apos;s Bad Review Removal
               service handles the submission, escalation, and follow-up. $200 per review, charged
               upfront — refunded in full if it isn't removed within 3 months.
             </p>
@@ -231,7 +239,15 @@ export default function EpicReviewPage() {
                 className="rounded-2xl border border-border/60 bg-card p-6 hover:shadow-card transition-shadow duration-300"
               >
                 <CheckCircle2 className="w-5 h-5 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">{f.name}</h3>
+                <h3 className="font-semibold text-foreground mb-2">
+                  {f.href ? (
+                    <Link href={f.href} className="hover:underline">
+                      {f.name}
+                    </Link>
+                  ) : (
+                    f.name
+                  )}
+                </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
               </div>
             ))}
@@ -264,7 +280,7 @@ export default function EpicReviewPage() {
                 href="/bad-review-removal-singapore"
                 className="text-primary font-medium hover:underline"
               >
-                Bad Review Removal Singapore
+                bad review removal
               </Link>
               .
             </p>
