@@ -78,6 +78,20 @@ export default function GuidesHubPage() {
             In-depth playbooks you can action immediately. Built for Singapore SMBs
             that want to rank higher, earn more reviews, and protect their reputation.
           </p>
+          <p className="text-base text-muted-foreground max-w-2xl leading-relaxed mt-4">
+            Need it done for you? Our{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local SEO services
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="/reputation-management-singapore"
+              className="text-primary font-medium hover:underline"
+            >
+              online reputation management
+            </Link>{" "}
+            teams run these playbooks for clients.
+          </p>
         </div>
       </section>
 

@@ -98,7 +98,16 @@ export default function GoogleReviewRequestGeneratorPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-2">What problem does this solve?</h3>
-                <p>Many business owners don't know how to ask for reviews without sounding awkward or pushy. This tool generates polite, effective messages that customers actually respond to, helping businesses build their online reputation.</p>
+                <p>
+                  Many business owners don't know how to ask for reviews without sounding awkward or pushy. Timing matters as much as wording: see the{" "}
+                  <Link
+                    href="/blog/best-time-to-ask-for-a-google-review"
+                    className="text-primary hover:underline"
+                  >
+                    best time to ask for a Google review
+                  </Link>
+                  . This tool generates polite, effective messages that customers actually respond to, helping businesses build their online reputation.
+                </p>
               </div>
             </div>
             <div className="mt-8 pt-6 border-t border-border/50">
@@ -132,7 +141,14 @@ export default function GoogleReviewRequestGeneratorPage() {
 
           <div className="rounded-3xl bg-card border border-border/50 p-8 lg:p-10 text-center">
             <p className="text-xl text-foreground font-medium mb-3">
-              Want review requests sent automatically after every visit or payment?
+              Want{" "}
+              <Link
+                href="/reputation-management-singapore/review-generation"
+                className="text-primary hover:underline"
+              >
+                review requests sent automatically
+              </Link>{" "}
+              after every visit or payment?
             </p>
             <p className="text-muted-foreground mb-8">Epicware automates this for you.</p>
             <Link

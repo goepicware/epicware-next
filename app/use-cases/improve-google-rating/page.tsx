@@ -48,13 +48,25 @@ const STEPS = [
     number: "2",
     title: "Removal",
     description:
-      "Removal requests filed for eligible reviews — $200/review, refunded if not removed within 3 months. Reviews that drag your rating down and violate policy are targeted first.",
+      "Removal requests filed for eligible reviews. Reviews that drag your rating down and violate policy are targeted first.",
   },
   {
     number: "3",
     title: "Generation",
-    description:
-      "Automated review campaigns run in parallel, generating new positive reviews from your existing satisfied customer base. Both tracks run simultaneously.",
+    description: (
+      <>
+        Automated review campaigns run in parallel, generating new positive
+        reviews from your existing satisfied customer base. Both parts are
+        run by our{" "}
+        <Link
+          href="/reputation-management-singapore"
+          className="text-primary font-medium hover:underline"
+        >
+          online reputation management
+        </Link>{" "}
+        team. Both tracks run simultaneously.
+      </>
+    ),
   },
   {
     number: "4",
@@ -103,10 +115,30 @@ export default function ImproveGoogleRatingPage() {
               intervention.
             </p>
             <p>
+              Rating and review count work together; see{" "}
+              <Link
+                href="/blog/reviews-vs-rating-what-matters-more"
+                className="text-primary font-medium hover:underline"
+              >
+                how review count and star rating compare
+              </Link>{" "}
+              for Maps rank.
+            </p>
+            <p>
               Most businesses try to fix this by asking for more reviews — but if the
               reviews dragging the rating down stay in place, new positive reviews
               barely move the average. The fix requires both tracks running
               simultaneously.
+            </p>
+            <p>
+              For a step-by-step plan, follow our{" "}
+              <Link
+                href="/blog/reputation-recovery-strategy"
+                className="text-primary font-medium hover:underline"
+              >
+                reputation recovery strategy
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -125,8 +157,14 @@ export default function ImproveGoogleRatingPage() {
                 Remove the Reviews Dragging You Down
               </h3>
               <p className="text-base text-muted-foreground leading-relaxed">
-                Fake reviews, competitor attacks, and policy-violating reviews are
-                removable. Epicware assesses each review, identifies the policy
+                Fake reviews, competitor attacks, and{" "}
+                <Link
+                  href="/blog/google-review-policy-explained"
+                  className="text-primary font-medium hover:underline"
+                >
+                  policy-violating reviews
+                </Link>{" "}
+                are removable. Epicware assesses each review, identifies the policy
                 violation, and submits removal requests at $200/review, charged
                 upfront and refunded if not removed within 3 months. Removing 2–3 bad reviews can move your average
                 rating by 0.2–0.4 stars immediately.
@@ -202,13 +240,6 @@ export default function ImproveGoogleRatingPage() {
                 Book a Free Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              className="rounded-full bg-transparent border border-foreground/30 text-foreground hover:bg-muted h-14 px-8 font-semibold text-base"
-            >
-              <Link href="/bad-review-removal-singapore">See Review Removal</Link>
             </Button>
           </div>
         </div>

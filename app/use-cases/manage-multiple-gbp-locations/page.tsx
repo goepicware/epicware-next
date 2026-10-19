@@ -40,7 +40,16 @@ const schema = {
 const FEATURES = [
   "One inbox for all reviews across all outlets",
   "AI response drafts ready for every review",
-  "EpicMap rank grid for all locations simultaneously",
+  <>
+    EpicMap{" "}
+    <Link
+      href="/local-seo-singapore/local-rank-tracking"
+      className="text-primary font-medium hover:underline"
+    >
+      rank grid
+    </Link>{" "}
+    for all locations simultaneously
+  </>,
   "Review campaigns run per outlet or across all locations",
   "GBP post scheduling for all outlets from one calendar",
   "Combined analytics across every location",
@@ -84,7 +93,21 @@ export default function ManageMultipleGBPLocationsPage() {
       <CategoryHero
         badge="MULTI-OUTLET MANAGEMENT · SINGAPORE"
         h1="Manage Multiple Google Business Profiles From One Dashboard"
-        subtitle="Running 3, 5, or 10 outlets in Singapore means 3, 5, or 10 separate GBP profiles to monitor, update, and respond to. Epicware manages all of them from one login — reviews, rank, posts, and reputation across every location."
+        subtitle={
+          <>
+            Running 3, 5, or 10 outlets in Singapore means 3, 5, or 10 separate
+            GBP profiles to monitor, update, and respond to. Epicware manages
+            all of them from one login — reviews, rank, posts, and reputation
+            across every location. It&apos;s part of our{" "}
+            <Link
+              href="/local-seo-singapore"
+              className="text-primary font-medium hover:underline"
+            >
+              local SEO services
+            </Link>
+            .
+          </>
+        }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
@@ -126,13 +149,23 @@ export default function ManageMultipleGBPLocationsPage() {
             Everything in One Place
           </h2>
           <div className="space-y-3 mb-6">
-            {FEATURES.map((feature) => (
-              <div key={feature} className="flex items-start gap-3">
+            {FEATURES.map((feature, index) => (
+              <div key={index} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <p className="text-base text-muted-foreground">{feature}</p>
               </div>
             ))}
           </div>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            See{" "}
+            <Link
+              href="/case-studies/restaurant-multi-outlet-growth-singapore"
+              className="text-primary font-medium hover:underline"
+            >
+              how a restaurant group grew to 200+ reviews per outlet
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

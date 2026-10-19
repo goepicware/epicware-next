@@ -57,7 +57,7 @@ export default function Page() {
           <p>Look at the reviewer&apos;s profile: review history, timing relative to competitor reviews, the specificity of the complaint. Build your evidence file before submitting anything.</p>
 
           <h3>Step 2: Flag the review</h3>
-          <p>The Google Maps flag button is the first step but rarely sufficient on its own. In Google Maps, find the review, click the three dots, and select &quot;Report review.&quot; Choose the most specific category available. Google&apos;s automated system will assess the flag — typically rejecting it if the review doesn&apos;t match obvious spam patterns.</p>
+          <p>The Google Maps flag button is the first step but rarely sufficient on its own. Our step-by-step guide on <a href="/blog/how-to-remove-bad-google-reviews">how to remove bad Google reviews</a> covers what comes next. In Google Maps, find the review, click the three dots, and select &quot;Report review.&quot; Choose the most specific category available. Google&apos;s automated system will assess the flag — typically rejecting it if the review doesn&apos;t match obvious spam patterns.</p>
           <p>Flag rejection is not final. It&apos;s the output of an automated system, not a human determination.</p>
 
           <h3>Step 3: Submit a formal removal request</h3>
@@ -83,10 +83,11 @@ export default function Page() {
           <p>Epicware&apos;s bad review removal service exists for businesses where the DIY route has failed, where multiple reviews need challenging simultaneously, or where the commercial impact of the review is high enough to justify professional handling.</p>
           <p>The model: $200 per review, payment only on successful removal. If the review stays up, there is no charge. This aligns Epicware&apos;s incentive directly with the client&apos;s outcome.</p>
           <p>The service covers: assessment to identify the strongest policy angle, formal submission with correct policy language and supporting evidence, systematic escalation through all available channels, and follow-up until all escalation paths are exhausted.</p>
+          <p>If the reviewer was never a customer at all, ask about <a href="/bad-review-removal-singapore/fake-review-removal">fake review removal</a>.</p>
 
           <h2>Frequently Asked Questions</h2>
           <h3>Can Google remove any negative review?</h3>
-          <p>No. Google only removes reviews that violate their content policy. Genuine negative opinions from real customers — even extremely harsh ones — are not removable. The review must fall into a defined policy violation category.</p>
+          <p>No. Google only removes reviews that violate their <a href="/blog/google-review-policy-explained">content policy</a>. Genuine negative opinions from real customers — even extremely harsh ones — are not removable. The review must fall into a defined policy violation category.</p>
 
           <h3>How long does removal take?</h3>
           <p>The flag system typically responds within 2–5 business days. Formal removal requests take 5–15 business days. Escalation adds another 5–10 days per round. Total timeline for a successfully removed review is typically 2–6 weeks depending on the channel and evidence strength.</p>
@@ -102,7 +103,7 @@ export default function Page() {
         </>
       }
       ctaHref="/bad-review-removal-singapore"
-      ctaLabel="Remove Bad Reviews Now — $200, Refunded If Not Removed"
+      ctaLabel="See Our Bad Review Removal Service"
     />
   );
 }

@@ -183,7 +183,7 @@ export default function RemoveBadGoogleReviewsPage() {
                 href="/bad-review-removal-singapore"
                 className="flex items-center gap-2"
               >
-                See Bad Review Removal Service
+                Bad Review Removal Service
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </Button>

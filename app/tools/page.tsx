@@ -72,6 +72,17 @@ export default function ToolsPage() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Free, practical tools to help you get more reviews, visibility, and repeat customers.
           </p>
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-4">
+            These tools come from the team behind our{" "}
+            <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+              online reputation management
+            </Link>{" "}
+            and{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local SEO services
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

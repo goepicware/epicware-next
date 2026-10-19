@@ -106,6 +106,16 @@ export default function RankHigherOnGoogleMapsPage() {
               everywhere they appear at all — but Google Maps rank varies dramatically
               by location, device, and keyword. EpicMap makes the invisible visible.
             </p>
+            <p>
+              Our guide to{" "}
+              <Link
+                href="/blog/google-maps-ranking-factors"
+                className="text-primary font-medium hover:underline"
+              >
+                Google Maps ranking factors
+              </Link>{" "}
+              explains what moves your position.
+            </p>
           </div>
         </div>
       </section>

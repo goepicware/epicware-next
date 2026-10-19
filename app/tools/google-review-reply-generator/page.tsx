@@ -57,9 +57,38 @@ const jsonLdFaq = {
 
 const benefits = [
   { icon: ShieldCheck, title: "Build Trust", desc: "Responding shows you care about customer feedback and builds credibility with potential customers." },
-  { icon: TrendingUp, title: "Improve Rankings", desc: "Google rewards businesses that actively engage with reviews by boosting their local search visibility." },
+  {
+    icon: TrendingUp,
+    title: "Improve Rankings",
+    desc: (
+      <>
+        Google rewards businesses that actively engage with reviews by
+        boosting their{" "}
+        <Link href="/local-seo-singapore" className="text-primary hover:underline">
+          local search visibility
+        </Link>
+        .
+      </>
+    ),
+  },
   { icon: Users, title: "Win New Customers", desc: "90% of consumers read reviews before visiting. Your responses influence their decision." },
-  { icon: Star, title: "Recover Unhappy Customers", desc: "A thoughtful response to negative reviews can turn critics into loyal advocates." },
+  {
+    icon: Star,
+    title: "Recover Unhappy Customers",
+    desc: (
+      <>
+        A thoughtful response to negative reviews can turn critics into loyal
+        advocates. It also pays to{" "}
+        <Link
+          href="/blog/should-you-respond-to-every-google-review"
+          className="text-primary hover:underline"
+        >
+          respond to every Google review
+        </Link>
+        , not just the negative ones, because new customers read the replies.
+      </>
+    ),
+  },
 ];
 
 export default function GoogleReviewReplyGeneratorPage() {
@@ -104,7 +133,16 @@ export default function GoogleReviewReplyGeneratorPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-2">What problem does this solve?</h3>
-                <p>Writing thoughtful review responses takes time. Many business owners either skip responding entirely or use generic replies that don't address the customer's specific feedback. This tool generates personalized, professional responses in seconds.</p>
+                <p>
+                  Writing thoughtful review responses takes time. Our{" "}
+                  <Link
+                    href="/reputation-management-singapore/ai-review-response"
+                    className="text-primary hover:underline"
+                  >
+                    AI review response service
+                  </Link>{" "}
+                  writes and posts them for you. Many business owners either skip responding entirely or use generic replies that don't address the customer's specific feedback. This tool generates personalized, professional responses in seconds.
+                </p>
               </div>
             </div>
             <div className="mt-8 pt-6 border-t border-border/50">
@@ -145,7 +183,7 @@ export default function GoogleReviewReplyGeneratorPage() {
               href="/products/epicreview"
               className="inline-flex items-center gap-2 h-14 px-8 rounded-xl bg-foreground text-background font-semibold text-lg hover:bg-foreground/90 transition-all duration-300 group"
             >
-              See How Epicware Works
+              See how EpicReview automates replies
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

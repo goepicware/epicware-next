@@ -29,7 +29,25 @@ export default function Page() {
       schema={schema}
       badge="RESTAURANT GUIDE · SINGAPORE"
       h1="Restaurant Digital Growth Guide — Rank Higher, Get More Reviews, Fill Tables"
-      subtitle="A complete playbook for Singapore restaurant owners covering Google Maps rank, review generation, and reputation management."
+      subtitle={
+        <>
+          A complete playbook for Singapore restaurant owners covering{" "}
+          <a
+            href="/local-seo-singapore/gbp-optimisation"
+            className="text-primary font-medium hover:underline"
+          >
+            Google Maps rank
+          </a>
+          , review generation, and{" "}
+          <a
+            href="/reputation-management-singapore"
+            className="text-primary font-medium hover:underline"
+          >
+            reputation management
+          </a>
+          .
+        </>
+      }
       trustSignals={["Singapore F&B Market", "500+ Outlets Managed", "Live Dashboard Included", "Bad Review Removal Available"]}
       imageSrc="/assets/review-management-illustration.png"
       intro={
@@ -70,11 +88,12 @@ export default function Page() {
 
           <h2>6. Step 5: Handle Bad Reviews</h2>
           <p>Fake reviews and competitor-posted reviews are a known problem in Singapore&apos;s competitive F&amp;B market. A restaurant that achieves visibility attracts attention from competitors willing to post negative reviews. If you have reviews that appear to come from accounts with no connection to your business, that post reviews of your competitors, or that make demonstrably false factual claims, they can be challenged for removal.</p>
-          <p>Epicware&apos;s bad review removal service charges $200 per review, with payment only on successful removal. For high-visibility restaurant profiles, the commercial impact of a fake 1-star review being removed is often worth significantly more than the removal cost.</p>
+          <p>Epicware&apos;s <a href="/bad-review-removal-singapore">bad review removal service</a> handles fake and policy-breaking reviews. For high-visibility restaurant profiles, the commercial impact of a fake 1-star review being removed is often worth significantly more than the removal cost.</p>
 
           <h2>7. The Multi-Outlet Problem</h2>
           <p>F&amp;B groups managing multiple outlets face a specific challenge: each outlet needs its own GBP profile optimised, its own review generation running, and its own monitoring and response in place. Managing 8 GBP profiles manually is not feasible for most operators.</p>
-          <p>Epicware&apos;s multi-outlet dashboard aggregates all your locations into a single view. You can monitor reviews across all outlets, respond from the same interface, and view rank data for each location side by side.</p>
+          <p>Epicware&apos;s <a href="/use-cases/manage-multiple-gbp-locations">multi-outlet dashboard</a> aggregates all your locations into a single view. You can monitor reviews across all outlets, respond from the same interface, and view rank data for each location side by side.</p>
+          <p>For a real example, see <a href="/case-studies/multi-outlet-restaurant-seo-case-study-singapore">how a 5-outlet chain became the answer on Google Maps</a> and AI Overviews.</p>
 
           <h2>8. What Epicware Handles for You</h2>
           <p>For Singapore restaurants using Epicware&apos;s full suite: EpicReview runs the automated WhatsApp review campaigns, EpicResponse drafts and posts replies to every new review, EpicMap tracks rank across your district grid, and the bad review removal team handles any policy-violating reviews. The GBP optimisation audit covers all 19 factors across your profiles.</p>

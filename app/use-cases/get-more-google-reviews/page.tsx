@@ -75,7 +75,18 @@ export default function GetMoreGoogleReviewsPage() {
       <CategoryHero
         badge="GET MORE REVIEWS · SINGAPORE"
         h1="Get More Google Reviews for Your Singapore Business — Automated, Not Manual"
-        subtitle="Most Singapore SMBs get reviews by accident — a happy customer who remembered. Epicware's automated review campaigns turn every satisfied customer into a reviewer. 15–30% conversion rate on WhatsApp requests."
+        subtitle={
+          <>
+            Most Singapore SMBs get reviews by accident — a happy customer who
+            remembered. As a{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              digital marketing agency in Singapore
+            </Link>
+            , Epicware runs automated review campaigns that turn every
+            satisfied customer into a reviewer. 15–30% conversion rate on
+            WhatsApp requests.
+          </>
+        }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
@@ -107,6 +118,16 @@ export default function GetMoreGoogleReviewsPage() {
               the moment a customer is most likely to respond — and converts that
               window into a consistent stream of new reviews.
             </p>
+            <p>
+              For the do-it-yourself version, read{" "}
+              <Link
+                href="/blog/how-to-get-more-google-reviews"
+                className="text-primary font-medium hover:underline"
+              >
+                how to get more Google reviews
+              </Link>{" "}
+              ethically.
+            </p>
           </div>
         </div>
       </section>
@@ -129,6 +150,26 @@ export default function GetMoreGoogleReviewsPage() {
               interaction. WhatsApp review requests convert at 15–30% for warm
               audiences — compared to less than 2% for generic email blasts sent days
               after the visit.
+            </p>
+            <p>
+              It&apos;s part of our{" "}
+              <Link
+                href="/review-management-singapore/google-reviews"
+                className="text-primary font-medium hover:underline"
+              >
+                Google reviews service
+              </Link>
+              , which also covers replies and monitoring.
+            </p>
+            <p>
+              We never buy or reward reviews; here&apos;s why you can&apos;t{" "}
+              <Link
+                href="/blog/can-you-incentivize-google-reviews"
+                className="text-primary font-medium hover:underline"
+              >
+                incentivise Google reviews
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -153,6 +194,16 @@ export default function GetMoreGoogleReviewsPage() {
               </div>
             ))}
           </div>
+          <p className="text-base text-muted-foreground leading-relaxed mt-6">
+            Fresh reviews count for more than old ones, which is why{" "}
+            <Link
+              href="/blog/why-review-recency-matters-for-local-rankings"
+              className="text-primary font-medium hover:underline"
+            >
+              review recency matters for local rankings
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
