@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
@@ -29,13 +30,23 @@ export default function Page() {
       schema={schema}
       badge="CASE STUDY · F&B SINGAPORE"
       h1="How a Singapore Restaurant Group Grew to 200+ Reviews Per Outlet"
-      subtitle="Managing 6 GBP profiles manually across a Singapore F&B group was consuming hours per week and generating zero results. Epicware changed that in 60 days."
+      breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Case Studies", href: "/case-studies" },
+        { label: "Restaurant Multi-Outlet Growth" },
+      ]}
+      subtitle={
+        <>
+          <Link href="/use-cases/manage-multiple-gbp-locations">Managing 6 GBP profiles</Link> manually across a Singapore F&B group was consuming hours per week and generating zero results. Epicware changed that in 60 days.
+        </>
+      }
       trustSignals={["6 Outlets", "45 → 200+ Reviews", "Multi-Outlet Dashboard", "Real Results"]}
       imageSrc="/assets/review-management-illustration.png"
       intro={
         <>
           <p>A Singapore casual dining group operating 6 outlets across the island — ranging from a hawker court stall to a full-service restaurant in a shopping mall — came to Epicware with a straightforward problem: their Google reviews were inconsistent, their Maps rank was poor, and nobody on the team had time to manage it.</p>
           <p>The group&apos;s most-reviewed outlet had 45 reviews. Their main competitor in the same category had 280. The review gap was visible to every potential customer who searched their category on Google Maps.</p>
+          <p>The group asked Epicware, a <Link href="/">digital marketing agency in Singapore</Link>, to run its reviews and local SEO.</p>
         </>
       }
       body={
@@ -48,7 +59,7 @@ export default function Page() {
           <h2>Attempted Solutions Before Epicware</h2>
           <p>Before approaching Epicware, the group had tried two approaches:</p>
           <ul>
-            <li>Printed table cards with QR codes linking to Google reviews. Conversion was low — customers rarely scanned them unprompted, and the cards needed regular replacement.</li>
+            <li>Printed table cards with <Link href="/blog/how-to-create-google-review-link-qr-code">QR codes</Link> linking to Google reviews. Conversion was low — customers rarely scanned them unprompted, and the cards needed regular replacement.</li>
             <li>Staff verbal reminders at checkout. Inconsistent across outlets and staff — some staff asked frequently, others never did.</li>
           </ul>
           <p>Neither approach generated consistent velocity. Some months saw 5–8 new reviews across all outlets. Other months, 1–2.</p>
@@ -72,7 +83,7 @@ export default function Page() {
           <p>&quot;We knew reviews mattered but had no bandwidth to do it properly. Epicware just runs in the background — I check in once a week to review anything that needs attention. The results were faster than I expected.&quot;</p>
 
           <h2>What&apos;s Next</h2>
-          <p>The group is now in the process of onboarding EpicMap to track district-level rank for each outlet — identifying specific geographic pockets where rank is still below position 3 and targeting GBP post content at those areas. Two outlets have also engaged Epicware&apos;s bad review removal service for reviews assessed as competitor-posted.</p>
+          <p>The group is now in the process of onboarding EpicMap to track district-level rank for each outlet — identifying specific geographic pockets where rank is still below position 3 and targeting GBP post content at those areas. Two outlets have also engaged Epicware&apos;s <Link href="/bad-review-removal-singapore">bad review removal service</Link> for reviews assessed as competitor-posted.</p>
           <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
         </>
       }

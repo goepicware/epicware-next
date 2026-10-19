@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: { absolute: "Epicware vs Birdeye | Review Management Compared" },
-  description: "Compare Epicware and Birdeye on review management, local SEO, AI search and support for Singapore businesses: features, fit and pricing model.",
+  title: "Epicware vs Birdeye — Singapore Local SEO Platform",
+  description: "Compare Epicware and Birdeye for Singapore SMBs. Platform origin, pricing model, bad review removal, and Singapore-specific local SEO features compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-birdeye" },
   openGraph: {
-    title: "Epicware vs Birdeye | Review Management Compared",
-    description: "Compare Epicware and Birdeye on review management, local SEO, AI search and support for Singapore businesses: features, fit and pricing model.",
+    title: "Epicware vs Birdeye — Singapore Local SEO & Reputation Management",
+    description: "Compare Epicware and Birdeye for Singapore SMBs. Platform origin, pricing model, bad review removal, and Singapore-specific local SEO features compared.",
     url: "https://www.epicware.ai/comparison/epicware-vs-birdeye",
   },
 };
@@ -27,7 +28,7 @@ const features = [
   { feature: "Built for Singapore market", epicware: true, competitor: false },
   { feature: "WhatsApp review requests", epicware: true, competitor: false },
   { feature: "SMS review requests", epicware: "Available", competitor: "Primary channel" },
-  { feature: "Bad review removal service", epicware: "$200/review, refunded if not removed in 3 months", competitor: false },
+  { feature: <Link href="/bad-review-removal-singapore">Bad review removal service</Link>, epicware: "$200/review, refunded if not removed in 3 months", competitor: false },
   { feature: "GBP hyperlocal rank tracking", epicware: "Grid-level, per district", competitor: "Basic rank monitoring" },
   { feature: "AI review response", epicware: true, competitor: true },
   { feature: "Multi-outlet dashboard", epicware: true, competitor: true },
@@ -46,12 +47,37 @@ export default function Page() {
       subtitle="A feature-by-feature comparison of Epicware and Birdeye for Singapore businesses managing Google reviews, local SEO, and reputation."
       trustSignals={["WhatsApp vs SMS", "Bad Review Removal", "Singapore Market", "Hyperlocal Rank Tracking"]}
       competitorName="Birdeye"
-      epicwareSummary="Epicware is built specifically for the Singapore and Southeast Asian market. WhatsApp is the primary review request channel (Singapore's dominant messaging platform), bad review removal is a first-class product, and GBP optimisation is calibrated for Singapore's hyperlocal geography."
+      epicwareSummary={
+        <>
+          Epicware is built specifically for the Singapore and Southeast Asian market.{" "}
+          <Link href="/reputation-management-singapore/review-generation">WhatsApp review request campaigns</Link> are the primary channel (Singapore&apos;s dominant messaging platform), bad review removal is a first-class product, and GBP optimisation is calibrated for Singapore&apos;s hyperlocal geography. Unlike Birdeye&apos;s software, Epicware is a{" "}
+          <Link href="/">digital marketing agency in Singapore</Link> that does the work for you.
+        </>
+      }
       competitorSummary="Birdeye is a US-based reputation management platform with strong SMS and email review generation, AI responses, and broad CRM integrations. Primarily designed for the US market, with limited adaptation for Singapore-specific channels and local SEO requirements."
       features={features}
       verdict={
         <p>Birdeye is a capable platform for US businesses. For Singapore SMBs, Epicware&apos;s advantages are meaningful: WhatsApp is Singapore&apos;s dominant messaging channel (Birdeye uses SMS), bad review removal is productised (Birdeye doesn&apos;t offer it), and the GBP optimisation is built for Singapore&apos;s hyperlocal environment. See <a href="/pricing">pricing</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
+      faqHeading="Common questions about Epicware vs Birdeye"
+      faqs={[
+        {
+          q: "What is the main difference between Epicware and Birdeye for Singapore businesses?",
+          a: "Epicware is built specifically for Singapore and Southeast Asia — WhatsApp is the primary review request channel, bad review removal is a built-in service, and GBP optimisation is calibrated for Singapore's hyperlocal geography. Birdeye is a US-based platform primarily designed for North American businesses, with SMS as its main review channel and limited adaptation for Singapore-specific channels and local SEO requirements.",
+        },
+        {
+          q: "Does Birdeye offer bad review removal for Google reviews?",
+          a: "No. Birdeye does not offer a bad review removal service. Epicware's removal service identifies policy-violating reviews, submits formal removal requests through Google's escalation channels, and escalates if rejected — at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
+        },
+        {
+          q: "Which platform uses WhatsApp for review requests in Singapore?",
+          a: "Epicware uses WhatsApp as the primary review request channel — Singapore's dominant messaging app, with significantly higher open and response rates than SMS or email. WhatsApp review requests typically achieve 15–30% conversion rates. Birdeye's primary channel is SMS, which has lower open rates in Singapore than WhatsApp.",
+        },
+        {
+          q: "Is Birdeye priced in SGD for Singapore businesses?",
+          a: "No. Birdeye uses USD pricing and is structured primarily for the US market. Epicware offers SGD-accessible pricing designed for Singapore SMBs, with the Foundation plan starting at $149/month.",
+        },
+      ]}
     />
   );
 }

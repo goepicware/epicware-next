@@ -143,9 +143,14 @@ export default async function ReviewsPage() {
           >
             Real businesses. Real rankings. Real reviews.
           </h1>
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-4">
             No cherry-picked testimonials — this is what clients actually say on Google, unedited, after getting
             found on Google, cited by AI, and chosen every time.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+            What clients say about working with Epicware, an{" "}
+            <Link href="/" className="text-foreground font-medium hover:underline">AI-powered digital marketing agency in Singapore</Link>. For numbers, see our{" "}
+            <Link href="/case-studies" className="text-foreground font-medium hover:underline">case studies</Link>.
           </p>
 
           <div className="inline-flex flex-col items-center gap-6 bg-card border border-border/60 rounded-3xl px-8 py-8 shadow-card mb-10">
@@ -167,9 +172,6 @@ export default async function ReviewsPage() {
               <Link href={WRITE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
                 Write a Review
               </Link>
-            </Button>
-            <Button asChild variant="outline" className="rounded-full border-border text-foreground hover:bg-muted h-13 px-7 font-semibold">
-              <Link href="#reviews-grid">Read the Reviews</Link>
             </Button>
           </div>
         </div>

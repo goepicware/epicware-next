@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: { absolute: "Grade.us Alternative | Epicware vs Grade.us Compared" },
-  description: "Looking for a Grade.us alternative? Compare Epicware and Grade.us on review generation, reporting dashboards and done-for-you local SEO.",
+  title: "Epicware vs Grade.us — Review Management Comparison",
+  description: "Compare Epicware and Grade.us for review management. Features, pricing, bad review removal, and Singapore market suitability compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-gradeus" },
   openGraph: {
-    title: "Grade.us Alternative | Epicware vs Grade.us Compared",
-    description: "Looking for a Grade.us alternative? Compare Epicware and Grade.us on review generation, reporting dashboards and done-for-you local SEO.",
+    title: "Epicware vs Grade.us — Review Management Platform Comparison",
+    description: "Compare Epicware and Grade.us for review management. Features, pricing, bad review removal, and Singapore market suitability compared.",
     url: "https://www.epicware.ai/comparison/epicware-vs-gradeus",
   },
 };
@@ -47,12 +48,43 @@ export default function Page() {
       subtitle="A feature comparison of Epicware and Grade.us for Singapore businesses managing Google reviews and reputation."
       trustSignals={["Direct SMB vs Agency", "WhatsApp Campaigns", "Bad Review Removal", "Singapore-Built"]}
       competitorName="Grade.us"
-      epicwareSummary="Epicware is a direct-to-SMB platform built for Singapore's market. WhatsApp review campaigns, bad review removal, hyperlocal rank tracking, and GBP optimisation are all included. No agency intermediary required."
+      epicwareSummary={
+        <>
+          Epicware is a direct-to-SMB platform built for Singapore's market. WhatsApp review campaigns,{" "}
+          <Link href="/bad-review-removal-singapore">bad review removal</Link>, hyperlocal rank tracking, and{" "}
+          <Link href="/local-seo-singapore/gbp-optimisation">GBP optimisation</Link> are all included. Epicware's own team does the work, as an{" "}
+          <Link href="/">AI-powered digital marketing agency in Singapore</Link> with its own review software.
+        </>
+      }
       competitorSummary="Grade.us is a white-label review management platform primarily used by agencies to manage clients' review programs. Individual businesses typically access Grade.us's capabilities through an agency that has purchased the platform and resells access — adding a layer between the business and the tool."
       features={features}
       verdict={
         <p>Grade.us is a capable review platform but its agency-first model means Singapore SMBs pay an intermediary. Epicware gives direct access to the same capabilities plus bad review removal and Singapore-specific GBP optimisation — without the agency layer. See <a href="/pricing">pricing</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
+      faqHeading="Common questions about Epicware vs Grade.us"
+      faqs={[
+        {
+          q: "What is the main difference between Epicware and Grade.us for Singapore businesses?",
+          a: "Grade.us is a white-label review platform sold primarily through agencies — Singapore SMBs typically access it via an agency intermediary who adds their own margin. Epicware is a direct-to-business platform: connect your Google Business Profile, and the platform runs review campaigns, GBP optimisation, and bad review removal without an agency layer.",
+        },
+        {
+          q: "Does Grade.us offer bad review removal?",
+          a: "No. Grade.us does not offer bad review removal. Epicware's service identifies policy-violating Google reviews, submits formal removal requests, and escalates through Google's support channels — at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
+        },
+        {
+          q: "Does Grade.us work with WhatsApp for review requests in Singapore?",
+          a: "No. Grade.us uses SMS and email for review requests. In Singapore, WhatsApp is the dominant messaging channel, with significantly higher open and conversion rates than SMS. Epicware uses WhatsApp as its primary review request channel.",
+        },
+        {
+          q: "Does Grade.us include GBP rank tracking or GBP optimisation?",
+          a: (
+            <>
+              No. Grade.us is focused on review management and does not include GBP hyperlocal rank tracking or a 19-point GBP audit and optimisation service. Epicware includes EpicMap for district-level rank tracking across Singapore and a 19-point GBP audit as part of the platform. Our reports pair{" "}
+              <Link href="/local-seo-singapore/local-rank-tracking">local rank tracking</Link> with review data.
+            </>
+          ),
+        },
+      ]}
     />
   );
 }

@@ -61,9 +61,9 @@ const eligiblePartners = [
 const resellableProducts = [
   { name: "EpicReview", description: "Automated WhatsApp and email review generation campaigns" },
   { name: "EpicResponse", description: "AI review response across all client locations" },
-  { name: "EpicMap", description: "Hyperlocal Google Maps rank tracking" },
-  { name: "Bad Review Removal", description: "$200/review, refunded if not removed in 3 months — share the margin with your client or pass through at cost" },
-  { name: "GBP Optimisation", description: "19-point Google Business Profile audit and implementation" },
+  { name: "EpicMap", description: <Link href="/local-seo-singapore/local-rank-tracking" className="hover:underline">Hyperlocal Google Maps rank tracking</Link> },
+  { name: "Bad Review Removal", description: "Share the margin with your client or pass through at cost" },
+  { name: "GBP Optimisation", description: <><Link href="/local-seo-singapore/gbp-optimisation" className="hover:underline">19-point Google Business Profile audit</Link> and implementation</> },
   { name: "EpicSocial", description: "Social media content management for local businesses" },
 ];
 
@@ -89,7 +89,11 @@ export default function ResellerPage() {
             WHO QUALIFIES
           </div>
           <h2 className="font-display font-bold text-foreground mb-4 leading-tight">Who the Reseller Programme Is For</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl">The programme is open to any organisation that regularly works with SMB clients who could benefit from Local SEO or Reputation Management services.</p>
+          <p className="text-muted-foreground mb-8 max-w-2xl">
+            The programme is open to any organisation that regularly works with SMB clients who could benefit from Local SEO or Reputation Management services. Resell our{" "}
+            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO services</Link> and{" "}
+            <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">reputation management</Link> under your brand.
+          </p>
           <ul className="space-y-3">
             {eligiblePartners.map((partner, i) => (
               <li key={i} className="flex items-start gap-3">

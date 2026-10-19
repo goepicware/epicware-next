@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
@@ -29,13 +30,22 @@ export default function Page() {
       schema={schema}
       badge="CASE STUDY · HEALTHCARE · SINGAPORE"
       h1="How a Singapore Clinic Network Raised Their Google Rating to 4.7"
-      subtitle="Three competitor-posted fake reviews were dragging a Singapore GP clinic network's rating below 4.0. Epicware removed them and built a review generation system that now generates 20+ verified patient reviews per month."
+      breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Case Studies", href: "/case-studies" },
+        { label: "Clinic Review Growth" },
+      ]}
+      subtitle={
+        <>
+          Three <Link href="/bad-review-removal-singapore/fake-review-removal">competitor-posted fake reviews</Link> were dragging a Singapore GP clinic network&apos;s rating below 4.0. Epicware removed them and built a review generation system that now generates 20+ verified patient reviews per month.
+        </>
+      }
       trustSignals={["3 Fake Reviews Removed", "3.8 → 4.7 Rating", "Multi-Clinic", "Patient Trust Rebuilt"]}
       imageSrc="/assets/review-management-illustration.png"
       intro={
         <>
           <p>A Singapore GP clinic operating 3 locations — in Jurong West, Clementi, and Buona Vista — had built a solid patient base over 8 years. Their actual patient satisfaction was high. Their Google rating told a different story: 3.8 stars across their main clinic and 4.0 across the two smaller locations.</p>
-          <p>Three 1-star reviews across their profiles were dragging the ratings down. A deeper look revealed a pattern that pointed strongly to competitor activity.</p>
+          <p>Three 1-star reviews across their profiles were dragging the ratings down. A deeper look revealed a pattern that pointed strongly to competitor activity. The clinic network brought in Epicware, an <Link href="/">AI-powered digital marketing agency in Singapore</Link>.</p>
         </>
       }
       body={
@@ -73,7 +83,7 @@ export default function Page() {
           <h2>What Happened With Patient Inquiries</h2>
           <p>The clinic operator reported a noticeable increase in new patient enquiries from Google Maps in the month after the rating crossed 4.5 — which they attributed to the improved Maps rank and the higher star rating visible in search results. The 4.5+ threshold appears to be a meaningful consumer perception point in the healthcare category.</p>
           <p>For more detail on the bad review removal process, see <a href="/bad-review-removal-singapore">bad review removal Singapore</a>.</p>
-          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
+          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one. The same review work is part of our <a href="/industries/healthcare-clinics">local SEO for medical clinics</a>.</p>
         </>
       }
       ctaHref="/bad-review-removal-singapore"

@@ -35,8 +35,8 @@ const FAQS: { q: string; a: string }[] = [
     a: "Most single-outlet clinics, restaurants, and salons start on the Foundation plan ($299/month), which covers review management, GBP optimisation, and rank tracking. If you need AI-generated social content or competitor analysis across districts, the Authority plan ($899/month) is the next step. Additional outlets can be added to any plan at $99/month each.",
   },
   {
-    q: "Is Epicware cheaper than hiring a local SEO agency in Singapore?",
-    a: "Yes. A typical Singapore local SEO agency retainer runs $800–$2,500/month, with no guaranteed results and no bad review removal included. Epicware's Foundation plan starts at $299/month. Bad review removal is separate at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
+    q: "How does Epicware's pricing compare with other local SEO agencies in Singapore?",
+    a: "A typical Singapore local SEO agency retainer runs $800–$2,500/month, with no guaranteed results and no bad review removal included. Epicware's Foundation plan starts at $299/month. Bad review removal is separate at $200/review, charged upfront and refunded in full if the review isn't removed within 3 months.",
   },
   {
     q: "Is there a lock-in contract?",

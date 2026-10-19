@@ -62,7 +62,7 @@ const principles = [
   },
   {
     title: "Aligned incentives",
-    description: "Bad review removal is $200 upfront, refunded in full if the review isn't removed within 3 months. This means we only pursue removals we believe have a genuine case — and we have a direct financial incentive to succeed.",
+    description: "This means we only pursue removals we believe have a genuine case — and we have a direct financial incentive to succeed.",
   },
 ];
 
@@ -81,7 +81,11 @@ export default function AboutPage() {
             About Epicware — Built in Singapore for the Way SMBs Actually Work
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-            Epicware is a Singapore-built platform for Local SEO and Reputation Management. We help SMBs rank higher on Google Maps, generate more reviews, and remove bad ones — from one dashboard.
+            Epicware is a{" "}
+            <Link href="/" className="text-foreground font-medium hover:underline">digital marketing agency in Singapore</Link>{" "}
+            with its own AI-powered software for SEO, local SEO, AI search and reputation management. We help businesses{" "}
+            <Link href="/seo-agency-singapore" className="text-foreground font-medium hover:underline">rank on Google</Link>, Google Maps and{" "}
+            <Link href="/ai-search-visibility-singapore" className="text-foreground font-medium hover:underline">AI search</Link>, generate more reviews and remove bad ones.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/book-demo#form"
@@ -178,6 +182,10 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-muted-foreground leading-relaxed mt-6">
+            Our <Link href="/reviews" className="text-foreground font-medium hover:underline">client reviews</Link> and{" "}
+            <Link href="/case-studies" className="text-foreground font-medium hover:underline">case studies</Link> show what that looks like in practice.
+          </p>
         </div>
       </section>
 

@@ -212,8 +212,9 @@ export default function ServicesPage() {
           <p className="text-lg text-muted-foreground leading-relaxed">
             You&apos;re here because you need something specific — more reviews, better Google Maps ranking, or a bad
             review that needs to come down. Epicware handles all of it from one self-serve platform built for Singapore
-            SMBs. No agency retainer. No waiting on someone else&apos;s team. Choose the service you need below, or book
-            a free demo and we&apos;ll map out the right combination for your business.
+            SMBs. No waiting on someone else&apos;s team. Choose the service you need below, or book
+            a free demo and we&apos;ll map out the right combination for your business. We adapt{" "}
+            <Link href="/industries" className="text-primary font-medium hover:underline">local SEO for your industry</Link>, from clinic rules to restaurant menus.
           </p>
         </div>
       </section>
@@ -298,7 +299,21 @@ export default function ServicesPage() {
       <section className="py-16 lg:py-20 section-gradient-1">
         <div className="container mx-auto px-6 max-w-6xl">
           <h2 className="font-display text-foreground mb-10 text-center">Our Core Services</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <Link href="/seo-agency-singapore" className="card-feature group block h-full">
+              <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
+                <div className="text-2xl">🔍</div>
+                <h3 className="font-display font-bold text-foreground text-xl leading-snug">
+                  SEO Services
+                </h3>
+                <p className="text-muted-foreground text-base leading-relaxed flex-1">
+                  Website SEO for Google and AI search: technical fixes, content and links.
+                </p>
+                <div className="flex items-center gap-2 text-sm font-semibold text-primary pt-4 border-t border-border/30">
+                  See SEO Services <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </div>
+            </Link>
             <Link href="/bad-review-removal-singapore" className="card-feature group block h-full">
               <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
                 <div className="text-2xl">⭐</div>
@@ -314,21 +329,22 @@ export default function ServicesPage() {
                 </div>
               </div>
             </Link>
-            <Link href="/local-seo-singapore/gbp-optimisation" className="card-feature group block h-full">
+            <div className="card-feature group block h-full">
               <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
                 <div className="text-2xl">📍</div>
                 <h3 className="font-display font-bold text-foreground text-xl leading-snug">
-                  GBP Optimisation
+                  <Link href="/local-seo-singapore/gbp-optimisation" className="hover:underline">GBP Optimisation</Link>
                 </h3>
                 <p className="text-muted-foreground text-base leading-relaxed flex-1">
                   19-point audit, weekly posts, and rank tracking across Singapore districts — all automated.
-                  Rank higher on Google Maps without hiring an agency.
+                  Every service is run by our team at Epicware, an{" "}
+                  <Link href="/" className="text-primary font-medium hover:underline">AI-powered digital marketing agency in Singapore</Link>.
                 </p>
-                <div className="flex items-center gap-2 text-sm font-semibold text-primary pt-4 border-t border-border/30">
+                <Link href="/local-seo-singapore/gbp-optimisation" className="flex items-center gap-2 text-sm font-semibold text-primary pt-4 border-t border-border/30">
                   See GBP Optimisation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
+                </Link>
               </div>
-            </Link>
+            </div>
             <Link href="/review-management-singapore" className="card-feature group block h-full">
               <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
                 <div className="text-2xl">⭐</div>

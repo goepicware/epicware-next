@@ -57,7 +57,9 @@ export default function CaseStudiesIndexPage() {
           Real Singapore SMBs. Real Local SEO Results.
         </h1>
         <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-14">
-          From restaurant chains to clinics to salons — see exactly what Epicware did, and the numbers it produced.
+          From restaurant chains to clinics to salons, see what our{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">AI-powered digital marketing agency</Link>{" "}
+          did for each client, and the numbers it produced.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

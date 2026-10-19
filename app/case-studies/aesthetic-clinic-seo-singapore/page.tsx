@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import {
   Accordion,
   AccordionContent,
@@ -160,7 +161,15 @@ const WHY_IT_WORKED = [
   },
   {
     title: "We split the two outlets from day one.",
-    body: "Orchard and Hougang are different markets with different search behaviour and different competitors. Treating them as one brand with one strategy is why most multi-outlet clinics plateau.",
+    body: (
+      <>
+        Orchard and Hougang are different markets with different search behaviour and different competitors. Treating them as one brand with one strategy is why most{" "}
+        <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+          multi-outlet clinics
+        </Link>{" "}
+        plateau.
+      </>
+    ),
   },
   {
     title: "We competed in AI search before the category did.",
@@ -277,7 +286,14 @@ export default function AestheticClinicSEOCaseStudyPage() {
       {/* ── Hero ── */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="max-w-5xl mx-auto px-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Case Studies", href: "/case-studies" },
+              { label: "Aesthetic Clinic SEO" },
+            ]}
+          />
+          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block mt-6">
             Case Study · Medical Aesthetics · Singapore · 2 Outlets · 60 Days
           </span>
           <h1
@@ -292,7 +308,11 @@ export default function AestheticClinicSEOCaseStudyPage() {
             Singapore&rsquo;s advertising regulations rule out most of what marketers normally do, and every
             competitor is bidding on the same treatment keywords. This clinic engaged Epicware on 1 July 2026.
             Within two months it was ranking #1 on Google — and #1 in ChatGPT — for its core Orchard and Hougang
-            queries.
+            queries. Epicware&rsquo;s{" "}
+            <Link href="/" className="text-foreground font-medium hover:underline">
+              digital marketing team
+            </Link>{" "}
+            ran the marketing for both outlets.
           </p>
 
           <div className="mb-10">
@@ -446,7 +466,11 @@ export default function AestheticClinicSEOCaseStudyPage() {
                   strategy — so Orchard and Hougang stopped competing with each other for the same terms.
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
-                  Using EpicMap grid tracking, we mapped exactly where each clinic was visible on Google Maps by
+                  Using EpicMap{" "}
+                  <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary font-medium hover:underline">
+                    grid tracking
+                  </Link>
+                  , we mapped exactly where each clinic was visible on Google Maps by
                   keyword and by scan zone, identified which competitors owned which streets, and separated the
                   quick wins from the long fights.
                 </p>
@@ -459,7 +483,7 @@ export default function AestheticClinicSEOCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">
                   Google Business Profile{" "}
                   <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
-                    Optimisation
+                    GBP optimisation
                   </Link>
                 </h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90">
@@ -498,8 +522,8 @@ export default function AestheticClinicSEOCaseStudyPage() {
               <div>
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">
                   Review and{" "}
-                  <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
-                    Reputation Management
+                  <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+                    online reputation management
                   </Link>
                 </h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import {
   Accordion,
   AccordionContent,
@@ -104,7 +105,19 @@ const CHALLENGES = [
   },
   {
     title: "Fix the reputation layer.",
-    body: "Five outlets meant five Google Business Profiles and multiple review streams that required consistent reputation management.",
+    body: (
+      <>
+        Five outlets meant{" "}
+        <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+          five Google Business Profiles
+        </Link>{" "}
+        and multiple review streams that required consistent{" "}
+        <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+          reputation management
+        </Link>
+        .
+      </>
+    ),
   },
 ];
 
@@ -245,7 +258,14 @@ export default function MultiOutletRestaurantCaseStudyPage() {
       {/* ── Hero ── */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="max-w-5xl mx-auto px-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Case Studies", href: "/case-studies" },
+              { label: "Multi-Outlet Restaurant SEO" },
+            ]}
+          />
+          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block mt-6">
             Case Study · F&amp;B · Singapore · 5 Outlets
           </span>
           <h1
@@ -258,7 +278,11 @@ export default function MultiOutletRestaurantCaseStudyPage() {
             This restaurant chain came to Epicware wanting more orders, more calls, and stronger visibility on the
             highest-value search terms in their category. Six months in, they own the #1 spot for their
             highest-intent search terms, get cited by name in Google&rsquo;s AI Overviews, and take 100+ direct
-            online orders a day.
+            online orders a day. The chain hired Epicware, an{" "}
+            <Link href="/" className="text-foreground font-medium hover:underline">
+              AI marketing agency in Singapore
+            </Link>
+            .
           </p>
 
           <div className="mb-10">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import {
   Accordion,
   AccordionContent,
@@ -299,7 +300,14 @@ export default function HairSalonCaseStudyPage() {
       {/* ── Hero ── */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="max-w-5xl mx-auto px-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Case Studies", href: "/case-studies" },
+              { label: "Hair Salon SEO" },
+            ]}
+          />
+          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block mt-6">
             Case Study · Hair &amp; Beauty · Singapore · 2 Mall Outlets
           </span>
           <h1
