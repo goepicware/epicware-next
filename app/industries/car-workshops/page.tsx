@@ -82,7 +82,17 @@ export default function CarWorkshopsPage() {
       schema={schema}
       badge="CAR WORKSHOPS · LOCAL SEO"
       h1="Local SEO for Car Workshops Singapore — Rank Higher, Earn More Service Jobs"
-      subtitle="Car owners searching for a trusted workshop in Singapore choose based on reviews and proximity. A workshop with 80 5-star reviews and clear service descriptions wins the customer before they even call. Epicware builds that trust profile automatically."
+      subtitle={
+        <>
+          Car owners searching for a trusted workshop in Singapore choose based on reviews and
+          proximity. A workshop with 80 5-star reviews and clear service descriptions wins the
+          customer before they even call. Epicware is a{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">
+            digital marketing agency in Singapore
+          </Link>{" "}
+          with its own AI-powered software, which our team uses to run your local SEO and reviews.
+        </>
+      }
       trustSignals={[
         "Trust-Critical Industry",
         "Competitor Attack Removal",

@@ -66,7 +66,7 @@ export default function Post() {
             <li>A customer scores 9–10 on your NPS survey → they receive a Google review link</li>
             <li>A customer scores 6 or below on your NPS survey → they receive a service recovery message, not a Google review link</li>
           </ul>
-          <p>This is review gating by another name. The routing is based on satisfaction — exactly what Google&apos;s policy prohibits. Both systems can run in parallel, but they must be operationally separate: every customer receives the private survey invitation, and every customer receives the Google review request. The two flows don&apos;t communicate.</p>
+          <p>This is review gating by another name. The routing is based on satisfaction — exactly what Google&apos;s policy prohibits. Both systems can run in parallel, but they must be operationally separate: every customer receives the private survey invitation, and every customer receives the Google review request. The two flows don&apos;t communicate. Sending the link only to happy customers is review gating, which Google bans.</p>
 
           <h2>What to Do with Private Negative Feedback</h2>
           <p>Private negative feedback is operationally valuable. A customer who gives you a 4/10 on your internal survey has told you something real — and given you the chance to address it before it becomes a public review.</p>

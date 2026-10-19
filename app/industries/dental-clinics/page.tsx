@@ -84,7 +84,16 @@ export default function DentalClinicsPage() {
       schema={schema}
       badge="DENTAL CLINICS · LOCAL SEO"
       h1="Local SEO for Dental Clinics Singapore — Visible When Patients Search for Treatment"
-      subtitle="Patients searching for Invisalign, wisdom tooth removal, or a simple dental checkup in Singapore choose based on Google Maps rank and reviews. Epicware ensures your dental clinic appears first — and converts that visibility into booked appointments."
+      subtitle={
+        <>
+          Patients searching for Invisalign, wisdom tooth removal, or a simple dental checkup in
+          Singapore choose based on Google Maps rank and reviews. Epicware is a{" "}
+          <Link href="/" className="text-primary font-medium hover:underline">
+            digital marketing agency in Singapore
+          </Link>{" "}
+          with its own AI-powered software, which our team uses to run your local SEO and reviews.
+        </>
+      }
       trustSignals={[
         "Procedure-Specific Keywords",
         "Patient Trust Critical",

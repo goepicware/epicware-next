@@ -18,6 +18,8 @@ interface BlogArticleProps {
   ctaLabel: string;
   ctaContext: ReactNode;
   relatedPosts: { title: string; href: string }[];
+  author?: string;
+  authorRole?: string;
 }
 
 export default function BlogArticle({
@@ -34,6 +36,8 @@ export default function BlogArticle({
   ctaLabel,
   ctaContext,
   relatedPosts,
+  author = "the Epicware Team",
+  authorRole,
 }: BlogArticleProps) {
   const datePublished = schema.datePublished as string | undefined;
   const publisher = schema.publisher as Record<string, unknown> | undefined;
@@ -166,6 +170,18 @@ export default function BlogArticle({
                   </div>
                 </div>
               )}
+
+              {/* Author box */}
+              <div className="mt-8 pt-6 border-t border-border/60">
+                <p className="text-sm text-muted-foreground">
+                  Written by {author}
+                  {authorRole ? `, ${authorRole}` : ""} at{" "}
+                  <Link href="/" className="text-primary font-medium hover:underline">
+                    Epicware
+                  </Link>
+                  , an AI-powered digital marketing agency in Singapore.
+                </p>
+              </div>
             </div>
 
             {/* ── TOC sidebar (desktop only) ── */}
