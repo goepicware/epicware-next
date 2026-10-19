@@ -36,7 +36,7 @@ const services = [
   },
   {
     label: "GBP Photo Management",
-    href: "/gbp-optimisation-singapore/gbp-photo-management",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Interior photos, treatment room shots, and team photos that convert profile views into bookings.",
   },
@@ -48,7 +48,7 @@ const services = [
   },
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Complete profile optimisation including treatment categories, attributes, and booking links.",
   },

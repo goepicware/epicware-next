@@ -343,7 +343,7 @@ export default function Post() {
             <p>
               If you own a legitimate business, protecting your own profile matters just as much as reporting
               others&apos; spam. Claim and verify your{" "}
-              <Link href="/gbp-optimisation-singapore/gbp-audit" className="text-primary font-medium hover:underline">
+              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
                 Google Business Profile
               </Link>{" "}
               so you control edits to it, set your category correctly, and monitor for suggested changes from

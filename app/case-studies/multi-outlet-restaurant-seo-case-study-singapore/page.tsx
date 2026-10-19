@@ -149,7 +149,7 @@ const WHY_IT_WORKED = [
 const RELATED_READING: { href: string; label: string }[] = [
   { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
   { href: "/local-seo-singapore", label: "Local SEO Services" },
-  { href: "/gbp-optimisation-singapore", label: "GBP Optimisation" },
+  { href: "/local-seo-singapore/gbp-optimisation", label: "GBP Optimisation" },
   { href: "/review-management-singapore", label: "Review Management" },
   { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
   { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
@@ -373,7 +373,7 @@ export default function MultiOutletRestaurantCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Google Business Profile Foundation</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
                   Every one of the five outlets went through our{" "}
-                  <Link href="/gbp-optimisation-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
                     19-point GBP audit
                   </Link>
                   : categories, services, attributes, hours, descriptions, photos and conversion actions. Each

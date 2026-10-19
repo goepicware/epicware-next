@@ -305,7 +305,7 @@ export default function Post() {
           </p>
         </>
       }
-      ctaHref="/local-growth"
+      ctaHref="/"
       ctaLabel="See How Epicware Works"
       ctaContext="Epicware combines rank tracking, review generation, AI visibility monitoring, and reputation management in one platform built for Singapore SMBs."
       relatedPosts={[

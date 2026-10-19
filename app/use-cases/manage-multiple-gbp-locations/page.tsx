@@ -86,7 +86,7 @@ export default function ManageMultipleGBPLocationsPage() {
         h1="Manage Multiple Google Business Profiles From One Dashboard"
         subtitle="Running 3, 5, or 10 outlets in Singapore means 3, 5, or 10 separate GBP profiles to monitor, update, and respond to. Epicware manages all of them from one login — reviews, rank, posts, and reputation across every location."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "One Dashboard for All Outlets",
           "Singapore-Built",
@@ -190,7 +190,7 @@ export default function ManageMultipleGBPLocationsPage() {
           <p className="text-sm text-muted-foreground mt-6">
             Also see:{" "}
             <Link
-              href="/gbp-optimisation-singapore"
+              href="/local-seo-singapore/gbp-optimisation"
               className="text-primary font-medium hover:underline"
             >
               GBP Optimisation

@@ -82,11 +82,7 @@ export default function GbpOptimisationPage() {
           <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
             Local SEO Singapore
           </Link>{" "}
-          service category. See also the full{" "}
-          <Link href="/gbp-optimisation-singapore" className="text-primary font-medium hover:underline">
-            GBP Optimisation Singapore
-          </Link>{" "}
-          service page and the{" "}
+          service category, and is powered by the{" "}
           <Link href="/products/epicmap" className="text-primary font-medium hover:underline">EpicMap</Link>{" "}
           rank tracking product.
         </>

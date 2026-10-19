@@ -125,7 +125,7 @@ export default function Post() {
               In this guide, we&apos;re going to break it all down in plain English — no confusing
               jargon, no technical overwhelm. By the time you finish reading, you&apos;ll know
               exactly what SEO means, why it matters for your{" "}
-              <Link href="/local-seo-singapore">local business</Link>, and the simple steps you
+              local business, and the simple steps you
               can start taking today to get your business showing up where your customers are
               already looking.
             </p>
@@ -226,7 +226,7 @@ export default function Post() {
               For local service businesses like clinics, salons, and workshops, this effect is even
               more concentrated. Customers searching locally are often ready to call or walk in
               today. A strong position in the{" "}
-              <Link href="/gbp-optimisation-singapore">Google Map Pack</Link> puts your business
+              Google Map Pack puts your business
               directly in front of high-intent buyers at the exact moment they are making a
               decision, and that visibility translates into a steady, predictable stream of new
               customers every single week.
@@ -265,7 +265,7 @@ export default function Post() {
               the same way. Backlinks from other reputable websites act as votes of confidence,
               telling Google that others vouch for your content. For local businesses especially,
               online{" "}
-              <Link href="/review-management-singapore">reviews</Link> and consistent business
+              reviews and consistent business
               listings across directories like Google, Yelp, and local platforms carry serious
               weight. Brand mentions across the web also contribute. The more credible external
               signals pointing to your business, the more Google trusts you compared to
@@ -351,7 +351,7 @@ export default function Post() {
               businesses in the top three Map Pack positions have a fully completed GBP description.
               Think of your GBP as your free storefront on Google — leaving it half-finished is
               the equivalent of putting a closed sign on your door. Epicware&apos;s{" "}
-              <Link href="/gbp-optimisation-singapore">Core 30 Method</Link> is a structured
+              Core 30 Method is a structured
               approach to building a complete, accurate, and active GBP from the ground up — the
               non-negotiable starting point for every other local SEO action you take.
             </p>
@@ -365,13 +365,13 @@ export default function Post() {
               customers use in their review text all feed into Google&apos;s ranking calculations.
               A business with 300 old reviews can rank below one with 80 fresh, recent ones.
               Epicware&apos;s{" "}
-              <Link href="/products/epicreview">EpicReview</Link> automates post-service review
+              EpicReview automates post-service review
               prompts, turning satisfied clients into a steady stream of 5-star signals.
             </p>
             <p>
               <strong>Your NAP consistency</strong> (Name, Address, Phone) across every online
               directory matters too. Businesses with consistent{" "}
-              <Link href="/local-seo-singapore/citation-building">NAP data</Link> are 40% more
+              NAP data are 40% more
               likely to appear in the local pack. A mismatched phone number on an outdated listing
               quietly undermines your authority.
             </p>
@@ -445,7 +445,7 @@ export default function Post() {
             <h3>Enter GEO: The Discipline Running Alongside SEO</h3>
             <p>
               This is where{" "}
-              <Link href="/ai-search-visibility-singapore/geo-optimisation">
+              <Link href="/ai-search-visibility-singapore">
                 GEO (Generative Engine Optimisation)
               </Link>{" "}
               comes in. GEO is the emerging practice of structuring your content so that AI systems
@@ -472,7 +472,7 @@ export default function Post() {
             </p>
             <p>
               Epicware&apos;s{" "}
-              <Link href="/ai-search-visibility-singapore">AI Visibility Tracking</Link> and GEO
+              AI Visibility Tracking and GEO
               capabilities are built specifically for local businesses — so you can audit your
               current AI citation presence and take targeted steps to improve it before your
               competitor fills that space instead.
@@ -497,7 +497,7 @@ export default function Post() {
               The goal is not to drive website visits. The goal is to be the visible, trusted
               answer at the exact moment someone has local intent — whether that moment happens in
               the Map Pack, an AI Overview, or a featured snippet. A phone call from a{" "}
-              <Link href="/gbp-optimisation-singapore">Google Business Profile</Link> listing
+              Google Business Profile listing
               counts as a win even though it never touched your website analytics.
             </p>
             <p>
@@ -512,9 +512,9 @@ export default function Post() {
             </p>
             <p>
               The practical takeaway:{" "}
-              <Link href="/gbp-optimisation-singapore">GBP optimisation</Link>,{" "}
-              <Link href="/review-management-singapore">review building</Link>, and{" "}
-              <Link href="/local-seo-singapore/citation-building">local citations</Link> are not
+              <Link href="/local-seo-singapore/gbp-optimisation">GBP optimisation</Link>,{" "}
+              review building, and{" "}
+              local citations are not
               the same activity as website SEO — treating them as interchangeable leaves serious
               visibility on the table.
             </p>
@@ -551,9 +551,9 @@ export default function Post() {
             <p>
               This is exactly the problem that Epicware was built to solve. It automates the
               high-frequency, high-impact local SEO tasks —{" "}
-              <Link href="/review-management-singapore">review collection</Link>,{" "}
-              <Link href="/products/epicsocial">GBP publishing</Link>, and{" "}
-              <Link href="/products/epicmap">rank tracking</Link> — so owner-operators get real,
+              <Link href="/reputation-management-singapore/review-generation">review collection</Link>,{" "}
+              GBP publishing, and{" "}
+              <Link href="/local-seo-singapore/local-rank-tracking">rank tracking</Link> — so owner-operators get real,
               measurable results without carrying the manual overhead themselves.
             </p>
 
@@ -573,7 +573,7 @@ export default function Post() {
             <ol>
               <li>
                 <strong>Check and complete your{" "}
-                <Link href="/gbp-optimisation-singapore">Google Business Profile</Link>.</strong>{" "}
+                Google Business Profile.</strong>{" "}
                 Verify your categories, hours, photos, services, and address are accurate and
                 consistent.
               </li>
@@ -587,7 +587,7 @@ export default function Post() {
               </li>
               <li>
                 <strong>Audit your{" "}
-                <Link href="/ai-search-visibility-singapore">AI visibility</Link>.</strong>{" "}
+                AI visibility.</strong>{" "}
                 Open ChatGPT or Perplexity and search &ldquo;best [your service] in [your city].&rdquo;
                 Does your business appear? If not, that is a gap your competitor may already be
                 filling.
@@ -609,7 +609,7 @@ export default function Post() {
             </p>
             <ul>
               <li>SEO stands for search engine optimisation — the practice of making your business visible in search results without paying for ads.</li>
-              <li><Link href="/local-seo-singapore">Local SEO</Link> helps nearby customers find you when it matters most, through the Map Pack, reviews, and AI recommendations.</li>
+              <li>Local SEO helps nearby customers find you when it matters most, through the Map Pack, reviews, and AI recommendations.</li>
               <li>The three pillars — on-page, off-page, and technical — must all work together.</li>
               <li>In 2026, SEO also means being cited by ChatGPT, Gemini, and Perplexity.</li>
               <li>Small, consistent steps build real, long-term results that compound over time.</li>
@@ -617,7 +617,7 @@ export default function Post() {
             <p>
               Now it is your turn. Pick one thing from this guide and put it into action today.
               Whether that means updating your{" "}
-              <Link href="/gbp-optimisation-singapore">Google Business Profile</Link> or checking
+              Google Business Profile or checking
               your <Link href="/free-audit">AI visibility</Link> for the first time, every step
               forward counts. Your next customer is already searching — make sure they can find
               you.

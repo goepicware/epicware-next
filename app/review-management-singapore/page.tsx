@@ -70,7 +70,7 @@ export default function ReviewManagementSingaporePage() {
         h1="Review Management Singapore — Monitor Every Review, Respond Instantly"
         subtitle="Singapore SMBs with multiple outlets are missing reviews, responding too slowly, and losing customers to competitors with better ratings. Epicware monitors every profile in real time and responds to every review automatically."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Real-Time Monitoring",
           "AI Review Responses",

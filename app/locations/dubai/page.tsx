@@ -35,7 +35,7 @@ const schema = {
 const SERVICES = [
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "19-point audit covering every GBP rank factor for your Dubai business profile.",
   },
@@ -84,7 +84,7 @@ export default function DubaiPage() {
         h1="Local SEO & Reputation Management for Dubai SMBs"
         subtitle="Dubai's competitive SMB market demands the same Local SEO precision as Singapore. Epicware's platform manages GBP, reviews, and rank tracking for Dubai businesses."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Dubai + UAE Market",
           "Singapore-Built",

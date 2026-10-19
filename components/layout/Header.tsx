@@ -45,28 +45,37 @@ const NAV = {
     label: "Services",
     items: [
       { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
-      { href: "/reputation-management-singapore", label: "Reputation Management" },
-      { href: "/local-seo-singapore", label: "Local SEO Singapore" },
-      { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
-      { href: "/growth-tools", label: "Growth Tools" },
+      { href: "/local-seo-singapore", label: "Local SEO" },
+      { href: "/local-seo-singapore/gbp-optimisation", label: "GBP Optimisation" },
+      { href: "/ai-search-visibility-singapore", label: "AI Search Optimisation (GEO)" },
+      { href: "/reputation-management-singapore", label: "Online Reputation Management" },
+      { href: "/review-management-singapore", label: "Review Management" },
+      { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
     ],
   },
-  solutions: {
-    label: "Solutions",
+  industries: {
+    label: "Industries",
     items: [
-      { href: "/industries/restaurants", label: "F&B Restaurants" },
+      { href: "/industries/restaurants", label: "Restaurants" },
       { href: "/industries/healthcare-clinics", label: "Medical Clinics" },
+      { href: "/industries/dental-clinics", label: "Dental Clinics" },
       { href: "/industries/nail-hair-salons", label: "Hair & Beauty Salons" },
+      { href: "/industries/wellness-centres", label: "Spas & Wellness" },
       { href: "/industries/tuition-centres", label: "Tuition Centres" },
-      { href: "/industries", label: "View All Industries →" },
+      { href: "/industries/car-workshops", label: "Car Workshops" },
+      { href: "/industries/physiotherapy", label: "Physiotherapy" },
+      { href: "/industries/retail-stores", label: "Retail Stores" },
+      { href: "/industries", label: "All Industries →" },
     ],
   },
   resources: {
     label: "Resources",
     items: [
+      { href: "/case-studies", label: "Case Studies" },
       { href: "/blog", label: "Blog" },
       { href: "/resources/guides", label: "Guides" },
       { href: "/tools", label: "Free Tools" },
+      { href: "/ai-visibility", label: "Free AI Visibility Check" },
     ],
   },
 };
@@ -202,9 +211,9 @@ export default function Header() {
       items: NAV.services.items,
     },
     {
-      key: "solutions",
-      label: "Solutions",
-      items: NAV.solutions.items,
+      key: "industries",
+      label: "Industries",
+      items: NAV.industries.items,
     },
     {
       key: "resources",
@@ -226,7 +235,7 @@ export default function Header() {
           <Link href="/" className="flex items-center group">
             <Image
               src="/assets/epicware-logo-wide.png"
-              alt="Epicware"
+              alt="Epicware, AI-powered digital marketing agency in Singapore"
               width={140}
               height={36}
               className="h-8 lg:h-9 w-auto transition-all duration-500 group-hover:scale-105"
@@ -238,13 +247,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-0.5">
             <ProductsDropdown />
             <DesktopDropdown {...NAV.services} />
-            <DesktopDropdown {...NAV.solutions} />
-            <Link
-              href="/case-studies"
-              className="px-5 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-muted/50"
-            >
-              Case Studies
-            </Link>
+            <DesktopDropdown {...NAV.industries} />
             <Link
               href="/pricing"
               className="px-5 py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-muted/50"
@@ -314,13 +317,6 @@ export default function Header() {
                       )}
                     </div>
                   ))}
-                  <Link
-                    href="/case-studies"
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-4 text-2xl font-semibold text-foreground/80 hover:text-foreground transition-colors border-b border-border/30"
-                  >
-                    Case Studies
-                  </Link>
                   <Link
                     href="/pricing"
                     onClick={() => setMobileOpen(false)}

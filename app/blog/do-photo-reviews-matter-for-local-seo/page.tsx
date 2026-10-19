@@ -79,7 +79,7 @@ export default function Post() {
           <p>Both sets of photos — owner-uploaded and customer review photos — appear in your profile&apos;s Photos tab. A strong photo library requires attention to both sources. Epicware&apos;s GBP photo management service covers professional photo optimisation across your owner-managed section.</p>
         </>
       }
-      ctaHref="/gbp-optimisation-singapore/gbp-photo-management"
+      ctaHref="/local-seo-singapore/gbp-optimisation"
       ctaLabel="GBP Photo Management Service"
       ctaContext="Epicware's GBP photo management ensures your profile has professional, optimised photos across all locations."
       relatedPosts={[

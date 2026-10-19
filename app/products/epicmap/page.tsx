@@ -92,7 +92,7 @@ export default function EpicMapPage() {
           </>
         }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Singapore-Built",
           "AI-Native",
@@ -182,7 +182,7 @@ export default function EpicMapPage() {
                 Local SEO Singapore
               </Link>{" "}
               service category and the{" "}
-              <Link href="/gbp-optimisation-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
                 GBP Optimisation service
               </Link>
               . If you want the rank tracking and competitor analysis managed as a service rather
@@ -225,7 +225,7 @@ export default function EpicMapPage() {
             </Link>
             {" "}and{" "}
             <Link
-              href="/gbp-optimisation-singapore"
+              href="/local-seo-singapore/gbp-optimisation"
               className="text-primary font-medium hover:underline"
             >
               GBP Optimisation

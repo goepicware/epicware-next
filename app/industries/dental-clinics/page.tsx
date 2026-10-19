@@ -30,7 +30,7 @@ const schema = {
 const services = [
   {
     label: "GBP Category Optimisation",
-    href: "/gbp-optimisation-singapore/gbp-category-optimisation",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Primary and secondary categories configured for every procedure you offer.",
   },
@@ -48,7 +48,7 @@ const services = [
   },
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "19-point audit covering every factor that affects your dental clinic's Maps rank.",
   },

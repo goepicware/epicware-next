@@ -117,10 +117,14 @@ export default function ServiceChildPage({
       {/* Why Epicware */}
       <section className="py-10 lg:py-14">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">An SEO Agency With Its Own Software</h2>
+          <h2 className="font-display text-foreground mb-6">A Digital Marketing Agency With Its Own Software</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is an SEO agency with its own software. Not a generic SEO tool. Our team does
+              Epicware is an{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">
+                AI-powered marketing agency
+              </Link>{" "}
+              in Singapore with its own software. Not a generic SEO tool. Our team does
               the work on the live dashboard we built ourselves — no hourly billing, no waiting on someone
               else&apos;s team, no monthly report that is already out of date. You log in, you see
               your data, you take action.
@@ -128,11 +132,7 @@ export default function ServiceChildPage({
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that
               processed over $120M in GMV before its 2021 exit. Epicware is Singapore-built, used
-              by businesses in SG · MY · UAE · UK · US. See the full platform overview at{" "}
-              <Link href="/" className="text-primary font-medium hover:underline">
-                epicware.ai
-              </Link>
-              .
+              by businesses in SG · MY · UAE · UK · US.
             </p>
           </div>
         </div>

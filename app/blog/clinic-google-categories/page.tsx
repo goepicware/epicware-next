@@ -383,7 +383,7 @@ export default function Post() {
               </Link>
               , each scaled to different levels of local SEO management. If your clinic&apos;s category
               history is unclear or a recent change hurt your rankings, request a{" "}
-              <Link href="/gbp-optimisation-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
                 GBP optimisation review
               </Link>{" "}
               and get a clear read on what to fix first.
@@ -458,11 +458,11 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/gbp-optimisation-singapore/gbp-category-optimisation"
+        ctaHref="/local-seo-singapore/gbp-optimisation"
         ctaLabel="Get Your Free GBP Category Audit"
         ctaContext="Epicware reviews your clinic's category accuracy, Services listings, and profile completeness, and flags exactly what's working against your visibility."
         relatedPosts={[
-          { title: "GBP Category Optimisation Singapore", href: "/gbp-optimisation-singapore/gbp-category-optimisation" },
+          { title: "GBP Category Optimisation Singapore", href: "/local-seo-singapore/gbp-optimisation" },
           { title: "Google Review Policy Explained — What Qualifies for Removal", href: "/blog/google-review-policy-explained" },
           { title: "Improve Your Google Rating Singapore — From 3.9 to 4.5+", href: "/use-cases/improve-google-rating" },
           { title: "Google Reviews Strategy: 90-Day Framework for Singapore SMBs", href: "/blog/google-reviews-strategy" },

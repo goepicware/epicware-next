@@ -36,13 +36,13 @@ const services = [
   },
   {
     label: "GBP Photo Management",
-    href: "/gbp-optimisation-singapore/gbp-photo-management",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Before-and-after photos, salon interior shots, and regular photo refresh for GBP.",
   },
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "19-point audit including service categories, attributes, and opening hours.",
   },

@@ -204,7 +204,7 @@ const RELATED_READING: { href: string; label: string }[] = [
   { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
   { href: "/industries/nail-hair-salons", label: "Hair & Beauty Salons" },
   { href: "/local-seo-singapore", label: "Local SEO Services" },
-  { href: "/gbp-optimisation-singapore", label: "GBP Optimisation" },
+  { href: "/local-seo-singapore/gbp-optimisation", label: "GBP Optimisation" },
   { href: "/review-management-singapore", label: "Review Management" },
   { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
   { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
@@ -456,7 +456,7 @@ export default function HairSalonCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Google Business Profile optimisation across both outlets</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90">
                   Both profiles went through our{" "}
-                  <Link href="/gbp-optimisation-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
                     19-point GBP audit
                   </Link>{" "}
                   — categories, services, attributes, hours, descriptions, photos and booking actions — then moved

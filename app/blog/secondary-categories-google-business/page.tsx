@@ -432,7 +432,7 @@ export default function Post() {
               </Link>{" "}
               gives any business owner a baseline read on where their current categories stand before making
               changes. For businesses that want ongoing management rather than a one-time check, our{" "}
-              <Link href="/gbp-optimisation-singapore/gbp-category-optimisation" className="text-primary font-medium hover:underline">
+              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
                 GBP Category Optimisation service
               </Link>{" "}
               handles the audit, the edit, and the evidence log needed if Google requests re-verification.
@@ -564,13 +564,13 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/gbp-optimisation-singapore/gbp-category-optimisation"
+        ctaHref="/local-seo-singapore/gbp-optimisation"
         ctaLabel="Get Your Free GBP Category Audit"
         ctaContext="Epicware checks every category on your profile against the IS/HAS test, flags redundancy, and keeps a change log ready in case Google asks for re-verification."
         relatedPosts={[
           { title: "Free Google Business Profile Audit", href: "/free-audit" },
           { title: "Manage Multiple Google Business Profiles", href: "/use-cases/manage-multiple-gbp-locations" },
-          { title: "GBP Category Optimisation Singapore", href: "/gbp-optimisation-singapore/gbp-category-optimisation" },
+          { title: "GBP Category Optimisation Singapore", href: "/local-seo-singapore/gbp-optimisation" },
           { title: "Clinic Owners: 2–4 Week Checklist to Change Google Categories Safely", href: "/blog/clinic-google-categories" },
         ]}
       />

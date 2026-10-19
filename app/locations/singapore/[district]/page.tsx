@@ -118,7 +118,7 @@ export default async function DistrictPage({
   const services = [
     {
       label: "GBP Optimisation",
-      href: "/gbp-optimisation-singapore",
+      href: "/local-seo-singapore/gbp-optimisation",
       desc: `19-point audit covering every GBP rank factor for your ${d.name} profile.`,
     },
     {

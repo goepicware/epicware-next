@@ -37,7 +37,7 @@ const serviceSchema = {
 const CHILD_SERVICES = [
   {
     name: "Review Management",
-    href: "/reputation-management-singapore/review-management",
+    href: "/review-management-singapore",
     description:
       "Monitor every new review across all your outlets in real time. Get alerts the moment a review lands so you can respond before the damage spreads.",
   },
@@ -49,7 +49,7 @@ const CHILD_SERVICES = [
   },
   {
     name: "Bad Review Removal",
-    href: "/reputation-management-singapore/bad-review-removal",
+    href: "/bad-review-removal-singapore",
     description:
       "The only productised bad review removal service in Singapore. We identify policy violations, submit removal requests, and escalate. You pay $200 only if it comes down.",
   },
@@ -92,7 +92,7 @@ export default function ReputationManagementPage() {
           </>
         }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Get Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Get Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "500+ Outlets Managed",
           "Bad Review Removal Guaranteed",
@@ -172,7 +172,7 @@ export default function ReputationManagementPage() {
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
               Epicware&apos;s reputation suite covers the full picture.{" "}
-              <Link href="/reputation-management-singapore/review-management" className="text-primary font-medium hover:underline">
+              <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
                 Review Management
               </Link>{" "}
               is the foundation — real-time monitoring across all your Google Business Profiles so you never miss a review,
@@ -190,7 +190,7 @@ export default function ReputationManagementPage() {
             <p>
               For reviews that cross the line into fake, malicious, or policy-violating territory, Epicware offers the only
               productised{" "}
-              <Link href="/reputation-management-singapore/bad-review-removal" className="text-primary font-medium hover:underline">
+              <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
                 Bad Review Removal
               </Link>{" "}
               service in Singapore. We identify the specific Google content policy violation, submit a formal removal request

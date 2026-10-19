@@ -77,7 +77,7 @@ export default function GetMoreGoogleReviewsPage() {
         h1="Get More Google Reviews for Your Singapore Business — Automated, Not Manual"
         subtitle="Most Singapore SMBs get reviews by accident — a happy customer who remembered. Epicware's automated review campaigns turn every satisfied customer into a reviewer. 15–30% conversion rate on WhatsApp requests."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "15-30% WhatsApp Conversion",
           "Automated Campaigns",

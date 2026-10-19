@@ -37,7 +37,7 @@ const serviceSchema = {
 const CHILD_SERVICES = [
   {
     name: "GEO / AI Overview Optimisation",
-    href: "/ai-search-visibility-singapore/geo-optimisation",
+    href: "/ai-search-visibility-singapore",
     description:
       "Structure your content and GBP to appear in Google's AI-generated search answers — the panel that now sits above organic results for local queries.",
   },
@@ -68,7 +68,7 @@ export default function AiSearchVisibilitySingaporePage() {
         h1="AI & GEO Visibility Singapore — Get Found by ChatGPT and Google AI"
         subtitle="ChatGPT, Perplexity, and Google's AI Overviews now answer Singapore local searches. If your business isn't optimised for these AI systems, you're invisible to the next generation of search."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "AI Overview Optimisation",
           "Answer Engine Optimisation",
@@ -120,7 +120,7 @@ export default function AiSearchVisibilitySingaporePage() {
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
               Epicware&apos;s AI visibility services operate across three layers:{" "}
-              <Link href="/ai-search-visibility-singapore/geo-optimisation" className="text-primary font-medium hover:underline">
+              <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
                 GEO Optimisation
               </Link>{" "}
               structures your web content and GBP for Google&apos;s AI Overview panel;{" "}

@@ -305,7 +305,7 @@ export default function GBPFoundationSection() {
               {/* CTA */}
               <div className="px-5 lg:px-6 pb-5 pt-2">
                 <Link
-                  href="/gbp-optimisation-singapore"
+                  href="/local-seo-singapore/gbp-optimisation"
                   className="inline-flex items-center justify-center gap-2 w-full rounded-[14px] bg-orange-500 hover:bg-orange-600 text-white font-semibold transition-all duration-200 shadow-[0_4px_16px_rgba(249,115,22,0.35)] hover:shadow-[0_6px_22px_rgba(249,115,22,0.48)] hover:-translate-y-0.5"
                   style={{ height: "56px", fontSize: "1rem" }}
                 >

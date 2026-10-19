@@ -30,7 +30,7 @@ const schema = {
 const services = [
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Condition-specific service listings, correct categories, and complete profile for physio searches.",
   },
@@ -59,7 +59,7 @@ const services = [
   },
   {
     label: "GBP Category Optimisation",
-    href: "/gbp-optimisation-singapore/gbp-category-optimisation",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Speciality categories configured to capture sports, geriatric, and paediatric physio searches.",
   },

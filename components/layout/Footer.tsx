@@ -51,13 +51,14 @@ const FOOTER_LINKS = {
       { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
       { href: "/free-audit", label: "Free Local SEO Audit" },
       { href: "/ai-visibility", label: "Free AI Search Audit" },
-      { href: "/remove-review", label: "Remove a Bad Review" },
       { href: "/reviews", label: "Client Reviews" },
       { href: "/reputation-management-singapore", label: "Reputation Management" },
       { href: "/local-seo-singapore", label: "Local SEO Services" },
+      { href: "/local-seo-singapore/gbp-optimisation", label: "GBP Optimisation" },
       { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
       { href: "/growth-tools", label: "Growth Tools" },
       { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
+      { href: "/locations/singapore", label: "Singapore Areas We Serve" },
       { href: "/pricing", label: "Pricing" },
     ],
   },
@@ -70,6 +71,9 @@ const FOOTER_LINKS = {
       { href: "/industries/tuition-centres", label: "Tuition Centres" },
       { href: "/industries/dental-clinics", label: "Dental Clinics" },
       { href: "/industries/car-workshops", label: "Car Workshops" },
+      { href: "/industries/wellness-centres", label: "Spas & Wellness" },
+      { href: "/industries/physiotherapy", label: "Physiotherapy" },
+      { href: "/industries/retail-stores", label: "Retail Stores" },
       { href: "/industries", label: "All Industries" },
     ],
   },
@@ -82,7 +86,6 @@ const FOOTER_LINKS = {
       { href: "/blog", label: "Blog" },
       { href: "/resources/guides", label: "Guides" },
       { href: "/tools", label: "Free Tools" },
-      { href: "/local-growth", label: "Local Growth Platform" },
       { href: "/contact", label: "Contact" },
       { href: "/terms", label: "Terms & Conditions" },
       { href: "/privacy", label: "Privacy Policy" },
@@ -116,7 +119,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-8 group">
               <Image
                 src="/assets/epicware-logo.png"
-                alt="Epicware"
+                alt="Epicware, AI-powered digital marketing agency in Singapore"
                 width={120}
                 height={48}
                 className="h-12 w-auto transition-all duration-500 group-hover:scale-105"

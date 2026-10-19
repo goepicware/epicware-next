@@ -42,7 +42,7 @@ const services = [
   },
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "19-point audit covering every rank factor from categories to photo count to post frequency.",
   },

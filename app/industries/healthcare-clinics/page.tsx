@@ -42,7 +42,7 @@ const services = [
   },
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Complete clinic profile setup with specialties, services, and insurance accepted.",
   },

@@ -65,7 +65,7 @@ const INDUSTRIES = [
 const SERVICES = [
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "19-point audit that covers every rank factor affecting your Google Business Profile in Singapore.",
   },
@@ -114,7 +114,7 @@ export default function SingaporeHubPage() {
         h1="Local Business Growth Solutions Across Singapore"
         subtitle="Epicware is Singapore-built. Every product, every service, and every case study is built for the Singapore SMB market — not adapted from a US or UK tool."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Singapore-Built",
           "500+ Outlets Managed",

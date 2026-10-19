@@ -77,7 +77,7 @@ export default function RankHigherOnGoogleMapsPage() {
         h1="Rank Higher on Google Maps in Singapore — See Your Position, Fix the Gaps"
         subtitle="The Google Maps 3-Pack captures over 70% of clicks for local searches. Epicware's EpicMap shows you exactly where you rank across every Singapore district — and fixes the gaps automatically."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Visual Map Grid Tracking",
           "19-Point GBP Audit",
@@ -181,7 +181,7 @@ export default function RankHigherOnGoogleMapsPage() {
               size="lg"
               className="rounded-full bg-transparent border border-foreground/30 text-foreground hover:bg-muted h-14 px-8 font-semibold text-base"
             >
-              <Link href="/gbp-optimisation-singapore">See GBP Optimisation</Link>
+              <Link href="/local-seo-singapore/gbp-optimisation">See GBP Optimisation</Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-6">

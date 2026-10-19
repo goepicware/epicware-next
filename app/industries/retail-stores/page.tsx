@@ -30,7 +30,7 @@ const schema = {
 const services = [
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Hours accuracy, product listings, seasonal updates, and full profile completeness.",
   },

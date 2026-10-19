@@ -77,7 +77,7 @@ export default function ImproveGoogleRatingPage() {
         h1="Improve Your Google Rating in Singapore — The Two-Part Fix"
         subtitle="A rating below 4.0 costs you customers. Epicware improves your Google rating through two simultaneous actions: removing the reviews that shouldn't be there, and generating more positive reviews from your satisfied customers."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Dual Approach",
           "Remove + Generate",

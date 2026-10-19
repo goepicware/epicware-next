@@ -92,7 +92,7 @@ export default function EpicSocialPage() {
           </>
         }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Singapore-Built",
           "AI-Native",

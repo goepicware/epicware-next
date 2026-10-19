@@ -35,7 +35,7 @@ const schema = {
 const SERVICES = [
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "19-point audit covering every GBP rank factor for your Malaysian business profile.",
   },
@@ -84,7 +84,7 @@ export default function MalaysiaPage() {
         h1="Local SEO & Reputation Management for Malaysia SMBs"
         subtitle="Epicware's platform manages Google Business Profiles, review generation, and bad review removal for businesses across Kuala Lumpur, Petaling Jaya, Penang, and Johor Bahru."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "KL + Penang + JB",
           "Same Platform as Singapore",

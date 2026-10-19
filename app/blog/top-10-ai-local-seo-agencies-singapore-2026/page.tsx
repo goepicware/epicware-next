@@ -244,7 +244,7 @@ export default function Post() {
               that depends on foot traffic and calls.
             </p>
             <p>
-              <Link href="/audit-landing" className="text-primary font-medium hover:underline">
+              <Link href="/free-audit" className="text-primary font-medium hover:underline">
                 → Get your free Local SEO audit from Epicware
               </Link>
             </p>
@@ -472,7 +472,7 @@ export default function Post() {
             <p className="mt-10 text-muted-foreground leading-relaxed">
               Ready to see exactly where your business ranks on Google Maps right now?{" "}
               <Link
-                href="/audit-landing"
+                href="/free-audit"
                 className="text-primary font-medium hover:underline"
               >
                 Get your free Local SEO audit from Epicware
@@ -489,7 +489,7 @@ export default function Post() {
             </p>
           </>
         }
-        ctaHref="/audit-landing"
+        ctaHref="/free-audit"
         ctaLabel="Get My Free Local SEO Audit →"
         ctaContext="See exactly where your business ranks on Google Maps — block by block. Free EpicMap geogrid scan, GBP health check, and competitor gap analysis. No credit card. Results in 24 hours."
         relatedPosts={[

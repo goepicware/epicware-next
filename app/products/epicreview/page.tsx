@@ -93,7 +93,7 @@ export default function EpicReviewPage() {
           </>
         }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Singapore-Built",
           "AI-Native",
@@ -140,7 +140,7 @@ export default function EpicReviewPage() {
             <p>
               For fake, unfair, or policy-violating reviews, EpicReview&apos;s{" "}
               <Link
-                href="/reputation-management-singapore/bad-review-removal"
+                href="/bad-review-removal-singapore"
                 className="text-primary font-medium hover:underline"
               >
                 Bad Review Removal
@@ -347,7 +347,7 @@ export default function EpicReviewPage() {
               Book My Free Demo →
             </Link>
             <Link
-              href="/audit"
+              href="/free-audit"
               className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-border text-foreground font-semibold text-base hover:bg-muted transition-colors duration-200"
             >
               Start with a free audit

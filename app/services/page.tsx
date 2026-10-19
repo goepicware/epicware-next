@@ -46,7 +46,7 @@ const TRUST_SIGNALS = [
 const REPUTATION_SERVICES = [
   {
     name: "Review Management",
-    href: "/reputation-management-singapore/review-management",
+    href: "/review-management-singapore",
     description: "Monitor and manage every Google review across all your outlets in real time.",
   },
   {
@@ -56,7 +56,7 @@ const REPUTATION_SERVICES = [
   },
   {
     name: "Bad Review Removal ⭐",
-    href: "/reputation-management-singapore/bad-review-removal",
+    href: "/bad-review-removal-singapore",
     description: "Remove fake, malicious, or policy-violating Google reviews. Pay only on success.",
   },
   {
@@ -112,7 +112,7 @@ const LOCAL_SEO_SERVICES = [
 const AI_SERVICES = [
   {
     name: "GEO / AI Overview Optimisation",
-    href: "/ai-search-visibility-singapore/geo-optimisation",
+    href: "/ai-search-visibility-singapore",
     description: "Optimise your content to appear in Google's AI-generated search answers.",
   },
   {
@@ -314,7 +314,7 @@ export default function ServicesPage() {
                 </div>
               </div>
             </Link>
-            <Link href="/gbp-optimisation-singapore" className="card-feature group block h-full">
+            <Link href="/local-seo-singapore/gbp-optimisation" className="card-feature group block h-full">
               <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
                 <div className="text-2xl">📍</div>
                 <h3 className="font-display font-bold text-foreground text-xl leading-snug">

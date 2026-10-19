@@ -35,7 +35,7 @@ const schema = {
 const SERVICES = [
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "19-point audit covering every GBP rank factor for your UK business profile.",
   },
@@ -84,7 +84,7 @@ export default function UKPage() {
         h1="Local SEO & Reputation Management for UK SMBs"
         subtitle="Epicware's platform serves UK businesses with the same tools that manage 500+ Singapore outlets — GBP optimisation, review generation, and bad review removal."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "London & UK Market",
           "Singapore-Built",

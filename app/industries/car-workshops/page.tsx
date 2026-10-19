@@ -42,7 +42,7 @@ const services = [
   },
   {
     label: "GBP Optimisation",
-    href: "/gbp-optimisation-singapore",
+    href: "/local-seo-singapore/gbp-optimisation",
     description:
       "Full service list, correct categories, and profile completeness for every auto service keyword.",
   },

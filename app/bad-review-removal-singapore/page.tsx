@@ -70,7 +70,7 @@ export default function BadReviewRemovalSingaporePage() {
         h1="Bad Review Removal Singapore — $200 Per Review, Refunded If Not Removed"
         subtitle="One fake review from a competitor or a disgruntled non-customer can drop your Google rating below 4.0 and cost you thousands in lost business. Epicware removes it. $200 charged upfront — refunded in full if it isn't removed within 3 months."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/audit" }}
+        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "$200/Review · Refund Guarantee",
           "Singapore-Built",

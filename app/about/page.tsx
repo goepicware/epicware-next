@@ -188,7 +188,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { label: "Bad Review Removal Singapore", href: "/bad-review-removal-singapore" },
-              { label: "GBP Optimisation Singapore", href: "/gbp-optimisation-singapore" },
+              { label: "GBP Optimisation Singapore", href: "/local-seo-singapore/gbp-optimisation" },
               { label: "Review Management Singapore", href: "/review-management-singapore" },
               { label: "Local SEO Singapore", href: "/local-seo-singapore" },
               { label: "Reputation Management Singapore", href: "/reputation-management-singapore" },
