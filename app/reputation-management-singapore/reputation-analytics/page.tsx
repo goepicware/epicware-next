@@ -34,7 +34,20 @@ export default function ReputationAnalyticsPage() {
       subtitle="Most SMBs check their Google rating occasionally and respond when they remember. Epicware's Reputation Analytics Dashboard gives you a live view of review velocity, rating trends, and competitor comparison — not a monthly report."
       trustSignals={["Live Dashboard", "Competitor Comparison", "Singapore-Built", "Multi-Outlet Analytics"]}
       imageSrc="/assets/review-management-illustration.png"
-      openingParagraph="If you manage more than one outlet, you cannot check each GBP profile individually every day and still run your business. Reputation analytics give you the visibility to manage by exception — focus where the data says you need to."
+      openingParagraph={
+        <>
+          If you manage{" "}
+          <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+            more than one outlet
+          </Link>
+          , you cannot check each GBP profile individually every day and still run your business. Reputation
+          analytics give you the visibility to manage by exception — focus where the data says you need to. Our{" "}
+          <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+            review management
+          </Link>{" "}
+          team then acts on what the dashboard flags.
+        </>
+      }
       whenTitle="When You Need Reputation Analytics"
       whenContent={
         <div className="space-y-4">
@@ -73,13 +86,15 @@ export default function ReputationAnalyticsPage() {
       }
       parentHref="/reputation-management-singapore"
       parentLabel="Reputation Management Singapore"
+      breadcrumbLabel="Reputation Analytics"
+      breadcrumbParent={{ label: "Reputation Management", href: "/reputation-management-singapore" }}
       parentSentence={
         <>
-          Reputation Analytics is part of Epicware&apos;s{" "}
+          Reputation Analytics is part of our{" "}
           <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
-            Reputation Management Singapore
-          </Link>{" "}
-          suite.
+            ORM service
+          </Link>
+          .
         </>
       }
     />

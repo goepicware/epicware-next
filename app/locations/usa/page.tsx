@@ -49,7 +49,7 @@ const SERVICES = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months. Remove fake or policy-violating reviews from your US GBP profile.",
+      "Remove fake or policy-violating reviews from your US GBP profile.",
   },
   {
     label: "Local Rank Tracking",
@@ -65,7 +65,7 @@ const SERVICES = [
   },
   {
     label: "Multi-Outlet Management",
-    href: "/review-management-singapore",
+    href: "/use-cases/manage-multiple-gbp-locations",
     description:
       "Manage every US outlet's reviews, rank, and reputation from one dashboard.",
   },
@@ -98,7 +98,11 @@ export default function USAPage() {
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            US SMBs face the same core local SEO challenge as businesses in Singapore:
+            Epicware is a{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              digital marketing agency in Singapore
+            </Link>{" "}
+            that also works with US businesses. US SMBs face the same core local SEO challenge as businesses in Singapore:
             Google Maps 3-Pack dominance determines foot traffic volume, and that rank
             is determined by review count, GBP completeness, and consistency.
             Epicware&apos;s platform brings the same automated review generation, GBP
@@ -116,6 +120,16 @@ export default function USAPage() {
           </h2>
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
+              As a{" "}
+              <Link
+                href="/local-seo-singapore"
+                className="text-primary font-medium hover:underline"
+              >
+                local SEO agency
+              </Link>
+              , we track your rank across your city or metro area.
+            </p>
+            <p>
               The US local search market is the largest in the world — and among the
               most competitive. A restaurant in New York or a clinic in Los Angeles
               faces hundreds of competitors within the same Google Maps view. Review
@@ -127,6 +141,16 @@ export default function USAPage() {
               retail chains — Epicware&apos;s multi-outlet dashboard manages every profile
               from one place, with combined analytics showing performance across all
               locations simultaneously.
+            </p>
+            <p>
+              As a{" "}
+              <Link
+                href="/reputation-management-singapore"
+                className="text-primary font-medium hover:underline"
+              >
+                reputation management agency
+              </Link>
+              , we cover every US outlet.
             </p>
           </div>
         </div>

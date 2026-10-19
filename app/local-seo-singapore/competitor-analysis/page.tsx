@@ -34,7 +34,17 @@ export default function CompetitorAnalysisPage() {
       subtitle="The businesses ranking above you on Google Maps are doing specific things your profile isn't. Epicware's competitor analysis shows you exactly what they're doing differently — so you can close the gap."
       trustSignals={["Per-Keyword Comparison", "District-Level Insights", "Singapore-Built", "Powered by EpicMap"]}
       imageSrc="/assets/epicmap-before-after.png"
-      openingParagraph="If you are not in the Google Maps 3-Pack for your main keywords, there are 3 businesses ranking above you. Each of them is doing something better — more reviews, higher rating, more complete GBP, more recent posts, or stronger citation consistency. Without knowing which of these factors is driving the gap, you cannot fix it efficiently."
+      openingParagraph={
+        <>
+          If you are not in the{" "}
+          <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            Google Maps 3-Pack
+          </Link>{" "}
+          for your main keywords, there are 3 businesses ranking above you. Each of them is doing something better
+          — more reviews, higher rating, more complete GBP, more recent posts, or stronger citation consistency.
+          Without knowing which of these factors is driving the gap, you cannot fix it efficiently.
+        </>
+      }
       whenTitle="When You Need Competitor Analysis"
       whenContent={
         <div className="space-y-4">
@@ -44,7 +54,11 @@ export default function CompetitorAnalysisPage() {
             or category — knowing the competitive landscape before you optimise means your efforts target the right gaps.
           </p>
           <p>
-            For multi-outlet businesses, competitors differ by location. The analysis runs per outlet so you see the
+            For{" "}
+            <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+              multi-outlet businesses
+            </Link>
+            , competitors differ by location. The analysis runs per outlet so you see the
             specific competitive picture for each district, not a generic overview.
           </p>
         </div>
@@ -73,13 +87,15 @@ export default function CompetitorAnalysisPage() {
       }
       parentHref="/local-seo-singapore"
       parentLabel="Local SEO Singapore"
+      breadcrumbLabel="Competitor Analysis"
+      breadcrumbParent={{ label: "Local SEO Services", href: "/local-seo-singapore" }}
       parentSentence={
         <>
-          Competitor Analysis is part of Epicware&apos;s{" "}
+          Competitor Analysis is part of our work as a{" "}
           <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
-            Local SEO Singapore
-          </Link>{" "}
-          service category and is powered by{" "}
+            local SEO agency in Singapore
+          </Link>
+          , powered by{" "}
           <Link href="/products/epicmap" className="text-primary font-medium hover:underline">EpicMap</Link>.
         </>
       }

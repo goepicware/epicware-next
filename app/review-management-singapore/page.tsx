@@ -45,13 +45,13 @@ const CHILD_SERVICES = [
   },
   {
     name: "Negative Review Response",
-    href: "/review-management-singapore/negative-review-response",
+    href: "/reputation-management-singapore/ai-review-response",
     description:
       "Turn bad reviews into trust signals with professional, AI-personalised responses that convert future readers.",
   },
   {
     name: "Review Monitoring",
-    href: "/review-management-singapore/review-monitoring",
+    href: "/review-management-singapore",
     description:
       "Never miss a review across any outlet. Real-time alerts via dashboard, email, or WhatsApp the moment a new review lands.",
   },
@@ -89,7 +89,11 @@ export default function ReviewManagementSingaporePage() {
             &ldquo;sorry to hear that&rdquo; to every 1-star review signals to potential customers that your business
             doesn&apos;t care. Epicware solves all three problems at once. Real-time alerts so you never miss a review.
             AI-generated responses that sound personal and are ready to publish in seconds. Automated request campaigns
-            that generate new reviews from your happiest customers.
+            that generate new reviews from your happiest customers. Our{" "}
+            <Link href="/review-management-singapore/google-reviews" className="text-primary font-medium hover:underline">
+              Google reviews service
+            </Link>{" "}
+            runs all three from one dashboard.
           </p>
         </div>
       </section>
@@ -110,7 +114,11 @@ export default function ReviewManagementSingaporePage() {
             <p>
               Singapore SMBs without a review management system typically respond to fewer than 40% of reviews and generate
               reviews only by chance. Those with a system see 2–3x more reviews within 90 days and respond to 100% of
-              reviews within hours.
+              reviews within hours. If you&apos;re not sure where to start, our guide on{" "}
+              <Link href="/blog/handle-negative-google-reviews-singapore" className="text-primary font-medium hover:underline">
+                how to handle negative Google reviews
+              </Link>{" "}
+              covers the first steps.
             </p>
           </div>
         </div>

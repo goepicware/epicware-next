@@ -49,7 +49,7 @@ const SERVICES = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months. Remove fake or policy-violating reviews from your GBP profile.",
+      "Remove fake or policy-violating reviews from your GBP profile.",
   },
   {
     label: "Local Rank Tracking",
@@ -98,7 +98,12 @@ export default function MalaysiaPage() {
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Epicware launched in Singapore but serves Malaysian businesses with the
+            Epicware is a{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              digital marketing agency
+            </Link>{" "}
+            based in Singapore that also serves Malaysian businesses. Epicware
+            launched in Singapore but serves Malaysian businesses with the
             same platform. Malaysia&apos;s Google Maps search behaviour mirrors Singapore
             — customers search before they visit, read reviews before they trust, and
             choose based on rank position. F&B groups, clinic chains, and retail
@@ -116,6 +121,16 @@ export default function MalaysiaPage() {
           </h2>
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
+              It&apos;s the same{" "}
+              <Link
+                href="/local-seo-singapore"
+                className="text-primary font-medium hover:underline"
+              >
+                local SEO
+              </Link>{" "}
+              we run in Singapore, set up for KL, PJ, Penang and JB.
+            </p>
+            <p>
               GBP is the primary local search asset for Malaysian businesses just as
               in Singapore. Google Maps 3-Pack dominance in KL&apos;s Bukit Bintang, PJ&apos;s
               SS2, or Penang&apos;s Georgetown is determined by the same rank factors: review
@@ -127,6 +142,16 @@ export default function MalaysiaPage() {
               multi-outlet dashboard tracks both Singapore and Malaysia profiles
               simultaneously — one login, full visibility across every location in
               both markets.
+            </p>
+            <p>
+              Our{" "}
+              <Link
+                href="/reputation-management-singapore"
+                className="text-primary font-medium hover:underline"
+              >
+                online reputation management
+              </Link>{" "}
+              covers every Malaysian outlet.
             </p>
           </div>
         </div>

@@ -226,9 +226,10 @@ export default function LocalSeoSingaporePage() {
           <h2 className="font-display text-foreground mb-6">Why use a local SEO platform instead of a Singapore agency?</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware is a platform, not an agency. Agencies sell their time. Epicware gives you a self-serve dashboard
-              that runs automatically — no retainer, no waiting on someone else&apos;s team, no monthly report that is
-              already out of date. You log in, you see your data, you take action.
+              Our own AI-powered software. As an{" "}
+              <Link href="/" className="text-primary font-medium hover:underline">AI-powered digital marketing agency</Link>,
+              we built tools that handle rank scans, reply drafts, email and social posts, so our specialists focus on
+              strategy.
             </p>
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in

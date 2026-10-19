@@ -391,6 +391,7 @@ const RESOURCES = [
   { title: "How to Hire a Local SEO Agency in Singapore", href: "/blog/how-to-hire-local-seo-agency-singapore" },
   { title: "SEO vs Local SEO: Which Do You Need?", href: "/blog/seo-vs-local-seo" },
   { title: "What Is SEO? A Plain-English Guide", href: "/blog/what-is-seo-local-business" },
+  { title: "What to Demand From Any SEO Service", href: "/blog/seo-services-for-small-business" },
   { title: "Google Maps Ranking Factors in Singapore", href: "/blog/google-maps-ranking-factors" },
   { title: "Free Backlink Opportunity Finder", href: "/tools/backlink-opportunity-finder" },
   { title: "Free AI Visibility Checker", href: "/ai-visibility" },
@@ -504,7 +505,11 @@ export default function SeoAgencySingaporePage() {
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
             We are an AI-powered SEO agency in Singapore. Our SEO services cover Google rankings, Google Maps, AI
-            search and reviews — and you see every ranking live in our own software, with dated proof.
+            search and reviews — and you see every ranking live in our own software, with dated proof. As an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              AI-powered digital marketing agency in Singapore
+            </Link>
+            , we run SEO alongside local SEO, AI search and reputation work.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Link

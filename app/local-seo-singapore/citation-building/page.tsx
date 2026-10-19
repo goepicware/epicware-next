@@ -75,6 +75,8 @@ export default function CitationBuildingPage() {
       }
       parentHref="/local-seo-singapore"
       parentLabel="Local SEO Singapore"
+      breadcrumbLabel="Citation Building"
+      breadcrumbParent={{ label: "Local SEO Services", href: "/local-seo-singapore" }}
       parentSentence={
         <>
           Citation Building is part of Epicware&apos;s{" "}

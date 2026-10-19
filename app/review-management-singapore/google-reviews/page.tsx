@@ -54,14 +54,20 @@ export default function GoogleReviewsPage() {
       howContent={
         <div className="space-y-4">
           <p>
-            Epicware&apos;s Google Reviews management covers the full cycle: automated review request campaigns
+            Epicware&apos;s Google Reviews management covers the full cycle:{" "}
+            <Link href="/reputation-management-singapore/review-generation" className="text-primary font-medium hover:underline">
+              automated review request campaigns
+            </Link>{" "}
             (WhatsApp and email) that generate new reviews consistently; real-time monitoring that alerts you the
             moment a new review arrives on any of your GBP profiles; AI-generated personalised responses that are
             ready to publish in seconds; and review analytics that track your rating trend, review velocity, and
             response rate over time.
           </p>
           <p>
-            Multi-outlet businesses see all reviews across all locations in one dashboard.
+            <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+              Multi-outlet businesses
+            </Link>{" "}
+            see all reviews across all locations in one dashboard.
           </p>
         </div>
       }
@@ -74,17 +80,19 @@ export default function GoogleReviewsPage() {
       }
       parentHref="/review-management-singapore"
       parentLabel="Review Management Singapore"
+      breadcrumbLabel="Google Reviews"
+      breadcrumbParent={{ label: "Review Management", href: "/review-management-singapore" }}
       parentSentence={
         <>
-          Google Reviews management is part of Epicware&apos;s{" "}
+          Our Google reviews service is part of Epicware&apos;s{" "}
           <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
-            Review Management Singapore
+            Google review management
           </Link>{" "}
-          service and{" "}
+          and{" "}
           <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
-            Reputation Management Singapore
-          </Link>{" "}
-          suite.
+            online reputation management
+          </Link>
+          .
         </>
       }
     />

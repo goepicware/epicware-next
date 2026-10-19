@@ -49,7 +49,7 @@ const SERVICES = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months. Remove fake or policy-violating reviews from your UK GBP profile.",
+      "Remove fake or policy-violating reviews from your UK GBP profile.",
   },
   {
     label: "Local Rank Tracking",
@@ -65,7 +65,7 @@ const SERVICES = [
   },
   {
     label: "Multi-Outlet Management",
-    href: "/review-management-singapore",
+    href: "/use-cases/manage-multiple-gbp-locations",
     description:
       "Manage every UK outlet's reviews, rank, and reputation from one dashboard.",
   },
@@ -98,8 +98,19 @@ export default function UKPage() {
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            The UK&apos;s local search market runs on Google Business Profile just like
-            Singapore. London&apos;s dense commercial environment — from restaurant clusters
+            Epicware is an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              AI-powered marketing agency
+            </Link>{" "}
+            based in Singapore that also works with UK businesses. The UK&apos;s local search market runs on Google Business Profile just like
+            Singapore. So the{" "}
+            <Link
+              href="/local-seo-singapore"
+              className="text-primary font-medium hover:underline"
+            >
+              local SEO
+            </Link>{" "}
+            we run in Singapore works there too. London&apos;s dense commercial environment — from restaurant clusters
             in Shoreditch to clinic networks in Kensington — creates the same
             multi-outlet management challenges Epicware was built to solve. UK
             businesses use Epicware to manage GBP profiles, generate reviews, and
@@ -128,6 +139,16 @@ export default function UKPage() {
               Singapore or Malaysia operations — Epicware&apos;s multi-location dashboard
               manages every profile from one place. No separate logins. No missed
               reviews. No profiles left out of date.
+            </p>
+            <p>
+              UK reviews are monitored and answered as part of our{" "}
+              <Link
+                href="/reputation-management-singapore"
+                className="text-primary font-medium hover:underline"
+              >
+                online reputation management
+              </Link>
+              .
             </p>
           </div>
         </div>

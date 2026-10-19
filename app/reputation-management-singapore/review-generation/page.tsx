@@ -60,28 +60,46 @@ export default function ReviewGenerationPage() {
           </p>
           <p>
             Timing is set per business type — a restaurant sends the request 30 minutes after the customer leaves;
-            a clinic sends it the next morning. Multi-outlet businesses run campaigns across all locations
-            simultaneously. Review request conversion rates typically run between 15–30% for WhatsApp and 8–15%
-            for email when timed correctly.
+            a clinic sends it the next morning.{" "}
+            <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+              Multi-outlet businesses
+            </Link>{" "}
+            run campaigns across all locations simultaneously. Review request conversion rates typically run
+            between 15–30% for WhatsApp and 8–15% for email when timed correctly. Google bans{" "}
+            <Link href="/blog/review-gating-explained" className="text-primary font-medium hover:underline">
+              review gating
+            </Link>
+            , so a compliant campaign asks every customer, not only the happy ones.
           </p>
         </div>
       }
       pricingContent={
-        <p>
-          Review Generation is included in Epicware&apos;s Foundation plan and above. See full plan details at{" "}
-          <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
-          No setup fees on Foundation plan. Cancel anytime.
-        </p>
+        <>
+          <p>
+            Review Generation is included in Epicware&apos;s Foundation plan and above. See full plan details at{" "}
+            <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
+            No setup fees on Foundation plan. Cancel anytime.
+          </p>
+          <p>
+            Prefer to send requests yourself? Our{" "}
+            <Link href="/tools/google-review-request-generator" className="text-primary font-medium hover:underline">
+              free review request generator
+            </Link>{" "}
+            drafts the message for you.
+          </p>
+        </>
       }
       parentHref="/reputation-management-singapore"
       parentLabel="Reputation Management Singapore"
+      breadcrumbLabel="Review Generation"
+      breadcrumbParent={{ label: "Reputation Management", href: "/reputation-management-singapore" }}
       parentSentence={
         <>
           Review Generation is part of Epicware&apos;s{" "}
           <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
-            Reputation Management Singapore
+            reputation management
           </Link>{" "}
-          suite. Further reading:{" "}
+          service. Further reading:{" "}
           <Link href="/blog/how-to-get-more-google-reviews" className="text-primary font-medium hover:underline">
             how to get more Google reviews
           </Link>

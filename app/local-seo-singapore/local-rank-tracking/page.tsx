@@ -31,7 +31,16 @@ export default function LocalRankTrackingPage() {
       schema={schema}
       badge="LOCAL RANK TRACKING · LOCAL SEO"
       h1="Local Rank Tracking Singapore — See Exactly Where You Appear on Google Maps"
-      subtitle="Google Maps rank varies by location — you can rank 1st in Tampines and 17th in Pasir Ris, 2km away. Epicware's visual map grid shows your rank across every Singapore district so you know exactly where you're winning and where you're not."
+      subtitle={
+        <>
+          Google Maps rank varies by location — you can rank 1st in Tampines and 17th in Pasir Ris, 2km away. A{" "}
+          <Link href="/local-seo-singapore/competitor-analysis" className="text-primary font-medium hover:underline">
+            local competitor analysis
+          </Link>{" "}
+          then shows why the businesses above you rank there. Epicware&apos;s visual map grid shows your rank across
+          every Singapore district so you know exactly where you&apos;re winning and where you&apos;re not.
+        </>
+      }
       trustSignals={["District-Level Tracking", "Visual Map Grid", "Singapore-Built", "Powered by EpicMap"]}
       imageSrc="/assets/epicmap-before-after.png"
       openingParagraph="If you don't know your Google Maps rank by district, you don't know where you're losing customers. Most Singapore SMBs assume 'I appear on Google' means they are visible everywhere. In reality, Google Maps rank is hyperlocal — it changes every 1–2km based on the searcher's location."
@@ -41,7 +50,11 @@ export default function LocalRankTrackingPage() {
           <p>
             A dental clinic in Bishan may rank 3rd for &ldquo;dentist&rdquo; in Bishan but not appear at all in Toa
             Payoh searches, meaning it is invisible to the hundreds of HDB residents who search from Toa Payoh daily.
-            Without rank tracking, you cannot measure whether your optimisation efforts are working.
+            Without rank tracking, you cannot tell whether your{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              Google Business Profile optimisation
+            </Link>{" "}
+            is working.
           </p>
           <p>
             If you are spending time or money on GBP optimisation without tracking your rank by district, you have no
@@ -75,15 +88,16 @@ export default function LocalRankTrackingPage() {
       }
       parentHref="/local-seo-singapore"
       parentLabel="Local SEO Singapore"
+      breadcrumbLabel="Local Rank Tracking"
+      breadcrumbParent={{ label: "Local SEO Services", href: "/local-seo-singapore" }}
       parentSentence={
         <>
           Local Rank Tracking is part of Epicware&apos;s{" "}
           <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
-            Local SEO Singapore
+            local SEO services
           </Link>{" "}
-          service category and is powered by the{" "}
-          <Link href="/products/epicmap" className="text-primary font-medium hover:underline">EpicMap</Link>{" "}
-          product.
+          and is powered by{" "}
+          <Link href="/products/epicmap" className="text-primary font-medium hover:underline">EpicMap</Link>.
         </>
       }
     />

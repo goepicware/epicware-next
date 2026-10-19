@@ -112,7 +112,16 @@ export default function SingaporeHubPage() {
       <CategoryHero
         badge="EPICWARE · SINGAPORE"
         h1="Local Business Growth Solutions Across Singapore"
-        subtitle="Epicware is Singapore-built. Every product, every service, and every case study is built for the Singapore SMB market — not adapted from a US or UK tool."
+        subtitle={
+          <>
+            Epicware is Singapore-built. Every product, every service, and every case study is built for the
+            Singapore SMB market — not adapted from a US or UK tool. Epicware is an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              AI-powered digital marketing agency
+            </Link>{" "}
+            based in Singapore, working in every district below.
+          </>
+        }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[

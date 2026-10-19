@@ -34,7 +34,17 @@ export default function GbpSetupPage() {
       subtitle="A Google Business Profile with missing information, wrong categories, or unverified status loses rank before you even start. Epicware handles full setup, verification, and onboarding — correctly."
       trustSignals={["Full Setup + Verification", "Category Optimised", "Singapore-Built", "Onboarded Within 48 Hours"]}
       imageSrc="/assets/epicmap-before-after.png"
-      openingParagraph="An unclaimed GBP can be edited by anyone, shows incomplete information, and ranks poorly. A profile claimed by the wrong person can lock the business out of their own listing. Getting the GBP right from day one prevents months of rank disadvantage."
+      openingParagraph={
+        <>
+          An unclaimed GBP can be edited by anyone, shows incomplete information, and ranks poorly. Once
+          it&apos;s set up, our{" "}
+          <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            Google Business Profile optimisation
+          </Link>{" "}
+          keeps it complete and up to date. A profile claimed by the wrong person can lock the business out of
+          their own listing. Getting the GBP right from day one prevents months of rank disadvantage.
+        </>
+      }
       whenTitle="When You Need GBP Setup"
       whenContent={
         <div className="space-y-4">
@@ -73,13 +83,15 @@ export default function GbpSetupPage() {
       }
       parentHref="/local-seo-singapore"
       parentLabel="Local SEO Singapore"
+      breadcrumbLabel="GBP Setup"
+      breadcrumbParent={{ label: "Local SEO Services", href: "/local-seo-singapore" }}
       parentSentence={
         <>
           GBP Setup is part of Epicware&apos;s{" "}
           <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
-            Local SEO Singapore
-          </Link>{" "}
-          service category.
+            local SEO services
+          </Link>
+          .
         </>
       }
     />

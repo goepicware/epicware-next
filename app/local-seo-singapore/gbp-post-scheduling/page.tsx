@@ -31,7 +31,15 @@ export default function GbpPostSchedulingPage() {
       schema={schema}
       badge="GBP POST SCHEDULING · LOCAL SEO"
       h1="GBP Post Scheduling Singapore — Keep Your Google Profile Fresh Automatically"
-      subtitle="Google Business Profile posts are a freshness signal that supports Maps rank. Most Singapore SMBs post rarely or never. Epicware generates and publishes weekly posts automatically — you just approve them."
+      subtitle={
+        <>
+          <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            Google Business Profile
+          </Link>{" "}
+          posts are a freshness signal that supports Maps rank. Most Singapore SMBs post rarely or never. Epicware
+          generates and publishes weekly posts automatically — you just approve them.
+        </>
+      }
       trustSignals={["AI-Generated Posts", "Weekly Publishing", "Singapore-Built", "GBP Native"]}
       imageSrc="/assets/epicmap-before-after.png"
       openingParagraph="Google treats GBP profiles that post regularly as more active and relevant than those that don't. A profile with no posts in 3 months signals inactivity. For Singapore SMBs competing in dense local categories, freshness signals like regular GBP posts can support rank improvement."
@@ -75,13 +83,15 @@ export default function GbpPostSchedulingPage() {
       }
       parentHref="/local-seo-singapore"
       parentLabel="Local SEO Singapore"
+      breadcrumbLabel="GBP Post Scheduling"
+      breadcrumbParent={{ label: "Local SEO Services", href: "/local-seo-singapore" }}
       parentSentence={
         <>
           GBP Post Scheduling is part of Epicware&apos;s{" "}
           <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
-            Local SEO Singapore
+            local SEO
           </Link>{" "}
-          service category. The{" "}
+          work. The{" "}
           <Link href="/products/epicsocial" className="text-primary font-medium hover:underline">EpicSocial</Link>{" "}
           product also covers social post scheduling across Facebook, Instagram, and GBP from one platform.
         </>

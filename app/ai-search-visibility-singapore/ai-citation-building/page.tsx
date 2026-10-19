@@ -61,7 +61,11 @@ export default function AiCitationBuildingPage() {
           </p>
           <p>
             The result is your business being mentioned — and eventually cited — when AI systems answer questions
-            about your service category in Singapore.
+            about your service category in Singapore. Pair it with{" "}
+            <Link href="/ai-search-visibility-singapore/aeo" className="text-primary font-medium hover:underline">
+              answer engine optimisation
+            </Link>{" "}
+            so the pages AI tools read answer questions directly.
           </p>
         </div>
       }
@@ -74,13 +78,15 @@ export default function AiCitationBuildingPage() {
       }
       parentHref="/ai-search-visibility-singapore"
       parentLabel="AI & GEO Visibility Singapore"
+      breadcrumbLabel="AI Citation Building"
+      breadcrumbParent={{ label: "AI Search Optimisation", href: "/ai-search-visibility-singapore" }}
       parentSentence={
         <>
-          AI Citation Building is part of Epicware&apos;s{" "}
+          AI citation building is part of our work as a{" "}
           <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
-            AI &amp; GEO Visibility Singapore
-          </Link>{" "}
-          service category.
+            GEO agency in Singapore
+          </Link>
+          .
         </>
       }
     />

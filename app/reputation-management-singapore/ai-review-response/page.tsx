@@ -45,9 +45,14 @@ export default function AiReviewResponsePage() {
             responses to 1-star reviews.
           </p>
           <p>
-            Potential customers read the negative reviews first and judge you by your response. A thoughtful,
-            professional response to a 1-star review can recover a customer and show every future reader that you
-            take service seriously. For multi-outlet operators, this challenge is multiplied across every profile.
+            Potential customers read the negative reviews first and judge you by your response. Replies are one
+            part of our{" "}
+            <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+              Google review management
+            </Link>
+            , which also covers monitoring and alerts. A thoughtful, professional response to a 1-star review can
+            recover a customer and show every future reader that you take service seriously. For multi-outlet
+            operators, this challenge is multiplied across every profile.
           </p>
         </div>
       }
@@ -68,21 +73,32 @@ export default function AiReviewResponsePage() {
         </div>
       }
       pricingContent={
-        <p>
-          AI Review Response is included in Epicware&apos;s Foundation plan and above. See full plan details at{" "}
-          <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
-          No setup fees on Foundation plan. Cancel anytime.
-        </p>
+        <>
+          <p>
+            AI Review Response is included in Epicware&apos;s Foundation plan and above. See full plan details at{" "}
+            <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
+            No setup fees on Foundation plan. Cancel anytime.
+          </p>
+          <p>
+            Want to try one reply first? Use our{" "}
+            <Link href="/tools/google-review-reply-generator" className="text-primary font-medium hover:underline">
+              free Google review reply generator
+            </Link>
+            .
+          </p>
+        </>
       }
       parentHref="/reputation-management-singapore"
       parentLabel="Reputation Management Singapore"
+      breadcrumbLabel="AI Review Response"
+      breadcrumbParent={{ label: "Reputation Management", href: "/reputation-management-singapore" }}
       parentSentence={
         <>
-          AI Review Response is part of Epicware&apos;s{" "}
+          AI Review Response is part of our{" "}
           <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
-            Reputation Management Singapore
-          </Link>{" "}
-          suite.
+            online reputation management services
+          </Link>
+          .
         </>
       }
     />

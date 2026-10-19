@@ -34,7 +34,16 @@ export default function UnfairReviewRemovalPage() {
       subtitle="Ex-employee attacks, dispute-motivated 1-star reviews, and reviews containing false factual claims can be challenged. Epicware identifies the policy violation and submits the removal. $200 per review, charged upfront and refunded if not removed within 3 months."
       trustSignals={["$200/Review · Refund Guarantee", "False Claim Removal", "Singapore-Built", "Ex-Employee Reviews"]}
       imageSrc="/assets/review-management-illustration.png"
-      openingParagraph="Not every unfair review is removable. But several categories do violate Google's content policies — and those can be challenged. Epicware identifies whether your specific review qualifies before any work begins."
+      openingParagraph={
+        <>
+          Not every unfair review is removable;{" "}
+          <Link href="/blog/google-review-policy-explained" className="text-primary font-medium hover:underline">
+            Google&apos;s review policy
+          </Link>{" "}
+          decides which ones are. But several categories do violate Google&apos;s content policies — and those can
+          be challenged. Epicware identifies whether your specific review qualifies before any work begins.
+        </>
+      }
       whenTitle="Which Unfair Reviews Are Removable"
       whenContent={
         <div className="space-y-4">
@@ -44,7 +53,12 @@ export default function UnfairReviewRemovalPage() {
             violate Google&apos;s content policies: reviews posted by ex-employees with an ulterior motive (Google
             prohibits reviews from people with a conflict of interest), reviews containing false factual claims
             (stating your business did something it provably did not do), and reviews that target the business
-            personally with threats or harassment rather than describing a service experience.
+            personally with threats or harassment rather than describing a service experience. Reviews from people
+            who were never customers go through{" "}
+            <Link href="/bad-review-removal-singapore/fake-review-removal" className="text-primary font-medium hover:underline">
+              fake review removal
+            </Link>{" "}
+            instead.
           </p>
         </div>
       }
@@ -72,11 +86,13 @@ export default function UnfairReviewRemovalPage() {
       }
       parentHref="/bad-review-removal-singapore"
       parentLabel="Bad Review Removal Singapore"
+      breadcrumbLabel="Unfair Review Removal"
+      breadcrumbParent={{ label: "Bad Review Removal", href: "/bad-review-removal-singapore" }}
       parentSentence={
         <>
           Unfair Review Removal is part of Epicware&apos;s{" "}
           <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
-            Bad Review Removal Singapore
+            bad review removal
           </Link>{" "}
           service.
         </>

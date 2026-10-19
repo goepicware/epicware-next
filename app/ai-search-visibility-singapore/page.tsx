@@ -89,6 +89,15 @@ export default function AiSearchVisibilitySingaporePage() {
             AI systems can read, trust, and cite. Businesses that aren&apos;t optimised for this are invisible in the
             answer, regardless of their traditional SEO rank.
           </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+            Epicware is an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">AI marketing agency in Singapore</Link>{" "}
+            that tracks how AI tools describe each client, because{" "}
+            <Link href="/blog/does-chatgpt-make-up-citations" className="text-primary font-medium hover:underline">
+              ChatGPT sometimes makes up citations
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

@@ -49,7 +49,7 @@ const SERVICES = [
     label: "Bad Review Removal",
     href: "/bad-review-removal-singapore",
     description:
-      "$200/review, refunded if not removed within 3 months. Remove fake or policy-violating reviews from your Dubai GBP.",
+      "Remove fake or policy-violating reviews from your Dubai GBP.",
   },
   {
     label: "Local Rank Tracking",
@@ -82,7 +82,22 @@ export default function DubaiPage() {
       <CategoryHero
         badge="EPICWARE · DUBAI · UAE"
         h1="Local SEO & Reputation Management for Dubai SMBs"
-        subtitle="Dubai's competitive SMB market demands the same Local SEO precision as Singapore. Epicware's platform manages GBP, reviews, and rank tracking for Dubai businesses."
+        subtitle={
+          <>
+            Dubai&apos;s competitive SMB market demands the same{" "}
+            <Link
+              href="/local-seo-singapore"
+              className="text-primary font-medium hover:underline"
+            >
+              local SEO services
+            </Link>{" "}
+            as Singapore.{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">
+              Our digital marketing team
+            </Link>{" "}
+            manages GBP, reviews and rank tracking for Dubai businesses.
+          </>
+        }
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
@@ -129,6 +144,16 @@ export default function DubaiPage() {
               who will never return still influences every future customer who searches
               before visiting. Systematic review generation and proactive bad review
               removal are essential in this environment.
+            </p>
+            <p>
+              Dubai outlets get the same{" "}
+              <Link
+                href="/reputation-management-singapore"
+                className="text-primary font-medium hover:underline"
+              >
+                reputation management
+              </Link>{" "}
+              as our Singapore clients.
             </p>
           </div>
         </div>

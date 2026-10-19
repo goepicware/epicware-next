@@ -51,7 +51,7 @@ const CHILD_SERVICES = [
   },
   {
     name: "Google Review Removal Policy",
-    href: "/bad-review-removal-singapore/google-review-removal-policy",
+    href: "/blog/google-review-policy-explained",
     description:
       "Understand exactly which reviews qualify for removal under Google's content policies — and get a free assessment before any payment.",
   },

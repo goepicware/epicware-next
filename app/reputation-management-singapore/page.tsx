@@ -159,6 +159,13 @@ export default function ReputationManagementPage() {
               Multi-outlet businesses face all of these problems multiplied across every location — and most are trying to manage
               it manually, one Google account at a time.
             </p>
+            <p>
+              If you&apos;re already dealing with a rating that&apos;s dropped, our{" "}
+              <Link href="/blog/reputation-recovery-strategy" className="text-primary font-medium hover:underline">
+                reputation recovery strategy
+              </Link>{" "}
+              lays out the fix step by step.
+            </p>
           </div>
         </div>
       </section>
@@ -171,7 +178,11 @@ export default function ReputationManagementPage() {
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              Epicware&apos;s reputation suite covers the full picture.{" "}
+              See{" "}
+              <Link href="/blog/reputation-management-services-singapore" className="text-primary font-medium hover:underline">
+                what&apos;s included in reputation management
+              </Link>{" "}
+              for a full breakdown. Epicware&apos;s reputation suite covers the full picture.{" "}
               <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
                 Review Management
               </Link>{" "}

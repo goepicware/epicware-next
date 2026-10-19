@@ -46,7 +46,11 @@ export default function AeoPage() {
           </p>
           <p>
             If your competitors are appearing when customers ask AI assistants for category recommendations and you
-            are not, AEO addresses the structural gaps that are causing that invisibility.
+            are not, AEO addresses the structural gaps that are causing that invisibility. It works best alongside{" "}
+            <Link href="/ai-search-visibility-singapore/ai-citation-building" className="text-primary font-medium hover:underline">
+              AI citation building
+            </Link>
+            , which gets you mentioned on the sources AI tools quote.
           </p>
         </div>
       }
@@ -66,19 +70,30 @@ export default function AeoPage() {
         </div>
       }
       pricingContent={
-        <p>
-          AEO is available on Epicware&apos;s Growth plan and above. See full plan details at{" "}
-          <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
-          No setup fees on Foundation plan. Cancel anytime.
-        </p>
+        <>
+          <p>
+            AEO is available on Epicware&apos;s Growth plan and above. See full plan details at{" "}
+            <Link href="/pricing" className="text-primary font-medium hover:underline">/pricing</Link>.
+            No setup fees on Foundation plan. Cancel anytime.
+          </p>
+          <p>
+            Run a{" "}
+            <Link href="/ai-visibility" className="text-primary font-medium hover:underline">
+              free AI visibility check
+            </Link>{" "}
+            to see whether ChatGPT names you today.
+          </p>
+        </>
       }
       parentHref="/ai-search-visibility-singapore"
       parentLabel="AI & GEO Visibility Singapore"
+      breadcrumbLabel="AEO"
+      breadcrumbParent={{ label: "AI Search Optimisation", href: "/ai-search-visibility-singapore" }}
       parentSentence={
         <>
           AEO is part of Epicware&apos;s{" "}
           <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
-            AI &amp; GEO Visibility Singapore
+            AI search optimisation
           </Link>{" "}
           service category.
         </>

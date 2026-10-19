@@ -40,7 +40,11 @@ export default function FakeReviewRemovalPage() {
         <div className="space-y-4">
           <p>
             Fake reviews are posted by people who have never had a genuine customer relationship with your business.
-            Common patterns: reviewer has 1–2 reviews on their Google profile and both are for businesses in the same
+            Our guide to{" "}
+            <Link href="/blog/fake-or-unfair-google-reviews-what-to-do" className="text-primary font-medium hover:underline">
+              fake or unfair Google reviews
+            </Link>{" "}
+            shows how to spot them. Common patterns: reviewer has 1–2 reviews on their Google profile and both are for businesses in the same
             area (competitor-linked accounts), reviewer posted the review within hours of another bad review
             (coordinated attack), review references services or products your business doesn&apos;t offer, or the
             review mentions staff by name but no transaction record exists.
@@ -76,15 +80,17 @@ export default function FakeReviewRemovalPage() {
       }
       parentHref="/bad-review-removal-singapore"
       parentLabel="Bad Review Removal Singapore"
+      breadcrumbLabel="Fake Review Removal"
+      breadcrumbParent={{ label: "Bad Review Removal", href: "/bad-review-removal-singapore" }}
       parentSentence={
         <>
           Fake Review Removal is part of Epicware&apos;s{" "}
           <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
-            Bad Review Removal Singapore
-          </Link>{" "}
-          service. See also{" "}
+            bad review removal service
+          </Link>
+          . See also our{" "}
           <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
-            Review Management Singapore
+            review management service
           </Link>{" "}
           for ongoing monitoring.
         </>

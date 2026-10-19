@@ -60,8 +60,16 @@ export default function ReviewWidgetsPage() {
             reviews; brand colours. The widget updates in real time as new reviews arrive.
           </p>
           <p>
-            For multi-outlet operators, separate widgets per location pull from each individual GBP profile. Your
-            website always shows your current rating without anyone logging in to update it.
+            For{" "}
+            <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">
+              multi-outlet operators
+            </Link>
+            , separate widgets per location pull from each individual GBP profile. Your website always shows your
+            current rating without anyone logging in to update it. The more reviews our{" "}
+            <Link href="/review-management-singapore/google-reviews" className="text-primary font-medium hover:underline">
+              Google reviews service
+            </Link>{" "}
+            collects, the more the widget has to show.
           </p>
         </div>
       }
@@ -74,13 +82,15 @@ export default function ReviewWidgetsPage() {
       }
       parentHref="/reputation-management-singapore"
       parentLabel="Reputation Management Singapore"
+      breadcrumbLabel="Review Widgets"
+      breadcrumbParent={{ label: "Reputation Management", href: "/reputation-management-singapore" }}
       parentSentence={
         <>
-          Review Widgets are part of Epicware&apos;s{" "}
+          Review Widgets are part of our{" "}
           <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
-            Reputation Management Singapore
-          </Link>{" "}
-          suite.
+            online reputation management services
+          </Link>
+          .
         </>
       }
     />

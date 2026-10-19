@@ -54,12 +54,10 @@ export default function GbpOptimisationPage() {
       howContent={
         <div className="space-y-4">
           <p>
-            Epicware runs a 19-point audit across your GBP profile, scoring each factor by its impact on rank. The
-            platform applies fixes directly via API for issues like missing categories, incomplete hours, and outdated
-            information. Ongoing optimisation includes weekly AI-generated posts (a freshness signal), monthly citation
-            scans, and continuous monitoring of your rank position using{" "}
-            <Link href="/products/epicmap" className="text-primary font-medium hover:underline">EpicMap</Link>&apos;s
-            visual grid.
+            As an{" "}
+            <Link href="/" className="text-primary font-medium hover:underline">AI-powered marketing agency</Link>,
+            we built our own software. It puts your profile work, rankings and reviews in one dashboard you can log
+            in to any time.
           </p>
           <p>
             Multi-outlet operators run the same process across every profile from one account — no separate logins
@@ -76,6 +74,8 @@ export default function GbpOptimisationPage() {
       }
       parentHref="/local-seo-singapore"
       parentLabel="Local SEO Singapore"
+      breadcrumbLabel="GBP Optimisation"
+      breadcrumbParent={{ label: "Local SEO Services", href: "/local-seo-singapore" }}
       parentSentence={
         <>
           GBP Optimisation is part of Epicware&apos;s{" "}
