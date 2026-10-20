@@ -5,64 +5,210 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Epicware | Singapore AI Marketing Agency & Team" },
-  description: "Epicware was founded by the team behind NinjaOS. Meet the Singapore team behind our AI-powered SEO, local SEO and reputation management work.",
+  title: { absolute: "About Epicware | AI-Powered Growth Agency" },
+  description:
+    "Meet Epicware, a Singapore digital marketing agency with its own AI software. Led by Vignesh Wadarajan, our team runs your SEO, local SEO and reviews.",
   alternates: { canonical: "https://www.epicware.ai/about" },
   openGraph: {
-    title: "About Epicware | Singapore AI Marketing Agency & Team",
-    description: "Epicware was founded by the team behind NinjaOS. Meet the Singapore team behind our AI-powered SEO, local SEO and reputation management work.",
+    title: "About Epicware | AI-Powered Growth Agency",
+    description:
+      "Meet Epicware, a Singapore digital marketing agency with its own AI software. Led by Vignesh Wadarajan, our team runs your SEO, local SEO and reviews.",
     url: "https://www.epicware.ai/about",
   },
 };
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Epicware Pte. Ltd.",
-  "url": "https://epicware.ai",
-  "description": "Singapore-built Local SEO and Reputation Management platform for SMBs. Covering Google Maps rank, review generation, bad review removal, and GBP optimisation.",
-  "foundingLocation": {
-    "@type": "Place",
-    "addressCountry": "SG",
-    "name": "Singapore"
-  },
-  "areaServed": ["SG", "MY", "AE", "GB", "US"],
-  "sameAs": [
-    "https://www.linkedin.com/company/epicware"
-  ]
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.epicware.ai/about#webpage",
+      url: "https://www.epicware.ai/about",
+      name: "About Epicware | AI-Powered Digital Marketing Agency",
+      description:
+        "Meet Epicware, a Singapore digital marketing agency with its own AI software. Led by Vignesh Wadarajan, our team runs your SEO, local SEO and reviews.",
+      about: { "@id": "https://www.epicware.ai/#organization" },
+      mainEntity: { "@id": "https://www.epicware.ai/#organization" },
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.epicware.ai/#organization",
+      name: "Epicware",
+      legalName: "Epicware Pte Ltd",
+      url: "https://www.epicware.ai/",
+      description:
+        "Epicware is a digital marketing agency in Singapore with its own AI-powered software for SEO, local SEO, AI search and reputation management.",
+      email: "hello@epicware.ai",
+      telephone: "+65 8444 6582",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "78 Shenton Way",
+        addressLocality: "Singapore",
+        postalCode: "079120",
+        addressCountry: "SG",
+      },
+      areaServed: { "@type": "Country", name: "Singapore" },
+      founder: { "@id": "https://www.epicware.ai/about#vignesh" },
+      sameAs: ["https://maps.google.com/?cid=14493849264909617169"],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.epicware.ai/about#vignesh",
+      name: "Vignesh Wadarajan",
+      jobTitle: "Founder & CEO",
+      worksFor: { "@id": "https://www.epicware.ai/#organization" },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.epicware.ai/about#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Are you a software tool (SaaS) or a digital marketing agency?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We are a full-service digital marketing agency powered by our own proprietary AI software. Unlike pure SaaS platforms where you have to do all the work yourself, our team of marketing experts manages and executes your campaigns using our custom-built AI engine to deliver faster, data-driven results.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who leads Epicware?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Epicware is led by Founder and CEO Vignesh Wadarajan, the former CEO of NinjaOS, the F&B technology company that processed over $120M in gross merchandise value.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Where is Epicware based?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Epicware is based at 78 Shenton Way, Singapore. We work with businesses across the island, from single shops and clinics to multi-outlet restaurant chains.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I have to use Epicware's software myself?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Our team runs the software for you and reports the results. You can still log in to your dashboard any time to see your rankings, reviews and posts.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
-const products = [
+const howWeWork = [
   {
-    name: "EpicReview",
-    description: "Automated review generation via WhatsApp and email. Connects to your booking system or POS and sends personalised review requests at the optimal post-service moment.",
+    title: "Our AI software",
+    description: "Real-time review alerts, district-by-district rank tracking, and AI-drafted replies and posts.",
   },
   {
-    name: "EpicResponse",
-    description: "AI review response that drafts professional replies to every new Google review in your brand voice. Covers all locations from a single dashboard.",
+    title: "Our specialists",
+    description: "Strategy, content, approvals, and the calls software shouldn't make on its own.",
   },
   {
-    name: "EpicMap",
-    description: "Hyperlocal rank tracking at a grid level across your district. Shows exactly where you rank in the top 3 and where competitors are ahead.",
-  },
-  {
-    name: "Bad Review Removal",
-    description: "$200 per review, refunded if not removed within 3 months. Assessment, formal submission, and systematic escalation through all available Google support channels.",
+    title: "You",
+    description: "One team to talk to, clear reports, and no software to learn.",
   },
 ];
 
-const principles = [
+const numbers = [
+  { figure: "10+ years", label: "Industry experience across our team" },
+  { figure: "50+", label: "Singapore brands and enterprises served" },
+  { figure: "100+", label: "Outlets managed on Google" },
+  { figure: "50+", label: "Business reputations restored" },
+  { figure: "4", label: "AI products built in-house" },
+];
+
+const whatWeDo = [
   {
-    title: "Build for the market, not against it",
-    description: "Singapore businesses run on WhatsApp. The majority of their customers find them on Google Maps. We build tools that work with these realities — not tools designed for a different market that have been modified for Singapore.",
+    title: "Website SEO",
+    description: "SEO services that help your website rank on Google and get quoted in AI answers.",
+    href: "/seo-agency-singapore",
   },
   {
-    title: "Outcomes over outputs",
-    description: "Reports don't rank businesses. Reviews don't respond themselves. GBP profiles don't optimise automatically. We automate the execution so that the outcomes — improved rank, more reviews, better rating — are the result of using the platform.",
+    title: "Local SEO",
+    description: 'Local SEO services that help you show up in Google Maps and "near me" searches, starting with your Google Business Profile.',
+    href: "/local-seo-singapore",
   },
   {
-    title: "Aligned incentives",
-    description: "This means we only pursue removals we believe have a genuine case — and we have a direct financial incentive to succeed.",
+    title: "AI search",
+    description: "AI search optimisation so ChatGPT, Gemini and Google AI Overviews can find and describe your business correctly.",
+    href: "/ai-search-visibility-singapore",
+  },
+  {
+    title: "Reputation",
+    description: "Online reputation management: more Google reviews, a reply to every review, and help with fake or unfair ones.",
+    href: "/reputation-management-singapore",
+  },
+];
+
+const faqGroups = [
+  {
+    label: null,
+    items: [
+      {
+        q: "Are you a software tool (SaaS) or a digital marketing agency?",
+        a: "We are a full-service digital marketing agency powered by our own proprietary AI software. Unlike pure SaaS platforms where you have to do all the work yourself, our team of marketing experts manages and executes your campaigns using our custom-built AI engine to deliver faster, data-driven results.",
+      },
+      {
+        q: "Who leads Epicware?",
+        a: "Epicware is led by Founder and CEO Vignesh Wadarajan, the former CEO of NinjaOS, the F&B technology company that processed over $120M in gross merchandise value.",
+      },
+      {
+        q: "Where is Epicware based?",
+        a: "Epicware is based at 78 Shenton Way, Singapore. We work with businesses across the island, from single shops and clinics to multi-outlet restaurant chains.",
+      },
+      {
+        q: "Do I have to use Epicware's software myself?",
+        a: "No. Our team runs the software for you and reports the results. You can still log in to your dashboard any time to see your rankings, reviews and posts.",
+      },
+      {
+        q: "Do I need to learn how to use your AI software?",
+        a: "Not at all! Our team handles everything for you — from strategy and campaign setup to optimization and reporting. You get all the speed and accuracy of advanced AI, backed by real human expertise, without any learning curve.",
+      },
+    ],
+  },
+  {
+    label: "Questions About Results & Strategy",
+    items: [
+      {
+        q: "How does your AI technology help my business grow faster?",
+        a: "Traditional agencies rely on slow, manual processes. Our custom AI software automates hours of market research, local SEO audits, content creation, and competitor analysis in seconds. This allows our expert marketers to focus on strategy, giving your business a distinct edge and faster growth.",
+      },
+      {
+        q: "What industries or businesses do you specialize in?",
+        a: "We specialize in working with local businesses, multi-location brands, and growing enterprises looking to dominate their local markets, rank higher on Google, and convert more local leads into paying customers.",
+      },
+    ],
+  },
+  {
+    label: "Questions About Working Together",
+    items: [
+      {
+        q: "Who will be managing my account and campaigns?",
+        a: "You will be assigned a dedicated Account Manager and a team of marketing specialists. While our AI software works behind the scenes to crunch data and automate workflows, your dedicated team ensures everything aligns perfectly with your business goals.",
+      },
+      {
+        q: "How are you different from traditional digital marketing agencies?",
+        a: "Traditional agencies are often slow, expensive, and lack clear data insights. Pure tech tools leave all the work on your shoulders. Epicware combines the best of both worlds: the strategy and personal care of a top-tier agency with the speed and precision of proprietary AI software.",
+      },
+    ],
+  },
+  {
+    label: "Questions About Pricing & Getting Started",
+    items: [
+      {
+        q: "How do we get started with Epicware?",
+        a: "Getting started is simple! Book a free strategy call with our team. We'll analyze your current online presence, discuss your growth goals, and present a custom marketing plan tailored to your business.",
+      },
+      {
+        q: "What kind of support do you provide after we onboard?",
+        a: "We offer end-to-end support, including regular performance reviews, transparent custom dashboards, and direct communication with your dedicated account manager to ensure continuous growth.",
+      },
+    ],
   },
 ];
 
@@ -71,142 +217,262 @@ export default function AboutPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* Hero */}
+      {/* Fold 1: Hero */}
       <section className="hero-gradient pt-28 pb-16 text-center">
         <div className="container mx-auto px-6 max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-6">
-            ABOUT EPICWARE · SINGAPORE-BUILT
+            ABOUT EPICWARE
           </div>
           <h1 className="font-display font-bold text-foreground mb-5 leading-tight">
-            About Epicware — Built in Singapore for the Way SMBs Actually Work
+            About Epicware: An AI-Powered Growth Marketing Agency
           </h1>
+          <p className="text-lg text-foreground/80 font-medium mb-4">
+            We built the software. Our team drives the growth.
+          </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-            Epicware is a{" "}
-            <Link href="/" className="text-foreground font-medium hover:underline">digital marketing agency in Singapore</Link>{" "}
-            with its own AI-powered software for SEO, local SEO, AI search and reputation management. We help businesses{" "}
-            <Link href="/seo-agency-singapore" className="text-foreground font-medium hover:underline">rank on Google</Link>, Google Maps and{" "}
-            <Link href="/ai-search-visibility-singapore" className="text-foreground font-medium hover:underline">AI search</Link>, generate more reviews and remove bad ones.
+            Epicware is a digital marketing agency in Singapore with its own AI-powered software. Our
+            specialists use it to get local businesses found on Google, Google Maps and AI search, win
+            more reviews and protect their reputation. You never have to learn the software: our team
+            runs it for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/book-demo#form"
-              className="inline-flex items-center justify-center h-12 px-7 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-all duration-300 hover:scale-105">
-              Book a Free Demo →
+            <Link
+              href="/book-demo#form"
+              className="inline-flex items-center justify-center h-12 px-7 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
+            >
+              Book a Free Strategy Call →
             </Link>
-            <Link href="/services"
-              className="inline-flex items-center justify-center h-12 px-7 rounded-full border border-border/60 text-foreground font-medium text-sm hover:border-primary/30 transition-all duration-300">
-              See All Services
+            <Link
+              href="/free-audit"
+              className="inline-flex items-center justify-center h-12 px-7 rounded-full border border-border/60 text-foreground font-medium text-sm hover:border-primary/30 transition-all duration-300"
+            >
+              Get Your Free SEO Audit
             </Link>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-8 text-sm text-muted-foreground">
-            <span>Singapore</span>
-            <span>·</span>
-            <span>Malaysia</span>
-            <span>·</span>
-            <span>UAE</span>
-            <span>·</span>
-            <span>United Kingdom</span>
-            <span>·</span>
-            <span>United States</span>
           </div>
         </div>
       </section>
 
-      {/* Why We Built Epicware */}
+      {/* Fold 2: Who we are */}
       <section className="py-14 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-6">
-            OUR STORY
-          </div>
-          <h2 className="font-display font-bold text-foreground mb-6 leading-tight">Why We Built Epicware</h2>
+          <h2 className="font-display font-bold text-foreground mb-6 leading-tight">
+            An Agency First, With Our Own AI Behind Every Client
+          </h2>
           <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
-            <p>The founding team previously built NinjaOS — a restaurant management platform that reached $120M in GMV before its 2021 exit. In that process, we worked closely with hundreds of Singapore F&B operators on every aspect of their business: POS, ordering, table management, loyalty, and digital presence.</p>
-            <p>One pattern was consistent: operators who ranked well on Google Maps outgrew those who didn&apos;t, regardless of food quality or location. A restaurant in position 1–3 for &quot;restaurant near me&quot; had a structurally better business than one in position 7, everything else being equal. Yet most operators had no systematic approach to the signals that drove rank.</p>
-            <p>The tools that existed were either built for the US or UK market (using SMS rather than WhatsApp, optimised for US directories rather than Singapore&apos;s GBP-dominant landscape) or were agency services with high retainers and slow feedback loops. Neither was right for a Singapore hawker stall owner or a 3-outlet clinic network.</p>
-            <p>Epicware was built to fill that gap: a Singapore-native platform that automates the work of local SEO and reputation management — at a price point that makes sense for SMBs, through the channels that actually work in Singapore.</p>
+            <p>
+              Most business owners don&apos;t want another dashboard to manage. They want customers
+              through the door, higher Google Maps rankings and revenue they can see.
+            </p>
+            <p>
+              So Epicware works as your marketing team. Our specialists plan the strategy, do the work
+              and report the results. Our own AI software does the heavy lifting in the background: it
+              tracks your rankings, flags new reviews the moment they arrive, and drafts replies and
+              posts for our team to check.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Products */}
+      {/* Fold 3: Why we built our own AI */}
       <section className="py-14 lg:py-20 section-gradient-1">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="font-display font-bold text-foreground mb-6 leading-tight">Why We Built Our Own AI</h2>
+          <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
+            <p>
+              Business owners kept getting stuck between two bad options. Traditional agencies were
+              slow, with manual reports and weeks between updates. Software tools were fast but left all
+              the work to the owner, and few owners had time to use them.
+            </p>
+            <p>
+              We built our own AI software to close that gap. It handles the repetitive work, such as
+              rank scans across every Singapore district, review alerts, reply drafts and post
+              scheduling, so our specialists spend their time on strategy and results.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fold 4: How we work */}
+      <section className="py-14 lg:py-20">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-4">
-              THE PLATFORM
-            </div>
-            <h2 className="font-display font-bold text-foreground leading-tight">What Epicware Is Today</h2>
+            <h2 className="font-display font-bold text-foreground leading-tight mb-3">AI Speed, Human Judgement</h2>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+              Every client gets both: proven local SEO strategy from a team with 10+ years in the
+              industry, and AI workflows that make the work faster.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {products.map((product) => (
-              <div key={product.name} className="rounded-2xl border border-border/60 bg-card p-6">
-                <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">{product.name}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            {howWeWork.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-border/60 bg-card p-6">
+                <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">{item.title}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {["10+ Years Experience", "50+ Brands Served", "Singapore-Built", "100+ Outlets Managed"].map((signal) => (
+              <div
+                key={signal}
+                className="flex items-center gap-2 bg-card border border-border/60 rounded-full px-4 py-2 shadow-card"
+              >
+                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                <span className="text-sm font-medium text-foreground/80">{signal}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Who We Serve */}
+      {/* Fold 5: Epicware in numbers */}
+      <section className="py-14 lg:py-20 section-gradient-1">
+        <div className="container mx-auto px-6 max-w-5xl text-center">
+          <h2 className="font-display font-bold text-foreground leading-tight mb-10">Epicware in Numbers</h2>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
+            {numbers.map((n) => (
+              <div key={n.label}>
+                <p className="font-display font-bold text-foreground text-3xl md:text-4xl mb-2">{n.figure}</p>
+                <p className="text-sm text-muted-foreground leading-snug">{n.label}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Real-time review alerts · District-by-district rank scans · AI-drafted review replies
+          </p>
+        </div>
+      </section>
+
+      {/* Fold 6: Founder's note */}
       <section className="py-14 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-6">
-            MARKETS
-          </div>
-          <h2 className="font-display font-bold text-foreground mb-6 leading-tight">Who We Serve</h2>
-          <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
-            <p>Epicware&apos;s primary market is Singapore — where the platform was built and where the majority of managed profiles operate. The Singapore market&apos;s compact geography, high smartphone penetration, and Google Maps dominance make it an ideal fit for the platform&apos;s approach.</p>
-            <p>We are also active in Malaysia, where WhatsApp adoption mirrors Singapore and Google Maps is the primary local search platform. UAE operations serve the growing SMB market in Dubai and Abu Dhabi. UK and US markets are served primarily through the reseller programme, where local agencies and consultants use Epicware&apos;s platform to serve their own SMB clients.</p>
-            <p>The industries we serve most actively: F&amp;B (restaurants, cafes, hawker businesses), healthcare (GP clinics, dental, physiotherapy), beauty (hair salons, nail studios, aesthetics), automotive (workshops, detailing), and professional services.</p>
+          <h2 className="font-display font-bold text-foreground mb-8 leading-tight text-center">
+            A Message From Our Founder &amp; CEO
+          </h2>
+          <div className="rounded-2xl border border-border/60 bg-card p-6 lg:p-10">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+              <div
+                className="w-20 h-20 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0"
+                aria-label="Vignesh Wadarajan, Founder and CEO of Epicware"
+                role="img"
+              >
+                <span className="font-display font-bold text-primary text-2xl">VW</span>
+              </div>
+              <div className="text-center sm:text-left">
+                <p className="font-semibold text-foreground">Vignesh Wadarajan</p>
+                <p className="text-sm text-muted-foreground">Founder &amp; CEO, Epicware</p>
+              </div>
+            </div>
+            <div className="space-y-4 text-base text-muted-foreground leading-relaxed mb-6">
+              <p>
+                At NinjaOS, I spent years building technology for restaurant groups and multi-outlet
+                brands across Asia-Pacific. One frustration came up again and again: owners didn&apos;t
+                need another complicated dashboard. They didn&apos;t have time to learn complex AI
+                tools. They wanted customers through the door, higher Google Maps rankings and real
+                revenue.
+              </p>
+              <p>
+                So we built Epicware the other way round. We started with the agency, then built our
+                own AI software to power it. When you work with us, you&apos;re never left figuring out
+                a tool on your own. You get a team of marketing specialists who use our AI to do the
+                heavy lifting, and who answer to you for the results.
+              </p>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+              Vignesh leads Epicware&apos;s strategy and product. Before Epicware, he was CEO of
+              NinjaOS, the online ordering technology company behind restaurant brands across
+              Asia-Pacific.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-medium text-foreground/80">
+                Former CEO of NinjaOS: $120M+ in GMV and a successful exit
+              </span>
+              <span className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-medium text-foreground/80">
+                Member, Forbes Technology Council
+              </span>
+              <span className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-medium text-foreground/80">
+                Deep roots in Singapore&apos;s tech and business ecosystem
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* How We Work */}
+      {/* Fold 7: What we do */}
       <section className="py-14 lg:py-20 section-gradient-1">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-4">
-              OUR APPROACH
-            </div>
-            <h2 className="font-display font-bold text-foreground leading-tight">How We Work</h2>
+            <h2 className="font-display font-bold text-foreground leading-tight mb-3">What We Do</h2>
+            <p className="text-base text-muted-foreground">One team for every way customers find you online.</p>
           </div>
-          <div className="space-y-6">
-            {principles.map((principle, i) => (
-              <div key={i} className="flex gap-4 rounded-2xl border border-border/60 bg-card p-6">
-                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold text-foreground mb-1">{principle.title}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{principle.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {whatWeDo.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="rounded-2xl border border-border/60 bg-card p-6 hover:border-primary/30 transition-colors duration-200"
+              >
+                <p className="font-semibold text-foreground mb-2">{item.title}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              </Link>
+            ))}
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed text-center">
+            All of it runs on our four AI products: EpicMap, EpicReview, EpicSocial and EpicEngage. Our{" "}
+            <Link href="/reviews" className="text-foreground font-medium hover:underline">client reviews</Link>{" "}
+            and{" "}
+            <Link href="/case-studies" className="text-foreground font-medium hover:underline">case studies</Link>{" "}
+            show what that looks like in practice.
+          </p>
+        </div>
+      </section>
+
+      {/* Fold 8: FAQ */}
+      <section className="py-14 lg:py-20">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="font-display font-bold text-foreground mb-10 leading-tight text-center">
+            Questions About Epicware
+          </h2>
+          <div className="space-y-10">
+            {faqGroups.map((group, gi) => (
+              <div key={gi}>
+                {group.label && (
+                  <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">{group.label}</p>
+                )}
+                <div className="space-y-5">
+                  {group.items.map((item) => (
+                    <div key={item.q} className="rounded-2xl border border-border/60 bg-card p-5">
+                      <p className="font-semibold text-foreground text-sm mb-2">{item.q}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-6">
-            Our <Link href="/reviews" className="text-foreground font-medium hover:underline">client reviews</Link> and{" "}
-            <Link href="/case-studies" className="text-foreground font-medium hover:underline">case studies</Link> show what that looks like in practice.
-          </p>
         </div>
       </section>
 
-      {/* Internal links */}
-      <section className="py-12 lg:py-16">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display font-semibold text-foreground mb-6">Explore Epicware</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { label: "Bad Review Removal Singapore", href: "/bad-review-removal-singapore" },
-              { label: "GBP Optimisation Singapore", href: "/local-seo-singapore/gbp-optimisation" },
-              { label: "Review Management Singapore", href: "/review-management-singapore" },
-              { label: "Local SEO Singapore", href: "/local-seo-singapore" },
-              { label: "Reputation Management Singapore", href: "/reputation-management-singapore" },
-              { label: "Reseller Programme", href: "/reseller" },
-            ].map((link) => (
-              <Link key={link.href} href={link.href}
-                className="block rounded-xl border border-border/60 bg-card px-5 py-3.5 text-sm font-medium text-foreground hover:border-primary/30 hover:text-primary transition-all duration-200">
-                {link.label} →
-              </Link>
-            ))}
+      {/* Fold 9: Call to action */}
+      <section className="py-16 lg:py-20 section-gradient-1">
+        <div className="container mx-auto px-6 max-w-2xl text-center">
+          <h2 className="font-display font-bold text-foreground mb-4">Let&apos;s Grow Your Business Together</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Book a free strategy call. We&apos;ll show you where you stand on Google, Google Maps and AI
+            search, and what we&apos;d fix first.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/book-demo#form"
+              className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-foreground text-background font-semibold text-base hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
+            >
+              Book a Free Strategy Call →
+            </Link>
+            <Link
+              href="/free-audit"
+              className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-border text-foreground font-semibold text-base hover:bg-muted transition-colors duration-200"
+            >
+              Get Your Free SEO Audit
+            </Link>
           </div>
         </div>
       </section>
