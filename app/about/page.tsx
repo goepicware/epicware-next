@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import FinalCTA from "@/components/home/FinalCTA";
@@ -350,12 +351,14 @@ export default function AboutPage() {
           </h2>
           <div className="rounded-2xl border border-border/60 bg-card p-6 lg:p-10">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
-              <div
-                className="w-20 h-20 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0"
-                aria-label="Vignesh Wadarajan, Founder and CEO of Epicware"
-                role="img"
-              >
-                <span className="font-display font-bold text-primary text-2xl">VW</span>
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-primary/20 shrink-0">
+                <Image
+                  src="/assets/founder-vignesh.jpg"
+                  alt="Vignesh Wadarajan, Founder and CEO of Epicware"
+                  fill
+                  sizes="80px"
+                  className="object-cover"
+                />
               </div>
               <div className="text-center sm:text-left">
                 <p className="font-semibold text-foreground">Vignesh Wadarajan</p>
