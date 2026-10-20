@@ -312,6 +312,13 @@ export default function ReputationManagementPage() {
             </Link>{" "}
             — $200/review, refunded if not removed within 3 months.
           </p>
+          <p className="text-base text-muted-foreground mt-3">
+            Reputation and reviews work hand in hand with{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              Google Business Profile optimisation
+            </Link>{" "}
+            — a well-ranked profile gets more of the review traffic worth protecting.
+          </p>
         </div>
       </section>
 

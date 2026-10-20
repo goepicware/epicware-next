@@ -86,7 +86,11 @@ export default function Post() {
             <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
               local SEO services in Singapore
             </Link>{" "}
-            work on the two factors you can influence, relevance and prominence, in every district you serve.</p>
+            work on the two factors you can influence, relevance and prominence, in every district you serve. Our{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              Google Business Profile optimisation services
+            </Link>{" "}
+            close every relevance and prominence gap covered in this guide.</p>
         </>
       }
       ctaHref="/local-seo-singapore/gbp-optimisation"

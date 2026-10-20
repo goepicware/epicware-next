@@ -48,7 +48,7 @@ export default function Page() {
       body={
         <>
           <h2>Root Cause Analysis</h2>
-          <p>Epicware conducted a <Link href="/local-seo-singapore/gbp-optimisation">GBP audit</Link> across all 4 outlets. The findings identified two primary issues:</p>
+          <p>As part of Epicware&apos;s <Link href="/local-seo-singapore">local SEO services</Link>, the team conducted a <Link href="/local-seo-singapore/gbp-optimisation">GBP audit</Link> across all 4 outlets. The findings identified two primary issues:</p>
           <ul>
             <li><strong>Review count gap:</strong> 30 reviews at the best outlet, 12–18 at the others. Competitors in the same neighbourhoods had 120–250 reviews. No review generation system was in place — stylists occasionally reminded clients verbally, which generated inconsistent results.</li>
             <li><strong>GBP profile gaps:</strong> All 4 profiles had incorrect secondary categories (missing &quot;Hairdresser&quot; and &quot;Hair Colouring Specialist&quot; categories). Services lists were incomplete — popular services like balayage, keratin treatment, and scalp treatment were not listed. Photo libraries were thin (3–5 photos per outlet). No GBP posts had been published in over 8 months.</li>

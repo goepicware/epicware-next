@@ -136,7 +136,14 @@ export default function ManageMultipleGBPLocationsPage() {
             </p>
             <p>
               Manual multi-outlet management creates gaps. Every gap is a customer
-              lost or a review left unanswered. Epicware closes those gaps.
+              lost or a review left unanswered. Epicware closes those gaps with{" "}
+              <Link
+                href="/local-seo-singapore/gbp-optimisation"
+                className="text-primary font-medium hover:underline"
+              >
+                Google Business Profile optimisation for every outlet
+              </Link>
+              .
             </p>
           </div>
         </div>

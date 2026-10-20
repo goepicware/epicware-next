@@ -113,7 +113,11 @@ export default function Post() {
             Local SEO is an entirely different discipline. Its goal is not to rank in the ten blue
             links — it&apos;s to rank in the <strong>Google Map Pack</strong>: the block of three
             business listings that appears at the top of search results when someone searches for a
-            business or service near them.
+            business or service near them. Our{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local SEO services
+            </Link>{" "}
+            focus entirely on this discipline.
           </p>
           <p>
             The Map Pack is prime real estate. It sits above the organic results. It shows your

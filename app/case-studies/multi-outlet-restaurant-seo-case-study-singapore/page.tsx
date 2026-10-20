@@ -386,8 +386,11 @@ export default function MultiOutletRestaurantCaseStudyPage() {
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-display font-bold text-foreground text-2xl lg:text-3xl mb-3">The Strategy</h2>
           <p className="text-muted-foreground text-[15px] mb-10">
-            Epicware ran this brand through the full local growth workflow — the same five-stage system we use for
-            every multi-outlet SMB.
+            Epicware ran this brand through the full{" "}
+            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              local SEO services
+            </Link>{" "}
+            workflow — the same five-stage system we use for every multi-outlet SMB.
           </p>
 
           <div className="space-y-9 mb-12">

@@ -1404,6 +1404,11 @@ ${result.enrichedKeywords.length > 0 ? `
                   <p className="text-gray-300 text-sm leading-relaxed mb-8 max-w-lg mx-auto">
                     {result.shortBusinessName} built a {result.gbpRating}★ rating across {result.gbpReviewCount} reviews with no SEO infrastructure behind it.
                     The next 90 days either compound that into a real local moat — or get eaten by {result.competitors[0]?.name} before your reputation has time to travel.
+                    Most of what closes these gaps falls under our{" "}
+                    <Link href="/local-seo-singapore/gbp-optimisation" className="text-white underline hover:text-gray-200">
+                      GBP optimisation services
+                    </Link>
+                    .
                   </p>
 
                   {/* Part C — CTAs */}

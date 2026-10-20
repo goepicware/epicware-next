@@ -114,7 +114,14 @@ export default function RankHigherOnGoogleMapsPage() {
               >
                 Google Maps ranking factors
               </Link>{" "}
-              explains what moves your position.
+              explains what moves your position, and our{" "}
+              <Link
+                href="/local-seo-singapore/gbp-optimisation"
+                className="text-primary font-medium hover:underline"
+              >
+                Google Maps ranking optimisation
+              </Link>{" "}
+              closes those gaps for you.
             </p>
           </div>
         </div>

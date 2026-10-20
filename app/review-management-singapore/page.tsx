@@ -209,6 +209,19 @@ export default function ReviewManagementSingaporePage() {
         </div>
       </section>
 
+      {/* Cross-link to GBP optimisation */}
+      <section className="py-8">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <p className="text-base text-muted-foreground">
+            Reviews are one part of a stronger Maps rank. Pair review management with{" "}
+            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              Google Business Profile optimisation
+            </Link>{" "}
+            for a profile that converts the traffic reviews bring in.
+          </p>
+        </div>
+      </section>
+
       <FinalCTA />
       <StickyMobileCTA />
       <div className="h-20 lg:hidden" />

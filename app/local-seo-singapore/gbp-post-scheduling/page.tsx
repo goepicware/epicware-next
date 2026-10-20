@@ -42,7 +42,17 @@ export default function GbpPostSchedulingPage() {
       }
       trustSignals={["AI-Generated Posts", "Weekly Publishing", "Singapore-Built", "GBP Native"]}
       imageSrc="/assets/epicmap-before-after.png"
-      openingParagraph="Google treats GBP profiles that post regularly as more active and relevant than those that don't. A profile with no posts in 3 months signals inactivity. For Singapore SMBs competing in dense local categories, freshness signals like regular GBP posts can support rank improvement."
+      openingParagraph={
+        <>
+          Part of our{" "}
+          <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            GBP optimisation
+          </Link>{" "}
+          services. Google treats GBP profiles that post regularly as more active and relevant than those that
+          don&apos;t. A profile with no posts in 3 months signals inactivity. For Singapore SMBs competing in dense
+          local categories, freshness signals like regular GBP posts can support rank improvement.
+        </>
+      }
       whenTitle="When You Need GBP Post Scheduling"
       whenContent={
         <div className="space-y-4">

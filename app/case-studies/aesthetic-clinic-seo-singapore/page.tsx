@@ -462,7 +462,11 @@ export default function AestheticClinicSEOCaseStudyPage() {
               <div>
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Location-Specific Local SEO for Two Outlets</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
-                  Each outlet was given its own keyword identity, its own landing structure and its own catchment
+                  As part of our{" "}
+                  <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+                    local SEO services
+                  </Link>
+                  , each outlet was given its own keyword identity, its own landing structure and its own catchment
                   strategy — so Orchard and Hougang stopped competing with each other for the same terms.
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
