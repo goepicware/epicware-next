@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "How to Remove Bad Google Reviews in Singapore — The Complete Guide",
+  title: "How to Remove Bad Google Reviews in Singapore",
   description: "Learn exactly how to remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. Step-by-step process and professional removal service.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-remove-bad-google-reviews" },
   openGraph: {

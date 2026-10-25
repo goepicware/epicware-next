@@ -8,7 +8,7 @@ const OG_IMAGE = "https://www.epicware.ai/assets/blog/secondary-categories-googl
 const CANONICAL = "https://www.epicware.ai/blog/secondary-categories-google-business";
 
 export const metadata: Metadata = {
-  title: "Don't Fill All Nine: Audit Your Google Business Secondary Categories",
+  title: "Google Business Secondary Categories Audit",
   description:
     "A practical audit guide for Google Business secondary categories — the IS/HAS test, how many to use, common mistakes, and how to check category availability across locations.",
   alternates: { canonical: CANONICAL },

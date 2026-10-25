@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Google Maps Ranking Factors Explained — Where Reviews Fit In",
+  title: "Google Maps Ranking Factors Explained",
   description: "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence. Learn how reviews, GBP completeness, and citations affect your rank.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-maps-ranking-factors" },
   openGraph: {

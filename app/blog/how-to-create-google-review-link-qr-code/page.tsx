@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "How to Create a Google Review Link & QR Code for Your Business",
+  title: "How to Create a Google Review Link & QR Code",
   description: "Step-by-step guide to generate your Google review link and create a QR code for your business. Use at checkout, on receipts, or in your window.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-create-google-review-link-qr-code" },
   openGraph: {

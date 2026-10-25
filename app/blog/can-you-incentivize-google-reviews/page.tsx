@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Can You Incentivise Google Reviews? What the Policy Actually Says",
+  title: "Can You Incentivise Google Reviews?",
   description: "Google's policy on incentivised reviews explained. What counts as an incentive, what the risks are, and how to ethically increase review count.",
   alternates: { canonical: "https://www.epicware.ai/blog/can-you-incentivize-google-reviews" },
   openGraph: {

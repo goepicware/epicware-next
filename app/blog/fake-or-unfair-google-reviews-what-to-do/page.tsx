@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Fake or Unfair Google Reviews: What to Do | Epicware Blog",
+  title: "Fake or Unfair Google Reviews: What to Do",
   description: "Step-by-step guide for Singapore businesses dealing with fake, competitor-posted, or policy-violating Google reviews. Includes removal options and response strategies.",
   alternates: { canonical: "https://www.epicware.ai/blog/fake-or-unfair-google-reviews-what-to-do" },
   openGraph: {

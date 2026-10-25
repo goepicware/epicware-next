@@ -8,7 +8,7 @@ const OG_IMAGE = "https://www.epicware.ai/assets/blog/google-maps-spam-reporting
 const CANONICAL = "https://www.epicware.ai/blog/google-maps-spam-reporting";
 
 export const metadata: Metadata = {
-  title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals",
+  title: "Remove Google Maps Spam: Evidence Checklist",
   description:
     "A practical checklist for reporting spam, fake listings, and fraudulent profiles on Google Maps — what evidence to gather, how to file a report or Business Redressal Complaint, and how to win appeals.",
   alternates: { canonical: CANONICAL },

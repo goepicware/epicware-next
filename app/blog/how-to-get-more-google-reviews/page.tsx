@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "How to Get More Google Reviews — Ethical Methods That Work",
+  title: "How to Get More Google Reviews",
   description: "A structured framework for increasing Google reviews for your Singapore business. WhatsApp templates, timing strategies, and automation options.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-get-more-google-reviews" },
   openGraph: {

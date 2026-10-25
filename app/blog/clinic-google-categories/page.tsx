@@ -8,7 +8,7 @@ const OG_IMAGE = "https://www.epicware.ai/assets/blog/clinic-google-categories/h
 const CANONICAL = "https://www.epicware.ai/blog/clinic-google-categories";
 
 export const metadata: Metadata = {
-  title: "Clinic Owners: 2–4 Week Checklist to Change Google Categories Safely",
+  title: "Changing Google Categories: Clinic Checklist",
   description:
     "Step-by-step checklist for clinic owners to pick and change Google Business Profile categories safely, avoid re-verification, and monitor impact for 2–4 weeks.",
   alternates: { canonical: CANONICAL },

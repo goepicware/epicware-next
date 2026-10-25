@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Multi-Outlet F&B Local SEO Case Study Singapore | Epicware",
+  title: "Multi-Outlet F&B Local SEO Case Study Singapore",
   description:
     "How Epicware grew a 5-outlet Singapore restaurant chain's organic traffic 24%, won #1 Google rankings and AI Overview citations. Real local SEO results.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/multi-outlet-restaurant-seo-case-study-singapore" },

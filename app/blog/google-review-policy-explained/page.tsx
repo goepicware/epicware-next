@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Google Review Policy Explained — What Gets Removed & Why",
+  title: "Google Review Policy Explained",
   description: "Complete breakdown of Google's review content policies for Singapore business owners. Know exactly which reviews violate policy and can be removed.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-review-policy-explained" },
   openGraph: {

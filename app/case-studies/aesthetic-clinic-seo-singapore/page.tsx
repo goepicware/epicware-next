@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Aesthetic Clinic SEO Case Study Singapore: 60 Days | Epicware",
+  title: "Aesthetic Clinic SEO Case Study Singapore",
   description:
     "How a Singapore medical aesthetic clinic hit #1 on Google and ChatGPT for Orchard and Hougang treatment keywords in 60 days — inside MOH advertising rules.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/aesthetic-clinic-seo-singapore" },
