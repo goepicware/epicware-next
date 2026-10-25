@@ -157,7 +157,7 @@ export default function CategoryHero({
               >
                 <Image
                   src={imageSrc}
-                  alt=""
+                  alt={h1}
                   width={760}
                   height={580}
                   className="w-full h-auto"

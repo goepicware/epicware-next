@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Review Velocity vs Total Review Count — Which Matters More?",
+  title: "Review Velocity vs Total Review Count",
   description: "Understand whether Google Maps ranking is driven more by review count or review recency. The answer affects your entire review strategy.",
   alternates: { canonical: "https://www.epicware.ai/blog/review-velocity-vs-total-review-count" },
   openGraph: {
