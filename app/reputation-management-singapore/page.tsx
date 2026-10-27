@@ -258,7 +258,7 @@ export default function ReputationManagementPage() {
               <Link href="/products/epicreview" className="text-primary font-medium hover:underline">
                 EpicReview product
               </Link>{" "}
-              is the technology layer behind these services — a self-serve platform you can access directly without any agency involvement.
+              is the technology layer behind these services — the same software our team uses to run your reputation management every day.
             </p>
           </div>
         </div>
@@ -284,8 +284,8 @@ export default function ReputationManagementPage() {
             <p>
               The platform was built by the team behind NinjaOS, an F&amp;B SaaS product that processed over $120M in
               GMV before its 2021 exit. We are operators who have managed reputations for restaurants, clinics, salons,
-              and tuition centres across Singapore. No retainers. No waiting for someone else&apos;s team. Just a platform
-              that works. And if you are worried about a specific bad review right now — our removal service guarantees
+              and tuition centres across Singapore. No waiting for someone else&apos;s team — our own team runs it.
+              And if you are worried about a specific bad review right now — our removal service guarantees
               a full refund if it isn&apos;t removed within 3 months.{" "}
               <Link href="/" className="text-primary font-medium hover:underline">
                 Epicware, a digital marketing agency in Singapore

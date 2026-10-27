@@ -320,8 +320,8 @@ export default function EpicReviewPage() {
               >
                 Review Management Singapore
               </Link>{" "}
-              service page covers the hands-on service component for businesses that need help
-              beyond the self-serve platform.
+              service page covers the hands-on service component our team runs on top of the
+              EpicReview software.
             </p>
           </div>
         </div>

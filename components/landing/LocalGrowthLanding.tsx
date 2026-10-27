@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
+import LocalGrowthWorkflowSection from "@/components/home/LocalGrowthWorkflowSection";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -110,9 +111,9 @@ function Hero() {
         </motion.h1>
 
         <motion.p {...fadeUp(0.12)} className="text-white/50 text-[1.05rem] leading-relaxed mb-10 mx-auto max-w-2xl">
-          Epicware is the only platform in Singapore that handles your Google Maps ranking, AI
-          search visibility, review reputation, bad review removal, and social presence — all in
-          one connected system. No agencies. No retainers. Just results.
+          Epicware is the AI-powered local SEO agency that handles your Google Maps ranking, AI
+          search visibility, review reputation, bad review removal, and social presence — running
+          on our own software, all in one connected system.
         </motion.p>
 
         <motion.div {...fadeUp(0.17)} className="flex flex-col sm:flex-row gap-3 justify-center mb-14">
@@ -1009,6 +1010,7 @@ export default function LocalGrowthLanding() {
       <Hero />
       <Problem />
       <GrowthStack />
+      <LocalGrowthWorkflowSection />
       <Pillars />
       <Proof />
       <AIWins />

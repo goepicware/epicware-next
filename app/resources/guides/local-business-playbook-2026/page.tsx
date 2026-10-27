@@ -72,8 +72,8 @@ export default function Page() {
           <h2>Multi-Location Management</h2>
           <p>For businesses operating multiple outlets, the complexity of local search management scales with each location. Each outlet needs its own GBP, its own <a href="/blog/review-velocity-vs-total-review-count">review velocity</a>, and its own <a href="/local-seo-singapore/local-rank-tracking">rank tracking</a>. The operational solution is a multi-outlet dashboard that centralises management across all locations without requiring individual attention to each profile.</p>
 
-          <h2>Platform vs Agency Decision</h2>
-          <p>Singapore SMBs choosing between a self-serve platform and a full-service agency should consider: volume of locations, internal capacity for ongoing management, and urgency of results. Platforms like Epicware provide the tools and automation; managed services provide the execution. Most businesses with 1–3 locations can achieve strong results using a platform approach. Groups with 5+ locations typically benefit from managed execution.</p>
+          <h2>DIY vs Managed Decision</h2>
+          <p>Singapore SMBs choosing between managing local search in-house and bringing in an agency should consider: volume of locations, internal capacity for ongoing management, and urgency of results. Epicware is an AI-powered local SEO agency that runs on its own software, so the automation and the execution come from the same team — you&apos;re not choosing between tools and a service, you get both. Most businesses with 1–3 locations see strong results quickly; groups with 5+ locations see the biggest gain from handing the day-to-day execution over entirely.</p>
           <p>For a full picture of how we help local businesses grow, see <a href="/">Epicware&apos;s digital marketing team</a>.</p>
         </>
       }

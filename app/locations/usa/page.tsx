@@ -82,7 +82,7 @@ export default function USAPage() {
       <CategoryHero
         badge="EPICWARE · UNITED STATES"
         h1="Local SEO & Reputation Management for US SMBs"
-        subtitle="Epicware manages Google Business Profiles, review campaigns, and bad review removal for US businesses — the same platform trusted by 500+ outlets across Singapore, Malaysia, and the UAE."
+        subtitle="Epicware manages Google Business Profiles, review campaigns, and bad review removal for US businesses — the same software and team already running local SEO for businesses across Singapore, Malaysia, and the UAE."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
@@ -105,9 +105,9 @@ export default function USAPage() {
             that also works with US businesses. US SMBs face the same core local SEO challenge as businesses in Singapore:
             Google Maps 3-Pack dominance determines foot traffic volume, and that rank
             is determined by review count, GBP completeness, and consistency.
-            Epicware&apos;s platform brings the same automated review generation, GBP
+            Epicware brings the same automated review generation, GBP
             optimisation, and bad review removal capability to US businesses that it
-            delivers to over 500 outlet profiles across Asia and the Middle East.
+            already delivers for outlets across Asia and the Middle East.
           </p>
         </div>
       </section>

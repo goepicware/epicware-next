@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const TRUST = [
-  "500+ Outlets Managed",
+  "Multi-Outlet Ready",
   "Singapore-Built",
   "AI-Native",
-  "No Agency Retainer",
+  "Built On Our Own Software",
 ];
 
 const PRODUCTS = [

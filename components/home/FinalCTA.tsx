@@ -15,11 +15,11 @@ export default function FinalCTA() {
           Get Started
         </span>
         <h2 className="font-display font-bold text-white mb-6 text-balance">
-          Ready to Rank on Google and Get Recommended by AI?
+          Ready to Own Your Local Search Results?
         </h2>
         <p className="text-lg text-white/60 mb-4 leading-relaxed">
-          Book a free 30-minute strategy call with our SEO team. We&apos;ll run a live audit of your
-          Google Business Profile and show you exactly what&apos;s costing you customers right now.
+          Book a free 30-minute demo. We&apos;ll run a live GBP audit on your business
+          and show you exactly what&apos;s costing you customers right now.
         </p>
         <p className="text-sm text-white/40 mb-10">
           No obligation. No hard sell. Just the data.
@@ -31,7 +31,7 @@ export default function FinalCTA() {
             className="bg-white text-foreground hover:bg-white/90 h-14 px-8 rounded-full font-semibold text-base group"
           >
             <Link href="/book-demo#form" className="flex items-center gap-2">
-              Book My Free Strategy Call →
+              Book My Free Demo →
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </Button>
@@ -40,7 +40,7 @@ export default function FinalCTA() {
             size="lg"
             className="rounded-full bg-transparent border border-white/40 text-white hover:bg-white/10 h-14 px-8 font-semibold text-base"
           >
-            <Link href="/free-audit">Get Free SEO Audit</Link>
+            <Link href="/free-audit">Get Free GBP Audit</Link>
           </Button>
         </div>
         <p className="text-xs text-white/30">
