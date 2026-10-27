@@ -211,7 +211,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-lg text-muted-foreground leading-relaxed">
             You&apos;re here because you need something specific — more reviews, better Google Maps ranking, or a bad
-            review that needs to come down. Epicware is an AI-powered local SEO agency that handles all of it, running
+            review that needs to come down. Epicware is a digital marketing agency powered by AI that handles all of it, running
             on our own software — our team does the work, so there&apos;s no waiting on someone else&apos;s team. Choose the service you need below, or book
             a free demo and we&apos;ll map out the right combination for your business. We adapt{" "}
             <Link href="/industries" className="text-primary font-medium hover:underline">local SEO for your industry</Link>, from clinic rules to restaurant menus.

@@ -111,7 +111,7 @@ function Hero() {
         </motion.h1>
 
         <motion.p {...fadeUp(0.12)} className="text-white/50 text-[1.05rem] leading-relaxed mb-10 mx-auto max-w-2xl">
-          Epicware is the AI-powered local SEO agency that handles your Google Maps ranking, AI
+          Epicware is a digital marketing agency powered by AI, handling your Google Maps ranking, AI
           search visibility, review reputation, bad review removal, and social presence — running
           on our own software, all in one connected system.
         </motion.p>
