@@ -523,6 +523,7 @@ export default function FreeAuditWizard() {
   const [consent, setConsent] = useState(false);
   const [leadError, setLeadError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [leadSaveStatus, setLeadSaveStatus] = useState<"pending" | "saved" | "failed">("pending");
 
   // Step 5
   const [isProcessing, setIsProcessing] = useState(false);
@@ -599,23 +600,49 @@ export default function FreeAuditWizard() {
     setStep(3);
   }, [enrichedKeywords]);
 
+  // Up to 3 attempts (1 + 2 retries) with a short backoff. The backend logs
+  // the lead durably before anything that can fail, so a failure here means
+  // the request never reached the server at all (client offline, network
+  // blip) — retrying covers that. If all attempts fail, leadSaveStatus
+  // flips to "failed" and a visible, persistent notice is shown on the
+  // results screen instead of silently dropping the lead.
+  const submitLeadWithRetry = useCallback(async (payload: Record<string, unknown>) => {
+    const attempts = 3;
+    for (let i = 0; i < attempts; i++) {
+      try {
+        const res = await fetch("/api/audit-lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (res.ok) {
+          setLeadSaveStatus("saved");
+          return;
+        }
+      } catch {
+        // network failure — fall through to retry
+      }
+      if (i < attempts - 1) await delay(800 * (i + 1));
+    }
+    setLeadSaveStatus("failed");
+  }, []);
+
   const handleLeadSubmit = useCallback(async () => {
     if (!name.trim() || !email.trim()) { setLeadError("Name and email are required."); return; }
     if (!/\S+@\S+\.\S+/.test(email)) { setLeadError("Please enter a valid email address."); return; }
     if (!consent) { setLeadError("Please accept the terms to continue."); return; }
-    setLeadError(""); setSubmitting(true);
+    setLeadError(""); setSubmitting(true); setLeadSaveStatus("pending");
 
-    fetch("/api/audit-lead", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name, email, phone, leadType,
-        placeId, keywords, radiusKm,
-        businessName: gbpSnapshot?.businessName,
-        businessAddress: gbpSnapshot?.address,
-        websiteUrl,
-      }),
-    }).catch(() => {});
+    // Not awaited — retries happen in the background so lead-capture
+    // hiccups never delay the audit reveal below. Its outcome still
+    // surfaces visibly via leadSaveStatus on the results screen.
+    submitLeadWithRetry({
+      name, email, phone, leadType,
+      placeId, keywords, radiusKm,
+      businessName: gbpSnapshot?.businessName,
+      businessAddress: gbpSnapshot?.address,
+      websiteUrl,
+    });
 
     setStep(5); setIsProcessing(true);
 
@@ -1047,6 +1074,28 @@ ${result.enrichedKeywords.length > 0 ? `
             </div>
           ) : result ? (
             <div className="flex flex-col lg:flex-row gap-6">
+
+              {leadSaveStatus === "failed" && (
+                <div className="lg:order-first w-full bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-sm text-amber-900">
+                  <AlertCircle className="w-4 h-4 shrink-0 text-amber-600" />
+                  <span className="flex-1">
+                    We couldn&apos;t save your contact details — your report below is unaffected, but we won&apos;t be able to follow up.
+                    Email us directly at <a href="mailto:hello@epicware.ai" className="underline font-medium">hello@epicware.ai</a> if you&apos;d like us to reach out.
+                  </span>
+                  <button
+                    onClick={() => submitLeadWithRetry({
+                      name, email, phone, leadType,
+                      placeId, keywords, radiusKm,
+                      businessName: gbpSnapshot?.businessName,
+                      businessAddress: gbpSnapshot?.address,
+                      websiteUrl,
+                    })}
+                    className="text-amber-900 font-semibold underline shrink-0"
+                  >
+                    Retry
+                  </button>
+                </div>
+              )}
 
               {/* ── Sidebar ── */}
               <aside className="lg:w-72 shrink-0">
