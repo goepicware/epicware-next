@@ -1,0 +1,45 @@
+name: Check live endpoints
+
+# Runs scripts/check-live-endpoints.ts against production:
+#   - after a successful production deployment (Vercel posts a
+#     deployment_status event to GitHub once a deploy finishes)
+#   - daily at 01:00 UTC (09:00 SGT) as a fallback, in case nothing
+#     deploys for a while and a dependency/env var issue creeps in
+#     between deploys
+#
+# A failing run fails this job, which GitHub emails to the repo owner
+# by default (Settings -> Notifications -> Actions -> "Only notify for
+# failed workflows" — on by default for the account that owns the repo).
+# No new secrets or paid service: it posts clearly-marked test payloads
+# with X-Epicware-Test: 1, which audit-lead uses to prefix the Resend
+# subject with "[TEST] " so these runs never show up as a real lead.
+
+on:
+  deployment_status:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    if: ${{ github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check live endpoints
+        run: pnpm check:live-endpoints
+        env:
+          BASE_URL: https://www.epicware.ai
