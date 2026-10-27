@@ -321,7 +321,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Google Maps Ranking Factors Explained", href: "/blog/google-maps-ranking-factors" },
         { title: "SEO vs Local SEO — What's the Actual Difference?", href: "/blog/seo-vs-local-seo" },
-        { title: "Review Management Singapore", href: "/blog/locations/singapore/review-management" },
+        { title: "Review Management Singapore", href: "/blog/review-management-singapore" },
         { title: "How Many Google Reviews Do You Need to Compete Locally?", href: "/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
       ]}
     />

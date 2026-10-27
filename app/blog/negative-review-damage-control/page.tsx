@@ -546,7 +546,7 @@ export default function Post() {
           },
           {
             title: "Review Management for Singapore SMBs — What It Actually Involves",
-            href: "/blog/locations/singapore/review-management",
+            href: "/blog/review-management-singapore",
           },
           {
             title: "Fake or Unfair Google Reviews: What Singapore Businesses Can Do",

@@ -317,7 +317,7 @@ export default function Post() {
         { title: "Google Maps Ranking Factors Explained — Where Reviews Fit In", href: "/blog/google-maps-ranking-factors" },
         { title: "Why Review Recency Matters for Local Rankings", href: "/blog/why-review-recency-matters-for-local-rankings" },
         { title: "How to Get More Google Reviews — Ethical Methods That Actually Work", href: "/blog/how-to-get-more-google-reviews" },
-        { title: "Review Management for Singapore SMBs — What It Actually Involves", href: "/blog/locations/singapore/review-management" },
+        { title: "Review Management for Singapore SMBs — What It Actually Involves", href: "/blog/review-management-singapore" },
         { title: "Restaurant Menu SEO for Multi-Location Operators", href: "/blog/restaurant-menu-seo" },
       ]}
     />

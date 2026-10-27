@@ -656,7 +656,7 @@ export default function Post() {
         relatedPosts={[
           {
             title: "Review Management for Singapore SMBs — What It Actually Involves",
-            href: "/blog/locations/singapore/review-management",
+            href: "/blog/review-management-singapore",
           },
           {
             title: "Reputation Recovery Strategy: A 2026 Guide for SMBs",

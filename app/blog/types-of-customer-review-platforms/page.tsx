@@ -531,7 +531,7 @@ export default function Post() {
           },
           {
             title: "Review Management for Singapore SMBs",
-            href: "/blog/locations/singapore/review-management",
+            href: "/blog/review-management-singapore",
           },
           {
             title: "Google Review Request Templates — WhatsApp, Email & SMS",

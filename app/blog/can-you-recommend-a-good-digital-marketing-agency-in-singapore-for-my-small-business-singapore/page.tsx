@@ -586,7 +586,7 @@ export default function Post() {
           },
           {
             title: "What Makes Epicware the No.1 Local SEO Agency in Singapore",
-            href: "/blog/local-seo-agency-singapore-epicware",
+            href: "/locations/singapore/local-seo",
           },
           {
             title: "Google Maps Ranking Factors Explained",

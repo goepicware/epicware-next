@@ -80,7 +80,7 @@ export default function Post() {
       ctaContext="Epicware's AI review response monitors every new review across all your locations and drafts a response immediately."
       relatedPosts={[
         { title: "Should You Respond to Every Google Review?", href: "/blog/should-you-respond-to-every-google-review" },
-        { title: "Review Management for Singapore SMBs", href: "/blog/locations/singapore/review-management" },
+        { title: "Review Management for Singapore SMBs", href: "/blog/review-management-singapore" },
       ]}
     />
   );

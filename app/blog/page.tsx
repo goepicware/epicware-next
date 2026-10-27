@@ -238,7 +238,7 @@ const posts = [
     title: "What Makes Epicware the No.1 Local SEO Agency in Singapore",
     summary:
       "Epicware combines AI-powered tools, advanced review management, and proven local SEO strategies to help Singapore businesses dominate Google Maps and drive real growth.",
-    href: "/blog/local-seo-agency-singapore-epicware",
+    href: "/locations/singapore/local-seo",
     image: "/assets/epicmap-before-after.png",
     category: "LOCAL SEO",
     date: "Jun 2026",
@@ -572,7 +572,7 @@ const posts = [
     title: "Review Management for Singapore SMBs — What It Actually Involves",
     summary:
       "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews.",
-    href: "/blog/locations/singapore/review-management",
+    href: "/blog/review-management-singapore",
     image: "/assets/review-management-illustration.png",
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",

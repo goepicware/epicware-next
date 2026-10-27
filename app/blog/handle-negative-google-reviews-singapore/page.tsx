@@ -310,7 +310,7 @@ export default function Post() {
         { title: "Fake or Unfair Google Reviews — What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
         { title: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
         { title: "Should You Respond to Every Google Review?", href: "/blog/should-you-respond-to-every-google-review" },
-        { title: "Review Management Singapore", href: "/blog/locations/singapore/review-management" },
+        { title: "Review Management Singapore", href: "/blog/review-management-singapore" },
       ]}
     />
   );

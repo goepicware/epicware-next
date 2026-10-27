@@ -35,7 +35,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Medical Clinics", href: "/industries/healthcare-clinics" },
       { label: "Hair & Beauty Salons", href: "/industries/nail-hair-salons" },
     ],
-    agencyLink: { href: "/seo-agency-singapore", anchor: "our AI-powered SEO agency" },
+    agencyLink: { href: "/locations/singapore/seo", anchor: "our AI-powered SEO agency" },
   },
   {
     slug: "tampines",
@@ -59,7 +59,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Restaurants", href: "/industries/restaurants" },
       { label: "Dental Clinics", href: "/industries/dental-clinics" },
     ],
-    agencyLink: { href: "/seo-agency-singapore", anchor: "Epicware's Singapore SEO agency" },
+    agencyLink: { href: "/locations/singapore/seo", anchor: "Epicware's Singapore SEO agency" },
   },
   {
     slug: "woodlands",
@@ -106,7 +106,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Physiotherapy", href: "/industries/physiotherapy" },
       { label: "Restaurants", href: "/industries/restaurants" },
     ],
-    agencyLink: { href: "/seo-agency-singapore", anchor: "our AI SEO agency in Singapore" },
+    agencyLink: { href: "/locations/singapore/seo", anchor: "our AI SEO agency in Singapore" },
   },
   {
     slug: "toa-payoh",
@@ -130,7 +130,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Restaurants", href: "/industries/restaurants" },
       { label: "Hair & Beauty Salons", href: "/industries/nail-hair-salons" },
     ],
-    agencyLink: { href: "/seo-agency-singapore", anchor: "Epicware, an AI-powered SEO agency" },
+    agencyLink: { href: "/locations/singapore/seo", anchor: "Epicware, an AI-powered SEO agency" },
   },
   {
     slug: "clementi",
@@ -153,7 +153,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Dental Clinics", href: "/industries/dental-clinics" },
       { label: "Restaurants", href: "/industries/restaurants" },
     ],
-    agencyLink: { href: "/seo-agency-singapore", anchor: "our Singapore SEO team" },
+    agencyLink: { href: "/locations/singapore/seo", anchor: "our Singapore SEO team" },
   },
   {
     slug: "buona-vista",
@@ -200,7 +200,7 @@ export const DISTRICTS: DistrictData[] = [
       { label: "Wellness Centres", href: "/industries/wellness-centres" },
       { label: "Hair & Beauty Salons", href: "/industries/nail-hair-salons" },
     ],
-    agencyLink: { href: "/seo-agency-singapore", anchor: "our SEO agency in Singapore" },
+    agencyLink: { href: "/locations/singapore/seo", anchor: "our SEO agency in Singapore" },
   },
   {
     slug: "bedok",
