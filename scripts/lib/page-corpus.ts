@@ -11,7 +11,7 @@ const ROOT = path.join(__dirname, "..", "..");
 
 export interface PageDescriptor extends ExtractedPage {
   id: string;
-  group: "country-service" | "sg-district" | "industry";
+  group: "country-service" | "sg-district" | "industry" | "service-parent";
   country?: string;
   service?: string;
   isDraft: boolean;
@@ -116,4 +116,26 @@ export function loadIndustryPages(): PageDescriptor[] {
 
 export function districtNames(): string[] {
   return DISTRICTS.map((d) => d.name);
+}
+
+/**
+ * The 6 global /services/{service}/ pages — the "parent" each
+ * /locations/{country}/{service}/ page sits under. These are generated
+ * straight from SERVICES data (app/services/[service]/page.tsx has no
+ * prose of its own beyond service.shortDescription), so read directly
+ * from the data source rather than parsing the route file.
+ */
+export function loadServiceParentPages(): PageDescriptor[] {
+  return SERVICES.map((s) => ({
+    id: `services/${s.slug}`,
+    group: "service-parent" as const,
+    service: s.slug,
+    isDraft: false,
+    filePath: "lib/site/services.ts",
+    title: `${s.name} | Epicware`,
+    description: s.shortDescription,
+    h1: s.name,
+    faqs: [],
+    bodyText: s.shortDescription,
+  }));
 }

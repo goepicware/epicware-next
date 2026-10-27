@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# page-quality gate caches (scripts/check-page-*.ts)
+.cache/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

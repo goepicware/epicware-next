@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { COUNTRIES } from "../lib/site/countries";
 import { SERVICES } from "../lib/site/services";
+import { checkUrlStatus, persistUrlCache } from "./lib/url-cache";
 
 /**
  * Substance gate: a country-service or hub page can only carry
@@ -25,11 +26,21 @@ interface CheckResult {
   problems: string[];
 }
 
-function checkFrontmatter(id: string, data: Record<string, unknown>): CheckResult {
+/** Lowercase, strip punctuation, collapse whitespace — for "does this fact actually appear in the body" containment checks. */
+function normalizeForPresence(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+async function checkFrontmatter(id: string, data: Record<string, unknown>, body: string): Promise<CheckResult> {
   const draft = data.draft !== false;
   if (draft) return { id, draft: true, problems: [] };
 
   const problems: string[] = [];
+  const normalizedBody = normalizeForPresence(body);
 
   const marketFacts = data.marketFacts as unknown[] | undefined;
   if (!Array.isArray(marketFacts) || marketFacts.length < MIN_MARKET_FACTS) {
@@ -37,12 +48,24 @@ function checkFrontmatter(id: string, data: Record<string, unknown>): CheckResul
       `marketFacts: needs at least ${MIN_MARKET_FACTS}, has ${Array.isArray(marketFacts) ? marketFacts.length : 0}`
     );
   } else {
-    marketFacts.forEach((f, i) => {
-      const entry = f as Record<string, unknown>;
-      if (!entry?.fact || typeof entry.fact !== "string") problems.push(`marketFacts[${i}].fact missing`);
-      if (!entry?.sourceUrl || typeof entry.sourceUrl !== "string")
+    for (let i = 0; i < marketFacts.length; i++) {
+      const entry = marketFacts[i] as Record<string, unknown>;
+      const fact = entry?.fact;
+      const sourceUrl = entry?.sourceUrl;
+      if (!fact || typeof fact !== "string") {
+        problems.push(`marketFacts[${i}].fact missing`);
+      } else if (!normalizedBody.includes(normalizeForPresence(fact))) {
+        problems.push(`marketFacts[${i}].fact doesn't appear (normalised match) in the rendered body: "${fact}"`);
+      }
+      if (!sourceUrl || typeof sourceUrl !== "string") {
         problems.push(`marketFacts[${i}].sourceUrl missing`);
-    });
+      } else {
+        const status = await checkUrlStatus(sourceUrl);
+        if (status !== 200) {
+          problems.push(`marketFacts[${i}].sourceUrl returned ${status ?? "no response"} (expected 200): ${sourceUrl}`);
+        }
+      }
+    }
   }
 
   const proof = data.proof as Record<string, unknown> | undefined;
@@ -97,7 +120,7 @@ function checkFaqReuse(frontmatterByService: Map<string, { id: string; questions
   return problems;
 }
 
-function main() {
+async function main() {
   const results: CheckResult[] = [];
   const byService = new Map<string, { id: string; questions: string[] }[]>();
 
@@ -108,9 +131,9 @@ function main() {
       const filePath = path.join(ROOT, "content", "locations", country.slug, `${service.slug}.mdx`);
       if (!fs.existsSync(filePath)) continue;
       const raw = fs.readFileSync(filePath, "utf-8");
-      const { data } = matter(raw);
+      const { data, content } = matter(raw);
       const id = `${country.slug}/${service.slug}`;
-      results.push(checkFrontmatter(id, data));
+      results.push(await checkFrontmatter(id, data, content));
 
       if (Array.isArray(data.faqs)) {
         const questions = (data.faqs as Array<{ question?: string }>)
@@ -125,10 +148,12 @@ function main() {
     const hubPath = path.join(ROOT, "content", "locations", country.slug, "hub.mdx");
     if (fs.existsSync(hubPath)) {
       const raw = fs.readFileSync(hubPath, "utf-8");
-      const { data } = matter(raw);
-      results.push(checkFrontmatter(`${country.slug}/hub`, data));
+      const { data, content } = matter(raw);
+      results.push(await checkFrontmatter(`${country.slug}/hub`, data, content));
     }
   }
+
+  persistUrlCache();
 
   const faqReuseProblems = checkFaqReuse(byService);
 
@@ -163,4 +188,8 @@ function main() {
   console.log("\nAll live (draft:false) pages pass the substance gate.");
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exitCode = 1;
+});
+

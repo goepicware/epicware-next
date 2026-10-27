@@ -2,6 +2,7 @@ import {
   loadCountryServicePages,
   loadSgDistrictPages,
   loadIndustryPages,
+  loadServiceParentPages,
   districtNames,
   type PageDescriptor,
 } from "./lib/page-corpus";
@@ -111,14 +112,29 @@ function printTable(label: string, results: PairResult[]) {
   }
 }
 
+/**
+ * Whether a FAIL pair should block the build. Normally that means either
+ * side being live (draft:false) — but a service-parent page
+ * (/services/{service}/) is always "live" structurally, not something
+ * that itself flips draft:false, so a parent-child pair blocks based
+ * solely on the child's draft status.
+ */
+function isBlocking(r: PairResult): boolean {
+  if (r.status !== "FAIL") return false;
+  if (r.a.group === "service-parent") return !r.b.isDraft;
+  if (r.b.group === "service-parent") return !r.a.isDraft;
+  return !r.a.isDraft || !r.b.isDraft;
+}
+
 function main() {
   const names = districtNames();
   const countryServicePages = loadCountryServicePages();
   const districtPages = loadSgDistrictPages();
   const industryPages = loadIndustryPages();
+  const serviceParentPages = loadServiceParentPages();
 
   console.log(
-    `Loaded ${countryServicePages.length} country-service pages, ${districtPages.length} SG district pages, ${industryPages.length} industry pages.`
+    `Loaded ${countryServicePages.length} country-service pages, ${districtPages.length} SG district pages, ${industryPages.length} industry pages, ${serviceParentPages.length} service-parent pages.`
   );
 
   const byService = groupBy(countryServicePages, (p) => p.service!);
@@ -134,25 +150,27 @@ function main() {
   const districtPairs = allPairs(districtPages).map(([a, b]) => comparePair(a, b, names));
   const industryPairs = allPairs(industryPages).map(([a, b]) => comparePair(a, b, names));
 
+  const parentChildPairs = serviceParentPages.flatMap((parent) => {
+    const children = countryServicePages.filter((p) => p.service === parent.service);
+    return children.map((child) => comparePair(parent, child, names));
+  });
+
   printTable("Same service, across countries", sameServicePairs);
   printTable("Same country, across services", sameCountryPairs);
+  printTable("Parent (/services/{service}/) vs child (/locations/{country}/{service}/)", parentChildPairs);
   printTable("SG district pages (calibration group)", districtPairs);
   printTable("Industry pages (calibration group)", industryPairs);
 
-  const all = [...sameServicePairs, ...sameCountryPairs, ...districtPairs, ...industryPairs];
+  const all = [...sameServicePairs, ...sameCountryPairs, ...parentChildPairs, ...districtPairs, ...industryPairs];
   const failing = all.filter((r) => r.status === "FAIL");
   const warning = all.filter((r) => r.status === "WARN");
-  // Block if EITHER side is live — a page flipping to draft:false must not
-  // read as a near-duplicate of anything, including a still-draft sibling
-  // (a live page that's still boilerplate-identical to an unwritten stub
-  // is exactly the failure this gate exists to catch).
-  const blocking = failing.filter((r) => !r.a.isDraft || !r.b.isDraft);
-  const draftFailing = failing.filter((r) => r.a.isDraft && r.b.isDraft);
+  const blocking = failing.filter(isBlocking);
+  const draftFailing = failing.filter((r) => !isBlocking(r));
 
   console.log(`\n${failing.length} pair(s) FAIL, ${warning.length} pair(s) WARN.`);
   if (draftFailing.length > 0) {
     console.log(
-      `${draftFailing.length} FAIL among draft-only pairs — informational only, not build-blocking. These can't flip to draft:false until fixed.`
+      `${draftFailing.length} FAIL not touching a live page — informational only, not build-blocking. These can't flip to draft:false until fixed.`
     );
   }
   if (blocking.length > 0) {
