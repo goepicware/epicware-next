@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { rateLimitResponse } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -553,6 +554,9 @@ async function getMapsDifficulty(
 // ─── Route handler ────────────────────────────────────────────────────────────
 
 export async function POST(req: Request): Promise<NextResponse> {
+  const limited = rateLimitResponse(req, "keyword-intel");
+  if (limited) return limited;
+
   // Parse body first so diagnostics are available regardless of other failures
   let body: RequestBody;
   try {

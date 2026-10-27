@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { rateLimitResponse } from "@/lib/rate-limit";
 
 /**
  * Durable capture, logged before anything that can fail (validation,
@@ -9,15 +10,20 @@ import { NextRequest, NextResponse } from "next/server";
  * log is the durability guarantee: greppable, and captured by Vercel's
  * runtime logs regardless of what happens afterward in this handler.
  */
-function backupLead(body: unknown) {
+function backupLead(body: unknown, isTest: boolean) {
   try {
-    console.log("[LEAD_BACKUP]", JSON.stringify({ source: "audit-lead", receivedAt: new Date().toISOString(), body }));
+    console.log("[LEAD_BACKUP]", JSON.stringify({ source: "audit-lead", isTest, receivedAt: new Date().toISOString(), body }));
   } catch (err) {
     console.error("[LEAD_BACKUP] failed to log lead — this should never happen", err);
   }
 }
 
 export async function POST(req: NextRequest) {
+  const limited = rateLimitResponse(req, "audit-lead");
+  if (limited) return limited;
+
+  const isTest = req.headers.get("x-epicware-test") === "1";
+
   let body: Record<string, unknown>;
   try {
     body = await req.json();
@@ -27,7 +33,7 @@ export async function POST(req: NextRequest) {
 
   // Log first, before any validation or send attempt can fail — this is
   // the one line in this handler that must always run.
-  backupLead(body);
+  backupLead(body, isTest);
 
   const {
     name, email, phone, leadType,
@@ -120,7 +126,7 @@ export async function POST(req: NextRequest) {
         from: "Epicware Audit <noreply@epicware.ai>",
         to: ["vignesh@epicware.ai"],
         reply_to: email,
-        subject: `Free Audit Lead — ${name} (${businessName || email})`,
+        subject: `${isTest ? "[TEST] " : ""}Free Audit Lead — ${name} (${businessName || email})`,
         text: textBody,
         html: htmlBody,
       }),

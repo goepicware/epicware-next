@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { rateLimitResponse } from "@/lib/rate-limit";
 
 interface CheckItemSummary { label: string; status: "pass" | "fail" | "unknown"; detail: string }
 interface Scorecard { profile: number; reviews: number; keywords: number; visibility: number; overall: number }
@@ -147,6 +148,9 @@ function generateReportAttachmentHtml(report: ReportPayload, name: string, date:
 }
 
 export async function POST(req: NextRequest) {
+  const limited = rateLimitResponse(req, "send-report-email");
+  if (limited) return limited;
+
   let body: Record<string, unknown>;
   try { body = await req.json(); }
   catch { return NextResponse.json({ success: false }, { status: 400 }); }

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { rateLimitResponse } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -114,6 +115,9 @@ async function queryLLM(
 }
 
 export async function POST(req: Request): Promise<NextResponse> {
+  const limited = rateLimitResponse(req, "ai-visibility");
+  if (limited) return limited;
+
   let body: { businessName: string; shortName: string; categoryLabel: string; neighbourhood: string; keywords: string[] };
   try {
     body = await req.json();

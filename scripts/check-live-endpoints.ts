@@ -117,7 +117,9 @@ async function checkEndpoint(check: EndpointCheck): Promise<CheckResult> {
   try {
     const res = await fetch(`${BASE_URL}${check.path}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      // X-Epicware-Test tells audit-lead to mark the subject line [TEST]
+      // so these runs never land as a real lead in the normal inbox flow.
+      headers: { "Content-Type": "application/json", "X-Epicware-Test": "1" },
       body: JSON.stringify(check.body),
     });
     return { path: check.path, status: res.status, ok: res.status >= 200 && res.status < 300 };

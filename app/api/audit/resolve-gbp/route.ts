@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { rateLimitResponse } from "@/lib/rate-limit";
 
 const PLACES_API = "https://maps.googleapis.com/maps/api/place";
 const SG_CENTER = "1.3521,103.8198";
@@ -46,6 +47,9 @@ async function textSearch(query: string, key: string) {
 }
 
 export async function POST(req: NextRequest) {
+  const limited = rateLimitResponse(req, "resolve-gbp");
+  if (limited) return limited;
+
   const key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   if (!key) {
     return NextResponse.json({ error: "Maps API key not configured" }, { status: 500 });
