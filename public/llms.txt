@@ -38,22 +38,37 @@
 
 ## Services
 
-- [Local SEO Services Singapore](https://www.epicware.ai/local-seo-singapore)
-- [Reputation Management Singapore](https://www.epicware.ai/reputation-management-singapore)
-- [Bad Review Removal Singapore](https://www.epicware.ai/bad-review-removal-singapore)
-- [GBP Optimisation Singapore](https://www.epicware.ai/gbp-optimisation-singapore)
-- [AI Search Visibility Singapore](https://www.epicware.ai/ai-search-visibility-singapore)
-- [Local Growth Platform](https://www.epicware.ai/local-growth)
-- [Pricing](https://www.epicware.ai/pricing)
+- [Local SEO](https://www.epicware.ai/services/local-seo) — Google Maps rank tracking, citation building, and competitor analysis for local search visibility.
+- [Google Business Profile](https://www.epicware.ai/services/google-business-profile) — GBP setup, optimisation, and ongoing post scheduling to keep your profile ranking-ready.
+- [SEO](https://www.epicware.ai/services/seo) — Website and content SEO for organic search visibility beyond the Map Pack.
+- [AI Search Visibility](https://www.epicware.ai/services/ai-search-visibility) — AEO, GEO, and AI citation building so your business appears in ChatGPT, Gemini, and Google AI Overviews.
+- [Review Management](https://www.epicware.ai/services/review-management) — Review generation, AI-drafted responses, widgets, and analytics across every Google listing.
+- [Review Removal](https://www.epicware.ai/services/review-removal) — Remove fake and policy-violating reviews, refunded if we can't get them taken down.
+
+## Locations
+
+### Singapore
+
+- [Singapore hub](https://www.epicware.ai/locations/singapore)
+- [Local SEO in Singapore](https://www.epicware.ai/locations/singapore/local-seo)
+- [Google Business Profile in Singapore](https://www.epicware.ai/locations/singapore/google-business-profile)
+- [SEO in Singapore](https://www.epicware.ai/locations/singapore/seo)
+- [AI Search Visibility in Singapore](https://www.epicware.ai/locations/singapore/ai-search-visibility)
+- [Review Management in Singapore](https://www.epicware.ai/locations/singapore/review-management)
+- [Review Removal in Singapore](https://www.epicware.ai/locations/singapore/review-removal)
+- 16 Singapore district pages at /locations/singapore/{district}
 
 ## Industries Served
 
-- [F&B Restaurants](https://www.epicware.ai/industries/restaurants)
+- [Car Workshops](https://www.epicware.ai/industries/car-workshops)
+- [Dental Clinics](https://www.epicware.ai/industries/dental-clinics)
 - [Medical Clinics](https://www.epicware.ai/industries/healthcare-clinics)
 - [Hair & Beauty Salons](https://www.epicware.ai/industries/nail-hair-salons)
+- [Physiotherapy Clinics](https://www.epicware.ai/industries/physiotherapy)
+- [F&B Restaurants](https://www.epicware.ai/industries/restaurants)
+- [Retail Stores](https://www.epicware.ai/industries/retail-stores)
 - [Tuition Centres](https://www.epicware.ai/industries/tuition-centres)
-- [Dental Clinics](https://www.epicware.ai/industries/dental-clinics)
-- [Car Workshops](https://www.epicware.ai/industries/car-workshops)
+- [Spas & Wellness Centres](https://www.epicware.ai/industries/wellness-centres)
 - [All Industries](https://www.epicware.ai/industries)
 
 ## Target Audience

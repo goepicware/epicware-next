@@ -1,0 +1,93 @@
+# Epicware
+
+> AI-powered Local SEO and Reputation Management SaaS platform helping Singapore SMBs dominate Google Maps, collect 5-star reviews automatically, and grow local revenue.
+
+## Company
+
+- Full name: Epicware Pte. Ltd.
+- Website: [https://www.epicware.ai](https://www.epicware.ai)
+- Location: Singapore
+- Founded: 2024
+- Industry: Local SEO, Reputation Management, SaaS, MarTech
+
+## Products
+
+### EpicMap — Google Maps Rank Tracking
+
+- [EpicMap product page](https://www.epicware.ai/products/epicmap)
+- Google Maps rank tracking with grid-level heatmap visualisation
+- Multi-outlet local SEO management across Singapore districts
+- GBP optimisation, keyword tracking, competitor discovery
+
+### EpicReview — Review Management
+
+- [EpicReview product page](https://www.epicware.ai/products/epicreview)
+- Automated Google review collection for local businesses
+- Smart routing: negative feedback goes private, positive reviews go to Google
+- Pricing: Starter $99/mo, Growth $299/mo, Authority $549/mo
+
+### EpicEngage — Email & Messaging
+
+- [EpicEngage product page](https://www.epicware.ai/products/epicengage)
+- Email, SMS and WhatsApp broadcast campaigns for local businesses
+
+### EpicSocial — Social Media
+
+- [EpicSocial product page](https://www.epicware.ai/products/epicsocial)
+- Social media scheduling and content management for SMBs
+
+<!-- GENERATED:SERVICES -->
+
+<!-- GENERATED:LOCATIONS -->
+
+<!-- GENERATED:INDUSTRIES -->
+
+## Target Audience
+
+- Singapore SMB owners with physical outlets
+- Industries: F&B, dental clinics, tuition centres, beauty & wellness, retail
+- Pain points: low Google reviews, poor Google Maps ranking, losing customers to competitors online
+
+## Proof
+
+- Nanyang Dao: grew from 3.8 to 4.3 stars and 300 to 1,300 reviews in 2.5 months
+- EPIKebabs: +52% website clicks and +83% calls in Month 1 from GBP optimisation
+- Average rank improvement: position 9.0 to 1.4 across client portfolio
+- Review growth: +330% reviews in 60 days for managed clients
+
+## Competitors
+
+- [BrightLocal](https://www.brightlocal.com)
+- [Whitespark](https://www.whitespark.ca)
+- [GatherUp](https://www.gatherup.com)
+- [Podium](https://www.podium.com)
+- [NiceJob](https://www.nicejob.com)
+
+## Category Keywords
+
+- Local SEO software Singapore
+- Google Business Profile management
+- Review management platform
+- Google Maps ranking tool
+- Reputation management software
+- AI search visibility Singapore
+
+## Content Resources
+
+- [Blog](https://www.epicware.ai/blog)
+- [Free Tools](https://www.epicware.ai/tools)
+- [Guides](https://www.epicware.ai/resources/guides)
+- [About Epicware](https://www.epicware.ai/about)
+- [Contact](https://www.epicware.ai/contact)
+- [Book a Demo](https://www.epicware.ai/book-demo)
+
+## Founder
+
+- Name: Vignesh Wadarajan
+- Previously founded NinjaOS — Singapore's leading F&B SaaS platform, $120M+ GMV, exited 2021
+
+## Contact
+
+- Website: [https://www.epicware.ai](https://www.epicware.ai)
+- Email: hello@epicware.ai
+- Location: Singapore
