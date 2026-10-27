@@ -58,7 +58,7 @@ const nextConfig: NextConfig = {
       { source: "/gbp-optimisation-singapore/gbp-qa-management", destination: "/locations/singapore/google-business-profile", permanent: true },
       // Review management consolidated — rewired to the new money page.
       { source: "/reputation-management-singapore/review-management", destination: "/locations/singapore/review-management", permanent: true },
-      { source: "/review-management-singapore/negative-review-response", destination: "/services/review-management/ai-review-response", permanent: true },
+      { source: "/review-management-singapore/negative-review-response", destination: "/locations/singapore/review-management#negative-review-response", permanent: true },
       { source: "/review-management-singapore/review-monitoring", destination: "/locations/singapore/review-management", permanent: true },
       { source: "/reputation-management-singapore/bad-review-removal", destination: "/locations/singapore/review-removal", permanent: true },
       { source: "/bad-review-removal-singapore/google-review-removal-policy", destination: "/blog/google-review-policy-explained", permanent: true },

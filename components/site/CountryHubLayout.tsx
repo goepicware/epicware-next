@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import rehypeSlug from "rehype-slug";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
@@ -44,7 +45,7 @@ export default function CountryHubLayout({
 
       <section className="py-12 lg:py-16">
         <div className="container mx-auto px-6 max-w-3xl prose prose-lg">
-          <MDXRemote source={body} />
+          <MDXRemote source={body} options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }} />
         </div>
       </section>
 

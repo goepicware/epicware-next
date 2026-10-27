@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import rehypeSlug from "rehype-slug";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
@@ -62,7 +63,7 @@ export default async function SubFeaturePage({
 
       <section className="py-12 lg:py-16">
         <div className="container mx-auto px-6 max-w-3xl prose prose-lg">
-          <MDXRemote source={content.body} />
+          <MDXRemote source={content.body} options={{ mdxOptions: { rehypePlugins: [rehypeSlug] } }} />
         </div>
       </section>
 
