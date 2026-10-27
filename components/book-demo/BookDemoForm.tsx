@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
+import { trackEvent } from "@/lib/meta-tracking";
 
 const INDUSTRIES = [
   "Restaurant / F&B",
@@ -90,6 +91,15 @@ export default function BookDemoForm() {
         }),
       });
       if (!res.ok) throw new Error("Failed");
+      // Track Lead + Schedule — dual-fire browser pixel + CAPI with same event_id
+      trackEvent("Lead", {
+        userData: { em: formData.email, ph: formData.phone },
+        customData: { content_name: "Strategy Call", content_category: formData.industry },
+      });
+      trackEvent("Schedule", {
+        userData: { em: formData.email, ph: formData.phone },
+        customData: { content_name: "Strategy Call" },
+      });
       setStatus("success");
       setFormData({ fullName: "", phone: "", email: "", companyName: "", industry: "", revenueRange: "", outlets: "", interests: [] });
     } catch {

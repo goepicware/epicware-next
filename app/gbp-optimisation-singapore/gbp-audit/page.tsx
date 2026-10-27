@@ -35,7 +35,7 @@ export default function GbpAuditPage() {
       trustSignals={["19-Point Audit", "Impact-Ranked Fixes", "Singapore-Built", "Multi-Outlet"]}
       imageSrc="/assets/epicmap-before-after.png"
       openingParagraph="Your Google Business Profile has 19 distinct elements that affect how Google ranks you for local searches. Most Singapore SMBs have filled in the basics but leave 10 or more elements incomplete. Incomplete profiles rank lower than complete ones — every gap is a rank disadvantage you are giving to competitors."
-      whenTitle="Why a GBP Audit Matters"
+      whenTitle="Why does a Google Business Profile audit matter for rank?"
       whenContent={
         <div className="space-y-4">
           <p>
@@ -50,7 +50,7 @@ export default function GbpAuditPage() {
           </p>
         </div>
       }
-      howTitle="How Epicware Handles the GBP Audit"
+      howTitle="How does Epicware's 19-point GBP audit work?"
       howContent={
         <div className="space-y-4">
           <p>
@@ -88,6 +88,24 @@ export default function GbpAuditPage() {
           to see your results immediately.
         </>
       }
+      faqs={[
+        {
+          q: "What does Epicware's 19-point GBP audit check?",
+          a: "The audit scores 19 elements: primary category, secondary categories, business name alignment, address format and NAP consistency, phone number, website link, business hours completeness, special hours, description length and keywords, photo count and recency, video presence, Q&A seeding, review count and rating, GBP post frequency, services listed, products added, attributes completed, and messaging enabled. Each element is scored by its impact on Maps rank.",
+        },
+        {
+          q: "Why would an incomplete Google Business Profile hurt my rank?",
+          a: "Google's local ranking algorithm treats your GBP as the primary data source for Maps results. Each missing or inconsistent element reduces Google's confidence in your profile relative to competitors who've completed those same fields. A missing primary category is the most severe gap — it's the strongest signal of what your business does. Missing photos, low Q&A activity, and no recent posts signal a profile that isn't actively maintained, which suppresses rank.",
+        },
+        {
+          q: "How often should I audit my Google Business Profile?",
+          a: "A full 19-point audit should be run at least quarterly. Google periodically resets certain profile elements, accepts user-suggested edits, and updates its weighting of different rank factors. Your competitors also update their profiles continuously. Running an audit every 3 months catches drift before it compounds into a meaningful rank gap.",
+        },
+        {
+          q: "What's the difference between a free GBP check and Epicware's 19-point audit?",
+          a: "A standard GBP health check (including Google's own recommendations) typically covers 5–7 basic completeness factors. Epicware's 19-point audit covers every documented rank signal, scores each by its actual impact on Maps rank, and produces an impact-ranked fix list rather than a generic checklist. The audit also runs on a recurring basis — not just once at onboarding.",
+        },
+      ]}
     />
   );
 }
