@@ -3,12 +3,33 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { DISTRICTS, getDistrict } from "@/lib/districts";
+import { getService, SERVICES } from "@/lib/site/services";
+import { getMoneyPageContent } from "@/lib/site/content";
+import MoneyPageLayout from "@/components/site/MoneyPageLayout";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
+/**
+ * Singapore district/service collision fix (docs/restructure/phase-0-audit.md §4).
+ *
+ * This folder is a literal "singapore" segment, not a dynamic [country]
+ * one, so it always wins routing precedence over app/locations/[country]/
+ * for any /locations/singapore/* request — the generic country×service
+ * route never sees these. Inside it, [slug] can mean one of two things,
+ * resolved in this order:
+ *   1. A service slug (local-seo, review-management, ...) → render the
+ *      Singapore money page via the same MoneyPageLayout every other
+ *      country uses.
+ *   2. A district slug (jurong, tampines, ...) → render the existing
+ *      district page, unchanged.
+ *   3. Neither → 404.
+ */
+
 export async function generateStaticParams() {
-  return DISTRICTS.map((d) => ({ district: d.slug }));
+  const serviceSlugs = SERVICES.map((s) => ({ slug: s.slug }));
+  const districtSlugs = DISTRICTS.map((d) => ({ slug: d.slug }));
+  return [...serviceSlugs, ...districtSlugs];
 }
 
 const DISTRICT_META: Record<string, { title: string; description: string }> = {
@@ -67,9 +88,30 @@ const DISTRICT_META: Record<string, { title: string; description: string }> = {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ district: string }>;
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { district: slug } = await params;
+  const { slug } = await params;
+
+  const service = getService(slug);
+  if (service) {
+    const content = getMoneyPageContent("singapore", slug);
+    if (!content) return {};
+    const canonical = `https://www.epicware.ai/locations/singapore/${slug}`;
+    return {
+      title: { absolute: content.frontmatter.metaTitle },
+      description: content.frontmatter.metaDescription,
+      alternates: {
+        canonical,
+        languages: { "en-SG": canonical, "x-default": `https://www.epicware.ai/services/${slug}` },
+      },
+      openGraph: {
+        title: content.frontmatter.metaTitle,
+        description: content.frontmatter.metaDescription,
+        url: canonical,
+      },
+    };
+  }
+
   const d = getDistrict(slug);
   if (!d) return {};
   const meta = DISTRICT_META[slug];
@@ -77,9 +119,7 @@ export async function generateMetadata({
   return {
     title: { absolute: meta.title },
     description: meta.description,
-    alternates: {
-      canonical: `https://www.epicware.ai/locations/singapore/${slug}`,
-    },
+    alternates: { canonical: `https://www.epicware.ai/locations/singapore/${slug}` },
     openGraph: {
       title: meta.title,
       description: meta.description,
@@ -88,12 +128,29 @@ export async function generateMetadata({
   };
 }
 
-export default async function DistrictPage({
+export default async function SingaporeSlugPage({
   params,
 }: {
-  params: Promise<{ district: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { district: slug } = await params;
+  const { slug } = await params;
+
+  // 1. Service slug → money page, same template every other country uses.
+  const service = getService(slug);
+  if (service) {
+    const content = getMoneyPageContent("singapore", slug);
+    if (!content) notFound();
+    return (
+      <MoneyPageLayout
+        countrySlug="singapore"
+        serviceSlug={slug}
+        h1={content.frontmatter.h1}
+        body={content.body}
+      />
+    );
+  }
+
+  // 2. District slug → existing district page, unchanged.
   const d = getDistrict(slug);
   if (!d) notFound();
 
@@ -160,7 +217,7 @@ export default async function DistrictPage({
         trustSignals={[
           "Singapore-Built",
           "Bad Review Removal Guaranteed",
-          "50+ Outlets Managed",
+          "Multi-Outlet Ready",
           "Live Dashboard Included",
         ]}
         imageSrc="/assets/epicmap-before-after.png"
