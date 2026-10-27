@@ -43,3 +43,7 @@ jobs:
         run: pnpm check:live-endpoints
         env:
           BASE_URL: https://www.epicware.ai
+          # A real, extremely stable Google Business Profile (Marina Bay
+          # Sands) so resolve-gbp's happy path is actually exercised, not
+          # just its graceful-rejection path for a fake URL.
+          SMOKE_TEST_GBP_URL: "https://www.google.com/maps/place/Marina+Bay+Sands/@1.2834,103.8607,15z"
