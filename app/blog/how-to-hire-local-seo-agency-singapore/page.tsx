@@ -39,7 +39,7 @@ export default function Post() {
         <>
           <p>
             Hiring a{" "}
-            <Link href="/local-seo-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO agency in Singapore</Link>{" "}
+            <Link href="/locations/singapore/local-seo" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO agency in Singapore</Link>{" "}
             should be straightforward. It isn&apos;t. The market is full of
             generalist agencies that treat local SEO as a checkbox — a GBP update here, a citation submission
             there — and charge S$800 to S$3,000 a month for work that moves nothing.
@@ -84,7 +84,7 @@ export default function Post() {
           <h3>Google Business Profile Optimisation</h3>
           <p>
             Your{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profile</Link>{" "}
+            <Link href="/locations/singapore/google-business-profile" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profile</Link>{" "}
             is the single most important local SEO asset. A thorough audit covers every field: primary
             and secondary categories, business description, services and attributes, photo volume and recency,
             opening hours, Q&amp;A, and post activity. Incomplete profiles rank lower because Google has less
@@ -272,7 +272,7 @@ export default function Post() {
           <h2>The AI Search Question</h2>
           <p>
             Any conversation about local SEO in Singapore in 2026 has to address AI search.{" "}
-            <Link href="/ai-search-visibility-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">Google AI Overviews</Link>{" "}
+            <Link href="/locations/singapore/ai-search-visibility" className="text-primary underline underline-offset-2 hover:text-primary/80">Google AI Overviews</Link>{" "}
             now appear for a significant share of local queries. Perplexity and ChatGPT are answering
             &quot;best dentist near Orchard&quot; questions with specific recommendations — pulled from GBP
             data, review sentiment, and structured signals on your website.
@@ -311,7 +311,7 @@ export default function Post() {
           </p>
           <p>
             See how Epicware answers each of these as an{" "}
-            <a href="/seo-agency-singapore">SEO agency in Singapore</a>.
+            <a href="/locations/singapore/seo">SEO agency in Singapore</a>.
           </p>
         </>
       }
@@ -321,7 +321,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Google Maps Ranking Factors Explained", href: "/blog/google-maps-ranking-factors" },
         { title: "SEO vs Local SEO — What's the Actual Difference?", href: "/blog/seo-vs-local-seo" },
-        { title: "Review Management Singapore", href: "/blog/review-management-singapore" },
+        { title: "Review Management Singapore", href: "/blog/locations/singapore/review-management" },
         { title: "How Many Google Reviews Do You Need to Compete Locally?", href: "/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
       ]}
     />

@@ -35,6 +35,7 @@ export async function generateMetadata({
       description: content.frontmatter.metaDescription,
       url: canonical,
     },
+    ...(content.frontmatter.draft ? { robots: { index: false, follow: false } } : {}),
   };
 }
 

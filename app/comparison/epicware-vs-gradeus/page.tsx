@@ -51,8 +51,8 @@ export default function Page() {
       epicwareSummary={
         <>
           Epicware is a direct-to-SMB platform built for Singapore's market. WhatsApp review campaigns,{" "}
-          <Link href="/bad-review-removal-singapore">bad review removal</Link>, hyperlocal rank tracking, and{" "}
-          <Link href="/local-seo-singapore/gbp-optimisation">GBP optimisation</Link> are all included. Epicware's own team does the work, as an{" "}
+          <Link href="/locations/singapore/review-removal">bad review removal</Link>, hyperlocal rank tracking, and{" "}
+          <Link href="/locations/singapore/google-business-profile">GBP optimisation</Link> are all included. Epicware's own team does the work, as an{" "}
           <Link href="/">AI-powered digital marketing agency in Singapore</Link> with its own review software.
         </>
       }
@@ -80,7 +80,7 @@ export default function Page() {
           a: (
             <>
               No. Grade.us is focused on review management and does not include GBP hyperlocal rank tracking or a 19-point GBP audit and optimisation service. Epicware includes EpicMap for district-level rank tracking across Singapore and a 19-point GBP audit as part of the platform. Our reports pair{" "}
-              <Link href="/local-seo-singapore/local-rank-tracking">local rank tracking</Link> with review data.
+              <Link href="/services/local-seo/rank-tracking">local rank tracking</Link> with review data.
             </>
           ),
         },

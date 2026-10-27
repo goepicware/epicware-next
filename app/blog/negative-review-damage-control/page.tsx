@@ -222,7 +222,7 @@ export default function Post() {
             </p>
             <p>
               A fast, calm reply is step one; our{" "}
-              <Link href="/reputation-management-singapore/ai-review-response" className="text-primary font-medium hover:underline">
+              <Link href="/services/review-management/ai-review-response" className="text-primary font-medium hover:underline">
                 AI review response
               </Link>{" "}
               service drafts one for you to approve.
@@ -297,7 +297,7 @@ export default function Post() {
                 <strong>Accusing the reviewer of dishonesty.</strong> Calling a review fake in your public reply
                 is a legal and PR risk. If you believe a review is fraudulent, use platform reporting tools.
                 Epicware&apos;s{" "}
-                <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+                <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                   bad review removal service
                 </Link>{" "}
                 handles this through proper channels.
@@ -388,7 +388,7 @@ export default function Post() {
               Once you have mitigated a negative review effectively, use your public response as social proof.
               Prospective customers who see a thoughtful, professional reply to a complaint often trust your
               business more than if no complaint had appeared at all. A well-handled criticism, visible on your{" "}
-              <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                 Google Business Profile
               </Link>
               , can convert skeptical visitors into paying customers.
@@ -467,7 +467,7 @@ export default function Post() {
             <h2>How Epicware helps you put this into practice</h2>
             <p>
               Protecting your reputation requires speed, consistency, and data. Epicware&apos;s{" "}
-              <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                 reputation management platform
               </Link>{" "}
               gives business owners real-time review alerts, structured response workflows, and analytics that
@@ -489,7 +489,7 @@ export default function Post() {
             </p>
             <p>
               If the review is fake or breaks the rules, we can{" "}
-              <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                 remove bad Google reviews
               </Link>{" "}
               like it through a formal request.
@@ -538,7 +538,7 @@ export default function Post() {
         relatedPosts={[
           {
             title: "Negative Review Response Singapore — Build Trust",
-            href: "/reputation-management-singapore/ai-review-response",
+            href: "/services/review-management/ai-review-response",
           },
           {
             title: "How Fast Should You Respond to Google Reviews?",
@@ -546,7 +546,7 @@ export default function Post() {
           },
           {
             title: "Review Management for Singapore SMBs — What It Actually Involves",
-            href: "/blog/review-management-singapore",
+            href: "/blog/locations/singapore/review-management",
           },
           {
             title: "Fake or Unfair Google Reviews: What Singapore Businesses Can Do",

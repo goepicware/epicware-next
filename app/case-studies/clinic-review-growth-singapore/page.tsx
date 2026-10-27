@@ -37,7 +37,7 @@ export default function Page() {
       ]}
       subtitle={
         <>
-          Three <Link href="/bad-review-removal-singapore/fake-review-removal">competitor-posted fake reviews</Link> were dragging a Singapore GP clinic network&apos;s rating below 4.0. Epicware removed them and built a review generation system that now generates 20+ verified patient reviews per month.
+          Three <Link href="/services/review-removal/fake-review-removal">competitor-posted fake reviews</Link> were dragging a Singapore GP clinic network&apos;s rating below 4.0. Epicware removed them and built a review generation system that now generates 20+ verified patient reviews per month.
         </>
       }
       trustSignals={["3 Fake Reviews Removed", "3.8 → 4.7 Rating", "Multi-Clinic", "Patient Trust Rebuilt"]}
@@ -82,11 +82,11 @@ export default function Page() {
 
           <h2>What Happened With Patient Inquiries</h2>
           <p>The clinic operator reported a noticeable increase in new patient enquiries from Google Maps in the month after the rating crossed 4.5 — which they attributed to the improved Maps rank and the higher star rating visible in search results. The 4.5+ threshold appears to be a meaningful consumer perception point in the healthcare category.</p>
-          <p>For more detail on the bad review removal process, see <a href="/bad-review-removal-singapore">bad review removal Singapore</a>.</p>
-          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one. The same review work is part of our <a href="/industries/healthcare-clinics">local SEO for medical clinics</a>.</p>
+          <p>For more detail on the bad review removal process, see <a href="/locations/singapore/review-removal">bad review removal Singapore</a>.</p>
+          <p>See our full <a href="/locations/singapore/seo">SEO agency in Singapore</a> services for more on how we rank local businesses like this one. The same review work is part of our <a href="/industries/healthcare-clinics">local SEO for medical clinics</a>.</p>
         </>
       }
-      ctaHref="/bad-review-removal-singapore"
+      ctaHref="/locations/singapore/review-removal"
       ctaLabel="Bad Review Removal Singapore"
     />
   );

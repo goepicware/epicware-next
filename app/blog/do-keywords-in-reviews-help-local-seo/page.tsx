@@ -81,16 +81,16 @@ export default function Post() {
             .</p>
         </>
       }
-      ctaHref="/local-seo-singapore"
+      ctaHref="/locations/singapore/local-seo"
       ctaLabel="Local SEO Singapore"
       ctaContext={
         <>
           Epicware&apos;s{" "}
-          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+          <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
             local SEO services
           </Link>{" "}
           cover GBP optimisation,{" "}
-          <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+          <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
             Google review management
           </Link>{" "}
           and rank tracking across Singapore districts.

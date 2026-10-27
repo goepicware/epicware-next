@@ -274,7 +274,7 @@ export default function Post() {
             <p>
               Epicware&apos;s{" "}
               <Link
-                href="/review-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 review management platform
@@ -359,7 +359,7 @@ export default function Post() {
                 <strong>GBP completeness:</strong> profile missing services, photos, or recent
                 posts? → Address{" "}
                 <Link
-                  href="/local-seo-singapore/gbp-optimisation"
+                  href="/locations/singapore/google-business-profile"
                   className="text-primary font-medium hover:underline"
                 >
                   GBP optimisation
@@ -370,7 +370,7 @@ export default function Post() {
                 <strong>Local rank:</strong> not appearing in the top 3 for your primary keyword?
                 → Add{" "}
                 <Link
-                  href="/local-seo-singapore"
+                  href="/locations/singapore/local-seo"
                   className="text-primary font-medium hover:underline"
                 >
                   local SEO and rank tracking
@@ -468,7 +468,7 @@ export default function Post() {
             <p>
               ORM in 2026 now includes what is called{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 GEO — generative engine optimisation
@@ -514,7 +514,7 @@ export default function Post() {
             <p>
               For businesses with removable reviews, Epicware&apos;s{" "}
               <Link
-                href="/bad-review-removal-singapore"
+                href="/locations/singapore/review-removal"
                 className="text-primary font-medium hover:underline"
               >
                 bad review removal service
@@ -526,7 +526,7 @@ export default function Post() {
             <p>
               The full{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 reputation management service
@@ -650,13 +650,13 @@ export default function Post() {
             </p>
           </>
         }
-        ctaHref="/reputation-management-singapore"
+        ctaHref="/locations/singapore/review-management"
         ctaLabel="Explore Reputation Management"
         ctaContext="Epicware's reputation management platform covers all five ORM service types from a single dashboard — built specifically for Singapore SMBs."
         relatedPosts={[
           {
             title: "Review Management for Singapore SMBs — What It Actually Involves",
-            href: "/blog/review-management-singapore",
+            href: "/blog/locations/singapore/review-management",
           },
           {
             title: "Reputation Recovery Strategy: A 2026 Guide for SMBs",

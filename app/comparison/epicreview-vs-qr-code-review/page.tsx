@@ -33,7 +33,7 @@ const features = [
   { feature: "Works without customer initiative", epicware: true, competitor: false },
   { feature: "Multi-outlet dashboard", epicware: true, competitor: false },
   { feature: "AI review response included", epicware: true, competitor: false },
-  { feature: <><Link href="/bad-review-removal-singapore">Bad review removal</Link> available</>, epicware: true, competitor: false },
+  { feature: <><Link href="/locations/singapore/review-removal">Bad review removal</Link> available</>, epicware: true, competitor: false },
   { feature: "GBP rank tracking", epicware: true, competitor: false },
   { feature: "Setup required", epicware: "Integration with booking/POS", competitor: "Print and display" },
   { feature: "Ongoing management", epicware: "Automated, minimal", competitor: "Manual replacement/updates" },
@@ -56,7 +56,7 @@ export default function Page() {
       }
       features={features}
       verdict={
-        <p>QR code review collection is passive — it depends on customers taking initiative. For businesses that need consistent review velocity, Epicware&apos;s automated campaigns outperform by 5–10x. For <a href="/use-cases/manage-multiple-gbp-locations">multi-outlet businesses</a>, managing 10 QR codes vs one Epicware dashboard is not comparable. See <a href="/reputation-management-singapore/review-generation">review generation campaigns</a> or <a href="/book-demo#form">book a free demo</a>.</p>
+        <p>QR code review collection is passive — it depends on customers taking initiative. For businesses that need consistent review velocity, Epicware&apos;s automated campaigns outperform by 5–10x. For <a href="/use-cases/manage-multiple-gbp-locations">multi-outlet businesses</a>, managing 10 QR codes vs one Epicware dashboard is not comparable. See <a href="/services/review-management/review-generation">review generation campaigns</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
       faqHeading="Common questions about automated vs QR code review collection"
       faqs={[

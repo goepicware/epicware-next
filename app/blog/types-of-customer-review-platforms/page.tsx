@@ -191,7 +191,7 @@ export default function Post() {
             </p>
             <p>
               You can show your best reviews on your own site with a{" "}
-              <Link href="/reputation-management-singapore/review-widgets" className="text-primary font-medium hover:underline">
+              <Link href="/services/review-management/review-widgets" className="text-primary font-medium hover:underline">
                 Google review widget
               </Link>
               .
@@ -322,7 +322,7 @@ export default function Post() {
             </p>
             <ProTip>
               Use a centralized{" "}
-              <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                 review management platform
               </Link>{" "}
               to monitor feedback across all marketplace channels in one dashboard. Responding to negative seller
@@ -456,7 +456,7 @@ export default function Post() {
             <p>
               Building a strong presence across the right review platforms takes consistent effort and the right
               tools. Managing several platforms at once is what{" "}
-              <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                 online reputation management services
               </Link>{" "}
               are for.
@@ -470,12 +470,12 @@ export default function Post() {
             <p>
               Epicware is built for businesses that want real results from their local SEO and reputation management,
               not just a dashboard full of data. The platform integrates{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                 Google Business Profile management
               </Link>
               , review monitoring, and AI-powered recommendations in one place. For businesses dealing with fake or
               unfair reviews, Epicware offers a{" "}
-              <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                 bad review removal service
               </Link>{" "}
               where the $200 per-review fee is refunded in full if the review isn't taken down within 3 months. With over 50 outlets managed and a track
@@ -531,7 +531,7 @@ export default function Post() {
           },
           {
             title: "Review Management for Singapore SMBs",
-            href: "/blog/review-management-singapore",
+            href: "/blog/locations/singapore/review-management",
           },
           {
             title: "Google Review Request Templates — WhatsApp, Email & SMS",

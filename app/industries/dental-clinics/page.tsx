@@ -30,37 +30,37 @@ const schema = {
 const services = [
   {
     label: "GBP Category Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "Primary and secondary categories configured for every procedure you offer.",
   },
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "Refunded if not removed within 3 months. Protect your clinic's reputation from fake reviews.",
   },
   {
     label: "Review Generation",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "Post-appointment review requests that convert satisfied patients into reviewers.",
   },
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "19-point audit covering every factor that affects your dental clinic's Maps rank.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description:
       "Track your rank for every dental keyword across Singapore districts.",
   },
   {
     label: "Reputation Analytics",
-    href: "/reputation-management-singapore/reputation-analytics",
+    href: "/services/review-management/reputation-analytics",
     description:
       "Monitor your rating trends and review velocity across all clinic branches.",
   },
@@ -105,9 +105,9 @@ export default function DentalClinicsPage() {
       openingParagraph={
         <>
           Dental patients are among the most research-intensive healthcare consumers in Singapore. Before a wisdom tooth extraction or Invisalign consultation, they read every review, compare clinic prices, look at before-and-after photos, and check whether a dentist specialises in their needed procedure. A dental clinic that ranks in the top 3 for 'Invisalign clinic Tampines' or 'emergency dentist Jurong' captures patients who are ready to book. Without that visibility, even the most skilled dentist loses patients to a competitor with better Google Maps presence. Our{" "}
-          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO</Link>{" "}
+          <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">local SEO</Link>{" "}
           work helps patients find you when they search by treatment.
-           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+           See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="The Dental Clinic Reputation Challenge"
@@ -124,7 +124,7 @@ export default function DentalClinicsPage() {
           </Link>{" "}
           and service listings, you
           miss both. Multi-location dental groups face all of this at scale. Proactive{" "}
-          <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+          <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
             reputation management
           </Link>{" "}
           is essential, not optional, for Singapore dental clinics.

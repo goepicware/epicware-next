@@ -42,7 +42,7 @@ export default function Post() {
         <>
           <h2>Why There Is No Single Answer</h2>
           <p>
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               Google Maps rank
             </Link>{" "}
             is competitive and hyperlocal. A restaurant in Clementi competes with Clementi restaurants — not restaurants in Bishan or Bedok. A physiotherapy clinic in the CBD competes with CBD clinics. Your benchmark is the review count of the businesses currently outranking you for your specific keyword in your specific area.</p>
@@ -57,11 +57,11 @@ export default function Post() {
             <li>Note their review count and average rating</li>
           </ol>
           <p>This gives you the competitive ceiling for your specific location and keyword. If the top 3 businesses have 120, 95, and 87 reviews, your target to rank in the top 3 is roughly 80–100 reviews with a comparable rating. Check where you rank block by block with{" "}
-            <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary font-medium hover:underline">
+            <Link href="/services/local-seo/rank-tracking" className="text-primary font-medium hover:underline">
               local rank tracking
             </Link>
             . Count the reviews of the three businesses above you; a{" "}
-            <Link href="/local-seo-singapore/competitor-analysis" className="text-primary font-medium hover:underline">
+            <Link href="/services/local-seo/competitor-analysis" className="text-primary font-medium hover:underline">
               local competitor analysis
             </Link>{" "}
             does this for every keyword.

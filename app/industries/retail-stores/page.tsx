@@ -30,13 +30,13 @@ const schema = {
 const services = [
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "Hours accuracy, product listings, seasonal updates, and full profile completeness.",
   },
   {
     label: "Review Generation",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "Post-purchase review requests via WhatsApp and email.",
   },
@@ -48,18 +48,18 @@ const services = [
   },
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description: "Remove fake or policy-violating reviews from competitors.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description:
       "Track your rank for product category searches across Singapore districts.",
   },
   {
     label: "GBP Post Scheduling",
-    href: "/local-seo-singapore/gbp-post-scheduling",
+    href: "/services/google-business-profile/post-scheduling",
     description:
       "Weekly GBP posts featuring new arrivals, promotions, and store updates.",
   },
@@ -87,7 +87,7 @@ export default function RetailStoresPage() {
         <>
           Singapore shoppers search Google Maps before they visit, so it pays to{" "}
           <Link
-            href="/local-seo-singapore/gbp-optimisation"
+            href="/locations/singapore/google-business-profile"
             className="text-primary font-medium hover:underline"
           >
             optimise your Google Business Profile
@@ -107,11 +107,11 @@ export default function RetailStoresPage() {
       openingParagraph={
         <>
           When a shopper searches 'mobile phone accessories near me' or 'art supplies shop in Ang Mo Kio', they use Google Maps to decide which store to visit. A retail store with accurate hours, high-quality product photos, 60+ reviews, and regular GBP posts converts that search into a walk-in. Retail is intensely location-dependent, and Google Maps rank within the immediate catchment area determines foot traffic volume. Epicware's platform manages every GBP signal that affects that rank.{" "}
-          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">Local SEO</Link>{" "}
+          <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">Local SEO</Link>{" "}
           helps shoppers find each of your stores. Our{" "}
           <Link href="/" className="text-primary font-medium hover:underline">digital marketing team</Link>{" "}
           runs local SEO and reviews for retail brands across Singapore.
-           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+           See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="Retail-Specific Reputation Challenges"

@@ -57,7 +57,7 @@ export default function NoRemovalNoFee() {
           className="text-center"
         >
           <Link
-            href="/bad-review-removal-singapore"
+            href="/locations/singapore/review-removal"
             className="inline-flex items-center gap-2 bg-white text-[#0A1628] font-bold px-8 py-4 rounded-full text-base hover:bg-white/90 transition-colors duration-200 group"
           >
             Remove a Bad Review

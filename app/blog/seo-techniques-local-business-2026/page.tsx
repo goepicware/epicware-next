@@ -112,7 +112,7 @@ export default function Post() {
             <p>
               If your local business is not showing up on the first page of Google, you are already
               losing customers to your competitors. The good news? That can change — and it starts
-              with understanding the right <Link href="/local-seo-singapore">SEO search engine
+              with understanding the right <Link href="/locations/singapore/local-seo">SEO search engine
               optimisation techniques</Link> designed specifically for local visibility.
             </p>
             <p>
@@ -152,7 +152,7 @@ export default function Post() {
               commonly overlooked gap), primary and secondary categories, business attributes such
               as parking availability, Wi-Fi, and accepted payment methods, and a strong media
               library.{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation">
+              <Link href="/locations/singapore/google-business-profile">
                 Google Business Profile optimisation
               </Link>{" "}
               starts with the right categories, hours and photos.{" "}
@@ -173,7 +173,7 @@ export default function Post() {
             </p>
             <p>
               Epicware&apos;s{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation">Core 30 Method</Link> addresses this
+              <Link href="/locations/singapore/google-business-profile">Core 30 Method</Link> addresses this
               complexity with a structured 30-point GBP checklist that covers every completeness
               signal Google evaluates. Rather than guessing which fields matter, the method turns
               a half-built profile into a ranking-ready foundation systematically, point by point.
@@ -238,7 +238,7 @@ export default function Post() {
               providers need accurate listings on SingHealth and HealthHub directories. The
               specific mix matters as much as the consistency itself, because AI systems like
               ChatGPT, Gemini, and Perplexity now draw on{" "}
-              <Link href="/local-seo-singapore/citation-building">citation data</Link> to build
+              <Link href="/services/local-seo/citation-building">citation data</Link> to build
               entity confidence — meaning your NAP needs to be consistent across AI-facing
               platforms too, not just traditional directories.
             </p>
@@ -264,7 +264,7 @@ export default function Post() {
               signals that a business values feedback, and this guidance appears directly within
               its tips for improving local ranking. Most beginners treat review responses as
               optional{" "}
-              <Link href="/reputation-management-singapore">reputation management</Link>. Treat
+              <Link href="/locations/singapore/review-management">reputation management</Link>. Treat
               them instead as a technical SEO task. A strong response rate tells Google&apos;s
               algorithm that your business is active, engaged, and trustworthy enough to surface
               prominently.
@@ -554,7 +554,7 @@ export default function Post() {
 
             <h3>Citations and Behavioural Signals</h3>
             <p>
-              <Link href="/local-seo-singapore/citation-building">Citation building</Link> —
+              <Link href="/services/local-seo/citation-building">Citation building</Link> —
               getting your business listed in relevant online directories with consistent NAP —
               feeds directly into the prominence factor. For a new or under-optimised profile,
               submitting accurate listings to high-authority directories is one of the fastest
@@ -576,14 +576,14 @@ export default function Post() {
               They are asking ChatGPT which plumber to call, asking Gemini for the best tuition
               centre nearby, and getting direct business recommendations from Perplexity without
               ever seeing a search results page.{" "}
-              <Link href="/ai-search-visibility-singapore">
+              <Link href="/locations/singapore/ai-search-visibility">
                 Generative Engine Optimisation
               </Link>{" "}
               — or GEO — is the practice of structuring your content, entity data, and authority
               signals so that these AI-powered platforms include your business in their generated
               answers. It is not a replacement for local SEO; it is an additional layer built on
               top of everything you have already done.{" "}
-              <Link href="/ai-search-visibility-singapore">AI search optimisation</Link> makes your
+              <Link href="/locations/singapore/ai-search-visibility">AI search optimisation</Link> makes your
               business easier for ChatGPT and Gemini to find and quote.
             </p>
 
@@ -672,7 +672,7 @@ export default function Post() {
             </p>
             <p>
               Epicware&apos;s{" "}
-              <Link href="/ai-search-visibility-singapore">AI Visibility Tracking</Link> product
+              <Link href="/locations/singapore/ai-search-visibility">AI Visibility Tracking</Link> product
               audits how your business appears across AI platforms, pinpoints the gaps in entity
               data and content that are causing missed citations, and delivers a prioritised
               implementation roadmap so you address the highest-impact items first.
@@ -684,7 +684,7 @@ export default function Post() {
               demanding enough. Scaling those same practices across five, ten, or twenty locations
               introduces a compounding operational challenge that templated approaches simply
               cannot solve. This is the core of what{" "}
-              <Link href="/local-seo-singapore">local SEO services</Link> do for shops, clinics
+              <Link href="/locations/singapore/local-seo">local SEO services</Link> do for shops, clinics
               and restaurants.
             </p>
             <p>
@@ -715,7 +715,7 @@ export default function Post() {
             </p>
             <p>
               Epicware is built specifically for this operational reality. GBP optimisation,{" "}
-              <Link href="/review-management-singapore">review collection</Link>, content
+              <Link href="/locations/singapore/review-management">review collection</Link>, content
               publishing, and AI visibility tracking are managed across all locations from a single
               dashboard, giving F&amp;B groups, clinic chains, salon franchises, and tuition centre
               networks the control they need to ensure every outlet performs — not just the
@@ -781,7 +781,7 @@ export default function Post() {
               Google commands a 95.1% search engine market share in Singapore. That is not one
               channel among several. For walk-in and call-driven businesses including F&amp;B
               outlets, clinics, salons, car workshops, and tuition centres,{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation">Google Business Profile optimisation</Link>{" "}
+              <Link href="/locations/singapore/google-business-profile">Google Business Profile optimisation</Link>{" "}
               is the primary competitive lever. Everything else is secondary. Getting your GBP
               wrong in Singapore is not a missed opportunity on one platform — it is invisibility
               across the market.
@@ -800,7 +800,7 @@ export default function Post() {
               Consumers are already asking ChatGPT and Gemini questions like "Where can I find a
               reliable dentist near Orchard?" before opening a single search result. Businesses
               without{" "}
-              <Link href="/ai-search-visibility-singapore">AI visibility</Link> have a blind spot
+              <Link href="/locations/singapore/ai-search-visibility">AI visibility</Link> have a blind spot
               that traditional SEO rankings cannot compensate for.
             </p>
 
@@ -830,11 +830,11 @@ export default function Post() {
             </p>
             <p>
               Epicware brings{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation">GBP optimisation</Link>, automated{" "}
-              <Link href="/review-management-singapore">review collection</Link>, localised
+              <Link href="/locations/singapore/google-business-profile">GBP optimisation</Link>, automated{" "}
+              <Link href="/locations/singapore/review-management">review collection</Link>, localised
               content publishing,{" "}
               <Link href="/products/epicmap">geogrid rank tracking</Link>, and{" "}
-              <Link href="/ai-search-visibility-singapore">AI visibility auditing</Link> together
+              <Link href="/locations/singapore/ai-search-visibility">AI visibility auditing</Link> together
               in a single platform built specifically for local service SMBs. The full stack —
               without the agency retainer.
             </p>
@@ -859,7 +859,7 @@ export default function Post() {
             </p>
             <p>
               If you&apos;d rather not do this alone, Epicware, an{" "}
-              <Link href="/seo-agency-singapore">SEO agency in Singapore</Link>, can run it for
+              <Link href="/locations/singapore/seo">SEO agency in Singapore</Link>, can run it for
               you.
             </p>
           </>

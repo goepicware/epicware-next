@@ -160,12 +160,12 @@ export default function ProductsHubPage() {
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mt-6">
             Two of them power our core services: EpicMap for{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO services
             </Link>{" "}
             and EpicReview for{" "}
             <Link
-              href="/reputation-management-singapore"
+              href="/locations/singapore/review-management"
               className="text-primary font-medium hover:underline"
             >
               online reputation management

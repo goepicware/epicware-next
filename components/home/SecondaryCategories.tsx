@@ -37,7 +37,7 @@ const SIDE_CARDS = [
     lineHex: "#8b5cf6",
     glowHex: "rgba(139,92,246,0.10)",
     hoverBorder: "hover:border-violet-500/30",
-    href: "/local-seo-singapore",
+    href: "/locations/singapore/local-seo",
   },
   {
     title: "AI Search Visibility",
@@ -49,7 +49,7 @@ const SIDE_CARDS = [
     lineHex: "#06b6d4",
     glowHex: "rgba(6,182,212,0.08)",
     hoverBorder: "hover:border-cyan-400/30",
-    href: "/ai-search-visibility-singapore",
+    href: "/locations/singapore/ai-search-visibility",
   },
   {
     title: "Reputation Defence",
@@ -61,7 +61,7 @@ const SIDE_CARDS = [
     lineHex: "#10b981",
     glowHex: "rgba(16,185,129,0.08)",
     hoverBorder: "hover:border-emerald-400/30",
-    href: "/reputation-management-singapore",
+    href: "/locations/singapore/review-management",
   },
 ];
 

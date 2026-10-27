@@ -126,12 +126,12 @@ export default function Post() {
           <p>The businesses with hundreds of Google reviews are almost always businesses that ask every customer, consistently, through the right channels. Not businesses that run incentive programmes.</p>
         </>
       }
-      ctaHref="/reputation-management-singapore/review-generation"
+      ctaHref="/services/review-management/review-generation"
       ctaLabel="Ethical Review Generation Campaigns"
       ctaContext={
         <>
           Epicware, a <Link href="/" className="text-primary underline underline-offset-2 hover:text-primary/80">digital marketing agency in Singapore</Link>, runs{" "}
-          <Link href="/reputation-management-singapore/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">review campaigns</Link>{" "}
+          <Link href="/services/review-management/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">review campaigns</Link>{" "}
           that are policy-compliant: personalised, timely and free of incentives.
         </>
       }

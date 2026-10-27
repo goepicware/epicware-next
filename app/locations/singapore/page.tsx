@@ -65,37 +65,37 @@ const INDUSTRIES = [
 const SERVICES = [
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "19-point audit that covers every rank factor affecting your Google Business Profile in Singapore.",
   },
   {
     label: "Review Management",
-    href: "/review-management-singapore",
+    href: "/locations/singapore/review-management",
     description:
       "Real-time monitoring and AI-powered responses for every review across all your outlets.",
   },
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "$200/review, refunded if not removed within 3 months. Singapore's only productised bad review removal service.",
   },
   {
     label: "Local SEO Singapore",
-    href: "/local-seo-singapore",
+    href: "/locations/singapore/local-seo",
     description:
       "The full suite: rank tracking, citation building, GBP posts, and schema optimisation.",
   },
   {
     label: "Reputation Management",
-    href: "/reputation-management-singapore",
+    href: "/locations/singapore/review-management",
     description:
       "Review generation, AI response, and reputation analytics — all in one dashboard.",
   },
   {
     label: "AI Search Visibility",
-    href: "/ai-search-visibility-singapore",
+    href: "/locations/singapore/ai-search-visibility",
     description:
       "Optimise for ChatGPT, Perplexity, and Google AI Overviews alongside traditional Maps rank.",
   },

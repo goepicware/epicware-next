@@ -98,7 +98,7 @@ export default function Post() {
 
           <h2>How does consistent GBP activity improve local search visibility?</h2>
           <p>
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               GBP optimisation
             </Link>{" "}
             is not a one-time setup — it is an ongoing signal of business activity.
@@ -106,7 +106,7 @@ export default function Post() {
             for over six months often see a measurable reduction in local search impressions. Consistent
             updates tell Google your information is current and reliable, which directly improves your
             position in local results and the Map Pack. Regular posts, photos and replies all add to your{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local search visibility
             </Link>
             .
@@ -122,7 +122,7 @@ export default function Post() {
               <strong>Post to your GBP at least weekly.</strong> Businesses that post twice or more per
               week see higher engagement than those posting less frequently. Use posts to highlight offers,
               events, and new services. Our{" "}
-              <Link href="/local-seo-singapore/gbp-post-scheduling" className="text-primary font-medium hover:underline">
+              <Link href="/services/google-business-profile/post-scheduling" className="text-primary font-medium hover:underline">
                 GBP post scheduling
               </Link>{" "}
               service posts for you every week.
@@ -310,14 +310,14 @@ export default function Post() {
           </p>
         </>
       }
-      ctaHref="/local-seo-singapore/gbp-optimisation"
+      ctaHref="/locations/singapore/google-business-profile"
       ctaLabel="Get a Free GBP Audit"
       ctaContext="Epicware's 19-point GBP audit identifies exactly what your profile is missing to rank higher on Google Maps in Singapore."
       relatedPosts={[
         { title: "Google Maps Ranking Factors Explained — Where Reviews Fit In", href: "/blog/google-maps-ranking-factors" },
         { title: "Why Review Recency Matters for Local Rankings", href: "/blog/why-review-recency-matters-for-local-rankings" },
         { title: "How to Get More Google Reviews — Ethical Methods That Actually Work", href: "/blog/how-to-get-more-google-reviews" },
-        { title: "Review Management for Singapore SMBs — What It Actually Involves", href: "/blog/review-management-singapore" },
+        { title: "Review Management for Singapore SMBs — What It Actually Involves", href: "/blog/locations/singapore/review-management" },
         { title: "Restaurant Menu SEO for Multi-Location Operators", href: "/blog/restaurant-menu-seo" },
       ]}
     />

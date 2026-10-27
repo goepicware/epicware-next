@@ -102,7 +102,7 @@ export default function Post() {
           <ul>
             <li>Reviews collected through the gating process may be removed in bulk</li>
             <li>The GBP profile may be flagged or suspended. If that happens, our{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">Google Business Profile optimisation</Link>{" "}
+              <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">Google Business Profile optimisation</Link>{" "}
               team can help with the appeal.</li>
             <li>Competitors who report the gating practice can trigger a manual review by Google</li>
           </ul>
@@ -121,7 +121,7 @@ export default function Post() {
           <p>Epicware&apos;s review generation campaigns send requests to every customer — no pre-screening, no satisfaction gate, no conditional language. Every customer who completes a transaction receives the same message with a direct link. This approach is both policy-compliant and, in practice, more effective: customers who had a moderately good experience often leave positive reviews when asked directly, without any filtering step.</p>
         </>
       }
-      ctaHref="/reputation-management-singapore/review-generation"
+      ctaHref="/services/review-management/review-generation"
       ctaLabel="Compliant Review Generation"
       ctaContext="Epicware's campaigns ask every customer — no pre-screening, no gating. Policy-compliant by design."
       relatedPosts={[

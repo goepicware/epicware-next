@@ -154,7 +154,7 @@ export default function GetMoreGoogleReviewsPage() {
             <p>
               It&apos;s part of our{" "}
               <Link
-                href="/review-management-singapore/google-reviews"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 Google reviews service
@@ -233,7 +233,7 @@ export default function GetMoreGoogleReviewsPage() {
               size="lg"
               className="rounded-full bg-transparent border border-foreground/30 text-foreground hover:bg-muted h-14 px-8 font-semibold text-base"
             >
-              <Link href="/reputation-management-singapore/review-generation">
+              <Link href="/services/review-management/review-generation">
                 See Review Generation
               </Link>
             </Button>

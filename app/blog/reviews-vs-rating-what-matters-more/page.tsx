@@ -37,7 +37,7 @@ export default function Post() {
           <p>Business owners often frame the question as a choice: should I focus on getting more reviews, or on protecting my star rating? In practice, both matter — but they matter differently depending on where you are in the competitive landscape.</p>
           <p>This guide explains what the evidence says about how Google Maps weights review count against star rating, and what the practical implications are for your strategy.</p>
           <p>Both feed your{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Maps ranking</Link>.</p>
+            <Link href="/locations/singapore/google-business-profile" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Maps ranking</Link>.</p>
         </>
       }
       body={

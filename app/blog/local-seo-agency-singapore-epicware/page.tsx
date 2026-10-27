@@ -271,7 +271,7 @@ export default function Post() {
         { title: "How to Hire a Local SEO Agency in Singapore", href: "/blog/how-to-hire-local-seo-agency-singapore" },
         { title: "Google Maps Ranking Factors Explained", href: "/blog/google-maps-ranking-factors" },
         { title: "SEO vs Local SEO — What's the Actual Difference?", href: "/blog/seo-vs-local-seo" },
-        { title: "Review Management Singapore", href: "/blog/review-management-singapore" },
+        { title: "Review Management Singapore", href: "/blog/locations/singapore/review-management" },
       ]}
     />
   );

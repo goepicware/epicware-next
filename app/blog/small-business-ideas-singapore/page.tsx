@@ -93,7 +93,7 @@ export default function Post() {
             </a>
             , the local search landscape is evolving fast enough to demand annual reassessment. A new
             business that opens without a properly optimised{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               Google Business Profile
             </Link>{" "}
             and a local search strategy is structurally invisible to the majority of that traffic
@@ -239,7 +239,7 @@ export default function Post() {
             Practitioners Board under the MOH is a legal requirement before you can operate, so
             factor that timeline into your launch planning. Once registered, your immediate priority
             should be building a{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               Google Business Profile that ranks across your service area
             </Link>
             , not just at your clinic&apos;s address.
@@ -265,7 +265,7 @@ export default function Post() {
             directly for practitioner recommendations by location — prompts like &ldquo;best
             dietitian in Tampines.&rdquo; A practice that has not invested in{" "}
             <Link
-              href="/ai-search-visibility-singapore"
+              href="/locations/singapore/ai-search-visibility"
               className="text-primary font-medium hover:underline"
             >
               AI visibility and local SEO fundamentals
@@ -302,7 +302,7 @@ export default function Post() {
           </p>
           <p>
             For cafes, salons and other shop-based ideas,{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO
             </Link>{" "}
             decides whether nearby customers find you.
@@ -505,7 +505,7 @@ export default function Post() {
             Perplexity or ChatGPT to recommend a Mandarin course for working professionals in a
             specific area. This makes{" "}
             <Link
-              href="/ai-search-visibility-singapore"
+              href="/locations/singapore/ai-search-visibility"
               className="text-primary font-medium hover:underline"
             >
               Generative Engine Optimisation
@@ -535,7 +535,7 @@ export default function Post() {
             potential customer reaches for their phone. Dominating the Google Maps Pack for this
             query translates directly into inbound call volume, often without a single dollar spent
             on paid advertising. A fully optimised{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               Google Business Profile
             </Link>
             , built on a solid foundation from day one, is the single most valuable asset an aircon
@@ -553,7 +553,7 @@ export default function Post() {
             three years ago is consistently outranked by a newer operator with 40 reviews earned
             over the past 90 days. Building an automated{" "}
             <Link
-              href="/reputation-management-singapore/review-generation"
+              href="/services/review-management/review-generation"
               className="text-primary font-medium hover:underline"
             >
               review collection system
@@ -590,7 +590,7 @@ export default function Post() {
             For an early-stage business with no advertising budget, achieving that placement through
             strong content and{" "}
             <Link
-              href="/ai-search-visibility-singapore"
+              href="/locations/singapore/ai-search-visibility"
               className="text-primary font-medium hover:underline"
             >
               Answer Engine Optimisation
@@ -615,14 +615,14 @@ export default function Post() {
             Profile completeness — accurate categories, defined service areas, business hours,
             photos, a keyword-rich description, and a populated Q&amp;A section — is the baseline
             requirement for eligibility in Google&apos;s local pack rankings. Epicware&apos;s{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               GBP optimisation service
             </Link>{" "}
             is built specifically for this gap, constructing a ranking-ready profile foundation so
             your business competes from the start rather than catching up at month six.
           </p>
           <p>
-            <Link href="/local-seo-singapore/gbp-setup" className="text-primary font-medium hover:underline">
+            <Link href="/services/google-business-profile/setup" className="text-primary font-medium hover:underline">
               Set up your Google Business Profile
             </Link>{" "}
             before opening day.
@@ -635,7 +635,7 @@ export default function Post() {
             follow-up sequences, frictionless review funnels directing happy customers to Google, and
             pre-written response templates for both positive and negative feedback — consistently
             outperform those that attempt to add it later. Treat{" "}
-            <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
               review collection
             </Link>{" "}
             as a designed customer journey with automated components, not a task you assign to
@@ -648,7 +648,7 @@ export default function Post() {
             Tampines&rdquo; or queries Perplexity for &ldquo;recommended TCM clinic in Bedok,&rdquo;
             businesses without{" "}
             <Link
-              href="/ai-search-visibility-singapore"
+              href="/locations/singapore/ai-search-visibility"
               className="text-primary font-medium hover:underline"
             >
               Generative Engine Optimisation (GEO)
@@ -764,7 +764,7 @@ export default function Post() {
             appears in AI-generated answers across key query types — is a formally recognised
             practitioner service category.{" "}
             <Link
-              href="/ai-search-visibility-singapore"
+              href="/locations/singapore/ai-search-visibility"
               className="text-primary font-medium hover:underline"
             >
               Epicware&apos;s AI Visibility Tracking
@@ -802,7 +802,7 @@ export default function Post() {
           <p>
             The actionable sequence for any new Singapore business is straightforward. Register with
             ACRA first. Then claim and{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               optimise your Google Business Profile
             </Link>{" "}
             using a proven methodology before you open your doors. Build your{" "}
@@ -824,7 +824,7 @@ export default function Post() {
             </Link>
             , and{" "}
             <Link
-              href="/ai-search-visibility-singapore"
+              href="/locations/singapore/ai-search-visibility"
               className="text-primary font-medium hover:underline"
             >
               AI Visibility Tracking

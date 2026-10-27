@@ -116,7 +116,7 @@ export default function RankHigherOnGoogleMapsPage() {
               </Link>{" "}
               explains what moves your position, and our{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Maps ranking optimisation
@@ -198,13 +198,13 @@ export default function RankHigherOnGoogleMapsPage() {
               size="lg"
               className="rounded-full bg-transparent border border-foreground/30 text-foreground hover:bg-muted h-14 px-8 font-semibold text-base"
             >
-              <Link href="/local-seo-singapore/gbp-optimisation">See GBP Optimisation</Link>
+              <Link href="/locations/singapore/google-business-profile">See GBP Optimisation</Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-6">
             Also see:{" "}
             <Link
-              href="/local-seo-singapore"
+              href="/locations/singapore/local-seo"
               className="text-primary font-medium hover:underline"
             >
               Local SEO Singapore

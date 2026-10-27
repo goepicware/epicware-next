@@ -5,11 +5,11 @@ import BlogArticle from "@/components/blog/BlogArticle";
 export const metadata: Metadata = {
   title: "Review Management for Singapore SMBs",
   description: "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews. The practical guide for SMB owners.",
-  alternates: { canonical: "https://www.epicware.ai/blog/review-management-singapore" },
+  alternates: { canonical: "https://www.epicware.ai/blog/locations/singapore/review-management" },
   openGraph: {
     title: "Review Management for Singapore SMBs — What It Involves | Epicware",
     description: "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews. The practical guide for SMB owners.",
-    url: "https://www.epicware.ai/blog/review-management-singapore",
+    url: "https://www.epicware.ai/blog/locations/singapore/review-management",
   },
 };
 
@@ -21,7 +21,7 @@ const schema = {
   "datePublished": "2026-06-01",
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/review-management-singapore"
+  "url": "https://epicware.ai/blog/locations/singapore/review-management"
 };
 
 export default function Post() {
@@ -35,11 +35,11 @@ export default function Post() {
       intro={
         <>
           <p>
-            <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
               Review management
             </Link>{" "}
             is one of those terms that means different things to different people. For some, it means responding to negative reviews when they spot them. For others, it means running periodic{" "}
-            <Link href="/reputation-management-singapore/review-generation" className="text-primary font-medium hover:underline">
+            <Link href="/services/review-management/review-generation" className="text-primary font-medium hover:underline">
               review request campaigns
             </Link>{" "}
             to collect more reviews. Both are part of it — but review management as a practice covers more than either of these.
@@ -96,7 +96,7 @@ export default function Post() {
           <p>Epicware operates as a platform — businesses manage their review strategy through a dashboard, with automation handling the routine tasks. The managed service option is available for businesses that prefer to hand off entirely. Both options include all four review management components from a single interface.</p>
         </>
       }
-      ctaHref="/review-management-singapore"
+      ctaHref="/locations/singapore/review-management"
       ctaLabel="Review Management Singapore"
       ctaContext="Epicware's review management platform handles all four components from a single dashboard."
       relatedPosts={[

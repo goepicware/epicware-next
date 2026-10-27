@@ -306,7 +306,7 @@ export default function Post() {
               listings, you&apos;ll see a map with three business cards pinned to it. That cluster
               is the <strong>Google Map Pack</strong>, and for a café, clinic, salon, or car
               workshop, getting into those three spots is what{" "}
-              <Link href="/local-seo-singapore">local SEO</Link> is really about.
+              <Link href="/locations/singapore/local-seo">local SEO</Link> is really about.
             </p>
             <p>
               The Map Pack sits at the very top of local search results, above every organic
@@ -358,7 +358,7 @@ export default function Post() {
             <p>
               <strong>Your review volume and quality</strong> matter far more than most SMB owners
               realise. Reviews are not just{" "}
-              <Link href="/reputation-management-singapore">reputation management</Link> — they are
+              <Link href="/locations/singapore/review-management">reputation management</Link> — they are
               a direct algorithmic ranking signal. Review signals represent roughly 20% of local
               ranking power. It is not just the total number that counts. Review velocity (how
               consistently new reviews arrive), recency, average rating, and even the keywords
@@ -445,7 +445,7 @@ export default function Post() {
             <h3>Enter GEO: The Discipline Running Alongside SEO</h3>
             <p>
               This is where{" "}
-              <Link href="/ai-search-visibility-singapore">
+              <Link href="/locations/singapore/ai-search-visibility">
                 GEO (Generative Engine Optimisation)
               </Link>{" "}
               comes in. GEO is the emerging practice of structuring your content so that AI systems
@@ -512,7 +512,7 @@ export default function Post() {
             </p>
             <p>
               The practical takeaway:{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation">GBP optimisation</Link>,{" "}
+              <Link href="/locations/singapore/google-business-profile">GBP optimisation</Link>,{" "}
               review building, and{" "}
               local citations are not
               the same activity as website SEO — treating them as interchangeable leaves serious
@@ -551,9 +551,9 @@ export default function Post() {
             <p>
               This is exactly the problem that Epicware was built to solve. It automates the
               high-frequency, high-impact local SEO tasks —{" "}
-              <Link href="/reputation-management-singapore/review-generation">review collection</Link>,{" "}
+              <Link href="/services/review-management/review-generation">review collection</Link>,{" "}
               GBP publishing, and{" "}
-              <Link href="/local-seo-singapore/local-rank-tracking">rank tracking</Link> — so owner-operators get real,
+              <Link href="/services/local-seo/rank-tracking">rank tracking</Link> — so owner-operators get real,
               measurable results without carrying the manual overhead themselves.
             </p>
 
@@ -624,7 +624,7 @@ export default function Post() {
             </p>
             <p>
               See our{" "}
-              <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">
                 Singapore SEO agency
               </Link>{" "}
               services for the full picture.

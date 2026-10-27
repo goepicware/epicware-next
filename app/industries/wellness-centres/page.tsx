@@ -30,36 +30,36 @@ const schema = {
 const services = [
   {
     label: "Review Generation",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "Post-appointment WhatsApp review requests that capture positive client experiences.",
   },
   {
     label: "GBP Photo Management",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "Interior photos, treatment room shots, and team photos that convert profile views into bookings.",
   },
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "Refunded if not removed within 3 months, for fake or policy-violating reviews.",
   },
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "Complete profile optimisation including treatment categories, attributes, and booking links.",
   },
   {
     label: "AI Review Response",
-    href: "/reputation-management-singapore/ai-review-response",
+    href: "/services/review-management/ai-review-response",
     description: "Professional, personalised responses to every client review.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description:
       "Track your Maps rank for every wellness keyword across Singapore districts.",
   },
@@ -92,10 +92,10 @@ export default function WellnessCentresPage() {
       openingParagraph={
         <>
           A spa with a luxurious interior and skilled therapists that doesn't appear in Google Maps searches for 'massage near me in Singapore' is invisible to its most valuable customers — first-time visitors who haven't been recommended by a friend. In the wellness category, the customer's decision is driven by photos (does this look like the experience I want?) and reviews (do therapists here actually deliver?). Epicware manages both dimensions: GBP photo optimisation that showcases your space, and review generation that captures positive client experiences before they fade. Our{" "}
-          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO services in Singapore</Link>{" "}
+          <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">local SEO services in Singapore</Link>{" "}
           help customers find you for each treatment you offer. Epicware, an{" "}
           <Link href="/" className="text-primary font-medium hover:underline">AI-powered marketing agency</Link>, helps spas and wellness centres manage their reviews and Google presence.
-           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+           See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="The Reputation Challenge for Wellness Businesses"
@@ -116,7 +116,7 @@ export default function WellnessCentresPage() {
           therapists, reviews that name specific staff help convert new clients — but
           only if those reviews are being actively generated. Our{" "}
           <Link
-            href="/reputation-management-singapore"
+            href="/locations/singapore/review-management"
             className="text-primary font-medium hover:underline"
           >
             reputation management

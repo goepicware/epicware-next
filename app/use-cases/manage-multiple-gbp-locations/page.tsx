@@ -43,7 +43,7 @@ const FEATURES = [
   <>
     EpicMap{" "}
     <Link
-      href="/local-seo-singapore/local-rank-tracking"
+      href="/services/local-seo/rank-tracking"
       className="text-primary font-medium hover:underline"
     >
       rank grid
@@ -100,7 +100,7 @@ export default function ManageMultipleGBPLocationsPage() {
             all of them from one login — reviews, rank, posts, and reputation
             across every location. It&apos;s part of our{" "}
             <Link
-              href="/local-seo-singapore"
+              href="/locations/singapore/local-seo"
               className="text-primary font-medium hover:underline"
             >
               local SEO services
@@ -138,7 +138,7 @@ export default function ManageMultipleGBPLocationsPage() {
               Manual multi-outlet management creates gaps. Every gap is a customer
               lost or a review left unanswered. Epicware closes those gaps with{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Business Profile optimisation for every outlet
@@ -224,13 +224,13 @@ export default function ManageMultipleGBPLocationsPage() {
               size="lg"
               className="rounded-full bg-transparent border border-foreground/30 text-foreground hover:bg-muted h-14 px-8 font-semibold text-base"
             >
-              <Link href="/review-management-singapore">See Review Management</Link>
+              <Link href="/locations/singapore/review-management">See Review Management</Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-6">
             Also see:{" "}
             <Link
-              href="/local-seo-singapore/gbp-optimisation"
+              href="/locations/singapore/google-business-profile"
               className="text-primary font-medium hover:underline"
             >
               GBP Optimisation

@@ -112,7 +112,7 @@ const CHALLENGES = [
           five Google Business Profiles
         </Link>{" "}
         and multiple review streams that required consistent{" "}
-        <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+        <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
           reputation management
         </Link>
         .
@@ -160,12 +160,12 @@ const WHY_IT_WORKED = [
 ];
 
 const RELATED_READING: { href: string; label: string }[] = [
-  { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
-  { href: "/local-seo-singapore", label: "Local SEO Services" },
-  { href: "/local-seo-singapore/gbp-optimisation", label: "GBP Optimisation" },
-  { href: "/review-management-singapore", label: "Review Management" },
-  { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
-  { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
+  { href: "/locations/singapore/seo", label: "SEO Agency Singapore" },
+  { href: "/locations/singapore/local-seo", label: "Local SEO Services" },
+  { href: "/locations/singapore/google-business-profile", label: "GBP Optimisation" },
+  { href: "/locations/singapore/review-management", label: "Review Management" },
+  { href: "/locations/singapore/review-removal", label: "Bad Review Removal" },
+  { href: "/locations/singapore/ai-search-visibility", label: "AI & GEO Visibility" },
   { href: "/growth-tools/epicsocial-social-scheduling", label: "EpicSocial" },
   { href: "/industries/restaurants", label: "F&B Restaurants" },
 ];
@@ -387,7 +387,7 @@ export default function MultiOutletRestaurantCaseStudyPage() {
           <h2 className="font-display font-bold text-foreground text-2xl lg:text-3xl mb-3">The Strategy</h2>
           <p className="text-muted-foreground text-[15px] mb-10">
             Epicware ran this brand through the full{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO services
             </Link>{" "}
             workflow — the same five-stage system we use for every multi-outlet SMB.
@@ -400,7 +400,7 @@ export default function MultiOutletRestaurantCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Google Business Profile Foundation</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
                   Every one of the five outlets went through our{" "}
-                  <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                     19-point GBP audit
                   </Link>
                   : categories, services, attributes, hours, descriptions, photos and conversion actions. Each
@@ -420,7 +420,7 @@ export default function MultiOutletRestaurantCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Review Growth &amp; Reputation Management</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
                   We put a structured{" "}
-                  <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                     review management system
                   </Link>{" "}
                   in place across all five outlets — automated review requests via WhatsApp and email, happy
@@ -430,7 +430,7 @@ export default function MultiOutletRestaurantCaseStudyPage() {
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
                   Alongside that, we audited every existing negative review for policy violations and ran formal
                   removal requests through Google&rsquo;s channels using our{" "}
-                  <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                     Bad Review Removal
                   </Link>{" "}
                   service. Potential reputation and search-quality issues affecting the brand were also identified
@@ -467,7 +467,7 @@ export default function MultiOutletRestaurantCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Website + AI Visibility Engine</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
                   A full{" "}
-                  <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/ai-search-visibility" className="text-primary font-medium hover:underline">
                     GEO and SEO audit
                   </Link>{" "}
                   identified gaps in site architecture, schema, internal linking and AI crawlability. From there we

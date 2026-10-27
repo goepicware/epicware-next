@@ -22,6 +22,26 @@ const FAQSection = dynamic(() => import("@/components/home/FAQSection"));
 const LocationsStrip = dynamic(() => import("@/components/home/LocationsStrip"));
 const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
+import { getHubContent } from "@/lib/site/content";
+
+// Only real, non-draft markets appear here — a draft hub (no market proof
+// yet) on the homepage would be exactly the "claiming a market without
+// proof" problem flagged in the Phase 3 restructure correction.
+const ALL_LOCATIONS = [
+  { flag: "🇸🇬", label: "Singapore", href: "/locations/singapore", countrySlug: "singapore" },
+  { flag: "🇲🇾", label: "Malaysia", href: "/locations/malaysia", countrySlug: null },
+  { flag: "🇦🇪", label: "UAE", href: "/locations/dubai", countrySlug: "dubai" },
+  { flag: "🇬🇧", label: "United Kingdom", href: "/locations/uk", countrySlug: "uk" },
+  { flag: "🇺🇸", label: "United States", href: "/locations/usa", countrySlug: "usa" },
+];
+
+function getAvailableLocations() {
+  return ALL_LOCATIONS.filter((loc) => {
+    if (loc.countrySlug === null || loc.countrySlug === "singapore") return true; // malaysia/singapore: real pages, not drafts
+    return getHubContent(loc.countrySlug)?.frontmatter.draft === false;
+  }).map(({ flag, label, href }) => ({ flag, label, href }));
+}
+
 export const metadata: Metadata = {
   title: { absolute: "AI-Powered Digital Marketing Agency in Singapore | Epicware" },
   description:
@@ -163,7 +183,7 @@ export default function HomePage() {
       <FAQSection />
 
       {/* 13. Locations Trust Strip */}
-      <LocationsStrip />
+      <LocationsStrip locations={getAvailableLocations()} />
 
       {/* 14. Final CTA */}
       <FinalCTA />

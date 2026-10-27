@@ -3,15 +3,21 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const LOCATIONS = [
-  { flag: "🇸🇬", label: "Singapore", href: "/locations/singapore" },
-  { flag: "🇲🇾", label: "Malaysia", href: "/locations/malaysia" },
-  { flag: "🇦🇪", label: "UAE", href: "/locations/dubai" },
-  { flag: "🇬🇧", label: "United Kingdom", href: "/locations/uk" },
-  { flag: "🇺🇸", label: "United States", href: "/locations/usa" },
-];
+export interface LocationStripItem {
+  flag: string;
+  label: string;
+  href: string;
+}
 
-export default function LocationsStrip() {
+/**
+ * Locations shown here must have real, non-draft content — this strip
+ * links out from the homepage, so a draft hub (no market proof yet)
+ * showing up here would be exactly the "claiming a market without proof"
+ * problem the Phase 3 restructure correction flagged. The caller (a
+ * server component, since draft status is read from the filesystem)
+ * computes the list and passes it in.
+ */
+export default function LocationsStrip({ locations }: { locations: LocationStripItem[] }) {
   return (
     <section className="py-14 lg:py-20 bg-card border-t border-border/40">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -25,7 +31,7 @@ export default function LocationsStrip() {
             Serving SMBs Worldwide
           </p>
           <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-8">
-            {LOCATIONS.map((loc, i) => (
+            {locations.map((loc, i) => (
               <Link
                 key={loc.href}
                 href={loc.href}

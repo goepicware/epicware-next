@@ -202,13 +202,13 @@ const IS_THIS_YOU = [
 ];
 
 const RELATED_READING: { href: string; label: string }[] = [
-  { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
+  { href: "/locations/singapore/seo", label: "SEO Agency Singapore" },
   { href: "/industries/nail-hair-salons", label: "Hair & Beauty Salons" },
-  { href: "/local-seo-singapore", label: "Local SEO Services" },
-  { href: "/local-seo-singapore/gbp-optimisation", label: "GBP Optimisation" },
-  { href: "/review-management-singapore", label: "Review Management" },
-  { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
-  { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
+  { href: "/locations/singapore/local-seo", label: "Local SEO Services" },
+  { href: "/locations/singapore/google-business-profile", label: "GBP Optimisation" },
+  { href: "/locations/singapore/review-management", label: "Review Management" },
+  { href: "/locations/singapore/review-removal", label: "Bad Review Removal" },
+  { href: "/locations/singapore/ai-search-visibility", label: "AI & GEO Visibility" },
   { href: "/growth-tools/epicsocial-social-scheduling", label: "EpicSocial" },
 ];
 
@@ -464,7 +464,7 @@ export default function HairSalonCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Google Business Profile optimisation across both outlets</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90">
                   Both profiles went through our{" "}
-                  <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                     19-point GBP audit
                   </Link>{" "}
                   — categories, services, attributes, hours, descriptions, photos and booking actions — then moved
@@ -492,7 +492,7 @@ export default function HairSalonCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">AI citations and authority building</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90">
                   More than 20 AI citations and 30+ high-authority backlinks built each month, establishing the{" "}
-                  <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/ai-search-visibility" className="text-primary font-medium hover:underline">
                     entity signals and brand mentions
                   </Link>{" "}
                   that both Google&rsquo;s local algorithm and large language models rely on when deciding which
@@ -507,12 +507,12 @@ export default function HairSalonCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Review and reputation management</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90">
                   Ongoing{" "}
-                  <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                     review management
                   </Link>{" "}
                   across both outlets — structured review generation, prompt responses to every review, and formal
                   takedown requests for reviews that breach Google&rsquo;s policies through our{" "}
-                  <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                     Bad Review Removal
                   </Link>{" "}
                   service.
@@ -719,7 +719,7 @@ export default function HairSalonCaseStudyPage() {
               year ago and is now growing faster than any other on the account, in a category where almost no
               competitor is tracking it at all. Most salons in Singapore have a zero in this row. See how we approach
               this for every client in{" "}
-              <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/ai-search-visibility" className="text-primary font-medium hover:underline">
                 AI &amp; GEO Visibility
               </Link>
               .

@@ -175,7 +175,7 @@ const PILLARS = [
     description: (
       <>
         Show up where customers are already searching. Our{" "}
-        <Link href="/seo-agency-singapore" className="text-violet-300 underline hover:text-violet-200">
+        <Link href="/locations/singapore/seo" className="text-violet-300 underline hover:text-violet-200">
           SEO services
         </Link>{" "}
         put your business in the Google Maps 3-Pack, so you get more calls, direction requests and
@@ -198,7 +198,7 @@ const PILLARS = [
       <>
         When customers ask ChatGPT, Gemini, Perplexity or Google AI Overviews for the best business
         near them, your name should come up. Our{" "}
-        <Link href="/ai-search-visibility-singapore" className="text-teal-300 underline hover:text-teal-200">
+        <Link href="/locations/singapore/ai-search-visibility" className="text-teal-300 underline hover:text-teal-200">
           AI search optimisation
         </Link>{" "}
         work makes that happen.
@@ -220,7 +220,7 @@ const PILLARS = [
       <>
         We help you collect more 5-star reviews, reply to every review and deal with harmful ones, so
         customers trust you before they call. See our{" "}
-        <Link href="/reputation-management-singapore" className="text-amber-300 underline hover:text-amber-200">
+        <Link href="/locations/singapore/review-management" className="text-amber-300 underline hover:text-amber-200">
           online reputation management
         </Link>{" "}
         service.

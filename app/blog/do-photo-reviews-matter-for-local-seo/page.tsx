@@ -77,14 +77,14 @@ export default function Post() {
 
           <h2>Your GBP&apos;s Own Photo Section</h2>
           <p>Separately from customer photo reviews, your{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profile</Link>{" "}
+            <Link href="/locations/singapore/google-business-profile" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profile</Link>{" "}
             has a business-managed photo section. This is where you upload professional images of your space, team, and products. These photos are distinct from customer review photos but equally important for the overall visual impression of your profile.</p>
           <p>Both sets of photos — owner-uploaded and customer review photos — appear in your profile&apos;s Photos tab. A strong photo library requires attention to both sources. Epicware&apos;s GBP photo management service covers professional photo optimisation across your owner-managed section.</p>
           <p>Photos are one of the signals we track in{" "}
-            <Link href="/local-seo-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link>.</p>
+            <Link href="/locations/singapore/local-seo" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link>.</p>
         </>
       }
-      ctaHref="/local-seo-singapore/gbp-optimisation"
+      ctaHref="/locations/singapore/google-business-profile"
       ctaLabel="See GBP Optimisation"
       ctaContext="Epicware's GBP photo management ensures your profile has professional, optimised photos across all locations."
       relatedPosts={[

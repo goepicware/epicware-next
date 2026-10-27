@@ -104,7 +104,7 @@ export default function Post() {
           <p>Automation is the only way to sustain velocity without ongoing manual effort. Once the system is running, every customer interaction becomes a potential review — without any additional staff time.</p>
         </>
       }
-      ctaHref="/reputation-management-singapore/review-generation"
+      ctaHref="/services/review-management/review-generation"
       ctaLabel="See Review Generation Campaigns"
       ctaContext="Epicware's EpicReview sends automated review requests via WhatsApp after every customer interaction."
       relatedPosts={[

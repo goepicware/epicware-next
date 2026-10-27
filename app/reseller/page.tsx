@@ -61,9 +61,9 @@ const eligiblePartners = [
 const resellableProducts = [
   { name: "EpicReview", description: "Automated WhatsApp and email review generation campaigns" },
   { name: "EpicResponse", description: "AI review response across all client locations" },
-  { name: "EpicMap", description: <Link href="/local-seo-singapore/local-rank-tracking" className="hover:underline">Hyperlocal Google Maps rank tracking</Link> },
+  { name: "EpicMap", description: <Link href="/services/local-seo/rank-tracking" className="hover:underline">Hyperlocal Google Maps rank tracking</Link> },
   { name: "Bad Review Removal", description: "Share the margin with your client or pass through at cost" },
-  { name: "GBP Optimisation", description: <><Link href="/local-seo-singapore/gbp-optimisation" className="hover:underline">19-point Google Business Profile audit</Link> and implementation</> },
+  { name: "GBP Optimisation", description: <><Link href="/locations/singapore/google-business-profile" className="hover:underline">19-point Google Business Profile audit</Link> and implementation</> },
   { name: "EpicSocial", description: "Social media content management for local businesses" },
 ];
 
@@ -91,8 +91,8 @@ export default function ResellerPage() {
           <h2 className="font-display font-bold text-foreground mb-4 leading-tight">Who the Reseller Programme Is For</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
             The programme is open to any organisation that regularly works with SMB clients who could benefit from Local SEO or Reputation Management services. Resell our{" "}
-            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO services</Link> and{" "}
-            <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">reputation management</Link> under your brand.
+            <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO services</Link> and{" "}
+            <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">reputation management</Link> under your brand.
           </p>
           <ul className="space-y-3">
             {eligiblePartners.map((partner, i) => (

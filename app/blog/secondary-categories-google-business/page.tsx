@@ -432,7 +432,7 @@ export default function Post() {
               </Link>{" "}
               gives any business owner a baseline read on where their current categories stand before making
               changes. For businesses that want ongoing management rather than a one-time check, our{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                 GBP Category Optimisation service
               </Link>{" "}
               handles the audit, the edit, and the evidence log needed if Google requests re-verification.
@@ -478,11 +478,11 @@ export default function Post() {
             </p>
             <p>
               Beyond categories, our{" "}
-              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
                 our local SEO services
               </Link>{" "}
               covers the broader profile setup, and our{" "}
-              <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                 Bad Review Removal service
               </Link>{" "}
               works on a pay-on-success basis: a flat $200 per review, fully refunded if the review isn&apos;t
@@ -564,13 +564,13 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/local-seo-singapore/gbp-optimisation"
+        ctaHref="/locations/singapore/google-business-profile"
         ctaLabel="Get Your Free GBP Category Audit"
         ctaContext="Epicware checks every category on your profile against the IS/HAS test, flags redundancy, and keeps a change log ready in case Google asks for re-verification."
         relatedPosts={[
           { title: "Free Google Business Profile Audit", href: "/free-audit" },
           { title: "Manage Multiple Google Business Profiles", href: "/use-cases/manage-multiple-gbp-locations" },
-          { title: "GBP Category Optimisation Singapore", href: "/local-seo-singapore/gbp-optimisation" },
+          { title: "GBP Category Optimisation Singapore", href: "/locations/singapore/google-business-profile" },
           { title: "Clinic Owners: 2–4 Week Checklist to Change Google Categories Safely", href: "/blog/clinic-google-categories" },
         ]}
       />

@@ -383,14 +383,14 @@ export default function Post() {
               Epicware&apos;s platform tracks Google Maps rankings, monitors review sentiment, and surfaces the
               data you need to act before problems escalate. For businesses dealing with fake or unfair reviews,
               Epicware offers a{" "}
-              <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                 bad review removal service
               </Link>{" "}
               where the $200 per-review fee is refunded in full if the review isn't taken down within 3 months. That
               refund guarantee removes the financial risk of trying to clean up your profile. With over 50 outlets managed and a track record
               of measurable results, Epicware gives SMBs the tools to recover faster and maintain the reputation
               they rebuild. If you&apos;d rather hand recovery to a team, a{" "}
-              <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                 reputation management agency
               </Link>{" "}
               like Epicware runs each step.

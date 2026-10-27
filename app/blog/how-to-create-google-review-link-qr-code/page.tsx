@@ -104,7 +104,7 @@ export default function Post() {
           <p>This isn&apos;t a reason to avoid pursuing reviews — it&apos;s simply a realistic expectation to set when measuring conversion rates.</p>
         </>
       }
-      ctaHref="/reputation-management-singapore/review-generation"
+      ctaHref="/services/review-management/review-generation"
       ctaLabel="Automate with WhatsApp Campaigns Instead"
       ctaContext={
         <>

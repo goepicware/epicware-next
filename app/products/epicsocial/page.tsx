@@ -204,7 +204,7 @@ export default function EpicSocialPage() {
             <p>
               EpicSocial&apos;s GBP post scheduling connects directly to the{" "}
               <Link
-                href="/local-seo-singapore/gbp-post-scheduling"
+                href="/services/google-business-profile/post-scheduling"
                 className="text-primary font-medium hover:underline"
               >
                 GBP Post Scheduling

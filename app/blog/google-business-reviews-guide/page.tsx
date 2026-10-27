@@ -143,7 +143,7 @@ export default function Post() {
               , up from 30% in 2019 — a 53% relative increase in just seven years. Every salon
               owner, clinic operator, or workshop manager who has not yet optimised their{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Business Profile
@@ -469,7 +469,7 @@ export default function Post() {
               local business recommendations. Keyword-rich, sentiment-positive reviews feed both
               your Map Pack ranking and your likelihood of appearing in{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 AI-generated answers
@@ -583,7 +583,7 @@ export default function Post() {
             <p>
               This is the foundation of{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 Generative Engine Optimization (GEO)
@@ -618,7 +618,7 @@ export default function Post() {
               The opportunity is real and underexploited. Globally, 58% of businesses do not
               optimise for{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary font-medium hover:underline"
               >
                 local search
@@ -698,7 +698,7 @@ export default function Post() {
             <h3>Step 4: Respond to every review within 48 hours</h3>
             <p>
               <Link
-                href="/review-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 Google review management
@@ -798,7 +798,7 @@ export default function Post() {
               Document your escalation attempts and be persistent, as the process sometimes
               requires multiple follow-ups. If a review breaks Google&apos;s policy,{" "}
               <Link
-                href="/bad-review-removal-singapore"
+                href="/locations/singapore/review-removal"
                 className="text-primary font-medium hover:underline"
               >
                 bad review removal
@@ -847,7 +847,7 @@ export default function Post() {
               AI-generated responses. This intersection of review management and AI visibility is
               precisely what Epicware&apos;s{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 Generative Engine Optimisation offering
@@ -859,7 +859,7 @@ export default function Post() {
             <p>
               For most Singapore businesses, Google reviews are the biggest part of{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 online reputation management
@@ -880,7 +880,7 @@ export default function Post() {
               who filter below that number. Build a consistent response habit and you close one of
               the most widely ignored ranking gaps in{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary font-medium hover:underline"
               >
                 local SEO

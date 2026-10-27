@@ -74,11 +74,11 @@ export default function ToolsPage() {
           </p>
           <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-4">
             These tools come from the team behind our{" "}
-            <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
               online reputation management
             </Link>{" "}
             and{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO services
             </Link>
             .

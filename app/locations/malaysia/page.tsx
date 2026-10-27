@@ -35,37 +35,37 @@ const schema = {
 const SERVICES = [
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "19-point audit covering every GBP rank factor for your Malaysian business profile.",
   },
   {
     label: "Review Management",
-    href: "/review-management-singapore",
+    href: "/locations/singapore/review-management",
     description:
       "Real-time review monitoring and AI-powered responses for all your Malaysia outlets.",
   },
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "Remove fake or policy-violating reviews from your GBP profile.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description:
       "See your Google Maps rank position across KL, PJ, Penang, and JB for your target keywords.",
   },
   {
     label: "Review Generation",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "Automated WhatsApp and email review campaigns that convert satisfied Malaysian customers into reviewers.",
   },
   {
     label: "GBP Post Scheduling",
-    href: "/local-seo-singapore/gbp-post-scheduling",
+    href: "/services/google-business-profile/post-scheduling",
     description:
       "Weekly AI-generated GBP posts keeping your Malaysian business profile active and ranked.",
   },
@@ -123,7 +123,7 @@ export default function MalaysiaPage() {
             <p>
               It&apos;s the same{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary font-medium hover:underline"
               >
                 local SEO
@@ -146,7 +146,7 @@ export default function MalaysiaPage() {
             <p>
               Our{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 online reputation management

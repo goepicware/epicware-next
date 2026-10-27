@@ -109,6 +109,7 @@ export async function generateMetadata({
         description: content.frontmatter.metaDescription,
         url: canonical,
       },
+      ...(content.frontmatter.draft ? { robots: { index: false, follow: false } } : {}),
     };
   }
 
@@ -171,32 +172,32 @@ export default async function SingaporeSlugPage({
   const services = [
     {
       label: "GBP Optimisation",
-      href: "/local-seo-singapore/gbp-optimisation",
+      href: "/locations/singapore/google-business-profile",
       desc: `19-point audit covering every GBP rank factor for your ${d.name} profile.`,
     },
     {
       label: "Review Management",
-      href: "/review-management-singapore",
+      href: "/locations/singapore/review-management",
       desc: `Real-time monitoring and AI responses for every review across your ${d.name} outlets.`,
     },
     {
       label: "Bad Review Removal",
-      href: "/bad-review-removal-singapore",
+      href: "/locations/singapore/review-removal",
       desc: "$200/review, refunded if not removed within 3 months. Remove fake or policy-violating reviews from your profile.",
     },
     {
       label: "Local Rank Tracking",
-      href: "/local-seo-singapore/local-rank-tracking",
+      href: "/services/local-seo/rank-tracking",
       desc: `See your Google Maps rank position across every district around ${d.name}.`,
     },
     {
       label: "Review Generation",
-      href: "/reputation-management-singapore/review-generation",
+      href: "/services/review-management/review-generation",
       desc: `Automated WhatsApp and email campaigns that turn ${d.name} customers into reviewers.`,
     },
     {
       label: "GBP Post Scheduling",
-      href: "/local-seo-singapore/gbp-post-scheduling",
+      href: "/services/google-business-profile/post-scheduling",
       desc: `Weekly AI-generated posts keeping your ${d.name} profile fresh and ranked.`,
     },
   ];
@@ -338,14 +339,14 @@ export default async function SingaporeSlugPage({
             </Link>
             . See all Singapore district pages, explore{" "}
             <Link
-              href="/local-seo-singapore"
+              href="/locations/singapore/local-seo"
               className="text-primary font-medium hover:underline"
             >
               Local SEO Singapore
             </Link>{" "}
             services, or see{" "}
             <Link
-              href="/seo-agency-singapore"
+              href="/locations/singapore/seo"
               className="text-primary font-medium hover:underline"
             >
               Epicware&apos;s SEO agency services

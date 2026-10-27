@@ -343,7 +343,7 @@ export default function Post() {
             <p>
               If you own a legitimate business, protecting your own profile matters just as much as reporting
               others&apos; spam. Claim and verify your{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                 Google Business Profile
               </Link>{" "}
               so you control edits to it, set your category correctly, and monitor for suggested changes from
@@ -403,7 +403,7 @@ export default function Post() {
             </p>
             <p>
               Epicware&apos;s{" "}
-              <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                 bad review removal service
               </Link>{" "}
               works on a pay-on-success basis at $200 per review, refunded in full if the review isn&apos;t
@@ -506,7 +506,7 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/bad-review-removal-singapore/fake-review-removal"
+        ctaHref="/services/review-removal/fake-review-removal"
         ctaLabel="See Our Fake Review Removal Service"
         ctaContext="Epicware handles evidence-backed removal requests and monitors your listings across every outlet, so spam and fake reviews don't sit there unresolved."
         relatedPosts={[

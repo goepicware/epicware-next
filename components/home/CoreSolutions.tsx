@@ -10,7 +10,7 @@ const SOLUTIONS = [
     title: "Local SEO Singapore",
     description:
       "Rank in the top 3 on Google Maps. We manage your entire local search presence with proven, data-driven strategies.",
-    href: "/services/local-seo-singapore",
+    href: "/services/locations/singapore/local-seo",
     iconColor: "text-primary",
     iconBg: "bg-primary/10",
     stat: "200+ businesses ranked",

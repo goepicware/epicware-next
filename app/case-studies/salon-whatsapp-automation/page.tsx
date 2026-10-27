@@ -48,7 +48,7 @@ export default function Page() {
       body={
         <>
           <h2>Root Cause Analysis</h2>
-          <p>As part of Epicware&apos;s <Link href="/local-seo-singapore">local SEO services</Link>, the team conducted a <Link href="/local-seo-singapore/gbp-optimisation">GBP audit</Link> across all 4 outlets. The findings identified two primary issues:</p>
+          <p>As part of Epicware&apos;s <Link href="/locations/singapore/local-seo">local SEO services</Link>, the team conducted a <Link href="/locations/singapore/google-business-profile">GBP audit</Link> across all 4 outlets. The findings identified two primary issues:</p>
           <ul>
             <li><strong>Review count gap:</strong> 30 reviews at the best outlet, 12–18 at the others. Competitors in the same neighbourhoods had 120–250 reviews. No review generation system was in place — stylists occasionally reminded clients verbally, which generated inconsistent results.</li>
             <li><strong>GBP profile gaps:</strong> All 4 profiles had incorrect secondary categories (missing &quot;Hairdresser&quot; and &quot;Hair Colouring Specialist&quot; categories). Services lists were incomplete — popular services like balayage, keratin treatment, and scalp treatment were not listed. Photo libraries were thin (3–5 photos per outlet). No GBP posts had been published in over 8 months.</li>
@@ -57,7 +57,7 @@ export default function Page() {
 
           <h2>What Epicware Did: Month 1</h2>
           <p>GBP profile corrections were implemented in week 1: correct primary and secondary categories, full service lists with descriptions for all offered services, updated photo libraries (15+ photos per outlet including exterior, interior, styling stations, and before/after examples), and corrected operating hours.</p>
-          <p><Link href="/products/epicreview">EpicReview</Link> was integrated with the salon&apos;s booking system. The trigger: when a client&apos;s appointment was marked complete, a WhatsApp message was sent 30–45 minutes later — at the moment the client had left the salon and was likely to be sharing or reviewing their result. From then on, <Link href="/reputation-management-singapore/review-generation">automated review requests</Link> went out after appointments.</p>
+          <p><Link href="/products/epicreview">EpicReview</Link> was integrated with the salon&apos;s booking system. The trigger: when a client&apos;s appointment was marked complete, a WhatsApp message was sent 30–45 minutes later — at the moment the client had left the salon and was likely to be sharing or reviewing their result. From then on, <Link href="/services/review-management/review-generation">automated review requests</Link> went out after appointments.</p>
           <p>The message was personalised: the client&apos;s name, a reference to the service they received (&quot;glad you loved your balayage today&quot;), and a direct link to the specific outlet&apos;s Google review form.</p>
 
           <h2>Month 2: Velocity and Response</h2>
@@ -77,7 +77,7 @@ export default function Page() {
           <h2>What&apos;s Next</h2>
           <p>The salon group is now exploring Epicware&apos;s EpicSocial product to manage Instagram content across their 4 outlets from the same dashboard — creating a unified content strategy that reinforces their Google presence with social proof from before/after salon photos and client features.</p>
           <p>EpicMap was recently onboarded to track rank at a grid level across each outlet&apos;s district — identifying the specific streets and MRT catchment zones where rank still falls below position 3.</p>
-          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
+          <p>See our full <a href="/locations/singapore/seo">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
         </>
       }
       ctaHref="/industries/nail-hair-salons"

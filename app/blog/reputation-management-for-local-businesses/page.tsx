@@ -117,7 +117,7 @@ export default function Post() {
             <p>
               In this post, we will break down the fundamentals of{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 reputation management
@@ -142,7 +142,7 @@ export default function Post() {
               Today, your reputation exists across three distinct surfaces simultaneously. The first
               is Google Search and Maps, where your star rating, review count, and{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Business Profile content
@@ -178,7 +178,7 @@ export default function Post() {
               For local service businesses specifically, this creates an important insight:
               reputation management and{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary font-medium hover:underline"
               >
                 local SEO
@@ -285,7 +285,7 @@ export default function Post() {
               Here is a problem that is growing faster than most local business owners realise, and
               almost nobody in the{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 reputation management
@@ -373,7 +373,7 @@ export default function Post() {
             <p>
               Epicware&apos;s{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 AI Visibility Tracking and GEO product
@@ -447,7 +447,7 @@ export default function Post() {
               , but most owner-operators have never encountered it. For a structured approach to
               fighting fake reviews, see our guide on{" "}
               <Link
-                href="/bad-review-removal-singapore"
+                href="/locations/singapore/review-removal"
                 className="text-primary font-medium hover:underline"
               >
                 bad review removal in Singapore
@@ -479,7 +479,7 @@ export default function Post() {
               <strong>89% of consumers expect businesses to respond to reviews</strong>, yet most
               local businesses respond to very few. See our complete guide on{" "}
               <Link
-                href="/review-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 review management in Singapore
@@ -539,7 +539,7 @@ export default function Post() {
               least-measured dimension of this ROI is AI search visibility. As consumer discovery
               increasingly flows through ChatGPT and Gemini, businesses without a{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 Generative Engine Optimization strategy
@@ -571,7 +571,7 @@ export default function Post() {
               of all Google searches carry local intent. For Singapore businesses in F&amp;B,
               healthcare, education, and professional services, this means{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Business Profile
@@ -645,7 +645,7 @@ export default function Post() {
               The critical finding for Singapore businesses is that almost nobody is optimising for
               the second system yet. Only a handful of providers in the market have begun offering{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 GEO-specific services
@@ -678,7 +678,7 @@ export default function Post() {
             <p>
               Everything begins with your{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Business Profile
@@ -752,7 +752,7 @@ export default function Post() {
             <p>
               Epicware&apos;s platform is built to run all four layers in integration:{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 GBP optimisation
@@ -773,7 +773,7 @@ export default function Post() {
               </Link>
               , and dedicated{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 AI Visibility Tracking with GEO implementation

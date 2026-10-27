@@ -47,7 +47,7 @@ export default function Post() {
           <h2>What should you do in the first 30 days of your Google reviews strategy?</h2>
           <h3>Week 1–2: Audit Your GBP</h3>
           <p>Before focusing on reviews, ensure your{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profile</Link>{" "}
+            <Link href="/locations/singapore/google-business-profile" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profile</Link>{" "}
             is complete. Missing business categories, incomplete service lists, and absent photos reduce your profile&apos;s relevance score — which limits how many potential customers even see your reviews in the first place.</p>
           <p>Check: business name, primary and secondary categories, full address and opening hours (including public holidays), all services listed with descriptions, minimum 15 photos including exterior, interior, and product/service shots.</p>
 
@@ -56,7 +56,7 @@ export default function Post() {
 
           <h3>Week 3–4: Launch Your First Review Campaign</h3>
           <p>Set up your first{" "}
-            <Link href="/reputation-management-singapore/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">WhatsApp review request campaign</Link>
+            <Link href="/services/review-management/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">WhatsApp review request campaign</Link>
             . Identify your 50 most recent customers and send a personalised message with your Google review link. Expect 15–30% to leave a review. This is your baseline measurement.</p>
 
           <h2>How do you build a systematic review generation process in month two?</h2>
@@ -91,13 +91,13 @@ export default function Post() {
 
           <h2>How does Epicware automate the 90-day review strategy framework?</h2>
           <p>EpicReview handles the review generation campaigns (WhatsApp and email), the AI review responses, and the bad review removal submissions. EpicMap handles the{" "}
-            <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary underline underline-offset-2 hover:text-primary/80">rank tracking</Link>{" "}
+            <Link href="/services/local-seo/rank-tracking" className="text-primary underline underline-offset-2 hover:text-primary/80">rank tracking</Link>{" "}
             at district level. The entire framework runs from one dashboard without requiring daily manual intervention. This 90-day framework is the one our{" "}
             <Link href="/" className="text-primary underline underline-offset-2 hover:text-primary/80">digital marketing agency</Link>{" "}
             runs for new clients.</p>
         </>
       }
-      ctaHref="/bad-review-removal-singapore"
+      ctaHref="/locations/singapore/review-removal"
       ctaLabel="Remove Reviews Dragging Your Rating Down"
       ctaContext="Month 3's protection phase is most effective when you can remove reviews that shouldn't be there. Epicware handles removals at $200/review, refunded if not removed within 3 months."
       relatedPosts={[

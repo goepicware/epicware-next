@@ -316,7 +316,7 @@ export default function Post() {
               <li><strong>Rank tracking</strong> that shows whether a category or Services change actually moved visibility in Maps and Search.</li>
               <li>
                 <strong>
-                  <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                     Review management
                   </Link>{" "}
                   tools
@@ -368,7 +368,7 @@ export default function Post() {
               <li>
                 <strong>Bad Review Removal</strong>, priced per review with a refund if the review isn&apos;t
                 taken down, useful when profile edits stir up unexpected patient feedback — see{" "}
-                <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+                <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                   bad review removal
                 </Link>
                 .
@@ -391,12 +391,12 @@ export default function Post() {
                 Foundation, Authority, and Domination plans
               </Link>
               , each scaled to different levels of{" "}
-              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
                 local SEO
               </Link>{" "}
               management. If your clinic&apos;s category
               history is unclear or a recent change hurt your rankings, request a{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                 GBP optimisation review
               </Link>{" "}
               and get a clear read on what to fix first.
@@ -471,11 +471,11 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/local-seo-singapore/gbp-optimisation"
+        ctaHref="/locations/singapore/google-business-profile"
         ctaLabel="Get Your Free GBP Category Audit"
         ctaContext="Epicware reviews your clinic's category accuracy, Services listings, and profile completeness, and flags exactly what's working against your visibility."
         relatedPosts={[
-          { title: "GBP Category Optimisation Singapore", href: "/local-seo-singapore/gbp-optimisation" },
+          { title: "GBP Category Optimisation Singapore", href: "/locations/singapore/google-business-profile" },
           { title: "Google Review Policy Explained — What Qualifies for Removal", href: "/blog/google-review-policy-explained" },
           { title: "Improve Your Google Rating Singapore — From 3.9 to 4.5+", href: "/use-cases/improve-google-rating" },
           { title: "Google Reviews Strategy: 90-Day Framework for Singapore SMBs", href: "/blog/google-reviews-strategy" },

@@ -44,7 +44,7 @@ export default function Post() {
           <p><strong>Total review count</strong> is simply the number of reviews your business has accumulated over its lifetime. A business with 500 reviews has a high total count.</p>
           <p><strong>Review velocity</strong> is the rate at which new reviews arrive — typically measured as reviews per week or per month. A business receiving 5 new reviews every week has high velocity regardless of its total count.</p>
           <p>Both matter to{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               Google Maps rank
             </Link>
             .{" "}
@@ -64,7 +64,7 @@ export default function Post() {
             <li><strong>Restaurant B:</strong> 80 reviews, 4.3 rating — with 3 new reviews this week</li>
           </ul>
           <p>A{" "}
-            <Link href="/local-seo-singapore/competitor-analysis" className="text-primary font-medium hover:underline">
+            <Link href="/services/local-seo/competitor-analysis" className="text-primary font-medium hover:underline">
               local competitor analysis
             </Link>{" "}
             shows you this comparison for your own keywords.</p>
@@ -94,13 +94,13 @@ export default function Post() {
           <p>Early in your competitive position — when you have fewer than 50 reviews and competitors have 200+ — closing the total count gap is your priority. A business with 20 reviews and strong velocity will not overtake a business with 300 reviews by velocity alone. Total count matters for establishing baseline credibility.</p>
           <p>Once you&apos;re in a competitive range (within 30–40% of the leading competitors), velocity becomes the primary differentiator.</p>
           <p>We can{" "}
-            <Link href="/review-management-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
               manage your Google reviews
             </Link>{" "}
             and keep review requests going out every month.</p>
         </>
       }
-      ctaHref="/reputation-management-singapore/review-generation"
+      ctaHref="/services/review-management/review-generation"
       ctaLabel="Build Review Velocity with Epicware"
       ctaContext="EpicReview's automated campaigns keep your review velocity consistent — generating new reviews weekly without manual effort."
       relatedPosts={[

@@ -127,22 +127,22 @@ const whatWeDo = [
   {
     title: "Website SEO",
     description: "SEO services that help your website rank on Google and get quoted in AI answers.",
-    href: "/seo-agency-singapore",
+    href: "/locations/singapore/seo",
   },
   {
     title: "Local SEO",
     description: 'Local SEO services that help you show up in Google Maps and "near me" searches, starting with your Google Business Profile.',
-    href: "/local-seo-singapore",
+    href: "/locations/singapore/local-seo",
   },
   {
     title: "AI search",
     description: "AI search optimisation so ChatGPT, Gemini and Google AI Overviews can find and describe your business correctly.",
-    href: "/ai-search-visibility-singapore",
+    href: "/locations/singapore/ai-search-visibility",
   },
   {
     title: "Reputation",
     description: "Online reputation management: more Google reviews, a reply to every review, and help with fake or unfair ones.",
-    href: "/reputation-management-singapore",
+    href: "/locations/singapore/review-management",
   },
 ];
 

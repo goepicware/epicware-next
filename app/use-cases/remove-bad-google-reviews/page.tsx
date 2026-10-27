@@ -180,7 +180,7 @@ export default function RemoveBadGoogleReviewsPage() {
               className="bg-foreground hover:bg-foreground/90 text-background h-14 px-8 rounded-full font-semibold text-base group"
             >
               <Link
-                href="/bad-review-removal-singapore"
+                href="/locations/singapore/review-removal"
                 className="flex items-center gap-2"
               >
                 Bad Review Removal Service

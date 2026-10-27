@@ -158,7 +158,7 @@ export default function Post() {
             real estate in local search. Achieving that visibility demands a categorically different
             toolkit. You need{" "}
             <Link
-              href="/local-seo-singapore/gbp-optimisation"
+              href="/locations/singapore/google-business-profile"
               className="text-primary font-medium hover:underline"
             >
               Google Business Profile optimisation
@@ -241,7 +241,7 @@ export default function Post() {
           <p>
             Your{" "}
             <Link
-              href="/local-seo-singapore/gbp-optimisation"
+              href="/locations/singapore/google-business-profile"
               className="text-primary font-medium hover:underline"
             >
               Google Business Profile
@@ -278,7 +278,7 @@ export default function Post() {
           <p>
             This is precisely why Epicware built the{" "}
             <Link
-              href="/local-seo-singapore/gbp-optimisation"
+              href="/locations/singapore/google-business-profile"
               className="text-primary font-medium hover:underline"
             >
               <strong>Core 30 Method</strong>
@@ -413,7 +413,7 @@ export default function Post() {
           <p>
             Epicware&apos;s{" "}
             <Link
-              href="/ai-search-visibility-singapore"
+              href="/locations/singapore/ai-search-visibility"
               className="text-primary font-medium hover:underline"
             >
               AI Visibility Tracking and GEO service
@@ -671,7 +671,7 @@ export default function Post() {
             </Link>{" "}
             that runs SEO for small businesses like yours. If customers visit your premises, you&apos;ll
             need{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO
             </Link>{" "}
             too, and we run both.
@@ -758,7 +758,7 @@ export default function Post() {
           </ol>
           <p>
             Our own{" "}
-            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">
               SEO services in Singapore
             </Link>{" "}
             are built around these checks.

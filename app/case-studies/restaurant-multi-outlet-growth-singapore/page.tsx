@@ -83,8 +83,8 @@ export default function Page() {
           <p>&quot;We knew reviews mattered but had no bandwidth to do it properly. Epicware just runs in the background — I check in once a week to review anything that needs attention. The results were faster than I expected.&quot;</p>
 
           <h2>What&apos;s Next</h2>
-          <p>The group is now in the process of onboarding EpicMap to track district-level rank for each outlet — identifying specific geographic pockets where rank is still below position 3 and targeting GBP post content at those areas. Two outlets have also engaged Epicware&apos;s <Link href="/bad-review-removal-singapore">bad review removal service</Link> for reviews assessed as competitor-posted.</p>
-          <p>See our full <a href="/seo-agency-singapore">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
+          <p>The group is now in the process of onboarding EpicMap to track district-level rank for each outlet — identifying specific geographic pockets where rank is still below position 3 and targeting GBP post content at those areas. Two outlets have also engaged Epicware&apos;s <Link href="/locations/singapore/review-removal">bad review removal service</Link> for reviews assessed as competitor-posted.</p>
+          <p>See our full <a href="/locations/singapore/seo">SEO agency in Singapore</a> services for more on how we rank local businesses like this one.</p>
         </>
       }
       ctaHref="/industries/restaurants"

@@ -64,7 +64,7 @@ const benefits = [
       <>
         Google rewards businesses that actively engage with reviews by
         boosting their{" "}
-        <Link href="/local-seo-singapore" className="text-primary hover:underline">
+        <Link href="/locations/singapore/local-seo" className="text-primary hover:underline">
           local search visibility
         </Link>
         .
@@ -136,7 +136,7 @@ export default function GoogleReviewReplyGeneratorPage() {
                 <p>
                   Writing thoughtful review responses takes time. Our{" "}
                   <Link
-                    href="/reputation-management-singapore/ai-review-response"
+                    href="/services/review-management/ai-review-response"
                     className="text-primary hover:underline"
                   >
                     AI review response service

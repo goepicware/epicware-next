@@ -1342,7 +1342,7 @@ ${result.enrichedKeywords.length > 0 ? `
                         </p>
                       );
                     })()}
-                    <Link href="/ai-search-visibility-singapore" className="inline-block mt-3 text-sm font-semibold text-[#2563EB] underline underline-offset-2">
+                    <Link href="/locations/singapore/ai-search-visibility" className="inline-block mt-3 text-sm font-semibold text-[#2563EB] underline underline-offset-2">
                       See how Epicware&apos;s GEO engine works →
                     </Link>
                   </div>
@@ -1405,7 +1405,7 @@ ${result.enrichedKeywords.length > 0 ? `
                     {result.shortBusinessName} built a {result.gbpRating}★ rating across {result.gbpReviewCount} reviews with no SEO infrastructure behind it.
                     The next 90 days either compound that into a real local moat — or get eaten by {result.competitors[0]?.name} before your reputation has time to travel.
                     Most of what closes these gaps falls under our{" "}
-                    <Link href="/local-seo-singapore/gbp-optimisation" className="text-white underline hover:text-gray-200">
+                    <Link href="/locations/singapore/google-business-profile" className="text-white underline hover:text-gray-200">
                       GBP optimisation services
                     </Link>
                     .

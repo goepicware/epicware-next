@@ -30,37 +30,37 @@ const schema = {
 const services = [
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "Refunded if not removed within 3 months. Critical for healthcare where one bad review costs dozens of patients.",
   },
   {
     label: "Review Generation",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "MOH-compliant post-appointment review requests via WhatsApp and email.",
   },
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "Complete clinic profile setup with specialties, services, and insurance accepted.",
   },
   {
     label: "Reputation Analytics",
-    href: "/reputation-management-singapore/reputation-analytics",
+    href: "/services/review-management/reputation-analytics",
     description:
       "Track rating trends and review velocity across all clinic branches.",
   },
   {
     label: "AI Review Response",
-    href: "/reputation-management-singapore/ai-review-response",
+    href: "/services/review-management/ai-review-response",
     description:
       "Clinically appropriate AI-generated responses to every patient review.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description:
       "See where your clinic ranks for every relevant search keyword by district.",
   },
@@ -112,9 +112,9 @@ export default function HealthcareClinicsPage() {
       openingParagraph={
         <>
           When a patient searches 'GP clinic near me' in Singapore, they are choosing someone to trust with their health.{" "}
-          Our <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO services</Link> for clinics make sure the right details show when they do.{" "}
+          Our <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">local SEO services</Link> for clinics make sure the right details show when they do.{" "}
           The clinic that appears first in Google Maps with 100+ reviews and a 4.7 rating earns that trust before the patient even walks in. A competitor clinic with similar quality but 15 reviews and a 3.9 rating loses that patient every time. Healthcare is the category where reputation management matters most — and where a single unfair review causes the greatest harm.
-           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+           See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="Why Clinic Reputation Needs Proactive Management"

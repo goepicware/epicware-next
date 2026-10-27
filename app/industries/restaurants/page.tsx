@@ -30,31 +30,31 @@ const schema = {
 const services = [
   {
     label: "Review Generation Campaigns",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "Automated WhatsApp and email review requests timed 30 minutes after a meal.",
   },
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "Refunded if not removed within 3 months. Removes fake, competitor-posted, or policy-violating reviews.",
   },
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "19-point audit covering every rank factor from categories to photo count to post frequency.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description:
       "See exactly where your restaurant ranks on Google Maps across every Singapore district.",
   },
   {
     label: "AI Review Response",
-    href: "/reputation-management-singapore/ai-review-response",
+    href: "/services/review-management/ai-review-response",
     description:
       "Personalised AI-generated replies to every review — ready in seconds.",
   },
@@ -94,7 +94,7 @@ export default function RestaurantsPage() {
           </Link>
           , helps restaurant owners and groups rank higher, generate more reviews, and protect
           their rating. Our{" "}
-          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+          <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
             local SEO
           </Link>{" "}
           work starts with your Google Business Profile and menu.
@@ -110,7 +110,7 @@ export default function RestaurantsPage() {
       openingParagraph={
         <>
           A food court stall, a single-outlet restaurant, and an F&B group with eight locations all face the same problem: Singapore diners search Google Maps before they decide where to eat. The business that appears in the top three for 'restaurant near me' in the diner's location gets most of the clicks. Epicware manages every factor that determines that rank — reviews, GBP completeness, post frequency, and citation consistency — so your restaurant shows up when hungry customers are looking.
-           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+           See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="The Challenges Singapore Restaurants Face Online"

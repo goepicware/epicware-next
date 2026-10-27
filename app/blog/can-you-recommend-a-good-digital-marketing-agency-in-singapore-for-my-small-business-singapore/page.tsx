@@ -238,8 +238,8 @@ export default function Post() {
             <h2>What Should a Small Business Look for in a Digital Marketing Agency?</h2>
             <p>
               Small businesses often benefit most from agencies specialising in{" "}
-              <Link href="/local-seo-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link> and{" "}
-              <Link href="/reputation-management-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">reputation management</Link>{" "}
+              <Link href="/locations/singapore/local-seo" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link> and{" "}
+              <Link href="/locations/singapore/review-management" className="text-primary underline underline-offset-2 hover:text-primary/80">reputation management</Link>{" "}
               — areas that translate directly to increased foot traffic and customer trust. A
               <Link href="/industries/restaurants" className="text-primary underline underline-offset-2 hover:text-primary/80">local restaurant</Link>{" "}
               in <strong>Katong</strong> has fundamentally different digital marketing
@@ -315,7 +315,7 @@ export default function Post() {
             <p>
               For small businesses, an agency&apos;s proven track record in handling reputation issues
               and optimising{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profiles</Link>{" "}
+              <Link href="/locations/singapore/google-business-profile" className="text-primary underline underline-offset-2 hover:text-primary/80">Google Business Profiles</Link>{" "}
               matters more than broad marketing claims. Specific
               success metrics — a high removal rate for policy-violating reviews, demonstrable ranking
               improvements for Singapore SMBs in competitive categories — are stronger indicators than
@@ -515,10 +515,10 @@ export default function Post() {
                 Epicware is an{" "}
                 <Link href="/" className="text-primary underline underline-offset-2 hover:text-primary/80">AI digital marketing agency in Singapore</Link>{" "}
                 built for businesses with shops, clinics and outlets. Our{" "}
-                <Link href="/seo-agency-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">SEO services</Link>{" "}
+                <Link href="/locations/singapore/seo" className="text-primary underline underline-offset-2 hover:text-primary/80">SEO services</Link>{" "}
                 cover technical fixes, content and links for websites that need to rank. If customers
                 visit you in person, you&apos;ll also need{" "}
-                <Link href="/local-seo-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link>
+                <Link href="/locations/singapore/local-seo" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link>
                 , which we run alongside website SEO.
               </p>
               <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
@@ -527,22 +527,22 @@ export default function Post() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   {
-                    href: "/bad-review-removal-singapore/unfair-review-removal",
+                    href: "/services/review-removal/unfair-review-removal",
                     label: "Unfair Review Removal",
                     desc: "Remove fake or policy-violating Google reviews through official channels.",
                   },
                   {
-                    href: "/local-seo-singapore/gbp-optimisation",
+                    href: "/locations/singapore/google-business-profile",
                     label: "GBP Photo Management",
                     desc: "Professional photos that improve GBP impressions and click-through rates.",
                   },
                   {
-                    href: "/ai-search-visibility-singapore/ai-citation-building",
+                    href: "/services/ai-search-visibility/ai-citation-building",
                     label: "AI Citation Building",
                     desc: "Ensure your business is cited accurately across AI search platforms.",
                   },
                   {
-                    href: "/local-seo-singapore/gbp-optimisation",
+                    href: "/locations/singapore/google-business-profile",
                     label: "GBP Optimisation Service",
                     desc: "Full Google Business Profile optimisation to rank higher in the Map Pack.",
                   },

@@ -53,7 +53,7 @@ export default function Post() {
           </p>
           <p>
             See our full{" "}
-            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">
               SEO services
             </Link>{" "}
             for how we cover both.
@@ -66,7 +66,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Google Maps Ranking Factors Explained", href: "/blog/google-maps-ranking-factors" },
         { title: "How Many Google Reviews Do You Need to Compete Locally?", href: "/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
-        { title: "Review Management Singapore", href: "/blog/review-management-singapore" },
+        { title: "Review Management Singapore", href: "/blog/locations/singapore/review-management" },
       ]}
       body={
         <>
@@ -114,7 +114,7 @@ export default function Post() {
             links — it&apos;s to rank in the <strong>Google Map Pack</strong>: the block of three
             business listings that appears at the top of search results when someone searches for a
             business or service near them. Our{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO services
             </Link>{" "}
             focus entirely on this discipline.

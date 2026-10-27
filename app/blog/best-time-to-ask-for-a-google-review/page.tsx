@@ -94,7 +94,7 @@ export default function Post() {
             ; asking every customer is the other.</p>
         </>
       }
-      ctaHref="/reputation-management-singapore/review-generation"
+      ctaHref="/services/review-management/review-generation"
       ctaLabel="Automate Review Request Timing"
       ctaContext={
         <>

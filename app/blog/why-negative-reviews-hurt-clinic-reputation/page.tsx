@@ -292,7 +292,7 @@ export default function Post() {
             Clinic administrators often lack the dedicated time, specialised tools, and expertise to track rankings,
             manage reviews, and address negative feedback proactively. Epicware solves this by consolidating all
             essential local growth tools into a single, user-friendly dashboard for businesses in{" "}
-            <Link href="/review-management-singapore" className="text-blue-600 hover:underline">
+            <Link href="/locations/singapore/review-management" className="text-blue-600 hover:underline">
               Singapore
             </Link>{" "}
             and beyond.
@@ -300,7 +300,7 @@ export default function Post() {
           <p>
             The platform allows clinics to track Google Maps rank, monitor AI search visibility, manage incoming
             reviews, and efficiently{" "}
-            <Link href="/bad-review-removal-singapore" className="text-blue-600 hover:underline">
+            <Link href="/locations/singapore/review-removal" className="text-blue-600 hover:underline">
               remove bad reviews
             </Link>
             . Epicware&apos;s proven track record — a 94% removal success rate for over 500 bad reviews across 50+
@@ -312,7 +312,7 @@ export default function Post() {
           </p>
           <p>
             For clinics that need steady patient reviews and fast, careful replies, our{" "}
-            <Link href="/reputation-management-singapore" className="text-blue-600 hover:underline">
+            <Link href="/locations/singapore/review-management" className="text-blue-600 hover:underline">
               online reputation management
             </Link>{" "}
             handles both.
@@ -327,7 +327,7 @@ export default function Post() {
             as being from a non-patient, containing hate speech, or being a spam attack. The success rate for removing
             genuinely fake reviews is high if sufficient proof is provided, though the process typically takes 5–10
             business days. A review from someone who was never a patient is a candidate for{" "}
-            <Link href="/bad-review-removal-singapore/fake-review-removal" className="text-blue-600 hover:underline">
+            <Link href="/services/review-removal/fake-review-removal" className="text-blue-600 hover:underline">
               fake review removal
             </Link>
             .
@@ -431,7 +431,7 @@ export default function Post() {
           <ul>
             <li>
               <Link
-                href="/reputation-management-singapore/ai-review-response"
+                href="/services/review-management/ai-review-response"
                 className="text-blue-600 hover:underline"
               >
                 Negative Review Response Singapore — Build Trust
@@ -439,14 +439,14 @@ export default function Post() {
             </li>
             <li>
               <Link
-                href="/reputation-management-singapore/reputation-analytics"
+                href="/services/review-management/reputation-analytics"
                 className="text-blue-600 hover:underline"
               >
                 Reputation Analytics Singapore — Reviews &amp; Sentiment
               </Link>
             </li>
             <li>
-              <Link href="/reputation-management-singapore" className="text-blue-600 hover:underline">
+              <Link href="/locations/singapore/review-management" className="text-blue-600 hover:underline">
                 Reputation Management Singapore — Grow Your Reviews
               </Link>
             </li>
@@ -458,7 +458,7 @@ export default function Post() {
           </ul>
         </>
       }
-      ctaHref="/bad-review-removal-singapore"
+      ctaHref="/locations/singapore/review-removal"
       ctaLabel="Protect Your Clinic's Reputation"
       ctaContext="Epicware handles Google review flagging and removal requests while building the positive review volume that makes individual negatives matter less."
       relatedPosts={[

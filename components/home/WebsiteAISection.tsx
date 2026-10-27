@@ -272,7 +272,7 @@ export default function WebsiteAISection() {
               {/* CTA */}
               <div className="px-7 pb-7 pt-3">
                 <Link
-                  href="/ai-search-visibility-singapore"
+                  href="/locations/singapore/ai-search-visibility"
                   className="flex items-center justify-center gap-2.5 w-full rounded-[16px] bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all duration-200 shadow-[0_4px_16px_rgba(37,99,235,0.35)] hover:shadow-[0_6px_22px_rgba(37,99,235,0.48)] hover:-translate-y-0.5"
                   style={{ height: "58px", fontSize: "1.05rem" }}
                 >

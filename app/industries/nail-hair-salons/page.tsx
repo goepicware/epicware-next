@@ -30,25 +30,25 @@ const schema = {
 const services = [
   {
     label: "Review Generation Campaigns",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "WhatsApp review requests after every appointment — convert satisfied customers to reviewers.",
   },
   {
     label: "GBP Photo Management",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "Before-and-after photos, salon interior shots, and regular photo refresh for GBP.",
   },
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "19-point audit including service categories, attributes, and opening hours.",
   },
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "Refunded if not removed within 3 months. Remove fake or policy-violating reviews.",
   },
@@ -60,7 +60,7 @@ const services = [
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description: "Track your Maps rank across every Singapore district.",
   },
 ];
@@ -94,11 +94,11 @@ export default function NailHairSalonsPage() {
       openingParagraph={
         <>
           When someone searches 'hair colouring salon near Tampines' or 'nail art in Jurong', they are ready to book.{" "}
-          Our <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO services</Link> help your salon show up in those results.{" "}
+          Our <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">local SEO services</Link> help your salon show up in those results.{" "}
           The salon that appears in the Google Maps 3-Pack with before-and-after photos, 80+ reviews, and a 4.7 rating wins that booking. Epicware's platform manages the review generation, GBP photo management, and rank tracking that keeps salons visible in the local searches that drive appointments.{" "}
           As an <Link href="/" className="text-primary font-medium hover:underline">AI marketing agency in Singapore</Link>, Epicware runs local search and reviews for salons.{" "}
           For <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">salon chains with multiple outlets</Link>, one dashboard manages every location.
-           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+           See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="What Makes Salon Reputation Different"

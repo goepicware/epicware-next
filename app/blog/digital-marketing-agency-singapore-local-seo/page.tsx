@@ -200,14 +200,14 @@ export default function Post() {
               performance in areas that directly matter to local SMBs. Specifically: their track
               record with{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 local SEO
               </Link>{" "}
               and{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 reputation management
@@ -256,7 +256,7 @@ export default function Post() {
             <p>
               Ranking the website itself is the job of{" "}
               <Link
-                href="/seo-agency-singapore"
+                href="/locations/singapore/seo"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 SEO services
@@ -271,7 +271,7 @@ export default function Post() {
               <li>
                 <strong>
                   <Link
-                    href="/local-seo-singapore/gbp-optimisation"
+                    href="/locations/singapore/google-business-profile"
                     className="text-primary underline underline-offset-2 hover:text-primary/80"
                   >
                     Optimise your Google Business Profile.
@@ -338,7 +338,7 @@ export default function Post() {
               Maintaining a strong online reputation is paramount for Singapore SMBs. Positive online
               reviews and effective{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 reputation management
@@ -449,14 +449,14 @@ export default function Post() {
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Epicware consolidates Google Maps rank tracking, AI search visibility insights,{" "}
                 <Link
-                  href="/review-management-singapore"
+                  href="/locations/singapore/review-management"
                   className="text-primary underline underline-offset-2 hover:text-primary/80"
                 >
                   review management
                 </Link>
                 , and{" "}
                 <Link
-                  href="/bad-review-removal-singapore"
+                  href="/locations/singapore/review-removal"
                   className="text-primary underline underline-offset-2 hover:text-primary/80"
                 >
                   bad review removal
@@ -468,9 +468,9 @@ export default function Post() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
-                  { label: "Google Maps rank tracking", href: "/local-seo-singapore/local-rank-tracking" },
-                  { label: "AI search visibility", href: "/ai-search-visibility-singapore" },
-                  { label: "Review generation & removal", href: "/reputation-management-singapore/review-generation" },
+                  { label: "Google Maps rank tracking", href: "/services/local-seo/rank-tracking" },
+                  { label: "AI search visibility", href: "/locations/singapore/ai-search-visibility" },
+                  { label: "Review generation & removal", href: "/services/review-management/review-generation" },
                 ].map(({ label, href }) => (
                   <Link
                     key={href}
@@ -503,7 +503,7 @@ export default function Post() {
               Small businesses should seek agencies offering services that directly impact local
               visibility and customer trust: local SEO,{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 Google Business Profile optimisation
@@ -588,22 +588,22 @@ export default function Post() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   {
-                    href: "/bad-review-removal-singapore/unfair-review-removal",
+                    href: "/services/review-removal/unfair-review-removal",
                     label: "Unfair Review Removal",
                     desc: "Remove fake or policy-violating Google reviews through official channels.",
                   },
                   {
-                    href: "/local-seo-singapore/gbp-optimisation",
+                    href: "/locations/singapore/google-business-profile",
                     label: "GBP Photo Management",
                     desc: "Professional photos that improve GBP impressions and click-through rates.",
                   },
                   {
-                    href: "/ai-search-visibility-singapore/ai-citation-building",
+                    href: "/services/ai-search-visibility/ai-citation-building",
                     label: "AI Citation Building",
                     desc: "Ensure your business is cited accurately across AI search platforms.",
                   },
                   {
-                    href: "/local-seo-singapore/gbp-optimisation",
+                    href: "/locations/singapore/google-business-profile",
                     label: "GBP Optimisation Service",
                     desc: "Full Google Business Profile optimisation to rank higher in the Map Pack.",
                   },

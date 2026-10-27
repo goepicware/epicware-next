@@ -72,7 +72,7 @@ const FEATURES = [
       <>
         Post-visit emails connect directly to EpicReview&apos;s{" "}
         <Link
-          href="/reputation-management-singapore/review-generation"
+          href="/services/review-management/review-generation"
           className="text-primary hover:underline"
         >
           review request flow

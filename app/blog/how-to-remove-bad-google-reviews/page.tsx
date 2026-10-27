@@ -95,7 +95,7 @@ export default function Post() {
 
           <h2>When is it worth using a professional Google review removal service?</h2>
           <p>Epicware&apos;s{" "}
-            <Link href="/bad-review-removal-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">bad review removal service</Link>{" "}
+            <Link href="/locations/singapore/review-removal" className="text-primary underline underline-offset-2 hover:text-primary/80">bad review removal service</Link>{" "}
             handles the full process, from assessment to escalation; fees are on{" "}
             <Link href="/pricing" className="text-primary underline underline-offset-2 hover:text-primary/80">our pricing page</Link>. The service is particularly worth using when:</p>
           <ul>
@@ -110,7 +110,7 @@ export default function Post() {
           <p>The $200/review fee is charged upfront and refunded in full if the review isn&apos;t removed within 3 months — giving us a direct financial incentive to succeed.</p>
         </>
       }
-      ctaHref="/bad-review-removal-singapore"
+      ctaHref="/locations/singapore/review-removal"
       ctaLabel="See Our Bad Review Removal Service"
       ctaContext="Epicware handles the full removal process — from assessment to escalation. Refunded in full if the review stays up after 3 months."
       relatedPosts={[

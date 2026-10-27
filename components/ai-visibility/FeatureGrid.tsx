@@ -34,7 +34,7 @@ export default function FeatureGrid() {
           <SampleReport />
           <p className="text-center text-muted-foreground text-sm leading-relaxed mt-6">
             Want us to fix what the check finds? See our{" "}
-            <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/ai-search-visibility" className="text-primary font-medium hover:underline">
               AI search visibility
             </Link>{" "}
             service.

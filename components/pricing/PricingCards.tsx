@@ -15,11 +15,11 @@ import { PLANS, formatPrice } from "@/lib/pricing-data";
 // `match` tolerates the US/UK "optimization"/"optimisation" spelling used
 // interchangeably in the plan data.
 const FEATURE_LINKS: { match: RegExp; href: string; key: string }[] = [
-  { key: "gbp-opt", match: /Google Business Profile Optimi[sz]ation/i, href: "/local-seo-singapore/gbp-optimisation" },
-  { key: "local-seo", match: /local SEO/i, href: "/local-seo-singapore" },
-  { key: "ai-search", match: /AI search visibility/i, href: "/ai-search-visibility-singapore" },
-  { key: "bad-review", match: /Bad Review Removal/i, href: "/bad-review-removal-singapore" },
-  { key: "ai-review-response", match: /AI review responses/i, href: "/reputation-management-singapore/ai-review-response" },
+  { key: "gbp-opt", match: /Google Business Profile Optimi[sz]ation/i, href: "/locations/singapore/google-business-profile" },
+  { key: "local-seo", match: /local SEO/i, href: "/locations/singapore/local-seo" },
+  { key: "ai-search", match: /AI search visibility/i, href: "/locations/singapore/ai-search-visibility" },
+  { key: "bad-review", match: /Bad Review Removal/i, href: "/locations/singapore/review-removal" },
+  { key: "ai-review-response", match: /AI review responses/i, href: "/services/review-management/ai-review-response" },
 ];
 
 function linkifyFeatureOnce(text: string, used: Set<string>) {

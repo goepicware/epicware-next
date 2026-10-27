@@ -30,37 +30,37 @@ const schema = {
 const services = [
   {
     label: "Review Generation",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "Automated review requests to parents after results and milestones.",
   },
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "List every subject, level, and programme so parents find you for the right search.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description:
       "Track your rank for every tuition keyword across every Singapore district.",
   },
   {
     label: "AI Review Response",
-    href: "/reputation-management-singapore/ai-review-response",
+    href: "/services/review-management/ai-review-response",
     description:
       "Professional responses to parent reviews that reinforce your centre's credibility.",
   },
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "Remove competitor attacks and policy-violating reviews that unfairly hurt your rating.",
   },
   {
     label: "Citation Building",
-    href: "/local-seo-singapore/citation-building",
+    href: "/services/local-seo/citation-building",
     description:
       "Consistent listings across Singapore education directories and local directories.",
   },
@@ -95,10 +95,10 @@ export default function TuitionCentresPage() {
       openingParagraph={
         <>
           Every Singapore parent searching 'primary school maths tuition near Tampines' or 'secondary English tutor near me' is looking for one thing: proof that the centre they choose will help their child. Google reviews are that proof.{" "}
-          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">Local SEO</Link> puts your centre in front of parents searching by subject and area.{" "}
+          <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">Local SEO</Link> puts your centre in front of parents searching by subject and area.{" "}
           A tuition centre with 60 reviews averaging 4.7 stars, recent posts showing student results, and a complete GBP profile with subjects listed converts trial class enquiries at a significantly higher rate than a competitor with 8 reviews and an empty profile. Parents compare centres online first, so Epicware, a{" "}
           <Link href="/" className="text-primary font-medium hover:underline">digital marketing agency in Singapore</Link>, focuses on reviews and local search.
-           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+           See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="Why Tuition Centre Reputation Management Is Different"
@@ -111,7 +111,7 @@ export default function TuitionCentresPage() {
           rank is only half the battle — your profile also needs to convert the click.
           A poor review response, a generic description, or missing subject information
           loses the conversion even when the rank is right. Our{" "}
-          <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+          <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
             reputation management
           </Link>{" "}
           keeps reviews from parents coming in and gets each one a reply.

@@ -258,7 +258,7 @@ export default function Post() {
             <p><strong>Key Services:</strong> Local SEO, Google Business Profile Optimisation, Review Management, AI Automation, Citation Building</p>
             <p>
               Epicware&apos;s{" "}
-              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
                 local SEO services
               </Link>{" "}
               include a rank grid for each outlet.
@@ -474,7 +474,7 @@ export default function Post() {
               months or more. With AI-powered SEO, the process can often be accelerated through
               faster optimisation and data analysis. A complete{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Business Profile
@@ -513,7 +513,7 @@ export default function Post() {
             </p>
             <p>
               Epicware is the{" "}
-              <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">
                 AI-powered SEO agency
               </Link>{" "}
               entry on this list.

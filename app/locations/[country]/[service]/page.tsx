@@ -48,6 +48,8 @@ export async function generateMetadata({
       description: content.frontmatter.metaDescription,
       url: canonical,
     },
+    // Draft pages (no market proof yet) must not be indexed or crawled further.
+    ...(content.frontmatter.draft ? { robots: { index: false, follow: false } } : {}),
   };
 }
 

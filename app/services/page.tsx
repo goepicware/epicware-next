@@ -46,32 +46,32 @@ const TRUST_SIGNALS = [
 const REPUTATION_SERVICES = [
   {
     name: "Review Management",
-    href: "/review-management-singapore",
+    href: "/locations/singapore/review-management",
     description: "Monitor and manage every Google review across all your outlets in real time.",
   },
   {
     name: "AI Review Response",
-    href: "/reputation-management-singapore/ai-review-response",
+    href: "/services/review-management/ai-review-response",
     description: "Auto-generate personalised, brand-consistent replies to every review.",
   },
   {
     name: "Bad Review Removal ⭐",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description: "Remove fake, malicious, or policy-violating Google reviews. Pay only on success.",
   },
   {
     name: "Review Generation Campaigns",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description: "Automated WhatsApp and email campaigns that turn happy customers into Google reviews.",
   },
   {
     name: "Wall of Love (Review Widgets)",
-    href: "/reputation-management-singapore/review-widgets",
+    href: "/services/review-management/review-widgets",
     description: "Embed your best reviews on your website — live, auto-updating.",
   },
   {
     name: "Reputation Analytics Dashboard",
-    href: "/reputation-management-singapore/reputation-analytics",
+    href: "/services/review-management/reputation-analytics",
     description: "Track your rating trends, review velocity, and sentiment across all locations.",
   },
 ];
@@ -79,32 +79,32 @@ const REPUTATION_SERVICES = [
 const LOCAL_SEO_SERVICES = [
   {
     name: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description: "Complete 19-point audit and ongoing optimisation of your Google Business Profile.",
   },
   {
     name: "GBP Post Scheduling",
-    href: "/local-seo-singapore/gbp-post-scheduling",
+    href: "/services/google-business-profile/post-scheduling",
     description: "AI-generated weekly posts published to your GBP automatically.",
   },
   {
     name: "GBP Setup & Onboarding",
-    href: "/local-seo-singapore/gbp-setup",
+    href: "/services/google-business-profile/setup",
     description: "Full GBP creation, verification, and configuration for new or unclaimed profiles.",
   },
   {
     name: "Local Rank Tracking (EpicMap)",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description: "Visual map grid showing your keyword rank across every Singapore district.",
   },
   {
     name: "Citation Building",
-    href: "/local-seo-singapore/citation-building",
+    href: "/services/local-seo/citation-building",
     description: "Build consistent NAP citations across Singapore's top local directories.",
   },
   {
     name: "Competitor Analysis",
-    href: "/local-seo-singapore/competitor-analysis",
+    href: "/services/local-seo/competitor-analysis",
     description: "See exactly where competitors outrank you and why.",
   },
 ];
@@ -112,17 +112,17 @@ const LOCAL_SEO_SERVICES = [
 const AI_SERVICES = [
   {
     name: "GEO / AI Overview Optimisation",
-    href: "/ai-search-visibility-singapore",
+    href: "/locations/singapore/ai-search-visibility",
     description: "Optimise your content to appear in Google's AI-generated search answers.",
   },
   {
     name: "AI Citation Building",
-    href: "/ai-search-visibility-singapore/ai-citation-building",
+    href: "/services/ai-search-visibility/ai-citation-building",
     description: "Get your business cited as a source in AI-generated local responses.",
   },
   {
     name: "AEO (Answer Engine Optimisation)",
-    href: "/ai-search-visibility-singapore/aeo",
+    href: "/services/ai-search-visibility/aeo",
     description: "Structure your content so AI assistants recommend your business by name.",
   },
 ];
@@ -223,7 +223,7 @@ export default function ServicesPage() {
       <section className="py-16 lg:py-20 section-gradient-1">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="mb-8">
-            <Link href="/reputation-management-singapore" className="hover:underline">
+            <Link href="/locations/singapore/review-management" className="hover:underline">
               <h2 className="font-display text-foreground mb-3">Reputation Management</h2>
             </Link>
             <p className="text-muted-foreground text-lg">
@@ -242,7 +242,7 @@ export default function ServicesPage() {
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="mb-8">
-            <Link href="/local-seo-singapore" className="hover:underline">
+            <Link href="/locations/singapore/local-seo" className="hover:underline">
               <h2 className="font-display text-foreground mb-3">Local SEO Services</h2>
             </Link>
             <p className="text-muted-foreground text-lg">
@@ -261,7 +261,7 @@ export default function ServicesPage() {
       <section className="py-16 lg:py-20 section-gradient-1">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="mb-8">
-            <Link href="/ai-search-visibility-singapore" className="hover:underline">
+            <Link href="/locations/singapore/ai-search-visibility" className="hover:underline">
               <h2 className="font-display text-foreground mb-3">AI &amp; GEO Visibility</h2>
             </Link>
             <p className="text-muted-foreground text-lg">
@@ -300,7 +300,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 max-w-6xl">
           <h2 className="font-display text-foreground mb-10 text-center">Our Core Services</h2>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            <Link href="/seo-agency-singapore" className="card-feature group block h-full">
+            <Link href="/locations/singapore/seo" className="card-feature group block h-full">
               <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
                 <div className="text-2xl">🔍</div>
                 <h3 className="font-display font-bold text-foreground text-xl leading-snug">
@@ -314,7 +314,7 @@ export default function ServicesPage() {
                 </div>
               </div>
             </Link>
-            <Link href="/bad-review-removal-singapore" className="card-feature group block h-full">
+            <Link href="/locations/singapore/review-removal" className="card-feature group block h-full">
               <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
                 <div className="text-2xl">⭐</div>
                 <h3 className="font-display font-bold text-foreground text-xl leading-snug">
@@ -333,19 +333,19 @@ export default function ServicesPage() {
               <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
                 <div className="text-2xl">📍</div>
                 <h3 className="font-display font-bold text-foreground text-xl leading-snug">
-                  <Link href="/local-seo-singapore/gbp-optimisation" className="hover:underline">GBP Optimisation</Link>
+                  <Link href="/locations/singapore/google-business-profile" className="hover:underline">GBP Optimisation</Link>
                 </h3>
                 <p className="text-muted-foreground text-base leading-relaxed flex-1">
                   19-point audit, weekly posts, and rank tracking across Singapore districts — all automated.
                   Every service is run by our team at Epicware, an{" "}
                   <Link href="/" className="text-primary font-medium hover:underline">AI-powered digital marketing agency in Singapore</Link>.
                 </p>
-                <Link href="/local-seo-singapore/gbp-optimisation" className="flex items-center gap-2 text-sm font-semibold text-primary pt-4 border-t border-border/30">
+                <Link href="/locations/singapore/google-business-profile" className="flex items-center gap-2 text-sm font-semibold text-primary pt-4 border-t border-border/30">
                   See GBP Optimisation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             </div>
-            <Link href="/review-management-singapore" className="card-feature group block h-full">
+            <Link href="/locations/singapore/review-management" className="card-feature group block h-full">
               <div className="card-feature-inner p-8 flex flex-col gap-4 h-full">
                 <div className="text-2xl">⭐</div>
                 <h3 className="font-display font-bold text-foreground text-xl leading-snug">

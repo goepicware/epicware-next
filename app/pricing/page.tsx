@@ -247,7 +247,7 @@ export default function PricingPage() {
           <PricingCards />
           <p className="text-center text-sm text-muted-foreground mt-6">
             See{" "}
-            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">
               what our SEO services include
             </Link>{" "}
             on the plans above.

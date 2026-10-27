@@ -50,14 +50,14 @@ export default function Page() {
       epicwareSummary={
         <>
           Epicware focuses on the channels that matter for Singapore SMBs — primarily{" "}
-          <Link href="/local-seo-singapore/gbp-optimisation">Google Maps and GBP</Link>. Review generation, bad review removal, rank tracking, and GBP optimisation are all built specifically for Singapore&apos;s market dynamics. Yext sells software; Epicware is an{" "}
+          <Link href="/locations/singapore/google-business-profile">Google Maps and GBP</Link>. Review generation, bad review removal, rank tracking, and GBP optimisation are all built specifically for Singapore&apos;s market dynamics. Yext sells software; Epicware is an{" "}
           <Link href="/">AI marketing agency in Singapore</Link> that runs your listings, reviews and rankings.
         </>
       }
       competitorSummary="Yext is an enterprise listings management platform that synchronises business data across hundreds of global directories. It's designed for large brands managing hundreds of locations across multiple countries. Its strength is breadth of directory coverage, not deep optimisation of any single channel."
       features={features}
       verdict={
-        <p>Yext is the right tool for enterprise brands managing hundreds of locations across global directories. For Singapore SMBs, Epicware delivers better results on the channel that matters most: Google Maps. See <a href="/local-seo-singapore">local SEO services</a> or <a href="/book-demo#form">book a free demo</a>.</p>
+        <p>Yext is the right tool for enterprise brands managing hundreds of locations across global directories. For Singapore SMBs, Epicware delivers better results on the channel that matters most: Google Maps. See <a href="/locations/singapore/local-seo">local SEO services</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
       faqHeading="Common questions about Epicware vs Yext"
       faqs={[

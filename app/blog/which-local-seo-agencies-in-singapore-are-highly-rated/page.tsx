@@ -249,7 +249,7 @@ export default function Post() {
               numerous recent positive reviews signals continued client satisfaction and a proactive
               approach to{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 local SEO
@@ -331,7 +331,7 @@ export default function Post() {
               experiences in different public forums, suggesting a higher level of trust in the
               agency&apos;s services. While{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 Google Business Profile
@@ -388,7 +388,7 @@ export default function Post() {
               Neglecting review age is equally problematic. Digital marketing evolves rapidly —
               an agency&apos;s 2022 success with technical SEO might not translate to current{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 AI search visibility
@@ -421,7 +421,7 @@ export default function Post() {
               and local SEO across multiple locations consistently each month. The volume of tasks
               — tracking{" "}
               <Link
-                href="/local-seo-singapore/local-rank-tracking"
+                href="/services/local-seo/rank-tracking"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 Google Maps rankings
@@ -430,7 +430,7 @@ export default function Post() {
               — can overwhelm any operations team without a dedicated tool. This is exactly where
               dedicated{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 local SEO services in Singapore
@@ -440,7 +440,7 @@ export default function Post() {
             <p>
               Epicware, an{" "}
               <Link
-                href="/seo-agency-singapore"
+                href="/locations/singapore/seo"
                 className="text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 SEO agency in Singapore
@@ -465,14 +465,14 @@ export default function Post() {
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Epicware consolidates Google Maps rank tracking, AI search visibility insights,{" "}
                 <Link
-                  href="/review-management-singapore"
+                  href="/locations/singapore/review-management"
                   className="text-primary underline underline-offset-2 hover:text-primary/80"
                 >
                   review management
                 </Link>
                 , and{" "}
                 <Link
-                  href="/bad-review-removal-singapore"
+                  href="/locations/singapore/review-removal"
                   className="text-primary underline underline-offset-2 hover:text-primary/80"
                 >
                   bad review removal
@@ -483,9 +483,9 @@ export default function Post() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
-                  { label: "Google Maps rank tracking", href: "/local-seo-singapore/local-rank-tracking" },
-                  { label: "Review generation", href: "/reputation-management-singapore/review-generation" },
-                  { label: "Bad review removal", href: "/bad-review-removal-singapore" },
+                  { label: "Google Maps rank tracking", href: "/services/local-seo/rank-tracking" },
+                  { label: "Review generation", href: "/services/review-management/review-generation" },
+                  { label: "Bad review removal", href: "/locations/singapore/review-removal" },
                 ].map(({ label, href }) => (
                   <Link
                     key={href}
@@ -602,7 +602,7 @@ export default function Post() {
                     desc: "Local SEO & listings comparison for Singapore SMBs.",
                   },
                   {
-                    href: "/local-seo-singapore/local-rank-tracking",
+                    href: "/services/local-seo/rank-tracking",
                     label: "Local Rank Tracking Singapore",
                     desc: "Track Google Maps positions for your business.",
                   },

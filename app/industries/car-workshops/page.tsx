@@ -30,37 +30,37 @@ const schema = {
 const services = [
   {
     label: "Bad Review Removal",
-    href: "/bad-review-removal-singapore",
+    href: "/locations/singapore/review-removal",
     description:
       "Refunded if not removed within 3 months. Remove competitor attacks and false claims about your workshop.",
   },
   {
     label: "Review Generation",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "Post-service WhatsApp review requests after every completed job.",
   },
   {
     label: "GBP Optimisation",
-    href: "/local-seo-singapore/gbp-optimisation",
+    href: "/locations/singapore/google-business-profile",
     description:
       "Full service list, correct categories, and profile completeness for every auto service keyword.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/local-seo-singapore/local-rank-tracking",
+    href: "/services/local-seo/rank-tracking",
     description:
       "Track your rank across Singapore districts for car workshop keywords.",
   },
   {
     label: "AI Review Response",
-    href: "/reputation-management-singapore/ai-review-response",
+    href: "/services/review-management/ai-review-response",
     description:
       "Professional, trust-building responses to every customer review.",
   },
   {
     label: "Review Management",
-    href: "/review-management-singapore",
+    href: "/locations/singapore/review-management",
     description:
       "Monitor all reviews in real time across multiple workshop locations.",
   },
@@ -104,9 +104,9 @@ export default function CarWorkshopsPage() {
       openingParagraph={
         <>
           When a car owner's check engine light comes on or their COE renewal is due, they open Google Maps and search 'car workshop near me'. The workshop that appears in the top 3 with the most credible reviews gets the call. In Singapore's competitive auto service market, trust is the primary purchase driver — and trust starts with Google reviews. A workshop with a 4.6 rating and 95 reviews converts dramatically better than one with 12 reviews and a 3.8, even if the quality of service is identical. Our{" "}
-          <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">local SEO services</Link>{" "}
+          <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">local SEO services</Link>{" "}
           help drivers searching nearby find your workshop.
-           See our full <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
+           See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.
         </>
       }
       challengesTitle="Why Auto Workshops Get Hit by Bad Reviews"

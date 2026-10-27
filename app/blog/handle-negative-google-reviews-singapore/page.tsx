@@ -265,8 +265,8 @@ export default function Post() {
           </p>
           <p>
             Responding to negative reviews is not just{" "}
-            <Link href="/reputation-management-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">reputation management</Link>. It&apos;s also{" "}
-            <Link href="/local-seo-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link>.
+            <Link href="/locations/singapore/review-management" className="text-primary underline underline-offset-2 hover:text-primary/80">reputation management</Link>. It&apos;s also{" "}
+            <Link href="/locations/singapore/local-seo" className="text-primary underline underline-offset-2 hover:text-primary/80">local SEO</Link>.
           </p>
 
           <h2>How do you build a systematic process for handling negative Google reviews proactively?</h2>
@@ -303,14 +303,14 @@ export default function Post() {
           </p>
         </>
       }
-      ctaHref="/bad-review-removal-singapore"
+      ctaHref="/locations/singapore/review-removal"
       ctaLabel="See Our Review Removal Service"
       ctaContext="Epicware handles Google review flagging and removal requests, plus builds the positive review volume that makes individual negatives matter less."
       relatedPosts={[
         { title: "Fake or Unfair Google Reviews — What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
         { title: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
         { title: "Should You Respond to Every Google Review?", href: "/blog/should-you-respond-to-every-google-review" },
-        { title: "Review Management Singapore", href: "/blog/review-management-singapore" },
+        { title: "Review Management Singapore", href: "/blog/locations/singapore/review-management" },
       ]}
     />
   );

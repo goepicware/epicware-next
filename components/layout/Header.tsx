@@ -44,13 +44,13 @@ const NAV = {
   services: {
     label: "Services",
     items: [
-      { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
-      { href: "/local-seo-singapore", label: "Local SEO" },
-      { href: "/local-seo-singapore/gbp-optimisation", label: "GBP Optimisation" },
-      { href: "/ai-search-visibility-singapore", label: "AI Search Optimisation (GEO)" },
-      { href: "/reputation-management-singapore", label: "Online Reputation Management" },
-      { href: "/review-management-singapore", label: "Review Management" },
-      { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
+      { href: "/locations/singapore/seo", label: "SEO Agency Singapore" },
+      { href: "/locations/singapore/local-seo", label: "Local SEO" },
+      { href: "/locations/singapore/google-business-profile", label: "GBP Optimisation" },
+      { href: "/locations/singapore/ai-search-visibility", label: "AI Search Optimisation (GEO)" },
+      { href: "/locations/singapore/review-management", label: "Online Reputation Management" },
+      { href: "/locations/singapore/review-management", label: "Review Management" },
+      { href: "/locations/singapore/review-removal", label: "Bad Review Removal" },
     ],
   },
   industries: {

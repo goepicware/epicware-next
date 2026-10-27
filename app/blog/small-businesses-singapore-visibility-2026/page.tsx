@@ -239,7 +239,7 @@ export default function Post() {
               generate contextualised recommendations tailored to each searcher&apos;s location and
               intent. Showing up in Google Maps and &ldquo;near me&rdquo; searches is what{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary font-medium hover:underline"
               >
                 local SEO
@@ -268,14 +268,14 @@ export default function Post() {
               This is a structurally new visibility problem that requires a dedicated response —
               specifically,{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 Generative Engine Optimisation
               </Link>
               .{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 AI search visibility
@@ -293,7 +293,7 @@ export default function Post() {
               referral to visit now passes through multiple digital touchpoints. A business with no
               reviews, an unclaimed{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Business Profile
@@ -340,7 +340,7 @@ export default function Post() {
               because Google&apos;s local algorithm rewards completeness and relevance, and an
               empty profile signals neither. Epicware&apos;s{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Core 30 Method for GBP optimisation
@@ -508,7 +508,7 @@ export default function Post() {
               a system that makes response habitual rather than occasional. See our complete guide
               on{" "}
               <Link
-                href="/review-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 review management in Singapore
@@ -524,7 +524,7 @@ export default function Post() {
               business practitioners has moved decisively forward: the priority is how to combine
               traditional{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary font-medium hover:underline"
               >
                 local SEO
@@ -634,7 +634,7 @@ export default function Post() {
               and authoritative citations improve both Map Pack placement and AI citation likelihood
               at the same time. Epicware&apos;s{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 AI Visibility Tracking and GEO product
@@ -693,7 +693,7 @@ export default function Post() {
               Sharing customer testimonials, before-and-after results, team spotlights, and service
               explainers across your{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 GBP
@@ -723,7 +723,7 @@ export default function Post() {
               algorithm and AI retrieval engines interpret as an unverified or unreliable entity.
               Fixing NAP inconsistencies is the least glamorous task in{" "}
               <Link
-                href="/local-seo-singapore"
+                href="/locations/singapore/local-seo"
                 className="text-primary font-medium hover:underline"
               >
                 local SEO
@@ -822,7 +822,7 @@ export default function Post() {
             <p>
               Your{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Business Profile
@@ -883,7 +883,7 @@ export default function Post() {
               consistent across all directories, and strengthen your content entity signals so
               that AI retrieval systems can confidently recommend your business. Epicware&apos;s{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 AI Visibility Tracking and GEO service
@@ -931,7 +931,7 @@ export default function Post() {
               visibility is no longer a marketing preference for Singapore SMBs. It is an
               operational requirement. The three-part imperative is clear. A fully optimised{" "}
               <Link
-                href="/local-seo-singapore/gbp-optimisation"
+                href="/locations/singapore/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 Google Business Profile
@@ -939,7 +939,7 @@ export default function Post() {
               is the non-negotiable foundation that determines whether you appear in the Map Pack
               at all. Consistent, proactive{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 review management
@@ -947,7 +947,7 @@ export default function Post() {
               is the digital evolution of word-of-mouth trust, converting satisfied customers into
               the social proof that both Google and AI systems use to assess credibility. And{" "}
               <Link
-                href="/ai-search-visibility-singapore"
+                href="/locations/singapore/ai-search-visibility"
                 className="text-primary font-medium hover:underline"
               >
                 Generative Engine Optimisation

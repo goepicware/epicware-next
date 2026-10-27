@@ -40,7 +40,7 @@ export default function EpicSocialSchedulingPage() {
           customer checking their page. A Google Business Profile with no recent posts loses rank
           advantage to competitors who post weekly. Our{" "}
           <Link
-            href="/local-seo-singapore/gbp-post-scheduling"
+            href="/services/google-business-profile/post-scheduling"
             className="text-primary font-medium hover:underline"
           >
             GBP post scheduling

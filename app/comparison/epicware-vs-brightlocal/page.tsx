@@ -56,7 +56,7 @@ export default function Page() {
       }
       features={features}
       verdict={
-        <p>BrightLocal is a respected tool for agencies managing local SEO reporting. For Singapore SMB owners who want results rather than reports, Epicware&apos;s action-first approach delivers faster outcomes. You don&apos;t need to know what to fix — Epicware fixes it. See <a href="/local-seo-singapore/gbp-optimisation">Google Business Profile optimisation</a> or <a href="/book-demo#form">book a free demo</a>.</p>
+        <p>BrightLocal is a respected tool for agencies managing local SEO reporting. For Singapore SMB owners who want results rather than reports, Epicware&apos;s action-first approach delivers faster outcomes. You don&apos;t need to know what to fix — Epicware fixes it. See <a href="/locations/singapore/google-business-profile">Google Business Profile optimisation</a> or <a href="/book-demo#form">book a free demo</a>.</p>
       }
       faqHeading="Common questions about Epicware vs BrightLocal"
       faqs={[

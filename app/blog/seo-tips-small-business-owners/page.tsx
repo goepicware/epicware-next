@@ -138,7 +138,7 @@ export default function Post() {
           </p>
           <p>
             The professional way to diagnose this is through{" "}
-            <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary font-medium hover:underline">
+            <Link href="/services/local-seo/rank-tracking" className="text-primary font-medium hover:underline">
               geogrid rank tracking
             </Link>
             . A geogrid simulates searches
@@ -229,7 +229,7 @@ export default function Post() {
           <p>
             Many small business owners claim their GBP during initial setup and never return. This is one of the
             costliest passive mistakes in{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO
             </Link>
             . Profile engagement metrics, including photo upload frequency
@@ -261,7 +261,7 @@ export default function Post() {
           <h3>Your First Action, Right Now</h3>
           <p>
             Open your{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               Google Business Profile
             </Link>{" "}
             dashboard and complete every field currently marked incomplete. Then block a recurring
@@ -529,7 +529,7 @@ export default function Post() {
           <p>
             Open ChatGPT or Gemini right now and search &quot;best [your category] in [your neighbourhood].&quot;{" "}
             If you don&apos;t appear,{" "}
-            <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/ai-search-visibility" className="text-primary font-medium hover:underline">
               AI search optimisation
             </Link>{" "}
             is how you fix that. Note whether your business appears. If it does not, the first three variables to address are your GBP
@@ -609,7 +609,7 @@ export default function Post() {
             decide what to fix first.
           </p>
           <p>
-            See our full <a href="/seo-agency-singapore">SEO company in Singapore</a> services for more.
+            See our full <a href="/locations/singapore/seo">SEO company in Singapore</a> services for more.
           </p>
         </>
       }

@@ -59,7 +59,7 @@ const STEPS = [
         reviews from your existing satisfied customer base. Both parts are
         run by our{" "}
         <Link
-          href="/reputation-management-singapore"
+          href="/locations/singapore/review-management"
           className="text-primary font-medium hover:underline"
         >
           online reputation management
@@ -170,7 +170,7 @@ export default function ImproveGoogleRatingPage() {
                 rating by 0.2–0.4 stars immediately.
               </p>
               <Link
-                href="/bad-review-removal-singapore"
+                href="/locations/singapore/review-removal"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-3 hover:underline"
               >
                 See Bad Review Removal <ArrowRight className="w-4 h-4" />
@@ -188,7 +188,7 @@ export default function ImproveGoogleRatingPage() {
                 reviews dilute the old negative ones.
               </p>
               <Link
-                href="/reputation-management-singapore/review-generation"
+                href="/services/review-management/review-generation"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-3 hover:underline"
               >
                 See Review Generation <ArrowRight className="w-4 h-4" />

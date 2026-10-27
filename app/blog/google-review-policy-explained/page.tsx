@@ -50,7 +50,7 @@ export default function Post() {
           </div>
           <h2>Why does understanding Google&apos;s review policy matter for Singapore business owners?</h2>
           <p>Google does not remove reviews simply because a business owner disputes them. When a review does break the policy, our{" "}
-            <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
               bad review removal service
             </Link>{" "}
             prepares the evidence and files it for you. The company&apos;s position is that authentic reviews — even negative ones — are valuable to consumers making decisions. Removal is only available for content that violates their published policies.</p>
@@ -82,7 +82,7 @@ export default function Post() {
           <p><strong>Conflicts of interest</strong> is the most actionable category for Singapore SMBs. If you can demonstrate that a reviewer has a financial connection to a competing business — even through publicly available information like their review history across your competitors — this is a strong basis for removal.</p>
           <p>Look at the reviewer&apos;s profile. If they have reviewed multiple businesses in your category, and their reviews of your competitors are consistently positive while yours is the only negative, this pattern supports a conflict of interest claim.</p>
           <p>Reviews from competitors, or from people who never visited, are the main target of{" "}
-            <Link href="/bad-review-removal-singapore/fake-review-removal" className="text-primary font-medium hover:underline">
+            <Link href="/services/review-removal/fake-review-removal" className="text-primary font-medium hover:underline">
               fake review removal
             </Link>.
           </p>
@@ -116,7 +116,7 @@ export default function Post() {
             in public.</p>
         </>
       }
-      ctaHref="/bad-review-removal-singapore"
+      ctaHref="/locations/singapore/review-removal"
       ctaLabel="See Bad Review Removal Singapore"
       ctaContext="Epicware's team knows which violation type applies to your review and how to frame the submission for the highest chance of removal."
       relatedPosts={[

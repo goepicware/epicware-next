@@ -92,7 +92,7 @@ export default function Post() {
           <h2>Why Responding Matters: The Two Signals</h2>
           <p>Review responses send two distinct signals. The first is to Google&apos;s algorithm: active engagement with reviews is treated as a positive GBP signal, contributing to the prominence score that drives Maps rank. Profiles that have consistent responses to reviews outrank equivalent profiles with none.</p>
           <p>Replying is a core part of{" "}
-            <Link href="/review-management-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">review management</Link>.</p>
+            <Link href="/locations/singapore/review-management" className="text-primary underline underline-offset-2 hover:text-primary/80">review management</Link>.</p>
           <p>The second signal is to humans: every person who views your GBP profile reads your responses. A business that responds to every review — positive and negative — looks attentive and professional. A business with dozens of unanswered reviews looks indifferent.</p>
 
           <h2>How to Respond to 5-Star Reviews</h2>
@@ -146,7 +146,7 @@ export default function Post() {
             drafts one in seconds.</p>
         </>
       }
-      ctaHref="/reputation-management-singapore/ai-review-response"
+      ctaHref="/services/review-management/ai-review-response"
       ctaLabel="See AI Review Response"
       ctaContext="Epicware's AI review response drafts professional replies to every review in your brand voice — ready to post in one click."
       relatedPosts={[

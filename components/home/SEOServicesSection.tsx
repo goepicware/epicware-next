@@ -111,7 +111,7 @@ export default function SEOServicesSection() {
 
               <div className="px-5 lg:px-6 pb-5 pt-2">
                 <Link
-                  href="/seo-agency-singapore"
+                  href="/locations/singapore/seo"
                   className="inline-flex items-center justify-center gap-2 w-full rounded-[14px] bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-all duration-200 shadow-[0_4px_16px_rgba(13,148,136,0.35)] hover:shadow-[0_6px_22px_rgba(13,148,136,0.48)] hover:-translate-y-0.5"
                   style={{ height: "56px", fontSize: "1rem" }}
                 >
@@ -142,7 +142,7 @@ export default function SEOServicesSection() {
                   <Search className="w-4 h-4 text-teal-600" />
                   <p className="text-[0.95rem] font-bold text-gray-900 leading-tight">SEO & AI Visibility Audit</p>
                 </div>
-                <p className="text-[0.75rem] text-gray-500 mb-3">epicware.ai/seo-agency-singapore</p>
+                <p className="text-[0.75rem] text-gray-500 mb-3">epicware.ai/locations/singapore/seo</p>
 
                 <div className="space-y-1.5 mb-4">
                   {AUDIT_ITEMS.map(({ label, status }) => (

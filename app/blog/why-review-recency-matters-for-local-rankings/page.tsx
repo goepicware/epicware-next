@@ -123,14 +123,14 @@ export default function Post() {
             The weight decay is steep and fast. Reviews lose ranking influence progressively between 30 and 180 days,
             dropping to just 10–20% influence after six months. That means a review posted in January is nearly
             worthless by July. Business owners who ran{" "}
-            <Link href="/reputation-management-singapore/review-generation" className="text-primary font-medium hover:underline">
+            <Link href="/services/review-management/review-generation" className="text-primary font-medium hover:underline">
               a review campaign
             </Link>{" "}
             once and stopped are essentially running on empty.
           </p>
           <p>
             Three distinct concepts drive this section of{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO
             </Link>{" "}
             — confusing them is a common mistake:
@@ -192,7 +192,7 @@ export default function Post() {
           </p>
           <blockquote>
             Steady, ongoing review acquisition outperforms short-term spikes for both SEO and{" "}
-            <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/ai-search-visibility" className="text-primary font-medium hover:underline">
               AI search visibility
             </Link>
             . Inconsistent review flows can actively harm rankings.

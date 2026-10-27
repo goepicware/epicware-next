@@ -572,7 +572,7 @@ const posts = [
     title: "Review Management for Singapore SMBs — What It Actually Involves",
     summary:
       "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews.",
-    href: "/blog/review-management-singapore",
+    href: "/blog/locations/singapore/review-management",
     image: "/assets/review-management-illustration.png",
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",

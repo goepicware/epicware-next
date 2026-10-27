@@ -44,7 +44,7 @@ const schema = {
 const FEATURES = [
   {
     name: "Review Request Campaigns",
-    href: "/reputation-management-singapore/review-generation",
+    href: "/services/review-management/review-generation",
     description:
       "Automated WhatsApp and email sequences timed for peak response — triggered after a visit, order, or appointment.",
   },
@@ -277,7 +277,7 @@ export default function EpicReviewPage() {
               Google&apos;s content policies, reviews posted by people who never visited, and reviews
               containing false factual claims. See the full service at{" "}
               <Link
-                href="/bad-review-removal-singapore"
+                href="/locations/singapore/review-removal"
                 className="text-primary font-medium hover:underline"
               >
                 bad review removal
@@ -296,7 +296,7 @@ export default function EpicReviewPage() {
             <p>
               EpicReview sits at the heart of Epicware&apos;s{" "}
               <Link
-                href="/reputation-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 Reputation Management
@@ -315,7 +315,7 @@ export default function EpicReviewPage() {
               </Link>{" "}
               handles the email follow-up that keeps them returning. The full{" "}
               <Link
-                href="/review-management-singapore"
+                href="/locations/singapore/review-management"
                 className="text-primary font-medium hover:underline"
               >
                 Review Management Singapore

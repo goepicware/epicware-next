@@ -103,12 +103,12 @@ export default function IndustriesHubPage() {
               AI-powered digital marketing agency in Singapore
             </Link>{" "}
             that adapts{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO
             </Link>{" "}
             and{" "}
             <Link
-              href="/reputation-management-singapore"
+              href="/locations/singapore/review-management"
               className="text-primary font-medium hover:underline"
             >
               online reputation management

@@ -188,12 +188,12 @@ const IS_THIS_YOU = [
 ];
 
 const RELATED_READING: { href: string; label: string }[] = [
-  { href: "/seo-agency-singapore", label: "SEO Agency Singapore" },
-  { href: "/local-seo-singapore", label: "Local SEO Services" },
-  { href: "/local-seo-singapore/gbp-optimisation", label: "GBP Optimisation" },
-  { href: "/review-management-singapore", label: "Review Management" },
-  { href: "/bad-review-removal-singapore", label: "Bad Review Removal" },
-  { href: "/ai-search-visibility-singapore", label: "AI & GEO Visibility" },
+  { href: "/locations/singapore/seo", label: "SEO Agency Singapore" },
+  { href: "/locations/singapore/local-seo", label: "Local SEO Services" },
+  { href: "/locations/singapore/google-business-profile", label: "GBP Optimisation" },
+  { href: "/locations/singapore/review-management", label: "Review Management" },
+  { href: "/locations/singapore/review-removal", label: "Bad Review Removal" },
+  { href: "/locations/singapore/ai-search-visibility", label: "AI & GEO Visibility" },
   { href: "/industries/healthcare-clinics", label: "Healthcare Clinics" },
 ];
 
@@ -463,7 +463,7 @@ export default function AestheticClinicSEOCaseStudyPage() {
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">Location-Specific Local SEO for Two Outlets</h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
                   As part of our{" "}
-                  <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
                     local SEO services
                   </Link>
                   , each outlet was given its own keyword identity, its own landing structure and its own catchment
@@ -471,7 +471,7 @@ export default function AestheticClinicSEOCaseStudyPage() {
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
                   Using EpicMap{" "}
-                  <Link href="/local-seo-singapore/local-rank-tracking" className="text-primary font-medium hover:underline">
+                  <Link href="/services/local-seo/rank-tracking" className="text-primary font-medium hover:underline">
                     grid tracking
                   </Link>
                   , we mapped exactly where each clinic was visible on Google Maps by
@@ -486,7 +486,7 @@ export default function AestheticClinicSEOCaseStudyPage() {
               <div>
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">
                   Google Business Profile{" "}
-                  <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                     GBP optimisation
                   </Link>
                 </h3>
@@ -504,7 +504,7 @@ export default function AestheticClinicSEOCaseStudyPage() {
               <div>
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">
                   AI Search Visibility (
-                  <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/ai-search-visibility" className="text-primary font-medium hover:underline">
                     GEO
                   </Link>
                   )
@@ -526,7 +526,7 @@ export default function AestheticClinicSEOCaseStudyPage() {
               <div>
                 <h3 className="font-display font-bold text-foreground text-lg mb-2">
                   Review and{" "}
-                  <Link href="/reputation-management-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                     online reputation management
                   </Link>
                 </h3>
@@ -538,7 +538,7 @@ export default function AestheticClinicSEOCaseStudyPage() {
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
                   In parallel we audited every negative review for policy violations and ran formal removal requests
                   through Google&rsquo;s channels via our{" "}
-                  <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+                  <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                     Bad Review Removal
                   </Link>{" "}
                   service, and addressed negative SEO activity targeting the clinic&rsquo;s brand.

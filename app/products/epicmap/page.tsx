@@ -181,7 +181,7 @@ export default function EpicMapPage() {
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
               EpicMap is the engine behind our{" "}
-              <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
                 local SEO services
               </Link>
               . The rank data it produces feeds directly into
@@ -194,7 +194,7 @@ export default function EpicMapPage() {
             </p>
             <p>
               EpicMap links to the full local SEO service category and the{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                 GBP Optimisation service
               </Link>
               . If you want the rank tracking and competitor analysis managed as a service rather
@@ -232,12 +232,12 @@ export default function EpicMapPage() {
           <h2 className="font-display text-foreground mb-6">Related Services</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             EpicMap sits at the centre of Epicware&apos;s{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               Local SEO Singapore
             </Link>{" "}
             offering. Specific sub-services that feed EpicMap data include{" "}
             <Link
-              href="/local-seo-singapore/local-rank-tracking"
+              href="/services/local-seo/rank-tracking"
               className="text-primary font-medium hover:underline"
             >
               Local Rank Tracking

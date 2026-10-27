@@ -43,7 +43,7 @@ export default function Page() {
           <p>Several developments have reshaped local search for Singapore businesses:</p>
           <ul>
             <li><strong>AI Overviews in Google Search:</strong> For many informational local queries, Google now surfaces an AI-generated answer above organic results. For businesses, this means the featured snippet position is now harder to achieve but more visible when earned.</li>
-            <li><strong>ChatGPT and Perplexity as search tools:</strong> A growing share of Singaporeans use AI chatbots to find local recommendations. That&apos;s why <a href="/ai-search-visibility-singapore">AI search optimisation</a> now matters for local businesses. &quot;Best GP clinic in Tampines&quot; typed into ChatGPT returns business recommendations drawn from indexed web content and reviews.</li>
+            <li><strong>ChatGPT and Perplexity as search tools:</strong> A growing share of Singaporeans use AI chatbots to find local recommendations. That&apos;s why <a href="/locations/singapore/ai-search-visibility">AI search optimisation</a> now matters for local businesses. &quot;Best GP clinic in Tampines&quot; typed into ChatGPT returns business recommendations drawn from indexed web content and reviews.</li>
             <li><strong>GBP becoming more prominent:</strong> Google has continued expanding what information is surfaced from GBP profiles — menus, services, photos, and posts are all now more visible in Maps results.</li>
           </ul>
 
@@ -58,7 +58,7 @@ export default function Page() {
           <p>Optimising for path 1 (GBP and Maps) covers the majority of local search traffic. Paths 2–4 require additional content and presence strategies, but return on investment is lower for most SMB categories.</p>
 
           <h2>GBP as Foundation</h2>
-          <p>In 2026, the <a href="/local-seo-singapore/gbp-optimisation">Google Business Profile</a> remains the single highest-leverage asset for most Singapore SMBs. A well-optimised GBP profile with strong review velocity and a complete service/category structure provides visibility across all Google surfaces — Maps, Search, AI Overviews, and the knowledge panel.</p>
+          <p>In 2026, the <a href="/locations/singapore/google-business-profile">Google Business Profile</a> remains the single highest-leverage asset for most Singapore SMBs. A well-optimised GBP profile with strong review velocity and a complete service/category structure provides visibility across all Google surfaces — Maps, Search, AI Overviews, and the knowledge panel.</p>
           <p>The 19-point GBP audit covers: correct primary and secondary categories, complete service listings with descriptions, accurate hours including public holidays, a minimum 15-photo library, weekly GBP posts, populated Q&amp;A section, and a linked website with consistent NAP (Name, Address, Phone) data.</p>
 
           <h2>Review Strategy</h2>
@@ -70,7 +70,7 @@ export default function Page() {
           <p>For most SMB categories in Singapore, optimising specifically for AI Overviews returns less than optimising GBP and Maps rank. The exceptions are professional services and healthcare, where patients often ask informational questions that trigger AI answers before clicking to Maps.</p>
 
           <h2>Multi-Location Management</h2>
-          <p>For businesses operating multiple outlets, the complexity of local search management scales with each location. Each outlet needs its own GBP, its own <a href="/blog/review-velocity-vs-total-review-count">review velocity</a>, and its own <a href="/local-seo-singapore/local-rank-tracking">rank tracking</a>. The operational solution is a multi-outlet dashboard that centralises management across all locations without requiring individual attention to each profile.</p>
+          <p>For businesses operating multiple outlets, the complexity of local search management scales with each location. Each outlet needs its own GBP, its own <a href="/blog/review-velocity-vs-total-review-count">review velocity</a>, and its own <a href="/services/local-seo/rank-tracking">rank tracking</a>. The operational solution is a multi-outlet dashboard that centralises management across all locations without requiring individual attention to each profile.</p>
 
           <h2>DIY vs Managed Decision</h2>
           <p>Singapore SMBs choosing between managing local search in-house and bringing in an agency should consider: volume of locations, internal capacity for ongoing management, and urgency of results. Epicware is a digital marketing agency powered by AI, running on its own software, so the automation and the execution come from the same team — you&apos;re not choosing between tools and a service, you get both. Most businesses with 1–3 locations see strong results quickly; groups with 5+ locations see the biggest gain from handing the day-to-day execution over entirely.</p>

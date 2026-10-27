@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
             A digital marketing agency with its own software. Not a generic SEO tool. Epicware connects Google
             Maps, AI search visibility, reviews, and reputation into one local growth platform — including our
             full{" "}
-            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">
               SEO services
             </Link>
             .

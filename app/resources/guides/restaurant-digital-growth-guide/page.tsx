@@ -33,14 +33,14 @@ export default function Page() {
         <>
           A complete playbook for Singapore restaurant owners covering{" "}
           <a
-            href="/local-seo-singapore/gbp-optimisation"
+            href="/locations/singapore/google-business-profile"
             className="text-primary font-medium hover:underline"
           >
             Google Maps rank
           </a>
           , review generation, and{" "}
           <a
-            href="/reputation-management-singapore"
+            href="/locations/singapore/review-management"
             className="text-primary font-medium hover:underline"
           >
             reputation management
@@ -88,7 +88,7 @@ export default function Page() {
 
           <h2>6. Step 5: Handle Bad Reviews</h2>
           <p>Fake reviews and competitor-posted reviews are a known problem in Singapore&apos;s competitive F&amp;B market. A restaurant that achieves visibility attracts attention from competitors willing to post negative reviews. If you have reviews that appear to come from accounts with no connection to your business, that post reviews of your competitors, or that make demonstrably false factual claims, they can be challenged for removal.</p>
-          <p>Epicware&apos;s <a href="/bad-review-removal-singapore">bad review removal service</a> handles fake and policy-breaking reviews. For high-visibility restaurant profiles, the commercial impact of a fake 1-star review being removed is often worth significantly more than the removal cost.</p>
+          <p>Epicware&apos;s <a href="/locations/singapore/review-removal">bad review removal service</a> handles fake and policy-breaking reviews. For high-visibility restaurant profiles, the commercial impact of a fake 1-star review being removed is often worth significantly more than the removal cost.</p>
 
           <h2>7. The Multi-Outlet Problem</h2>
           <p>F&amp;B groups managing multiple outlets face a specific challenge: each outlet needs its own GBP profile optimised, its own review generation running, and its own monitoring and response in place. Managing 8 GBP profiles manually is not feasible for most operators.</p>

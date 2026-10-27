@@ -7,6 +7,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { getService, SERVICES } from "@/lib/site/services";
 import { COUNTRIES } from "@/lib/site/countries";
+import { getMoneyPageContent, getSubFeatureContent } from "@/lib/site/content";
 
 export async function generateStaticParams() {
   return SERVICES.map((s) => ({ service: s.slug }));
@@ -38,6 +39,15 @@ export default async function ServicePage({
   const service = getService(slug);
   if (!service) notFound();
 
+  // Draft pages (no market proof yet, or sub-feature content not migrated)
+  // are excluded from both rings below.
+  const availableCountries = COUNTRIES.filter(
+    (c) => getMoneyPageContent(c.slug, slug)?.frontmatter.draft === false
+  );
+  const availableSubFeatures = service.subFeatures.filter(
+    (f) => getSubFeatureContent(slug, f.slug)?.frontmatter.draft === false
+  );
+
   return (
     <>
       <section className="pt-28 pb-12 hero-gradient">
@@ -48,12 +58,12 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {service.subFeatures.length > 0 && (
+      {availableSubFeatures.length > 0 && (
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-6 max-w-5xl">
             <h2 className="font-display text-foreground mb-8 text-center">What&apos;s Included</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {service.subFeatures.map((f) => (
+              {availableSubFeatures.map((f) => (
                 <Link
                   key={f.slug}
                   href={`/services/${service.slug}/${f.slug}`}
@@ -70,22 +80,24 @@ export default async function ServicePage({
         </section>
       )}
 
-      <section className="py-10 lg:py-14 section-gradient-1">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-display text-foreground mb-6">Available In</h2>
-          <div className="flex flex-wrap gap-3">
-            {COUNTRIES.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/locations/${c.slug}/${service.slug}`}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:text-primary hover:border-primary/40 transition-colors"
-              >
-                {c.displayName}
-              </Link>
-            ))}
+      {availableCountries.length > 0 && (
+        <section className="py-10 lg:py-14 section-gradient-1">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <h2 className="font-display text-foreground mb-6">Available In</h2>
+            <div className="flex flex-wrap gap-3">
+              {availableCountries.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/locations/${c.slug}/${service.slug}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:text-primary hover:border-primary/40 transition-colors"
+                >
+                  {c.displayName}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <FinalCTA />
       <StickyMobileCTA />

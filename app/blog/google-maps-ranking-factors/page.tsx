@@ -71,7 +71,7 @@ export default function Post() {
 
           <h2>Why does an incomplete Google Business Profile hurt your Maps rank?</h2>
           <p>A{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               19-point GBP audit
             </Link>{" "}
             covers every field that contributes to your relevance signal. Missing business hours mean Google can&apos;t confirm you&apos;re open when someone searches at 8pm. Missing service categories mean you don&apos;t appear for searches that should match your offering. Missing photos reduce click-through rate from Maps results, which is itself a ranking signal.</p>
@@ -83,17 +83,17 @@ export default function Post() {
           <p>In Singapore, Google Maps rank changes dramatically every 500 metres. A business ranked #1 for &quot;restaurant&quot; in the Tampines MRT area may rank #4 just 800 metres away near Tampines Mall. This is the hyperlocal problem — and it&apos;s why rank tracking using a single search point gives a misleading picture of your actual visibility.</p>
           <p>EpicMap tracks your rank at a grid level across your district, showing exactly where you&apos;re visible in the top 3 and where you&apos;re not. This matters because the majority of Maps clicks go to positions 1–3. Position 4 and beyond effectively don&apos;t exist for most searches.</p>
           <p>Our{" "}
-            <Link href="/local-seo-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO services in Singapore
             </Link>{" "}
             work on the two factors you can influence, relevance and prominence, in every district you serve. Our{" "}
-            <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
               Google Business Profile optimisation services
             </Link>{" "}
             close every relevance and prominence gap covered in this guide.</p>
         </>
       }
-      ctaHref="/local-seo-singapore/gbp-optimisation"
+      ctaHref="/locations/singapore/google-business-profile"
       ctaLabel="Free GBP Optimisation Audit"
       ctaContext="Epicware's 19-point GBP audit identifies exactly which ranking signals your profile is missing."
       relatedPosts={[

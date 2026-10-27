@@ -382,11 +382,11 @@ export default function Post() {
             </ul>
             <p>
               Two services map directly onto this work:{" "}
-              <Link href="/local-seo-singapore/gbp-optimisation" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                 GBP optimisation
               </Link>
               , which covers the audit and sync steps, and{" "}
-              <Link href="/ai-search-visibility-singapore" className="text-primary font-medium hover:underline">
+              <Link href="/locations/singapore/ai-search-visibility" className="text-primary font-medium hover:underline">
                 AI and GEO overview optimisation
               </Link>
               , which focuses on the structured-data and AI-visibility layer described above. Neither
@@ -427,7 +427,7 @@ export default function Post() {
               <li>GBP optimisation to resolve dish-name and pricing mismatches across locations.</li>
               <li>GEO and AI overview optimisation to strengthen how your menu data surfaces in AI-driven search.</li>
               <li>
-                <Link href="/bad-review-removal-singapore" className="text-primary font-medium hover:underline">
+                <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                   Bad review removal
                 </Link>{" "}
                 for unfair or fake reviews sitting next to your menu listings.
@@ -522,7 +522,7 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/local-seo-singapore/gbp-optimisation"
+        ctaHref="/locations/singapore/google-business-profile"
         ctaLabel="Get Your Free GBP & Menu Audit"
         ctaContext="Epicware audits your menu data across your website, GBP, and delivery platforms, and flags exactly where it's falling out of sync."
         relatedPosts={[

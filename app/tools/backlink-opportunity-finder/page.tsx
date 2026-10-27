@@ -31,7 +31,7 @@ export default function BacklinkOpportunityFinderPage() {
           </p>
           <p className="text-muted-foreground text-sm mb-4">
             Link building is part of our{" "}
-            <Link href="/seo-agency-singapore" className="text-primary font-medium hover:underline">
+            <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">
               SEO services
             </Link>
             ; this free tool shows where to start.

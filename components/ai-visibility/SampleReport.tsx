@@ -20,7 +20,7 @@ export default function SampleReport() {
             <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
           </div>
           <div className="flex-1 bg-background border border-border/50 rounded-md px-3 py-1 text-[11px] text-muted-foreground text-center truncate">
-            epicware.ai/ai-search-visibility-singapore
+            epicware.ai/locations/singapore/ai-search-visibility
           </div>
         </div>
 
