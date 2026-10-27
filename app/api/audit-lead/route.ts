@@ -23,6 +23,12 @@ export async function POST(req: NextRequest) {
   if (limited) return limited;
 
   const isTest = req.headers.get("x-epicware-test") === "1";
+  // A test request validates the payload and Resend config but skips the
+  // actual send by default — only the daily smoke-test run sets this too,
+  // so there's exactly one real inbox confirmation per day instead of one
+  // per deploy.
+  const sendAnyway = req.headers.get("x-epicware-test-send") === "1";
+  const shouldSkipSend = isTest && !sendAnyway;
 
   let body: Record<string, unknown>;
   try {
@@ -53,6 +59,11 @@ export async function POST(req: NextRequest) {
   if (!apiKey) {
     console.warn("[audit-lead] RESEND_API_KEY not set — lead backed up to logs only, not emailed");
     return NextResponse.json({ success: true, emailSent: false });
+  }
+
+  if (shouldSkipSend) {
+    console.log("[audit-lead] X-Epicware-Test set without X-Epicware-Test-Send — payload and Resend config validated, send skipped");
+    return NextResponse.json({ success: true, emailSent: false, skipped: true });
   }
 
   const kwList = Array.isArray(keywords) && keywords.length > 0

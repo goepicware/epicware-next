@@ -11,9 +11,17 @@
  *
  * All test payloads are clearly marked so a human (or the receiving
  * inbox) can tell they're synthetic, not a real lead/customer.
+ *
+ * By default /api/audit-lead validates the payload and Resend config but
+ * does NOT actually send — every deploy-triggered run would otherwise
+ * put a real email in the inbox, which drowns out the signal. Set
+ * EPICWARE_TEST_SEND=1 (only the daily scheduled run in
+ * .github/workflows/check-live-endpoints.yml does this) to also send,
+ * giving one real inbox confirmation per day that delivery still works.
  */
 
 const BASE_URL = process.env.BASE_URL ?? "https://www.epicware.ai";
+const SEND_REAL_EMAIL = process.env.EPICWARE_TEST_SEND === "1";
 const MARKER = "SMOKE-TEST — automated check-live-endpoints.ts — ignore";
 
 interface EndpointCheck {
@@ -111,18 +119,34 @@ interface CheckResult {
   status: number | null;
   ok: boolean;
   error?: string;
+  note?: string;
 }
 
 async function checkEndpoint(check: EndpointCheck): Promise<CheckResult> {
   try {
     const res = await fetch(`${BASE_URL}${check.path}`, {
       method: "POST",
-      // X-Epicware-Test tells audit-lead to mark the subject line [TEST]
-      // so these runs never land as a real lead in the normal inbox flow.
-      headers: { "Content-Type": "application/json", "X-Epicware-Test": "1" },
+      headers: {
+        "Content-Type": "application/json",
+        // Tells audit-lead to mark the subject line [TEST]; it also skips
+        // the actual Resend send unless X-Epicware-Test-Send is set too
+        // (see the file header comment — only the daily run sets it).
+        "X-Epicware-Test": "1",
+        ...(SEND_REAL_EMAIL ? { "X-Epicware-Test-Send": "1" } : {}),
+      },
       body: JSON.stringify(check.body),
     });
-    return { path: check.path, status: res.status, ok: res.status >= 200 && res.status < 300 };
+    const ok = res.status >= 200 && res.status < 300;
+
+    let note: string | undefined;
+    if (check.path === "/api/audit-lead" && ok) {
+      const data = await res.json().catch(() => null);
+      if (data?.skipped) note = "validated, send skipped (not the daily run)";
+      else if (data?.emailSent) note = "sent";
+      else if (data?.emailSent === false) note = "NOT sent (check Resend config/response)";
+    }
+
+    return { path: check.path, status: res.status, ok, note };
   } catch (err) {
     return { path: check.path, status: null, ok: false, error: String(err) };
   }
@@ -135,7 +159,7 @@ async function main() {
   let failing = 0;
   for (const r of results) {
     if (r.ok) {
-      console.log(`  [PASS] ${r.path} -> ${r.status}`);
+      console.log(`  [PASS] ${r.path} -> ${r.status}${r.note ? ` (${r.note})` : ""}`);
     } else {
       failing++;
       console.log(`  [FAIL] ${r.path} -> ${r.status ?? "no response"}${r.error ? ` (${r.error})` : ""}`);

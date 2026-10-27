@@ -13,6 +13,12 @@ name: Check live endpoints
 # No new secrets or paid service: it posts clearly-marked test payloads
 # with X-Epicware-Test: 1, which audit-lead uses to prefix the Resend
 # subject with "[TEST] " so these runs never show up as a real lead.
+#
+# audit-lead also skips the actual Resend send by default when
+# X-Epicware-Test is set — only this workflow's scheduled (daily) run
+# also sets X-Epicware-Test-Send, so deploy-triggered and manual runs
+# validate silently while exactly one real inbox confirmation lands per
+# day. See EPICWARE_TEST_SEND below.
 
 on:
   deployment_status:
@@ -47,3 +53,7 @@ jobs:
           # Sands) so resolve-gbp's happy path is actually exercised, not
           # just its graceful-rejection path for a fake URL.
           SMOKE_TEST_GBP_URL: "https://www.google.com/maps/place/Marina+Bay+Sands/@1.2834,103.8607,15z"
+          # Only the schedule (daily) trigger actually sends the test
+          # email — deploy-triggered and manual runs validate without
+          # sending, so inbox noise is capped at one real send per day.
+          EPICWARE_TEST_SEND: ${{ github.event_name == 'schedule' && '1' || '0' }}
