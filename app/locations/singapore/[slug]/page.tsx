@@ -3,33 +3,26 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { DISTRICTS, getDistrict } from "@/lib/districts";
-import { getService, SERVICES } from "@/lib/site/services";
-import { getMoneyPageContent } from "@/lib/site/content";
-import MoneyPageLayout from "@/components/site/MoneyPageLayout";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 /**
- * Singapore district/service collision fix (docs/restructure/phase-0-audit.md §4).
+ * Singapore district pages — /locations/singapore/{district}.
  *
- * This folder is a literal "singapore" segment, not a dynamic [country]
- * one, so it always wins routing precedence over app/locations/[country]/
- * for any /locations/singapore/* request — the generic country×service
- * route never sees these. Inside it, [slug] can mean one of two things,
- * resolved in this order:
- *   1. A service slug (local-seo, review-management, ...) → render the
- *      Singapore money page via the same MoneyPageLayout every other
- *      country uses.
- *   2. A district slug (jurong, tampines, ...) → render the existing
- *      district page, unchanged.
- *   3. Neither → 404.
+ * The original district/service collision this folder was built to solve
+ * (docs/restructure/phase-0-audit.md §4) is now handled differently: each
+ * of the 6 Singapore services has its own literal folder
+ * (app/locations/singapore/local-seo/, .../seo/, etc.) carrying its full,
+ * original page content — those literal folders win routing precedence
+ * over this dynamic [slug] one automatically (Next.js resolves static
+ * segments before dynamic siblings), so this file never sees a service
+ * slug in practice and no longer needs to branch on one. It exists purely
+ * for the 16 district slugs now.
  */
 
 export async function generateStaticParams() {
-  const serviceSlugs = SERVICES.map((s) => ({ slug: s.slug }));
-  const districtSlugs = DISTRICTS.map((d) => ({ slug: d.slug }));
-  return [...serviceSlugs, ...districtSlugs];
+  return DISTRICTS.map((d) => ({ slug: d.slug }));
 }
 
 const DISTRICT_META: Record<string, { title: string; description: string }> = {
@@ -91,28 +84,6 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-
-  const service = getService(slug);
-  if (service) {
-    const content = getMoneyPageContent("singapore", slug);
-    if (!content) return {};
-    const canonical = `https://www.epicware.ai/locations/singapore/${slug}`;
-    return {
-      title: { absolute: content.frontmatter.metaTitle },
-      description: content.frontmatter.metaDescription,
-      alternates: {
-        canonical,
-        languages: { "en-SG": canonical, "x-default": `https://www.epicware.ai/services/${slug}` },
-      },
-      openGraph: {
-        title: content.frontmatter.metaTitle,
-        description: content.frontmatter.metaDescription,
-        url: canonical,
-      },
-      ...(content.frontmatter.draft ? { robots: { index: false, follow: false } } : {}),
-    };
-  }
-
   const d = getDistrict(slug);
   if (!d) return {};
   const meta = DISTRICT_META[slug];
@@ -129,29 +100,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function SingaporeSlugPage({
+export default async function SingaporeDistrictPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
-  // 1. Service slug → money page, same template every other country uses.
-  const service = getService(slug);
-  if (service) {
-    const content = getMoneyPageContent("singapore", slug);
-    if (!content) notFound();
-    return (
-      <MoneyPageLayout
-        countrySlug="singapore"
-        serviceSlug={slug}
-        h1={content.frontmatter.h1}
-        body={content.body}
-      />
-    );
-  }
-
-  // 2. District slug → existing district page, unchanged.
   const d = getDistrict(slug);
   if (!d) notFound();
 
