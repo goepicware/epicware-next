@@ -2,12 +2,45 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 
+export interface MarketFact {
+  fact: string;
+  sourceUrl: string;
+}
+
+export interface MoneyPageProof {
+  caseStudy?: { title: string; summary: string; sourceUrl: string };
+  presenceStatement?: string;
+}
+
+export interface MoneyPagePricing {
+  currency: string;
+  from?: number;
+  display?: string;
+}
+
+export interface MoneyPageFaq {
+  question: string;
+  answer: string;
+}
+
 export interface MoneyPageFrontmatter {
   h1: string;
   metaTitle: string;
   metaDescription: string;
   /** True while this page still has placeholder copy, not final content. */
   draft: boolean;
+  /**
+   * Required before draft can flip to false — see
+   * scripts/check-page-substance.ts. At least 4 country-specific facts,
+   * each with a source. Prevents a page going live on templated filler.
+   */
+  marketFacts?: MarketFact[];
+  /** Either a real case study from this market, or an honest statement of remote presence — never neither. */
+  proof?: MoneyPageProof;
+  /** Local-currency or "from" pricing — never a copy-pasted other-market price. */
+  pricing?: MoneyPagePricing;
+  /** At least 5, no question reused verbatim from another country's page for the same service. */
+  faqs?: MoneyPageFaq[];
 }
 
 export interface MoneyPageContent {

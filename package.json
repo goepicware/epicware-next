@@ -4,10 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:similarity": "tsx scripts/check-page-similarity.ts",
+    "check:substance": "tsx scripts/check-page-substance.ts",
+    "check:honesty": "tsx scripts/check-page-honesty.ts",
+    "check:pages": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.1",
@@ -46,6 +51,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

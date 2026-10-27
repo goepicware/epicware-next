@@ -34,7 +34,7 @@ const DISTRICT_META: Record<string, { title: string; description: string }> = {
   tampines: {
     title: "AI SEO Agency in Tampines | Epicware",
     description:
-      "Get found on Google Maps in Tampines. Our SEO team helps businesses near Tampines Mall and Our Tampines Hub win local searches and reviews.",
+      "Tampines businesses compete across three major malls. Epicware tracks your Google Maps rank and keeps your profile visible to shoppers at Tampines Mall, Century Square and Our Tampines Hub.",
   },
   woodlands: {
     title: "AI SEO Agency in Woodlands | Epicware",
@@ -69,7 +69,7 @@ const DISTRICT_META: Record<string, { title: string; description: string }> = {
   bedok: {
     title: "AI SEO Agency in Bedok | Epicware",
     description:
-      "Get found on Google Maps in Bedok. Our SEO team helps businesses near Bedok Mall and Bedok Interchange win local searches and reviews.",
+      "Bedok's heartland shopping belt drives heavy local search volume. Epicware helps Bedok businesses rank in the Google Maps 3-Pack near Bedok Mall and the Bedok Interchange.",
   },
   yishun: {
     title: "AI SEO Agency in Yishun | Epicware",
