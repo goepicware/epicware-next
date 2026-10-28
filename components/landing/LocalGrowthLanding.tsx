@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
+import { PROOF } from "@/lib/site/proof";
 import LocalGrowthWorkflowSection from "@/components/home/LocalGrowthWorkflowSection";
 
 const fadeUp = (delay = 0) => ({
@@ -365,7 +366,7 @@ function Pillars() {
       title: "Bad Review Removal",
       sub: "Policy-Violating & Fake Review Defence",
       body: "Most agencies tell you to 'respond professionally.' We actually get fake, malicious, and policy-violating reviews removed. $200 per review, charged upfront — refunded in full if it doesn't come down within 3 months.",
-      proof: "100+ reviews removed · Pay $0 if we fail",
+      proof: `${PROOF.reviewsRemoved.value} reviews removed · Pay $0 if we fail`,
       hex: "#10b981",
       checks: ["Review policy analysis", "Flagging & dispute filing", "Case tracking & follow-up", "Reputation risk monitoring", "No removal = no charge"],
     },

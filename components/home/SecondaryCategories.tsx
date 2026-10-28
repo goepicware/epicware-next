@@ -19,11 +19,17 @@ const STEPS = [
   { num: "04", label: "Revenue",      sub: "Calls · Books · Walk-ins", hex: "#f59e0b" },
 ];
 
-/* ── Platform stats strip ── */
+/* ── Platform stats strip ──
+   "4.8★ avg rating lift" removed 2026-10-28 — not a valid metric (no
+   real aggregate before/after rating data exists anywhere in the
+   codebase to back it; the only real before/after numbers found are
+   case-study-specific, e.g. one clinic's 3.8 -> 4.7, which wouldn't
+   honestly represent an "average lift" across all clients). Not
+   replaced with a rephrased version — ask if real aggregate data
+   becomes available later. */
 const METRICS = [
   { value: PROOF.outletsManaged.value, label: "outlets managed" },
-  { value: "4.8★", label: "avg rating lift" },
-  { value: "100+", label: "reviews removed" },
+  { value: PROOF.reviewsRemoved.value, label: "reviews removed" },
 ];
 
 /* ── Right-side stacked cards ── */

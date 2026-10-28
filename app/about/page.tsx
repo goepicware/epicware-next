@@ -313,7 +313,7 @@ export default function AboutPage() {
             ))}
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {["10+ Years Experience", "50+ Brands Served", "Singapore-Built", `${PROOF.outletsManaged.value} Outlets Managed`].map((signal) => (
+            {["10+ Years Experience", `${PROOF.brandsServed.value} Brands Served`, "Singapore-Built", `${PROOF.outletsManaged.value} Outlets Managed`].map((signal) => (
               <div
                 key={signal}
                 className="flex items-center gap-2 bg-card border border-border/60 rounded-full px-4 py-2 shadow-card"

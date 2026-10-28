@@ -13,6 +13,8 @@
  * later entry regress to thinner copy than this one.
  */
 
+import { PROOF } from "@/lib/site/proof";
+
 export interface ServiceProcessStep {
   title: string;
   description: string;
@@ -40,9 +42,17 @@ export interface ServiceContent {
     products: string[]; // product slugs from lib/site/products or just names used elsewhere (EpicMap, EpicReview, ...)
     description: string;
   };
-  /** Intro line for the proof section, explicitly labelled "Singapore results" per the brief. */
-  proofIntro: string;
+  /**
+   * Intro line for the proof section, explicitly labelled "Singapore
+   * results" per the brief. The whole section is hidden when there's
+   * nothing to show it with — set EITHER caseStudies (preferred) OR
+   * statProof (a PROOF.* figure, for when no case study is a genuine
+   * match for this service — see review-removal). Never both; never
+   * neither unless the section should actually be hidden.
+   */
+  proofIntro?: string;
   caseStudies: ServiceCaseStudy[];
+  statProof?: { value: string; label: string };
   faqs: ServiceFaq[];
 }
 
@@ -341,8 +351,11 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       description:
         "AI visibility checks run through our own tooling, querying multiple major AI assistants directly to see whether and how your business is mentioned — not a one-time report, a repeatable check.",
     },
-    proofIntro:
-      "This is Epicware's newest service line. AI search visibility results from Singapore clients are still being gathered — the verified rating below reflects Epicware overall, not a dedicated AI-search case study yet.",
+    // No proofIntro/caseStudies/statProof — the whole "Singapore Results"
+    // section is hidden on this page. This is Epicware's newest service
+    // line; no case study is specifically about it, and there's no
+    // PROOF.* figure that honestly represents it either. Add real proof
+    // here once it exists, rather than reusing the general rating.
     caseStudies: [],
     faqs: [
       {
@@ -430,7 +443,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         question: "Is it against Google's policy to ask for reviews?",
         answer:
-          "No, but how you ask matters. Google's policy prohibits incentivising, gating, or soliciting only positive reviews. Our generation campaigns ask every customer, without payment or selection by sentiment — which is both the compliant approach and the honest one.",
+          "No, but how you ask matters. Google's policy prohibits incentivising reviews, review gating (routing customers to leave a review only if they're predicted to be positive), and asking only customers you expect to be happy.",
       },
       {
         question: "Can you manage reviews across multiple outlets?",
@@ -483,9 +496,14 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       description:
         "Removal requests and their status are tracked in EpicReview alongside your other review data, so you can see exactly where each submission stands.",
     },
+    // No case study is specifically about review removal yet, so this
+    // uses PROOF.reviewsRemoved as the proof block instead of a
+    // mismatched case-study link — same reasoning as ai-search-visibility
+    // above, except here a real PROOF.* figure exists to show instead.
     proofIntro:
-      "Epicware's review work — including removal — is proven today in one market: Singapore. These are real, dated client results — not projections.",
+      "No single case study captures review removal on its own — it's usually one part of a broader reputation clean-up. Here's the real number across every removal Epicware has handled.",
     caseStudies: [],
+    statProof: { value: PROOF.reviewsRemoved.value, label: "reviews removed" },
     faqs: [
       {
         question: "Is removing Google reviews legal?",

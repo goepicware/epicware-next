@@ -31,7 +31,7 @@ import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { PLANS, formatPrice } from "@/lib/pricing-data";
 import { isPriceIncreaseLive, PRICE_INCREASES } from "@/lib/price-increase";
-import { PROOF, EPICWARE_GOOGLE_RATING } from "@/lib/site/proof";
+import { PROOF, formatGoogleRatingBadge } from "@/lib/site/proof";
 
 const CANONICAL = "https://www.epicware.ai/locations/singapore/seo";
 
@@ -92,7 +92,7 @@ const plansWithWebsiteSEO = effectivePlans.filter((p) => planHasFeature(p.name, 
 const CREDENTIALS = [
   { icon: Award, label: `${PROOF.outletsManaged.value} Outlets Managed` },
   { icon: Award, label: "Founded by the NinjaOS team ($120M GMV, exited 2021)" },
-  { icon: Star, label: `${EPICWARE_GOOGLE_RATING.value.toFixed(1)}★ Google rating (${EPICWARE_GOOGLE_RATING.count} reviews)` },
+  { icon: Star, label: formatGoogleRatingBadge() },
 ];
 
 const PAIN_CARDS = [

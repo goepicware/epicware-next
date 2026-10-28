@@ -12,7 +12,14 @@ export default function ChatWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 pl-4 pr-5 py-3.5 rounded-2xl bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-[0_4px_24px_rgba(37,211,102,0.45)] hover:shadow-[0_6px_32px_rgba(37,211,102,0.6)] transition-all duration-200 hover:-translate-y-0.5"
+      // Below lg (1024px) — the breakpoint StickyMobileCTA actually uses
+      // (components/products/StickyMobileCTA.tsx, `lg:hidden`; not 768px,
+      // which is where that bar's full-width fixed footer CTA lives) —
+      // this clears that bar (~73px: py-3 wrapper + h-12 buttons + border)
+      // plus a 16px gap plus the safe-area inset, instead of sitting at
+      // the usual bottom-6 and covering its buttons. At lg+ the sticky
+      // bar is gone, so bottom-6 is back to normal.
+      className="fixed right-6 z-50 flex items-center gap-3 pl-4 pr-5 py-3.5 rounded-2xl bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-[0_4px_24px_rgba(37,211,102,0.45)] hover:shadow-[0_6px_32px_rgba(37,211,102,0.6)] transition-all duration-200 hover:-translate-y-0.5 bottom-[calc(92px+env(safe-area-inset-bottom))] lg:bottom-6"
     >
       <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">

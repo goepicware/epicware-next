@@ -9,7 +9,7 @@ import { getService, SERVICES } from "@/lib/site/services";
 import { COUNTRIES } from "@/lib/site/countries";
 import { getMoneyPageContent, getSubFeatureContent } from "@/lib/site/content";
 import { getServiceContent } from "@/lib/site/serviceContent";
-import { EPICWARE_GOOGLE_RATING } from "@/lib/site/proof";
+import { EPICWARE_GOOGLE_RATING, formatGoogleRatingBadge } from "@/lib/site/proof";
 
 /**
  * Global /services/{service}/ pages — market-neutral, always live. Each
@@ -243,35 +243,46 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Proof — Singapore results */}
-      <section className="py-12 lg:py-16 section-gradient-1">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="font-display text-foreground mb-3">Singapore Results</h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-8 max-w-2xl">{content.proofIntro}</p>
-          <div className="flex items-center gap-2 mb-6">
-            <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-            <span className="font-semibold text-foreground">{EPICWARE_GOOGLE_RATING.value.toFixed(1)}★ on Google</span>
-            <span className="text-sm text-muted-foreground">({EPICWARE_GOOGLE_RATING.count} reviews)</span>
-          </div>
-          {content.caseStudies.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {content.caseStudies.map((cs) => (
-                <Link
-                  key={cs.href}
-                  href={cs.href}
-                  className="rounded-2xl border border-border/60 bg-card p-6 hover:shadow-card transition-shadow duration-300 flex flex-col gap-2 group"
-                >
-                  <span className="text-sm font-bold text-primary">{cs.stat}</span>
-                  <h3 className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors">{cs.title}</h3>
-                  <span className="text-xs font-semibold text-primary flex items-center gap-1 mt-auto">
-                    Read case study <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </Link>
-              ))}
+      {/* Proof — Singapore results. Hidden entirely when there's neither
+          a case study nor a statProof figure to back it — no section
+          header with nothing underneath it (see ai-search-visibility,
+          which has neither yet). */}
+      {(content.caseStudies.length > 0 || content.statProof) && (
+        <section className="py-12 lg:py-16 section-gradient-1">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="font-display text-foreground mb-3">Singapore Results</h2>
+            {content.proofIntro && (
+              <p className="text-base text-muted-foreground leading-relaxed mb-8 max-w-2xl">{content.proofIntro}</p>
+            )}
+            <div className="flex items-center gap-2 mb-6">
+              <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+              <span className="font-semibold text-foreground">{formatGoogleRatingBadge()}</span>
             </div>
-          )}
-        </div>
-      </section>
+            {content.caseStudies.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {content.caseStudies.map((cs) => (
+                  <Link
+                    key={cs.href}
+                    href={cs.href}
+                    className="rounded-2xl border border-border/60 bg-card p-6 hover:shadow-card transition-shadow duration-300 flex flex-col gap-2 group"
+                  >
+                    <span className="text-sm font-bold text-primary">{cs.stat}</span>
+                    <h3 className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors">{cs.title}</h3>
+                    <span className="text-xs font-semibold text-primary flex items-center gap-1 mt-auto">
+                      Read case study <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            ) : content.statProof ? (
+              <div className="inline-flex items-baseline gap-3 rounded-2xl border border-border/60 bg-card px-6 py-5">
+                <span className="text-3xl font-bold text-primary">{content.statProof.value}</span>
+                <span className="text-sm text-muted-foreground">{content.statProof.label}</span>
+              </div>
+            ) : null}
+          </div>
+        </section>
+      )}
 
       {/* Sub-features, if any */}
       {availableSubFeatures.length > 0 && (

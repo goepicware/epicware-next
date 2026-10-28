@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { PROOF } from "@/lib/site/proof";
 
 const STATS = [
-  // TODO: replace with real number from Vignesh
+  // TODO: replace with real number from Vignesh — success rate is a
+  // different metric from PROOF.reviewsRemoved and hasn't been confirmed.
   { value: "94%", label: "removal success rate" },
-  // TODO: replace with real number from Vignesh
-  { value: "500+", label: "bad reviews removed" },
+  { value: PROOF.reviewsRemoved.value, label: "bad reviews removed" },
   { value: "$0", label: "risk to you" },
 ];
 

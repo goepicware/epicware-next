@@ -7,22 +7,14 @@
  * Google / Trustpilot / platform aggregate. Update this file whenever the
  * counts change materially (suggested cadence: quarterly).
  *
- * Rationale for per-product vs per-service split:
- *   - Service pages (reputation, local-seo, ai-visibility) represent the full
- *     Epicware customer base → use EPICWARE_AGGREGATE.
- *   - Product pages (EpicMap, EpicReview, EpicEngage, EpicSocial) reflect
- *     per-product adoption. If a product is newer it will have fewer ratings.
- *     Reflect that honestly; do not inflate.
+ * EPICWARE_AGGREGATE (4.8★ / 809, "blended across multiple products") was
+ * deleted 2026-10-28 — it was never sourced anywhere, and the business
+ * owner confirmed it shouldn't be used. For a site-wide "our rating" badge,
+ * use EPICWARE_GOOGLE_RATING in lib/site/proof.ts instead — that one is
+ * tied to a real Google place_id. PRODUCT_RATINGS below is a separate,
+ * narrower set of per-product numbers; it hasn't been through the same
+ * confirmation pass and currently has no consumer in the codebase.
  */
-
-export const EPICWARE_AGGREGATE = {
-  /** Overall Epicware platform rating — used on service/category pages */
-  ratingValue: "4.8",
-  /** Total verified customer ratings across all Epicware products */
-  ratingCount: "809",
-  bestRating: "5",
-  worstRating: "1",
-} as const;
 
 export const PRODUCT_RATINGS = {
   epicmap: {
