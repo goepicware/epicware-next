@@ -32,7 +32,6 @@ import CitationWall from "@/components/shared/CitationWall";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { PLANS, formatPrice } from "@/lib/pricing-data";
 import { PROOF, formatGoogleRatingBadge } from "@/lib/site/proof";
-import { isPriceIncreaseLive, PRICE_INCREASES } from "@/lib/price-increase";
 
 const CANONICAL = "https://www.epicware.ai/seo-agency-singapore";
 
@@ -63,26 +62,18 @@ export const metadata: Metadata = {
   },
 };
 
-// Live plan data — never hardcode prices.
-const live = isPriceIncreaseLive();
-const effectivePlans = PLANS.map((plan) => {
-  const increase = PRICE_INCREASES[plan.name];
-  if (live && increase) {
-    return { ...plan, monthlyPrice: increase.newMonthly, annualPrice: increase.newAnnual };
-  }
-  return plan;
-});
-
+// Plan data — never hardcode prices. PLANS itself reads from
+// PRICING.plans (lib/site/proof.ts), the single source of truth.
 function planHasFeature(planName: string, needle: string): boolean {
-  const plan = effectivePlans.find((p) => p.name === planName);
+  const plan = PLANS.find((p) => p.name === planName);
   if (!plan) return false;
   if (plan.features.some((f) => (typeof f === "string" ? f : f.label).toLowerCase().includes(needle))) {
     return true;
   }
-  const inherited = effectivePlans.find((p) => plan.subtitle.includes(`Everything in ${p.name}`));
+  const inherited = PLANS.find((p) => plan.subtitle.includes(`Everything in ${p.name}`));
   return inherited ? planHasFeature(inherited.name, needle) : false;
 }
-const plansWithWebsiteSEO = effectivePlans.filter((p) => planHasFeature(p.name, "website seo"));
+const plansWithWebsiteSEO = PLANS.filter((p) => planHasFeature(p.name, "website seo"));
 
 const CREDENTIALS = [
   { icon: Users, label: `${PROOF.outletsManaged.value} outlets managed` },
@@ -905,7 +896,7 @@ export default function SeoAgencySingaporePage() {
 
           <h3 className="font-display font-semibold text-foreground text-center text-xl mb-8">Our SEO Plans</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            {effectivePlans.map((plan) => (
+            {PLANS.map((plan) => (
               <div
                 key={plan.name}
                 className={`rounded-3xl border bg-card p-6 flex flex-col ${

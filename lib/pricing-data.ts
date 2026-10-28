@@ -1,6 +1,13 @@
 // Single source of truth for plan pricing and features — imported by
 // PricingCards and any other page that needs to show tiers/prices
 // (e.g. /seo-agency-singapore) so prices are never hardcoded twice.
+//
+// monthlyPrice/annualPrice/perOutlet all read from PRICING.plans
+// (lib/site/proof.ts) — that's the actual single source of truth for the
+// numbers; this array just attaches the feature lists, outcomes and
+// guarantees that live here instead.
+
+import { PRICING } from "@/lib/site/proof";
 
 export type Feature = string | { label: string; isNew: true };
 
@@ -15,13 +22,14 @@ export const PLANS: Array<{
   features: Feature[];
   note?: string;
   highlight: boolean;
-  perOutlet: boolean;
+  /** Fee for each outlet beyond the first — 0 means not applicable. */
+  perOutlet: number;
 }> = [
   {
     name: "Foundation",
     badge: null,
-    monthlyPrice: 299,
-    annualPrice: 254,
+    monthlyPrice: PRICING.plans.foundation.monthly,
+    annualPrice: PRICING.plans.foundation.annual,
     subtitle: "Reviews, local visibility, and social content — fully automated.",
     outcome:
       "Better visibility on Google Maps with an active, optimised profile — plus a reliable reputation management process running in the background.",
@@ -43,13 +51,13 @@ export const PLANS: Array<{
       { label: "AI Social Media Generator & Scheduler", isNew: true },
     ],
     highlight: false,
-    perOutlet: false,
+    perOutlet: PRICING.plans.foundation.perOutlet,
   },
   {
     name: "Authority",
     badge: "Most Popular",
-    monthlyPrice: 599,
-    annualPrice: 509,
+    monthlyPrice: PRICING.plans.authority.monthly,
+    annualPrice: PRICING.plans.authority.annual,
     subtitle: "Everything in Foundation, plus full Local SEO and rank tracking.",
     outcome: "Top 5 on Google Map Pack & AI search. Steady ranking lift.",
     guarantee:
@@ -69,13 +77,13 @@ export const PLANS: Array<{
       "CRM up to 5,000 customers",
     ],
     highlight: true,
-    perOutlet: true,
+    perOutlet: PRICING.plans.authority.perOutlet,
   },
   {
     name: "Domination",
     badge: "Best Value",
-    monthlyPrice: 1500,
-    annualPrice: 1275,
+    monthlyPrice: PRICING.plans.domination.monthly,
+    annualPrice: PRICING.plans.domination.annual,
     subtitle:
       "Everything in Authority, plus full AI search visibility and SEO content.",
     outcome: "Top 3 on Google Search, Maps & AI. Named by ChatGPT/Gemini.",
@@ -97,13 +105,13 @@ export const PLANS: Array<{
       "Monthly Revenue Impact Report",
     ],
     highlight: false,
-    perOutlet: true,
+    perOutlet: PRICING.plans.domination.perOutlet,
   },
   {
     name: "Full Stack",
     badge: "New",
-    monthlyPrice: 3800,
-    annualPrice: 3230,
+    monthlyPrice: PRICING.plans.fullStack.monthly,
+    annualPrice: PRICING.plans.fullStack.annual,
     subtitle:
       "Everything in Domination, plus paid ad management across Meta and Google.",
     outcome:
@@ -123,7 +131,7 @@ export const PLANS: Array<{
     ],
     note: "Ad spend is billed separately and is not included in the monthly fee.",
     highlight: false,
-    perOutlet: true,
+    perOutlet: PRICING.plans.fullStack.perOutlet,
   },
 ];
 

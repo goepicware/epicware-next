@@ -5,6 +5,7 @@ import WhyEpicware from "@/components/pricing/WhyEpicware";
 import AddOns from "@/components/pricing/AddOns";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PRICING } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Pricing: SEO, Local SEO & Reputation Plans | Epicware" },
@@ -90,9 +91,9 @@ const schemaPricing = {
         description: "Review management, GBP optimisation, and rank tracking for a single outlet.",
         offers: {
           "@type": "Offer",
-          price: "299",
+          price: String(PRICING.plans.foundation.monthly),
           priceCurrency: "SGD",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "299", priceCurrency: "SGD", unitCode: "MON" },
+          priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.plans.foundation.monthly), priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
           seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
@@ -107,9 +108,9 @@ const schemaPricing = {
         description: "Full Local SEO and rank tracking with EpicMap, EpicReview, and EpicSocial.",
         offers: {
           "@type": "Offer",
-          price: "899",
+          price: String(PRICING.plans.authority.monthly),
           priceCurrency: "SGD",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "899", priceCurrency: "SGD", unitCode: "MON" },
+          priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.plans.authority.monthly), priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
           seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
@@ -124,9 +125,9 @@ const schemaPricing = {
         description: "Full AI search visibility and SEO content on top of the Authority plan.",
         offers: {
           "@type": "Offer",
-          price: "1500",
+          price: String(PRICING.plans.domination.monthly),
           priceCurrency: "SGD",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "1500", priceCurrency: "SGD", unitCode: "MON" },
+          priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.plans.domination.monthly), priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
           seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
@@ -141,9 +142,9 @@ const schemaPricing = {
         description: "Everything in Domination plus paid ad management across Meta and Google.",
         offers: {
           "@type": "Offer",
-          price: "3800",
+          price: String(PRICING.plans.fullStack.monthly),
           priceCurrency: "SGD",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "3800", priceCurrency: "SGD", unitCode: "MON" },
+          priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.plans.fullStack.monthly), priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
           seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
@@ -168,9 +169,9 @@ const schemaAddOns = {
         description: "Charged upfront. Refunded in full if not removed within 3 months.",
         offers: {
           "@type": "Offer",
-          price: "200",
+          price: String(PRICING.reviewRemoval.SGD),
           priceCurrency: "SGD",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "200", priceCurrency: "SGD", unitText: "per review" },
+          priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.reviewRemoval.SGD), priceCurrency: "SGD", unitText: "per review" },
           url: "https://www.epicware.ai/pricing",
           seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },

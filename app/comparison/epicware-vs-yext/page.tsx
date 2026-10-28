@@ -67,7 +67,7 @@ export default function Page() {
         },
         {
           q: "Is Yext designed for small businesses in Singapore?",
-          a: "No. Yext is designed for enterprise customers — its pricing and onboarding complexity are enterprise-scale. For a Singapore SMB managing 1–5 locations, Yext's enterprise tooling and USD pricing is disproportionate to the need. Epicware is built for Singapore SMBs, starting at $149/month in SGD with no setup fees.",
+          a: "No. Yext is designed for enterprise customers — its pricing and onboarding complexity are enterprise-scale. For a Singapore SMB managing 1–5 locations, Yext's enterprise tooling and USD pricing is disproportionate to the need. Epicware is built for Singapore SMBs, starting at $299/month in SGD with no setup fees.",
         },
         {
           q: "Does Yext offer bad review removal for Google reviews in Singapore?",

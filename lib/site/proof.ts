@@ -129,25 +129,30 @@ export const PRICING = {
   },
 
   /**
-   * USA offer pricing for the local-seo and google-business-profile money
-   * pages, confirmed by the business owner for Phase 5 (2026-10-28). Not
-   * derived from lib/pricing-data.ts's PLANS array — that file's SGD
-   * Authority tier is monthlyPrice: 599 with per-outlet pricing folded
-   * into the feature list rather than a flat add-on fee, so it doesn't
-   * map cleanly onto these two flat USD numbers. Flagging the mismatch
-   * rather than silently reconciling it; these are the numbers as given.
+   * Single source of truth for the 4 subscription tiers — confirmed by
+   * the business owner 2026-10-28. Currency-neutral numbers: SGD in
+   * Singapore, USD elsewhere, same number either way (no conversion),
+   * same pattern as reviewRemoval above. lib/pricing-data.ts's PLANS
+   * array, app/pricing/page.tsx's JSON-LD, and every USA money page's
+   * `pricing` frontmatter all read from this — nothing should hardcode
+   * a plan price independently.
+   *
+   * Authority and Domination absorbed the previously-scheduled Sept 15,
+   * 2026 price increase (lib/price-increase.ts's PRICE_INCREASES —
+   * newMonthly/newAnnual 899/764 and 1800/1530 respectively). That
+   * cutoff is in the past as of this change (today: 2026-10-28), so
+   * those are now the current, permanent prices, not a future one —
+   * the temporal swap mechanism in price-increase.ts and
+   * components/pricing/PricingCards.tsx was retired rather than kept
+   * running alongside this as a second source of truth. That's what
+   * caused the original bug: the live UI already showed 899/1800 via
+   * the swap, while the raw PLANS data and the JSON-LD (which never
+   * applied the swap) stayed stale underneath it.
    */
   plans: {
-    foundation: {
-      currency: "USD",
-      monthly: 299,
-      perOutlet: 99,
-      display: "USD 299/month + USD 99 per outlet",
-    },
-    authority: {
-      currency: "USD",
-      monthly: 899,
-      display: "USD 899/month",
-    },
+    foundation: { monthly: 299, annual: 254, perOutlet: 99 },
+    authority: { monthly: 899, annual: 764, perOutlet: 99 },
+    domination: { monthly: 1800, annual: 1530, perOutlet: 99 },
+    fullStack: { monthly: 3800, annual: 3230, perOutlet: 99 },
   },
 } as const;

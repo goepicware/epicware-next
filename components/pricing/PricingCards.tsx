@@ -3,11 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import {
-  isPriceIncreaseLive,
-  PRICE_INCREASES,
-  PRICE_INCREASE_LABEL,
-} from "@/lib/price-increase";
 import { PLANS, formatPrice } from "@/lib/pricing-data";
 
 // Each of these feature names is linked only once across the page — in the
@@ -55,52 +50,12 @@ function NewChip() {
 
 export default function PricingCards() {
   const [annual, setAnnual] = useState(false);
-  const live = isPriceIncreaseLive();
   // Tracks which feature names already got their one link, in plan order —
   // each of FEATURE_LINKS is linked only once, in the first plan it appears.
   const linkedFeatures = new Set<string>();
 
-  // After the cutoff, swap in the new prices so cards update automatically.
-  const effectivePlans = PLANS.map((plan) => {
-    const increase = PRICE_INCREASES[plan.name];
-    if (live && increase) {
-      return { ...plan, monthlyPrice: increase.newMonthly, annualPrice: increase.newAnnual };
-    }
-    return plan;
-  });
-
   return (
     <div>
-      {/* Price-increase notice — auto-hides after Sept 15, 2026 */}
-      {!live && (
-        <div className="mb-8 flex flex-col sm:flex-row items-center justify-center gap-2 rounded-2xl border border-amber-200 bg-amber-50 px-6 py-4 text-center">
-          <div className="flex items-center gap-2 shrink-0">
-            <svg
-              className="w-4 h-4 text-amber-600 shrink-0"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-            <span className="text-sm font-bold text-amber-900">
-              Prices increase {PRICE_INCREASE_LABEL}
-            </span>
-          </div>
-          <span className="hidden sm:inline text-amber-400">—</span>
-          <span className="text-sm text-amber-800">
-            Authority rises to <strong>$899/mo</strong>, Domination to{" "}
-            <strong>$1,800/mo</strong>.{" "}
-            <strong>Lock in current rates by booking today.</strong>
-          </span>
-        </div>
-      )}
-
       {/* Toggle */}
       <div className="flex items-center justify-center gap-4 mb-10">
         <span
@@ -132,7 +87,7 @@ export default function PricingCards() {
 
       {/* Plan grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
-        {effectivePlans.map((plan) => (
+        {PLANS.map((plan) => (
           <div key={plan.name} className="relative">
             {/* Badge */}
             {plan.badge && (
@@ -174,21 +129,9 @@ export default function PricingCards() {
                   <span className="text-muted-foreground text-sm ml-1">/mo</span>
                 </div>
 
-                {/* Future price line — only shown before the cutoff, only on affected plans */}
-                {!live && PRICE_INCREASES[plan.name] && (
-                  <p className="text-xs font-medium text-amber-600 mb-1">
-                    ${formatPrice(
-                      annual
-                        ? PRICE_INCREASES[plan.name].newAnnual
-                        : PRICE_INCREASES[plan.name].newMonthly
-                    )}
-                    /mo from {PRICE_INCREASE_LABEL}
-                  </p>
-                )}
-
-                {plan.perOutlet && (
+                {plan.perOutlet > 0 && (
                   <p className="text-xs text-muted-foreground mb-1">
-                    Includes 1 outlet · +$99/additional outlet
+                    Includes 1 outlet · +${formatPrice(plan.perOutlet)}/additional outlet
                   </p>
                 )}
                 {annual && (

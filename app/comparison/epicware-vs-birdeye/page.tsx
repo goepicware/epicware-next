@@ -75,7 +75,7 @@ export default function Page() {
         },
         {
           q: "Is Birdeye priced in SGD for Singapore businesses?",
-          a: "No. Birdeye uses USD pricing and is structured primarily for the US market. Epicware offers SGD-accessible pricing designed for Singapore SMBs, with the Foundation plan starting at $149/month.",
+          a: "No. Birdeye uses USD pricing and is structured primarily for the US market. Epicware offers SGD-accessible pricing designed for Singapore SMBs, with the Foundation plan starting at $299/month.",
         },
       ]}
     />
