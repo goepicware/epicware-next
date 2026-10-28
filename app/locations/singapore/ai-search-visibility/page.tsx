@@ -198,7 +198,7 @@ export default function AiSearchVisibilitySingaporePage() {
         services={CHILD_SERVICES}
       />
 
-      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="ai-search-visibility" isSingapore />
+      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="ai-search-visibility" />
 
       <FinalCTA />
       <StickyMobileCTA />

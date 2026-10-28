@@ -16,6 +16,8 @@
  * it to ai-search-visibility instead.
  */
 
+import { PRICING } from "@/lib/site/proof";
+
 export interface SubFeature {
   slug: string;
   name: string;
@@ -23,11 +25,15 @@ export interface SubFeature {
   currentUrl: string;
 }
 
+/** Which PRICING entry (lib/site/proof.ts) this service's "From" price reads from. */
+export type PlanKey = "foundation" | "authority" | "domination" | "fullStack" | "reviewRemoval";
+
 export interface Service {
   slug: string;
   name: string;
   shortDescription: string;
   subFeatures: SubFeature[];
+  planKey: PlanKey;
 }
 
 export const SERVICES: Service[] = [
@@ -41,6 +47,7 @@ export const SERVICES: Service[] = [
       { slug: "competitor-analysis", name: "Competitor Analysis", currentUrl: "/local-seo-singapore/competitor-analysis" },
       { slug: "rank-tracking", name: "Local Rank Tracking", currentUrl: "/local-seo-singapore/local-rank-tracking" },
     ],
+    planKey: "authority",
   },
   {
     slug: "google-business-profile",
@@ -51,12 +58,14 @@ export const SERVICES: Service[] = [
       { slug: "setup", name: "GBP Setup", currentUrl: "/local-seo-singapore/gbp-setup" },
       { slug: "post-scheduling", name: "GBP Post Scheduling", currentUrl: "/local-seo-singapore/gbp-post-scheduling" },
     ],
+    planKey: "foundation",
   },
   {
     slug: "seo",
     name: "SEO",
     shortDescription: "Website and content SEO for organic search visibility beyond the Map Pack.",
     subFeatures: [],
+    planKey: "domination",
   },
   {
     slug: "ai-search-visibility",
@@ -68,6 +77,7 @@ export const SERVICES: Service[] = [
       { slug: "ai-citation-building", name: "AI Citation Building", currentUrl: "/ai-search-visibility-singapore/ai-citation-building" },
       { slug: "geo-optimisation", name: "GEO Optimisation", currentUrl: "/ai-search-visibility-singapore/geo-optimisation" },
     ],
+    planKey: "domination",
   },
   {
     slug: "review-management",
@@ -80,6 +90,7 @@ export const SERVICES: Service[] = [
       { slug: "review-generation", name: "Review Generation", currentUrl: "/reputation-management-singapore/review-generation" },
       { slug: "review-widgets", name: "Review Widgets", currentUrl: "/reputation-management-singapore/review-widgets" },
     ],
+    planKey: "foundation",
   },
   {
     slug: "review-removal",
@@ -89,11 +100,25 @@ export const SERVICES: Service[] = [
       { slug: "fake-review-removal", name: "Fake Review Removal", currentUrl: "/bad-review-removal-singapore/fake-review-removal" },
       { slug: "unfair-review-removal", name: "Unfair Review Removal", currentUrl: "/bad-review-removal-singapore/unfair-review-removal" },
     ],
+    planKey: "reviewRemoval",
   },
 ];
 
 export function getService(slug: string): Service | undefined {
   return SERVICES.find((s) => s.slug === slug);
+}
+
+/**
+ * "From USD 899/mo" (or SGD in Singapore, same number — see
+ * PRICING.plans' own header comment). review-removal reads from
+ * PRICING.reviewRemoval instead and is priced per review, not monthly.
+ */
+export function getServiceFromPrice(service: Service, countrySlug: string): string {
+  const currency = countrySlug === "singapore" ? "SGD" : "USD";
+  if (service.planKey === "reviewRemoval") {
+    return `From ${currency} ${PRICING.reviewRemoval[currency]}/review`;
+  }
+  return `From ${currency} ${PRICING.plans[service.planKey].monthly}/mo`;
 }
 
 export function getSubFeature(serviceSlug: string, subFeatureSlug: string): SubFeature | undefined {

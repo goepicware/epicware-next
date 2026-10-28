@@ -5,29 +5,23 @@ import Link from "next/link";
 import { ArrowRight, Loader2, AlertCircle, CheckCircle2 } from "lucide-react";
 import { getCountry } from "@/lib/site/countries";
 import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
+import { trackEvent } from "@/lib/meta-tracking";
 
 /**
  * Page-specific lead CTA for /locations/{country}/{service}/ pages —
  * driven entirely by countrySlug + serviceSlug so the same component
- * serves every country×service combination. Renders nothing when
- * lib/site/leadCTA.ts has no config for serviceSlug, so pages without a
- * defined CTA fall back to MoneyPageLayout's generic hero buttons
- * instead of showing a half-built form.
+ * (and every lib/site/leadCTA.ts entry) works for any country, not just
+ * USA. Renders nothing when leadCTA.ts has no config for serviceSlug, so
+ * pages without a defined CTA fall back to MoneyPageLayout's generic
+ * hero buttons instead of showing a half-built form.
  *
- * variant="hero": two buttons. In form-mode, primary scrolls to the
- * bottom form; in link-mode (config.primaryHref set, e.g. seo/
- * ai-search-visibility reusing /free-audit and /ai-visibility), primary
- * links straight to that existing page with ?country= appended, and no
- * bottom form is rendered. Secondary always links to /book-demo
- * pre-filled with country+service.
- * variant="bottom": in form-mode, the actual form, submitting to
+ * variant="hero": primary button scrolls to the form card below;
+ * secondary links to /book-demo pre-filled with country+service.
+ * variant="bottom": the actual inline form, submitting to
  * /api/audit-lead with the same retry/backup/visible-error handling as
  * the free-audit wizard (app/free-audit/FreeAuditWizard.tsx's
- * submitLeadWithRetry). In link-mode, a simpler card repeating the
- * primary link with its own heading/subtitle — not a form, but still a
- * visible mid-page CTA, so link-mode pages aren't left with nothing
- * between the hero and the generic site-wide FinalCTA at the very
- * bottom of the page.
+ * submitLeadWithRetry), plus a Meta CAPI Lead event on success and a
+ * "Book a Strategy Call" text link underneath.
  */
 export default function ServiceLeadCTA({
   countrySlug,
@@ -43,13 +37,10 @@ export default function ServiceLeadCTA({
   if (!config || !country) return null;
 
   if (variant === "hero") {
-    const primaryHref = config.primaryHref
-      ? `${config.primaryHref}?country=${countrySlug}`
-      : `#${config.formAnchorId}`;
     return (
       <div className="flex flex-wrap gap-3">
         <Link
-          href={primaryHref}
+          href={`#${config.formAnchorId}`}
           className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
         >
           {config.primaryLabel} <ArrowRight className="w-4 h-4" />
@@ -59,22 +50,6 @@ export default function ServiceLeadCTA({
           className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-border font-semibold text-sm hover:border-primary/40 transition-colors"
         >
           Book a Strategy Call
-        </Link>
-      </div>
-    );
-  }
-
-  if (config.fields.length === 0) {
-    if (!config.primaryHref) return null;
-    return (
-      <div className="rounded-2xl border border-border/60 bg-card p-8 text-center">
-        <h3 className="font-display font-bold text-foreground text-xl mb-1">{config.formTitle ?? config.primaryLabel}</h3>
-        {config.formSubtitle && <p className="text-sm text-muted-foreground mb-6 max-w-lg mx-auto">{config.formSubtitle}</p>}
-        <Link
-          href={`${config.primaryHref}?country=${countrySlug}`}
-          className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
-        >
-          {config.primaryLabel} <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     );
@@ -114,26 +89,34 @@ function LeadForm({
   // to 3 attempts with a short backoff, since the backend durably logs
   // the lead (LEAD_BACKUP) before anything that can fail — a failure
   // here means the request never reached the server at all.
-  const submitWithRetry = useCallback(async (payload: Record<string, unknown>) => {
-    const attempts = 3;
-    for (let i = 0; i < attempts; i++) {
-      try {
-        const res = await fetch("/api/audit-lead", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-        if (res.ok) {
-          setSaveStatus("saved");
-          return;
+  const submitWithRetry = useCallback(
+    async (payload: Record<string, unknown>) => {
+      const attempts = 3;
+      for (let i = 0; i < attempts; i++) {
+        try {
+          const res = await fetch("/api/audit-lead", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          if (res.ok) {
+            setSaveStatus("saved");
+            // Dual-fire browser pixel + CAPI, same pattern as components/book-demo/BookDemoForm.tsx.
+            trackEvent("Lead", {
+              userData: { em: payload.email as string, ph: payload.phone as string },
+              customData: { content_name: config.primaryLabel, country: countrySlug, service: serviceSlug },
+            });
+            return;
+          }
+        } catch {
+          // network failure — fall through to retry
         }
-      } catch {
-        // network failure — fall through to retry
+        if (i < attempts - 1) await delay(800 * (i + 1));
       }
-      if (i < attempts - 1) await delay(800 * (i + 1));
-    }
-    setSaveStatus("failed");
-  }, []);
+      setSaveStatus("failed");
+    },
+    [config.primaryLabel, countrySlug, serviceSlug]
+  );
 
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
@@ -172,7 +155,7 @@ function LeadForm({
       <div id={config.formAnchorId} className="scroll-mt-28 rounded-2xl border border-border/60 bg-card p-8 text-center">
         <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-3" />
         <h3 className="font-display font-bold text-foreground text-xl mb-2">Got it — thanks.</h3>
-        <p className="text-muted-foreground">We&apos;ll review your submission and get back to you shortly.</p>
+        <p className="text-muted-foreground">We&apos;ll send your {config.successNoun} within 1 business day.</p>
       </div>
     );
   }
@@ -262,6 +245,15 @@ function LeadForm({
             </>
           )}
         </button>
+
+        <p className="text-center text-sm">
+          <Link
+            href={`/book-demo?country=${countrySlug}&service=${serviceSlug}`}
+            className="text-muted-foreground hover:text-foreground underline underline-offset-2 transition-colors"
+          >
+            or Book a Strategy Call
+          </Link>
+        </p>
       </form>
     </div>
   );

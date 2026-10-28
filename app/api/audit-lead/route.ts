@@ -263,6 +263,31 @@ export async function POST(req: NextRequest) {
     });
   }
 
+  if (leadType === "seo-audit") {
+    return sendCtaLeadEmail({
+      apiKey, isTest, name, email, phone, country,
+      pageLabel: "SEO Audit",
+      pagePath: "seo",
+      color: "#2563EB",
+      emoji: "🔍",
+      extraFields: [{ label: "Website URL", value: websiteUrl }],
+    });
+  }
+
+  if (leadType === "ai-visibility") {
+    return sendCtaLeadEmail({
+      apiKey, isTest, name, email, phone, country,
+      pageLabel: "AI Visibility Check",
+      pagePath: "ai-search-visibility",
+      color: "#8B5CF6",
+      emoji: "🤖",
+      extraFields: [
+        { label: "Business name", value: businessName },
+        { label: "Website URL", value: websiteUrl },
+      ],
+    });
+  }
+
   const kwList = Array.isArray(keywords) && keywords.length > 0
     ? keywords.map((k) => `• ${k}`).join("\n")
     : "None selected";

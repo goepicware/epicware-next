@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { SERVICES, getService, type Service } from "@/lib/site/services";
+import { ArrowRight } from "lucide-react";
+import { SERVICES, getService, getServiceFromPrice, type Service } from "@/lib/site/services";
 import { COUNTRIES, getCountry, type Country } from "@/lib/site/countries";
-import { getMoneyPageContent } from "@/lib/site/content";
+import { isCountryServiceLive } from "@/lib/site/content";
 
 /**
  * The three internal link rings the brief requires on every money page:
@@ -16,36 +17,28 @@ import { getMoneyPageContent } from "@/lib/site/content";
  *
  * Singapore money pages (local-seo, google-business-profile, seo,
  * ai-search-visibility, review-management, review-removal) are literal
- * page.tsx files, not MDX — getMoneyPageContent() only resolves content
- * for the four MDX-driven countries (usa, uk, australia, dubai), so
- * Singapore is always excluded from the "sibling services" check below by
- * construction (its slug never has an MDX file to look up) — pass
- * isSingapore to opt into treating all 6 Singapore services as available.
+ * page.tsx files, not MDX, but isCountryServiceLive() already special-
+ * cases "singapore" to always return true, so both rings below use it
+ * directly with no Singapore-specific branching needed here.
  */
 
 export default function MoneyPageLinkRings({
   countrySlug,
   serviceSlug,
-  isSingapore = false,
 }: {
   countrySlug: string;
   serviceSlug: string;
-  isSingapore?: boolean;
 }) {
   const country = getCountry(countrySlug) as Country;
   const service = getService(serviceSlug) as Service;
 
-  const siblingServices = SERVICES.filter((s) => {
-    if (s.slug === serviceSlug) return false;
-    if (isSingapore) return true; // all 6 Singapore pages are real, non-draft
-    return getMoneyPageContent(countrySlug, s.slug)?.frontmatter.draft === false;
-  });
+  const siblingServices = SERVICES.filter(
+    (s) => s.slug !== serviceSlug && isCountryServiceLive(countrySlug, s.slug)
+  );
 
-  const sameServiceOtherCountries = COUNTRIES.filter((c) => {
-    if (c.slug === countrySlug) return false;
-    if (c.slug === "singapore") return true; // Singapore pages are always real
-    return getMoneyPageContent(c.slug, serviceSlug)?.frontmatter.draft === false;
-  });
+  const sameServiceOtherCountries = COUNTRIES.filter(
+    (c) => c.slug !== countrySlug && isCountryServiceLive(c.slug, serviceSlug)
+  );
 
   return (
     <>
@@ -61,10 +54,16 @@ export default function MoneyPageLinkRings({
                 <Link
                   key={s.slug}
                   href={`/locations/${country.slug}/${s.slug}`}
-                  className="rounded-xl border border-border/60 bg-card p-5 hover:shadow-card transition-shadow"
+                  className="group rounded-xl border border-border/60 bg-card p-5 hover:shadow-card hover:border-primary/40 transition-all flex flex-col"
                 >
                   <h3 className="font-semibold text-foreground text-sm mb-1">{s.name}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{s.shortDescription}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed flex-1">{s.shortDescription}</p>
+                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/40">
+                    <span className="text-xs font-medium text-muted-foreground">{getServiceFromPrice(s, country.slug)}</span>
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary group-hover:gap-1.5 transition-all">
+                      View service <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>

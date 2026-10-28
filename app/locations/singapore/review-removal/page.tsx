@@ -228,7 +228,7 @@ export default function BadReviewRemovalSingaporePage() {
         </div>
       </section>
 
-      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="review-removal" isSingapore />
+      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="review-removal" />
 
       <FinalCTA />
       <StickyMobileCTA />

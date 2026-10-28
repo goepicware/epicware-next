@@ -659,7 +659,7 @@ export default function GbpOptimisationPage() {
         </div>
       </section>
 
-      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="google-business-profile" isSingapore />
+      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="google-business-profile" />
 
       <FinalCTA />
       <StickyMobileCTA />

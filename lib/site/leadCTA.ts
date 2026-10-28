@@ -2,9 +2,16 @@
  * Per-service lead-CTA copy for ServiceLeadCTA (components/site/ServiceLeadCTA.tsx).
  *
  * Keyed by service slug (lib/site/services.ts) so the component works for
- * any /locations/{country}/{service}/ page. A service with no entry here
- * falls back to MoneyPageLayout's generic "Book a Free Demo / Free GBP
- * Audit" hero buttons rather than rendering a half-defined CTA.
+ * any /locations/{country}/{service}/ page — and every future country,
+ * not just USA. A service with no entry here falls back to
+ * MoneyPageLayout's generic "Book a Free Demo / Free GBP Audit" hero
+ * buttons rather than rendering a half-defined CTA.
+ *
+ * Every entry is an inline form embedded directly in the CTA card — no
+ * link-mode (an earlier version of this file linked seo/ai-search-visibility
+ * out to /free-audit and /ai-visibility instead of collecting the lead
+ * directly; that's been replaced with real forms here, same as every
+ * other service).
  *
  * `fields` describes the form's extra inputs beyond the universal
  * name/email/phone — each field's `payloadKey` is the key it's submitted
@@ -24,21 +31,14 @@ export interface LeadCTAField {
 
 export interface LeadCTAConfig {
   primaryLabel: string;
-  /** Value sent as `leadType` in the POST body — not always the same as the service slug (e.g. google-business-profile → "gbp-audit"). Kept for documentation/consistency even on link-mode configs, though it isn't submitted anywhere when `fields` is empty. */
+  /** Value sent as `leadType` in the POST body — not always the same as the service slug (e.g. google-business-profile → "gbp-audit"). */
   leadType: string;
-  /**
-   * Link-mode vs form-mode. When set, the hero's primary button links
-   * straight to this existing page (`?country={countrySlug}` appended)
-   * instead of scrolling to a bottom form — for CTAs that reuse an
-   * existing flow (e.g. /free-audit, /ai-visibility) rather than
-   * needing a new one. `fields` must be empty when this is set, and
-   * ServiceLeadCTA's bottom variant renders nothing in that case.
-   */
-  primaryHref?: string;
-  /** Anchor id the hero's primary button scrolls to in form-mode — must match the bottom form's wrapper id. Required unless primaryHref is set. */
-  formAnchorId?: string;
-  formTitle?: string;
-  formSubtitle?: string;
+  /** Anchor id the hero's primary button scrolls to — must match the form card's wrapper id. */
+  formAnchorId: string;
+  formTitle: string;
+  formSubtitle: string;
+  /** The thing being delivered, for the inline success message: "we'll send your {successNoun} within 1 business day." */
+  successNoun: string;
   fields: LeadCTAField[];
 }
 
@@ -49,6 +49,7 @@ export const LEAD_CTA_CONFIG: Record<string, LeadCTAConfig> = {
     formTitle: "Get a Free Removal Check",
     formSubtitle: "Send us the review and the profile it's on — we'll tell you honestly whether it's removable.",
     leadType: "review-removal",
+    successNoun: "removal check",
     fields: [
       {
         id: "profile-url",
@@ -75,6 +76,7 @@ export const LEAD_CTA_CONFIG: Record<string, LeadCTAConfig> = {
     formTitle: "Get a Free Local Visibility Scan",
     formSubtitle: "We'll check where you actually rank across your metro — Google, Apple Maps, Bing and AI search — and show you the gaps.",
     leadType: "local-seo",
+    successNoun: "local visibility scan",
     fields: [
       {
         id: "business",
@@ -101,6 +103,7 @@ export const LEAD_CTA_CONFIG: Record<string, LeadCTAConfig> = {
     formTitle: "Get a Free 19-Point GBP Audit",
     formSubtitle: "We'll check your profile against what ranks and what Google allows, and send back a prioritized fix list.",
     leadType: "gbp-audit",
+    successNoun: "GBP audit",
     fields: [
       {
         id: "maps-link",
@@ -113,24 +116,50 @@ export const LEAD_CTA_CONFIG: Record<string, LeadCTAConfig> = {
     ],
   },
 
-  // Link-mode — reuses the existing free-audit wizard rather than a new form.
   seo: {
+    formAnchorId: "seo-audit-form",
     primaryLabel: "Get a Free Website SEO Audit",
-    leadType: "seo-audit",
-    primaryHref: "/free-audit",
     formTitle: "Get a Free Website SEO Audit",
     formSubtitle: "We'll check your technical SEO, content and authority gaps, and show you where you're losing to competitors.",
-    fields: [],
+    leadType: "seo-audit",
+    successNoun: "SEO audit",
+    fields: [
+      {
+        id: "website",
+        label: "Website URL",
+        placeholder: "https://yourbusiness.com",
+        required: true,
+        type: "text",
+        payloadKey: "websiteUrl",
+      },
+    ],
   },
 
-  // Link-mode — reuses the existing /ai-visibility tool rather than a new form.
   "ai-search-visibility": {
+    formAnchorId: "ai-visibility-check-form",
     primaryLabel: "Get a Free AI Visibility Check",
-    leadType: "ai-visibility",
-    primaryHref: "/ai-visibility",
     formTitle: "Get a Free AI Visibility Check",
     formSubtitle: "See what ChatGPT, Gemini and Google's AI features currently say about your business — or whether they mention you at all.",
-    fields: [],
+    leadType: "ai-visibility",
+    successNoun: "AI visibility check",
+    fields: [
+      {
+        id: "business-name",
+        label: "Business name",
+        placeholder: "Your business name",
+        required: true,
+        type: "text",
+        payloadKey: "businessName",
+      },
+      {
+        id: "website",
+        label: "Website URL",
+        placeholder: "https://yourbusiness.com",
+        required: true,
+        type: "text",
+        payloadKey: "websiteUrl",
+      },
+    ],
   },
 
   "review-management": {
@@ -139,6 +168,7 @@ export const LEAD_CTA_CONFIG: Record<string, LeadCTAConfig> = {
     formTitle: "Get a Free Review Health Check",
     formSubtitle: "We'll check your response rate, response time and rating trend, and flag what needs attention now.",
     leadType: "review-management",
+    successNoun: "review health check",
     fields: [
       {
         id: "profile-link",
