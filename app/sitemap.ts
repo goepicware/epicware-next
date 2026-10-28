@@ -1,4 +1,7 @@
 import type { MetadataRoute } from "next";
+import { COUNTRIES } from "@/lib/site/countries";
+import { PAGED_SERVICES } from "@/lib/site/services";
+import { isCountryServiceLive, isHubLive, isSubFeatureLive } from "@/lib/site/content";
 
 const BASE = "https://www.epicware.ai";
 
@@ -39,21 +42,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/services/review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/growth-tools`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
-    // Services sub-feature pages — /services/{service}/{subFeature}
-    { url: `${BASE}/services/local-seo/citation-building`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/local-seo/competitor-analysis`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/local-seo/rank-tracking`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/google-business-profile/setup`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/google-business-profile/post-scheduling`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/ai-search-visibility/aeo`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/ai-search-visibility/ai-citation-building`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/ai-search-visibility/geo-optimisation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/review-management/ai-review-response`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/review-management/reputation-analytics`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/review-management/review-generation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/review-management/review-widgets`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/review-removal/fake-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/services/review-removal/unfair-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    // Services sub-feature pages — /services/{service}/{subFeature} — these
+    // are generated dynamically below (subFeaturePages), gated on
+    // isSubFeatureLive, because all 14 are currently draft:true (noindex)
+    // pending the services rewrite and must not appear here until then.
 
     // Growth tools children
     { url: `${BASE}/growth-tools/epicengage-email-marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -71,18 +63,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/industries/physiotherapy`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${BASE}/industries/retail-stores`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
 
-    // Locations — country
+    // Locations — country. Singapore and Malaysia are bespoke .tsx pages
+    // (always live, hand-tuned priorities below). Every other country's
+    // hub and country×service pages are generated dynamically below
+    // (countryHubPages, countryServicePages), gated on isHubLive /
+    // isCountryServiceLive, so a page only appears here once its MDX
+    // content leaves draft — see lib/site/content.ts.
     { url: `${BASE}/locations/singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/locations/malaysia`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/locations/dubai`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/locations/uk`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/locations/usa`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/locations/usa/review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/locations/usa/local-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/locations/usa/google-business-profile`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/locations/usa/seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/locations/usa/ai-search-visibility`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/locations/usa/review-management`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // Use cases
     { url: `${BASE}/use-cases/remove-bad-google-reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
@@ -164,7 +152,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/resources/guides`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${BASE}/creators`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Free tools
     { url: `${BASE}/tools`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
@@ -185,5 +172,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...districtPages];
+  // Locations — non-Singapore country hubs, only once draft:false.
+  const countryHubPages: MetadataRoute.Sitemap = COUNTRIES.filter(
+    (c) => c.slug !== "singapore" && isHubLive(c.slug)
+  ).map((c) => ({
+    url: `${BASE}/locations/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // Locations — non-Singapore country × service pages, only once
+  // draft:false. Singapore's bespoke service pages are listed explicitly
+  // above with hand-tuned priorities.
+  const countryServicePages: MetadataRoute.Sitemap = COUNTRIES.filter((c) => c.slug !== "singapore").flatMap((c) =>
+    PAGED_SERVICES.filter((s) => isCountryServiceLive(c.slug, s.slug)).map((s) => ({
+      url: `${BASE}/locations/${c.slug}/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }))
+  );
+
+  // Services sub-feature pages — /services/{service}/{subFeature} — only
+  // once draft:false. All 14 are currently draft:true pending the
+  // services rewrite, so none appear here yet.
+  const subFeaturePages: MetadataRoute.Sitemap = PAGED_SERVICES.flatMap((s) =>
+    s.subFeatures.filter((f) => isSubFeatureLive(s.slug, f.slug)).map((f) => ({
+      url: `${BASE}/services/${s.slug}/${f.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }))
+  );
+
+  return [...staticPages, ...districtPages, ...countryHubPages, ...countryServicePages, ...subFeaturePages];
 }

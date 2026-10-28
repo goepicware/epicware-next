@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts",
+    "prebuild": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts && tsx scripts/check-sitemap-noindex.ts",
     "build": "next build",
     "postbuild": "next-sitemap && tsx scripts/generate-llms-txt.ts",
     "start": "next start",
@@ -12,7 +12,8 @@
     "check:similarity": "tsx scripts/check-page-similarity.ts",
     "check:substance": "tsx scripts/check-page-substance.ts",
     "check:honesty": "tsx scripts/check-page-honesty.ts",
-    "check:pages": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts",
+    "check:sitemap-noindex": "tsx scripts/check-sitemap-noindex.ts",
+    "check:pages": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts && tsx scripts/check-sitemap-noindex.ts",
     "check:live-endpoints": "tsx --env-file-if-exists=.env.local scripts/check-live-endpoints.ts"
   },
   "dependencies": {

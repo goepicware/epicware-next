@@ -83,7 +83,6 @@ const FOOTER_LINKS = {
     items: [
       { href: "/about", label: "About" },
       { href: "/reseller", label: "Reseller Programme" },
-      { href: "/creators", label: "Become a Creator" },
       { href: "/blog", label: "Blog" },
       { href: "/resources/guides", label: "Guides" },
       { href: "/tools", label: "Free Tools" },

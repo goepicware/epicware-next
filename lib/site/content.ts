@@ -123,6 +123,18 @@ export function getHubContent(country: string): HubContent | null {
   };
 }
 
+/**
+ * Whether /locations/{country}/ is live (indexable, sitemap-eligible)
+ * rather than a draft stub. Singapore is always true (bespoke .tsx, no
+ * hub.mdx). Shared by app/sitemap.ts and scripts/check-sitemap-noindex.ts
+ * so both read the same source of truth as the page's own
+ * generateMetadata robots gate in app/locations/[country]/page.tsx.
+ */
+export function isHubLive(countrySlug: string): boolean {
+  if (countrySlug === "singapore") return true;
+  return getHubContent(countrySlug)?.frontmatter.draft === false;
+}
+
 const SERVICES_CONTENT_ROOT = path.join(process.cwd(), "content", "services");
 
 export interface SubFeatureFrontmatter {
@@ -147,4 +159,15 @@ export function getSubFeatureContent(service: string, subFeature: string): SubFe
     frontmatter: data as SubFeatureFrontmatter,
     body: content,
   };
+}
+
+/**
+ * Whether /services/{service}/{subFeature}/ is live (indexable,
+ * sitemap-eligible) rather than a draft stub. Shared by app/sitemap.ts
+ * and scripts/check-sitemap-noindex.ts so both read the same source of
+ * truth as the page's own generateMetadata robots gate in
+ * app/services/[service]/[subFeature]/page.tsx.
+ */
+export function isSubFeatureLive(service: string, subFeature: string): boolean {
+  return getSubFeatureContent(service, subFeature)?.frontmatter.draft === false;
 }
