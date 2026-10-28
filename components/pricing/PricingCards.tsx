@@ -199,6 +199,15 @@ export default function PricingCards() {
                     {plan.note}
                   </p>
                 )}
+
+                {plan.name === "Full Stack" && (
+                  <Link
+                    href="/90-day-patient-engine"
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                  >
+                    See the 90-Day Patient Engine for aesthetic clinics →
+                  </Link>
+                )}
               </div>
             </div>
           </div>

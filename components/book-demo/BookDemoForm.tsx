@@ -21,10 +21,13 @@ const INDUSTRIES = [
 // Generated from SERVICES (lib/site/services.ts), not hardcoded, so a new
 // service added there automatically shows up here — including offerings
 // like "Paid Ads (Google & Meta)" that have hasPage: false and so have no
-// service page, menu item, or country grid entry yet. "Full Stack
-// (everything, incl. paid ads)" is the only option that isn't a real
-// service slug; its label matches the Full Stack plan on /pricing.
-const INTERESTS = [...SERVICES.map((s) => s.name), "Full Stack (everything, incl. paid ads)"];
+// service page, menu item, or country grid entry yet. FULL_STACK_LABEL is
+// the only option that isn't a real service slug; its label matches the
+// Full Stack plan on /pricing. It's also the one non-SERVICES slug the
+// ?service= pre-fill below recognizes (used by the /90-day-patient-engine
+// offer page's "Book a Strategy Call" link, ?service=full-stack).
+const FULL_STACK_LABEL = "Full Stack (everything, incl. paid ads)";
+const INTERESTS = [...SERVICES.map((s) => s.name), FULL_STACK_LABEL];
 
 // Values match the country slugs used across the site (lib/site/countries.ts,
 // the ?country= param from ServiceLeadCTA's "Book a Strategy Call" link)
@@ -66,7 +69,8 @@ export default function BookDemoForm({
   initialService?: string;
 }) {
   const prefilledCountry = COUNTRY_OPTIONS.find((c) => c.value === initialCountry)?.value ?? "";
-  const prefilledService = SERVICES.find((s) => s.slug === initialService)?.name;
+  const prefilledService =
+    initialService === "full-stack" ? FULL_STACK_LABEL : SERVICES.find((s) => s.slug === initialService)?.name;
 
   const [formData, setFormData] = useState({
     fullName: "",

@@ -36,6 +36,14 @@
 - [EpicSocial product page](https://www.epicware.ai/products/epicsocial)
 - Social media scheduling and content management for SMBs
 
+## Offer Landing Pages
+
+### The 90-Day Patient Engine — Aesthetic Clinics (Singapore)
+
+- [90-Day Patient Engine page](https://www.epicware.ai/90-day-patient-engine)
+- Full Stack plan packaged for Singapore aesthetic clinics: Meta + Google ads, Google Maps and local SEO, AI search citation (GEO), and an AI WhatsApp Assistant run as one system, with a written 90-day qualified-enquiry guarantee
+- S$3,800/month (includes 1 outlet) + ad spend (minimum S$1,500/month) + S$99/additional outlet
+
 ## Services
 
 - [Local SEO](https://www.epicware.ai/services/local-seo) — Google Maps rank tracking, citation building, and competitor analysis for local search visibility.

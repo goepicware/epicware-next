@@ -155,4 +155,17 @@ export const PRICING = {
     domination: { monthly: 1800, annual: 1530, perOutlet: 99 },
     fullStack: { monthly: 3800, annual: 3230, perOutlet: 99 },
   },
+
+  /**
+   * /90-day-patient-engine (aesthetic-clinic Full Stack offer page) —
+   * the two numbers the page's copy needs that don't live anywhere else:
+   * the one-time setup fee and the ad-spend floor the ROI calculator
+   * enforces. Not shared with any other plan or page.
+   */
+  patientEngineOffer: {
+    setupFee: 1500,
+    minAdSpend: 1500,
+    /** 5x Bad Review Removal/month, same figure lib/pricing-data.ts's Full Stack tier already lists — value = this * reviewRemoval.SGD. */
+    reviewsIncludedPerMonth: 5,
+  },
 } as const;

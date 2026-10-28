@@ -150,6 +150,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/reseller`, lastModified: now, changeFrequency: "monthly", priority: 0.65 },
 
+    // Offer landing pages
+    { url: `${BASE}/90-day-patient-engine`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+
     // Conversion pages
     { url: `${BASE}/pricing`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
