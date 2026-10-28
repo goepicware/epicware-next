@@ -18,11 +18,14 @@ export default function CountryHubLayout({
   h1: string;
   body: string;
 }) {
-  // Draft pages (no market proof yet) are excluded from every link ring —
-  // they stay reachable by direct URL but invisible from navigation.
-  const availableServices = SERVICES.filter(
-    (s) => getMoneyPageContent(country.slug, s.slug)?.frontmatter.draft === false
-  );
+  // Every service is listed on the hub — live ones link through, drafts
+  // show as plain "launching soon" text instead of being hidden, so
+  // visitors (and the substance/honesty gates) see the full roadmap
+  // rather than a silently incomplete list.
+  const servicesWithStatus = SERVICES.map((s) => ({
+    service: s,
+    isLive: getMoneyPageContent(country.slug, s.slug)?.frontmatter.draft === false,
+  }));
   const otherCountries = COUNTRIES.filter((c) => {
     if (c.slug === country.slug) return false;
     if (c.slug === "singapore") return true; // real static page, never a draft
@@ -54,15 +57,15 @@ export default function CountryHubLayout({
         </div>
       </section>
 
-      {/* Services in this country (draft money pages excluded) */}
-      {availableServices.length > 0 && (
-        <section className="py-10 lg:py-14 section-gradient-1">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <h2 className="font-display text-foreground mb-8 text-center">
-              Services for {country.displayName} Businesses
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {availableServices.map((s) => (
+      {/* Every service, live ones linked, the rest shown as "launching soon" */}
+      <section className="py-10 lg:py-14 section-gradient-1">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <h2 className="font-display text-foreground mb-8 text-center">
+            Services for {country.displayName} Businesses
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {servicesWithStatus.map(({ service: s, isLive }) =>
+              isLive ? (
                 <Link
                   key={s.slug}
                   href={`/locations/${country.slug}/${s.slug}`}
@@ -75,11 +78,26 @@ export default function CountryHubLayout({
                     {s.shortDescription}
                   </p>
                 </Link>
-              ))}
-            </div>
+              ) : (
+                <div
+                  key={s.slug}
+                  className="rounded-2xl border border-dashed border-border/60 bg-card/40 p-6 flex flex-col gap-3"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-semibold text-muted-foreground">{s.name}</h3>
+                    <span className="text-xs font-medium text-muted-foreground/70 whitespace-nowrap">
+                      Launching soon
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground/70 leading-relaxed flex-1">
+                    {s.shortDescription}
+                  </p>
+                </div>
+              )
+            )}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Other markets (draft hubs excluded) */}
       {otherCountries.length > 0 && (

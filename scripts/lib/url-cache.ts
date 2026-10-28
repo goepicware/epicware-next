@@ -43,8 +43,14 @@ async function fetchStatus(url: string): Promise<number | null> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
+    // Some servers (e.g. support.google.com) don't support HEAD properly
+    // and return 404 for it while the page is genuinely live on GET —
+    // confirmed against real URLs during the USA review-removal build
+    // (2026-10-28). 403/405 were already retried as a real method
+    // rejection; 404 needs the same treatment since HEAD vs GET can't be
+    // trusted to agree on every host.
     let res = await fetch(url, { method: "HEAD", redirect: "follow", signal: controller.signal });
-    if (res.status === 405 || res.status === 403) {
+    if (res.status === 405 || res.status === 403 || res.status === 404) {
       res = await fetch(url, { method: "GET", redirect: "follow", signal: controller.signal });
     }
     return res.status;

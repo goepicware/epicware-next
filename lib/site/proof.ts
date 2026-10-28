@@ -86,3 +86,17 @@ export const PROOF = {
     todo: "TODO(proof): confirm '10+ years' is accurate and sourceable before reusing on new country/service pages.",
   } satisfies ProofValue,
 } as const;
+
+/**
+ * Per-service add-on pricing, by currency — distinct from the PLANS
+ * subscription tiers in lib/pricing-data.ts. Review removal is SGD 200 in
+ * Singapore (confirmed throughout the site); USD 200 for the US market
+ * confirmed by the business owner 2026-10-28 for the Phase 5 USA pages —
+ * same number, not a currency conversion.
+ */
+export const PRICING = {
+  reviewRemoval: {
+    SGD: 200,
+    USD: 200,
+  },
+} as const;
