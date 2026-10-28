@@ -26,12 +26,10 @@ import { getMoneyPageContent } from "@/lib/site/content";
 export default function MoneyPageLinkRings({
   countrySlug,
   serviceSlug,
-  h1,
   isSingapore = false,
 }: {
   countrySlug: string;
   serviceSlug: string;
-  h1: string;
   isSingapore?: boolean;
 }) {
   const country = getCountry(countrySlug) as Country;
@@ -98,7 +96,7 @@ export default function MoneyPageLinkRings({
       <section className="py-8">
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-base text-muted-foreground">
-            {h1} is part of Epicware&apos;s global{" "}
+            This page is part of Epicware&apos;s global{" "}
             <Link href={`/services/${service.slug}`} className="text-primary font-medium hover:underline">
               {service.name} service
             </Link>

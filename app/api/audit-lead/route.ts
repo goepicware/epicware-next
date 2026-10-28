@@ -45,10 +45,12 @@ export async function POST(req: NextRequest) {
     name, email, phone, leadType,
     businessName, businessAddress, websiteUrl,
     placeId, keywords, radiusKm,
+    country, reviewProfileUrl, notes,
   } = body as {
     name?: string; email?: string; phone?: string; leadType?: string;
     businessName?: string; businessAddress?: string; websiteUrl?: string;
     placeId?: string; keywords?: string[]; radiusKm?: number;
+    country?: string; reviewProfileUrl?: string; notes?: string;
   };
 
   if (!name?.trim() || !email?.trim()) {
@@ -64,6 +66,75 @@ export async function POST(req: NextRequest) {
   if (shouldSkipSend) {
     console.log("[audit-lead] X-Epicware-Test set without X-Epicware-Test-Send — payload and Resend config validated, send skipped");
     return NextResponse.json({ success: true, emailSent: false, skipped: true });
+  }
+
+  // Review-removal CTA leads (components/site/ServiceLeadCTA.tsx) carry a
+  // Google/Yelp profile URL and an optional note instead of a GBP audit's
+  // business/keyword fields — distinct enough to warrant their own email
+  // shape rather than forcing them through the audit template below.
+  if (leadType === "review-removal") {
+    const reviewRemovalHtml = `
+      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
+        <div style="background: #DC2626; padding: 20px 24px; border-radius: 12px 12px 0 0;">
+          <h2 style="color: white; margin: 0; font-size: 18px;">🗑️ New Review Removal Lead</h2>
+        </div>
+        <div style="border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px; padding: 24px;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 0; color: #6b7280; width: 160px; font-size: 14px;">Name</td>
+              <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${name}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">Email</td>
+              <td style="padding: 10px 0; font-weight: 600; font-size: 14px;"><a href="mailto:${email}" style="color: #2563EB;">${email}</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">Phone</td>
+              <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${phone || "—"}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">Country</td>
+              <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${country || "—"}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">Profile URL</td>
+              <td style="padding: 10px 0; font-size: 14px;">${reviewProfileUrl ? `<a href="${reviewProfileUrl}" style="color: #2563EB;">${reviewProfileUrl}</a>` : "—"}</td>
+            </tr>
+          </table>
+          <div style="margin-top: 16px; padding: 16px; background: #fef2f2; border-radius: 8px; border: 1px solid #fecaca;">
+            <p style="margin: 0 0 8px; font-weight: 700; font-size: 14px; color: #991b1b;">Which review(s)?</p>
+            <p style="margin: 0; font-size: 14px; color: #374151; white-space: pre-wrap;">${notes || "Not specified"}</p>
+          </div>
+          <p style="margin: 20px 0 0; font-size: 12px; color: #9ca3af; text-align: center;">
+            Submitted ${new Date().toLocaleString("en-SG", { timeZone: "Asia/Singapore" })} SGT via epicware.ai/locations/${country || "unknown"}/review-removal
+          </p>
+        </div>
+      </div>
+    `;
+    const reviewRemovalText = `New Review Removal Lead\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || "—"}\nCountry: ${country || "—"}\nProfile URL: ${reviewProfileUrl || "—"}\n\nWhich review(s)?\n${notes || "Not specified"}`;
+
+    try {
+      const res = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+        body: JSON.stringify({
+          from: "Epicware Audit <noreply@epicware.ai>",
+          to: ["vignesh@epicware.ai"],
+          reply_to: email,
+          subject: `${isTest ? "[TEST] " : ""}Review Removal Lead — ${name} (${country || "unknown"})`,
+          text: reviewRemovalText,
+          html: reviewRemovalHtml,
+        }),
+      });
+      if (!res.ok) {
+        console.error("[audit-lead] Resend error (review-removal):", await res.text());
+        return NextResponse.json({ success: true, emailSent: false });
+      }
+    } catch (err) {
+      console.error("[audit-lead] Resend request threw (review-removal):", err);
+      return NextResponse.json({ success: true, emailSent: false });
+    }
+    return NextResponse.json({ success: true, emailSent: true });
   }
 
   const kwList = Array.isArray(keywords) && keywords.length > 0

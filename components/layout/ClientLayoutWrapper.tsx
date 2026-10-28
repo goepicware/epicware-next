@@ -12,8 +12,10 @@ const STANDALONE_PREFIXES = ["/free-audit", "/audit-landing", "/remove-review", 
 
 export default function ClientLayoutWrapper({
   children,
+  liveCountryServices,
 }: {
   children: React.ReactNode;
+  liveCountryServices: Record<string, string[]>;
 }) {
   const pathname = usePathname();
 
@@ -31,7 +33,7 @@ export default function ClientLayoutWrapper({
 
   return (
     <>
-      <Header />
+      <Header liveCountryServices={liveCountryServices} />
       <main>{children}</main>
       <Footer />
       <ChatWidget />

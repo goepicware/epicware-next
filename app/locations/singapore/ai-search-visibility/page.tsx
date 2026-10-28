@@ -198,7 +198,7 @@ export default function AiSearchVisibilitySingaporePage() {
         services={CHILD_SERVICES}
       />
 
-      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="ai-search-visibility" h1="AI & GEO Visibility Singapore — Get Found by ChatGPT and Google AI" isSingapore />
+      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="ai-search-visibility" isSingapore />
 
       <FinalCTA />
       <StickyMobileCTA />

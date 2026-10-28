@@ -415,7 +415,7 @@ export default function ReputationManagementPage() {
         </div>
       </section>
 
-      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="review-management" h1="Reputation Management in Singapore — Protect Your Rating, Own Your Reviews" isSingapore />
+      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="review-management" isSingapore />
 
       <FinalCTA />
       <StickyMobileCTA />

@@ -27,14 +27,16 @@ export interface Country {
   email: string;
   /** True for the one country that genuinely doesn't have a page yet. */
   isNew: boolean;
+  /** Calling code to prefill/placeholder on lead-form phone inputs for a visitor in this market — distinct from `phone` above, which is Epicware's own contact number. */
+  dialCode: string;
 }
 
 export const COUNTRIES: Country[] = [
-  { slug: "singapore", displayName: "Singapore", hreflang: "en-SG", currency: "SGD", phone: "+6590013157", email: "hello@epicware.ai", isNew: false },
-  { slug: "usa", displayName: "United States", hreflang: "en-US", currency: "USD", phone: "+6590013157", email: "hello@epicware.ai", isNew: false },
-  { slug: "uk", displayName: "United Kingdom", hreflang: "en-GB", currency: "GBP", phone: "+6590013157", email: "hello@epicware.ai", isNew: false },
-  { slug: "australia", displayName: "Australia", hreflang: "en-AU", currency: "AUD", phone: "+6590013157", email: "hello@epicware.ai", isNew: true },
-  { slug: "dubai", displayName: "United Arab Emirates", hreflang: "en-AE", currency: "AED", phone: "+6590013157", email: "hello@epicware.ai", isNew: false },
+  { slug: "singapore", displayName: "Singapore", hreflang: "en-SG", currency: "SGD", phone: "+6590013157", email: "hello@epicware.ai", isNew: false, dialCode: "+65" },
+  { slug: "usa", displayName: "United States", hreflang: "en-US", currency: "USD", phone: "+6590013157", email: "hello@epicware.ai", isNew: false, dialCode: "+1" },
+  { slug: "uk", displayName: "United Kingdom", hreflang: "en-GB", currency: "GBP", phone: "+6590013157", email: "hello@epicware.ai", isNew: false, dialCode: "+44" },
+  { slug: "australia", displayName: "Australia", hreflang: "en-AU", currency: "AUD", phone: "+6590013157", email: "hello@epicware.ai", isNew: true, dialCode: "+61" },
+  { slug: "dubai", displayName: "United Arab Emirates", hreflang: "en-AE", currency: "AED", phone: "+6590013157", email: "hello@epicware.ai", isNew: false, dialCode: "+971" },
 ];
 
 export function getCountry(slug: string): Country | undefined {

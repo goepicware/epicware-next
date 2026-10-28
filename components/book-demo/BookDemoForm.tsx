@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { trackEvent } from "@/lib/meta-tracking";
+import { SERVICES } from "@/lib/site/services";
 
 const INDUSTRIES = [
   "Restaurant / F&B",
@@ -18,22 +18,35 @@ const INDUSTRIES = [
   "Other",
 ];
 
-const REVENUE_RANGES = [
-  "Below $10,000",
-  "$10,000 – $30,000",
-  "$30,000 – $80,000",
-  "$80,000 – $200,000",
-  "$200,000+",
+// Generated from SERVICES (lib/site/services.ts), not hardcoded, so a new
+// service added there automatically shows up here. "Full Platform" is the
+// only option that isn't a real service slug.
+const INTERESTS = [...SERVICES.map((s) => s.name), "Full Platform"];
+
+// Values match the country slugs used across the site (lib/site/countries.ts,
+// the ?country= param from ServiceLeadCTA's "Book a Strategy Call" link)
+// so pre-filling from the URL and this select agree. currency here is
+// deliberately NOT lib/site/countries.ts's `currency` field (GBP/AUD/AED
+// for uk/australia/dubai) — revenue ranges are quoted in USD for every
+// market except Singapore, which is SGD.
+const COUNTRY_OPTIONS: { value: string; label: string; dialCode: string; currency: string }[] = [
+  { value: "singapore", label: "Singapore", dialCode: "+65", currency: "SGD" },
+  { value: "usa", label: "United States", dialCode: "+1", currency: "USD" },
+  { value: "uk", label: "United Kingdom", dialCode: "+44", currency: "USD" },
+  { value: "australia", label: "Australia", dialCode: "+61", currency: "USD" },
+  { value: "dubai", label: "UAE", dialCode: "+971", currency: "USD" },
+  { value: "other", label: "Other", dialCode: "", currency: "USD" },
 ];
 
-const INTERESTS = [
-  "EpicReview (Google Review Management)",
-  "EpicMap (Local SEO / Google Maps Optimisation)",
-  "EpicEngage (Customer Engagement)",
-  "EpicSocial (Social Scheduling)",
-  "Bad Review Removal",
-  "Full Platform",
-];
+function getRevenueRanges(currency: string): string[] {
+  return [
+    `Below ${currency} 10,000`,
+    `${currency} 10,000 – ${currency} 30,000`,
+    `${currency} 30,000 – ${currency} 80,000`,
+    `${currency} 80,000 – ${currency} 200,000`,
+    `${currency} 200,000+`,
+  ];
+}
 
 const inputClass =
   "flex h-11 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
@@ -41,16 +54,26 @@ const inputClass =
 const selectClass =
   "flex h-11 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
-export default function BookDemoForm() {
+export default function BookDemoForm({
+  initialCountry,
+  initialService,
+}: {
+  initialCountry?: string;
+  initialService?: string;
+}) {
+  const prefilledCountry = COUNTRY_OPTIONS.find((c) => c.value === initialCountry)?.value ?? "";
+  const prefilledService = SERVICES.find((s) => s.slug === initialService)?.name;
+
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
     email: "",
     companyName: "",
     industry: "",
+    country: prefilledCountry,
     revenueRange: "",
     outlets: "",
-    interests: [] as string[],
+    interests: prefilledService ? [prefilledService] : ([] as string[]),
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
@@ -62,6 +85,11 @@ export default function BookDemoForm() {
       }, 100);
     }
   }, []);
+
+  const selectedCountry = COUNTRY_OPTIONS.find((c) => c.value === formData.country);
+  const dialCode = selectedCountry?.dialCode ?? "";
+  const currency = selectedCountry?.currency ?? "USD";
+  const revenueRanges = getRevenueRanges(currency);
 
   const toggleInterest = (interest: string) => {
     setFormData((prev) => ({
@@ -85,6 +113,7 @@ export default function BookDemoForm() {
           email: formData.email,
           companyName: formData.companyName,
           industry: formData.industry,
+          country: selectedCountry?.label ?? formData.country,
           revenueRange: formData.revenueRange,
           outlets: formData.outlets,
           interestedIn: formData.interests,
@@ -94,14 +123,23 @@ export default function BookDemoForm() {
       // Track Lead + Schedule — dual-fire browser pixel + CAPI with same event_id
       trackEvent("Lead", {
         userData: { em: formData.email, ph: formData.phone },
-        customData: { content_name: "Strategy Call", content_category: formData.industry },
+        customData: {
+          content_name: "Strategy Call",
+          content_category: formData.industry,
+          country: selectedCountry?.label ?? formData.country,
+          services: formData.interests,
+        },
       });
       trackEvent("Schedule", {
         userData: { em: formData.email, ph: formData.phone },
-        customData: { content_name: "Strategy Call" },
+        customData: {
+          content_name: "Strategy Call",
+          country: selectedCountry?.label ?? formData.country,
+          services: formData.interests,
+        },
       });
       setStatus("success");
-      setFormData({ fullName: "", phone: "", email: "", companyName: "", industry: "", revenueRange: "", outlets: "", interests: [] });
+      setFormData({ fullName: "", phone: "", email: "", companyName: "", industry: "", country: "", revenueRange: "", outlets: "", interests: [] });
     } catch {
       setStatus("error");
     } finally {
@@ -130,7 +168,7 @@ export default function BookDemoForm() {
         </div>
         <div className="space-y-2">
           <label htmlFor="phone" className="text-sm font-medium text-foreground">Phone <span className="text-destructive">*</span></label>
-          <input id="phone" required value={formData.phone} onChange={(e) => setFormData((p) => ({ ...p, phone: e.target.value }))} placeholder="+65 XXXX XXXX" className={inputClass} />
+          <input id="phone" required value={formData.phone} onChange={(e) => setFormData((p) => ({ ...p, phone: e.target.value }))} placeholder={dialCode ? `${dialCode} XXXX XXXX` : "+XX XXXX XXXX"} className={inputClass} />
         </div>
       </div>
 
@@ -147,24 +185,33 @@ export default function BookDemoForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="space-y-2">
+          <label htmlFor="country" className="text-sm font-medium text-foreground">Country <span className="text-destructive">*</span></label>
+          <select id="country" required value={formData.country} onChange={(e) => setFormData((p) => ({ ...p, country: e.target.value }))} className={selectClass}>
+            <option value="">Select country</option>
+            {COUNTRY_OPTIONS.map((c) => <option key={c.value} value={c.value}>{c.label}</option>)}
+          </select>
+        </div>
+        <div className="space-y-2">
           <label htmlFor="industry" className="text-sm font-medium text-foreground">Industry <span className="text-destructive">*</span></label>
           <select id="industry" required value={formData.industry} onChange={(e) => setFormData((p) => ({ ...p, industry: e.target.value }))} className={selectClass}>
             <option value="">Select industry</option>
             {INDUSTRIES.map((ind) => <option key={ind} value={ind}>{ind}</option>)}
           </select>
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="revenue" className="text-sm font-medium text-foreground">Monthly Revenue Range</label>
           <select id="revenue" value={formData.revenueRange} onChange={(e) => setFormData((p) => ({ ...p, revenueRange: e.target.value }))} className={selectClass}>
             <option value="">Select range</option>
-            {REVENUE_RANGES.map((r) => <option key={r} value={r}>{r}</option>)}
+            {revenueRanges.map((r) => <option key={r} value={r}>{r}</option>)}
           </select>
         </div>
-      </div>
-
-      <div className="space-y-2">
-        <label htmlFor="outlets" className="text-sm font-medium text-foreground">Number of Outlets</label>
-        <input id="outlets" value={formData.outlets} onChange={(e) => setFormData((p) => ({ ...p, outlets: e.target.value }))} placeholder="e.g. 1, 3, 5+" className={inputClass} />
+        <div className="space-y-2">
+          <label htmlFor="outlets" className="text-sm font-medium text-foreground">Number of Outlets</label>
+          <input id="outlets" value={formData.outlets} onChange={(e) => setFormData((p) => ({ ...p, outlets: e.target.value }))} placeholder="e.g. 1, 3, 5+" className={inputClass} />
+        </div>
       </div>
 
       <div className="space-y-3">

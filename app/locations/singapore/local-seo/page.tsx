@@ -645,7 +645,7 @@ export default function LocalSEOSingaporePage() {
         </div>
       </section>
 
-      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="local-seo" h1="Local SEO Services in Singapore That Turn Nearby Searches Into Customers" isSingapore />
+      <MoneyPageLinkRings countrySlug="singapore" serviceSlug="local-seo" isSingapore />
 
       <FinalCTA />
       <StickyMobileCTA />

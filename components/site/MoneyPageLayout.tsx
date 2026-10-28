@@ -9,6 +9,8 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { getService, type Service } from "@/lib/site/services";
 import { getCountry, type Country } from "@/lib/site/countries";
 import MoneyPageLinkRings from "@/components/site/MoneyPageLinkRings";
+import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
+import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
 
 /**
  * Shared template for every /locations/{country}/{service}/ money page.
@@ -39,6 +41,7 @@ export default function MoneyPageLayout({
 }) {
   const country = getCountry(countrySlug) as Country;
   const service = getService(serviceSlug) as Service;
+  const hasLeadCTA = serviceSlug in LEAD_CTA_CONFIG;
 
   return (
     <>
@@ -55,20 +58,24 @@ export default function MoneyPageLayout({
           <h1 className="font-display font-bold text-foreground mt-5 mb-4 leading-tight">
             {h1}
           </h1>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/book-demo#form"
-              className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
-            >
-              Book a Free Demo <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/free-audit"
-              className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-border font-semibold text-sm hover:border-primary/40 transition-colors"
-            >
-              Free GBP Audit
-            </Link>
-          </div>
+          {hasLeadCTA ? (
+            <ServiceLeadCTA countrySlug={countrySlug} serviceSlug={serviceSlug} variant="hero" />
+          ) : (
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/book-demo#form"
+                className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
+              >
+                Book a Free Demo <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/free-audit"
+                className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-border font-semibold text-sm hover:border-primary/40 transition-colors"
+              >
+                Free GBP Audit
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 
@@ -82,7 +89,15 @@ export default function MoneyPageLayout({
         </div>
       </section>
 
-      <MoneyPageLinkRings countrySlug={countrySlug} serviceSlug={serviceSlug} h1={h1} />
+      {hasLeadCTA && (
+        <section className="pb-12 lg:pb-16">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <ServiceLeadCTA countrySlug={countrySlug} serviceSlug={serviceSlug} variant="bottom" />
+          </div>
+        </section>
+      )}
+
+      <MoneyPageLinkRings countrySlug={countrySlug} serviceSlug={serviceSlug} />
 
       <FinalCTA />
       <StickyMobileCTA />

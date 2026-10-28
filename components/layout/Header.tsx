@@ -159,23 +159,20 @@ function ProductsDropdown() {
   );
 }
 
-// Countries with a live, indexable hub page. Manually maintained — this
-// component is a client component (can't read content/locations/*/hub.mdx
-// frontmatter at render time), and in practice a new country launching is
-// a deliberate, infrequent event. Update this the same day a country's
-// hub.mdx flips to draft:false, not before — the nav must never link a
-// draft/noindex page.
-const LIVE_COUNTRY_SLUGS = ["singapore"];
-
-// Rich Locations dropdown — one column per country, each showing its 6
-// services. Singapore is the only live market today; the other 4 show as
-// plain, unlinked "coming soon" text rather than linking to draft pages,
-// matching the Choose Your Market block on every /services/{service}/
-// page (same rule, same reason — see app/services/[service]/page.tsx).
-function LocationsDropdown() {
+// Rich Locations dropdown — Singapore always shows all 6 services (its
+// hub is bespoke .tsx, always live). Every other country shows only the
+// services that are actually live for it, driven by liveCountryServices
+// (computed server-side in app/layout.tsx via getLiveCountryServices,
+// since this is a client component and can't read MDX frontmatter at
+// render time). A country with zero live services drops into the
+// "coming soon" line instead of getting an empty column — matching the
+// Choose Your Market block on every /services/{service}/ page (same
+// rule, same reason — see app/services/[service]/page.tsx).
+function LocationsDropdown({ liveCountryServices }: { liveCountryServices: Record<string, string[]> }) {
   const [open, setOpen] = useState(false);
-  const liveCountries = COUNTRIES.filter((c) => LIVE_COUNTRY_SLUGS.includes(c.slug));
-  const comingSoonCountries = COUNTRIES.filter((c) => !LIVE_COUNTRY_SLUGS.includes(c.slug));
+  const otherCountries = COUNTRIES.filter((c) => c.slug !== "singapore");
+  const liveOtherCountries = otherCountries.filter((c) => (liveCountryServices[c.slug]?.length ?? 0) > 0);
+  const comingSoonCountries = otherCountries.filter((c) => (liveCountryServices[c.slug]?.length ?? 0) === 0);
 
   return (
     <div
@@ -193,51 +190,76 @@ function LocationsDropdown() {
       {open && (
         <div className="absolute top-full left-0 pt-2 z-[100]">
           <div className="bg-background/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-lg p-4 w-[320px]">
-            {liveCountries.map((country) => (
-              <div key={country.slug} className="mb-3 last:mb-0">
-                <Link
-                  href={`/locations/${country.slug}`}
-                  className="block px-2 py-1.5 text-sm font-bold text-foreground hover:text-primary transition-colors rounded-lg"
-                  onClick={() => setOpen(false)}
-                >
-                  {country.displayName}
-                </Link>
-                <div className="grid grid-cols-2 gap-x-2">
-                  {SERVICES.map((s) => (
-                    <Link
-                      key={s.slug}
-                      href={`/locations/${country.slug}/${s.slug}`}
-                      className="px-2 py-1.5 text-xs text-muted-foreground hover:text-primary transition-colors rounded-lg truncate"
-                      onClick={() => setOpen(false)}
-                    >
-                      {s.name}
-                    </Link>
-                  ))}
-                </div>
-                {country.slug === "singapore" && (
-                  <Link
-                    href="/locations/singapore"
-                    className="block px-2 py-1 mt-0.5 text-xs font-semibold text-primary hover:underline"
-                    onClick={() => setOpen(false)}
-                  >
-                    {DISTRICTS.length} Singapore districts →
-                  </Link>
-                )}
-              </div>
-            ))}
-
-            <div className="border-t border-border/40 mt-1 pt-2 px-2">
-              <p className="text-xs text-muted-foreground/70 mb-1">
-                {comingSoonCountries.map((c) => c.displayName).join(", ")} — coming soon
-              </p>
+            <div className="mb-3 last:mb-0">
               <Link
-                href="/locations"
-                className="text-xs font-semibold text-primary hover:underline"
+                href="/locations/singapore"
+                className="block px-2 py-1.5 text-sm font-bold text-foreground hover:text-primary transition-colors rounded-lg"
                 onClick={() => setOpen(false)}
               >
-                View all locations →
+                Singapore
+              </Link>
+              <div className="grid grid-cols-2 gap-x-2">
+                {SERVICES.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/locations/singapore/${s.slug}`}
+                    className="px-2 py-1.5 text-xs text-muted-foreground hover:text-primary transition-colors rounded-lg truncate"
+                    onClick={() => setOpen(false)}
+                  >
+                    {s.name}
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/locations/singapore"
+                className="block px-2 py-1 mt-0.5 text-xs font-semibold text-primary hover:underline"
+                onClick={() => setOpen(false)}
+              >
+                {DISTRICTS.length} Singapore districts →
               </Link>
             </div>
+
+            {liveOtherCountries.map((country) => {
+              const liveServices = SERVICES.filter((s) => liveCountryServices[country.slug]?.includes(s.slug));
+              return (
+                <div key={country.slug} className="mb-3 last:mb-0">
+                  <Link
+                    href={`/locations/${country.slug}`}
+                    className="block px-2 py-1.5 text-sm font-bold text-foreground hover:text-primary transition-colors rounded-lg"
+                    onClick={() => setOpen(false)}
+                  >
+                    {country.displayName}
+                  </Link>
+                  <div className="grid grid-cols-2 gap-x-2">
+                    {liveServices.map((s) => (
+                      <Link
+                        key={s.slug}
+                        href={`/locations/${country.slug}/${s.slug}`}
+                        className="px-2 py-1.5 text-xs text-muted-foreground hover:text-primary transition-colors rounded-lg truncate"
+                        onClick={() => setOpen(false)}
+                      >
+                        {s.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+
+            {comingSoonCountries.length > 0 && (
+              <div className="border-t border-border/40 mt-1 pt-2 px-2">
+                <p className="text-xs text-muted-foreground/70 mb-1">
+                  {comingSoonCountries.map((c) => c.displayName).join(", ")} — coming soon
+                </p>
+                <Link
+                  href="/locations"
+                  className="text-xs font-semibold text-primary hover:underline"
+                  onClick={() => setOpen(false)}
+                >
+                  View all locations →
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -286,7 +308,7 @@ function DesktopDropdown({
   );
 }
 
-export default function Header() {
+export default function Header({ liveCountryServices }: { liveCountryServices: Record<string, string[]> }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
@@ -312,12 +334,20 @@ export default function Header() {
     {
       key: "locations",
       label: "Locations",
-      // Singapore only — see LIVE_COUNTRY_SLUGS above for why the other
-      // 4 countries aren't linked here. "All Locations" goes to the hub
-      // index, which is where the "coming soon" messaging for them lives.
+      // Singapore's 6 services always listed; other countries only
+      // contribute the services liveCountryServices actually marks live
+      // (driven by the same server-computed data as the desktop
+      // LocationsDropdown). "All Locations" goes to the hub index, which
+      // is where the "coming soon" messaging for the rest lives.
       items: [
         { href: "/locations/singapore", label: "Singapore" },
         ...SERVICES.map((s) => ({ href: `/locations/singapore/${s.slug}`, label: `${s.name} — Singapore` })),
+        ...COUNTRIES.filter((c) => c.slug !== "singapore").flatMap((c) =>
+          SERVICES.filter((s) => liveCountryServices[c.slug]?.includes(s.slug)).map((s) => ({
+            href: `/locations/${c.slug}/${s.slug}`,
+            label: `${s.name} — ${c.displayName}`,
+          }))
+        ),
         { href: "/locations", label: "All Locations →" },
       ],
     },
@@ -358,7 +388,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-0.5">
             <ProductsDropdown />
             <DesktopDropdown {...NAV.services} />
-            <LocationsDropdown />
+            <LocationsDropdown liveCountryServices={liveCountryServices} />
             <DesktopDropdown {...NAV.industries} />
             <Link
               href="/pricing"

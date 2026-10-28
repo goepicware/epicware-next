@@ -4,6 +4,9 @@ import Script from "next/script";
 import "./globals.css";
 import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getLiveCountryServices } from "@/lib/site/content";
+import { COUNTRIES } from "@/lib/site/countries";
+import { SERVICES } from "@/lib/site/services";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const liveCountryServices = getLiveCountryServices(
+    COUNTRIES.map((c) => c.slug),
+    SERVICES.map((s) => s.slug)
+  );
+
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans antialiased">
@@ -41,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </noscript>
         )}
-        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
+        <ClientLayoutWrapper liveCountryServices={liveCountryServices}>{children}</ClientLayoutWrapper>
         <SpeedInsights />
         {/* Google Analytics */}
         <Script

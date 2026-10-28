@@ -67,6 +67,38 @@ export function getMoneyPageContent(country: string, service: string): MoneyPage
   };
 }
 
+/**
+ * Whether /locations/{country}/{service}/ is live (indexable, linkable)
+ * rather than a draft stub. Singapore is always true — its pages are
+ * bespoke .tsx, not MDX-driven, so there's no frontmatter to check here.
+ * Shared by app/services/[service]/page.tsx (hreflang + "Choose Your
+ * Market"), the Locations mega-menu, and anywhere else that needs to
+ * decide whether a country×service page is safe to link to.
+ */
+export function isCountryServiceLive(countrySlug: string, serviceSlug: string): boolean {
+  if (countrySlug === "singapore") return true;
+  return getMoneyPageContent(countrySlug, serviceSlug)?.frontmatter.draft === false;
+}
+
+/**
+ * For every non-Singapore country, the service slugs that are live today.
+ * Computed server-side (reads the filesystem) and handed down as plain
+ * data to client components like Header, which can't read MDX frontmatter
+ * themselves — see components/layout/Header.tsx's LocationsDropdown.
+ * Singapore is excluded; its hub always lists all 6 services itself.
+ */
+export function getLiveCountryServices(
+  countrySlugs: string[],
+  serviceSlugs: string[]
+): Record<string, string[]> {
+  const result: Record<string, string[]> = {};
+  for (const countrySlug of countrySlugs) {
+    if (countrySlug === "singapore") continue;
+    result[countrySlug] = serviceSlugs.filter((s) => isCountryServiceLive(countrySlug, s));
+  }
+  return result;
+}
+
 export interface HubFrontmatter {
   h1: string;
   metaTitle: string;

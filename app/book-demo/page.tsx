@@ -31,7 +31,13 @@ const steps = [
   "We recommend a system roadmap tailored to your business",
 ];
 
-export default function BookDemoPage() {
+export default async function BookDemoPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ country?: string; service?: string }>;
+}) {
+  const { country, service } = await searchParams;
+
   return (
     <>
       {/* Hero */}
@@ -94,7 +100,7 @@ export default function BookDemoPage() {
             <p className="text-muted-foreground">This helps us prepare properly for your call.</p>
           </div>
           <div className="rounded-3xl bg-card/90 border border-border/50 p-8 lg:p-10 shadow-elegant">
-            <BookDemoForm />
+            <BookDemoForm initialCountry={country} initialService={service} />
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { getService, SERVICES } from "@/lib/site/services";
 import { COUNTRIES } from "@/lib/site/countries";
-import { getMoneyPageContent, getSubFeatureContent } from "@/lib/site/content";
+import { getSubFeatureContent, isCountryServiceLive } from "@/lib/site/content";
 import { getServiceContent } from "@/lib/site/serviceContent";
 import { EPICWARE_GOOGLE_RATING, formatGoogleRatingBadge } from "@/lib/site/proof";
 
@@ -18,11 +18,6 @@ import { EPICWARE_GOOGLE_RATING, formatGoogleRatingBadge } from "@/lib/site/proo
  * is written so far; the other 5 render the thinner pre-existing layout
  * until their content is approved and added there).
  */
-
-function isCountryServiceLive(countrySlug: string, serviceSlug: string): boolean {
-  if (countrySlug === "singapore") return true; // bespoke .tsx pages, always live — content.ts has no entry for Singapore
-  return getMoneyPageContent(countrySlug, serviceSlug)?.frontmatter.draft === false;
-}
 
 export async function generateStaticParams() {
   return SERVICES.map((s) => ({ service: s.slug }));
