@@ -192,7 +192,7 @@ export default function ROICalculator() {
                 </div>
                 <div className="rounded-xl border border-border/60 p-4">
                   <p className="text-xs text-muted-foreground mb-1">Net return</p>
-                  <p className={`font-display font-bold text-xl ${net >= 0 ? "text-emerald-600" : "text-foreground"}`}>
+                  <p className={`font-display font-bold text-xl ${net >= 0 ? "text-emerald-700" : "text-foreground"}`}>
                     {formatSGD(net)}
                   </p>
                 </div>

@@ -36,8 +36,15 @@ async function sendCtaLeadEmail(opts: {
   color: string;
   emoji: string;
   extraFields: { label: string; value?: string }[];
+  /** Full path override for the footer's "via epicware.ai/..." line, for a
+   * lead source that isn't a /locations/{country}/{pagePath} money page
+   * (e.g. the standalone /90-day-patient-engine offer page). Defaults to
+   * the existing /locations/{country}/{pagePath} shape when omitted, so
+   * every existing caller is unaffected. */
+  sourcePath?: string;
 }): Promise<NextResponse> {
-  const { apiKey, isTest, name, email, phone, country, pageLabel, pagePath, color, emoji, extraFields } = opts;
+  const { apiKey, isTest, name, email, phone, country, pageLabel, pagePath, color, emoji, extraFields, sourcePath } = opts;
+  const sourceUrl = sourcePath ?? `locations/${country || "unknown"}/${pagePath}`;
 
   const extraRowsHtml = extraFields
     .map(
@@ -73,7 +80,7 @@ async function sendCtaLeadEmail(opts: {
           ${extraRowsHtml}
         </table>
         <p style="margin: 20px 0 0; font-size: 12px; color: #9ca3af; text-align: center;">
-          Submitted ${new Date().toLocaleString("en-SG", { timeZone: "Asia/Singapore" })} SGT via epicware.ai/locations/${country || "unknown"}/${pagePath}
+          Submitted ${new Date().toLocaleString("en-SG", { timeZone: "Asia/Singapore" })} SGT via epicware.ai/${sourceUrl}
         </p>
       </div>
     </div>
@@ -134,6 +141,7 @@ export async function POST(req: NextRequest) {
     country, reviewProfileUrl, notes,
     businessNameOrMapsLink, cityMetro, gbpMapsLink,
     reviewManagementProfileLink,
+    clinicName, mapsLink, outlets,
   } = body as {
     name?: string; email?: string; phone?: string; leadType?: string;
     businessName?: string; businessAddress?: string; websiteUrl?: string;
@@ -141,6 +149,7 @@ export async function POST(req: NextRequest) {
     country?: string; reviewProfileUrl?: string; notes?: string;
     businessNameOrMapsLink?: string; cityMetro?: string; gbpMapsLink?: string;
     reviewManagementProfileLink?: string;
+    clinicName?: string; mapsLink?: string; outlets?: string;
   };
 
   if (!name?.trim() || !email?.trim()) {
@@ -284,6 +293,22 @@ export async function POST(req: NextRequest) {
       extraFields: [
         { label: "Business name", value: businessName },
         { label: "Website URL", value: websiteUrl },
+      ],
+    });
+  }
+
+  if (leadType === "patient-engine") {
+    return sendCtaLeadEmail({
+      apiKey, isTest, name, email, phone, country,
+      pageLabel: "90-Day Patient Engine Audit",
+      pagePath: "90-day-patient-engine",
+      sourcePath: "90-day-patient-engine",
+      color: "#C026D3",
+      emoji: "🏥",
+      extraFields: [
+        { label: "Clinic name", value: clinicName },
+        { label: "Google Maps link", value: mapsLink },
+        { label: "Number of outlets", value: outlets },
       ],
     });
   }

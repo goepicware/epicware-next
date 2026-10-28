@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import TrackedCta from "./TrackedCta";
+import AuditLeadForm from "./AuditLeadForm";
 
 export default function PatientEngineFinalCTA() {
   return (
@@ -13,9 +14,9 @@ export default function PatientEngineFinalCTA() {
           search mentions you, and roughly what that&apos;s costing you each month.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
           <TrackedCta
-            href="/free-audit"
+            href="#audit-form"
             ctaType="audit"
             ctaLocation="final"
             className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-white text-foreground font-semibold text-base hover:bg-white/90 transition-colors w-full sm:w-auto"
@@ -30,6 +31,10 @@ export default function PatientEngineFinalCTA() {
           >
             Book a Strategy Call
           </TrackedCta>
+        </div>
+
+        <div className="text-left max-w-xl mx-auto mb-8">
+          <AuditLeadForm />
         </div>
 
         <p className="text-sm text-white/60">

@@ -93,7 +93,7 @@ export default function ValueStackPrice() {
           </p>
 
           <TrackedCta
-            href="/free-audit"
+            href="#audit-form"
             ctaType="audit"
             ctaLocation="price"
             className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-foreground text-background font-semibold text-base hover:bg-foreground/90 transition-colors"

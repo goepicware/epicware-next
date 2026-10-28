@@ -1,4 +1,5 @@
 import ROICalculator from "./ROICalculator";
+import ROIReportMockup from "./ROIReportMockup";
 
 export default function ROISection() {
   return (
@@ -12,6 +13,8 @@ export default function ROISection() {
             takes to cover the whole investment.
           </p>
         </div>
+
+        <ROIReportMockup />
 
         <ROICalculator />
       </div>

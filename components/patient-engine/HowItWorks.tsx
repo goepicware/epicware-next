@@ -1,27 +1,42 @@
 import { ArrowRight, ArrowDown } from "lucide-react";
+import PartVisual from "./PartVisual";
 
 const PARTS = [
   {
     name: "Paid Ads (Meta + Google).",
     body: "Fast enquiries from week two, so you're not waiting months to see a return.",
+    visual: "ads" as const,
   },
   {
     name: "AI WhatsApp Assistant.",
     body: "Every enquiry is answered in under 60 seconds, day or night, so the leads you pay for don't go cold.",
+    visual: "chat" as const,
   },
   {
     name: "Google Maps + Local SEO.",
     body:
       "Your profile is rebuilt so patients searching nearby find you first, and those enquiries cost you nothing per click.",
+    visual: "maps" as const,
   },
   {
     name: "AI Search Citations.",
     body:
       "When patients ask ChatGPT, Gemini or Google's AI for the best clinic for a treatment in Singapore, your clinic is in the answer.",
+    visual: "ai" as const,
   },
 ];
 
-function PartCard({ index, name, body }: { index: number; name: string; body: string }) {
+function PartCard({
+  index,
+  name,
+  body,
+  visual,
+}: {
+  index: number;
+  name: string;
+  body: string;
+  visual: "ads" | "chat" | "maps" | "ai";
+}) {
   return (
     <div className="card-feature flex-1">
       <div className="card-feature-inner p-5 h-full flex flex-col gap-3">
@@ -30,6 +45,7 @@ function PartCard({ index, name, body }: { index: number; name: string; body: st
         </div>
         <h3 className="font-display font-semibold text-foreground text-base leading-snug">{name}</h3>
         <p className="text-muted-foreground text-sm leading-relaxed">{body}</p>
+        <PartVisual variant={visual} />
       </div>
     </div>
   );
@@ -48,7 +64,7 @@ export default function HowItWorks() {
           <div className="flex items-stretch gap-3">
             {PARTS.map((part, i) => (
               <div key={part.name} className="flex items-stretch gap-3 flex-1">
-                <PartCard index={i + 1} name={part.name} body={part.body} />
+                <PartCard index={i + 1} name={part.name} body={part.body} visual={part.visual} />
                 {i < PARTS.length - 1 && (
                   <div className="flex items-center shrink-0">
                     <ArrowRight className="w-6 h-6 text-primary/50" aria-hidden="true" />
@@ -95,6 +111,7 @@ export default function HowItWorks() {
                   </div>
                   <h3 className="font-display font-semibold text-foreground text-base leading-snug">{part.name}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{part.body}</p>
+                  <PartVisual variant={part.visual} />
                 </div>
               </div>
               {i < PARTS.length - 1 && <ArrowDown className="w-5 h-5 text-primary/50 my-2" aria-hidden="true" />}

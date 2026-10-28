@@ -1,5 +1,6 @@
 import { PROOF, type ProofValue } from "@/lib/site/proof";
 import TrackedCta from "./TrackedCta";
+import ProofGridImage from "./ProofGridImage";
 
 /** Renders nothing for an unverified stat — PROOF.* entries fail loudly rather than silently printing a null value. */
 function Stat({ label, stat }: { label: string; stat: ProofValue }) {
@@ -31,6 +32,8 @@ export default function Proof() {
           <Stat label="outlets managed" stat={PROOF.outletsManaged} />
           <Stat label="negative reviews removed" stat={PROOF.reviewsRemoved} />
         </div>
+
+        <ProofGridImage />
 
         <p className="text-center text-foreground/80 max-w-2xl mx-auto mb-3 leading-relaxed">
           Singapore businesses across aesthetics, F&amp;B and salons now rank #1 on Google Maps and get cited

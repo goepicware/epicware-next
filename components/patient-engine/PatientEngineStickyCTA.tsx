@@ -54,7 +54,7 @@ export default function PatientEngineStickyCTA() {
     >
       <div className="bg-background/95 backdrop-blur-xl border-t border-border/50 px-4 py-3">
         <TrackedCta
-          href="/free-audit"
+          href="#audit-form"
           ctaType="audit"
           ctaLocation="sticky"
           className="flex items-center justify-center gap-2 h-12 rounded-full bg-foreground text-background text-sm font-semibold hover:bg-foreground/90 transition-colors"
