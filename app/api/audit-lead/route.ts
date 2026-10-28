@@ -133,12 +133,14 @@ export async function POST(req: NextRequest) {
     placeId, keywords, radiusKm,
     country, reviewProfileUrl, notes,
     businessNameOrMapsLink, cityMetro, gbpMapsLink,
+    reviewManagementProfileLink,
   } = body as {
     name?: string; email?: string; phone?: string; leadType?: string;
     businessName?: string; businessAddress?: string; websiteUrl?: string;
     placeId?: string; keywords?: string[]; radiusKm?: number;
     country?: string; reviewProfileUrl?: string; notes?: string;
     businessNameOrMapsLink?: string; cityMetro?: string; gbpMapsLink?: string;
+    reviewManagementProfileLink?: string;
   };
 
   if (!name?.trim() || !email?.trim()) {
@@ -247,6 +249,17 @@ export async function POST(req: NextRequest) {
       color: "#059669",
       emoji: "📋",
       extraFields: [{ label: "Google Maps link", value: gbpMapsLink }],
+    });
+  }
+
+  if (leadType === "review-management") {
+    return sendCtaLeadEmail({
+      apiKey, isTest, name, email, phone, country,
+      pageLabel: "Review Health Check",
+      pagePath: "review-management",
+      color: "#DB2777",
+      emoji: "💬",
+      extraFields: [{ label: "Google or Yelp link", value: reviewManagementProfileLink }],
     });
   }
 

@@ -23,13 +23,22 @@ export interface LeadCTAField {
 }
 
 export interface LeadCTAConfig {
-  /** Anchor id the hero's primary button scrolls to — must match the bottom form's wrapper id. */
-  formAnchorId: string;
   primaryLabel: string;
-  formTitle: string;
-  formSubtitle: string;
-  /** Value sent as `leadType` in the POST body — not always the same as the service slug (e.g. google-business-profile → "gbp-audit"). */
+  /** Value sent as `leadType` in the POST body — not always the same as the service slug (e.g. google-business-profile → "gbp-audit"). Kept for documentation/consistency even on link-mode configs, though it isn't submitted anywhere when `fields` is empty. */
   leadType: string;
+  /**
+   * Link-mode vs form-mode. When set, the hero's primary button links
+   * straight to this existing page (`?country={countrySlug}` appended)
+   * instead of scrolling to a bottom form — for CTAs that reuse an
+   * existing flow (e.g. /free-audit, /ai-visibility) rather than
+   * needing a new one. `fields` must be empty when this is set, and
+   * ServiceLeadCTA's bottom variant renders nothing in that case.
+   */
+  primaryHref?: string;
+  /** Anchor id the hero's primary button scrolls to in form-mode — must match the bottom form's wrapper id. Required unless primaryHref is set. */
+  formAnchorId?: string;
+  formTitle?: string;
+  formSubtitle?: string;
   fields: LeadCTAField[];
 }
 
@@ -100,6 +109,40 @@ export const LEAD_CTA_CONFIG: Record<string, LeadCTAConfig> = {
         required: true,
         type: "text",
         payloadKey: "gbpMapsLink",
+      },
+    ],
+  },
+
+  // Link-mode — reuses the existing free-audit wizard rather than a new form.
+  seo: {
+    primaryLabel: "Get a Free Website SEO Audit",
+    leadType: "seo-audit",
+    primaryHref: "/free-audit",
+    fields: [],
+  },
+
+  // Link-mode — reuses the existing /ai-visibility tool rather than a new form.
+  "ai-search-visibility": {
+    primaryLabel: "Get a Free AI Visibility Check",
+    leadType: "ai-visibility",
+    primaryHref: "/ai-visibility",
+    fields: [],
+  },
+
+  "review-management": {
+    formAnchorId: "review-health-check-form",
+    primaryLabel: "Get a Free Review Health Check",
+    formTitle: "Get a Free Review Health Check",
+    formSubtitle: "We'll check your response rate, response time and rating trend, and flag what needs attention now.",
+    leadType: "review-management",
+    fields: [
+      {
+        id: "profile-link",
+        label: "Google or Yelp link",
+        placeholder: "https://g.page/your-business or https://yelp.com/biz/your-business",
+        required: true,
+        type: "text",
+        payloadKey: "reviewManagementProfileLink",
       },
     ],
   },

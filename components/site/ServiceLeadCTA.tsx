@@ -14,11 +14,16 @@ import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
  * defined CTA fall back to MoneyPageLayout's generic hero buttons
  * instead of showing a half-built form.
  *
- * variant="hero": two buttons — primary scrolls to the bottom form,
- * secondary links to /book-demo pre-filled with country+service.
- * variant="bottom": the actual form, submitting to /api/audit-lead with
- * the same retry/backup/visible-error handling as the free-audit wizard
- * (app/free-audit/FreeAuditWizard.tsx's submitLeadWithRetry).
+ * variant="hero": two buttons. In form-mode, primary scrolls to the
+ * bottom form; in link-mode (config.primaryHref set, e.g. seo/
+ * ai-search-visibility reusing /free-audit and /ai-visibility), primary
+ * links straight to that existing page with ?country= appended, and no
+ * bottom form is rendered. Secondary always links to /book-demo
+ * pre-filled with country+service.
+ * variant="bottom": in form-mode, the actual form, submitting to
+ * /api/audit-lead with the same retry/backup/visible-error handling as
+ * the free-audit wizard (app/free-audit/FreeAuditWizard.tsx's
+ * submitLeadWithRetry). Renders nothing in link-mode.
  */
 export default function ServiceLeadCTA({
   countrySlug,
@@ -34,14 +39,17 @@ export default function ServiceLeadCTA({
   if (!config || !country) return null;
 
   if (variant === "hero") {
+    const primaryHref = config.primaryHref
+      ? `${config.primaryHref}?country=${countrySlug}`
+      : `#${config.formAnchorId}`;
     return (
       <div className="flex flex-wrap gap-3">
-        <a
-          href={`#${config.formAnchorId}`}
+        <Link
+          href={primaryHref}
           className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
         >
           {config.primaryLabel} <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
         <Link
           href={`/book-demo?country=${countrySlug}&service=${serviceSlug}`}
           className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-border font-semibold text-sm hover:border-primary/40 transition-colors"
@@ -51,6 +59,8 @@ export default function ServiceLeadCTA({
       </div>
     );
   }
+
+  if (config.fields.length === 0) return null;
 
   return <LeadForm countrySlug={countrySlug} serviceSlug={serviceSlug} dialCode={country.dialCode} />;
 }
