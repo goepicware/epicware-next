@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { PROOF } from "@/lib/site/proof";
 import {
   Tag,
   Star,
@@ -267,7 +268,7 @@ export default function GbpOptimisationPage() {
                 ⭐ Rated on Google
               </a>
               <div className="flex flex-wrap gap-3">
-                {["19-Point GBP Audit", "Weekly Maps Rank Grids", "100+ Outlets Managed", "10+ Years' Specialist Experience"].map((b) => (
+                {["19-Point GBP Audit", "Weekly Maps Rank Grids", `${PROOF.outletsManaged.value} Outlets Managed`, "10+ Years' Specialist Experience"].map((b) => (
                   <span key={b} className="inline-flex items-center bg-card/80 border border-border/60 rounded-full px-4 py-2 text-sm font-medium text-foreground/80 shadow-card">
                     {b}
                   </span>

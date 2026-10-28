@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { PROOF } from "@/lib/site/proof";
 
 export default function HeroSection() {
   return (
@@ -67,7 +68,7 @@ export default function HeroSection() {
 
           <div className="hero-fade-up flex items-center gap-7 flex-wrap" style={{ animationDelay: "250ms" }}>
             <div>
-              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">50+</p>
+              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">{PROOF.outletsManaged.value}</p>
               <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">outlets managed</p>
             </div>
 

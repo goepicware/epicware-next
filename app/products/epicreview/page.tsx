@@ -5,6 +5,7 @@ import { CheckCircle2, Star } from "lucide-react";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "EpicReview | Google Review Management Software" },
@@ -105,7 +106,7 @@ export default function EpicReviewPage() {
           "Singapore-Built",
           "AI-Native",
           "Pay $0 If Review Stays Up",
-          "500+ Outlets Managed",
+          `${PROOF.outletsManaged.value} Outlets Managed`,
         ]}
         imageSrc="/assets/epicreview-screen.png"
       />

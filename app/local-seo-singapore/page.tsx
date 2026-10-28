@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { PROOF } from "@/lib/site/proof";
 import {
   Store,
   Search,
@@ -38,12 +39,12 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: { absolute: "Local SEO Services Singapore | Local SEO Agency | Epicware" },
   description:
-    "Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed 100+ outlets.",
+    `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore" },
   openGraph: {
     title: "Local SEO Services Singapore | Local SEO Agency | Epicware",
     description:
-      "Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed 100+ outlets.",
+      `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
     url: "https://www.epicware.ai/local-seo-singapore",
   },
 };
@@ -57,7 +58,7 @@ const schema = {
       url: "https://www.epicware.ai/local-seo-singapore",
       name: "Local SEO Services Singapore | Local SEO Agency | Epicware",
       description:
-        "Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a local SEO agency that has managed 100+ outlets.",
+        `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
       inLanguage: "en-SG",
       dateModified: "2026-10-16",
       lastReviewed: "2026-10-16",
@@ -240,7 +241,7 @@ export default function LocalSEOSingaporePage() {
                 ⭐ Rated on Google
               </a>
               <div className="flex flex-wrap gap-3">
-                {["100+ Outlets Managed", "10+ Years' Specialist Experience", "Listings Corrected on 40+ Directories", "50+ Negative Reviews Removed"].map((b) => (
+                {[`${PROOF.outletsManaged.value} Outlets Managed`, "10+ Years' Specialist Experience", "Listings Corrected on 40+ Directories", "50+ Negative Reviews Removed"].map((b) => (
                   <span key={b} className="inline-flex items-center bg-card/80 border border-border/60 rounded-full px-4 py-2 text-sm font-medium text-foreground/80 shadow-card">
                     {b}
                   </span>

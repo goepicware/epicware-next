@@ -27,10 +27,11 @@ import {
   TrendingUp,
 } from "lucide-react";
 import CitationWall from "@/components/shared/CitationWall";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { PLANS, formatPrice } from "@/lib/pricing-data";
 import { isPriceIncreaseLive, PRICE_INCREASES } from "@/lib/price-increase";
-import { PROOF } from "@/lib/site/proof";
+import { PROOF, EPICWARE_GOOGLE_RATING } from "@/lib/site/proof";
 
 const CANONICAL = "https://www.epicware.ai/locations/singapore/seo";
 
@@ -83,17 +84,15 @@ function planHasFeature(planName: string, needle: string): boolean {
 const plansWithWebsiteSEO = effectivePlans.filter((p) => planHasFeature(p.name, "website seo"));
 
 // This page previously carried both "50+ outlets managed" and "100+
-// Outlets Managed" as separate badges — a direct self-contradiction.
-// PROOF.outletsManaged (lib/site/proof.ts) is the single source of
-// truth: unverified today, so this falls back to a non-numeric claim
-// instead of a guess. The moment a real figure is supplied there, this
-// badge starts showing it automatically.
+// Outlets Managed" as separate badges (a direct self-contradiction), and
+// an unsourced "5.0★ on Google" badge. Both now read from
+// lib/site/proof.ts — PROOF.outletsManaged (confirmed 50+, 2026-10-28)
+// and EPICWARE_GOOGLE_RATING (confirmed 5.0★/9, Epicware's own Google
+// Business Profile rating — not EPICWARE_AGGREGATE's unsourced 4.8★/809).
 const CREDENTIALS = [
-  PROOF.outletsManaged.verified
-    ? { icon: Award, label: `${PROOF.outletsManaged.value} Outlets Managed` }
-    : { icon: Award, label: "Multi-Outlet Ready" },
+  { icon: Award, label: `${PROOF.outletsManaged.value} Outlets Managed` },
   { icon: Award, label: "Founded by the NinjaOS team ($120M GMV, exited 2021)" },
-  { icon: Star, label: "5.0★ on Google" },
+  { icon: Star, label: `${EPICWARE_GOOGLE_RATING.value.toFixed(1)}★ Google rating (${EPICWARE_GOOGLE_RATING.count} reviews)` },
 ];
 
 const PAIN_CARDS = [
@@ -484,26 +483,24 @@ const schemaFAQ = {
   })),
 };
 
-const schemaBreadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
-    { "@type": "ListItem", position: 2, name: "SEO Agency Singapore", item: CANONICAL },
-  ],
-};
-
 export default function SeoAgencySingaporePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaService) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
 
       {/* Fold 1 · Hero */}
       <section className="hero-gradient pt-28 pb-16">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-5">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Locations", href: "/locations" },
+              { label: "Singapore", href: "/locations/singapore" },
+              { label: "SEO" },
+            ]}
+          />
+          <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-5 mt-5">
             AI-POWERED SEO AGENCY · SINGAPORE
           </div>
           <h1 className="font-display font-bold text-foreground mb-5 leading-tight">
@@ -1072,14 +1069,9 @@ export default function SeoAgencySingaporePage() {
             </Link>
           </div>
           <p className="text-sm text-muted-foreground">
-            {/* "50+ outlets managed" removed — PROOF.outletsManaged is unverified, same conflict as the CREDENTIALS badge above.
-                "5 markets" removed — Epicware is Singapore-built with no confirmed active presence in 4 other markets; don't claim one.
+            {/* "5 markets" removed — Epicware is Singapore-built with no confirmed active presence in 4 other markets; don't claim one.
                 "5 published case studies" corrected to 6 — actual count of app/case-studies/* subdirectories. */}
-            {[
-              PROOF.outletsManaged.verified ? `${PROOF.outletsManaged.value} outlets managed` : null,
-              "6 dated #1 results",
-              "6 published case studies",
-            ].filter(Boolean).join(" · ")}
+            {PROOF.outletsManaged.value} outlets managed · 6 dated #1 results · 6 published case studies
           </p>
         </div>
       </section>

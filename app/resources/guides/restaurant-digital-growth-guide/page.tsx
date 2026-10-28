@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import GuidePage from "@/components/content/GuidePage";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Restaurant Digital Growth Guide (Free) | Epicware" },
@@ -48,7 +49,7 @@ export default function Page() {
           .
         </>
       }
-      trustSignals={["Singapore F&B Market", "500+ Outlets Managed", "Live Dashboard Included", "Bad Review Removal Available"]}
+      trustSignals={["Singapore F&B Market", `${PROOF.outletsManaged.value} Outlets Managed`, "Live Dashboard Included", "Bad Review Removal Available"]}
       imageSrc="/assets/review-management-illustration.png"
       intro={
         <>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import GuidePage from "@/components/content/GuidePage";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Local Business Playbook 2026 (Free Guide) | Epicware" },
@@ -30,7 +31,7 @@ export default function Page() {
       badge="LOCAL BUSINESS PLAYBOOK 2026"
       h1="Local Business Playbook 2026 — Google Maps, AI Search & Reputation"
       subtitle="The tactics that drive local customer acquisition for Singapore SMBs in 2026 — from GBP to AI search visibility."
-      trustSignals={["Updated June 2026", "Singapore Market", "AI Search Included", "Tested on 500+ Outlets"]}
+      trustSignals={["Updated June 2026", "Singapore Market", "AI Search Included", `Tested on ${PROOF.outletsManaged.value} Outlets`]}
       intro={
         <>
           <p>The local search landscape has shifted materially since 2024. AI-powered search features — Google AI Overviews, ChatGPT search, Perplexity — have added a new layer to how potential customers find local businesses. Traditional Google Maps optimisation remains the foundation, but it is no longer the complete picture.</p>

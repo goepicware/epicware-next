@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PROOF } from "@/lib/site/proof";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
@@ -93,7 +94,7 @@ export default function GetMoreGoogleReviewsPage() {
           "15-30% WhatsApp Conversion",
           "Automated Campaigns",
           "Singapore-Built",
-          "500+ Outlets Managed",
+          `${PROOF.outletsManaged.value} Outlets Managed`,
         ]}
         imageSrc="/assets/review-management-illustration.png"
       />

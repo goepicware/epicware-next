@@ -61,6 +61,12 @@ export default function LocationsHubPage() {
               </Link>
             ))}
           </div>
+          {availableCountries.length < COUNTRIES.length && (
+            <p className="text-sm text-muted-foreground mt-6">
+              {COUNTRIES.filter((c) => !availableCountries.includes(c)).map((c) => c.displayName).join(", ")} — more
+              markets launching soon.
+            </p>
+          )}
         </div>
       </section>
 

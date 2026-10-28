@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Services: SEO, Local SEO, AI Search & Reviews | Epicware" },
@@ -37,7 +38,7 @@ const schema = {
 };
 
 const TRUST_SIGNALS = [
-  "500+ Outlets Managed",
+  `${PROOF.outletsManaged.value} Outlets Managed`,
   "Bad Review Removal Guaranteed",
   "Singapore-Built",
   "Active in SG · MY · UAE · UK · US",

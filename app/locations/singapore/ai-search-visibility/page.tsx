@@ -65,6 +65,12 @@ export default function AiSearchVisibilitySingaporePage() {
       />
 
       <CategoryHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Locations", href: "/locations" },
+          { label: "Singapore", href: "/locations/singapore" },
+          { label: "AI Search Visibility" },
+        ]}
         badge="AI & GEO VISIBILITY · SINGAPORE"
         h1="AI & GEO Visibility Singapore — Get Found by ChatGPT and Google AI"
         subtitle="ChatGPT, Perplexity, and Google's AI Overviews now answer Singapore local searches. If your business isn't optimised for these AI systems, you're invisible to the next generation of search."

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
+import { PROOF } from "@/lib/site/proof";
 
 const OG_IMAGE =
   "https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782541171737_Small-business-owner-reviewing-reputation-documents.jpeg";
@@ -387,7 +388,7 @@ export default function Post() {
                 bad review removal service
               </Link>{" "}
               where the $200 per-review fee is refunded in full if the review isn't taken down within 3 months. That
-              refund guarantee removes the financial risk of trying to clean up your profile. With over 50 outlets managed and a track record
+              refund guarantee removes the financial risk of trying to clean up your profile. With over {PROOF.outletsManaged.value} outlets managed and a track record
               of measurable results, Epicware gives SMBs the tools to recover faster and maintain the reputation
               they rebuild. If you&apos;d rather hand recovery to a team, a{" "}
               <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">

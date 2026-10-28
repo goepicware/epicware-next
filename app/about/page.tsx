@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "About Epicware | AI-Powered Growth Agency" },
@@ -312,7 +313,7 @@ export default function AboutPage() {
             ))}
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {["10+ Years Experience", "50+ Brands Served", "Singapore-Built", "100+ Outlets Managed"].map((signal) => (
+            {["10+ Years Experience", "50+ Brands Served", "Singapore-Built", `${PROOF.outletsManaged.value} Outlets Managed`].map((signal) => (
               <div
                 key={signal}
                 className="flex items-center gap-2 bg-card border border-border/60 rounded-full px-4 py-2 shadow-card"

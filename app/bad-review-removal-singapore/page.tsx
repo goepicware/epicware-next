@@ -3,6 +3,7 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Bad Google Review Removal in Singapore | Epicware" },
@@ -75,7 +76,7 @@ export default function BadReviewRemovalSingaporePage() {
           "$200/Review · Refund Guarantee",
           "Singapore-Built",
           "Removal Initiated Within 24 Hours",
-          "500+ Outlets Protected",
+          `${PROOF.outletsManaged.value} Outlets Protected`,
         ]}
         imageSrc="/assets/review-management-illustration.png"
       />

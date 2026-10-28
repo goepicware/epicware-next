@@ -31,6 +31,7 @@ import {
 import CitationWall from "@/components/shared/CitationWall";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { PLANS, formatPrice } from "@/lib/pricing-data";
+import { PROOF } from "@/lib/site/proof";
 import { isPriceIncreaseLive, PRICE_INCREASES } from "@/lib/price-increase";
 
 const CANONICAL = "https://www.epicware.ai/seo-agency-singapore";
@@ -84,7 +85,7 @@ function planHasFeature(planName: string, needle: string): boolean {
 const plansWithWebsiteSEO = effectivePlans.filter((p) => planHasFeature(p.name, "website seo"));
 
 const CREDENTIALS = [
-  { icon: Users, label: "50+ outlets managed" },
+  { icon: Users, label: `${PROOF.outletsManaged.value} outlets managed` },
   { icon: Award, label: "Founded by the NinjaOS team ($120M GMV, exited 2021)" },
   { icon: Star, label: "5.0★ on Google" },
   { icon: Globe, label: "Active in SG · MY · UAE · UK · US" },
@@ -1066,7 +1067,7 @@ export default function SeoAgencySingaporePage() {
             </Link>
           </div>
           <p className="text-sm text-muted-foreground">
-            50+ outlets managed · 6 dated #1 results · 5 published case studies · 5 markets
+            {PROOF.outletsManaged.value} outlets managed · 6 dated #1 results · 5 published case studies · 5 markets
           </p>
         </div>
       </section>

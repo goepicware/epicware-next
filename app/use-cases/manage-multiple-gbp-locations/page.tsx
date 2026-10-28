@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PROOF } from "@/lib/site/proof";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
@@ -113,7 +114,7 @@ export default function ManageMultipleGBPLocationsPage() {
         trustSignals={[
           "One Dashboard for All Outlets",
           "Singapore-Built",
-          "500+ Outlets Managed",
+          `${PROOF.outletsManaged.value} Outlets Managed`,
           "AI-Native",
         ]}
         imageSrc="/assets/epicmap-before-after.png"

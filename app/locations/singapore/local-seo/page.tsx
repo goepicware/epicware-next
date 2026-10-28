@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { PROOF } from "@/lib/site/proof";
 import {
   Store,
   Search,
@@ -39,12 +40,12 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: { absolute: "Local SEO Services Singapore | Local SEO Agency | Epicware" },
   description:
-    "Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed 100+ outlets.",
+    `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
   alternates: { canonical: "https://www.epicware.ai/locations/singapore/local-seo" },
   openGraph: {
     title: "Local SEO Services Singapore | Local SEO Agency | Epicware",
     description:
-      "Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed 100+ outlets.",
+      `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
     url: "https://www.epicware.ai/locations/singapore/local-seo",
   },
 };
@@ -58,7 +59,7 @@ const schema = {
       url: "https://www.epicware.ai/locations/singapore/local-seo",
       name: "Local SEO Services Singapore | Local SEO Agency | Epicware",
       description:
-        "Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a local SEO agency that has managed 100+ outlets.",
+        `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
       inLanguage: "en-SG",
       dateModified: "2026-10-16",
       lastReviewed: "2026-10-16",
@@ -215,7 +216,14 @@ export default function LocalSEOSingaporePage() {
       {/* Fold 1: Hero */}
       <section className="hero-gradient pt-24 pb-16">
         <div className="container mx-auto px-6 max-w-7xl">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Local SEO Services" }]} />
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Locations", href: "/locations" },
+              { label: "Singapore", href: "/locations/singapore" },
+              { label: "Local SEO" },
+            ]}
+          />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mt-6">
             <div>
               <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-5">
@@ -241,7 +249,7 @@ export default function LocalSEOSingaporePage() {
                 ⭐ Rated on Google
               </a>
               <div className="flex flex-wrap gap-3">
-                {["100+ Outlets Managed", "10+ Years' Specialist Experience", "Listings Corrected on 40+ Directories", "50+ Negative Reviews Removed"].map((b) => (
+                {[`${PROOF.outletsManaged.value} Outlets Managed`, "10+ Years' Specialist Experience", "Listings Corrected on 40+ Directories", "50+ Negative Reviews Removed"].map((b) => (
                   <span key={b} className="inline-flex items-center bg-card/80 border border-border/60 rounded-full px-4 py-2 text-sm font-medium text-foreground/80 shadow-card">
                     {b}
                   </span>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { PROOF } from "@/lib/site/proof";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 32 },
@@ -20,7 +21,7 @@ const STEPS = [
 
 /* ── Platform stats strip ── */
 const METRICS = [
-  { value: "50+", label: "outlets managed" },
+  { value: PROOF.outletsManaged.value, label: "outlets managed" },
   { value: "4.8★", label: "avg rating lift" },
   { value: "100+", label: "reviews removed" },
 ];

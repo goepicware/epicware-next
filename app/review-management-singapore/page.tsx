@@ -3,6 +3,7 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Google Review Management Services Singapore | Epicware" },
@@ -75,7 +76,7 @@ export default function ReviewManagementSingaporePage() {
           "Real-Time Monitoring",
           "AI Review Responses",
           "Singapore-Built",
-          "500+ Outlets Managed",
+          `${PROOF.outletsManaged.value} Outlets Managed`,
         ]}
         imageSrc="/assets/review-management-illustration.png"
       />

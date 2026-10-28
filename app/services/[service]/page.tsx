@@ -9,7 +9,7 @@ import { getService, SERVICES } from "@/lib/site/services";
 import { COUNTRIES } from "@/lib/site/countries";
 import { getMoneyPageContent, getSubFeatureContent } from "@/lib/site/content";
 import { getServiceContent } from "@/lib/site/serviceContent";
-import { EPICWARE_AGGREGATE } from "@/lib/site/proof";
+import { EPICWARE_GOOGLE_RATING } from "@/lib/site/proof";
 
 /**
  * Global /services/{service}/ pages — market-neutral, always live. Each
@@ -77,7 +77,6 @@ export default async function ServicePage({
   );
 
   const liveCountries = COUNTRIES.filter((c) => isCountryServiceLive(c.slug, slug));
-  const draftCountries = COUNTRIES.filter((c) => !isCountryServiceLive(c.slug, slug));
 
   // Content not written yet for this service — render the original thin
   // layout so the other 5 services keep building and linking correctly
@@ -151,10 +150,10 @@ export default async function ServicePage({
     url: `https://epicware.ai/services/${slug}`,
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: EPICWARE_AGGREGATE.ratingValue,
-      ratingCount: EPICWARE_AGGREGATE.ratingCount,
-      bestRating: EPICWARE_AGGREGATE.bestRating,
-      worstRating: EPICWARE_AGGREGATE.worstRating,
+      ratingValue: String(EPICWARE_GOOGLE_RATING.value),
+      ratingCount: String(EPICWARE_GOOGLE_RATING.count),
+      bestRating: "5",
+      worstRating: "1",
     },
   };
 
@@ -251,24 +250,26 @@ export default async function ServicePage({
           <p className="text-base text-muted-foreground leading-relaxed mb-8 max-w-2xl">{content.proofIntro}</p>
           <div className="flex items-center gap-2 mb-6">
             <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-            <span className="font-semibold text-foreground">{EPICWARE_AGGREGATE.ratingValue}</span>
-            <span className="text-sm text-muted-foreground">({EPICWARE_AGGREGATE.ratingCount} verified ratings)</span>
+            <span className="font-semibold text-foreground">{EPICWARE_GOOGLE_RATING.value.toFixed(1)}★ on Google</span>
+            <span className="text-sm text-muted-foreground">({EPICWARE_GOOGLE_RATING.count} reviews)</span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {content.caseStudies.map((cs) => (
-              <Link
-                key={cs.href}
-                href={cs.href}
-                className="rounded-2xl border border-border/60 bg-card p-6 hover:shadow-card transition-shadow duration-300 flex flex-col gap-2 group"
-              >
-                <span className="text-sm font-bold text-primary">{cs.stat}</span>
-                <h3 className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors">{cs.title}</h3>
-                <span className="text-xs font-semibold text-primary flex items-center gap-1 mt-auto">
-                  Read case study <ArrowRight className="w-3.5 h-3.5" />
-                </span>
-              </Link>
-            ))}
-          </div>
+          {content.caseStudies.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {content.caseStudies.map((cs) => (
+                <Link
+                  key={cs.href}
+                  href={cs.href}
+                  className="rounded-2xl border border-border/60 bg-card p-6 hover:shadow-card transition-shadow duration-300 flex flex-col gap-2 group"
+                >
+                  <span className="text-sm font-bold text-primary">{cs.stat}</span>
+                  <h3 className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors">{cs.title}</h3>
+                  <span className="text-xs font-semibold text-primary flex items-center gap-1 mt-auto">
+                    Read case study <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -310,15 +311,15 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Choose your market */}
+      {/* Choose your market — Singapore linked, everything else as one
+          plain line, not individually named/greyed-out countries. Draft
+          country pages stay unlinked from here regardless of how many
+          exist, so this doesn't need updating as more go live one by one;
+          revisit when a second market actually launches. */}
       <section className="py-12 lg:py-16">
         <div className="container mx-auto px-6 max-w-3xl">
           <h2 className="font-display text-foreground mb-3">Choose Your Market</h2>
-          <p className="text-base text-muted-foreground leading-relaxed mb-6">
-            {content.h1} is available today in Singapore. The other markets below are on our roadmap — linked once a
-            page for that market is live, not before.
-          </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap items-center gap-4">
             {liveCountries.map((c) => (
               <Link
                 key={c.slug}
@@ -328,15 +329,7 @@ export default async function ServicePage({
                 {c.displayName} <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             ))}
-            {draftCountries.map((c) => (
-              <span
-                key={c.slug}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/40 bg-muted/30 text-sm font-medium text-muted-foreground/60"
-                title="Not live yet"
-              >
-                {c.displayName} — coming soon
-              </span>
-            ))}
+            <span className="text-sm text-muted-foreground">More markets launching soon</span>
           </div>
         </div>
       </section>

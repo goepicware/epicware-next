@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Singapore Areas We Serve | Local SEO by District | Epicware" },
@@ -126,7 +127,7 @@ export default function SingaporeHubPage() {
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
           "Singapore-Built",
-          "500+ Outlets Managed",
+          `${PROOF.outletsManaged.value} Outlets Managed`,
           "Bad Review Removal Guaranteed",
           "SG · MY · UAE · UK · US",
         ]}

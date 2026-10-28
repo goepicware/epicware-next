@@ -4,6 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "EpicMap | Google Maps Rank Tracker & Grid Heatmaps" },
@@ -102,7 +103,7 @@ export default function EpicMapPage() {
           "Singapore-Built",
           "AI-Native",
           "Live Dashboard Included",
-          "500+ Outlets Managed",
+          `${PROOF.outletsManaged.value} Outlets Managed`,
         ]}
         imageSrc="/assets/EpicMapImageforweb.png"
       />

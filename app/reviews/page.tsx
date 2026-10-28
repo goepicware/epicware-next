@@ -3,23 +3,22 @@ import Link from "next/link";
 import { Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { EPICWARE_PROVIDER } from "@/lib/seo-config";
+import { GOOGLE_PLACE_ID, EPICWARE_GOOGLE_RATING } from "@/lib/site/proof";
 
-const PLACE_ID = "ChIJIewhBnQZ2jEREYj-Xh1_JMk";
-const WRITE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${PLACE_ID}`;
+const WRITE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
 
-// This is Epicware's own Google Business Profile rating (the specific
-// place_id above) — not the same figure as EPICWARE_AGGREGATE in
-// lib/seo-config.ts, which blends multiple review sources across all
-// products for service-page schema. Used here as the fallback if the live
-// Places fetch below is unavailable or fails.
-const STATIC_RATING = { value: 5, count: 7 };
+// Static fallback for Epicware's own Google Business Profile rating —
+// see lib/site/proof.ts for why this isn't EPICWARE_AGGREGATE, and for
+// the single source of truth these values come from (confirmed by the
+// business owner 2026-10-28).
+const STATIC_RATING = { value: EPICWARE_GOOGLE_RATING.value, count: EPICWARE_GOOGLE_RATING.count };
 
 async function getLiveRating(): Promise<{ value: number; count: number; isLive: boolean }> {
   const key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   if (!key) return { ...STATIC_RATING, isLive: false };
   try {
     const res = await fetch(
-      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=rating,user_ratings_total&key=${key}`,
+      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${GOOGLE_PLACE_ID}&fields=rating,user_ratings_total&key=${key}`,
       { next: { revalidate: 3600 } }
     );
     const data = await res.json();

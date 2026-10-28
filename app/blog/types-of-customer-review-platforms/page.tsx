@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
+import { PROOF } from "@/lib/site/proof";
 
 const OG_IMAGE =
   "https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782441175278_Man-reviewing-printed-customer-review-reports.jpeg";
@@ -478,7 +479,7 @@ export default function Post() {
               <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                 bad review removal service
               </Link>{" "}
-              where the $200 per-review fee is refunded in full if the review isn't taken down within 3 months. With over 50 outlets managed and a track
+              where the $200 per-review fee is refunded in full if the review isn't taken down within 3 months. With over {PROOF.outletsManaged.value} outlets managed and a track
               record of measurable ranking improvements, Epicware gives business owners a clear path to stronger
               visibility.
             </p>

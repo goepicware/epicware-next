@@ -4,6 +4,7 @@ import CategoryHero from "@/components/category/CategoryHero";
 import ServicesGrid from "@/components/category/ServicesGrid";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Reputation Management Services in Singapore | Epicware" },
@@ -94,7 +95,7 @@ export default function ReputationManagementPage() {
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Get Free GBP Audit", href: "/free-audit" }}
         trustSignals={[
-          "500+ Outlets Managed",
+          `${PROOF.outletsManaged.value} Outlets Managed`,
           "Bad Review Removal Guaranteed",
           "Singapore-Built",
           "Active in SG · MY · UAE · UK · US",

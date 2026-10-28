@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import IndustryPage from "@/components/industries/IndustryPage";
+import { PROOF } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
   title: { absolute: "Restaurant SEO Singapore | Google Maps & Reviews | Epicware" },
@@ -104,7 +105,7 @@ export default function RestaurantsPage() {
         "Multi-Outlet Dashboard",
         "Bad Review Removal Guaranteed",
         "Singapore-Built",
-        "500+ Outlets Managed",
+        `${PROOF.outletsManaged.value} Outlets Managed`,
       ]}
       imageSrc="/assets/review-management-illustration.png"
       openingParagraph={

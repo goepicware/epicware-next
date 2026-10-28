@@ -98,6 +98,12 @@ export default function ReputationManagementPage() {
       />
 
       <CategoryHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Locations", href: "/locations" },
+          { label: "Singapore", href: "/locations/singapore" },
+          { label: "Review Management" },
+        ]}
         badge="REPUTATION MANAGEMENT · SINGAPORE"
         h1="Reputation Management in Singapore — Protect Your Rating, Own Your Reviews"
         subtitle={
