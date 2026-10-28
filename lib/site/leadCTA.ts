@@ -118,6 +118,8 @@ export const LEAD_CTA_CONFIG: Record<string, LeadCTAConfig> = {
     primaryLabel: "Get a Free Website SEO Audit",
     leadType: "seo-audit",
     primaryHref: "/free-audit",
+    formTitle: "Get a Free Website SEO Audit",
+    formSubtitle: "We'll check your technical SEO, content and authority gaps, and show you where you're losing to competitors.",
     fields: [],
   },
 
@@ -126,6 +128,8 @@ export const LEAD_CTA_CONFIG: Record<string, LeadCTAConfig> = {
     primaryLabel: "Get a Free AI Visibility Check",
     leadType: "ai-visibility",
     primaryHref: "/ai-visibility",
+    formTitle: "Get a Free AI Visibility Check",
+    formSubtitle: "See what ChatGPT, Gemini and Google's AI features currently say about your business — or whether they mention you at all.",
     fields: [],
   },
 

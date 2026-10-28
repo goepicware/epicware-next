@@ -23,7 +23,11 @@ import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
  * variant="bottom": in form-mode, the actual form, submitting to
  * /api/audit-lead with the same retry/backup/visible-error handling as
  * the free-audit wizard (app/free-audit/FreeAuditWizard.tsx's
- * submitLeadWithRetry). Renders nothing in link-mode.
+ * submitLeadWithRetry). In link-mode, a simpler card repeating the
+ * primary link with its own heading/subtitle — not a form, but still a
+ * visible mid-page CTA, so link-mode pages aren't left with nothing
+ * between the hero and the generic site-wide FinalCTA at the very
+ * bottom of the page.
  */
 export default function ServiceLeadCTA({
   countrySlug,
@@ -60,7 +64,21 @@ export default function ServiceLeadCTA({
     );
   }
 
-  if (config.fields.length === 0) return null;
+  if (config.fields.length === 0) {
+    if (!config.primaryHref) return null;
+    return (
+      <div className="rounded-2xl border border-border/60 bg-card p-8 text-center">
+        <h3 className="font-display font-bold text-foreground text-xl mb-1">{config.formTitle ?? config.primaryLabel}</h3>
+        {config.formSubtitle && <p className="text-sm text-muted-foreground mb-6 max-w-lg mx-auto">{config.formSubtitle}</p>}
+        <Link
+          href={`${config.primaryHref}?country=${countrySlug}`}
+          className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
+        >
+          {config.primaryLabel} <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+    );
+  }
 
   return <LeadForm countrySlug={countrySlug} serviceSlug={serviceSlug} dialCode={country.dialCode} />;
 }
