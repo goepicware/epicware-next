@@ -80,6 +80,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/locations/usa/review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/locations/usa/local-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/locations/usa/google-business-profile`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/locations/usa/seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/locations/usa/ai-search-visibility`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/locations/usa/review-management`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // Use cases
     { url: `${BASE}/use-cases/remove-bad-google-reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
