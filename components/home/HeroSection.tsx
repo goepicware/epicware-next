@@ -66,29 +66,21 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          <div className="hero-fade-up flex items-center gap-7 flex-wrap" style={{ animationDelay: "250ms" }}>
-            <div>
+          <div
+            className="hero-fade-up grid grid-cols-3 divide-x divide-gray-200 max-w-md"
+            style={{ animationDelay: "250ms" }}
+          >
+            <div className="pr-4">
               <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">{PROOF.outletsManaged.value}</p>
               <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">outlets managed</p>
             </div>
 
-            <div className="w-px h-9 bg-gray-200 shrink-0" />
-
-            <div>
+            <div className="px-4">
               <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">{PROOF.reviewsRemoved.value}</p>
               <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">reputation issues handled</p>
             </div>
 
-            <div className="w-px h-9 bg-gray-200 shrink-0" />
-
-            <div>
-              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">{PROOF.removalSuccessRate.value}</p>
-              <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">removal success rate</p>
-            </div>
-
-            <div className="w-px h-9 bg-gray-200 shrink-0" />
-
-            <div>
+            <div className="pl-4">
               <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">{PROOF.brandsServed.value}</p>
               <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">brands served</p>
             </div>

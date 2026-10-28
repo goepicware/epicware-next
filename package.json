@@ -13,7 +13,7 @@
     "check:substance": "tsx scripts/check-page-substance.ts",
     "check:honesty": "tsx scripts/check-page-honesty.ts",
     "check:pages": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts",
-    "check:live-endpoints": "tsx scripts/check-live-endpoints.ts"
+    "check:live-endpoints": "tsx --env-file-if-exists=.env.local scripts/check-live-endpoints.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.1",

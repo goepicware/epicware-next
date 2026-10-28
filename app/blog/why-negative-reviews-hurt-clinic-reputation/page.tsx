@@ -304,7 +304,7 @@ export default function Post() {
             <Link href="/locations/singapore/review-removal" className="text-blue-600 hover:underline">
               remove bad reviews
             </Link>
-            . Epicware&apos;s proven track record — a 98% removal success rate across {PROOF.reviewsRemoved.value} bad
+            . Epicware&apos;s proven track record — a 94% removal success rate across {PROOF.reviewsRemoved.value} bad
             reviews removed for clients — translates directly into enhanced trust and increased patient calls. In one case,{" "}
             <Link href="/case-studies/clinic-review-growth-singapore" className="text-blue-600 hover:underline">
               a GP clinic network raised its Google rating to 4.7

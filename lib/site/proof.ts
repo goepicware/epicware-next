@@ -38,14 +38,22 @@
  * but still has no cited source — not yet confirmed, left as a TODO.
  *
  * ---------------------------------------------------------------------
- * REMOVAL SUCCESS RATE — confirmed 2026-10-28
+ * REMOVAL SUCCESS RATE — reverted to unconfirmed 2026-10-28
  * ---------------------------------------------------------------------
  * "94% removal success rate" was in circulation site-wide (case studies,
  * the Singapore SEO FAQ, components/home/NoRemovalNoFee.tsx's own TODO
- * placeholder) as an unconfirmed number. Confirmed with the business
- * owner: 98%. A separate, stale "500 bad reviews" figure in
- * app/blog/why-negative-reviews-hurt-clinic-reputation/page.tsx was
- * replaced with PROOF.reviewsRemoved at the same time.
+ * placeholder) as an unconfirmed number. Briefly changed to 98% the same
+ * day, but that number's only source was "98% removed" in a business-
+ * owner message about a different, unrelated set of stats — Claude
+ * invented the "removal success rate" framing in a clarifying question
+ * and the owner approved that framing's label, not an independently
+ * confirmed calculation. No numerator/denominator exists anywhere.
+ * Reverted to TODO pending an actual calculation and explicit
+ * re-confirmation — see yearsInBusiness below for the same pattern. The
+ * separate "500 bad reviews" → PROOF.reviewsRemoved fix in
+ * app/blog/why-negative-reviews-hurt-clinic-reputation/page.tsx made at
+ * the same time stands; that one was a genuine stale-number correction,
+ * unrelated to the removalSuccessRate mixup.
  */
 
 export { EPICWARE_PROVIDER } from "@/lib/seo-config";
@@ -86,13 +94,13 @@ export const PROOF = {
   } satisfies ProofValue,
 
   /**
-   * Distinct metric from reviewsRemoved (a count, not a rate). Was a
-   * TODO placeholder ("94%", unconfirmed) in components/home/NoRemovalNoFee.tsx
-   * until confirmed by the business owner 2026-10-28 — see file header comment.
+   * Distinct metric from reviewsRemoved (a count, not a rate). Not
+   * confirmed — see file header comment for why "98%" doesn't count.
    */
   removalSuccessRate: {
-    value: "98%",
-    verified: true,
+    value: null,
+    verified: false,
+    todo: "TODO(proof): need an actual calculation (numerator/denominator) and explicit confirmation of this specific metric — not a number pulled from an unrelated message.",
   } satisfies ProofValue,
 
   /**

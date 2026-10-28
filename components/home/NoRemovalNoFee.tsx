@@ -6,7 +6,6 @@ import { ArrowRight } from "lucide-react";
 import { PROOF } from "@/lib/site/proof";
 
 const STATS = [
-  { value: PROOF.removalSuccessRate.value, label: "removal success rate" },
   { value: PROOF.reviewsRemoved.value, label: "bad reviews removed" },
   { value: "100%", label: "refunded if not removed" },
 ];
@@ -40,7 +39,7 @@ export default function NoRemovalNoFee() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="grid grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-2 gap-6 mb-12 max-w-md mx-auto"
         >
           {STATS.map((stat) => (
             <div key={stat.label} className="text-center py-6 px-4 rounded-2xl" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
