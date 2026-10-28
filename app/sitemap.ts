@@ -14,15 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Homepage
     { url: `${BASE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
 
-    // Core money pages
-    { url: `${BASE}/seo-agency-singapore`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
-    { url: `${BASE}/bad-review-removal-singapore`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE}/review-management-singapore`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-
-    // Core service children
-    { url: `${BASE}/bad-review-removal-singapore/fake-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/bad-review-removal-singapore/unfair-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/review-management-singapore/google-reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    // Locations — Singapore money pages (live country × service pages)
+    { url: `${BASE}/locations/singapore/seo`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${BASE}/locations/singapore/review-removal`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${BASE}/locations/singapore/review-management`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/locations/singapore/local-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/locations/singapore/google-business-profile`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/locations/singapore/ai-search-visibility`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // Products
     { url: `${BASE}/products`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
@@ -31,30 +29,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/products/epicengage`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/products/epicsocial`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
-    // Services hub + category pages
+    // Services hub + global category pages
     { url: `${BASE}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/reputation-management-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE}/local-seo-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE}/ai-search-visibility-singapore`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/services/local-seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/services/google-business-profile`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/services/seo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/services/ai-search-visibility`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/services/review-management`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/services/review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/growth-tools`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
-    // Reputation management children
-    { url: `${BASE}/reputation-management-singapore/ai-review-response`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/reputation-management-singapore/review-generation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/reputation-management-singapore/review-widgets`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/reputation-management-singapore/reputation-analytics`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-
-    // Local SEO children
-    { url: `${BASE}/local-seo-singapore/gbp-optimisation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/local-seo-singapore/gbp-post-scheduling`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/local-seo-singapore/gbp-setup`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/local-seo-singapore/local-rank-tracking`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/local-seo-singapore/competitor-analysis`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-
-    // AI & GEO children
-    { url: `${BASE}/ai-search-visibility-singapore/geo-optimisation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/ai-search-visibility-singapore/ai-citation-building`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/ai-search-visibility-singapore/aeo`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    // Services sub-feature pages — /services/{service}/{subFeature}
+    { url: `${BASE}/services/local-seo/citation-building`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/local-seo/competitor-analysis`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/local-seo/rank-tracking`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/google-business-profile/setup`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/google-business-profile/post-scheduling`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/ai-search-visibility/aeo`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/ai-search-visibility/ai-citation-building`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/ai-search-visibility/geo-optimisation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/review-management/ai-review-response`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/review-management/reputation-analytics`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/review-management/review-generation`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/review-management/review-widgets`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/review-removal/fake-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/services/review-removal/unfair-review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Growth tools children
     { url: `${BASE}/growth-tools/epicengage-email-marketing`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
