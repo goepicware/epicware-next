@@ -18,6 +18,92 @@ function backupLead(body: unknown, isTest: boolean) {
   }
 }
 
+/**
+ * Shared sender for ServiceLeadCTA (components/site/ServiceLeadCTA.tsx)
+ * leads — local-seo and gbp-audit today. review-removal predates this
+ * helper and keeps its own inline branch below rather than being
+ * refactored onto it, since that one's already live in production.
+ */
+async function sendCtaLeadEmail(opts: {
+  apiKey: string;
+  isTest: boolean;
+  name: string;
+  email: string;
+  phone?: string;
+  country?: string;
+  pageLabel: string;
+  pagePath: string;
+  color: string;
+  emoji: string;
+  extraFields: { label: string; value?: string }[];
+}): Promise<NextResponse> {
+  const { apiKey, isTest, name, email, phone, country, pageLabel, pagePath, color, emoji, extraFields } = opts;
+
+  const extraRowsHtml = extraFields
+    .map(
+      (f) =>
+        `<tr style="border-bottom: 1px solid #f3f4f6;"><td style="padding: 10px 0; color: #6b7280; width: 160px; font-size: 14px;">${f.label}</td><td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${f.value || "—"}</td></tr>`
+    )
+    .join("");
+  const extraRowsText = extraFields.map((f) => `${f.label}: ${f.value || "—"}`).join("\n");
+
+  const html = `
+    <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
+      <div style="background: ${color}; padding: 20px 24px; border-radius: 12px 12px 0 0;">
+        <h2 style="color: white; margin: 0; font-size: 18px;">${emoji} New ${pageLabel} Lead</h2>
+      </div>
+      <div style="border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px; padding: 24px;">
+        <table style="width: 100%; border-collapse: collapse;">
+          <tr style="border-bottom: 1px solid #f3f4f6;">
+            <td style="padding: 10px 0; color: #6b7280; width: 160px; font-size: 14px;">Name</td>
+            <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${name}</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #f3f4f6;">
+            <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">Email</td>
+            <td style="padding: 10px 0; font-weight: 600; font-size: 14px;"><a href="mailto:${email}" style="color: #2563EB;">${email}</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid #f3f4f6;">
+            <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">Phone</td>
+            <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${phone || "—"}</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #f3f4f6;">
+            <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">Country</td>
+            <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${country || "—"}</td>
+          </tr>
+          ${extraRowsHtml}
+        </table>
+        <p style="margin: 20px 0 0; font-size: 12px; color: #9ca3af; text-align: center;">
+          Submitted ${new Date().toLocaleString("en-SG", { timeZone: "Asia/Singapore" })} SGT via epicware.ai/locations/${country || "unknown"}/${pagePath}
+        </p>
+      </div>
+    </div>
+  `;
+  const text = `New ${pageLabel} Lead\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || "—"}\nCountry: ${country || "—"}\n${extraRowsText}`;
+
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+      body: JSON.stringify({
+        from: "Epicware Audit <noreply@epicware.ai>",
+        to: ["vignesh@epicware.ai"],
+        reply_to: email,
+        subject: `${isTest ? "[TEST] " : ""}${pageLabel} Lead — ${name} (${country || "unknown"})`,
+        text,
+        html,
+      }),
+    });
+    if (!res.ok) {
+      console.error(`[audit-lead] Resend error (${pagePath}):`, await res.text());
+      return NextResponse.json({ success: true, emailSent: false });
+    }
+  } catch (err) {
+    console.error(`[audit-lead] Resend request threw (${pagePath}):`, err);
+    return NextResponse.json({ success: true, emailSent: false });
+  }
+  return NextResponse.json({ success: true, emailSent: true });
+}
+
 export async function POST(req: NextRequest) {
   const limited = rateLimitResponse(req, "audit-lead");
   if (limited) return limited;
@@ -46,11 +132,13 @@ export async function POST(req: NextRequest) {
     businessName, businessAddress, websiteUrl,
     placeId, keywords, radiusKm,
     country, reviewProfileUrl, notes,
+    businessNameOrMapsLink, cityMetro, gbpMapsLink,
   } = body as {
     name?: string; email?: string; phone?: string; leadType?: string;
     businessName?: string; businessAddress?: string; websiteUrl?: string;
     placeId?: string; keywords?: string[]; radiusKm?: number;
     country?: string; reviewProfileUrl?: string; notes?: string;
+    businessNameOrMapsLink?: string; cityMetro?: string; gbpMapsLink?: string;
   };
 
   if (!name?.trim() || !email?.trim()) {
@@ -135,6 +223,31 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: true, emailSent: false });
     }
     return NextResponse.json({ success: true, emailSent: true });
+  }
+
+  if (leadType === "local-seo") {
+    return sendCtaLeadEmail({
+      apiKey, isTest, name, email, phone, country,
+      pageLabel: "Local SEO",
+      pagePath: "local-seo",
+      color: "#7C3AED",
+      emoji: "📍",
+      extraFields: [
+        { label: "Business / Maps link", value: businessNameOrMapsLink },
+        { label: "City / metro", value: cityMetro },
+      ],
+    });
+  }
+
+  if (leadType === "gbp-audit") {
+    return sendCtaLeadEmail({
+      apiKey, isTest, name, email, phone, country,
+      pageLabel: "GBP Audit",
+      pagePath: "google-business-profile",
+      color: "#059669",
+      emoji: "📋",
+      extraFields: [{ label: "Google Maps link", value: gbpMapsLink }],
+    });
   }
 
   const kwList = Array.isArray(keywords) && keywords.length > 0

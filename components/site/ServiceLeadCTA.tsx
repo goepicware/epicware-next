@@ -75,8 +75,9 @@ function LeadForm({
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState(`${dialCode} `);
-  const [profileUrl, setProfileUrl] = useState("");
-  const [notes, setNotes] = useState("");
+  const [fieldValues, setFieldValues] = useState<Record<string, string>>(
+    Object.fromEntries(config.fields.map((f) => [f.id, ""]))
+  );
   const [formError, setFormError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"idle" | "saved" | "failed">("idle");
@@ -117,9 +118,11 @@ function LeadForm({
         setFormError("Please enter a valid email address.");
         return;
       }
-      if (!profileUrl.trim()) {
-        setFormError(`${config.profileUrlLabel} is required.`);
-        return;
+      for (const field of config.fields) {
+        if (field.required && !fieldValues[field.id]?.trim()) {
+          setFormError(`${field.label} is required.`);
+          return;
+        }
       }
       setFormError("");
       setSubmitting(true);
@@ -127,15 +130,13 @@ function LeadForm({
         name,
         email,
         phone,
-        leadType: serviceSlug,
+        leadType: config.leadType,
         country: countrySlug,
-        reviewProfileUrl: profileUrl,
-        websiteUrl: profileUrl,
-        notes,
+        ...Object.fromEntries(config.fields.map((f) => [f.payloadKey, fieldValues[f.id] ?? ""])),
       });
       setSubmitting(false);
     },
-    [name, email, phone, profileUrl, notes, countrySlug, serviceSlug, config, submitWithRetry]
+    [name, email, phone, fieldValues, countrySlug, config, submitWithRetry]
   );
 
   if (saveStatus === "saved") {
@@ -143,7 +144,7 @@ function LeadForm({
       <div id={config.formAnchorId} className="scroll-mt-28 rounded-2xl border border-border/60 bg-card p-8 text-center">
         <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-3" />
         <h3 className="font-display font-bold text-foreground text-xl mb-2">Got it — thanks.</h3>
-        <p className="text-muted-foreground">We&apos;ll review your submission and get back to you shortly with what&apos;s removable.</p>
+        <p className="text-muted-foreground">We&apos;ll review your submission and get back to you shortly.</p>
       </div>
     );
   }
@@ -173,32 +174,32 @@ function LeadForm({
           </label>
           <input id="lead-phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={`${dialCode} XXX XXX XXXX`} className={inputClass} />
         </div>
-        <div className="space-y-1.5">
-          <label htmlFor="lead-profile-url" className="text-sm font-medium text-foreground">
-            {config.profileUrlLabel} <span className="text-destructive">*</span>
-          </label>
-          <input
-            id="lead-profile-url"
-            required
-            value={profileUrl}
-            onChange={(e) => setProfileUrl(e.target.value)}
-            placeholder={config.profileUrlPlaceholder}
-            className={inputClass}
-          />
-        </div>
-        <div className="space-y-1.5">
-          <label htmlFor="lead-notes" className="text-sm font-medium text-foreground">
-            {config.notesLabel}
-          </label>
-          <textarea
-            id="lead-notes"
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-            placeholder={config.notesPlaceholder}
-            rows={3}
-            className={`${inputClass} h-auto py-2.5 resize-none`}
-          />
-        </div>
+        {config.fields.map((field) => (
+          <div key={field.id} className="space-y-1.5">
+            <label htmlFor={`lead-${field.id}`} className="text-sm font-medium text-foreground">
+              {field.label} {field.required && <span className="text-destructive">*</span>}
+            </label>
+            {field.type === "textarea" ? (
+              <textarea
+                id={`lead-${field.id}`}
+                value={fieldValues[field.id] ?? ""}
+                onChange={(e) => setFieldValues((prev) => ({ ...prev, [field.id]: e.target.value }))}
+                placeholder={field.placeholder}
+                rows={3}
+                className={`${inputClass} h-auto py-2.5 resize-none`}
+              />
+            ) : (
+              <input
+                id={`lead-${field.id}`}
+                required={field.required}
+                value={fieldValues[field.id] ?? ""}
+                onChange={(e) => setFieldValues((prev) => ({ ...prev, [field.id]: e.target.value }))}
+                placeholder={field.placeholder}
+                className={inputClass}
+              />
+            )}
+          </div>
+        ))}
 
         {formError && (
           <p className="text-sm text-destructive flex items-center gap-1.5">

@@ -127,4 +127,27 @@ export const PRICING = {
     SGD: 200,
     USD: 200,
   },
+
+  /**
+   * USA offer pricing for the local-seo and google-business-profile money
+   * pages, confirmed by the business owner for Phase 5 (2026-10-28). Not
+   * derived from lib/pricing-data.ts's PLANS array — that file's SGD
+   * Authority tier is monthlyPrice: 599 with per-outlet pricing folded
+   * into the feature list rather than a flat add-on fee, so it doesn't
+   * map cleanly onto these two flat USD numbers. Flagging the mismatch
+   * rather than silently reconciling it; these are the numbers as given.
+   */
+  plans: {
+    foundation: {
+      currency: "USD",
+      monthly: 299,
+      perOutlet: 99,
+      display: "USD 299/month + USD 99 per outlet",
+    },
+    authority: {
+      currency: "USD",
+      monthly: 899,
+      display: "USD 899/month",
+    },
+  },
 } as const;
