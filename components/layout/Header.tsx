@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SERVICES } from "@/lib/site/services";
 import {
   Sheet,
   SheetContent,
@@ -39,18 +40,28 @@ const PRODUCTS = [
   },
 ];
 
+// Display labels for the Services menu where the marketing name differs
+// from lib/site/services.ts's canonical Service.name. Hrefs and ordering
+// come straight from SERVICES so this can't drift out of sync with the
+// actual service list the way the old hand-written array did (it had
+// "Review Management" listed twice, pointing at the same URL).
+const SERVICE_NAV_LABELS: Record<string, string> = {
+  seo: "SEO",
+  "google-business-profile": "GBP Optimisation",
+  "ai-search-visibility": "AI Search Optimisation (GEO)",
+  "review-management": "Online Reputation Management",
+};
+
 // Simple dropdowns — Services, Solutions, Resources
 const NAV = {
   services: {
     label: "Services",
     items: [
-      { href: "/locations/singapore/seo", label: "SEO Agency Singapore" },
-      { href: "/locations/singapore/local-seo", label: "Local SEO" },
-      { href: "/locations/singapore/google-business-profile", label: "GBP Optimisation" },
-      { href: "/locations/singapore/ai-search-visibility", label: "AI Search Optimisation (GEO)" },
-      { href: "/locations/singapore/review-management", label: "Online Reputation Management" },
-      { href: "/locations/singapore/review-management", label: "Review Management" },
-      { href: "/locations/singapore/review-removal", label: "Bad Review Removal" },
+      ...SERVICES.map((s) => ({
+        href: `/services/${s.slug}`,
+        label: SERVICE_NAV_LABELS[s.slug] ?? s.name,
+      })),
+      { href: "/services", label: "All Services →" },
     ],
   },
   industries: {

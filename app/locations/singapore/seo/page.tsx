@@ -13,7 +13,6 @@ import {
   ShieldCheck,
   CheckCircle2,
   Award,
-  Users,
   Target,
   FileSearch,
   Code2,
@@ -31,6 +30,7 @@ import CitationWall from "@/components/shared/CitationWall";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { PLANS, formatPrice } from "@/lib/pricing-data";
 import { isPriceIncreaseLive, PRICE_INCREASES } from "@/lib/price-increase";
+import { PROOF } from "@/lib/site/proof";
 
 const CANONICAL = "https://www.epicware.ai/locations/singapore/seo";
 
@@ -82,11 +82,18 @@ function planHasFeature(planName: string, needle: string): boolean {
 }
 const plansWithWebsiteSEO = effectivePlans.filter((p) => planHasFeature(p.name, "website seo"));
 
+// This page previously carried both "50+ outlets managed" and "100+
+// Outlets Managed" as separate badges — a direct self-contradiction.
+// PROOF.outletsManaged (lib/site/proof.ts) is the single source of
+// truth: unverified today, so this falls back to a non-numeric claim
+// instead of a guess. The moment a real figure is supplied there, this
+// badge starts showing it automatically.
 const CREDENTIALS = [
-  { icon: Users, label: "50+ outlets managed" },
+  PROOF.outletsManaged.verified
+    ? { icon: Award, label: `${PROOF.outletsManaged.value} Outlets Managed` }
+    : { icon: Award, label: "Multi-Outlet Ready" },
   { icon: Award, label: "Founded by the NinjaOS team ($120M GMV, exited 2021)" },
   { icon: Star, label: "5.0★ on Google" },
-  { icon: Award, label: "100+ Outlets Managed" },
 ];
 
 const PAIN_CARDS = [
@@ -1065,7 +1072,14 @@ export default function SeoAgencySingaporePage() {
             </Link>
           </div>
           <p className="text-sm text-muted-foreground">
-            50+ outlets managed · 6 dated #1 results · 5 published case studies · 5 markets
+            {/* "50+ outlets managed" removed — PROOF.outletsManaged is unverified, same conflict as the CREDENTIALS badge above.
+                "5 markets" removed — Epicware is Singapore-built with no confirmed active presence in 4 other markets; don't claim one.
+                "5 published case studies" corrected to 6 — actual count of app/case-studies/* subdirectories. */}
+            {[
+              PROOF.outletsManaged.verified ? `${PROOF.outletsManaged.value} outlets managed` : null,
+              "6 dated #1 results",
+              "6 published case studies",
+            ].filter(Boolean).join(" · ")}
           </p>
         </div>
       </section>
