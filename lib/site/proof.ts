@@ -36,6 +36,16 @@
  * "Years in business" — appears as "10+ years" in several places
  * (app/about/page.tsx, app/local-seo-singapore/*). Internally consistent
  * but still has no cited source — not yet confirmed, left as a TODO.
+ *
+ * ---------------------------------------------------------------------
+ * REMOVAL SUCCESS RATE — confirmed 2026-10-28
+ * ---------------------------------------------------------------------
+ * "94% removal success rate" was in circulation site-wide (case studies,
+ * the Singapore SEO FAQ, components/home/NoRemovalNoFee.tsx's own TODO
+ * placeholder) as an unconfirmed number. Confirmed with the business
+ * owner: 98%. A separate, stale "500 bad reviews" figure in
+ * app/blog/why-negative-reviews-hurt-clinic-reputation/page.tsx was
+ * replaced with PROOF.reviewsRemoved at the same time.
  */
 
 export { EPICWARE_PROVIDER } from "@/lib/seo-config";
@@ -72,6 +82,16 @@ export const PROOF = {
   /** Confirmed by the business owner 2026-10-28 — see file header comment. */
   brandsServed: {
     value: "50+",
+    verified: true,
+  } satisfies ProofValue,
+
+  /**
+   * Distinct metric from reviewsRemoved (a count, not a rate). Was a
+   * TODO placeholder ("94%", unconfirmed) in components/home/NoRemovalNoFee.tsx
+   * until confirmed by the business owner 2026-10-28 — see file header comment.
+   */
+  removalSuccessRate: {
+    value: "98%",
     verified: true,
   } satisfies ProofValue,
 

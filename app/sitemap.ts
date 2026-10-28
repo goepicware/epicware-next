@@ -77,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/locations/dubai`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/locations/uk`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/locations/usa`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/locations/usa/review-removal`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // Use cases
     { url: `${BASE}/use-cases/remove-bad-google-reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

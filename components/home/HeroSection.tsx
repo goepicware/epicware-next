@@ -75,15 +75,22 @@ export default function HeroSection() {
             <div className="w-px h-9 bg-gray-200 shrink-0" />
 
             <div>
-              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">100+</p>
+              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">{PROOF.reviewsRemoved.value}</p>
               <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">reputation issues handled</p>
             </div>
 
             <div className="w-px h-9 bg-gray-200 shrink-0" />
 
             <div>
-              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">98%</p>
-              <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">client retention rate</p>
+              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">{PROOF.removalSuccessRate.value}</p>
+              <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">removal success rate</p>
+            </div>
+
+            <div className="w-px h-9 bg-gray-200 shrink-0" />
+
+            <div>
+              <p className="text-[1.9rem] font-bold text-gray-950 leading-none tracking-tight">{PROOF.brandsServed.value}</p>
+              <p className="text-[0.75rem] text-gray-400 font-medium mt-1.5 leading-none">brands served</p>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
+import { PROOF } from "@/lib/site/proof";
 
 const CANONICAL = "https://www.epicware.ai/blog/why-negative-reviews-hurt-clinic-reputation";
 
@@ -303,8 +304,8 @@ export default function Post() {
             <Link href="/locations/singapore/review-removal" className="text-blue-600 hover:underline">
               remove bad reviews
             </Link>
-            . Epicware&apos;s proven track record — a 94% removal success rate for over 500 bad reviews across 50+
-            clinics — translates directly into enhanced trust and increased patient calls. In one case,{" "}
+            . Epicware&apos;s proven track record — a 98% removal success rate across {PROOF.reviewsRemoved.value} bad
+            reviews removed for clients — translates directly into enhanced trust and increased patient calls. In one case,{" "}
             <Link href="/case-studies/clinic-review-growth-singapore" className="text-blue-600 hover:underline">
               a GP clinic network raised its Google rating to 4.7
             </Link>{" "}

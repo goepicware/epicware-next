@@ -6,9 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { PROOF } from "@/lib/site/proof";
 
 const STATS = [
-  // TODO: replace with real number from Vignesh — success rate is a
-  // different metric from PROOF.reviewsRemoved and hasn't been confirmed.
-  { value: "94%", label: "removal success rate" },
+  { value: PROOF.removalSuccessRate.value, label: "removal success rate" },
   { value: PROOF.reviewsRemoved.value, label: "bad reviews removed" },
   { value: "100%", label: "refunded if not removed" },
 ];

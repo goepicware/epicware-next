@@ -457,7 +457,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can you remove bad Google reviews?",
-    a: "We remove reviews that break Google's own policies — fake, spam, conflict-of-interest or off-topic. You pay $200 per review upfront, refunded in full if it isn't removed within 3 months. Our removal success rate is 94%.",
+    a: "We remove reviews that break Google's own policies — fake, spam, conflict-of-interest or off-topic. You pay $200 per review upfront, refunded in full if it isn't removed within 3 months. Our removal success rate is 98%.",
   },
 ];
 
