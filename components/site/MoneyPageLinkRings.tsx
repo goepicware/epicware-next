@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { SERVICES, getService, getServiceFromPrice, type Service } from "@/lib/site/services";
+import { PAGED_SERVICES, getService, getServiceFromPrice, type Service } from "@/lib/site/services";
 import { COUNTRIES, getCountry, type Country } from "@/lib/site/countries";
 import { isCountryServiceLive } from "@/lib/site/content";
 
@@ -32,7 +32,7 @@ export default function MoneyPageLinkRings({
   const country = getCountry(countrySlug) as Country;
   const service = getService(serviceSlug) as Service;
 
-  const siblingServices = SERVICES.filter(
+  const siblingServices = PAGED_SERVICES.filter(
     (s) => s.slug !== serviceSlug && isCountryServiceLive(countrySlug, s.slug)
   );
 

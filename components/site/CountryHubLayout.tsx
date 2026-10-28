@@ -5,7 +5,7 @@ import { mdxComponents } from "@/components/site/mdxComponents";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
-import { SERVICES } from "@/lib/site/services";
+import { PAGED_SERVICES } from "@/lib/site/services";
 import { COUNTRIES, type Country } from "@/lib/site/countries";
 import { getMoneyPageContent, getHubContent } from "@/lib/site/content";
 
@@ -22,7 +22,7 @@ export default function CountryHubLayout({
   // show as plain "launching soon" text instead of being hidden, so
   // visitors (and the substance/honesty gates) see the full roadmap
   // rather than a silently incomplete list.
-  const servicesWithStatus = SERVICES.map((s) => ({
+  const servicesWithStatus = PAGED_SERVICES.map((s) => ({
     service: s,
     isLive: getMoneyPageContent(country.slug, s.slug)?.frontmatter.draft === false,
   }));

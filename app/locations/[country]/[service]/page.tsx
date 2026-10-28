@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import MoneyPageLayout from "@/components/site/MoneyPageLayout";
 import { getMoneyPageContent } from "@/lib/site/content";
 import { getCountry, COUNTRIES } from "@/lib/site/countries";
-import { getService, SERVICES } from "@/lib/site/services";
+import { getService, PAGED_SERVICES } from "@/lib/site/services";
 
 /**
  * Country × service money pages for the four non-Singapore markets.
@@ -18,7 +18,7 @@ import { getService, SERVICES } from "@/lib/site/services";
 
 export async function generateStaticParams() {
   const nonSingapore = COUNTRIES.filter((c) => c.slug !== "singapore");
-  return nonSingapore.flatMap((c) => SERVICES.map((s) => ({ country: c.slug, service: s.slug })));
+  return nonSingapore.flatMap((c) => PAGED_SERVICES.map((s) => ({ country: c.slug, service: s.slug })));
 }
 
 export async function generateMetadata({

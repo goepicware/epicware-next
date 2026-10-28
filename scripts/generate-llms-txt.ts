@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
-import { SERVICES } from "../lib/site/services";
+import { PAGED_SERVICES } from "../lib/site/services";
 import { COUNTRIES } from "../lib/site/countries";
 import { DISTRICTS } from "../lib/districts";
 
@@ -56,7 +56,7 @@ function isCountryHubLive(countrySlug: string): boolean {
 
 function buildServicesSection(): string {
   const lines = ["## Services", ""];
-  for (const s of SERVICES) {
+  for (const s of PAGED_SERVICES) {
     lines.push(`- [${s.name}](${BASE_URL}/services/${s.slug}) — ${s.shortDescription}`);
   }
   return lines.join("\n");
@@ -67,7 +67,7 @@ function buildLocationsSection(): string {
   for (const country of COUNTRIES) {
     if (!isCountryHubLive(country.slug)) continue;
     lines.push(`### ${country.displayName}`, "", `- [${country.displayName} hub](${BASE_URL}/locations/${country.slug})`);
-    for (const service of SERVICES) {
+    for (const service of PAGED_SERVICES) {
       if (!isCountryServiceLive(country.slug, service.slug)) continue;
       lines.push(`- [${service.name} in ${country.displayName}](${BASE_URL}/locations/${country.slug}/${service.slug})`);
     }

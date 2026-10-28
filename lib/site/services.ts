@@ -33,7 +33,16 @@ export interface Service {
   name: string;
   shortDescription: string;
   subFeatures: SubFeature[];
-  planKey: PlanKey;
+  /** Omitted for offerings with no standalone plan price (e.g. paid-ads, bundled into Full Stack). */
+  planKey?: PlanKey;
+  /**
+   * False for an offering that exists in the taxonomy (so forms like
+   * /book-demo can list it) but has no /services/{slug} page, nav menu
+   * entry, or country-hub grid tile yet. Every consumer that renders an
+   * actual page/menu/grid must filter to PAGED_SERVICES below instead of
+   * iterating SERVICES directly.
+   */
+  hasPage: boolean;
 }
 
 export const SERVICES: Service[] = [
@@ -48,6 +57,7 @@ export const SERVICES: Service[] = [
       { slug: "rank-tracking", name: "Local Rank Tracking", currentUrl: "/local-seo-singapore/local-rank-tracking" },
     ],
     planKey: "authority",
+    hasPage: true,
   },
   {
     slug: "google-business-profile",
@@ -59,6 +69,7 @@ export const SERVICES: Service[] = [
       { slug: "post-scheduling", name: "GBP Post Scheduling", currentUrl: "/local-seo-singapore/gbp-post-scheduling" },
     ],
     planKey: "foundation",
+    hasPage: true,
   },
   {
     slug: "seo",
@@ -66,6 +77,7 @@ export const SERVICES: Service[] = [
     shortDescription: "Website and content SEO for organic search visibility beyond the Map Pack.",
     subFeatures: [],
     planKey: "domination",
+    hasPage: true,
   },
   {
     slug: "ai-search-visibility",
@@ -78,6 +90,7 @@ export const SERVICES: Service[] = [
       { slug: "geo-optimisation", name: "GEO Optimisation", currentUrl: "/ai-search-visibility-singapore/geo-optimisation" },
     ],
     planKey: "domination",
+    hasPage: true,
   },
   {
     slug: "review-management",
@@ -91,6 +104,7 @@ export const SERVICES: Service[] = [
       { slug: "review-widgets", name: "Review Widgets", currentUrl: "/reputation-management-singapore/review-widgets" },
     ],
     planKey: "foundation",
+    hasPage: true,
   },
   {
     slug: "review-removal",
@@ -101,8 +115,19 @@ export const SERVICES: Service[] = [
       { slug: "unfair-review-removal", name: "Unfair Review Removal", currentUrl: "/bad-review-removal-singapore/unfair-review-removal" },
     ],
     planKey: "reviewRemoval",
+    hasPage: true,
+  },
+  {
+    slug: "paid-ads",
+    name: "Paid Ads (Google & Meta)",
+    shortDescription: "Paid ad management across Meta and Google, bundled with Full Stack.",
+    subFeatures: [],
+    hasPage: false,
   },
 ];
+
+/** Services with an actual /services/{slug} page — use this for any menu, grid, or static-params list. Raw SERVICES is only for consumers (like the /book-demo form) that intentionally list offerings with no page yet. */
+export const PAGED_SERVICES = SERVICES.filter((s) => s.hasPage);
 
 export function getService(slug: string): Service | undefined {
   return SERVICES.find((s) => s.slug === slug);
@@ -115,6 +140,7 @@ export function getService(slug: string): Service | undefined {
  */
 export function getServiceFromPrice(service: Service, countrySlug: string): string {
   const currency = countrySlug === "singapore" ? "SGD" : "USD";
+  if (!service.planKey) return "";
   if (service.planKey === "reviewRemoval") {
     return `From ${currency} ${PRICING.reviewRemoval[currency]}/review`;
   }

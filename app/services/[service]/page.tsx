@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle2, Star } from "lucide-react";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
-import { getService, SERVICES } from "@/lib/site/services";
+import { getService, PAGED_SERVICES } from "@/lib/site/services";
 import { COUNTRIES } from "@/lib/site/countries";
 import { getSubFeatureContent, isCountryServiceLive } from "@/lib/site/content";
 import { getServiceContent } from "@/lib/site/serviceContent";
@@ -20,7 +20,7 @@ import { EPICWARE_GOOGLE_RATING, formatGoogleRatingBadge } from "@/lib/site/proo
  */
 
 export async function generateStaticParams() {
-  return SERVICES.map((s) => ({ service: s.slug }));
+  return PAGED_SERVICES.map((s) => ({ service: s.slug }));
 }
 
 export async function generateMetadata({
@@ -30,7 +30,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { service: slug } = await params;
   const service = getService(slug);
-  if (!service) return {};
+  if (!service || !service.hasPage) return {};
   const content = getServiceContent(slug);
   const canonical = `https://www.epicware.ai/services/${slug}`;
   const title = content ? `${content.h1} | Epicware` : `${service.name} | Epicware`;
@@ -63,7 +63,7 @@ export default async function ServicePage({
 }) {
   const { service: slug } = await params;
   const service = getService(slug);
-  if (!service) notFound();
+  if (!service || !service.hasPage) notFound();
 
   const content = getServiceContent(slug);
 

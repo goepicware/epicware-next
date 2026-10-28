@@ -19,23 +19,27 @@ const INDUSTRIES = [
 ];
 
 // Generated from SERVICES (lib/site/services.ts), not hardcoded, so a new
-// service added there automatically shows up here. "Full Platform" is the
-// only option that isn't a real service slug.
-const INTERESTS = [...SERVICES.map((s) => s.name), "Full Platform"];
+// service added there automatically shows up here — including offerings
+// like "Paid Ads (Google & Meta)" that have hasPage: false and so have no
+// service page, menu item, or country grid entry yet. "Full Stack
+// (everything, incl. paid ads)" is the only option that isn't a real
+// service slug; its label matches the Full Stack plan on /pricing.
+const INTERESTS = [...SERVICES.map((s) => s.name), "Full Stack (everything, incl. paid ads)"];
 
 // Values match the country slugs used across the site (lib/site/countries.ts,
 // the ?country= param from ServiceLeadCTA's "Book a Strategy Call" link)
 // so pre-filling from the URL and this select agree. currency here is
 // deliberately NOT lib/site/countries.ts's `currency` field (GBP/AUD/AED
 // for uk/australia/dubai) — revenue ranges are quoted in USD for every
-// market except Singapore, which is SGD.
-const COUNTRY_OPTIONS: { value: string; label: string; dialCode: string; currency: string }[] = [
-  { value: "singapore", label: "Singapore", dialCode: "+65", currency: "SGD" },
-  { value: "usa", label: "United States", dialCode: "+1", currency: "USD" },
-  { value: "uk", label: "United Kingdom", dialCode: "+44", currency: "USD" },
-  { value: "australia", label: "Australia", dialCode: "+61", currency: "USD" },
-  { value: "dubai", label: "UAE", dialCode: "+971", currency: "USD" },
-  { value: "other", label: "Other", dialCode: "", currency: "USD" },
+// market except Singapore, which is SGD. phonePlaceholder mirrors each
+// country's actual national number grouping, not a generic dial-code guess.
+const COUNTRY_OPTIONS: { value: string; label: string; dialCode: string; currency: string; phonePlaceholder: string }[] = [
+  { value: "singapore", label: "Singapore", dialCode: "+65", currency: "SGD", phonePlaceholder: "+65 XXXX XXXX" },
+  { value: "usa", label: "United States", dialCode: "+1", currency: "USD", phonePlaceholder: "+1 XXX XXX XXXX" },
+  { value: "uk", label: "United Kingdom", dialCode: "+44", currency: "USD", phonePlaceholder: "+44 XXXX XXXXXX" },
+  { value: "australia", label: "Australia", dialCode: "+61", currency: "USD", phonePlaceholder: "+61 XXX XXX XXX" },
+  { value: "dubai", label: "UAE", dialCode: "+971", currency: "USD", phonePlaceholder: "+971 XX XXX XXXX" },
+  { value: "other", label: "Other", dialCode: "", currency: "USD", phonePlaceholder: "+XX XXXX XXXX" },
 ];
 
 function getRevenueRanges(currency: string): string[] {
@@ -87,7 +91,7 @@ export default function BookDemoForm({
   }, []);
 
   const selectedCountry = COUNTRY_OPTIONS.find((c) => c.value === formData.country);
-  const dialCode = selectedCountry?.dialCode ?? "";
+  const phonePlaceholder = selectedCountry?.phonePlaceholder ?? "+XX XXXX XXXX";
   const currency = selectedCountry?.currency ?? "USD";
   const revenueRanges = getRevenueRanges(currency);
 
@@ -168,7 +172,7 @@ export default function BookDemoForm({
         </div>
         <div className="space-y-2">
           <label htmlFor="phone" className="text-sm font-medium text-foreground">Phone <span className="text-destructive">*</span></label>
-          <input id="phone" required value={formData.phone} onChange={(e) => setFormData((p) => ({ ...p, phone: e.target.value }))} placeholder={dialCode ? `${dialCode} XXXX XXXX` : "+XX XXXX XXXX"} className={inputClass} />
+          <input id="phone" required value={formData.phone} onChange={(e) => setFormData((p) => ({ ...p, phone: e.target.value }))} placeholder={phonePlaceholder} className={inputClass} />
         </div>
       </div>
 

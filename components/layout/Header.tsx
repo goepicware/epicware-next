@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SERVICES } from "@/lib/site/services";
+import { PAGED_SERVICES } from "@/lib/site/services";
 import { COUNTRIES } from "@/lib/site/countries";
 import { DISTRICTS } from "@/lib/districts";
 import {
@@ -44,8 +44,8 @@ const PRODUCTS = [
 
 // Display labels for the Services menu where the marketing name differs
 // from lib/site/services.ts's canonical Service.name. Hrefs and ordering
-// come straight from SERVICES so this can't drift out of sync with the
-// actual service list the way the old hand-written array did (it had
+// come straight from PAGED_SERVICES so this can't drift out of sync with
+// the actual service list the way the old hand-written array did (it had
 // "Review Management" listed twice, pointing at the same URL).
 const SERVICE_NAV_LABELS: Record<string, string> = {
   seo: "SEO",
@@ -59,7 +59,7 @@ const NAV = {
   services: {
     label: "Services",
     items: [
-      ...SERVICES.map((s) => ({
+      ...PAGED_SERVICES.map((s) => ({
         href: `/services/${s.slug}`,
         label: SERVICE_NAV_LABELS[s.slug] ?? s.name,
       })),
@@ -199,7 +199,7 @@ function LocationsDropdown({ liveCountryServices }: { liveCountryServices: Recor
                 Singapore
               </Link>
               <div className="grid grid-cols-2 gap-x-2">
-                {SERVICES.map((s) => (
+                {PAGED_SERVICES.map((s) => (
                   <Link
                     key={s.slug}
                     href={`/locations/singapore/${s.slug}`}
@@ -220,7 +220,7 @@ function LocationsDropdown({ liveCountryServices }: { liveCountryServices: Recor
             </div>
 
             {liveOtherCountries.map((country) => {
-              const liveServices = SERVICES.filter((s) => liveCountryServices[country.slug]?.includes(s.slug));
+              const liveServices = PAGED_SERVICES.filter((s) => liveCountryServices[country.slug]?.includes(s.slug));
               return (
                 <div key={country.slug} className="mb-3 last:mb-0">
                   <Link
@@ -341,9 +341,9 @@ export default function Header({ liveCountryServices }: { liveCountryServices: R
       // is where the "coming soon" messaging for the rest lives.
       items: [
         { href: "/locations/singapore", label: "Singapore" },
-        ...SERVICES.map((s) => ({ href: `/locations/singapore/${s.slug}`, label: `${s.name} — Singapore` })),
+        ...PAGED_SERVICES.map((s) => ({ href: `/locations/singapore/${s.slug}`, label: `${s.name} — Singapore` })),
         ...COUNTRIES.filter((c) => c.slug !== "singapore").flatMap((c) =>
-          SERVICES.filter((s) => liveCountryServices[c.slug]?.includes(s.slug)).map((s) => ({
+          PAGED_SERVICES.filter((s) => liveCountryServices[c.slug]?.includes(s.slug)).map((s) => ({
             href: `/locations/${c.slug}/${s.slug}`,
             label: `${s.name} — ${c.displayName}`,
           }))

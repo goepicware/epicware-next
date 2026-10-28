@@ -6,11 +6,11 @@ import { mdxComponents } from "@/components/site/mdxComponents";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
-import { getService, getSubFeature, SERVICES } from "@/lib/site/services";
+import { getService, getSubFeature, PAGED_SERVICES } from "@/lib/site/services";
 import { getSubFeatureContent } from "@/lib/site/content";
 
 export async function generateStaticParams() {
-  return SERVICES.flatMap((s) => s.subFeatures.map((f) => ({ service: s.slug, subFeature: f.slug })));
+  return PAGED_SERVICES.flatMap((s) => s.subFeatures.map((f) => ({ service: s.slug, subFeature: f.slug })));
 }
 
 export async function generateMetadata({
