@@ -10,7 +10,7 @@ const STATS = [
   // different metric from PROOF.reviewsRemoved and hasn't been confirmed.
   { value: "94%", label: "removal success rate" },
   { value: PROOF.reviewsRemoved.value, label: "bad reviews removed" },
-  { value: "$0", label: "risk to you" },
+  { value: "100%", label: "refunded if not removed" },
 ];
 
 export default function NoRemovalNoFee() {
@@ -30,6 +30,9 @@ export default function NoRemovalNoFee() {
           <p className="text-white/65 text-lg max-w-2xl mx-auto leading-relaxed">
             Bad review removal across Singapore. $200 per review, charged upfront. If
             it doesn&apos;t come down within 3 months, you get a full refund. No upsell. No retainer.
+          </p>
+          <p className="text-white/45 text-sm max-w-2xl mx-auto leading-relaxed mt-3">
+            Paid upfront per review. Full refund if the platform doesn&apos;t remove it.
           </p>
         </motion.div>
 

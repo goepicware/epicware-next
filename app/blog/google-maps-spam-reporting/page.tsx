@@ -406,8 +406,9 @@ export default function Post() {
               <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                 bad review removal service
               </Link>{" "}
-              works on a pay-on-success basis at $200 per review, refunded in full if the review isn&apos;t
-              taken down, so you&apos;re never paying for an outcome you didn&apos;t get. Beyond review
+              is paid upfront at $200 per review, refunded in full if the review isn&apos;t taken down —
+              so you&apos;re never left paying for an outcome you didn&apos;t get, even though the charge
+              happens before the work starts. Beyond review
               removal, the platform gives multi-location businesses a single dashboard to monitor Google Maps
               rankings, flag suspicious edits to their own profiles, and manage review responses across every
               outlet from one place through EpicMap and{" "}
@@ -417,7 +418,7 @@ export default function Post() {
               .
             </p>
             <ul>
-              <li><strong>Pay-on-success removal:</strong> you only pay when a fake or unfair review is actually taken down.</li>
+              <li><strong>Refund-guaranteed removal:</strong> charged upfront, refunded in full if the review doesn&apos;t come down within 3 months.</li>
               <li>
                 <strong>
                   <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">

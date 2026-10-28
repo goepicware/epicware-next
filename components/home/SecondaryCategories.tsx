@@ -61,7 +61,7 @@ const SIDE_CARDS = [
   {
     title: "Reputation Defence",
     body: "Generate positive reviews, detect risks early, and remove fake or policy-violating reviews — with a no-removal, no-fee guarantee.",
-    chip: "Pay $0 if we fail",
+    chip: "Refunded in full if we fail",
     chipText: "text-emerald-300",
     chipBg: "bg-emerald-500/10 border-emerald-400/25",
     arrowColor: "text-emerald-400",

@@ -485,8 +485,8 @@ export default function Post() {
               <Link href="/locations/singapore/review-removal" className="text-primary font-medium hover:underline">
                 Bad Review Removal service
               </Link>{" "}
-              works on a pay-on-success basis: a flat $200 per review, fully refunded if the review isn&apos;t
-              taken down. For businesses ready for ongoing management across Google Maps ranking, reviews,
+              is a flat $200 per review, charged upfront and fully refunded if the review isn&apos;t
+              taken down within 3 months. For businesses ready for ongoing management across Google Maps ranking, reviews,
               and AI search visibility, our{" "}
               <Link href="/pricing" className="text-primary font-medium hover:underline">
                 pricing plans
