@@ -15,8 +15,15 @@ import { trackEvent } from "@/lib/meta-tracking";
  * pages without a defined CTA fall back to MoneyPageLayout's generic
  * hero buttons instead of showing a half-built form.
  *
+ * countrySlug is optional so the same component also works on the
+ * market-neutral /services/{service}/ pages (app/services/[service]/
+ * page.tsx), which have no country context at all. Omit it there and
+ * pass `sourcePath` instead so the lead email's "via epicware.ai/..."
+ * footer reads "services/{service}" rather than "locations/unknown/...".
+ *
  * variant="hero": primary button scrolls to the form card below;
- * secondary links to /book-demo pre-filled with country+service.
+ * secondary links to /book-demo pre-filled with country+service (or
+ * just service, when there's no country).
  * variant="bottom": the actual inline form, submitting to
  * /api/audit-lead with the same retry/backup/visible-error handling as
  * the free-audit wizard (app/free-audit/FreeAuditWizard.tsx's
@@ -27,14 +34,16 @@ export default function ServiceLeadCTA({
   countrySlug,
   serviceSlug,
   variant,
+  sourcePath,
 }: {
-  countrySlug: string;
+  countrySlug?: string;
   serviceSlug: string;
   variant: "hero" | "bottom";
+  sourcePath?: string;
 }) {
   const config = LEAD_CTA_CONFIG[serviceSlug];
-  const country = getCountry(countrySlug);
-  if (!config || !country) return null;
+  const country = countrySlug ? getCountry(countrySlug) : undefined;
+  if (!config) return null;
 
   if (variant === "hero") {
     return (
@@ -46,7 +55,7 @@ export default function ServiceLeadCTA({
           {config.primaryLabel} <ArrowRight className="w-4 h-4" />
         </Link>
         <Link
-          href={`/book-demo?country=${countrySlug}&service=${serviceSlug}`}
+          href={countrySlug ? `/book-demo?country=${countrySlug}&service=${serviceSlug}` : `/book-demo?service=${serviceSlug}`}
           className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-border font-semibold text-sm hover:border-primary/40 transition-colors"
         >
           Book a Strategy Call
@@ -55,7 +64,14 @@ export default function ServiceLeadCTA({
     );
   }
 
-  return <LeadForm countrySlug={countrySlug} serviceSlug={serviceSlug} dialCode={country.dialCode} />;
+  return (
+    <LeadForm
+      countrySlug={countrySlug}
+      serviceSlug={serviceSlug}
+      dialCode={country?.dialCode ?? ""}
+      sourcePath={sourcePath}
+    />
+  );
 }
 
 function delay(ms: number) {
@@ -69,15 +85,17 @@ function LeadForm({
   countrySlug,
   serviceSlug,
   dialCode,
+  sourcePath,
 }: {
-  countrySlug: string;
+  countrySlug?: string;
   serviceSlug: string;
   dialCode: string;
+  sourcePath?: string;
 }) {
   const config = LEAD_CTA_CONFIG[serviceSlug];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState(`${dialCode} `);
+  const [phone, setPhone] = useState(dialCode ? `${dialCode} ` : "");
   const [fieldValues, setFieldValues] = useState<Record<string, string>>(
     Object.fromEntries(config.fields.map((f) => [f.id, ""]))
   );
@@ -143,11 +161,12 @@ function LeadForm({
         phone,
         leadType: config.leadType,
         country: countrySlug,
+        sourcePath,
         ...Object.fromEntries(config.fields.map((f) => [f.payloadKey, fieldValues[f.id] ?? ""])),
       });
       setSubmitting(false);
     },
-    [name, email, phone, fieldValues, countrySlug, config, submitWithRetry]
+    [name, email, phone, fieldValues, countrySlug, sourcePath, config, submitWithRetry]
   );
 
   if (saveStatus === "saved") {
@@ -183,7 +202,7 @@ function LeadForm({
           <label htmlFor="lead-phone" className="text-sm font-medium text-foreground">
             Phone
           </label>
-          <input id="lead-phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={`${dialCode} XXX XXX XXXX`} className={inputClass} />
+          <input id="lead-phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={dialCode ? `${dialCode} XXX XXX XXXX` : "Your phone number"} className={inputClass} />
         </div>
         {config.fields.map((field) => (
           <div key={field.id} className="space-y-1.5">

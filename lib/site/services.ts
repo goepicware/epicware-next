@@ -3,17 +3,18 @@
  *
  * Six top-level services, each with zero or more sub-features. A
  * sub-feature is a standalone page at /services/{service}/{subFeature}/ —
- * it is NOT a section on the parent page. This matches the brief's own
- * Phase 3 table (competitor-analysis and rank-tracking both nest under
- * local-seo) and decision #6 (2026-10-27): all 11 previously-orphaned
- * sub-service pages get the same treatment, so Phase 2 builds 14
- * sub-feature pages total (3 already specified by the brief + 11 more
- * found in the Phase 0 audit), on top of the 41 pages the brief counts
- * for services + locations + country×service.
+ * it is NOT a section on the parent page.
  *
- * citation-building is nested under local-seo per decision #7
- * (2026-10-27) — overrides a pre-existing, unrelated redirect that sent
- * it to ai-search-visibility instead.
+ * local-seo and review-management originally had 7 sub-features between
+ * them (citation-building, competitor-analysis, rank-tracking;
+ * ai-review-response, reputation-analytics, review-generation,
+ * review-widgets) built as standalone pages per decision #6 (2026-10-27).
+ * The Services Rewrite Batch 1 (2026-10-29) folded all 7 into anchored
+ * sections on their parent page instead (see lib/site/serviceContent.ts's
+ * `subSections`) and removed them here — their old URLs now 301 straight
+ * to the parent's anchor (next.config.ts). The remaining 7 sub-features
+ * across google-business-profile, ai-search-visibility and
+ * review-removal are unaffected and still standalone pages.
  */
 
 import { PRICING } from "@/lib/site/proof";
@@ -51,11 +52,10 @@ export const SERVICES: Service[] = [
     name: "Local SEO",
     shortDescription:
       "Google Maps rank tracking, citation building, and competitor analysis for local search visibility.",
-    subFeatures: [
-      { slug: "citation-building", name: "Citation Building", currentUrl: "/local-seo-singapore/citation-building" },
-      { slug: "competitor-analysis", name: "Competitor Analysis", currentUrl: "/local-seo-singapore/competitor-analysis" },
-      { slug: "rank-tracking", name: "Local Rank Tracking", currentUrl: "/local-seo-singapore/local-rank-tracking" },
-    ],
+    // Citation building, competitor analysis and rank tracking folded
+    // into anchored sections on /services/local-seo — see the header
+    // comment above.
+    subFeatures: [],
     planKey: "authority",
     hasPage: true,
   },
@@ -97,12 +97,10 @@ export const SERVICES: Service[] = [
     name: "Review Management",
     shortDescription:
       "Review generation, AI-drafted responses, widgets, and analytics across every Google listing.",
-    subFeatures: [
-      { slug: "ai-review-response", name: "AI Review Response", currentUrl: "/reputation-management-singapore/ai-review-response" },
-      { slug: "reputation-analytics", name: "Reputation Analytics", currentUrl: "/reputation-management-singapore/reputation-analytics" },
-      { slug: "review-generation", name: "Review Generation", currentUrl: "/reputation-management-singapore/review-generation" },
-      { slug: "review-widgets", name: "Review Widgets", currentUrl: "/reputation-management-singapore/review-widgets" },
-    ],
+    // AI review response, review generation, reputation analytics and
+    // review widgets folded into anchored sections on
+    // /services/review-management — see the header comment above.
+    subFeatures: [],
     planKey: "foundation",
     hasPage: true,
   },

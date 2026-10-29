@@ -10,6 +10,7 @@ import { COUNTRIES } from "@/lib/site/countries";
 import { getSubFeatureContent, isCountryServiceLive } from "@/lib/site/content";
 import { getServiceContent } from "@/lib/site/serviceContent";
 import { EPICWARE_GOOGLE_RATING, formatGoogleRatingBadge } from "@/lib/site/proof";
+import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
 
 /**
  * Global /services/{service}/ pages — market-neutral, always live. Each
@@ -33,8 +34,8 @@ export async function generateMetadata({
   if (!service || !service.hasPage) return {};
   const content = getServiceContent(slug);
   const canonical = `https://www.epicware.ai/services/${slug}`;
-  const title = content ? `${content.h1} | Epicware` : `${service.name} | Epicware`;
-  const description = content?.heroDescription ?? service.shortDescription;
+  const title = content ? (content.metaTitle ?? `${content.h1} | Epicware`) : `${service.name} | Epicware`;
+  const description = content?.metaDescription ?? content?.heroDescription ?? service.shortDescription;
 
   // hreflang: x-default always points at this global page. en-SG points
   // at the Singapore version because it's the only live country-service
@@ -72,6 +73,14 @@ export default async function ServicePage({
   );
 
   const liveCountries = COUNTRIES.filter((c) => isCountryServiceLive(c.slug, slug));
+
+  // Only local-seo and review-management have the richer copy (sourced
+  // facts, narrative framing, folded-in sub-feature sections) and an
+  // inline lead-capture form today — the other 3 content-backed services
+  // (seo, google-business-profile, ai-search-visibility) keep the
+  // existing thinner hero buttons and link-card sub-feature grid below
+  // until their own rewrite.
+  const hasInlineCTA = Boolean(content?.subSections && content.subSections.length > 0);
 
   // Content not written yet for this service — render the original thin
   // layout so the other 5 services keep building and linking correctly
@@ -173,22 +182,49 @@ export default async function ServicePage({
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: service.name }]} />
           <h1 className="font-display font-bold text-foreground mt-5 mb-4 leading-tight">{content.h1}</h1>
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">{content.heroDescription}</p>
-          <div className="flex flex-wrap gap-3 mt-7">
-            <Link
-              href="/book-demo#form"
-              className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
-            >
-              Book a Free Demo <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/free-audit"
-              className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-border font-semibold text-sm hover:border-primary/40 transition-colors"
-            >
-              Free GBP Audit
-            </Link>
+          <div className="mt-7">
+            {hasInlineCTA ? (
+              <ServiceLeadCTA serviceSlug={slug} variant="hero" sourcePath={`services/${slug}`} />
+            ) : (
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/book-demo#form"
+                  className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
+                >
+                  Book a Free Demo <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/free-audit"
+                  className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-border font-semibold text-sm hover:border-primary/40 transition-colors"
+                >
+                  Free GBP Audit
+                </Link>
+              </div>
+            )}
+            {content.pricingNote && (
+              <p className="mt-4 text-sm font-semibold text-primary">{content.pricingNote}</p>
+            )}
           </div>
         </div>
       </section>
+
+      {/* Narrative — "the problem" / "how it works" framing, for pages with the substance to support it */}
+      {content.narrative && content.narrative.length > 0 && (
+        <section className="py-12 lg:py-16">
+          <div className="container mx-auto px-6 max-w-3xl space-y-10">
+            {content.narrative.map((block) => (
+              <div key={block.heading}>
+                <h2 className="font-display text-foreground mb-4">{block.heading}</h2>
+                {block.paragraphs.map((p, i) => (
+                  <p key={i} className="text-base text-muted-foreground leading-relaxed mb-4">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* What it does / outcomes */}
       <section className="py-12 lg:py-16">
@@ -204,6 +240,30 @@ export default async function ServicePage({
           </ul>
         </div>
       </section>
+
+      {/* Facts — sourced claims backing the copy above, each linked to its source */}
+      {content.facts && content.facts.length > 0 && (
+        <section className="py-12 lg:py-16">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <h2 className="font-display text-foreground mb-8 text-center">Backed by the Data</h2>
+            <ul className="space-y-4">
+              {content.facts.map((f) => (
+                <li key={f.sourceUrl} className="rounded-2xl border border-border/60 bg-card p-5">
+                  <p className="text-sm text-foreground leading-relaxed mb-2">{f.fact}</p>
+                  <a
+                    href={f.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-primary hover:underline"
+                  >
+                    Source
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Process */}
       <section className="py-12 lg:py-16 section-gradient-1">
@@ -298,6 +358,34 @@ export default async function ServicePage({
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* Folded-in sub-feature sections — former standalone /services/{service}/{subFeature} pages,
+          now anchored sections on the parent so the old URLs can 301 straight here with one hop. */}
+      {content.subSections && content.subSections.length > 0 && (
+        <section className="py-12 lg:py-16">
+          <div className="container mx-auto px-6 max-w-3xl space-y-12">
+            {content.subSections.map((s) => (
+              <div key={s.id} id={s.id} className="scroll-mt-28">
+                <h3 className="font-display text-foreground text-xl font-bold mb-3">{s.heading}</h3>
+                {s.paragraphs.map((p, i) => (
+                  <p key={i} className="text-base text-muted-foreground leading-relaxed mb-4">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Inline lead form — bottom variant, mirrors MoneyPageLayout's placement for the same leadType */}
+      {hasInlineCTA && (
+        <section className="py-12 lg:py-16 section-gradient-1">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <ServiceLeadCTA serviceSlug={slug} variant="bottom" sourcePath={`services/${slug}`} />
           </div>
         </section>
       )}

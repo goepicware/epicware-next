@@ -142,11 +142,13 @@ export async function POST(req: NextRequest) {
     businessNameOrMapsLink, cityMetro, gbpMapsLink,
     reviewManagementProfileLink,
     clinicName, mapsLink, outlets,
+    sourcePath,
   } = body as {
     name?: string; email?: string; phone?: string; leadType?: string;
     businessName?: string; businessAddress?: string; websiteUrl?: string;
     placeId?: string; keywords?: string[]; radiusKm?: number;
     country?: string; reviewProfileUrl?: string; notes?: string;
+    sourcePath?: string;
     businessNameOrMapsLink?: string; cityMetro?: string; gbpMapsLink?: string;
     reviewManagementProfileLink?: string;
     clinicName?: string; mapsLink?: string; outlets?: string;
@@ -241,6 +243,12 @@ export async function POST(req: NextRequest) {
       apiKey, isTest, name, email, phone, country,
       pageLabel: "Local SEO",
       pagePath: "local-seo",
+      // sourcePath override: this leadType is shared between the
+      // country money pages (locations/{country}/local-seo) and the
+      // market-neutral /services/local-seo page, which has no country —
+      // only the latter sends sourcePath, so country pages keep their
+      // existing locations/{country}/local-seo footer line.
+      sourcePath,
       color: "#7C3AED",
       emoji: "📍",
       extraFields: [
@@ -266,6 +274,8 @@ export async function POST(req: NextRequest) {
       apiKey, isTest, name, email, phone, country,
       pageLabel: "Review Health Check",
       pagePath: "review-management",
+      // See the local-seo handler above — same shared-leadType reasoning.
+      sourcePath,
       color: "#DB2777",
       emoji: "💬",
       extraFields: [{ label: "Google or Yelp link", value: reviewManagementProfileLink }],

@@ -33,7 +33,7 @@ const SLIDES = [
     metric: "68%",
     metricLabel: "fewer no-shows via WhatsApp",
     story:
-      "A busy nail salon was losing revenue to no-shows and last-minute cancellations. Kairo's WhatsApp automation sent reminders and allowed quick rescheduling — turning a painful problem into a competitive advantage.",
+      "A busy nail salon was losing revenue to no-shows and last-minute cancellations. Epicware's WhatsApp automation sent reminders and allowed quick rescheduling — turning a painful problem into a competitive advantage.",
     client: "Independent nail salon, Singapore",
     href: "/case-studies/salon-whatsapp-automation",
     accentClass: "text-primary",

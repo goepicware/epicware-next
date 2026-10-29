@@ -13,7 +13,7 @@
  * later entry regress to thinner copy than this one.
  */
 
-import { PROOF } from "@/lib/site/proof";
+import { PROOF, PRICING } from "@/lib/site/proof";
 
 export interface ServiceProcessStep {
   title: string;
@@ -31,12 +31,43 @@ export interface ServiceFaq {
   answer: string;
 }
 
+/** A sourced, country-agnostic fact backing this service's copy — same shape as content.ts's MarketFact, kept separate because this file isn't frontmatter-driven. Every sourceUrl here must return 200 (verified manually with the same lib/url-cache.ts tooling check-page-substance.ts uses for money pages — this file has no draft gate of its own to hang an automated check off). */
+export interface ServiceFact {
+  fact: string;
+  sourceUrl: string;
+}
+
+/** A free-form prose block (e.g. "the problem", "how it actually works") rendered before the outcomes list. */
+export interface ServiceNarrativeBlock {
+  heading: string;
+  paragraphs: string[];
+}
+
+/**
+ * A folded-in former sub-page, rendered as a full anchored section on the
+ * parent page instead of its own standalone route. `id` is set directly
+ * as the section's DOM id (not derived from heading text via a slugger),
+ * so it must exactly match the anchor next.config.ts's redirects send
+ * the old sub-page URLs to.
+ */
+export interface ServiceSubSection {
+  id: string;
+  heading: string;
+  paragraphs: string[];
+}
+
 export interface ServiceContent {
   slug: string;
   h1: string;
+  /** Falls back to "{h1} | Epicware" when omitted — set explicitly when the SEO title should differ from the on-page H1. */
+  metaTitle?: string;
   heroDescription: string;
+  /** Falls back to heroDescription when omitted. */
+  metaDescription?: string;
   /** "What it does and the outcomes" — 4-6 concrete, non-numeric capability statements. */
   outcomes: string[];
+  /** Optional prose before the outcomes list — "the problem" / "how it works" framing for pages with enough real substance to support it. */
+  narrative?: ServiceNarrativeBlock[];
   process: ServiceProcessStep[];
   software: {
     products: string[]; // product slugs from lib/site/products or just names used elsewhere (EpicMap, EpicReview, ...)
@@ -53,7 +84,18 @@ export interface ServiceContent {
   proofIntro?: string;
   caseStudies: ServiceCaseStudy[];
   statProof?: { value: string; label: string };
+  /** Sourced facts backing the copy, shown with a link to each source. */
+  facts?: ServiceFact[];
+  /** Former standalone sub-pages, folded in as anchored sections — see ServiceSubSection. */
+  subSections?: ServiceSubSection[];
+  /** Short pricing line shown under the hero CTA, e.g. "From USD 899/mo (SGD in Singapore)". */
+  pricingNote?: string;
   faqs: ServiceFaq[];
+}
+
+/** "From USD {monthly}/mo (SGD in Singapore)" — same number either currency, per PRICING.plans' own header comment. */
+function pricingNoteFor(planKey: keyof typeof PRICING.plans): string {
+  return `From USD ${PRICING.plans[planKey].monthly}/mo (SGD in Singapore)`;
 }
 
 export const SERVICE_CONTENT: Record<string, ServiceContent> = {
@@ -151,82 +193,157 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
   "local-seo": {
     slug: "local-seo",
-    h1: "Local SEO Services",
+    h1: "Local SEO Services That Put You in the Map Pack, Not Just the Report",
+    metaTitle: "Local SEO Services | Rank in Google Maps & the Local Pack | Epicware",
     heroDescription:
-      "Google Maps rank tracking, citation building, and competitor analysis — the work that decides whether your business shows up when someone nearby searches for what you sell.",
+      "When someone nearby searches for what you sell, Google shows three businesses on a map and everyone else gets scrolled past. Local SEO is the work that decides which three — categories, citations, competitor gaps and rank tracking, measured street by street on our own software.",
+    metaDescription:
+      "Local SEO services that win the Map Pack: category strategy, citations, competitor gap analysis and grid-based rank tracking on our own software. Free local visibility scan.",
+    narrative: [
+      {
+        heading: "You can rank #1 at your door and be invisible two streets away",
+        paragraphs: [
+          "Most businesses check their ranking by searching from their own shop — the one place Google is most likely to show them. A customer a short walk away often sees a completely different top three, because distance is built into how Google ranks local results, alongside relevance and prominence. Most owners never see that map, so they never find out where they're losing.",
+          "Customers rarely check just one place before they choose, either. In BrightLocal's 2026 consumer survey, people used an average of six review sites when picking a local business, and AI search engines ranked as the third most-used source of recommendations. A business that only looks after its Google profile leaves gaps everywhere else people look.",
+        ],
+      },
+      {
+        heading: "How local rankings actually work",
+        paragraphs: [
+          "Google says it weighs three things: relevance (how well your business matches the search), distance (how far you are from the searcher) and prominence (how well-known and trusted you are, through reviews, citations, links and engagement). You can't move your shop, but you can make sure you're properly visible across the whole area you serve, and you can build the prominence signals that are within your control.",
+          "Category choice matters more than most owners realise. Whitespark's 2026 survey of local SEO experts ranks the primary Google Business Profile category as the single most important local ranking factor, with additional categories at #8 — and for the first time, that survey also scored AI search visibility as a factor. Picking \"Restaurant\" when you should be \"Ramen Restaurant\" can hold you back on every search that matters.",
+        ],
+      },
+    ],
     outcomes: [
-      "Weekly rank tracking across the specific keywords and areas that drive your foot traffic",
-      "Citations corrected and kept consistent across the directories that feed Google Maps",
-      "Competitor analysis that shows exactly why a rival outranks you, not just that they do",
-      "Google Business Profile completeness tied directly into your local rank, not treated separately",
-      "One dashboard across every outlet if you run more than one location",
+      "Google Business Profile optimisation — categories, services, attributes, photos and weekly posts, kept within Google's guidelines",
+      "Citations audited and corrected across the directories and data sources that feed Google Maps, with inconsistencies fixed, not just new listings piled on",
+      "Competitor gap analysis that shows exactly what's outranking you — review count, categories, photos, posts and citations — ranked by likely impact",
+      "Location and service-area pages written for real local substance, not mass-produced near-identical city pages",
+      "Grid-based rank tracking across your whole area every week, not one ranking from one spot",
+      "One dashboard across every outlet if you run more than one location, with side-by-side comparison",
     ],
     process: [
       {
-        title: "Rank baseline",
+        title: "Week 1: Baseline",
         description:
-          "We track your current position across every relevant keyword and district before touching anything, so every later change has a before-and-after.",
+          "A grid scan across your area, a citation audit, and a category and competitor review — a dated starting point, so every result after this is measured, not claimed.",
       },
       {
-        title: "Citation audit and correction",
+        title: "Weeks 1–4: Fix the foundations",
         description:
-          "We check your business listing across every directory that feeds Google's local algorithm and fix inconsistencies — name, address, phone, category.",
+          "Profile changes, citation corrections, category strategy, and the missing location pages get planned and built.",
       },
       {
-        title: "Competitor gap analysis",
+        title: "Every week: Build",
         description:
-          "We compare your profile against the businesses actually outranking you — review count, post frequency, category selection — and identify the specific gaps.",
+          "New citations, posts, review replies and content go live, and the grid gets re-scanned so you see the movement.",
       },
       {
-        title: "Weekly tracking on live software",
+        title: "Every month: Report and adjust",
         description:
-          "Rank movement, citation status, and competitor changes all show up on the same dashboard our team works from, updated weekly.",
+          "Grid movement, calls, direction requests and website visits from your profile — effort shifts to the searches that are stalling.",
       },
     ],
     software: {
-      products: ["EpicMap"],
+      products: ["EpicMap", "EpicReview", "EpicSocial"],
       description:
-        "Local SEO work runs on EpicMap, our rank-tracking platform — grid-level visibility into exactly where you rank across every district and keyword, not a single average position.",
+        "Local SEO runs on EpicMap, EpicReview and EpicSocial — the same dashboards our team works from. EpicMap tracks your rankings on a grid across your area, EpicReview handles reviews, and EpicSocial keeps your profile posting.",
     },
     proofIntro:
       "Epicware's local SEO work is proven today in one market: Singapore. These are real, dated client results — not projections.",
     caseStudies: [
       {
-        title: "Multi-Outlet F&B Local SEO Case Study Singapore",
-        href: "/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
-        stat: "Multi-outlet rank growth",
+        title: "Aesthetic Clinic SEO Case Study Singapore: 60 Days",
+        href: "/case-studies/aesthetic-clinic-seo-singapore",
+        stat: "#1 in the Map Pack within 60 days",
       },
       {
-        title: "Restaurant Multi-Outlet Growth Singapore",
-        href: "/case-studies/restaurant-multi-outlet-growth-singapore",
-        stat: "Restaurant case study",
+        title: "Multi-Outlet F&B Local SEO Case Study Singapore",
+        href: "/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
+        stat: "+24.1% organic traffic growth",
       },
     ],
+    facts: [
+      {
+        fact: "Google says local results are based mainly on relevance, distance and prominence.",
+        sourceUrl: "https://support.google.com/business/answer/7091",
+      },
+      {
+        fact: "Whitespark's 2026 Local Search Ranking Factors survey asked 47 local SEO experts to score 187 factors, and for the first time included AI search visibility.",
+        sourceUrl: "https://whitespark.beehiiv.com/p/the-2026-local-search-ranking-factors-are-here",
+      },
+      {
+        fact: "Whitespark lists the primary Google Business Profile category as the #1 local ranking factor, and additional categories at #8 in its 2026 survey.",
+        sourceUrl: "https://whitespark.ca/google-business-profile-guide/categories/",
+      },
+      {
+        fact: "In BrightLocal's 2026 consumer survey, people used an average of six review sites when choosing a local business, and AI search engines ranked as the third most-used source of recommendations.",
+        sourceUrl: "https://www.brightlocal.com/research/local-consumer-review-survey/",
+      },
+    ],
+    subSections: [
+      {
+        id: "citation-building",
+        heading: "Citation Building and Cleanup",
+        paragraphs: [
+          "Citations are listings of your business name, address and phone number on directories, maps and data sources across the web. When they disagree with each other — an old address, a different phone number, a renamed business, a unit number formatted differently — search engines and AI tools get mixed signals about who you are.",
+          "We audit your existing listings, correct the inconsistencies, and build new citations on the sources that matter for your industry and country. For a business that's recently moved, changed its number, or rebranded, this is usually the single highest-leverage fix available.",
+        ],
+      },
+      {
+        id: "competitor-analysis",
+        heading: "Competitor Gap Analysis",
+        paragraphs: [
+          "For your most valuable searches, we look at the businesses outranking you and compare everything visible: categories, review count and recency, rating, photos, posts, website content and citations.",
+          "The result is a specific list of what they have that you don't, ranked by how much each gap is likely to cost you. You stop guessing which lever to pull and start closing gaps in order of impact — and for multi-outlet businesses, the comparison runs per location, since your competitors differ by area.",
+        ],
+      },
+      {
+        id: "rank-tracking",
+        heading: "Grid-Based Rank Tracking",
+        paragraphs: [
+          "Instead of one ranking from one spot, our EpicMap software checks your position from a grid of points spread across your area, every week. You see a heat map: strong in some streets, weak in others.",
+          "Every fix we make is measured against that grid, so you can watch your coverage expand over time — not just trust that a single screenshot from your own shopfront means you're visible everywhere.",
+        ],
+      },
+    ],
+    pricingNote: pricingNoteFor("authority"),
     faqs: [
       {
         question: "What's the difference between local SEO and regular SEO?",
         answer:
-          "Local SEO is about ranking in Google Maps and the local 3-pack for searches tied to a location — it's driven by your Google Business Profile, citations, and reviews. Regular website SEO is about ranking your site in organic search results generally. Businesses with a physical location or service area typically need local SEO first.",
+          "Local SEO wins the Map Pack and searches with local intent — \"near me\", \"in [area]\" — mainly through your Google Business Profile, reviews and citations. Regular SEO wins organic results through your website's own pages, content and authority. Most businesses with a physical location or service area benefit from both; they reinforce each other.",
       },
       {
-        question: "What are citations and why do they matter?",
+        question: "Which matters more, my Google Business Profile or my website?",
         answer:
-          "A citation is any online listing of your business name, address, and phone number — directories, maps apps, industry listings. Inconsistent citations (different spellings, old addresses, wrong phone numbers) confuse Google's local algorithm and can suppress your rank even if everything else is correct.",
+          "For the Map Pack, your profile carries the most weight. But your website feeds relevance and prominence too, and it's where many customers decide once they click through. Strong local SEO treats them as one system rather than choosing between them.",
       },
       {
-        question: "Can you manage local SEO for multiple outlets?",
+        question: "What are citations, and do they still matter?",
         answer:
-          "Yes — each outlet gets its own keyword strategy, rank tracking, and citation management, reported side by side in one dashboard, whether you run two outlets or twenty.",
+          "They're your business details listed on directories and data sources across the web. They matter most for consistency — mismatched details confuse search engines and AI tools about which information is correct. Fixing inconsistencies usually matters more than piling up new listings.",
       },
       {
-        question: "How is rank tracking different from a Google Maps screenshot?",
+        question: "Why does my ranking look different when I search from another location?",
         answer:
-          "A single screenshot shows your rank from one point, for one search. Grid-based rank tracking checks your position from many points across the area you actually serve, for every relevant keyword — because your rank genuinely differs block by block, and a customer three streets away may see a completely different result.",
+          "Because distance is part of how Google ranks local results. That's why we track from a grid of points across your area rather than from a single spot near your own shopfront.",
       },
       {
-        question: "Do reviews affect local SEO rank?",
+        question: "Can you manage local SEO for many locations?",
         answer:
-          "Yes. Review count, rating, and recency are documented local ranking factors. Local SEO and review management work together for that reason — see Review Management for the review side specifically.",
+          "Yes. Each location gets its own tracking and reporting, with a side-by-side view across every outlet in one dashboard.",
+      },
+      {
+        question: "How long does local SEO take?",
+        answer:
+          "Profile, category and citation fixes often show in local rankings within 30–60 days. Competitive categories and areas take longer, and your grid shows the progress week by week.",
+      },
+      {
+        question: "Can you guarantee a #1 ranking?",
+        answer:
+          "No honest provider can — Google decides rankings, not any vendor. Our plans carry specific, written guarantees about the work itself and the measured outcomes; see pricing for the terms.",
       },
     ],
   },
@@ -383,77 +500,151 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
   "review-management": {
     slug: "review-management",
-    h1: "Review Management",
+    h1: "Review Management That Turns Every Review Into a Reason to Choose You",
+    metaTitle: "Review Management Services | Monitor, Reply & Grow Reviews | Epicware",
     heroDescription:
-      "Review generation, AI-drafted responses, widgets, and analytics across every Google listing — so new reviews come in consistently and every one of them gets a reply.",
+      "Your reviews are the first thing a stranger checks before they call. We keep new reviews coming in, make sure every one gets a thoughtful reply, and show you what customers are really saying — across every location, in one place.",
+    metaDescription:
+      "Review management that keeps reviews coming and every one answered: real-time monitoring, AI-drafted replies, policy-safe review requests and analytics. Free review health check.",
+    narrative: [
+      {
+        heading: "Silence costs more than a bad review",
+        paragraphs: [
+          "A one-star review hurts. A one-star review with no reply hurts more. In BrightLocal's 2026 survey, 89% of consumers expected businesses to respond to reviews, and 42% said they were unlikely to use a business that ignores them. Yet most owners reply when they remember, copy-paste the same line, or leave reviews unanswered for weeks.",
+          "The good news is that replying works, and it's measurable. Researchers who studied tens of thousands of hotel reviews found that once hotels started replying, they received 12% more reviews and their average rating rose by 0.12 stars. Replies didn't stop complaints, but short, angry reviews dropped — because people write differently when they know the business is listening.",
+        ],
+      },
+    ],
     outcomes: [
-      "Real-time monitoring across every Google Business Profile you manage, with instant alerts on new reviews",
-      "AI-drafted responses that reference what the reviewer actually said, not a copy-paste template",
-      "Automated review generation campaigns timed to when the customer experience is still fresh",
-      "Your best reviews displayed on your own website automatically, kept current",
-      "Review velocity, rating trend, and response rate visible on one live dashboard",
+      "Real-time monitoring across every Google Business Profile you manage, with instant alerts the moment a new review lands",
+      "AI-drafted replies that reference what the reviewer actually said, ready to approve or send, with sensitive reviews always routed to a human first",
+      "Review generation within Google's rules — your review link and QR codes, requested by WhatsApp, SMS or email, with no incentives and no gating",
+      "Rating trend, review volume, recency, response rate and response time tracked per location, against your nearest competitors",
+      "Your real Google reviews shown honestly on your own website, always current, clearly labelled if you feature a selection",
     ],
     process: [
       {
-        title: "Connect every profile",
+        title: "Connect",
         description:
-          "We connect to each Google Business Profile you manage via API so every incoming review is monitored in real time, across every outlet.",
+          "We link every location's Google Business Profile and capture a baseline — rating, volume, recency and response rate.",
       },
       {
-        title: "Response workflow",
-        description:
-          "New reviews trigger an alert and an AI-drafted response referencing the specific review — you approve with one click or let it auto-publish, your choice.",
+        title: "Catch up",
+        description: "Unanswered reviews get replies, starting with the most recent and most visible.",
       },
       {
-        title: "Generation campaigns",
+        title: "Run",
         description:
-          "Automated WhatsApp and email requests go out at the right moment — after a visit or purchase, while the experience is still fresh — to build review volume consistently.",
+          "Monitoring, AI-drafted replies and review requests run continuously, with your approval wherever you want it.",
       },
       {
-        title: "Analytics and widgets",
-        description:
-          "Review velocity, rating trend, and competitor comparison are tracked live, and your best reviews can be pulled directly onto your website.",
+        title: "Report",
+        description: "Monthly reporting on rating, volume, response time and the themes behind them, per location.",
       },
     ],
     software: {
       products: ["EpicReview"],
       description:
-        "Review management runs on EpicReview — real-time monitoring, AI response drafting, generation campaigns, and analytics all on one dashboard, connected directly to your Google Business Profile.",
+        "Review management runs on EpicReview — one inbox for every location, AI drafts in your brand voice, alerts for reviews that need a human, and analytics that update as reviews arrive.",
     },
     proofIntro:
       "Epicware's review management work is proven today in one market: Singapore. These are real, dated client results — not projections.",
     caseStudies: [
+      {
+        title: "Salon Local SEO Singapore — Google Maps Case Study",
+        href: "/case-studies/salon-whatsapp-automation",
+        stat: "150+ reviews per outlet",
+      },
       {
         title: "Clinic Review Growth Singapore — Case Study",
         href: "/case-studies/clinic-review-growth-singapore",
         stat: "Review growth case study",
       },
     ],
+    facts: [
+      {
+        fact: "A Marketing Science study of TripAdvisor hotel reviews (Proserpio & Zervas) found that hotels which began replying to reviews saw a 12% increase in review volume and a 0.12-star increase in ratings.",
+        sourceUrl: "https://open.bu.edu/items/9b759580-53d3-44ff-975e-c17d5641abcc",
+      },
+      {
+        fact: "Google says replying to reviews shows customers you value their feedback, and that reviewers are notified of your reply and can update their review afterwards.",
+        sourceUrl: "https://support.google.com/business/answer/3474050",
+      },
+      {
+        fact: "Google prohibits offering incentives for reviews, and encourages businesses to ask for reviews using a link or QR code and to value all reviews.",
+        sourceUrl: "https://support.google.com/business/answer/3474122",
+      },
+      {
+        fact: "In BrightLocal's 2026 survey, 89% of consumers expected businesses to respond to reviews, and 42% were unlikely to use a business that ignores them.",
+        sourceUrl: "https://www.brightlocal.com/blog/smb-report-enough-reviews/",
+      },
+      {
+        fact: "Google's content policy prohibits discouraging negative reviews or selectively soliciting positive ones.",
+        sourceUrl: "https://support.google.com/contributionpolicy/answer/7400114",
+      },
+    ],
+    subSections: [
+      {
+        id: "ai-review-response",
+        heading: "AI-Drafted Replies, Human-Quality",
+        paragraphs: [
+          "Our AI reads each review — what the customer said, what they liked, what went wrong — and drafts a personal reply in your brand voice, ready to approve or send. Positive reviews get specific thanks, not \"Thanks for your review!\" Negative reviews get a calm, accountable reply that invites the customer to take it offline.",
+          "Sensitive reviews always go to a human before anything is posted. Google notifies reviewers when you reply, and they can update their review afterwards, so a good reply can genuinely change the outcome.",
+        ],
+      },
+      {
+        id: "review-generation",
+        heading: "Review Generation, Within the Rules",
+        paragraphs: [
+          "A steady flow of recent reviews matters to customers and to local rankings. We set up the tools Google itself recommends — your review link and QR codes — and send review requests by WhatsApp, SMS or email after a visit or purchase. You can also broadcast a review request to your existing customer list over WhatsApp, straight from the dashboard, to customers who've agreed to hear from you.",
+          "We never offer incentives for reviews, never discourage negative ones, and never ask only the customers we expect to be happy — in line with Google's policies. Broadcasts go out in line with WhatsApp's business messaging rules and local privacy law.",
+        ],
+      },
+      {
+        id: "reputation-analytics",
+        heading: "Reputation Analytics",
+        paragraphs: [
+          "Rating trend, review volume, review recency, response rate, response time, and the themes customers mention most — tracked per location and against your nearest competitors. You see what's driving your rating up or down, so you can fix the cause, not just the reviews.",
+        ],
+      },
+      {
+        id: "review-widgets",
+        heading: "Review Widgets for Your Website",
+        paragraphs: [
+          "Show your real Google reviews on your own site, so visitors don't have to leave to check you out. Widgets display reviews honestly. If you choose to feature a selection, it's clearly labelled with a link to all your reviews — selectively showcasing only the good ones can mislead customers and breach consumer rules in markets like the UK and US.",
+        ],
+      },
+    ],
+    pricingNote: pricingNoteFor("foundation"),
     faqs: [
       {
-        question: "How is this different from just replying to reviews myself?",
+        question: "Should we reply to every review, even positive ones?",
         answer:
-          "Most business owners check reviews sporadically and respond inconsistently. Real-time monitoring means you're alerted the moment a review lands, and AI-drafted responses mean a reply goes out in minutes rather than whenever someone remembers to check — important because response speed and consistency are both factors in how reviews affect your reputation.",
+          "Yes. Consumers expect it, and replying to all reviews — not just complaints — shows you're listening. Keep positive replies short and specific to what the customer said.",
       },
       {
-        question: "Are the AI responses generic?",
+        question: "Are AI-drafted replies generic?",
         answer:
-          "No — the draft reads the specific review and references what the reviewer actually said, rather than a templated \"thank you for your feedback.\" You can edit before publishing or let it auto-publish once you're comfortable with the quality.",
+          "No — each draft responds to what that customer actually wrote, in your brand voice. You can approve every reply, or let positive ones go out automatically and review only the sensitive ones.",
       },
       {
-        question: "Is it against Google's policy to ask for reviews?",
+        question: "Is it allowed to ask customers for reviews?",
         answer:
-          "No, but how you ask matters. Google's policy prohibits incentivising reviews, review gating (routing customers to leave a review only if they're predicted to be positive), and asking only customers you expect to be happy.",
+          "On Google, yes — Google recommends sharing your review link or QR code. What's not allowed is offering incentives, discouraging negative reviews, or only asking customers you expect to be happy. Some platforms have stricter rules of their own.",
       },
       {
-        question: "Can you manage reviews across multiple outlets?",
+        question: "How quickly should we reply?",
         answer:
-          "Yes — each outlet's reviews, analytics, and response history are tracked separately and reported side by side in one dashboard.",
+          "As soon as practical, ideally within a day or two. Consumers increasingly see slow replies as a red flag, and monitoring plus AI drafts make fast replies realistic.",
       },
       {
-        question: "What if a review is fake or violates Google's policies?",
+        question: "Can you manage reviews across many locations?",
+        answer: "Yes. Each location has its own inbox view, analytics and reporting, with a comparison across all locations.",
+      },
+      {
+        question: "What if a review is fake?",
         answer:
-          "That's a removal case rather than a response case — see Review Removal for how we handle reviews that violate Google's content policies specifically.",
+          "If it breaks the platform's rules, our review removal service handles it with evidence and follow-up. If it's an honest negative review, the right move is a good reply, not a removal request.",
       },
     ],
   },

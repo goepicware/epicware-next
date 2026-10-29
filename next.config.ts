@@ -77,9 +77,14 @@ const nextConfig: NextConfig = {
       // phase-3-redirects.md for the full table and rationale.
       { source: "/local-seo-singapore", destination: "/locations/singapore/local-seo", permanent: true },
       { source: "/local-seo-singapore/gbp-optimisation", destination: "/locations/singapore/google-business-profile", permanent: true },
-      { source: "/local-seo-singapore/citation-building", destination: "/services/local-seo/citation-building", permanent: true },
-      { source: "/local-seo-singapore/competitor-analysis", destination: "/services/local-seo/competitor-analysis", permanent: true },
-      { source: "/local-seo-singapore/local-rank-tracking", destination: "/services/local-seo/rank-tracking", permanent: true },
+      // citation-building, competitor-analysis and rank-tracking are
+      // folded into anchored sections on /services/local-seo (Services
+      // Rewrite Batch 1, 2026-10-29) — these now point straight at the
+      // parent anchor instead of the removed intermediate sub-page, so
+      // there's one hop, not two.
+      { source: "/local-seo-singapore/citation-building", destination: "/services/local-seo#citation-building", permanent: true },
+      { source: "/local-seo-singapore/competitor-analysis", destination: "/services/local-seo#competitor-analysis", permanent: true },
+      { source: "/local-seo-singapore/local-rank-tracking", destination: "/services/local-seo#rank-tracking", permanent: true },
       { source: "/local-seo-singapore/gbp-post-scheduling", destination: "/services/google-business-profile/post-scheduling", permanent: true },
       { source: "/local-seo-singapore/gbp-setup", destination: "/services/google-business-profile/setup", permanent: true },
       { source: "/seo-agency-singapore", destination: "/locations/singapore/seo", permanent: true },
@@ -88,15 +93,32 @@ const nextConfig: NextConfig = {
       { source: "/ai-search-visibility-singapore/ai-citation-building", destination: "/services/ai-search-visibility/ai-citation-building", permanent: true },
       { source: "/ai-search-visibility-singapore/geo-optimisation", destination: "/services/ai-search-visibility/geo-optimisation", permanent: true },
       { source: "/reputation-management-singapore", destination: "/locations/singapore/review-management", permanent: true },
-      { source: "/reputation-management-singapore/ai-review-response", destination: "/services/review-management/ai-review-response", permanent: true },
-      { source: "/reputation-management-singapore/reputation-analytics", destination: "/services/review-management/reputation-analytics", permanent: true },
-      { source: "/reputation-management-singapore/review-generation", destination: "/services/review-management/review-generation", permanent: true },
-      { source: "/reputation-management-singapore/review-widgets", destination: "/services/review-management/review-widgets", permanent: true },
+      // Same one-hop fix as citation-building above — ai-review-response,
+      // reputation-analytics, review-generation and review-widgets are
+      // now anchored sections on /services/review-management.
+      { source: "/reputation-management-singapore/ai-review-response", destination: "/services/review-management#ai-review-response", permanent: true },
+      { source: "/reputation-management-singapore/reputation-analytics", destination: "/services/review-management#reputation-analytics", permanent: true },
+      { source: "/reputation-management-singapore/review-generation", destination: "/services/review-management#review-generation", permanent: true },
+      { source: "/reputation-management-singapore/review-widgets", destination: "/services/review-management#review-widgets", permanent: true },
       { source: "/review-management-singapore", destination: "/locations/singapore/review-management", permanent: true },
       { source: "/review-management-singapore/google-reviews", destination: "/locations/singapore/review-management", permanent: true },
       { source: "/bad-review-removal-singapore", destination: "/locations/singapore/review-removal", permanent: true },
       { source: "/bad-review-removal-singapore/fake-review-removal", destination: "/services/review-removal/fake-review-removal", permanent: true },
       { source: "/bad-review-removal-singapore/unfair-review-removal", destination: "/services/review-removal/unfair-review-removal", permanent: true },
+
+      // --- Services Rewrite Batch 1 (2026-10-29): fold 7 sub-pages into
+      // parent anchors ---
+      // The 7 standalone /services/{service}/{subFeature} pages below no
+      // longer exist (content/services/{service}/*.mdx removed,
+      // lib/site/services.ts's subFeatures emptied for these two
+      // services) — folded into anchored sections on their parent page.
+      { source: "/services/local-seo/citation-building", destination: "/services/local-seo#citation-building", permanent: true },
+      { source: "/services/local-seo/competitor-analysis", destination: "/services/local-seo#competitor-analysis", permanent: true },
+      { source: "/services/local-seo/rank-tracking", destination: "/services/local-seo#rank-tracking", permanent: true },
+      { source: "/services/review-management/ai-review-response", destination: "/services/review-management#ai-review-response", permanent: true },
+      { source: "/services/review-management/reputation-analytics", destination: "/services/review-management#reputation-analytics", permanent: true },
+      { source: "/services/review-management/review-generation", destination: "/services/review-management#review-generation", permanent: true },
+      { source: "/services/review-management/review-widgets", destination: "/services/review-management#review-widgets", permanent: true },
     ];
   },
 };

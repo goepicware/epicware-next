@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { COUNTRIES } from "../../lib/site/countries";
 import { SERVICES } from "../../lib/site/services";
 import { DISTRICTS } from "../../lib/districts";
+import { getServiceContent } from "../../lib/site/serviceContent";
 import { extractTsxPage, extractMdxPage, type ExtractedPage } from "./page-text";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -120,22 +121,56 @@ export function districtNames(): string[] {
 
 /**
  * The 6 global /services/{service}/ pages — the "parent" each
- * /locations/{country}/{service}/ page sits under. These are generated
- * straight from SERVICES data (app/services/[service]/page.tsx has no
- * prose of its own beyond service.shortDescription), so read directly
- * from the data source rather than parsing the route file.
+ * /locations/{country}/{service}/ page sits under. Reads the real rich
+ * copy from lib/site/serviceContent.ts when a service has it (local-seo
+ * and review-management, as of the Services Rewrite Batch 1); the other
+ * services still fall back to SERVICES.shortDescription, matching the
+ * thinner layout app/services/[service]/page.tsx renders for them.
+ * Reading real content matters here specifically: this corpus is what
+ * the doorway-page similarity gate actually diffs against every
+ * /locations/{country}/{service}/ page, so a stale one-line stand-in
+ * would make the gate pass without ever really checking anything.
  */
 export function loadServiceParentPages(): PageDescriptor[] {
-  return SERVICES.map((s) => ({
-    id: `services/${s.slug}`,
-    group: "service-parent" as const,
-    service: s.slug,
-    isDraft: false,
-    filePath: "lib/site/services.ts",
-    title: `${s.name} | Epicware`,
-    description: s.shortDescription,
-    h1: s.name,
-    faqs: [],
-    bodyText: s.shortDescription,
-  }));
+  return SERVICES.map((s) => {
+    const content = getServiceContent(s.slug);
+    if (!content) {
+      return {
+        id: `services/${s.slug}`,
+        group: "service-parent" as const,
+        service: s.slug,
+        isDraft: false,
+        filePath: "lib/site/services.ts",
+        title: `${s.name} | Epicware`,
+        description: s.shortDescription,
+        h1: s.name,
+        faqs: [],
+        bodyText: s.shortDescription,
+      };
+    }
+
+    const bodyParts = [
+      content.heroDescription,
+      ...(content.narrative ?? []).flatMap((b) => [b.heading, ...b.paragraphs]),
+      ...content.outcomes,
+      ...content.process.flatMap((p) => [p.title, p.description]),
+      content.software.description,
+      content.proofIntro ?? "",
+      ...(content.facts ?? []).map((f) => f.fact),
+      ...(content.subSections ?? []).flatMap((sub) => [sub.heading, ...sub.paragraphs]),
+    ];
+
+    return {
+      id: `services/${s.slug}`,
+      group: "service-parent" as const,
+      service: s.slug,
+      isDraft: false,
+      filePath: "lib/site/serviceContent.ts",
+      title: content.metaTitle ?? `${content.h1} | Epicware`,
+      description: content.metaDescription ?? content.heroDescription,
+      h1: content.h1,
+      faqs: content.faqs.map((f) => `${f.question} ${f.answer}`),
+      bodyText: bodyParts.filter(Boolean).join(" "),
+    };
+  });
 }
