@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ComponentType } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, CheckCircle2, Star } from "lucide-react";
@@ -11,6 +12,40 @@ import { getSubFeatureContent, isCountryServiceLive } from "@/lib/site/content";
 import { getServiceContent } from "@/lib/site/serviceContent";
 import { EPICWARE_GOOGLE_RATING, formatGoogleRatingBadge } from "@/lib/site/proof";
 import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
+import ProcessTimeline from "@/components/visuals/ProcessTimeline";
+import MapPackHero from "@/components/visuals/local-seo/MapPackHero";
+import GeogridHeatmap from "@/components/visuals/local-seo/GeogridHeatmap";
+import RankingPillars from "@/components/visuals/local-seo/RankingPillars";
+import RankingFactorsTable from "@/components/visuals/local-seo/RankingFactorsTable";
+import CategoryComparisonCard from "@/components/visuals/local-seo/CategoryComparisonCard";
+import CitationConsistencyDiagram from "@/components/visuals/local-seo/CitationConsistencyDiagram";
+import CompetitorGapChart from "@/components/visuals/local-seo/CompetitorGapChart";
+import RankTrackingProgress from "@/components/visuals/local-seo/RankTrackingProgress";
+import LocationComparisonMock from "@/components/visuals/local-seo/LocationComparisonMock";
+import EpicMapAppMock from "@/components/visuals/local-seo/EpicMapAppMock";
+import ReviewInboxHero from "@/components/visuals/review-management/ReviewInboxHero";
+import ReviewStatCallouts from "@/components/visuals/review-management/ReviewStatCallouts";
+import ResearchResultChart from "@/components/visuals/review-management/ResearchResultChart";
+import AiReplyFlow from "@/components/visuals/review-management/AiReplyFlow";
+import ReviewChannelDiagram from "@/components/visuals/review-management/ReviewChannelDiagram";
+import ReputationAnalyticsMock from "@/components/visuals/review-management/ReputationAnalyticsMock";
+import WebsiteWidgetMock from "@/components/visuals/review-management/WebsiteWidgetMock";
+import FakeReviewDecision from "@/components/visuals/review-management/FakeReviewDecision";
+
+/** Sub-section id → the visual that illustrates it, per service. Keeps the long JSX below a lookup instead of an if/else chain. */
+const SUBSECTION_VISUALS: Record<string, Record<string, ComponentType>> = {
+  "local-seo": {
+    "citation-building": CitationConsistencyDiagram,
+    "competitor-analysis": CompetitorGapChart,
+    "rank-tracking": RankTrackingProgress,
+  },
+  "review-management": {
+    "ai-review-response": AiReplyFlow,
+    "review-generation": ReviewChannelDiagram,
+    "reputation-analytics": ReputationAnalyticsMock,
+    "review-widgets": WebsiteWidgetMock,
+  },
+};
 
 /**
  * Global /services/{service}/ pages — market-neutral, always live. Each
@@ -205,6 +240,16 @@ export default async function ServicePage({
               <p className="mt-4 text-sm font-semibold text-primary">{content.pricingNote}</p>
             )}
           </div>
+          {slug === "local-seo" && (
+            <div className="mt-10">
+              <MapPackHero />
+            </div>
+          )}
+          {slug === "review-management" && (
+            <div className="mt-10">
+              <ReviewInboxHero />
+            </div>
+          )}
         </div>
       </section>
 
@@ -212,14 +257,32 @@ export default async function ServicePage({
       {content.narrative && content.narrative.length > 0 && (
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-6 max-w-3xl space-y-10">
-            {content.narrative.map((block) => (
+            {content.narrative.map((block, i) => (
               <div key={block.heading}>
                 <h2 className="font-display text-foreground mb-4">{block.heading}</h2>
-                {block.paragraphs.map((p, i) => (
-                  <p key={i} className="text-base text-muted-foreground leading-relaxed mb-4">
+                {block.paragraphs.map((p, j) => (
+                  <p key={j} className="text-base text-muted-foreground leading-relaxed mb-4">
                     {p}
                   </p>
                 ))}
+                {slug === "local-seo" && i === 0 && (
+                  <div className="mt-6">
+                    <GeogridHeatmap />
+                  </div>
+                )}
+                {slug === "local-seo" && i === 1 && (
+                  <div className="mt-6 space-y-6">
+                    <RankingPillars />
+                    <RankingFactorsTable />
+                    <CategoryComparisonCard />
+                  </div>
+                )}
+                {slug === "review-management" && i === 0 && (
+                  <div className="mt-6">
+                    <ReviewStatCallouts />
+                    <ResearchResultChart />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -238,6 +301,11 @@ export default async function ServicePage({
               </li>
             ))}
           </ul>
+          {slug === "local-seo" && (
+            <div className="mt-8">
+              <LocationComparisonMock />
+            </div>
+          )}
         </div>
       </section>
 
@@ -269,17 +337,21 @@ export default async function ServicePage({
       <section className="py-12 lg:py-16 section-gradient-1">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="font-display text-foreground mb-8 text-center">Our Process</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {content.process.map((step, i) => (
-              <div key={step.title} className="rounded-2xl border border-border/60 bg-card p-6">
-                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold mb-3">
-                  {i + 1}
-                </span>
-                <h3 className="font-semibold text-foreground mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
-              </div>
-            ))}
-          </div>
+          {hasInlineCTA ? (
+            <ProcessTimeline steps={content.process} />
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {content.process.map((step, i) => (
+                <div key={step.title} className="rounded-2xl border border-border/60 bg-card p-6">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold mb-3">
+                    {i + 1}
+                  </span>
+                  <h3 className="font-semibold text-foreground mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -295,6 +367,11 @@ export default async function ServicePage({
               </span>
             ))}
           </div>
+          {slug === "local-seo" && (
+            <div className="mt-6">
+              <EpicMapAppMock />
+            </div>
+          )}
         </div>
       </section>
 
@@ -367,16 +444,27 @@ export default async function ServicePage({
       {content.subSections && content.subSections.length > 0 && (
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-6 max-w-3xl space-y-12">
-            {content.subSections.map((s) => (
-              <div key={s.id} id={s.id} className="scroll-mt-28">
-                <h3 className="font-display text-foreground text-xl font-bold mb-3">{s.heading}</h3>
-                {s.paragraphs.map((p, i) => (
-                  <p key={i} className="text-base text-muted-foreground leading-relaxed mb-4">
-                    {p}
-                  </p>
-                ))}
-              </div>
-            ))}
+            {content.subSections.map((s) => {
+              const Visual = SUBSECTION_VISUALS[slug]?.[s.id];
+              return (
+                <div key={s.id} id={s.id} className="scroll-mt-28">
+                  <h3 className="font-display text-foreground text-xl font-bold mb-3">{s.heading}</h3>
+                  {s.paragraphs.map((p, i) => (
+                    <p key={i} className="text-base text-muted-foreground leading-relaxed mb-4">
+                      {p}
+                    </p>
+                  ))}
+                  {Visual && (
+                    <div className="mt-6">
+                      <Visual />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+            {/* No new copy here per the visuals brief — this visual stands on its
+                own next to the existing "What if a review is fake?" FAQ answer below. */}
+            {slug === "review-management" && <FakeReviewDecision />}
           </div>
         </section>
       )}
