@@ -4,6 +4,8 @@ import { useCallback, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Loader2, AlertCircle, CheckCircle2 } from "lucide-react";
 import { trackEvent } from "@/lib/meta-tracking";
+import { createLeadTransactionId, trackGoogleAdsLead } from "@/lib/tracking/google-ads";
+import { getStoredClickIds } from "@/lib/tracking/click-ids";
 
 /**
  * Inline audit-request form for the Final CTA section — mirrors
@@ -60,6 +62,13 @@ export default function AuditLeadForm() {
               service: "patient-engine",
             },
           });
+          trackGoogleAdsLead({
+            transactionId: payload.transactionId as string,
+            leadType: "patient-engine",
+            country: "singapore",
+            email: payload.email as string,
+            phone: payload.phone as string,
+          });
           return;
         }
       } catch {
@@ -100,6 +109,8 @@ export default function AuditLeadForm() {
         clinicName,
         mapsLink,
         outlets,
+        transactionId: createLeadTransactionId(),
+        ...getStoredClickIds(),
       });
       setSubmitting(false);
     },

@@ -2,17 +2,13 @@
 
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { createLeadTransactionId, trackGoogleAdsLead, GOOGLE_ADS_CONTACT_LABEL } from "@/lib/tracking/google-ads";
+import { getStoredClickIds } from "@/lib/tracking/click-ids";
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
-// Contact Us stays on its own conversion label — mostly organic, lower-intent
-// traffic that shouldn't be mixed into the ad-driven "EW | Lead Form Submit"
-// action Google bids on for /remove-review and /ai-visibility.
-const GOOGLE_ADS_CONVERSION_LABEL = "AW-18302464942/WMlDCNbP7tMcEK7npZdE";
+// Contact Us stays on its own conversion label (GOOGLE_ADS_CONTACT_LABEL) —
+// mostly organic, lower-intent traffic that shouldn't be mixed into the
+// ad-driven "EW | Lead Form Submit" action Google bids on for
+// /remove-review and /ai-visibility. See lib/tracking/google-ads.ts.
 
 const INDUSTRIES = [
   "F&B/Restaurant",
@@ -69,17 +65,22 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
+    const transactionId = createLeadTransactionId();
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, transactionId, ...getStoredClickIds() }),
       });
       if (!res.ok) throw new Error("Failed");
 
-      if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("event", "conversion", { send_to: GOOGLE_ADS_CONVERSION_LABEL });
-      }
+      trackGoogleAdsLead({
+        transactionId,
+        leadType: "contact",
+        conversionLabel: GOOGLE_ADS_CONTACT_LABEL,
+        email: form.email,
+        phone: form.phone,
+      });
 
       setStatus("success");
       setForm({ fullName: "", phone: "+65 ", email: "", companyName: "", industry: "", revenueRange: "", outlets: "", interestedIn: "" });

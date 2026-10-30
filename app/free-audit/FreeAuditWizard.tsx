@@ -13,6 +13,8 @@ import StepKeywords from "./StepKeywords";
 import StepLocation from "./StepLocation";
 import type { GBPSnapshot, EnrichedKeyword } from "./types";
 import { trackEvent } from "@/lib/meta-tracking";
+import { createLeadTransactionId, trackGoogleAdsLead } from "@/lib/tracking/google-ads";
+import { getStoredClickIds } from "@/lib/tracking/click-ids";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -524,6 +526,11 @@ export default function FreeAuditWizard() {
   const [leadError, setLeadError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [leadSaveStatus, setLeadSaveStatus] = useState<"pending" | "saved" | "failed">("pending");
+  // One id for the lifetime of this wizard instance — shared by the
+  // automatic retries inside submitLeadWithRetry AND the manual "Retry"
+  // button on the results screen, so however many attempts it takes to
+  // get a 2xx, Google Ads still sees exactly one transaction_id.
+  const [leadTransactionId] = useState(() => createLeadTransactionId());
 
   // Step 5
   const [isProcessing, setIsProcessing] = useState(false);
@@ -617,6 +624,18 @@ export default function FreeAuditWizard() {
         });
         if (res.ok) {
           setLeadSaveStatus("saved");
+          // Fires here, on the lead API's own 2xx — deliberately NOT next
+          // to the trackEvent("Lead") call below, which (by design, see
+          // its own comment) fires on audit-report completion instead, a
+          // separate, later, not-always-true-if-this-failed moment. Google
+          // Ads needs the strict "server actually accepted the lead"
+          // signal; Meta's existing choice of moment is left untouched.
+          trackGoogleAdsLead({
+            transactionId: payload.transactionId as string,
+            leadType: (payload.leadType as string) ?? "free-audit",
+            email: payload.email as string,
+            phone: payload.phone as string,
+          });
           return;
         }
       } catch {
@@ -642,6 +661,8 @@ export default function FreeAuditWizard() {
       businessName: gbpSnapshot?.businessName,
       businessAddress: gbpSnapshot?.address,
       websiteUrl,
+      transactionId: leadTransactionId,
+      ...getStoredClickIds(),
     });
 
     setStep(5); setIsProcessing(true);
@@ -703,7 +724,7 @@ export default function FreeAuditWizard() {
         setResult((prev) => (prev ? { ...prev, aiVisibility: aiVisData } : prev));
       }
     });
-  }, [name, email, phone, leadType, consent, placeId, keywords, selectedEnrichedKeywords, topCompetitors, radiusKm, gbpSnapshot, websiteUrl]);
+  }, [name, email, phone, leadType, consent, placeId, keywords, selectedEnrichedKeywords, topCompetitors, radiusKm, gbpSnapshot, websiteUrl, leadTransactionId, submitLeadWithRetry]);
 
   const scoreColour = (s: number) => s >= 70 ? "text-emerald-600" : s >= 50 ? "text-yellow-600" : "text-red-600";
 
@@ -1089,6 +1110,8 @@ ${result.enrichedKeywords.length > 0 ? `
                       businessName: gbpSnapshot?.businessName,
                       businessAddress: gbpSnapshot?.address,
                       websiteUrl,
+                      transactionId: leadTransactionId,
+                      ...getStoredClickIds(),
                     })}
                     className="text-amber-900 font-semibold underline shrink-0"
                   >

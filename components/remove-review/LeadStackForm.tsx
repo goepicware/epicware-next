@@ -3,20 +3,14 @@
 import { useId, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { trackEvent } from "@/lib/meta-tracking";
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
+import { createLeadTransactionId, trackGoogleAdsLead } from "@/lib/tracking/google-ads";
 
 const FORM_ID = "nelz1TUKVkt30P8LxELP";
 const SUBMIT_URL = `https://atomos-one.vercel.app/api/forms/${FORM_ID}/submit`;
 
-// Same "EW | Lead Form Submit" conversion action as /ai-visibility's
-// GOOGLE_ADS_CONVERSION_ID (lib/ai-visibility-constants.ts) — intentionally
-// one shared label across both landing pages, not per-page.
-const GOOGLE_ADS_CONVERSION_LABEL = "AW-18302464942/q1pgCKvf_OocEK7npZdE";
+// Same "EW | Lead Form Submit" conversion action (GOOGLE_ADS_LEAD_LABEL,
+// lib/tracking/google-ads.ts) as /ai-visibility — intentionally one shared
+// label across both landing pages, not per-page.
 
 const inputClass =
   "flex h-11 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors";
@@ -73,15 +67,10 @@ export default function LeadStackForm({ id }: LeadStackFormProps) {
       const body: SubmitResponse = await res.json();
       if (!res.ok) throw new Error(body.error || "Submission failed");
 
-      if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("event", "conversion", { send_to: GOOGLE_ADS_CONVERSION_LABEL });
-      }
-
-      if (body.redirectUrl) {
-        window.location.href = body.redirectUrl;
-        return;
-      }
-
+      // Meta Lead now fires unconditionally on success (previously it was
+      // skipped whenever body.redirectUrl was present, since it sat after
+      // the early `return` below — fixed as part of restructuring this
+      // block to fire Google Ads tracking before any redirect).
       trackEvent("Lead", {
         userData: { em: email, ph: phone },
         customData: {
@@ -90,8 +79,23 @@ export default function LeadStackForm({ id }: LeadStackFormProps) {
         },
       });
 
-      setThankYouMessage(body.thankYouMessage || "Thanks! We'll be in touch shortly.");
-      setSubmitted(true);
+      // Google Ads conversion — navigation (if any) happens from
+      // onComplete, after Google's own event_callback fires or a 1s
+      // timeout, whichever is first — never before.
+      trackGoogleAdsLead({
+        transactionId: createLeadTransactionId(),
+        leadType: "remove-review",
+        email,
+        phone,
+        onComplete: () => {
+          if (body.redirectUrl) {
+            window.location.href = body.redirectUrl;
+            return;
+          }
+          setThankYouMessage(body.thankYouMessage || "Thanks! We'll be in touch shortly.");
+          setSubmitted(true);
+        },
+      });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again or email hello@epicware.ai.");
     } finally {

@@ -5,6 +5,16 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { fullName, phone, email, companyName, industry, country, revenueRange, outlets, interestedIn } = body;
 
+    // Durable capture, logged before anything that can fail — same pattern
+    // as app/api/audit-lead/route.ts's backupLead. Also the only place
+    // transactionId/gclid/gbraid/wbraid (lib/tracking/) land server-side
+    // for this route, since the email below doesn't surface them.
+    try {
+      console.log("[LEAD_BACKUP]", JSON.stringify({ source: "book-demo", receivedAt: new Date().toISOString(), body }));
+    } catch {
+      // never block the lead on a logging failure
+    }
+
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       return NextResponse.json({ error: "Email service not configured" }, { status: 500 });

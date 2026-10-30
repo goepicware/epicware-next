@@ -6,6 +6,8 @@ import { ArrowRight, Loader2, AlertCircle, CheckCircle2 } from "lucide-react";
 import { getCountry } from "@/lib/site/countries";
 import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
 import { trackEvent } from "@/lib/meta-tracking";
+import { createLeadTransactionId, trackGoogleAdsLead } from "@/lib/tracking/google-ads";
+import { getStoredClickIds } from "@/lib/tracking/click-ids";
 
 /**
  * Page-specific lead CTA for /locations/{country}/{service}/ pages —
@@ -124,6 +126,13 @@ function LeadForm({
               userData: { em: payload.email as string, ph: payload.phone as string },
               customData: { content_name: config.primaryLabel, country: countrySlug, service: serviceSlug },
             });
+            trackGoogleAdsLead({
+              transactionId: payload.transactionId as string,
+              leadType: serviceSlug,
+              country: countrySlug,
+              email: payload.email as string,
+              phone: payload.phone as string,
+            });
             return;
           }
         } catch {
@@ -162,6 +171,8 @@ function LeadForm({
         leadType: config.leadType,
         country: countrySlug,
         sourcePath,
+        transactionId: createLeadTransactionId(),
+        ...getStoredClickIds(),
         ...Object.fromEntries(config.fields.map((f) => [f.payloadKey, fieldValues[f.id] ?? ""])),
       });
       setSubmitting(false);

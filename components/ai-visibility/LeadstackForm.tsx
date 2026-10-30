@@ -1,20 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { GOOGLE_ADS_CONVERSION_ID } from "@/lib/ai-visibility-constants";
+import { createLeadTransactionId, trackGoogleAdsLead } from "@/lib/tracking/google-ads";
+import { getStoredClickIds } from "@/lib/tracking/click-ids";
 
 const FORM_ID = "1iTvX81N9ctpHWxvvPKU";
 const SUBMIT_URL = `https://atomos-one.vercel.app/api/forms/${FORM_ID}/submit`;
 
 const inputClass =
   "flex h-11 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors";
-
-// Matches the declare-global pattern already used in components/home/VideoSection.tsx.
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
 
 interface SubmitResponse {
   redirectUrl?: string;
@@ -48,19 +42,24 @@ export default function LeadstackForm() {
       const body: SubmitResponse = await res.json();
       if (!res.ok) throw new Error(body.error || "Submission failed");
 
-      // Google Ads conversion — fires on confirmed successful submission,
-      // before the redirect (per build spec, not on button click).
-      if (typeof window !== "undefined" && window.gtag && GOOGLE_ADS_CONVERSION_ID) {
-        window.gtag("event", "conversion", { send_to: GOOGLE_ADS_CONVERSION_ID });
-      }
-
-      if (body.redirectUrl) {
-        window.location.href = body.redirectUrl;
-        return;
-      }
-
-      setThankYouMessage(body.thankYouMessage || "Thanks! We'll be in touch shortly.");
-      setSubmitted(true);
+      // Google Ads conversion — fires on confirmed successful submission.
+      // Navigation (if any) happens from onComplete, after Google's own
+      // event_callback fires or a 1s timeout, whichever is first — never
+      // before, so the conversion beacon isn't cut off by the redirect.
+      trackGoogleAdsLead({
+        transactionId: createLeadTransactionId(),
+        leadType: "ai-visibility-audit",
+        email,
+        phone,
+        onComplete: () => {
+          if (body.redirectUrl) {
+            window.location.href = body.redirectUrl;
+            return;
+          }
+          setThankYouMessage(body.thankYouMessage || "Thanks! We'll be in touch shortly.");
+          setSubmitted(true);
+        },
+      });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again or email hello@epicware.ai.");
     } finally {

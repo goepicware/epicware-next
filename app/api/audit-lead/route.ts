@@ -42,17 +42,28 @@ async function sendCtaLeadEmail(opts: {
    * the existing /locations/{country}/{pagePath} shape when omitted, so
    * every existing caller is unaffected. */
   sourcePath?: string;
+  /** Google Ads click ids (lib/tracking/click-ids.ts) — shown only when present, for offline conversion import later. */
+  gclid?: string;
+  gbraid?: string;
+  wbraid?: string;
 }): Promise<NextResponse> {
-  const { apiKey, isTest, name, email, phone, country, pageLabel, pagePath, color, emoji, extraFields, sourcePath } = opts;
+  const { apiKey, isTest, name, email, phone, country, pageLabel, pagePath, color, emoji, extraFields, sourcePath, gclid, gbraid, wbraid } = opts;
   const sourceUrl = sourcePath ?? `locations/${country || "unknown"}/${pagePath}`;
 
-  const extraRowsHtml = extraFields
+  const clickIdFields = [
+    { label: "gclid", value: gclid },
+    { label: "gbraid", value: gbraid },
+    { label: "wbraid", value: wbraid },
+  ].filter((f) => f.value);
+  const allExtraFields = [...extraFields, ...clickIdFields];
+
+  const extraRowsHtml = allExtraFields
     .map(
       (f) =>
         `<tr style="border-bottom: 1px solid #f3f4f6;"><td style="padding: 10px 0; color: #6b7280; width: 160px; font-size: 14px;">${f.label}</td><td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${f.value || "—"}</td></tr>`
     )
     .join("");
-  const extraRowsText = extraFields.map((f) => `${f.label}: ${f.value || "—"}`).join("\n");
+  const extraRowsText = allExtraFields.map((f) => `${f.label}: ${f.value || "—"}`).join("\n");
 
   const html = `
     <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
@@ -143,6 +154,7 @@ export async function POST(req: NextRequest) {
     reviewManagementProfileLink,
     clinicName, mapsLink, outlets,
     sourcePath,
+    gclid, gbraid, wbraid,
   } = body as {
     name?: string; email?: string; phone?: string; leadType?: string;
     businessName?: string; businessAddress?: string; websiteUrl?: string;
@@ -152,6 +164,7 @@ export async function POST(req: NextRequest) {
     businessNameOrMapsLink?: string; cityMetro?: string; gbpMapsLink?: string;
     reviewManagementProfileLink?: string;
     clinicName?: string; mapsLink?: string; outlets?: string;
+    gclid?: string; gbraid?: string; wbraid?: string;
   };
 
   if (!name?.trim() || !email?.trim()) {
@@ -241,6 +254,7 @@ export async function POST(req: NextRequest) {
   if (leadType === "local-seo") {
     return sendCtaLeadEmail({
       apiKey, isTest, name, email, phone, country,
+      gclid, gbraid, wbraid,
       pageLabel: "Local SEO",
       pagePath: "local-seo",
       // sourcePath override: this leadType is shared between the
@@ -261,6 +275,7 @@ export async function POST(req: NextRequest) {
   if (leadType === "gbp-audit") {
     return sendCtaLeadEmail({
       apiKey, isTest, name, email, phone, country,
+      gclid, gbraid, wbraid,
       pageLabel: "GBP Audit",
       pagePath: "google-business-profile",
       color: "#059669",
@@ -272,6 +287,7 @@ export async function POST(req: NextRequest) {
   if (leadType === "review-management") {
     return sendCtaLeadEmail({
       apiKey, isTest, name, email, phone, country,
+      gclid, gbraid, wbraid,
       pageLabel: "Review Health Check",
       pagePath: "review-management",
       // See the local-seo handler above — same shared-leadType reasoning.
@@ -285,6 +301,7 @@ export async function POST(req: NextRequest) {
   if (leadType === "seo-audit") {
     return sendCtaLeadEmail({
       apiKey, isTest, name, email, phone, country,
+      gclid, gbraid, wbraid,
       pageLabel: "SEO Audit",
       pagePath: "seo",
       color: "#2563EB",
@@ -296,6 +313,7 @@ export async function POST(req: NextRequest) {
   if (leadType === "ai-visibility") {
     return sendCtaLeadEmail({
       apiKey, isTest, name, email, phone, country,
+      gclid, gbraid, wbraid,
       pageLabel: "AI Visibility Check",
       pagePath: "ai-search-visibility",
       color: "#8B5CF6",
@@ -310,6 +328,7 @@ export async function POST(req: NextRequest) {
   if (leadType === "patient-engine") {
     return sendCtaLeadEmail({
       apiKey, isTest, name, email, phone, country,
+      gclid, gbraid, wbraid,
       pageLabel: "90-Day Patient Engine Audit",
       pagePath: "90-day-patient-engine",
       sourcePath: "90-day-patient-engine",

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { trackEvent } from "@/lib/meta-tracking";
 import { SERVICES } from "@/lib/site/services";
+import { createLeadTransactionId, trackGoogleAdsLead } from "@/lib/tracking/google-ads";
+import { getStoredClickIds } from "@/lib/tracking/click-ids";
 
 const INDUSTRIES = [
   "Restaurant / F&B",
@@ -111,6 +113,7 @@ export default function BookDemoForm({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    const transactionId = createLeadTransactionId();
     try {
       const res = await fetch("/api/book-demo", {
         method: "POST",
@@ -125,6 +128,8 @@ export default function BookDemoForm({
           revenueRange: formData.revenueRange,
           outlets: formData.outlets,
           interestedIn: formData.interests,
+          transactionId,
+          ...getStoredClickIds(),
         }),
       });
       if (!res.ok) throw new Error("Failed");
@@ -145,6 +150,13 @@ export default function BookDemoForm({
           country: selectedCountry?.label ?? formData.country,
           services: formData.interests,
         },
+      });
+      trackGoogleAdsLead({
+        transactionId,
+        leadType: "book-demo",
+        country: formData.country,
+        email: formData.email,
+        phone: formData.phone,
       });
       setStatus("success");
       setFormData({ fullName: "", phone: "", email: "", companyName: "", industry: "", country: "", revenueRange: "", outlets: "", interests: [] });

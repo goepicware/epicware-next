@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper";
+import ClickIdCapture from "@/components/tracking/ClickIdCapture";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getLiveCountryServices } from "@/lib/site/content";
 import { COUNTRIES } from "@/lib/site/countries";
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </noscript>
         )}
+        <ClickIdCapture />
         <ClientLayoutWrapper liveCountryServices={liveCountryServices}>{children}</ClientLayoutWrapper>
         <SpeedInsights />
         {/* Google Analytics */}
