@@ -16,7 +16,8 @@
     "check:no-raw-gtag-conversion": "tsx scripts/check-no-raw-gtag-conversion.ts",
     "check:google-ads-tracking": "tsx scripts/check-google-ads-tracking.ts",
     "check:pages": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts && tsx scripts/check-sitemap-noindex.ts && tsx scripts/check-no-raw-gtag-conversion.ts && tsx scripts/check-google-ads-tracking.ts",
-    "check:live-endpoints": "tsx --env-file-if-exists=.env.local scripts/check-live-endpoints.ts"
+    "check:live-endpoints": "tsx --env-file-if-exists=.env.local scripts/check-live-endpoints.ts",
+    "check:breadcrumb-schema": "tsx scripts/check-breadcrumb-schema.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.1",

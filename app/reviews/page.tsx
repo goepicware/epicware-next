@@ -124,11 +124,21 @@ const aggregateSchema = {
   review: reviewSchema,
 };
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Reviews", item: "https://www.epicware.ai/reviews" },
+  ],
+};
+
 export default async function ReviewsPage() {
   const rating = await getLiveRating();
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateSchema) }} />
 
       {/* ── Hero ── */}

@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
-const schema = {
+const schema = [
+  {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Epicware vs Grade.us — Review Management Platform Comparison",
@@ -23,7 +24,16 @@ const schema = {
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "url": "https://epicware.ai/comparison/epicware-vs-gradeus"
-};
+},
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Epicware vs Grade.us", item: "https://www.epicware.ai/comparison/epicware-vs-gradeus" },
+  ],
+},
+];
 
 const features = [
   { feature: "Built for Singapore market", epicware: true, competitor: false },

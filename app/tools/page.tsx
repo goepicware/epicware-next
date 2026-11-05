@@ -53,9 +53,19 @@ const jsonLd = {
   },
 };
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.epicware.ai/tools" },
+  ],
+};
+
 export default function ToolsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

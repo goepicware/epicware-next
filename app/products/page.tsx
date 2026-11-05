@@ -89,9 +89,19 @@ const PRODUCTS = [
   },
 ];
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Products", item: "https://www.epicware.ai/products" },
+  ],
+};
+
 export default function ProductsHubPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center hero-gradient overflow-hidden pt-28 pb-16">
         <div className="absolute inset-0 pointer-events-none">

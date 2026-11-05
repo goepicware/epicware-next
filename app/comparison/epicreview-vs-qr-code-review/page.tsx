@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
-const schema = {
+const schema = [
+  {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Epicware vs QR Code Reviews — Automated vs Manual Review Collection",
@@ -23,7 +24,16 @@ const schema = {
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "url": "https://epicware.ai/comparison/epicreview-vs-qr-code-review"
-};
+},
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Epicware vs QR Code Reviews", item: "https://www.epicware.ai/comparison/epicreview-vs-qr-code-review" },
+  ],
+},
+];
 
 const features = [
   { feature: "Review request method", epicware: "WhatsApp / Email (automated)", competitor: "Passive QR scan" },

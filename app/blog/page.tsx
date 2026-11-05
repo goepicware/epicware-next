@@ -595,11 +595,21 @@ function CategoryBadge({ category }: { category: string }) {
   );
 }
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.epicware.ai/blog" },
+  ],
+};
+
 export default function BlogHubPage() {
   const [featured, ...rest] = posts;
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       {/* Hero */}
       <section className="hero-gradient pt-28 pb-12">
         <div className="container mx-auto px-6 max-w-4xl">
