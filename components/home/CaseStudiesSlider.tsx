@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -85,11 +85,9 @@ export default function CaseStudiesSlider() {
               </ul>
               <Link
                 href={cs.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-sm font-semibold text-primary flex items-center gap-1.5 mt-auto group-hover:underline"
               >
-                Read the full case study <ExternalLink className="w-3.5 h-3.5" />
+                Read the full case study <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </motion.div>
           ))}
