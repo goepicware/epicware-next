@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/nail-hair-salons",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Salon SEO Singapore | Hair & Nail Salon Marketing | Epicware",
     description:
       "Local SEO for Singapore hair and nail salons: top 3 on Google Maps, more 5-star reviews through WhatsApp and steady bookings from 'salon near me'.",

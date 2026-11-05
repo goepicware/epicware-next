@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Free tools for local businesses: a Google review reply generator, a review request generator and a backlink opportunity finder. No signup needed.",
   alternates: { canonical: "https://www.epicware.ai/tools" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Free SEO & Google Review Tools | Epicware",
     description: "Free tools for local businesses: a Google review reply generator, a review request generator and a backlink opportunity finder. No signup needed.",
     url: "https://www.epicware.ai/tools",

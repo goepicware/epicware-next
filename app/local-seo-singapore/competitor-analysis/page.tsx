@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "See exactly why competitors outrank you on Google Maps, from reviews and categories to photos and posting, then close each gap outlet by outlet.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/competitor-analysis" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Local SEO Competitor Analysis Singapore | Epicware",
     description: "See exactly why competitors outrank you on Google Maps, from reviews and categories to photos and posting, then close each gap outlet by outlet.",
     url: "https://www.epicware.ai/local-seo-singapore/competitor-analysis",

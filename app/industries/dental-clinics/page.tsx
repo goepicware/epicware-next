@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/dental-clinics",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Dental SEO Singapore | Get More Patients | Epicware",
     description:
       "Dental SEO for Singapore practices: rank on Google Maps for 'dentist near me', grow 5-star reviews and turn searches into booked appointments.",

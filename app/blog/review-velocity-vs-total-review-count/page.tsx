@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Understand whether Google Maps ranking is driven more by review count or review recency. The answer affects your entire review strategy.",
   alternates: { canonical: "https://www.epicware.ai/blog/review-velocity-vs-total-review-count" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Review Velocity vs Total Review Count — Which Matters More? | Epicware",
     description: "Understand whether Google Maps ranking is driven more by review count or review recency. The answer affects your entire review strategy.",
     url: "https://www.epicware.ai/blog/review-velocity-vs-total-review-count",

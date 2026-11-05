@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/retail-stores",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Retail Store SEO Singapore | Local SEO for Shops | Epicware",
     description:
       "Bring more walk-ins to your Singapore shop with local SEO: Google Maps ranking, store details that match everywhere, reviews and AI search.",

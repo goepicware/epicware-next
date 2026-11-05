@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Learn when to ask for a Google review to maximise response rates. Industry-specific timing windows for restaurants, clinics, salons, and service businesses.",
   alternates: { canonical: "https://www.epicware.ai/blog/best-time-to-ask-for-a-google-review" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Best Time to Ask for a Google Review — Timing Strategies by Industry",
     description: "Learn when to ask for a Google review to maximise response rates. Industry-specific timing windows for restaurants, clinics, salons, and service businesses.",
     url: "https://www.epicware.ai/blog/best-time-to-ask-for-a-google-review",

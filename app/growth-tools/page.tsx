@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Email, WhatsApp and social media tools that turn SEO insights into repeat customers: EpicEngage campaigns and EpicSocial scheduling.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Growth Tools for Local Businesses | Epicware",
     description:
       "Email, WhatsApp and social media tools that turn SEO insights into repeat customers: EpicEngage campaigns and EpicSocial scheduling.",

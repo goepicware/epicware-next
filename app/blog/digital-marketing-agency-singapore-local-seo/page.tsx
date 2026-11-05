@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/blog/digital-marketing-agency-singapore-local-seo",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Digital Marketing Agency Singapore: Local SEO & Reputation Guide for Small Businesses | Epicware",
     description:
       "How Singapore SMBs should navigate agency selection, prioritise local SEO for Google Maps visibility, leverage reputation management for trust, and avoid the common pitfalls before signing a contract.",

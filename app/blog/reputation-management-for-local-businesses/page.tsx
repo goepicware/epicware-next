@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "94% of consumers avoid businesses with poor reviews. Learn what reputation management means for local SMBs in 2026, including the AI visibility gap most businesses miss.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Reputation Management for Local Businesses in 2026 | Epicware",
     description:
       "94% of consumers avoid businesses with poor reviews. Learn what reputation management means for local SMBs in 2026, including the AI visibility gap most businesses miss.",

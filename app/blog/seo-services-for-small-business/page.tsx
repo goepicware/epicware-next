@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Discover the 7 things every small business must demand from an SEO service in 2026 — before signing anything or spending a single dollar.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "SEO Services for Small Business: 7 Must-Haves | Epicware",
     description:
       "Discover the 7 things every small business must demand from an SEO service in 2026 — before signing anything or spending a single dollar.",

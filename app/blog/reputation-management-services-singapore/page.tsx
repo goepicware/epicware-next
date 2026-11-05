@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, the dashboard problem, and how to choose what fits your stage.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title:
       "Online Reputation Management Services for Singapore SMBs — 2026 Guide | Epicware",
     description:

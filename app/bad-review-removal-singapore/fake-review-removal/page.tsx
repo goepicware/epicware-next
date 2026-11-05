@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Fake reviews from competitors, bots or non-customers can be removed. We document the evidence and file structured cases with Google, attacks included.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/fake-review-removal" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Remove Fake Google Reviews in Singapore | Epicware",
     description: "Fake reviews from competitors, bots or non-customers can be removed. We document the evidence and file structured cases with Google, attacks included.",
     url: "https://www.epicware.ai/bad-review-removal-singapore/fake-review-removal",

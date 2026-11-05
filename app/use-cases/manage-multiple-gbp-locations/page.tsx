@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/use-cases/manage-multiple-gbp-locations",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Manage Multiple Google Business Profiles | Epicware",
     description:
       "Run every outlet's Google Business Profile, reviews and Maps rankings from one dashboard. Built for F&B groups, clinic networks and salon chains.",

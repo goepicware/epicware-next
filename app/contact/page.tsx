@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "Talk to Epicware's Singapore team about SEO, Google Maps, AI search or reviews. Email hello@epicware.ai, WhatsApp us or book a free strategy call.",
   alternates: { canonical: "https://www.epicware.ai/contact" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Contact Epicware | Singapore SEO & Digital Marketing Team",
     description: "Talk to Epicware's Singapore team about SEO, Google Maps, AI search or reviews. Email hello@epicware.ai, WhatsApp us or book a free strategy call.",
     url: "https://www.epicware.ai/contact",

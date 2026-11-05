@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Online reputation management services in Singapore: our agency team grows your Google reviews, replies to every review and removes policy-breaking ones.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Reputation Management Services in Singapore | Epicware",
     description:
       "Online reputation management services in Singapore: our agency team grows your Google reviews, replies to every review and removes policy-breaking ones.",

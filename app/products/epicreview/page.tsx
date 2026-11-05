@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "EpicReview monitors reviews across outlets, drafts AI replies and runs WhatsApp and email review requests. The review software our team uses.",
   alternates: { canonical: "https://www.epicware.ai/products/epicreview" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "EpicReview | Google Review Management Software",
     description:
       "EpicReview monitors reviews across outlets, drafts AI replies and runs WhatsApp and email review requests. The review software our team uses.",

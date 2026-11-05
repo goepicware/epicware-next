@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Local SEO Services Singapore | Local SEO Agency | Epicware",
     description:
       `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a AI local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,

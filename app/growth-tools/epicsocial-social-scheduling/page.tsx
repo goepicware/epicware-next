@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Plan, approve and schedule posts for Facebook, Instagram, TikTok and YouTube from one calendar, with AI-written captions from EpicSocial.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools/epicsocial-social-scheduling" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Social Media Scheduling for Local Businesses | EpicSocial",
     description: "Plan, approve and schedule posts for Facebook, Instagram, TikTok and YouTube from one calendar, with AI-written captions from EpicSocial.",
     url: "https://www.epicware.ai/growth-tools/epicsocial-social-scheduling",

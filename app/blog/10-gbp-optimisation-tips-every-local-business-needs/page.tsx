@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "10 essential Google Business Profile optimisation tips for Singapore SMBs — category selection, photo strategy, review management, posting cadence, and the mistakes that quietly suppress local rankings.",
   alternates: { canonical: "https://www.epicware.ai/blog/10-gbp-optimisation-tips-every-local-business-needs" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "10 GBP Optimisation Tips Every Local Business Needs | Epicware",
     description:
       "10 essential Google Business Profile optimisation tips for Singapore SMBs — category selection, photo strategy, review management, posting cadence, and the mistakes that quietly suppress local rankings.",

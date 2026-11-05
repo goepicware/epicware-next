@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Why responding to every Google review — including positive ones — improves your local SEO rank and converts more profile views into visits.",
   alternates: { canonical: "https://www.epicware.ai/blog/should-you-respond-to-every-google-review" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Should You Respond to Every Google Review? (Short Answer: Yes) | Epicware",
     description: "Why responding to every Google review — including positive ones — improves your local SEO rank and converts more profile views into visits.",
     url: "https://www.epicware.ai/blog/should-you-respond-to-every-google-review",

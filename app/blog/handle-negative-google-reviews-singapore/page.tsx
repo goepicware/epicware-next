@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to turn bad reviews into a reputation asset.",
   alternates: { canonical: "https://www.epicware.ai/blog/handle-negative-google-reviews-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "How to Handle Negative Google Reviews in Singapore | Epicware",
     description:
       "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to turn bad reviews into a reputation asset.",

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "Compare Epicware plans for local SEO, website SEO, AI search and review management. Clear monthly plans with no long lock-in. See what each includes.",
   alternates: { canonical: "https://www.epicware.ai/pricing" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Pricing: SEO, Local SEO & Reputation Plans | Epicware",
     description:
       "Compare Epicware plans for local SEO, website SEO, AI search and review management. Clear monthly plans with no long lock-in. See what each includes.",

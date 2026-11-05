@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "How a Singapore GP clinic removed 3 fake reviews, raised their Google rating to 4.7, and built a consistent review generation system with Epicware.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/clinic-review-growth-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Clinic Review Growth Singapore — Removing Fake Reviews & Building Trust",
     description: "How a Singapore GP clinic removed 3 fake reviews, raised their Google rating to 4.7, and built a consistent review generation system with Epicware.",
     url: "https://www.epicware.ai/case-studies/clinic-review-growth-singapore",

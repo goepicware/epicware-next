@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Track review velocity, rating trends, response rate and competitor comparison for every outlet in one live reputation dashboard.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/reputation-analytics" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Reputation Analytics Dashboard | Epicware",
     description: "Track review velocity, rating trends, response rate and competitor comparison for every outlet in one live reputation dashboard.",
     url: "https://www.epicware.ai/reputation-management-singapore/reputation-analytics",

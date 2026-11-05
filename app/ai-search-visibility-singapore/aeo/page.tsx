@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Structure your website with clear answers and schema so AI assistants like ChatGPT and Gemini can recommend your business by name.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore/aeo" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Answer Engine Optimisation (AEO) Singapore | Epicware",
     description: "Structure your website with clear answers and schema so AI assistants like ChatGPT and Gemini can recommend your business by name.",
     url: "https://www.epicware.ai/ai-search-visibility-singapore/aeo",

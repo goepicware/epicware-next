@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/physiotherapy",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Physiotherapy SEO Singapore | Epicware",
     description:
       "Local SEO for Singapore physiotherapy clinics: rank for 'physio near me', build patient reviews and stay visible across Google Maps and AI search.",

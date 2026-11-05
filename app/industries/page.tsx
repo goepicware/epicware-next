@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Industries We Serve | SEO for Local Businesses | Epicware",
     description:
       "Local SEO and reputation management for restaurants, clinics, dental practices, salons, wellness centres, tuition centres, workshops and retail.",

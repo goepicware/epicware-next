@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Create WhatsApp, SMS and email messages that ask customers for a Google review, with your review link built in. Free, no signup.",
   alternates: { canonical: "https://www.epicware.ai/tools/google-review-request-generator" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Free Google Review Request Generator | Epicware",
     description: "Create WhatsApp, SMS and email messages that ask customers for a Google review, with your review link built in. Free, no signup.",
     url: "https://www.epicware.ai/tools/google-review-request-generator",

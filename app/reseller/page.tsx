@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Partner with Epicware to resell local SEO, review management and AI search services. Built for agencies and consultants serving local businesses.",
   alternates: { canonical: "https://www.epicware.ai/reseller" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "SEO Reseller Programme Singapore | Epicware",
     description: "Partner with Epicware to resell local SEO, review management and AI search services. Built for agencies and consultants serving local businesses.",
     url: "https://www.epicware.ai/reseller",

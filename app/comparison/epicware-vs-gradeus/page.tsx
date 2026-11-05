@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Compare Epicware and Grade.us for review management. Features, pricing, bad review removal, and Singapore market suitability compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-gradeus" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Epicware vs Grade.us — Review Management Platform Comparison",
     description: "Compare Epicware and Grade.us for review management. Features, pricing, bad review removal, and Singapore market suitability compared.",
     url: "https://www.epicware.ai/comparison/epicware-vs-gradeus",

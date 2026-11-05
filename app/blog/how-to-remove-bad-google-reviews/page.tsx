@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Learn exactly how to remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. Step-by-step process and professional removal service.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-remove-bad-google-reviews" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "How to Remove Bad Google Reviews in Singapore — The Complete Guide | Epicware",
     description: "Learn exactly how to remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. Step-by-step process and professional removal service.",
     url: "https://www.epicware.ai/blog/how-to-remove-bad-google-reviews",

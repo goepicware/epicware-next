@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "A structured 90-day Google reviews strategy for Singapore businesses. Build review velocity, protect your rating, and rank higher on Google Maps.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-reviews-strategy" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Reviews Strategy: 90-Day Framework for Singapore SMBs | Epicware",
     description: "A structured 90-day Google reviews strategy for Singapore businesses. Build review velocity, protect your rating, and rank higher on Google Maps.",
     url: "https://www.epicware.ai/blog/google-reviews-strategy",

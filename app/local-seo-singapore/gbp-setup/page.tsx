@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "New or unclaimed listing? We create, verify and optimise your Google Business Profile with the right categories and details from day one.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/gbp-setup" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Business Profile Setup Singapore | Epicware",
     description: "New or unclaimed listing? We create, verify and optimise your Google Business Profile with the right categories and details from day one.",
     url: "https://www.epicware.ai/local-seo-singapore/gbp-setup",

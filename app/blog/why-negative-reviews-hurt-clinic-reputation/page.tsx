@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Learn why negative reviews hurt your clinic's reputation in Singapore, and how Epicware helps clinics boost their online presence and attract more patients.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Why Do Negative Reviews Hurt My Clinic's Reputation? | Epicware",
     description:
       "Learn why negative reviews hurt your clinic's reputation in Singapore, and how Epicware helps clinics boost their online presence and attract more patients.",

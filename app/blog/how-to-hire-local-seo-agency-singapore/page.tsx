@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, red flags to avoid, and how to evaluate agencies versus platforms.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-hire-local-seo-agency-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "How to Hire a Local SEO Agency in Singapore (And What to Avoid) | Epicware",
     description:
       "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, red flags to avoid, and how to evaluate agencies versus platforms.",

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Remove fake, malicious, or policy-violating Google reviews. $200 per review, refunded if not removed within 3 months. Singapore's only guaranteed bad review removal service.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/bad-review-removal" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Bad Review Removal Singapore | Epicware",
     description: "Remove fake, malicious, or policy-violating Google reviews. $200/review, refunded if not removed within 3 months.",
     url: "https://www.epicware.ai/reputation-management-singapore/bad-review-removal",

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Optimise your content and GBP to appear in Google's AI Overviews for Singapore local searches. Structure your presence for the AI-generated answer panel.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore/geo-optimisation" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "GEO Optimisation Singapore | Epicware",
     description: "Optimise your content to appear in Google's AI-generated search answers.",
     url: "https://www.epicware.ai/ai-search-visibility-singapore/geo-optimisation",

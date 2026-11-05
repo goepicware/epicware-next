@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence. Learn how reviews, GBP completeness, and citations affect your rank.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-maps-ranking-factors" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Maps Ranking Factors Explained — Where Reviews Fit In | Epicware",
     description: "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence. Learn how reviews, GBP completeness, and citations affect your rank.",
     url: "https://www.epicware.ai/blog/google-maps-ranking-factors",

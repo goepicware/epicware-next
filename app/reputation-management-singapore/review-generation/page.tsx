@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Automated WhatsApp and email review requests sent at the right moment after each visit, so happy customers leave more 5-star Google reviews.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/review-generation" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Automated Review Request Campaigns | Epicware",
     description: "Automated WhatsApp and email review requests sent at the right moment after each visit, so happy customers leave more 5-star Google reviews.",
     url: "https://www.epicware.ai/reputation-management-singapore/review-generation",

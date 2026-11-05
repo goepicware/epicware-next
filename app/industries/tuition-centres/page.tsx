@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/tuition-centres",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Tuition Centre SEO Singapore | Epicware",
     description:
       "Help parents find your tuition centre first. Local SEO, Google reviews and AI search visibility for Singapore tuition and enrichment centres.",

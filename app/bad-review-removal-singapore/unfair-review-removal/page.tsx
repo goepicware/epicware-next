@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Ex-employee attacks, dispute-driven 1-star reviews and false claims can break Google's policies. We check eligibility free and file the removal case.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/unfair-review-removal" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Unfair Google Review Removal Singapore | Epicware",
     description: "Ex-employee attacks, dispute-driven 1-star reviews and false claims can break Google's policies. We check eligibility free and file the removal case.",
     url: "https://www.epicware.ai/bad-review-removal-singapore/unfair-review-removal",

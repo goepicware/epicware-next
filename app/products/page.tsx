@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Four AI-native tools for Singapore SMBs. Rank higher, earn more reviews, remove bad ones, and grow — all from one platform. No agency. No retainer.",
   alternates: { canonical: "https://www.epicware.ai/products" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Epicware Products — Four Tools. One Platform. Built for Singapore SMBs.",
     description:
       "EpicMap tracks your rank. EpicReview manages your reputation. EpicEngage keeps customers coming back. EpicSocial keeps you visible.",

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Google's policy on incentivised reviews explained. What counts as an incentive, what the risks are, and how to ethically increase review count.",
   alternates: { canonical: "https://www.epicware.ai/blog/can-you-incentivize-google-reviews" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Can You Incentivise Google Reviews? What the Policy Says",
     description: "Google's policy on incentivised reviews explained. What counts as an incentive, what the risks are, and how to ethically increase review count.",
     url: "https://www.epicware.ai/blog/can-you-incentivize-google-reviews",

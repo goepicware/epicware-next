@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Epicware is a GEO and AEO agency in Singapore. We build your AI visibility so ChatGPT, Gemini, Perplexity and Google AI Overviews recommend you.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "GEO & AEO Agency in Singapore | AI Visibility | Epicware",
     description:
       "Epicware is a GEO and AEO agency in Singapore. We build your AI visibility so ChatGPT, Gemini, Perplexity and Google AI Overviews recommend you.",

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Professional, AI-personalised responses to negative Google reviews. Show future customers you take service seriously — and convert readers who see your response.",
   alternates: { canonical: "https://www.epicware.ai/review-management-singapore/negative-review-response" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Negative Review Response Singapore | Epicware",
     description: "Professional, AI-personalised responses to negative Google reviews.",
     url: "https://www.epicware.ai/review-management-singapore/negative-review-response",

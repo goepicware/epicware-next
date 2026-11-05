@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "EpicEngage sends email and WhatsApp campaigns that bring customers back, using the same customer list as your review requests.",
   alternates: { canonical: "https://www.epicware.ai/products/epicengage" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "EpicEngage | Email & WhatsApp Marketing for Local Business",
     description:
       "EpicEngage sends email and WhatsApp campaigns that bring customers back, using the same customer list as your review requests.",

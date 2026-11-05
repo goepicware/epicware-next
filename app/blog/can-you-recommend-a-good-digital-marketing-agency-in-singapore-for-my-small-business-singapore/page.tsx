@@ -12,6 +12,7 @@ export const metadata: Metadata = {
       "https://www.epicware.ai/blog/can-you-recommend-a-good-digital-marketing-agency-in-singapore-for-my-small-business-singapore",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title:
       "Can You Recommend a Good Digital Marketing Agency in Singapore for My Small Business? | Epicware",
     description:

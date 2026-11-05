@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     "Epicware combines AI-powered tools, advanced review management, and proven Local SEO strategies to help Singapore businesses dominate Google Maps and drive real growth.",
   alternates: { canonical: "https://www.epicware.ai/blog/local-seo-agency-singapore-epicware" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "What Makes Epicware the No.1 Local SEO Agency in Singapore | Epicware",
     description:
       "Epicware combines AI-powered tools, advanced review management, and proven Local SEO strategies to help Singapore businesses dominate Google Maps and drive real growth.",

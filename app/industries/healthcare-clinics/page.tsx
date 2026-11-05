@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/healthcare-clinics",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Clinic SEO Singapore | Medical Clinic Marketing | Epicware",
     description:
       "SEO and reputation management for Singapore medical clinics: rank for 'clinic near me', protect your Google rating and show up in AI answers.",

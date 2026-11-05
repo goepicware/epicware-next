@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/locations/singapore",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Singapore Areas We Serve | Local SEO by District | Epicware",
     description:
       "See how Epicware's SEO team helps businesses rank on Google Maps in Jurong, Tampines, Orchard, Woodlands and more Singapore districts.",

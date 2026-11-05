@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/wellness-centres",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Spa & Wellness SEO Singapore | Epicware",
     description:
       "Local SEO for Singapore spas, massage and wellness centres: rank on Google Maps, grow trusted reviews and get recommended by AI search.",

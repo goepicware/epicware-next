@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Monitor every Google review across all your outlets in real time. Instant alerts, centralised inbox, AI responses. Singapore's review management platform.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/review-management" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Review Management Singapore | Epicware",
     description: "Monitor every Google review across all your outlets in real time.",
     url: "https://www.epicware.ai/reputation-management-singapore/review-management",

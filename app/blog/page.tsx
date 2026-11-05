@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Practical guides on Google Maps ranking, review generation, bad review removal, AI search and local SEO for Singapore SMBs, written by our team.",
   alternates: { canonical: "https://www.epicware.ai/blog" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Local SEO & Google Reviews Blog | Epicware",
     description:
       "Practical guides on Google Maps ranking, review generation, bad review removal, AI search and local SEO for Singapore SMBs, written by our team.",

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Personalised, on-brand replies to every Google review, drafted by AI in seconds and approved by you. No more pasting the same generic reply.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/ai-review-response" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "AI Review Responses for Google Reviews | Epicware",
     description: "Personalised, on-brand replies to every Google review, drafted by AI in seconds and approved by you. No more pasting the same generic reply.",
     url: "https://www.epicware.ai/reputation-management-singapore/ai-review-response",

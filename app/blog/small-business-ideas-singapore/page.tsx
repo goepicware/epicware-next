@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Discover 25 small business ideas in Singapore for 2026, with local SEO, Google Business Profile, and AI visibility tips to get found from launch day.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "25 Small Business Ideas in Singapore for 2026 | Epicware",
     description:
       "Discover 25 small business ideas in Singapore for 2026, with local SEO, Google Business Profile, and AI visibility tips to get found from launch day.",

@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "Check how ChatGPT, Gemini, Perplexity and Google AI Overviews see your business with a free AI visibility audit built for Singapore businesses.",
   alternates: { canonical: "https://www.epicware.ai/ai-visibility" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Free AI Visibility Audit & Checker | Epicware",
     description:
       "Check how ChatGPT, Gemini, Perplexity and Google AI Overviews see your business with a free AI visibility audit built for Singapore businesses.",

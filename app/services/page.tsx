@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Every Epicware service in one place: SEO, local SEO, Google Business Profile, AI search optimisation, review management and bad review removal.",
   alternates: { canonical: "https://www.epicware.ai/services" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Services: SEO, Local SEO, AI Search & Reviews | Epicware",
     description:
       "Every Epicware service in one place: SEO, local SEO, Google Business Profile, AI search optimisation, review management and bad review removal.",

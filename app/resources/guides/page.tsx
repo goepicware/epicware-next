@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "In-depth free guides for Singapore businesses: the 2026 local business playbook, restaurant digital growth and the complete bad review removal guide.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Free Local SEO & Reputation Guides | Epicware",
     description:
       "In-depth free guides for Singapore businesses: the 2026 local business playbook, restaurant digital growth and the complete bad review removal guide.",

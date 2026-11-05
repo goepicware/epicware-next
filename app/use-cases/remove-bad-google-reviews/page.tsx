@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/use-cases/remove-bad-google-reviews",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Removing Bad Google Reviews: How It Works | Epicware",
     description:
       "A step-by-step look at how Epicware assesses, files and escalates removal requests for fake and policy-violating Google reviews.",

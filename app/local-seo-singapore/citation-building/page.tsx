@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Fix inconsistent business listings across 40+ Singapore directories. NAP consistency is a hidden rank factor most SMBs overlook.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/citation-building" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Citation Building Singapore | Epicware",
     description: "Fix inconsistent business listings across 40+ Singapore directories.",
     url: "https://www.epicware.ai/local-seo-singapore/citation-building",

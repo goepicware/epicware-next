@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Which Singapore Google reviews can be removed under Google's content policies? Free assessment before any payment. $200 per review, refunded if not removed within 3 months.",
   alternates: { canonical: "https://www.epicware.ai/bad-review-removal-singapore/google-review-removal-policy" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Review Removal Policy Singapore | Epicware",
     description: "Which reviews can be removed under Google's content policies? Free assessment first.",
     url: "https://www.epicware.ai/bad-review-removal-singapore/google-review-removal-policy",

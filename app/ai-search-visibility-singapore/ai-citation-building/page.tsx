@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Build your business presence on the sources AI systems trust — so you get cited when ChatGPT, Perplexity, and Google AI answer local Singapore questions.",
   alternates: { canonical: "https://www.epicware.ai/ai-search-visibility-singapore/ai-citation-building" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "AI Citation Building Singapore | Epicware",
     description: "Get your business cited by ChatGPT, Perplexity, and Google AI.",
     url: "https://www.epicware.ai/ai-search-visibility-singapore/ai-citation-building",

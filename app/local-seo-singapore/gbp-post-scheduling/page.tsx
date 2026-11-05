@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Fresh, keyword-led Google Business Profile posts every week, written and scheduled by our team to keep your profile active and ranking on Maps.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/gbp-post-scheduling" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Business Profile Post Scheduling | Epicware",
     description: "Fresh, keyword-led Google Business Profile posts every week, written and scheduled by our team to keep your profile active and ranking on Maps.",
     url: "https://www.epicware.ai/local-seo-singapore/gbp-post-scheduling",

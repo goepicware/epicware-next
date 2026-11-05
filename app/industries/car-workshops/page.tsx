@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/car-workshops",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Car Workshop SEO Singapore | Epicware",
     description:
       "Get your car workshop found for 'car servicing near me' in Singapore, with Google Maps ranking, review growth and AI search visibility.",

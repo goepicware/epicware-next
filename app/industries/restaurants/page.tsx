@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/restaurants",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Restaurant SEO Singapore | Google Maps & Reviews | Epicware",
     description:
       "Restaurant SEO for Singapore F&B: rank in the Google Maps 3-Pack, grow reviews at every outlet and get recommended by AI for 'near me' searches.",

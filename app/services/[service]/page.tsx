@@ -88,7 +88,7 @@ export async function generateMetadata({
     title: { absolute: title },
     description,
     alternates: { canonical, languages },
-    openGraph: { title, description, url: canonical },
+    openGraph: { title, description, url: canonical, images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }] },
   };
 }
 

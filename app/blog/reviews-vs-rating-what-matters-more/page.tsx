@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Does Google Maps rank favour high review count or high star rating? The research-based answer and what it means for your local SEO strategy.",
   alternates: { canonical: "https://www.epicware.ai/blog/reviews-vs-rating-what-matters-more" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Reviews vs Rating: Which Matters More for Google Maps? | Epicware",
     description: "Does Google Maps rank favour high review count or high star rating? The research-based answer and what it means for your local SEO strategy.",
     url: "https://www.epicware.ai/blog/reviews-vs-rating-what-matters-more",

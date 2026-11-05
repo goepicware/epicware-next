@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Remove fake, malicious and policy-violating Google reviews in Singapore. Free eligibility check, formal Google requests and escalation until a decision.",
   alternates: { canonical: "https://www.epicware.ai/locations/singapore/review-removal" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Bad Google Review Removal in Singapore | Epicware",
     description:
       "Remove fake, malicious and policy-violating Google reviews in Singapore. Free eligibility check, formal Google requests and escalation until a decision.",

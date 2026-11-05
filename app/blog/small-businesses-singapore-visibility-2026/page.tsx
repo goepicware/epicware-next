@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Discover how Singapore SMBs can close the local search visibility gap in 2026 with GBP optimisation, review management, and AI-powered GEO strategies.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Small Businesses in Singapore: The 2026 Reality | Epicware",
     description:
       "Discover how Singapore SMBs can close the local search visibility gap in 2026 with GBP optimisation, review management, and AI-powered GEO strategies.",

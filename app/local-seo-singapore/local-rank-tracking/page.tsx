@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "See your Google Maps rank at every point across Singapore with EpicMap grid tracking. Know where you appear, where you don't, and why.",
   alternates: { canonical: "https://www.epicware.ai/local-seo-singapore/local-rank-tracking" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Local Rank Tracking Singapore | Google Maps Grid | Epicware",
     description: "See your Google Maps rank at every point across Singapore with EpicMap grid tracking. Know where you appear, where you don't, and why.",
     url: "https://www.epicware.ai/local-seo-singapore/local-rank-tracking",

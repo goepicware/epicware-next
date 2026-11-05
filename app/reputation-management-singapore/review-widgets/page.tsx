@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Show your best Google reviews on your website automatically with Epicware's Wall of Love widgets. Always live, with no manual updates.",
   alternates: { canonical: "https://www.epicware.ai/reputation-management-singapore/review-widgets" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Review Widgets for Your Website | Epicware",
     description: "Show your best Google reviews on your website automatically with Epicware's Wall of Love widgets. Always live, with no manual updates.",
     url: "https://www.epicware.ai/reputation-management-singapore/review-widgets",

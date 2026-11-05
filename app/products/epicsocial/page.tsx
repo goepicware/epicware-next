@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "EpicSocial turns your SEO keywords, offers and FAQs into AI-written social posts, captions and a publishing calendar your team approves.",
   alternates: { canonical: "https://www.epicware.ai/products/epicsocial" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "EpicSocial | AI Social Media Content & Scheduling",
     description:
       "EpicSocial turns your SEO keywords, offers and FAQs into AI-written social posts, captions and a publishing calendar your team approves.",

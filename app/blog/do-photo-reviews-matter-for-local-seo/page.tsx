@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "How customer photos in Google reviews affect your local search visibility and click-through rate. The evidence and practical implications.",
   alternates: { canonical: "https://www.epicware.ai/blog/do-photo-reviews-matter-for-local-seo" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Do Photo Reviews Matter for Local SEO? | Epicware",
     description: "How customer photos in Google reviews affect your local search visibility and click-through rate. The evidence and practical implications.",
     url: "https://www.epicware.ai/blog/do-photo-reviews-matter-for-local-seo",

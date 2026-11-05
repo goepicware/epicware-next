@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Build your Google rating with a system: timed WhatsApp and email review requests, real-time monitoring and replies to every review, at every outlet.",
   alternates: { canonical: "https://www.epicware.ai/review-management-singapore/google-reviews" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Reviews Service Singapore | Epicware",
     description: "Build your Google rating with a system: timed WhatsApp and email review requests, real-time monitoring and replies to every review, at every outlet.",
     url: "https://www.epicware.ai/review-management-singapore/google-reviews",

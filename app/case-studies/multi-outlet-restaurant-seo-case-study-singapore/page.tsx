@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "How Epicware grew a 5-outlet Singapore restaurant chain's organic traffic 24%, won #1 Google rankings and AI Overview citations. Real local SEO results.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/multi-outlet-restaurant-seo-case-study-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Multi-Outlet F&B Local SEO Case Study Singapore | Epicware",
     description:
       "How Epicware grew a 5-outlet Singapore restaurant chain's organic traffic 24%, won #1 Google rankings and AI Overview citations. Real local SEO results.",

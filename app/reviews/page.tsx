@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     "Read what Singapore business owners say about working with Epicware on local SEO, Google reviews, AI search and bad review removal.",
   alternates: { canonical: "https://www.epicware.ai/reviews" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Epicware Reviews | What Our Clients Say",
     description:
       "Read what Singapore business owners say about working with Epicware on local SEO, Google reviews, AI search and bad review removal.",
