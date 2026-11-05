@@ -3,8 +3,18 @@ import FreeAuditWizard from "./FreeAuditWizard";
 
 export default function FreeAuditPage() {
   return (
-    <Suspense fallback={null}>
-      <FreeAuditWizard />
-    </Suspense>
+    <>
+      <div className="sr-only">
+        <h1>Free SEO, Google Business Profile and AI Search Visibility Audit</h1>
+        <p>
+          Get a free audit of your Google rankings, Google Business Profile, customer
+          reviews and AI search visibility. See your biggest gaps and quickest wins —
+          no signup required.
+        </p>
+      </div>
+      <Suspense fallback={null}>
+        <FreeAuditWizard />
+      </Suspense>
+    </>
   );
 }
