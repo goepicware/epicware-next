@@ -6,7 +6,7 @@ import BlogArticle from "@/components/blog/BlogArticle";
 export const metadata: Metadata = {
   title: "Digital Marketing Agency Singapore: Local SEO & Reputation Guide for Small Businesses",
   description:
-    "How Singapore SMBs should navigate agency selection, prioritise local SEO for Google Maps visibility, leverage reputation management for trust, and avoid the common pitfalls before signing a contract.",
+    "How Singapore SMBs should navigate agency selection, prioritise local SEO for Google Maps visibility, and avoid common pitfalls before signing a contract.",
   alternates: {
     canonical: "https://www.epicware.ai/blog/digital-marketing-agency-singapore-local-seo",
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Digital Marketing Agency Singapore: Local SEO & Reputation Guide for Small Businesses | Epicware",
     description:
-      "How Singapore SMBs should navigate agency selection, prioritise local SEO for Google Maps visibility, leverage reputation management for trust, and avoid the common pitfalls before signing a contract.",
+      "How Singapore SMBs should navigate agency selection, prioritise local SEO for Google Maps visibility, and avoid common pitfalls before signing a contract.",
     url: "https://www.epicware.ai/blog/digital-marketing-agency-singapore-local-seo",
   },
 };
@@ -25,7 +25,7 @@ const articleSchema = {
   headline:
     "Digital Marketing Agency Singapore: Local SEO & Reputation Guide for Small Businesses",
   description:
-    "How Singapore SMBs should navigate agency selection, prioritise local SEO for Google Maps visibility, leverage reputation management for trust, and avoid the common pitfalls before signing a contract.",
+    "How Singapore SMBs should navigate agency selection, prioritise local SEO for Google Maps visibility, and avoid common pitfalls before signing a contract.",
   datePublished: "2026-07-10",
   author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

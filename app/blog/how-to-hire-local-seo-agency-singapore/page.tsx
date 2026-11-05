@@ -5,13 +5,13 @@ import BlogArticle from "@/components/blog/BlogArticle";
 export const metadata: Metadata = {
   title: "How to Hire a Local SEO Agency in Singapore",
   description:
-    "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, red flags to avoid, and how to evaluate agencies versus platforms.",
+    "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, and red flags to avoid when hiring an agency.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-hire-local-seo-agency-singapore" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "How to Hire a Local SEO Agency in Singapore (And What to Avoid) | Epicware",
     description:
-      "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, red flags to avoid, and how to evaluate agencies versus platforms.",
+      "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, and red flags to avoid when hiring an agency.",
     url: "https://www.epicware.ai/blog/how-to-hire-local-seo-agency-singapore",
   },
 };
@@ -21,7 +21,7 @@ const schema = {
   "@type": "Article",
   headline: "How to Hire a Local SEO Agency in Singapore (And What to Avoid)",
   description:
-    "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, red flags to avoid, and how to evaluate agencies versus platforms.",
+    "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, and red flags to avoid when hiring an agency.",
   datePublished: "2026-06-15",
   author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

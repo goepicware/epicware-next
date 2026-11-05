@@ -45,13 +45,13 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: { absolute: "Google Business Profile Optimisation Singapore | Epicware" },
   description:
-    "Epicware provides GBP optimisation and Google Maps SEO services in Singapore: a 19-point profile audit, priority fixes in 48 hours, weekly posts and rank tracking. Get a quote!",
+    "GBP optimisation and Google Maps SEO in Singapore: a 19-point profile audit, priority fixes in 48 hours, weekly posts and rank tracking. Get a quote.",
   alternates: { canonical: "https://www.epicware.ai/locations/singapore/google-business-profile" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Business Profile Optimisation in Singapore | Epicware",
     description:
-      "Epicware provides GBP optimisation and Google Maps SEO services in Singapore: a 19-point profile audit, priority fixes in 48 hours, weekly posts and rank tracking. Get a quote!",
+      "GBP optimisation and Google Maps SEO in Singapore: a 19-point profile audit, priority fixes in 48 hours, weekly posts and rank tracking. Get a quote.",
     url: "https://www.epicware.ai/locations/singapore/google-business-profile",
   },
 };

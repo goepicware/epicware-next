@@ -10,12 +10,12 @@ const CANONICAL = "https://www.epicware.ai/blog/secondary-categories-google-busi
 export const metadata: Metadata = {
   title: "Google Business Secondary Categories Audit",
   description:
-    "A practical audit guide for Google Business secondary categories — the IS/HAS test, how many to use, common mistakes, and how to check category availability across locations.",
+    "A practical audit guide for Google Business secondary categories — the IS/HAS test, how many to use, and common mistakes to avoid.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Don't Fill All Nine: Audit Your Google Business Secondary Categories | Epicware",
     description:
-      "A practical audit guide for Google Business secondary categories — the IS/HAS test, how many to use, common mistakes, and how to check category availability across locations.",
+      "A practical audit guide for Google Business secondary categories — the IS/HAS test, how many to use, and common mistakes to avoid.",
     url: CANONICAL,
     images: [{ url: OG_IMAGE, width: 1280, height: 948, alt: "Bakery counter with fresh bread on display" }],
   },
@@ -26,7 +26,7 @@ const schema = {
   "@type": "Article",
   headline: "Don't Fill All Nine: Audit Your Google Business Secondary Categories",
   description:
-    "A practical audit guide for Google Business secondary categories — the IS/HAS test, how many to use, common mistakes, and how to check category availability across locations.",
+    "A practical audit guide for Google Business secondary categories — the IS/HAS test, how many to use, and common mistakes to avoid.",
   datePublished: "2026-10-08",
   author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

@@ -8,12 +8,12 @@ const CANONICAL = "https://www.epicware.ai/blog/seo-tips-small-business-owners";
 export const metadata: Metadata = {
   title: "SEO Tips for Small Business Owners That Actually Work",
   description:
-    "Practical SEO tips for small businesses — covering Google Business Profile, reviews, local content, schema, and AI search. Outcome-focused and Singapore-relevant.",
+    "Practical SEO tips for small businesses — Google Business Profile, reviews, local content, schema, and AI search. Outcome-focused and Singapore-relevant.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "SEO Tips for Small Business Owners That Actually Work | Epicware",
     description:
-      "Practical SEO tips for small businesses — covering Google Business Profile, reviews, local content, schema, and AI search. Outcome-focused and Singapore-relevant.",
+      "Practical SEO tips for small businesses — Google Business Profile, reviews, local content, schema, and AI search. Outcome-focused and Singapore-relevant.",
     url: CANONICAL,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Small business owner reviewing online performance on a laptop" }],
   },
@@ -24,7 +24,7 @@ const schema = {
   "@type": "Article",
   headline: "SEO Tips for Small Business Owners: Rank Locally, Build Reviews, and Show Up in AI Search",
   description:
-    "Practical SEO tips for small businesses — covering Google Business Profile, reviews, local content, schema, and AI search. Outcome-focused and Singapore-relevant.",
+    "Practical SEO tips for small businesses — Google Business Profile, reviews, local content, schema, and AI search. Outcome-focused and Singapore-relevant.",
   datePublished: "2026-09-16",
   author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

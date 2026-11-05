@@ -8,13 +8,13 @@ const CANONICAL =
 export const metadata: Metadata = {
   title: "Reputation Management for Local Businesses in 2026",
   description:
-    "94% of consumers avoid businesses with poor reviews. Learn what reputation management means for local SMBs in 2026, including the AI visibility gap most businesses miss.",
+    "94% of consumers avoid businesses with poor reviews. What reputation management means for local SMBs in 2026, including the AI visibility gap most miss.",
   alternates: { canonical: CANONICAL },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Reputation Management for Local Businesses in 2026 | Epicware",
     description:
-      "94% of consumers avoid businesses with poor reviews. Learn what reputation management means for local SMBs in 2026, including the AI visibility gap most businesses miss.",
+      "94% of consumers avoid businesses with poor reviews. What reputation management means for local SMBs in 2026, including the AI visibility gap most miss.",
     url: CANONICAL,
   },
 };
@@ -25,7 +25,7 @@ const schema = {
   headline:
     "Reputation Management for Local Businesses: Why Your Google Rating Is a Revenue Line Item",
   description:
-    "94% of consumers avoid businesses with poor reviews. Learn what reputation management means for local SMBs in 2026, including the AI visibility gap most businesses miss.",
+    "94% of consumers avoid businesses with poor reviews. What reputation management means for local SMBs in 2026, including the AI visibility gap most miss.",
   datePublished: "2026-07-30",
   author: {
     "@type": "Organization",

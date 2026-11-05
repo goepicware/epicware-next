@@ -10,12 +10,12 @@ const CANONICAL = "https://www.epicware.ai/blog/negative-review-damage-control";
 export const metadata: Metadata = {
   title: "Negative Review Damage Control Strategy for Business Owners",
   description:
-    "How to respond to negative reviews using the L.A.S.T. framework — Listen, Apologize, Solve, Thank. A step-by-step damage control strategy that protects your rating and builds trust.",
+    "How to respond to negative reviews using the L.A.S.T. framework — Listen, Apologize, Solve, Thank — a step-by-step strategy that protects your rating.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Negative Review Damage Control Strategy for Business Owners | Epicware",
     description:
-      "How to respond to negative reviews using the L.A.S.T. framework — Listen, Apologize, Solve, Thank. A step-by-step damage control strategy that protects your rating and builds trust.",
+      "How to respond to negative reviews using the L.A.S.T. framework — Listen, Apologize, Solve, Thank — a step-by-step strategy that protects your rating.",
     url: CANONICAL,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Business owner addressing negative reviews on laptop" }],
   },
@@ -26,7 +26,7 @@ const schema = {
   "@type": "Article",
   headline: "Negative Review Damage Control Strategy for Business Owners",
   description:
-    "How to respond to negative reviews using the L.A.S.T. framework — Listen, Apologize, Solve, Thank. A step-by-step damage control strategy that protects your rating and builds trust.",
+    "How to respond to negative reviews using the L.A.S.T. framework — Listen, Apologize, Solve, Thank — a step-by-step strategy that protects your rating.",
   datePublished: "2026-06-29",
   author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

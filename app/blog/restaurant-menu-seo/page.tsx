@@ -10,12 +10,12 @@ const CANONICAL = "https://www.epicware.ai/blog/restaurant-menu-seo";
 export const metadata: Metadata = {
   title: "Restaurant Menu SEO for Multi-Location Operators",
   description:
-    "An operator-friendly playbook to get your menu found on Search, Maps, and AI — crawlable HTML, Menu/MenuItem JSON-LD, GBP sync, menu engineering, and an audit cadence that keeps it all accurate.",
+    "An operator-friendly playbook to get your menu found on Search, Maps, and AI — crawlable HTML, Menu/MenuItem JSON-LD, GBP sync, and an audit cadence.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Restaurant Menu SEO for Multi-Location Operators | Epicware",
     description:
-      "An operator-friendly playbook to get your menu found on Search, Maps, and AI — crawlable HTML, Menu/MenuItem JSON-LD, GBP sync, menu engineering, and an audit cadence that keeps it all accurate.",
+      "An operator-friendly playbook to get your menu found on Search, Maps, and AI — crawlable HTML, Menu/MenuItem JSON-LD, GBP sync, and an audit cadence.",
     url: CANONICAL,
     images: [{ url: OG_IMAGE, width: 1280, height: 960, alt: "Restaurant menu on a table" }],
   },
@@ -26,7 +26,7 @@ const schema = {
   "@type": "Article",
   headline: "Restaurant Menu SEO for Multi-Location Operators",
   description:
-    "An operator-friendly playbook to get your menu found on Search, Maps, and AI — crawlable HTML, Menu/MenuItem JSON-LD, GBP sync, menu engineering, and an audit cadence that keeps it all accurate.",
+    "An operator-friendly playbook to get your menu found on Search, Maps, and AI — crawlable HTML, Menu/MenuItem JSON-LD, GBP sync, and an audit cadence.",
   datePublished: "2026-10-01",
   author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

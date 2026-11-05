@@ -4,12 +4,12 @@ import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
   title: "How to Remove Bad Google Reviews in Singapore",
-  description: "Learn exactly how to remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. Step-by-step process and professional removal service.",
+  description: "Learn how to remove fake or policy-violating Google reviews from your Singapore business profile — the step-by-step process and a professional removal service.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-remove-bad-google-reviews" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "How to Remove Bad Google Reviews in Singapore — The Complete Guide | Epicware",
-    description: "Learn exactly how to remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. Step-by-step process and professional removal service.",
+    description: "Learn how to remove fake or policy-violating Google reviews from your Singapore business profile — the step-by-step process and a professional removal service.",
     url: "https://www.epicware.ai/blog/how-to-remove-bad-google-reviews",
   },
 };
@@ -18,7 +18,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "How to Remove Bad Google Reviews From Your Singapore Business",
-  "description": "Learn exactly how to remove fake, malicious, or policy-violating Google reviews from your Singapore business profile. Step-by-step process and professional removal service.",
+  "description": "Learn how to remove fake or policy-violating Google reviews from your Singapore business profile — the step-by-step process and a professional removal service.",
   "datePublished": "2026-06-01",
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },

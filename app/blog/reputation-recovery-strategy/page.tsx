@@ -11,12 +11,12 @@ const CANONICAL = "https://www.epicware.ai/blog/reputation-recovery-strategy";
 export const metadata: Metadata = {
   title: "Reputation Recovery Strategy: A 2026 Guide for SMBs",
   description:
-    "How SMBs can repair their online reputation after negative reviews or a crisis. A four-pillar framework covering monitoring, visibility control, response, and trust building.",
+    "How SMBs can repair their online reputation after negative reviews or a crisis — a four-pillar framework covering monitoring, visibility, response, and trust.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Reputation Recovery Strategy: A 2026 Guide for SMBs | Epicware",
     description:
-      "How SMBs can repair their online reputation after negative reviews or a crisis. A four-pillar framework covering monitoring, visibility control, response, and trust building.",
+      "How SMBs can repair their online reputation after negative reviews or a crisis — a four-pillar framework covering monitoring, visibility, response, and trust.",
     url: CANONICAL,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Small business owner reviewing reputation documents" }],
   },
@@ -27,7 +27,7 @@ const schema = {
   "@type": "Article",
   headline: "Reputation Recovery Strategy: A 2026 Guide for SMBs",
   description:
-    "How SMBs can repair their online reputation after negative reviews or a crisis. A four-pillar framework covering monitoring, visibility control, response, and trust building.",
+    "How SMBs can repair their online reputation after negative reviews or a crisis — a four-pillar framework covering monitoring, visibility, response, and trust.",
   datePublished: "2026-06-29",
   author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

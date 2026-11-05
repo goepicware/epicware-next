@@ -5,13 +5,13 @@ import BlogArticle from "@/components/blog/BlogArticle";
 export const metadata: Metadata = {
   title: "How to Handle Negative Google Reviews in Singapore",
   description:
-    "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to turn bad reviews into a reputation asset.",
+    "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to protect your reputation.",
   alternates: { canonical: "https://www.epicware.ai/blog/handle-negative-google-reviews-singapore" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "How to Handle Negative Google Reviews in Singapore | Epicware",
     description:
-      "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to turn bad reviews into a reputation asset.",
+      "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to protect your reputation.",
     url: "https://www.epicware.ai/blog/handle-negative-google-reviews-singapore",
   },
 };
@@ -21,7 +21,7 @@ const schema = {
   "@type": "Article",
   headline: "How to Handle Negative Google Reviews in Singapore",
   description:
-    "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to turn bad reviews into a reputation asset.",
+    "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to protect your reputation.",
   datePublished: "2026-06-17",
   author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
