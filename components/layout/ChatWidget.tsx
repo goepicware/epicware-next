@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 const WA_HREF =
-  "https://wa.me/6590013157?text=Enquiring%20from%20your%20website%20on%20Local%20SEO";
+  "https://wa.me/6584446582?text=Enquiring%20from%20your%20website%20on%20Local%20SEO";
 
 export default function ChatWidget() {
   return (

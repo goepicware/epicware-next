@@ -26,7 +26,7 @@ const schema = {
   "@type": "LocalBusiness",
   name: "Epicware Pte. Ltd.",
   url: "https://epicware.ai",
-  telephone: "+6590013157",
+  telephone: "+6584446582",
   email: "hello@epicware.ai",
   areaServed: { "@type": "Country", name: "Malaysia" },
   description:

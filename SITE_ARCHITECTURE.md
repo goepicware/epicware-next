@@ -12,7 +12,7 @@
 | **Industry** | Local SEO & Reputation Management Software |
 | **Headquarters** | Singapore |
 | **Website** | epicware.ai |
-| **Phone** | +65 9001 3157 |
+| **Phone** | +65 8444 6582 |
 | **Email** | hello@epicware.ai |
 | **Current Stack** | Vite + React SPA (Cloudflare Pages) |
 | **Target Stack (Rebuild)** | Next.js 14 (App Router, SSG/SSR) + Cloudflare Pages |

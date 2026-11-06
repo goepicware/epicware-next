@@ -115,7 +115,7 @@ export default async function SingaporeDistrictPage({
     "@type": "LocalBusiness",
     name: "Epicware Pte. Ltd.",
     url: "https://epicware.ai",
-    telephone: "+6590013157",
+    telephone: "+6584446582",
     areaServed: {
       "@type": "City",
       name: d.name,
