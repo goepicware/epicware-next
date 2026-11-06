@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: TITLE,
     description: DESCRIPTION,
     url: PAGE_URL,
@@ -36,7 +37,7 @@ const serviceSchema = {
   name: "The 90-Day Patient Engine",
   serviceType: "Full Stack marketing system for aesthetic clinics",
   description:
-    "Paid ads, Google Maps and local SEO, AI search citation, and an AI WhatsApp Assistant run as one system for Singapore aesthetic clinics, with a written 90-day enquiry guarantee.",
+    "Paid ads, Google Maps SEO, AI search citation, and an AI WhatsApp Assistant run as one system for Singapore aesthetic clinics, with a 90-day guarantee.",
   provider: EPICWARE_PROVIDER,
   areaServed: { "@type": "Country", name: "Singapore" },
   offers: {

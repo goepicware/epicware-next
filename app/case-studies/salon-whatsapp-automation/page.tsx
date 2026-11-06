@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "How a Singapore hair salon chain improved their Google Maps rank and grew to 150+ reviews per outlet using Epicware's review generation and GBP optimisation.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/salon-whatsapp-automation" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Salon Local SEO & Reviews Singapore — Google Maps Rank Case Study",
     description: "How a Singapore hair salon chain improved their Google Maps rank and grew to 150+ reviews per outlet using Epicware's review generation and GBP optimisation.",
     url: "https://www.epicware.ai/case-studies/salon-whatsapp-automation",

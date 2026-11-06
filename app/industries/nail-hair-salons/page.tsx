@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/nail-hair-salons",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Salon SEO Singapore | Hair & Nail Salon Marketing | Epicware",
     description:
       "Local SEO for Singapore hair and nail salons: top 3 on Google Maps, more 5-star reviews through WhatsApp and steady bookings from 'salon near me'.",
@@ -17,7 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-const schema = {
+const schema = [
+  {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Epicware Pte. Ltd.",
@@ -25,7 +27,17 @@ const schema = {
   description:
     "Local SEO and Reputation Management platform for Singapore hair salons and beauty studios.",
   areaServed: { "@type": "Country", name: "Singapore" },
-};
+},
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.epicware.ai/industries" },
+    { "@type": "ListItem", position: 3, name: "Hair & Beauty Salons", item: "https://www.epicware.ai/industries/nail-hair-salons" },
+  ],
+},
+];
 
 const services = [
   {

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Book a free 30-minute strategy call. We'll audit your Google Business Profile live and show what's costing you customers on Google, Maps and AI.",
   alternates: { canonical: "https://www.epicware.ai/book-demo" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Book a Free Strategy Call | Epicware Singapore",
     description: "Book a free 30-minute strategy call. We'll audit your Google Business Profile live and show what's costing you customers on Google, Maps and AI.",
     url: "https://www.epicware.ai/book-demo",

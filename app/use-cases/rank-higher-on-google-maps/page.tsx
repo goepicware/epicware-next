@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/use-cases/rank-higher-on-google-maps",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Rank Higher on Google Maps in Singapore | Epicware",
     description:
       "Why you're not in the Google Maps 3-Pack yet, and the exact steps our team takes to fix it: profile, reviews, citations and district tracking.",

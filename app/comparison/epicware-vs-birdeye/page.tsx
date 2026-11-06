@@ -7,13 +7,15 @@ export const metadata: Metadata = {
   description: "Compare Epicware and Birdeye for Singapore SMBs. Platform origin, pricing model, bad review removal, and Singapore-specific local SEO features compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-birdeye" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Epicware vs Birdeye — Singapore Local SEO & Reputation Management",
     description: "Compare Epicware and Birdeye for Singapore SMBs. Platform origin, pricing model, bad review removal, and Singapore-specific local SEO features compared.",
     url: "https://www.epicware.ai/comparison/epicware-vs-birdeye",
   },
 };
 
-const schema = {
+const schema = [
+  {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Epicware vs Birdeye — Singapore Local SEO & Reputation Management",
@@ -22,7 +24,16 @@ const schema = {
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "url": "https://epicware.ai/comparison/epicware-vs-birdeye"
-};
+},
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Epicware vs Birdeye", item: "https://www.epicware.ai/comparison/epicware-vs-birdeye" },
+  ],
+},
+];
 
 const features = [
   { feature: "Built for Singapore market", epicware: true, competitor: false },

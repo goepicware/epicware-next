@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Four AI-native tools for Singapore SMBs. Rank higher, earn more reviews, remove bad ones, and grow — all from one platform. No agency. No retainer.",
   alternates: { canonical: "https://www.epicware.ai/products" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Epicware Products — Four Tools. One Platform. Built for Singapore SMBs.",
     description:
       "EpicMap tracks your rank. EpicReview manages your reputation. EpicEngage keeps customers coming back. EpicSocial keeps you visible.",
@@ -88,9 +89,19 @@ const PRODUCTS = [
   },
 ];
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Products", item: "https://www.epicware.ai/products" },
+  ],
+};
+
 export default function ProductsHubPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center hero-gradient overflow-hidden pt-28 pb-16">
         <div className="absolute inset-0 pointer-events-none">

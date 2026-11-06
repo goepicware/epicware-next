@@ -9,13 +9,14 @@ const CANONICAL =
 export const metadata: Metadata = {
   title: "Online Reputation Management Services for Singapore SMBs — 2026 Guide",
   description:
-    "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, the dashboard problem, and how to choose what fits your stage.",
+    "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, and how to choose what fits your stage.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title:
       "Online Reputation Management Services for Singapore SMBs — 2026 Guide | Epicware",
     description:
-      "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, the dashboard problem, and how to choose what fits your stage.",
+      "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, and how to choose what fits your stage.",
     url: CANONICAL,
   },
 };
@@ -26,7 +27,7 @@ const schema = {
   headline:
     "Online Reputation Management Services for Singapore SMBs — 2026 Guide",
   description:
-    "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, the dashboard problem, and how to choose what fits your stage.",
+    "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, and how to choose what fits your stage.",
   datePublished: "2026-07-26",
   author: {
     "@type": "Organization",

@@ -4,11 +4,12 @@ import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
   title: "Google Maps Ranking Factors Explained",
-  description: "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence. Learn how reviews, GBP completeness, and citations affect your rank.",
+  description: "A complete breakdown of Google Maps ranking factors — relevance, distance, prominence — and how reviews, GBP completeness, and citations affect your rank.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-maps-ranking-factors" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Maps Ranking Factors Explained — Where Reviews Fit In | Epicware",
-    description: "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence. Learn how reviews, GBP completeness, and citations affect your rank.",
+    description: "A complete breakdown of Google Maps ranking factors — relevance, distance, prominence — and how reviews, GBP completeness, and citations affect your rank.",
     url: "https://www.epicware.ai/blog/google-maps-ranking-factors",
   },
 };
@@ -17,7 +18,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Google Maps Ranking Factors Explained — Where Reviews Fit In",
-  "description": "A complete breakdown of Google Maps ranking factors including relevance, distance, and prominence. Learn how reviews, GBP completeness, and citations affect your rank.",
+  "description": "A complete breakdown of Google Maps ranking factors — relevance, distance, prominence — and how reviews, GBP completeness, and citations affect your rank.",
   "datePublished": "2026-06-01",
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },

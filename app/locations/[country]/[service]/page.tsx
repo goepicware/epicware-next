@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import MoneyPageLayout from "@/components/site/MoneyPageLayout";
-import { getMoneyPageContent } from "@/lib/site/content";
+import { getMoneyPageContent, isCountryServiceLive } from "@/lib/site/content";
 import { getCountry, COUNTRIES } from "@/lib/site/countries";
 import { getService, PAGED_SERVICES } from "@/lib/site/services";
 
@@ -33,17 +33,29 @@ export async function generateMetadata({
   if (!content || !countryData || !serviceData) return {};
 
   const canonical = `https://www.epicware.ai/locations/${country}/${service}`;
+
+  // Cross-market hreflang: every country where this same service is live
+  // (Singapore's bespoke page is always live) — not just the current page.
+  const languages: Record<string, string> = {
+    "en-SG": `https://www.epicware.ai/locations/singapore/${service}`,
+  };
+  for (const c of COUNTRIES) {
+    if (c.slug === "singapore") continue;
+    if (c.slug === country || isCountryServiceLive(c.slug, service)) {
+      languages[c.hreflang] = `https://www.epicware.ai/locations/${c.slug}/${service}`;
+    }
+  }
+  languages["x-default"] = `https://www.epicware.ai/services/${service}`;
+
   return {
     title: { absolute: content.frontmatter.metaTitle },
     description: content.frontmatter.metaDescription,
     alternates: {
       canonical,
-      languages: {
-        [countryData.hreflang]: canonical,
-        "x-default": `https://www.epicware.ai/services/${service}`,
-      },
+      languages,
     },
     openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
       title: content.frontmatter.metaTitle,
       description: content.frontmatter.metaDescription,
       url: canonical,

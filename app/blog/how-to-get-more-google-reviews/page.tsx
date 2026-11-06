@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "A structured framework for increasing Google reviews for your Singapore business. WhatsApp templates, timing strategies, and automation options.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-get-more-google-reviews" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "How to Get More Google Reviews — Ethical Methods That Work | Epicware",
     description: "A structured framework for increasing Google reviews for your Singapore business. WhatsApp templates, timing strategies, and automation options.",
     url: "https://www.epicware.ai/blog/how-to-get-more-google-reviews",

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Email campaigns built for local businesses: win-back offers, review requests and announcements, sent automatically with EpicEngage.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools/epicengage-email-marketing" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Email Marketing for Local Businesses | EpicEngage",
     description: "Email campaigns built for local businesses: win-back offers, review requests and announcements, sent automatically with EpicEngage.",
     url: "https://www.epicware.ai/growth-tools/epicengage-email-marketing",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Free tools for local businesses: a Google review reply generator, a review request generator and a backlink opportunity finder. No signup needed.",
   alternates: { canonical: "https://www.epicware.ai/tools" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Free SEO & Google Review Tools | Epicware",
     description: "Free tools for local businesses: a Google review reply generator, a review request generator and a backlink opportunity finder. No signup needed.",
     url: "https://www.epicware.ai/tools",
@@ -52,9 +53,19 @@ const jsonLd = {
   },
 };
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.epicware.ai/tools" },
+  ],
+};
+
 export default function ToolsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

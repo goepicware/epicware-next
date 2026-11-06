@@ -93,6 +93,7 @@ export async function generateMetadata({
     description: meta.description,
     alternates: { canonical: `https://www.epicware.ai/locations/singapore/${slug}` },
     openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
       title: meta.title,
       description: meta.description,
       url: `https://www.epicware.ai/locations/singapore/${slug}`,

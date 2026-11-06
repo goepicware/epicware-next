@@ -48,9 +48,20 @@ const CASE_STUDIES = [
   },
 ];
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://www.epicware.ai/case-studies" },
+  ],
+};
+
 export default function CaseStudiesIndexPage() {
   return (
-    <section className="pt-32 pb-20 lg:pt-40 lg:pb-28">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
+      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28">
       <div className="max-w-6xl mx-auto px-6">
         <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Case Studies</span>
         <h1 className="font-display font-bold text-foreground text-3xl lg:text-4xl mb-4 max-w-2xl">
@@ -81,5 +92,6 @@ export default function CaseStudiesIndexPage() {
         </div>
       </div>
     </section>
+    </>
   );
 }

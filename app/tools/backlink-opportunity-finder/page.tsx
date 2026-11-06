@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "Find link and citation opportunities your competitors have and you don't. A free backlink opportunity finder for local businesses.",
   alternates: { canonical: "https://www.epicware.ai/tools/backlink-opportunity-finder" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Free Backlink Opportunity Finder | Epicware",
     description: "Find link and citation opportunities your competitors have and you don't. A free backlink opportunity finder for local businesses.",
     url: "https://www.epicware.ai/tools/backlink-opportunity-finder",

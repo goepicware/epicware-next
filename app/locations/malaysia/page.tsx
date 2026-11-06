@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/locations/malaysia",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "AI Local SEO & Reputation Management Malaysia | Epicware",
     description:
       "Epicware helps Malaysian businesses rank on Google Maps, grow and protect their Google reviews, and get recommended by AI search.",

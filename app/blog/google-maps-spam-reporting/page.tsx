@@ -10,12 +10,12 @@ const CANONICAL = "https://www.epicware.ai/blog/google-maps-spam-reporting";
 export const metadata: Metadata = {
   title: "Remove Google Maps Spam: Evidence Checklist",
   description:
-    "A practical checklist for reporting spam, fake listings, and fraudulent profiles on Google Maps — what evidence to gather, how to file a report or Business Redressal Complaint, and how to win appeals.",
+    "A practical checklist for reporting spam and fraudulent listings on Google Maps — what evidence to gather, how to file a report, and how to win appeals.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals | Epicware",
     description:
-      "A practical checklist for reporting spam, fake listings, and fraudulent profiles on Google Maps — what evidence to gather, how to file a report, and how to win appeals.",
+      "A practical checklist for reporting spam and fraudulent listings on Google Maps — what evidence to gather, how to file a report, and how to win appeals.",
     url: CANONICAL,
     images: [{ url: OG_IMAGE, width: 1280, height: 854, alt: "Smartphone showing Google Maps navigation" }],
   },
@@ -26,7 +26,7 @@ const schema = {
   "@type": "Article",
   headline: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals",
   description:
-    "A practical checklist for reporting spam, fake listings, and fraudulent profiles on Google Maps — what evidence to gather, how to file a report or Business Redressal Complaint, and how to win appeals.",
+    "A practical checklist for reporting spam and fraudulent listings on Google Maps — what evidence to gather, how to file a report, and how to win appeals.",
   datePublished: "2026-10-05",
   author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

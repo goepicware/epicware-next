@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "A free guide for restaurant owners: Google Maps ranking, menu SEO, reviews, social content and AI search, with a step-by-step growth plan.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/restaurant-digital-growth-guide" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Restaurant Digital Growth Guide (Free) | Epicware",
     description: "A free guide for restaurant owners: Google Maps ranking, menu SEO, reviews, social content and AI search, with a step-by-step growth plan.",
     url: "https://www.epicware.ai/resources/guides/restaurant-digital-growth-guide",

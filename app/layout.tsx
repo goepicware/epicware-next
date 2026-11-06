@@ -20,7 +20,13 @@ export const metadata: Metadata = {
   description:
     "Epicware helps local businesses in Singapore rank higher on Google Maps, get more reviews, and grow with AI-powered SEO services and software.",
   metadataBase: new URL("https://www.epicware.ai"),
-  openGraph: { type: "website", locale: "en_SG", url: "https://www.epicware.ai", siteName: "Epicware" },
+  openGraph: {
+    type: "website",
+    locale: "en_SG",
+    url: "https://www.epicware.ai",
+    siteName: "Epicware",
+    images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
+  },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
   verification: {

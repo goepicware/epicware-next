@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: "https://www.epicware.ai",
     images: [
       {
-        url: "https://www.epicware.ai/assets/HeroBanner.png",
+        url: "https://www.epicware.ai/assets/HeroBanner-og.jpg",
         width: 1200,
         height: 630,
         alt: "Epicware, an AI-powered digital marketing agency in Singapore",

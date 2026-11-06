@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/use-cases/improve-google-rating",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Improve Your Google Rating | Epicware",
     description:
       "Raise your Google star rating the right way: more genuine reviews, faster replies and removal of reviews that break Google's policies.",

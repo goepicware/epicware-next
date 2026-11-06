@@ -7,13 +7,15 @@ export const metadata: Metadata = {
   description: "Compare Epicware and Yext for Singapore SMBs. Listing management, review management, and pricing model compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-yext" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Epicware vs Yext — Singapore Local SEO & Listings Management",
     description: "Compare Epicware and Yext for Singapore SMBs. Listing management, review management, and pricing model compared.",
     url: "https://www.epicware.ai/comparison/epicware-vs-yext",
   },
 };
 
-const schema = {
+const schema = [
+  {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Epicware vs Yext — Singapore Local SEO & Listings Management",
@@ -22,7 +24,16 @@ const schema = {
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "url": "https://epicware.ai/comparison/epicware-vs-yext"
-};
+},
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Epicware vs Yext", item: "https://www.epicware.ai/comparison/epicware-vs-yext" },
+  ],
+},
+];
 
 const features = [
   { feature: "Built for Singapore market", epicware: true, competitor: false },

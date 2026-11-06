@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Write a professional reply to any Google review in seconds. A free AI review reply generator for positive and negative reviews. No signup.",
   alternates: { canonical: "https://www.epicware.ai/tools/google-review-reply-generator" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Free Google Review Reply & Response Generator | Epicware",
     description: "Write a professional reply to any Google review in seconds. A free AI review reply generator for positive and negative reviews. No signup.",
     url: "https://www.epicware.ai/tools/google-review-reply-generator",

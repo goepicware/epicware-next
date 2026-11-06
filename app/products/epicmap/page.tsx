@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "EpicMap tracks your Google Maps rank on a grid across every area you serve, by keyword and competitor. The rank tracking software behind our SEO team.",
   alternates: { canonical: "https://www.epicware.ai/products/epicmap" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "EpicMap | Google Maps Rank Tracker & Grid Heatmaps",
     description:
       "EpicMap tracks your Google Maps rank on a grid across every area you serve, by keyword and competitor. The rank tracking software behind our SEO team.",
@@ -74,9 +75,20 @@ const FEATURES = [
   },
 ];
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Products", item: "https://www.epicware.ai/products" },
+    { "@type": "ListItem", position: 3, name: "EpicMap", item: "https://www.epicware.ai/products/epicmap" },
+  ],
+};
+
 export default function EpicMapPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

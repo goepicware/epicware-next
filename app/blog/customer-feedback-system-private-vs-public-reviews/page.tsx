@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "How to design a customer feedback system that captures private feedback and generates public Google reviews — without violating review gating policy.",
   alternates: { canonical: "https://www.epicware.ai/blog/customer-feedback-system-private-vs-public-reviews" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Customer Feedback System — Private vs Public Reviews | Epicware",
     description: "How to design a customer feedback system that captures private feedback and generates public Google reviews — without violating review gating policy.",
     url: "https://www.epicware.ai/blog/customer-feedback-system-private-vs-public-reviews",

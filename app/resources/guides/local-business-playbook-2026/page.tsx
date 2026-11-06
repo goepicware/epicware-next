@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "The 2026 playbook for local businesses: Google Business Profile, reviews, local SEO, AI search and the weekly routine that keeps you visible.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/local-business-playbook-2026" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Local Business Playbook 2026 (Free Guide) | Epicware",
     description: "The 2026 playbook for local businesses: Google Business Profile, reviews, local SEO, AI search and the weekly routine that keeps you visible.",
     url: "https://www.epicware.ai/resources/guides/local-business-playbook-2026",

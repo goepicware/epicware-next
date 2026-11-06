@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Ready-to-use WhatsApp, email, and SMS templates for Google review requests. Tested formats that convert satisfied customers into reviewers.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-review-request-templates" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Review Request Templates — WhatsApp, Email & SMS | Epicware",
     description: "Ready-to-use WhatsApp, email, and SMS templates for Google review requests. Tested formats that convert satisfied customers into reviewers.",
     url: "https://www.epicware.ai/blog/google-review-request-templates",

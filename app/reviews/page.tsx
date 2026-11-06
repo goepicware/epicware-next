@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     "Read what Singapore business owners say about working with Epicware on local SEO, Google reviews, AI search and bad review removal.",
   alternates: { canonical: "https://www.epicware.ai/reviews" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Epicware Reviews | What Our Clients Say",
     description:
       "Read what Singapore business owners say about working with Epicware on local SEO, Google reviews, AI search and bad review removal.",
@@ -123,11 +124,21 @@ const aggregateSchema = {
   review: reviewSchema,
 };
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Reviews", item: "https://www.epicware.ai/reviews" },
+  ],
+};
+
 export default async function ReviewsPage() {
   const rating = await getLiveRating();
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateSchema) }} />
 
       {/* ── Hero ── */}

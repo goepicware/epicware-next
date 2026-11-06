@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/industries/wellness-centres",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Spa & Wellness SEO Singapore | Epicware",
     description:
       "Local SEO for Singapore spas, massage and wellness centres: rank on Google Maps, grow trusted reviews and get recommended by AI search.",
@@ -17,7 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-const schema = {
+const schema = [
+  {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Epicware Pte. Ltd.",
@@ -25,7 +27,17 @@ const schema = {
   description:
     "Local SEO and Reputation Management platform for Singapore spas and wellness centres.",
   areaServed: { "@type": "Country", name: "Singapore" },
-};
+},
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.epicware.ai/industries" },
+    { "@type": "ListItem", position: 3, name: "Wellness Centres & Spas", item: "https://www.epicware.ai/industries/wellness-centres" },
+  ],
+},
+];
 
 const services = [
   {

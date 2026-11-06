@@ -9,15 +9,26 @@ export const metadata: Metadata = {
     "Talk to Epicware's Singapore team about SEO, Google Maps, AI search or reviews. Email hello@epicware.ai, WhatsApp us or book a free strategy call.",
   alternates: { canonical: "https://www.epicware.ai/contact" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Contact Epicware | Singapore SEO & Digital Marketing Team",
     description: "Talk to Epicware's Singapore team about SEO, Google Maps, AI search or reviews. Email hello@epicware.ai, WhatsApp us or book a free strategy call.",
     url: "https://www.epicware.ai/contact",
   },
 };
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.epicware.ai/contact" },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <section className="hero-gradient pt-28 pb-12">
         <div className="container mx-auto px-6 max-w-2xl text-center">
           <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/15 rounded-full px-4 py-1.5 text-xs font-semibold text-primary tracking-wide mb-5">

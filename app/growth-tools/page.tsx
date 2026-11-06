@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Email, WhatsApp and social media tools that turn SEO insights into repeat customers: EpicEngage campaigns and EpicSocial scheduling.",
   alternates: { canonical: "https://www.epicware.ai/growth-tools" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Growth Tools for Local Businesses | Epicware",
     description:
       "Email, WhatsApp and social media tools that turn SEO insights into repeat customers: EpicEngage campaigns and EpicSocial scheduling.",
@@ -51,9 +52,19 @@ const CHILD_SERVICES = [
   },
 ];
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Growth Tools", item: "https://www.epicware.ai/growth-tools" },
+  ],
+};
+
 export default function GrowthToolsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

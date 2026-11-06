@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Meet Epicware, a Singapore digital marketing agency with its own AI software. Led by Vignesh Wadarajan, our team runs your SEO, local SEO and reviews.",
   alternates: { canonical: "https://www.epicware.ai/about" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "About Epicware | AI-Powered Growth Agency",
     description:
       "Meet Epicware, a Singapore digital marketing agency with its own AI software. Led by Vignesh Wadarajan, our team runs your SEO, local SEO and reviews.",
@@ -214,9 +215,19 @@ const faqGroups = [
   },
 ];
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "About", item: "https://www.epicware.ai/about" },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* Fold 1: Hero */}

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "Epicware runs local SEO, Google Business Profile, and reputation management for Singapore businesses.",
   alternates: { canonical: "https://www.epicware.ai/locations" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Epicware Locations — Local SEO & Reputation Management | Epicware",
     description:
       "Epicware runs local SEO, Google Business Profile, and reputation management for Singapore businesses.",

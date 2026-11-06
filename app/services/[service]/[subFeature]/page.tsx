@@ -26,7 +26,7 @@ export async function generateMetadata({
     title: { absolute: content.frontmatter.metaTitle },
     description: content.frontmatter.metaDescription,
     alternates: { canonical },
-    openGraph: { title: content.frontmatter.metaTitle, description: content.frontmatter.metaDescription, url: canonical },
+    openGraph: { title: content.frontmatter.metaTitle, description: content.frontmatter.metaDescription, url: canonical, images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }] },
     ...(content.frontmatter.draft ? { robots: { index: false, follow: false } } : {}),
   };
 }

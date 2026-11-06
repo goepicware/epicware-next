@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "SEO and Local SEO are not the same game. If your traffic went up but calls didn't — here's the distinction that explains why, and what Singapore SMBs should prioritise.",
   alternates: { canonical: "https://www.epicware.ai/blog/seo-vs-local-seo" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "SEO vs Local SEO: The Difference That Could Be Costing You Walk-In Customers",
     description:
       "SEO gets you found on the internet. Local SEO gets you found by someone three minutes away who's ready to book. Here's why they're different games.",

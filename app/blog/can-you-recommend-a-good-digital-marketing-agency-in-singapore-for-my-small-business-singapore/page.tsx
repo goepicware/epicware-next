@@ -6,16 +6,17 @@ import BlogArticle from "@/components/blog/BlogArticle";
 export const metadata: Metadata = {
   title: "Can You Recommend a Good Digital Marketing Agency in Singapore for My Small Business?",
   description:
-    "A practical guide for Singapore SMB owners: what to look for in a digital marketing agency, how to evaluate effectiveness, and common pitfalls to avoid before signing a contract.",
+    "A practical guide for Singapore SMB owners: what to look for in a digital marketing agency and common pitfalls to avoid before signing a contract.",
   alternates: {
     canonical:
       "https://www.epicware.ai/blog/can-you-recommend-a-good-digital-marketing-agency-in-singapore-for-my-small-business-singapore",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title:
       "Can You Recommend a Good Digital Marketing Agency in Singapore for My Small Business? | Epicware",
     description:
-      "A practical guide for Singapore SMB owners: what to look for in a digital marketing agency, how to evaluate effectiveness, and common pitfalls to avoid before signing a contract.",
+      "A practical guide for Singapore SMB owners: what to look for in a digital marketing agency and common pitfalls to avoid before signing a contract.",
     url: "https://www.epicware.ai/blog/can-you-recommend-a-good-digital-marketing-agency-in-singapore-for-my-small-business-singapore",
   },
 };
@@ -26,7 +27,7 @@ const articleSchema = {
   headline:
     "Can You Recommend a Good Digital Marketing Agency in Singapore for My Small Business?",
   description:
-    "A practical guide for Singapore SMB owners: what to look for in a digital marketing agency, how to evaluate effectiveness, and common pitfalls to avoid before signing a contract.",
+    "A practical guide for Singapore SMB owners: what to look for in a digital marketing agency and common pitfalls to avoid before signing a contract.",
   datePublished: "2026-07-09",
   author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },

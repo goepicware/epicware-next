@@ -4,11 +4,12 @@ import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
   title: "Fake or Unfair Google Reviews: What to Do",
-  description: "Step-by-step guide for Singapore businesses dealing with fake, competitor-posted, or policy-violating Google reviews. Includes removal options and response strategies.",
+  description: "Step-by-step guide for Singapore businesses dealing with fake or policy-violating Google reviews, including removal options and response strategies.",
   alternates: { canonical: "https://www.epicware.ai/blog/fake-or-unfair-google-reviews-what-to-do" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Fake or Unfair Google Reviews: What to Do | Epicware Blog",
-    description: "Step-by-step guide for Singapore businesses dealing with fake, competitor-posted, or policy-violating Google reviews. Includes removal options and response strategies.",
+    description: "Step-by-step guide for Singapore businesses dealing with fake or policy-violating Google reviews, including removal options and response strategies.",
     url: "https://www.epicware.ai/blog/fake-or-unfair-google-reviews-what-to-do",
   },
 };
@@ -17,7 +18,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Fake or Unfair Google Reviews: What Singapore Businesses Can Do",
-  "description": "Step-by-step guide for Singapore businesses dealing with fake, competitor-posted, or policy-violating Google reviews. Includes removal options and response strategies.",
+  "description": "Step-by-step guide for Singapore businesses dealing with fake or policy-violating Google reviews, including removal options and response strategies.",
   "datePublished": "2026-06-01",
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },

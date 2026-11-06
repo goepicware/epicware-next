@@ -31,6 +31,7 @@ export async function generateMetadata({
     description: content.frontmatter.metaDescription,
     alternates: { canonical },
     openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
       title: content.frontmatter.metaTitle,
       description: content.frontmatter.metaDescription,
       url: canonical,

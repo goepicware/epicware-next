@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: "Complete breakdown of Google's review content policies for Singapore business owners. Know exactly which reviews violate policy and can be removed.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-review-policy-explained" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Review Policy Explained — What Gets Removed & Why | Epicware",
     description: "Complete breakdown of Google's review content policies for Singapore business owners. Know exactly which reviews violate policy and can be removed.",
     url: "https://www.epicware.ai/blog/google-review-policy-explained",

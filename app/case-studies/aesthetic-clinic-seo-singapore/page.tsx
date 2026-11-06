@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "How a Singapore medical aesthetic clinic hit #1 on Google and ChatGPT for Orchard and Hougang treatment keywords in 60 days — inside MOH advertising rules.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/aesthetic-clinic-seo-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Aesthetic Clinic SEO Case Study Singapore: 60 Days | Epicware",
     description:
       "How a Singapore medical aesthetic clinic hit #1 on Google and ChatGPT for Orchard and Hougang treatment keywords in 60 days — inside MOH advertising rules.",

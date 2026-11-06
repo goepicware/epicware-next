@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "The complete guide to removing bad Google reviews: which reviews qualify, how to report them, how to escalate and what to do when Google says no.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/bad-review-removal-guide" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Bad Review Removal Guide: Remove Google Reviews | Epicware",
     description: "The complete guide to removing bad Google reviews: which reviews qualify, how to report them, how to escalate and what to do when Google says no.",
     url: "https://www.epicware.ai/resources/guides/bad-review-removal-guide",

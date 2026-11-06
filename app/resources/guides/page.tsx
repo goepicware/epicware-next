@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "In-depth free guides for Singapore businesses: the 2026 local business playbook, restaurant digital growth and the complete bad review removal guide.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Free Local SEO & Reputation Guides | Epicware",
     description:
       "In-depth free guides for Singapore businesses: the 2026 local business playbook, restaurant digital growth and the complete bad review removal guide.",
@@ -62,9 +63,19 @@ const BADGE_COLORS: Record<string, string> = {
   "BLOG": "bg-blue-500/10 text-blue-600 border-blue-500/20",
 };
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.epicware.ai/resources/guides" },
+  ],
+};
+
 export default function GuidesHubPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       {/* Hero */}
       <section className="hero-gradient pt-28 pb-12">
         <div className="container mx-auto px-6 max-w-4xl">

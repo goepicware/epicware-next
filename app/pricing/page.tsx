@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "Compare Epicware plans for local SEO, website SEO, AI search and review management. Clear monthly plans with no long lock-in. See what each includes.",
   alternates: { canonical: "https://www.epicware.ai/pricing" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Pricing: SEO, Local SEO & Reputation Plans | Epicware",
     description:
       "Compare Epicware plans for local SEO, website SEO, AI search and review management. Clear monthly plans with no long lock-in. See what each includes.",
@@ -213,9 +214,19 @@ const schemaAddOns = {
   ],
 };
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Pricing", item: "https://www.epicware.ai/pricing" },
+  ],
+};
+
 export default function PricingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaPricing) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaAddOns) }} />

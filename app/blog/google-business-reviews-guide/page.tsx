@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Learn how Google evaluates reviews across 6 ranking signals, why falling below 4 stars is a cliff not a slope, and how to build a review system that ranks.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Google Business Reviews: Rankings and Reputation Guide | Epicware",
     description:
       "Learn how Google evaluates reviews across 6 ranking signals, why falling below 4 stars is a cliff not a slope, and how to build a review system that ranks.",

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: "https://www.epicware.ai/use-cases/get-more-google-reviews",
   },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Get More Google Reviews the Right Way | Epicware",
     description:
       "Earn more genuine 5-star Google reviews with timed WhatsApp and email requests. No bought or fake reviews, just a system happy customers use.",
@@ -65,9 +66,19 @@ const STEPS = [
   },
 ];
 
+const schemaBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
+    { "@type": "ListItem", position: 2, name: "Get More Google Reviews", item: "https://www.epicware.ai/use-cases/get-more-google-reviews" },
+  ],
+};
+
 export default function GetMoreGoogleReviewsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

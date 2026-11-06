@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "How Epicware grew a two-outlet Singapore hair salon's organic traffic 263% and first-page rankings 272% in four months — and turned it into booked chairs.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/hair-salon-seo-singapore" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Hair Salon SEO Case Study Singapore: 283% Growth | Epicware",
     description:
       "How Epicware grew a two-outlet Singapore hair salon's organic traffic 263% and first-page rankings 272% in four months — and turned it into booked chairs.",

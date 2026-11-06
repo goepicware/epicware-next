@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "ChatGPT and AI search engines do hallucinate business citations — and the fix is accurate, consistent NAP data across the web. Here's why AI citations matter and what Singapore SMBs need to do.",
   alternates: { canonical: "https://www.epicware.ai/blog/does-chatgpt-make-up-citations" },
   openGraph: {
+      images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Does ChatGPT Make Up Citations? What It Means for Your Business | Epicware",
     description:
       "ChatGPT and AI search engines do hallucinate business citations — and the fix is accurate, consistent NAP data across the web. Here's why AI citations matter and what Singapore SMBs need to do.",
