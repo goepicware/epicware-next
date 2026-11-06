@@ -24,7 +24,7 @@
 - [EpicReview product page](https://www.epicware.ai/products/epicreview)
 - Automated Google review collection for local businesses
 - Smart routing: negative feedback goes private, positive reviews go to Google
-- Pricing: Starter $99/mo, Growth $299/mo, Authority $549/mo
+- Pricing: Review collection and automation included in every Epicware plan (see /pricing). Bad Review Removal is priced separately at $200/review, refunded in full if not removed within 3 months.
 
 ### EpicEngage — Email & Messaging
 
@@ -42,7 +42,7 @@
 
 - [90-Day Patient Engine page](https://www.epicware.ai/90-day-patient-engine)
 - Full Stack plan packaged for Singapore aesthetic clinics: Meta + Google ads, Google Maps and local SEO, AI search citation (GEO), and an AI WhatsApp Assistant run as one system, with a written 90-day qualified-enquiry guarantee
-- S$3,800/month (includes 1 outlet) + ad spend (minimum S$1,500/month) + S$99/additional outlet
+- $3,800/month (includes 1 outlet) + ad spend (minimum $1,500/month) + $99/additional outlet
 
 <!-- GENERATED:SERVICES -->
 
