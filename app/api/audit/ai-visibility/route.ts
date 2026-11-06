@@ -15,8 +15,11 @@ const LLM_CONFIGS = [
   { id: "grok",       displayName: "Grok",       model: "x-ai/grok-3-mini",                                hasWebSearch: false },
 ];
 
-function buildQuery(keyword: string, neighbourhood: string, _businessName: string): string {
-  return `I am looking for the best "${keyword}" options. Can you recommend specific businesses or service providers in Singapore, particularly around ${neighbourhood}? Please list actual business names with brief descriptions of why they are recommended.`;
+const COUNTRY_LABELS: Record<"sg" | "us", string> = { sg: "Singapore", us: "the United States" };
+
+function buildQuery(keyword: string, neighbourhood: string, _businessName: string, country: "sg" | "us"): string {
+  const countryLabel = COUNTRY_LABELS[country];
+  return `I am looking for the best "${keyword}" options. Can you recommend specific businesses or service providers in ${countryLabel}, particularly around ${neighbourhood}? Please list actual business names with brief descriptions of why they are recommended.`;
 }
 
 function isBusinessMentioned(
@@ -118,7 +121,7 @@ export async function POST(req: Request): Promise<NextResponse> {
   const limited = rateLimitResponse(req, "ai-visibility");
   if (limited) return limited;
 
-  let body: { businessName: string; shortName: string; categoryLabel: string; neighbourhood: string; keywords: string[] };
+  let body: { businessName: string; shortName: string; categoryLabel: string; neighbourhood: string; keywords: string[]; country?: string };
   try {
     body = await req.json();
   } catch {
@@ -126,6 +129,7 @@ export async function POST(req: Request): Promise<NextResponse> {
   }
 
   const { businessName, shortName, categoryLabel, neighbourhood, keywords } = body;
+  const country: "sg" | "us" = body.country === "us" ? "us" : "sg";
 
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
@@ -133,7 +137,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     return NextResponse.json({ error: "OPENROUTER_API_KEY not configured", results: [] });
   }
 
-  const query = buildQuery(keywords[0] ?? categoryLabel, neighbourhood, businessName);
+  const query = buildQuery(keywords[0] ?? categoryLabel, neighbourhood, businessName, country);
 
   console.log("[ai-visibility] Query:", query);
   console.log("[ai-visibility] Looking for:", shortName, "| businessName:", businessName);

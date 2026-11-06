@@ -8,6 +8,7 @@ import {
   X, Shield, Link2,
 } from "lucide-react";
 import type { GBPSnapshot } from "./types";
+import { AUDIT_COUNTRIES, type AuditCountryId } from "./countries";
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
 
@@ -30,12 +31,15 @@ function isValidGBPUrl(url: string): boolean {
 
 interface Props {
   onConfirm: (snap: GBPSnapshot, placeId: string, websiteUrl: string) => void;
+  country: AuditCountryId;
+  onCountryChange: (country: AuditCountryId) => void;
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function StepGBP({ onConfirm }: Props) {
+export default function StepGBP({ onConfirm, country, onCountryChange }: Props) {
   const searchParams = useSearchParams();
+  const countryConfig = AUDIT_COUNTRIES[country];
 
   // Maps SDK state
   const [mapsReady, setMapsReady] = useState(false);
@@ -100,7 +104,7 @@ export default function StepGBP({ onConfirm }: Props) {
       if (!autocompleteRef.current) return;
       setSearching(true);
       autocompleteRef.current.getPlacePredictions(
-        { input: value, types: ["establishment"], componentRestrictions: { country: "sg" } },
+        { input: value, types: ["establishment"], componentRestrictions: { country: countryConfig.isoCode } },
         (results, status) => {
           setSearching(false);
           if (status === google.maps.places.PlacesServiceStatus.OK && results) {
@@ -113,7 +117,7 @@ export default function StepGBP({ onConfirm }: Props) {
         }
       );
     }, 300);
-  }, []);
+  }, [countryConfig.isoCode]);
 
   // Pre-fill the business search from ?business= (e.g. the /pricing audit form)
   useEffect(() => {
@@ -185,7 +189,7 @@ export default function StepGBP({ onConfirm }: Props) {
       const res = await fetch("/api/audit/resolve-gbp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: gbpUrl }),
+        body: JSON.stringify({ url: gbpUrl, country }),
       });
       const data = await res.json();
       if (data.snapshot && data.placeId) {
@@ -207,7 +211,7 @@ export default function StepGBP({ onConfirm }: Props) {
     } finally {
       setUrlLoading(false);
     }
-  }, [gbpUrl]);
+  }, [gbpUrl, country]);
 
   const reset = () => {
     setSnapshot(null);
@@ -217,6 +221,17 @@ export default function StepGBP({ onConfirm }: Props) {
     setWebsiteUrl("");
     setUrlError("");
     setSearchError("");
+  };
+
+  // Switching country invalidates any in-progress search/result from the
+  // previous country's Places restriction — clear it rather than leaving a
+  // stale business pinned to the wrong market.
+  const handleCountryChange = (next: AuditCountryId) => {
+    if (next === country) return;
+    onCountryChange(next);
+    setPredictions([]);
+    setShowDropdown(false);
+    reset();
   };
 
   return (
@@ -229,9 +244,30 @@ export default function StepGBP({ onConfirm }: Props) {
           <h1 className="text-2xl font-bold text-gray-900 mb-2">
             Audit Your Google Business Profile — Free
           </h1>
-          <p className="text-gray-500 mb-8">
-            See exactly where you rank across Singapore — and where you&apos;re invisible.
+          <p className="text-gray-500 mb-6">
+            See exactly where you rank across {countryConfig.labelWithArticle} — and where you&apos;re invisible.
           </p>
+
+          {/* ── Country selector ──────────────────────────────────────── */}
+          <div className="flex items-center gap-2 mb-6">
+            <span className="text-xs font-semibold text-gray-500">Market:</span>
+            <div className="flex gap-1.5">
+              {(Object.values(AUDIT_COUNTRIES)).map((c) => (
+                <button
+                  key={c.id}
+                  type="button"
+                  onClick={() => handleCountryChange(c.id)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-colors ${
+                    country === c.id
+                      ? "bg-[#2563EB] text-white border-[#2563EB]"
+                      : "bg-gray-50 text-gray-600 border-gray-200 hover:border-[#2563EB]"
+                  }`}
+                >
+                  {c.label}
+                </button>
+              ))}
+            </div>
+          </div>
 
           {/* ── PATH A: Business name search ───────────────────────────── */}
           <div className="space-y-3">
@@ -258,10 +294,10 @@ export default function StepGBP({ onConfirm }: Props) {
                 disabled={!mapsReady && !!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
                 className="w-full border border-gray-300 rounded-xl pl-10 pr-28 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed"
               />
-              {/* Singapore badge */}
+              {/* Market badge */}
               <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 text-xs text-gray-400 bg-gray-50 border border-gray-200 rounded-lg px-2 py-1 pointer-events-none">
                 <MapPin className="w-3 h-3" />
-                Singapore
+                {countryConfig.label}
               </div>
               {/* Spinner */}
               {(searching || fetchingDetails) && (
