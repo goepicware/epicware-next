@@ -134,7 +134,7 @@ export default function ImproveGoogleRatingPage() {
             <p>
               For a step-by-step plan, follow our{" "}
               <Link
-                href="/blog/reputation-recovery-strategy"
+                href="/blog/handle-negative-google-reviews-singapore"
                 className="text-primary font-medium hover:underline"
               >
                 reputation recovery strategy

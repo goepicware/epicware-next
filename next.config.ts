@@ -144,6 +144,13 @@ const nextConfig: NextConfig = {
       { source: "/services/review-management/reputation-analytics", destination: "/services/review-management#reputation-analytics", permanent: true },
       { source: "/services/review-management/review-generation", destination: "/services/review-management#review-generation", permanent: true },
       { source: "/services/review-management/review-widgets", destination: "/services/review-management#review-widgets", permanent: true },
+      { source: "/blog/can-you-recommend-a-good-digital-marketing-agency-in-singapore-for-my-small-business-singapore", destination: "/blog/how-to-hire-local-seo-agency-singapore", permanent: true },
+      { source: "/blog/digital-marketing-agency-singapore-local-seo", destination: "/blog/how-to-hire-local-seo-agency-singapore", permanent: true },
+      { source: "/blog/top-10-ai-local-seo-agencies-singapore-2026", destination: "/blog/how-to-hire-local-seo-agency-singapore", permanent: true },
+      { source: "/blog/which-local-seo-agencies-in-singapore-are-highly-rated", destination: "/blog/how-to-hire-local-seo-agency-singapore", permanent: true },
+      { source: "/blog/how-to-remove-bad-google-reviews", destination: "/resources/guides/bad-review-removal-guide", permanent: true },
+      { source: "/blog/negative-review-damage-control", destination: "/blog/handle-negative-google-reviews-singapore", permanent: true },
+      { source: "/blog/reputation-recovery-strategy", destination: "/blog/handle-negative-google-reviews-singapore", permanent: true },
     ];
   },
 };

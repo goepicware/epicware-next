@@ -58,7 +58,7 @@ export default function Page() {
           <p>Look at the reviewer&apos;s profile: review history, timing relative to competitor reviews, the specificity of the complaint. Build your evidence file before submitting anything.</p>
 
           <h3>Step 2: Flag the review</h3>
-          <p>The Google Maps flag button is the first step but rarely sufficient on its own. Our step-by-step guide on <a href="/blog/how-to-remove-bad-google-reviews">how to remove bad Google reviews</a> covers what comes next. In Google Maps, find the review, click the three dots, and select &quot;Report review.&quot; Choose the most specific category available. Google&apos;s automated system will assess the flag — typically rejecting it if the review doesn&apos;t match obvious spam patterns.</p>
+          <p>The Google Maps flag button is the first step but rarely sufficient on its own. In Google Maps, find the review, click the three dots, and select &quot;Report review.&quot; Choose the most specific category available. Google&apos;s automated system will assess the flag — typically rejecting it if the review doesn&apos;t match obvious spam patterns.</p>
           <p>Flag rejection is not final. It&apos;s the output of an automated system, not a human determination.</p>
 
           <h3>Step 3: Submit a formal removal request</h3>
