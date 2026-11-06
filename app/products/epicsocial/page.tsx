@@ -27,12 +27,6 @@ const schema = {
   operatingSystem: "Web",
   description:
     "Social media scheduling and Google Business Profile post management software for Singapore SMBs. AI generates posts from business data, schedules to Facebook, Instagram, and GBP from one dashboard.",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "SGD",
-    description: "See pricing at epicware.ai/pricing",
-  },
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",

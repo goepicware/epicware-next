@@ -27,12 +27,6 @@ const schema = {
   operatingSystem: "Web",
   description:
     "Email marketing automation software for Singapore SMBs. Runs automated post-visit follow-up emails, win-back campaigns, review requests, and re-engagement sequences based on customer behaviour.",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "SGD",
-    description: "See pricing at epicware.ai/pricing",
-  },
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
