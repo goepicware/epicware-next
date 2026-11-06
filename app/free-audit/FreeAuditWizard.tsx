@@ -15,6 +15,7 @@ import type { GBPSnapshot, EnrichedKeyword } from "./types";
 import { trackEvent } from "@/lib/meta-tracking";
 import { createLeadTransactionId, trackGoogleAdsLead } from "@/lib/tracking/google-ads";
 import { getStoredClickIds } from "@/lib/tracking/click-ids";
+import { AUDIT_COUNTRIES, type AuditCountryId } from "./countries";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -39,14 +40,20 @@ interface AuditResult {
   heatmaps: HeatmapData[]; competitors: Competitor[]; checkItems: CheckItem[];
   scorecard: { profile: number; reviews: number; keywords: number; visibility: number; overall: number };
   aiSummary: string; estimatedMonthlyRevenue: number; recommendations: string[];
-  invisibleGridPoints: number; totalGridPoints: number;
+  /** Grid points (out of totalGridPoints) where the business ranks #1-#3 — computed from the same heatmap data rendered in the grid below. */
+  top3GridPoints: number; totalGridPoints: number;
   neighbourhood: string; shortBusinessName: string;
+  currencySymbol: string; locale: string;
   aiVisibility?: AIVisibilityData;
 }
 
 // ─── Data helpers ─────────────────────────────────────────────────────────────
 
 const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+// Mirrors LLM_CONFIGS.length in app/api/audit/ai-visibility/route.ts — the
+// number of AI tools the backend attempts to query per audit.
+const LLM_TOOL_COUNT = 6;
 
 const DISTRICT_MAP: Array<[[number, number], string]> = [
   [[1, 8], "Tanjong Pagar"], [[9, 10], "Orchard"], [[11, 13], "Novena"],
@@ -188,30 +195,37 @@ const CATEGORY_COMPETITORS: Record<string, CompTpl[]> = {
 };
 
 const WHY_RANKS_FN: Array<(c: CompTpl) => string> = [
-  (c) => `${c.reviewCount.toLocaleString()} reviews accumulated over several years — Google's primary Map Pack trust signal.`,
+  (c) => `${c.reviewCount.toLocaleString()} reviews accumulated over several years — a major Map Pack trust signal.`,
   (c) => `Replies to every review and posts weekly GBP content — strong engagement signals that compound over time.`,
   (c) => `Fully optimised profile with keyword-rich descriptions, 30+ photos, and complete service listings.`,
 ];
 
-function getCompetitors(rawTypes: string[], formattedCategory: string): Competitor[] {
+function getCompetitors(rawTypes: string[], formattedCategory: string, country: AuditCountryId): Competitor[] {
   // Prefer rawTypes normalisation — avoids "establishment" / "point_of_interest" fallback
   const normalised = normaliseRawTypes(rawTypes);
 
-  // Try normalised key first, then fuzzy match on formatted string
+  // CATEGORY_COMPETITORS is a Singapore-specific illustrative list (real
+  // business names, Singapore addresses) — only usable when the audit is
+  // actually scoped to Singapore. Outside Singapore, always fall through to
+  // the generic country-neutral template below rather than show Singapore
+  // businesses/addresses in a US audit.
   const key =
-    (normalised && CATEGORY_COMPETITORS[normalised] ? normalised : null) ??
-    Object.keys(CATEGORY_COMPETITORS).find(
-      (k) =>
-        formattedCategory.toLowerCase().includes(k.toLowerCase()) ||
-        k.toLowerCase().includes(formattedCategory.toLowerCase())
-    ) ??
-    "";
+    country === "sg"
+      ? (normalised && CATEGORY_COMPETITORS[normalised] ? normalised : null) ??
+        Object.keys(CATEGORY_COMPETITORS).find(
+          (k) =>
+            formattedCategory.toLowerCase().includes(k.toLowerCase()) ||
+            k.toLowerCase().includes(formattedCategory.toLowerCase())
+        ) ??
+        ""
+      : "";
 
   const label = normalised || formattedCategory;
+  const countryLabel = AUDIT_COUNTRIES[country].label;
   const templates = CATEGORY_COMPETITORS[key] ?? [
-    { name: `Top ${label} Provider SG`, address: "1 Raffles Place, Singapore 048616", rating: 4.8, reviewCount: 892 },
-    { name: `${label} Specialists Singapore`, address: "10 Shenton Way, Singapore 068803", rating: 4.6, reviewCount: 634 },
-    { name: `Premier ${label} Singapore`, address: "80 Raffles Place, Singapore 048624", rating: 4.5, reviewCount: 423 },
+    { name: `Top ${label} Provider`, address: `Serving the ${countryLabel} market`, rating: 4.8, reviewCount: 892 },
+    { name: `${label} Specialists`, address: `Serving the ${countryLabel} market`, rating: 4.6, reviewCount: 634 },
+    { name: `Premier ${label} Services`, address: `Serving the ${countryLabel} market`, rating: 4.5, reviewCount: 423 },
   ];
   return templates.slice(0, 3).map((t, i) => ({
     ...t, rank: i + 1, whyRanks: WHY_RANKS_FN[i % WHY_RANKS_FN.length](t),
@@ -242,7 +256,7 @@ function buildHeatmap(keyword: string, lat: number, lng: number, radiusKm: numbe
 // ─── Report generator ─────────────────────────────────────────────────────────
 
 async function generateReport(
-  snap: GBPSnapshot, keywords: string[], enrichedKws: EnrichedKeyword[], topComps: Competitor[], radiusKm: number, leadName: string
+  snap: GBPSnapshot, keywords: string[], enrichedKws: EnrichedKeyword[], topComps: Competitor[], radiusKm: number, leadName: string, country: AuditCountryId
 ): Promise<AuditResult> {
   await delay(800);
 
@@ -252,13 +266,17 @@ async function generateReport(
   });
   const hm0 = heatmaps[0];
   const totalGridPoints = 49;
-  const invisibleGridPoints = hm0 ? hm0.gridPoints.filter((p) => p.rank > 20).length : 0;
+  // Count of grid points where the business ranks #1-#3 — derived from the
+  // exact same gridPoints array the heatmap grid below renders, so the
+  // headline/stat card and the visual grid can never disagree.
+  const top3GridPoints = hm0 ? hm0.gridPoints.filter((p) => p.rank >= 1 && p.rank <= 3).length : 0;
   const neighbourhood = extractNeighbourhood(snap.address);
   const shortBusinessName = extractShortName(snap.businessName);
+  const countryConfig = AUDIT_COUNTRIES[country];
   // Use rawTypes to find real category — avoids "Establishment" / "Point Of Interest" fallback
   const resolvedCategory = normaliseRawTypes(snap.rawTypes) || snap.category;
   // Prefer real DataForSEO competitors; fall back to category mock if none returned
-  const competitors = topComps.length > 0 ? topComps : getCompetitors(snap.rawTypes, snap.category);
+  const competitors = topComps.length > 0 ? topComps : getCompetitors(snap.rawTypes, snap.category, country);
   const comp1 = competitors[0];
 
   const hasDescription = !!snap.editorialSummary;
@@ -280,14 +298,14 @@ async function generateReport(
       status: reviewFreqPass ? "pass" : "fail",
       detail: reviewFreqPass
         ? `With ${snap.reviewCount} reviews your estimated weekly rate is above 1 — solid activity signal.`
-        : `With ${snap.reviewCount} reviews your estimated weekly rate is below 1. Google rewards consistent new reviews.`,
+        : `With ${snap.reviewCount} reviews your estimated weekly rate is below 1. Consistent new reviews are a positive ranking signal.`,
     },
     {
       id: "rating", label: "Google Rating (4.0+)",
       status: snap.rating >= 4.0 ? "pass" : "fail",
       detail: snap.rating >= 4.0
         ? `Your ${snap.rating}★ rating meets the threshold.`
-        : `Your ${snap.rating}★ rating is below 4.0 — this suppresses Map Pack rankings.`,
+        : `Your ${snap.rating}★ rating is below 4.0 — this can hold back Map Pack rankings.`,
     },
     {
       id: "replies", label: "Review Replies",
@@ -330,7 +348,7 @@ async function generateReport(
     {
       id: "area", label: "Service Area Defined",
       status: "pass",
-      detail: "Your listing is verified and located in Singapore.",
+      detail: `Your listing is verified and located in ${countryConfig.labelWithArticle}.`,
     },
   ];
 
@@ -369,13 +387,48 @@ async function generateReport(
       ? `${leadName}, you don't have any reviews yet — that's the first gap to close.`
       : snap.rating >= 4.0
         ? `${leadName}, your ${snap.rating}★ rating across ${snap.reviewCount} reviews is a strong trust signal.`
-        : `${leadName}, your ${snap.rating}★ rating across ${snap.reviewCount} reviews is actively working against you — it's below Google's 4.0 trust threshold and suppresses your Map Pack ranking.`;
+        : `${leadName}, your ${snap.rating}★ rating across ${snap.reviewCount} reviews is actively working against you — it's below the 4.0 threshold and can hold back your Map Pack ranking.`;
+
+  // Never claim a business already at #1-#3 still needs to "overtake" or
+  // that top 3 is merely "achievable" — and ground growth framing in the
+  // same average-rank-across-the-grid number the heatmap itself shows,
+  // rather than a single point.
+  const rankLine =
+    centreRank === 0
+      ? `you're invisible right at ${neighbourhood}`
+      : centreRank <= 3
+        ? `you're #${centreRank} right at ${neighbourhood} — holding a top-3 spot`
+        : `you rank #${centreRank} right at ${neighbourhood}`;
+  const avgRank = hm0?.averageRank ?? centreRank;
 
   const aiSummary =
     `${ratingLine} ` +
-    `But for "${kw1}" — your core category term — ${centreRank > 0 ? `you rank #${centreRank} right at ${neighbourhood}` : `you're invisible right at ${neighbourhood}`}, and are invisible at ${invisibleGridPoints} of ${totalGridPoints} grid points across the surrounding area. ` +
+    `But for "${kw1}" — your core category term — ${rankLine}, and you only hold a top-3 position at ${top3GridPoints} of ${totalGridPoints} grid points across the surrounding area — your average rank across that grid is #${avgRank}. ` +
     `The business sitting above you — ${comp1TopName} with ${comp1TopReviews} reviews — isn't winning on better service. It's winning on SEO infrastructure built over a longer runway. ` +
     `Meanwhile, ${competitionLine} — that's your next 60 days of growth sitting unclaimed.`;
+
+  // Recommendations must never contradict a health check that already
+  // passed, and must never assert a specific finding from a check we marked
+  // "unknown" (Need Access) — only genuinely failed checks and real,
+  // independently-verified gaps generate a recommendation here.
+  const recommendations: string[] = [];
+  if (!hasDescription) {
+    recommendations.push("Add a 750-character keyword-rich business description immediately");
+  }
+  // "replies" check status is always "unknown" (requires GBP access) — never
+  // assert a specific reply-rate finding from it.
+  recommendations.push("Connect your Google Business Profile to check your review replies");
+  if (!photoPass) {
+    recommendations.push(`Upload more photos — you have ${photoCount}, aim for 10+ to boost engagement and clicks`);
+  }
+  recommendations.push("Post weekly on GBP with local keywords to signal activity");
+  recommendations.push(
+    centreRank === 0
+      ? `You're not yet visible for "${kw1}" — this is your biggest 60-day opportunity`
+      : centreRank <= 3
+        ? `You're #${centreRank} at your location for "${kw1}". Hold it and push to #1 — your average rank across the surrounding grid is #${avgRank}, so there's still ground to cover beyond your doorstep`
+        : `You rank #${centreRank} for "${kw1}" — top 3 is achievable in 60 days`
+  );
 
   return {
     gbpName: snap.businessName, gbpCategory: resolvedCategory, gbpAddress: snap.address,
@@ -383,16 +436,9 @@ async function generateReport(
     keywords, enrichedKeywords: enrichedKws, heatmaps, competitors, checkItems,
     scorecard: { profile: profileScore, reviews: reviewScore, keywords: kwScore, visibility: visScore, overall },
     aiSummary, estimatedMonthlyRevenue: 4500,
-    recommendations: [
-      "Add a 750-character keyword-rich business description immediately",
-      `Reply to your ${snap.reviewCount} reviews — Google rewards engagement signals`,
-      "Upload more photos to hit the 20-photo threshold",
-      "Post weekly on GBP with local keywords to signal activity",
-      centreRank > 0
-        ? `You rank #${centreRank} for "${kw1}" — top 3 is achievable in 60 days`
-        : `You're not yet visible for "${kw1}" — this is your biggest 60-day opportunity`,
-    ],
-    invisibleGridPoints, totalGridPoints, neighbourhood, shortBusinessName,
+    recommendations,
+    top3GridPoints, totalGridPoints, neighbourhood, shortBusinessName,
+    currencySymbol: countryConfig.currencySymbol, locale: countryConfig.locale,
   };
 }
 
@@ -497,6 +543,7 @@ const STEP_LABELS = ["Business", "Keywords", "Location", "Your Details", "Report
 
 export default function FreeAuditWizard() {
   const [step, setStep] = useState<WizardStep>(1);
+  const [country, setCountry] = useState<AuditCountryId>("sg");
 
   // Step 1
   const [gbpSnapshot, setGbpSnapshot] = useState<GBPSnapshot | null>(null);
@@ -570,6 +617,7 @@ export default function FreeAuditWizard() {
         rating: snap.rating,
         reviews: snap.reviews,
         editorialSummary: snap.editorialSummary,
+        country,
       }),
     })
       .then((r) => r.json())
@@ -594,7 +642,7 @@ export default function FreeAuditWizard() {
       });
 
     setStep(2);
-  }, []);
+  }, [country]);
 
   const handleStartScan = useCallback(() => {
     setIsScanning(true);
@@ -678,13 +726,14 @@ export default function FreeAuditWizard() {
         categoryLabel: normaliseRawTypes(snap.rawTypes) || snap.category,
         neighbourhood: extractNeighbourhood(snap.address),
         keywords,
+        country,
       }),
     })
       .then((r) => r.json())
       .catch(() => null);
 
     // Generate report (fast — local computation ~800ms)
-    const report = await generateReport(snap, keywords, selectedEnrichedKeywords, topCompetitors, radiusKm, name);
+    const report = await generateReport(snap, keywords, selectedEnrichedKeywords, topCompetitors, radiusKm, name, country);
     setResult(report);
     setIsProcessing(false);
     setSubmitting(false);
@@ -711,9 +760,10 @@ export default function FreeAuditWizard() {
           aiSummary: report.aiSummary,
           checkItems: report.checkItems.map((c) => ({ label: c.label, status: c.status, detail: c.detail })),
           recommendations: report.recommendations,
-          invisibleGridPoints: report.invisibleGridPoints, totalGridPoints: report.totalGridPoints,
+          top3GridPoints: report.top3GridPoints, totalGridPoints: report.totalGridPoints,
           estimatedMonthlyRevenue: report.estimatedMonthlyRevenue,
           neighbourhood: report.neighbourhood, shortBusinessName: report.shortBusinessName,
+          currencySymbol: report.currencySymbol, locale: report.locale,
         },
       }),
     }).catch(() => {});
@@ -724,13 +774,14 @@ export default function FreeAuditWizard() {
         setResult((prev) => (prev ? { ...prev, aiVisibility: aiVisData } : prev));
       }
     });
-  }, [name, email, phone, leadType, consent, placeId, keywords, selectedEnrichedKeywords, topCompetitors, radiusKm, gbpSnapshot, websiteUrl, leadTransactionId, submitLeadWithRetry]);
+  }, [name, email, phone, leadType, consent, placeId, keywords, selectedEnrichedKeywords, topCompetitors, radiusKm, gbpSnapshot, websiteUrl, leadTransactionId, submitLeadWithRetry, country]);
 
   const scoreColour = (s: number) => s >= 70 ? "text-emerald-600" : s >= 50 ? "text-yellow-600" : "text-red-600";
+  const countryLabel = AUDIT_COUNTRIES[country].labelWithArticle;
 
   const handleDownloadPDF = useCallback(() => {
     if (!result) return;
-    const date = new Date().toLocaleDateString("en-SG", { day: "numeric", month: "long", year: "numeric" });
+    const date = new Date().toLocaleDateString(result.locale, { day: "numeric", month: "long", year: "numeric" });
 
     function scoreBand(s: number) {
       if (s >= 70) return { label: "Good", color: "#16a34a" };
@@ -854,11 +905,11 @@ export default function FreeAuditWizard() {
 <div style="background:#2563EB;padding:18px 28px;">
   <p style="font-size:11px;color:#bfdbfe;font-weight:600;text-transform:uppercase;margin-bottom:4px;">Overall Score</p>
   <p style="font-size:32px;font-weight:800;color:#fff;line-height:1;">${result.scorecard.overall}<span style="font-size:14px;font-weight:400;color:#93c5fd;"> /100 — ${overall.label}</span></p>
-  <p style="font-size:12px;color:#bfdbfe;margin-top:8px;">${result.gbpReviewCount} reviews · ${result.gbpRating}★ rating · Estimated missed revenue: <strong style="color:#fff;">S$${result.estimatedMonthlyRevenue.toLocaleString()}/mo</strong></p>
+  <p style="font-size:12px;color:#bfdbfe;margin-top:8px;">${result.gbpReviewCount} reviews · ${result.gbpRating}★ rating · Estimated missed revenue: <strong style="color:#fff;">${result.currencySymbol}${result.estimatedMonthlyRevenue.toLocaleString()}/mo</strong></p>
 </div>
 
 <div class="section">
-  <p style="font-size:18px;font-weight:800;color:#0F1B2D;line-height:1.3;">${result.gbpReviewCount} reviews. ${result.gbpRating}★ rating.<br><span style="color:#dc2626;">Invisible in ${result.invisibleGridPoints} of ${result.totalGridPoints} grid points.</span></p>
+  <p style="font-size:18px;font-weight:800;color:#0F1B2D;line-height:1.3;">${result.gbpReviewCount} reviews. ${result.gbpRating}★ rating.<br><span style="color:#dc2626;">Top 3 in ${result.top3GridPoints} of ${result.totalGridPoints} grid points.</span></p>
 </div>
 
 <div class="section" style="background:#eff6ff;">
@@ -869,9 +920,9 @@ export default function FreeAuditWizard() {
 <div class="section">
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
     <div style="padding:16px;text-align:center;">
-      <p style="font-size:26px;font-weight:800;color:#2563EB;">${result.invisibleGridPoints}/${result.totalGridPoints}</p>
-      <p style="font-size:11px;font-weight:700;color:#0f172a;margin-top:4px;">Grid points invisible</p>
-      <p style="font-size:10px;color:#6b7280;margin-top:3px;line-height:1.4;">You rank at centre — missing from ${result.invisibleGridPoints} surrounding areas</p>
+      <p style="font-size:26px;font-weight:800;color:#2563EB;">${result.top3GridPoints}/${result.totalGridPoints}</p>
+      <p style="font-size:11px;font-weight:700;color:#0f172a;margin-top:4px;">Grid points ranking top 3</p>
+      <p style="font-size:10px;color:#6b7280;margin-top:3px;line-height:1.4;">Missing from the top 3 at ${result.totalGridPoints - result.top3GridPoints} surrounding areas</p>
     </div>
     <div style="padding:16px;text-align:center;border-left:1px solid #e5e7eb;border-right:1px solid #e5e7eb;">
       <p style="font-size:26px;font-weight:800;color:#2563EB;">${result.gbpRating}★</p>
@@ -979,7 +1030,7 @@ ${result.enrichedKeywords.length > 0 ? `
       )}
 
       {/* Step 1 */}
-      {step === 1 && <StepGBP onConfirm={handleConfirmBusiness} />}
+      {step === 1 && <StepGBP onConfirm={handleConfirmBusiness} country={country} onCountryChange={setCountry} />}
 
       {/* Step 2 */}
       {step === 2 && gbpSnapshot && (
@@ -989,6 +1040,7 @@ ${result.enrichedKeywords.length > 0 ? `
           keywords={enrichedKeywords}
           enrichmentLoading={enrichmentLoading}
           blueOceanSource={blueOceanSource}
+          country={country}
           onConfirm={handleKeywordsConfirm}
           onBack={() => setStep(1)}
         />
@@ -1152,7 +1204,7 @@ ${result.enrichedKeywords.length > 0 ? `
                   </div>
                   <div className="border-t pt-4">
                     <p className="text-xs text-gray-500 mb-1">Estimated missed revenue</p>
-                    <p className="text-2xl font-bold text-gray-900">S${result.estimatedMonthlyRevenue.toLocaleString()}<span className="text-sm font-normal text-gray-400">/mo</span></p>
+                    <p className="text-2xl font-bold text-gray-900">{result.currencySymbol}{result.estimatedMonthlyRevenue.toLocaleString()}<span className="text-sm font-normal text-gray-400">/mo</span></p>
                   </div>
                   <Link href="/book-demo" className="audit-no-print block w-full bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-colors">
                     Book a Strategy Call →
@@ -1177,14 +1229,14 @@ ${result.enrichedKeywords.length > 0 ? `
                 <div id="audit-print-header" style={{ display: "none" }} className="pb-4 border-b">
                   <p className="text-xs text-gray-500 uppercase tracking-wide font-semibold">Epicware Free GBP Audit Report</p>
                   <h1 className="text-xl font-bold text-gray-900 mt-1">{result.gbpName}</h1>
-                  <p className="text-sm text-gray-400">{result.gbpAddress} · {new Date().toLocaleDateString("en-SG", { day: "numeric", month: "long", year: "numeric" })}</p>
+                  <p className="text-sm text-gray-400">{result.gbpAddress} · {new Date().toLocaleDateString(result.locale, { day: "numeric", month: "long", year: "numeric" })}</p>
                 </div>
 
                 {/* FIX 1 — Hook headline */}
                 <div>
                   <h1 className="text-3xl font-bold text-[#0F1B2D] leading-tight">
                     {result.gbpReviewCount} reviews. {result.gbpRating}★ rating.<br />
-                    <span className="text-red-600">Invisible in {result.invisibleGridPoints} of {result.totalGridPoints} grid points.</span>
+                    <span className="text-red-600">Top 3 in {result.top3GridPoints} of {result.totalGridPoints} grid points.</span>
                   </h1>
                 </div>
 
@@ -1289,9 +1341,9 @@ ${result.enrichedKeywords.length > 0 ? `
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
-                      <p className="text-3xl font-bold text-[#2563EB]">{result.invisibleGridPoints}/{result.totalGridPoints}</p>
-                      <p className="text-sm font-semibold text-[#0F1B2D] mt-1">Grid points where you&apos;re invisible</p>
-                      <p className="text-xs text-gray-500 mt-1">You rank at the centre — but are missing from {result.invisibleGridPoints} surrounding areas</p>
+                      <p className="text-3xl font-bold text-[#2563EB]">{result.top3GridPoints}/{result.totalGridPoints}</p>
+                      <p className="text-sm font-semibold text-[#0F1B2D] mt-1">Grid points where you rank top 3</p>
+                      <p className="text-xs text-gray-500 mt-1">Missing from the top 3 at {result.totalGridPoints - result.top3GridPoints} of {result.totalGridPoints} surrounding areas</p>
                     </div>
                     <div className="border-l border-r border-gray-100 px-2">
                       <p className="text-3xl font-bold text-[#2563EB]">{result.gbpRating}★</p>
@@ -1345,79 +1397,98 @@ ${result.enrichedKeywords.length > 0 ? `
                   <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
                     <Zap className="w-5 h-5 text-[#2563EB]" /> AI Search Visibility
                   </h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    {result.aiVisibility
-                      ? <>I asked 6 AI tools about &ldquo;{result.keywords[0]}&rdquo; in Singapore. Here&apos;s what I found:</>
-                      : "Searching 6 AI tools for your business…"
-                    }
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-5">
-                    {result.aiVisibility ? (
-                      result.aiVisibility.results.map((r) => (
-                        <div key={r.id} className="border border-gray-100 rounded-xl p-3">
-                          <div className="flex items-center justify-between gap-1 mb-1">
-                            <div className="flex items-center gap-1 min-w-0">
-                              <span className="text-sm font-medium text-gray-700 truncate">{r.displayName}</span>
-                              {r.hasWebSearch && (
-                                <span className="text-[9px] font-semibold text-blue-500 shrink-0">🌐</span>
-                              )}
-                            </div>
-                            <span
-                              title={r.status === "found" && r.excerpt ? r.excerpt : undefined}
-                              className={`shrink-0 text-[10px] px-1.5 py-0.5 rounded-full font-semibold border ${
-                                r.status === "found"
-                                  ? "bg-emerald-50 text-emerald-600 border-emerald-100 cursor-help"
-                                  : r.status === "not_found"
-                                  ? "bg-red-50 text-red-600 border-red-100"
-                                  : "bg-gray-100 text-gray-400 border-gray-200"
-                              }`}
-                            >
-                              {r.status === "found" ? "Found ✓" : r.status === "not_found" ? "Not found" : "Unavailable"}
-                            </span>
-                          </div>
-                          {r.hasWebSearch && (
-                            <p className="text-[9px] text-blue-400 font-medium">Live web search</p>
+                  {(() => {
+                    // Only tools that actually returned a found/not_found result
+                    // count as "checked" — a tool that errored out was never
+                    // successfully checked, so it must not count in the
+                    // denominator or be treated as a checked-but-failed result.
+                    const checkedResults = result.aiVisibility?.results.filter((r) => r.status !== "error") ?? [];
+                    const uncheckedResults = result.aiVisibility?.results.filter((r) => r.status === "error") ?? [];
+                    const checkedCount = checkedResults.length;
+                    const foundCount = checkedResults.filter((r) => r.status === "found").length;
+                    return (
+                      <>
+                        <p className="text-sm text-gray-600 mb-4">
+                          {result.aiVisibility
+                            ? checkedCount > 0
+                              ? <>I asked {LLM_TOOL_COUNT} AI tools about &ldquo;{result.keywords[0]}&rdquo; in {countryLabel}. {checkedCount} responded — here&apos;s what I found:</>
+                              : <>None of the {LLM_TOOL_COUNT} AI tools could be reached for this check — try again shortly.</>
+                            : `Searching ${LLM_TOOL_COUNT} AI tools for your business…`
+                          }
+                        </p>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-5">
+                          {result.aiVisibility ? (
+                            [...checkedResults, ...uncheckedResults].map((r) => (
+                              <div key={r.id} className={`border rounded-xl p-3 ${r.status === "error" ? "border-gray-100 bg-gray-50/50" : "border-gray-100"}`}>
+                                <div className="flex items-center justify-between gap-1 mb-1">
+                                  <div className="flex items-center gap-1 min-w-0">
+                                    <span className={`text-sm font-medium truncate ${r.status === "error" ? "text-gray-400" : "text-gray-700"}`}>{r.displayName}</span>
+                                    {r.hasWebSearch && (
+                                      <span className="text-[9px] font-semibold text-blue-500 shrink-0">🌐</span>
+                                    )}
+                                  </div>
+                                  <span
+                                    title={
+                                      r.status === "found" && r.excerpt ? r.excerpt
+                                        : r.status === "error" ? "Not checked — this tool didn't respond during this audit"
+                                        : undefined
+                                    }
+                                    className={`shrink-0 text-[10px] px-1.5 py-0.5 rounded-full font-semibold border ${
+                                      r.status === "found"
+                                        ? "bg-emerald-50 text-emerald-600 border-emerald-100 cursor-help"
+                                        : r.status === "not_found"
+                                        ? "bg-red-50 text-red-600 border-red-100"
+                                        : "bg-gray-100 text-gray-400 border-gray-200 cursor-help"
+                                    }`}
+                                  >
+                                    {r.status === "found" ? "Found ✓" : r.status === "not_found" ? "Not found" : "Unavailable"}
+                                  </span>
+                                </div>
+                                {r.hasWebSearch && (
+                                  <p className="text-[9px] text-blue-400 font-medium">Live web search</p>
+                                )}
+                                {r.status === "error" && (
+                                  <p className="text-[9px] text-gray-400">Not checked this audit</p>
+                                )}
+                              </div>
+                            ))
+                          ) : (
+                            Array.from({ length: LLM_TOOL_COUNT }).map((_, i) => (
+                              <div key={i} className="border border-gray-100 rounded-xl p-3 flex items-center justify-between">
+                                <div className="h-4 w-16 bg-gray-100 rounded animate-pulse" />
+                                <div className="h-5 w-14 bg-gray-100 rounded-full animate-pulse" />
+                              </div>
+                            ))
                           )}
                         </div>
-                      ))
-                    ) : (
-                      Array.from({ length: 6 }).map((_, i) => (
-                        <div key={i} className="border border-gray-100 rounded-xl p-3 flex items-center justify-between">
-                          <div className="h-4 w-16 bg-gray-100 rounded animate-pulse" />
-                          <div className="h-5 w-14 bg-gray-100 rounded-full animate-pulse" />
+                        <div className="p-4 bg-[#EFF6FF] border border-blue-200 rounded-xl">
+                          {!result.aiVisibility ? (
+                            <p className="text-sm text-[#1E40AF] leading-relaxed">
+                              <span className="font-bold">Checking AI search visibility for {result.shortBusinessName}…</span> Results will appear above in a moment.
+                            </p>
+                          ) : checkedCount === 0 ? (
+                            <p className="text-sm text-[#1E40AF] leading-relaxed">
+                              <span className="font-bold">We couldn&apos;t reach any AI tools during this check.</span>{" "}
+                              Epicware&apos;s GEO engine monitors this continuously, not just at audit time.
+                            </p>
+                          ) : foundCount > 0 ? (
+                            <p className="text-sm text-[#1E40AF] leading-relaxed">
+                              <span className="font-bold">You appear in {foundCount} of {checkedCount} AI tools checked.</span>{" "}
+                              Epicware&apos;s GEO engine works to get you into all of them.
+                            </p>
+                          ) : (
+                            <p className="text-sm text-[#1E40AF] leading-relaxed">
+                              <span className="font-bold">Your competitor {result.competitors[0]?.name} is also not yet appearing in AI search results for your category</span> — but this window closes fast as businesses start optimising for GEO.{" "}
+                              Epicware&apos;s Domination plan engineers your business into ChatGPT, Perplexity, and Google AI Overviews before your competitors notice this channel exists.
+                            </p>
+                          )}
+                          <Link href={country === "sg" ? "/locations/singapore/ai-search-visibility" : "/ai-visibility"} className="inline-block mt-3 text-sm font-semibold text-[#2563EB] underline underline-offset-2">
+                            See how Epicware&apos;s GEO engine works →
+                          </Link>
                         </div>
-                      ))
-                    )}
-                  </div>
-                  <div className="p-4 bg-[#EFF6FF] border border-blue-200 rounded-xl">
-                    {(() => {
-                      if (!result.aiVisibility) {
-                        return (
-                          <p className="text-sm text-[#1E40AF] leading-relaxed">
-                            <span className="font-bold">Checking AI search visibility for {result.shortBusinessName}…</span> Results will appear above in a moment.
-                          </p>
-                        );
-                      }
-                      const foundCount = result.aiVisibility.results.filter((r) => r.status === "found").length;
-                      if (foundCount > 0) {
-                        return (
-                          <p className="text-sm text-[#1E40AF] leading-relaxed">
-                            <span className="font-bold">You appear in {foundCount} of 6 AI tools.</span>{" "}
-                            Epicware&apos;s GEO engine gets you into all 6.
-                          </p>
-                        );
-                      }
-                      return (
-                        <p className="text-sm text-[#1E40AF] leading-relaxed">
-                          <span className="font-bold">Your competitor {result.competitors[0]?.name} is also not yet appearing in AI search results for your category</span> — but this window closes fast as businesses start optimising for GEO.{" "}
-                          Epicware&apos;s Domination plan engineers your business into ChatGPT, Perplexity, and Google AI Overviews before your competitors notice this channel exists.
-                        </p>
-                      );
-                    })()}
-                    <Link href="/locations/singapore/ai-search-visibility" className="inline-block mt-3 text-sm font-semibold text-[#2563EB] underline underline-offset-2">
-                      See how Epicware&apos;s GEO engine works →
-                    </Link>
-                  </div>
+                      </>
+                    );
+                  })()}
                 </div>
 
                 {/* FIX 3 — Competitors with whyRanks */}
@@ -1477,7 +1548,7 @@ ${result.enrichedKeywords.length > 0 ? `
                     {result.shortBusinessName} built a {result.gbpRating}★ rating across {result.gbpReviewCount} reviews with no SEO infrastructure behind it.
                     The next 90 days either compound that into a real local moat — or get eaten by {result.competitors[0]?.name} before your reputation has time to travel.
                     Most of what closes these gaps falls under our{" "}
-                    <Link href="/locations/singapore/google-business-profile" className="text-white underline hover:text-gray-200">
+                    <Link href={country === "sg" ? "/locations/singapore/google-business-profile" : "/book-demo"} className="text-white underline hover:text-gray-200">
                       GBP optimisation services
                     </Link>
                     .
