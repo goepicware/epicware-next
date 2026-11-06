@@ -866,7 +866,7 @@ export default function FreeAuditWizard() {
       return `<div style="margin-bottom:24px;page-break-inside:avoid;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
           <p style="font-size:12px;font-weight:700;color:#111827;">&ldquo;${hm.keyword}&rdquo;</p>
-          <span style="font-size:10px;color:#6b7280;">Centre: <b style="color:#111827;">#${hm.centerRank}</b> &nbsp; Avg: <b style="color:#111827;">#${hm.averageRank}</b></span>
+          <span style="font-size:10px;color:#6b7280;">Centre (scanned): <b style="color:#111827;">#${hm.centerRank}</b> &nbsp; Avg (estimated): <b style="color:#111827;">#${hm.averageRank}</b></span>
         </div>
         <table style="border-collapse:separate;border-spacing:3px;"><tbody>${tableRows}</tbody></table>
         <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
@@ -965,7 +965,8 @@ ${result.enrichedKeywords.length > 0 ? `
 
 <div class="section">
   <h2>Ranking Heatmaps</h2>
-  <p style="font-size:11px;color:#6b7280;margin-bottom:16px;">Each cell shows your Google Maps rank at that location across ${result.neighbourhood}.</p>
+  <p style="font-size:11px;color:#6b7280;margin-bottom:4px;">The ringed centre cell is your real scanned Google Maps rank at your exact location in ${result.neighbourhood}. Surrounding cells are a modeled estimate based on that result and typical ranking drop-off by distance — they are not individually scanned.</p>
+  <p style="font-size:10px;color:#9ca3af;margin-bottom:16px;">Green = top 3, Red = not ranking.</p>
   ${heatmapSections}
 </div>
 
@@ -1363,19 +1364,20 @@ ${result.enrichedKeywords.length > 0 ? `
                   <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-[#2563EB]" /> Ranking Heatmaps
                   </h3>
-                  <p className="text-sm text-gray-500 mb-6">Each cell shows your Google Maps rank at that location. Green = top 3, Red = not ranking.</p>
+                  <p className="text-sm text-gray-500 mb-1">The ringed centre cell is your real scanned Google Maps rank at your exact location. Surrounding cells are a modeled estimate based on that result and typical ranking drop-off by distance — they are not individually scanned.</p>
+                  <p className="text-xs text-gray-400 mb-6">Green = top 3, Red = not ranking.</p>
                   {result.heatmaps.map((hm) => (
                     <div key={hm.keyword} className="mb-8 last:mb-0">
                       <div className="flex items-center justify-between mb-3">
                         <p className="font-semibold text-gray-900 text-sm">&ldquo;{hm.keyword}&rdquo;</p>
                         <div className="flex gap-3 text-xs text-gray-500">
-                          <span>Centre: <b className="text-gray-800">#{hm.centerRank}</b></span>
-                          <span>Avg: <b className="text-gray-800">#{hm.averageRank}</b></span>
+                          <span>Centre (scanned): <b className="text-gray-800">#{hm.centerRank}</b></span>
+                          <span>Avg (estimated): <b className="text-gray-800">#{hm.averageRank}</b></span>
                         </div>
                       </div>
                       <div className="grid grid-cols-7 gap-1">
                         {hm.gridPoints.map((pt, i) => (
-                          <div key={i} title={`Rank #${pt.rank}`}
+                          <div key={i} title={i === 24 ? `Scanned rank #${pt.rank}` : `Estimated rank #${pt.rank}`}
                             className={`aspect-square rounded flex items-center justify-center text-white text-[10px] font-bold ${rankColour(pt.rank)} ${i === 24 ? "ring-2 ring-white ring-offset-1 ring-offset-gray-200" : ""}`}>
                             {pt.rank > 20 ? "20+" : pt.rank}
                           </div>
