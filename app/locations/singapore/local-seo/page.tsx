@@ -473,7 +473,7 @@ export default function LocalSEOSingaporePage() {
           </h2>
           <div className="grid grid-cols-3 gap-6 mb-12 text-center">
             {[
-              { n: "100+", l: "Outlets managed" },
+              { n: "50+", l: "Outlets managed" },
               { n: "10+", l: "Years of specialist experience" },
               { n: "4", l: "AI-powered tools of our own" },
             ].map((t) => (

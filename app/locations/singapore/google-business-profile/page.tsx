@@ -512,7 +512,7 @@ export default function GbpOptimisationPage() {
           </h2>
           <div className="grid grid-cols-3 gap-6 mb-12 text-center">
             {[
-              { n: "100+", l: "Outlets managed" },
+              { n: "50+", l: "Outlets managed" },
               { n: "10+", l: "Years of specialist experience" },
               { n: "19-point", l: "GBP audit" },
             ].map((t) => (
