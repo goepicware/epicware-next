@@ -209,12 +209,6 @@ export default function Post() {
             when a negative one appears are always reactive. The goal is to build a buffer before you
             need it.
           </p>
-          <p>
-            For a full playbook, see our{" "}
-            <Link href="/blog/negative-review-damage-control" className="text-primary underline underline-offset-2 hover:text-primary/80">negative review damage control</Link>{" "}
-            strategy.
-          </p>
-
           <h2>What mistakes make a negative Google review situation significantly worse?</h2>
           <p>
             These are the responses and tactics that businesses use in frustration — and that consistently
@@ -309,7 +303,7 @@ export default function Post() {
       ctaContext="Epicware handles Google review flagging and removal requests, plus builds the positive review volume that makes individual negatives matter less."
       relatedPosts={[
         { title: "Fake or Unfair Google Reviews — What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
-        { title: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
+        { title: "The Complete Guide to Removing Bad Google Reviews", href: "/resources/guides/bad-review-removal-guide" },
         { title: "Should You Respond to Every Google Review?", href: "/blog/should-you-respond-to-every-google-review" },
         { title: "Review Management Singapore", href: "/blog/review-management-singapore" },
       ]}

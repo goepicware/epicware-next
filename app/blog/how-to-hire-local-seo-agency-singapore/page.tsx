@@ -307,10 +307,6 @@ export default function Post() {
             cover.
           </p>
           <p>
-            Before you sign, see how to spot{" "}
-            <Link href="/blog/which-local-seo-agencies-in-singapore-are-highly-rated" className="text-primary underline underline-offset-2 hover:text-primary/80">highly rated local SEO agencies</Link>.
-          </p>
-          <p>
             See how Epicware answers each of these as an{" "}
             <a href="/locations/singapore/seo">SEO agency in Singapore</a>.
           </p>

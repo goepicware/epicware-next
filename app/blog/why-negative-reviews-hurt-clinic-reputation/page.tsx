@@ -472,8 +472,8 @@ export default function Post() {
           title: "Fake or Unfair Google Reviews — What to Do",
           href: "/blog/fake-or-unfair-google-reviews-what-to-do",
         },
-        { title: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
-        { title: "Negative Review Damage Control", href: "/blog/negative-review-damage-control" },
+        { title: "The Complete Guide to Removing Bad Google Reviews", href: "/resources/guides/bad-review-removal-guide" },
+        { title: "How to Handle Negative Google Reviews in Singapore", href: "/blog/handle-negative-google-reviews-singapore" },
       ]}
     />
   );

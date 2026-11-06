@@ -29,12 +29,6 @@ const schema = {
   operatingSystem: "Web",
   description:
     "Review management software for Singapore SMBs. Automates review requests over WhatsApp and email, generates AI review responses, monitors all outlets in real time, and removes fake or unfair Google reviews.",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "SGD",
-    description: "See pricing at epicware.ai/pricing. Bad Review Removal: $200/review, refunded if not removed within 3 months.",
-  },
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",

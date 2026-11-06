@@ -176,42 +176,6 @@ const posts = [
     moment: "know",
   },
   {
-    title: "Which Local SEO Agencies in Singapore Are Highly Rated?",
-    summary:
-      "What actually drives high ratings for local SEO agencies in Singapore — review volume, recency, platform diversity — and the common mistakes businesses make when shortlisting a partner based on reviews alone.",
-    href: "/blog/which-local-seo-agencies-in-singapore-are-highly-rated",
-    image: "https://images.pexels.com/photos/11903704/pexels-photo-11903704.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "LOCAL SEO",
-    date: "Jul 2026",
-    readTime: "8 min",
-    isNew: true,
-    moment: "know",
-  },
-  {
-    title: "Can You Recommend a Good Digital Marketing Agency in Singapore for My Small Business?",
-    summary:
-      "A practical guide for Singapore SMBs: what to look for in a digital marketing agency, how to evaluate effectiveness, and the common pitfalls to avoid before signing a contract.",
-    href: "/blog/can-you-recommend-a-good-digital-marketing-agency-in-singapore-for-my-small-business-singapore",
-    image: "/assets/influencer-marketing.png",
-    category: "DIGITAL MARKETING",
-    date: "Jul 2026",
-    readTime: "10 min",
-    isNew: true,
-    moment: "buy",
-  },
-  {
-    title: "Digital Marketing Agency Singapore: Local SEO & Reputation Guide for Small Businesses",
-    summary:
-      "How Singapore SMBs should navigate agency selection, prioritise local SEO for Google Maps visibility, leverage reputation management for trust, and avoid common pitfalls before signing a contract.",
-    href: "/blog/digital-marketing-agency-singapore-local-seo",
-    image: "/assets/business-owner-male.png",
-    category: "DIGITAL MARKETING",
-    date: "Jul 2026",
-    readTime: "9 min",
-    isNew: true,
-    moment: "buy",
-  },
-  {
     title: "10 GBP Optimisation Tips Every Local Business Needs",
     summary:
       "Ten practical GBP optimisation moves for Singapore SMBs — category selection, photo strategy, review management, posting cadence, and the common mistakes that quietly suppress local rankings.",
@@ -272,30 +236,6 @@ const posts = [
     moment: "buy",
   },
   {
-    title: "Negative Review Damage Control Strategy for Business Owners",
-    summary:
-      "How to respond to negative reviews using the L.A.S.T. framework — Listen, Apologize, Solve, Thank. Step-by-step tactics that protect your rating and turn criticism into trust.",
-    href: "/blog/negative-review-damage-control",
-    image: "/assets/negative-google-review-response-framework.png",
-    category: "REPUTATION MANAGEMENT",
-    date: "Jun 2026",
-    readTime: "7 min",
-    isNew: true,
-    moment: "do",
-  },
-  {
-    title: "Reputation Recovery Strategy: A 2026 Guide for SMBs",
-    summary:
-      "A four-pillar framework — monitoring, visibility control, response, and trust building — to help SMBs repair their online reputation after negative reviews or a crisis.",
-    href: "/blog/reputation-recovery-strategy",
-    image: "/assets/review-character.png",
-    category: "REPUTATION MANAGEMENT",
-    date: "Jun 2026",
-    readTime: "7 min",
-    isNew: true,
-    moment: "do",
-  },
-  {
     title: "Types of Customer Review Platforms: 2026 Business Guide",
     summary:
       "Five types of customer review platforms — local search, general company sites, niche directories, marketplace systems, and SaaS hubs. Learn which one your business should prioritise first.",
@@ -332,18 +272,6 @@ const posts = [
     moment: "know",
   },
   {
-    title: "10 Best AI Local SEO Agencies in Singapore for 2026 (Ranked)",
-    summary:
-      "How to choose between Singapore's top AI local SEO agencies and platforms. Ranked by AI capability, review management, GBP expertise, and Singapore track record.",
-    href: "/blog/top-10-ai-local-seo-agencies-singapore-2026",
-    image: "/assets/ai-citation-singapore-marina-bay.jpg",
-    category: "LOCAL SEO",
-    date: "Jun 2026",
-    readTime: "9 min",
-    isNew: true,
-    moment: "buy",
-  },
-  {
     title: "Fake or Unfair Google Reviews: What Singapore Businesses Can Do",
     summary:
       "Step-by-step guide for dealing with fake, competitor-posted, or policy-violating Google reviews.",
@@ -376,18 +304,6 @@ const posts = [
     category: "REVIEW MANAGEMENT",
     date: "Jun 2026",
     readTime: "8 min",
-    isNew: true,
-    moment: "do",
-  },
-  {
-    title: "How to Remove Bad Google Reviews From Your Singapore Business",
-    summary:
-      "Exactly how to remove fake, malicious, or policy-violating Google reviews. Step-by-step process and professional removal service.",
-    href: "/blog/how-to-remove-bad-google-reviews",
-    image: "/assets/report-google-review-policy-violation-guide.png",
-    category: "BAD REVIEW REMOVAL",
-    date: "Jun 2026",
-    readTime: "7 min",
     isNew: true,
     moment: "do",
   },

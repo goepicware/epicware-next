@@ -210,7 +210,7 @@ export default function ReputationManagementPage() {
             </p>
             <p>
               If you&apos;re already dealing with a rating that&apos;s dropped, our{" "}
-              <Link href="/blog/reputation-recovery-strategy" className="text-primary font-medium hover:underline">
+              <Link href="/blog/handle-negative-google-reviews-singapore" className="text-primary font-medium hover:underline">
                 reputation recovery strategy
               </Link>{" "}
               lays out the fix step by step.

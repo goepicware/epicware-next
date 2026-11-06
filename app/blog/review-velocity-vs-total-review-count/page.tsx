@@ -81,7 +81,7 @@ export default function Post() {
           </ol>
           <p>Aim for a sustainable weekly rate rather than a one-time burst. A consistent 3–5 reviews per week is more valuable — and more credible to the algorithm — than 40 reviews arriving in 7 days.</p>
           <p>If your velocity stalled after a bad patch, start with a{" "}
-            <Link href="/blog/reputation-recovery-strategy" className="text-primary font-medium hover:underline">
+            <Link href="/blog/handle-negative-google-reviews-singapore" className="text-primary font-medium hover:underline">
               reputation recovery strategy
             </Link>
             .</p>

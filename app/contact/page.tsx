@@ -51,6 +51,47 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="container mx-auto px-6 max-w-2xl">
+          <h2 className="font-display font-bold text-foreground text-2xl mb-8 text-center">
+            What Happens After You Reach Out
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+            <div className="text-center">
+              <p className="font-display font-bold text-primary text-3xl mb-2">1</p>
+              <p className="text-sm text-muted-foreground">We pull your current Google Maps ranking, review profile, and AI search visibility before the call.</p>
+            </div>
+            <div className="text-center">
+              <p className="font-display font-bold text-primary text-3xl mb-2">2</p>
+              <p className="text-sm text-muted-foreground">On the 30-minute call, we walk through what's holding you back and what to fix first.</p>
+            </div>
+            <div className="text-center">
+              <p className="font-display font-bold text-primary text-3xl mb-2">3</p>
+              <p className="text-sm text-muted-foreground">You leave with a prioritised action list — whether or not you work with us.</p>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-foreground mb-1.5">How fast will I hear back?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">We reply to every form submission within one business day. For a faster response, use the WhatsApp link below.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-1.5">Do I need to prepare anything for the call?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">No — just your Google Business Profile link (or business name and location) if you have it. We'll pull the rest.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-1.5">What if I'm not ready to commit to a plan yet?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">That's fine — the strategy call has no obligation attached. Most businesses use it to understand where they actually stand before deciding anything.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-1.5">Can I reach you outside of this form?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Yes — email <a href="mailto:hello@epicware.ai" className="text-primary font-medium hover:underline">hello@epicware.ai</a> or message us on WhatsApp directly, and we'll pick it up the same way.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <FinalCTA />
       <StickyMobileCTA />
       <div className="h-20 lg:hidden" />

@@ -660,8 +660,8 @@ export default function Post() {
             href: "/blog/review-management-singapore",
           },
           {
-            title: "Reputation Recovery Strategy: A 2026 Guide for SMBs",
-            href: "/blog/reputation-recovery-strategy",
+            title: "How to Handle Negative Google Reviews in Singapore",
+            href: "/blog/handle-negative-google-reviews-singapore",
           },
           {
             title: "Google Maps Ranking Factors — What Actually Moves the Needle",

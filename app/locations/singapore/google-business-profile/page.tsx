@@ -512,7 +512,7 @@ export default function GbpOptimisationPage() {
           </h2>
           <div className="grid grid-cols-3 gap-6 mb-12 text-center">
             {[
-              { n: "100+", l: "Outlets managed" },
+              { n: "50+", l: "Outlets managed" },
               { n: "10+", l: "Years of specialist experience" },
               { n: "19-point", l: "GBP audit" },
             ].map((t) => (
@@ -653,7 +653,7 @@ export default function GbpOptimisationPage() {
             <Link href="/book-demo#form" className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-white/40 text-white font-semibold text-base hover:bg-white/10 transition-colors duration-200">
               Book a Free Strategy Call
             </Link>
-            <a href="https://wa.me/6590013157" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-white/40 text-white font-semibold text-base hover:bg-white/10 transition-colors duration-200">
+            <a href="https://wa.me/6584446582" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-14 px-8 rounded-full border border-white/40 text-white font-semibold text-base hover:bg-white/10 transition-colors duration-200">
               Chat on WhatsApp
             </a>
           </div>

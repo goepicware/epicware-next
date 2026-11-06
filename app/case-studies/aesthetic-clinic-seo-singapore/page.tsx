@@ -198,7 +198,7 @@ const RELATED_READING: { href: string; label: string }[] = [
   { href: "/industries/healthcare-clinics", label: "Healthcare Clinics" },
 ];
 
-const WHATSAPP_HREF = "https://wa.me/6590013157";
+const WHATSAPP_HREF = "https://wa.me/6584446582";
 const ASSET_BASE = "/assets/case-studies/aesthetic-clinic-seo-singapore";
 
 function StatRow({ stats, cols = 4 }: { stats: { value: string; label: string }[]; cols?: number }) {

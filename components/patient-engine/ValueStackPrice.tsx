@@ -53,7 +53,7 @@ export default function ValueStackPrice() {
           </h3>
           <ul className="space-y-2.5 text-sm text-foreground/80">
             <li>
-              • Up to {reviewsIncludedPerMonth} policy-violating reviews removed every month (S$
+              • Up to {reviewsIncludedPerMonth} policy-violating reviews removed every month ($
               {reviewsValue.toLocaleString("en-SG")} value)
             </li>
             <li>• AI WhatsApp Assistant installed and trained on your treatments</li>
@@ -68,7 +68,7 @@ export default function ValueStackPrice() {
         >
           <div className="mb-2">
             <span className="font-display font-bold text-5xl lg:text-6xl text-foreground">
-              S${fullStack.monthly.toLocaleString("en-SG")}
+              ${fullStack.monthly.toLocaleString("en-SG")}
             </span>
             <span className="text-muted-foreground text-lg ml-1">/month</span>
           </div>
@@ -76,15 +76,15 @@ export default function ValueStackPrice() {
 
           <div className="text-sm text-foreground/80 space-y-1.5 mb-6">
             <p>
-              + ad spend (minimum S${minAdSpend.toLocaleString("en-SG")}/month, paid directly to Meta and
+              + ad spend (minimum ${minAdSpend.toLocaleString("en-SG")}/month, paid directly to Meta and
               Google)
             </p>
-            <p>+ S${fullStack.perOutlet} per additional outlet for Google Business Profile management</p>
+            <p>+ ${fullStack.perOutlet} per additional outlet for Google Business Profile management</p>
           </div>
 
           <div className="rounded-xl bg-primary/8 border border-primary/20 px-5 py-3 mb-6 inline-block">
             <p className="text-sm font-semibold text-primary">
-              Pay 3 months upfront and your S${setupFee.toLocaleString("en-SG")} setup fee is waived.
+              Pay 3 months upfront and your ${setupFee.toLocaleString("en-SG")} setup fee is waived.
             </p>
           </div>
 

@@ -96,9 +96,9 @@ export default function Post() {
           <p>This is equally important to understand. Negative opinions from genuine customers are not removable under any circumstance. A 1-star review that says &quot;waited 45 minutes and the food was cold&quot; from someone who was actually there is authentic feedback, even if you dispute the account. You can respond to it. You cannot have it removed.</p>
 
           <h2>How do you submit a Google review policy violation claim?</h2>
-          <p>There are two paths: the flag button (via Google Maps or Business Profile Manager), and the formal business support channel. Our guide on{" "}
-            <Link href="/blog/how-to-remove-bad-google-reviews" className="text-primary font-medium hover:underline">
-              how to remove bad Google reviews
+          <p>There are two paths: the flag button (via Google Maps or Business Profile Manager), and the formal business support channel. Our{" "}
+            <Link href="/resources/guides/bad-review-removal-guide" className="text-primary font-medium hover:underline">
+              complete guide to removing bad Google reviews
             </Link>{" "}
             walks through both. The flag button is automated — it uses machine learning to assess the claim and rejects the majority of submissions. The formal channel involves human review and allows you to provide context and evidence.</p>
           <p>For any review worth removing, go to the formal channel. Cite the specific policy, provide evidence, and be factual. Emotional language reduces your chances. &quot;This reviewer is a competitor&quot; with a screenshot of their review history is more effective than &quot;this review is clearly fake.&quot;</p>
@@ -122,7 +122,7 @@ export default function Post() {
       ctaContext="Epicware's team knows which violation type applies to your review and how to frame the submission for the highest chance of removal."
       relatedPosts={[
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
-        { title: "How to Remove Bad Google Reviews", href: "/blog/how-to-remove-bad-google-reviews" },
+        { title: "The Complete Guide to Removing Bad Google Reviews", href: "/resources/guides/bad-review-removal-guide" },
         { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
       ]}
     />

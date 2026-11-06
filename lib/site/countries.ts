@@ -32,11 +32,11 @@ export interface Country {
 }
 
 export const COUNTRIES: Country[] = [
-  { slug: "singapore", displayName: "Singapore", hreflang: "en-SG", currency: "SGD", phone: "+6590013157", email: "hello@epicware.ai", isNew: false, dialCode: "+65" },
-  { slug: "usa", displayName: "United States", hreflang: "en-US", currency: "USD", phone: "+6590013157", email: "hello@epicware.ai", isNew: false, dialCode: "+1" },
-  { slug: "uk", displayName: "United Kingdom", hreflang: "en-GB", currency: "GBP", phone: "+6590013157", email: "hello@epicware.ai", isNew: false, dialCode: "+44" },
-  { slug: "australia", displayName: "Australia", hreflang: "en-AU", currency: "AUD", phone: "+6590013157", email: "hello@epicware.ai", isNew: true, dialCode: "+61" },
-  { slug: "dubai", displayName: "United Arab Emirates", hreflang: "en-AE", currency: "AED", phone: "+6590013157", email: "hello@epicware.ai", isNew: false, dialCode: "+971" },
+  { slug: "singapore", displayName: "Singapore", hreflang: "en-SG", currency: "SGD", phone: "+6584446582", email: "hello@epicware.ai", isNew: false, dialCode: "+65" },
+  { slug: "usa", displayName: "United States", hreflang: "en-US", currency: "USD", phone: "+6584446582", email: "hello@epicware.ai", isNew: false, dialCode: "+1" },
+  { slug: "uk", displayName: "United Kingdom", hreflang: "en-GB", currency: "GBP", phone: "+6584446582", email: "hello@epicware.ai", isNew: false, dialCode: "+44" },
+  { slug: "australia", displayName: "Australia", hreflang: "en-AU", currency: "AUD", phone: "+6584446582", email: "hello@epicware.ai", isNew: true, dialCode: "+61" },
+  { slug: "dubai", displayName: "United Arab Emirates", hreflang: "en-AE", currency: "AED", phone: "+6584446582", email: "hello@epicware.ai", isNew: false, dialCode: "+971" },
 ];
 
 export function getCountry(slug: string): Country | undefined {

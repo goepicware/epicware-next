@@ -120,7 +120,7 @@ const howWeWork = [
 const numbers = [
   { figure: "10+ years", label: "Industry experience across our team" },
   { figure: "50+", label: "Singapore brands and enterprises served" },
-  { figure: "100+", label: "Outlets managed on Google" },
+  { figure: "50+", label: "Outlets managed on Google" },
   { figure: "50+", label: "Business reputations restored" },
   { figure: "4", label: "AI products built in-house" },
 ];

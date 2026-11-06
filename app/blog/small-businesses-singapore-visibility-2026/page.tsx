@@ -986,7 +986,7 @@ export default function Post() {
               , runs Maps, reviews and AI search for small businesses. If you&apos;d rather hire
               help, here&apos;s{" "}
               <Link
-                href="/blog/can-you-recommend-a-good-digital-marketing-agency-in-singapore-for-my-small-business-singapore"
+                href="/blog/how-to-hire-local-seo-agency-singapore"
                 className="text-primary font-medium hover:underline"
               >
                 how to choose the right agency

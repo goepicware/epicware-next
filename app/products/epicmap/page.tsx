@@ -28,12 +28,6 @@ const schema = {
   operatingSystem: "Web",
   description:
     "Local rank tracking and GBP optimisation software for Singapore SMBs. Visualises Google Maps rank position across every district, runs a 19-point GBP audit, and tracks competitor positions.",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "SGD",
-    description: "See pricing at epicware.ai/pricing",
-  },
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",

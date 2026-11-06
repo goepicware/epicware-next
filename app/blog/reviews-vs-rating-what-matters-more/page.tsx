@@ -66,7 +66,7 @@ export default function Post() {
           <p>There is a practical threshold below which star rating becomes a significant problem regardless of review count: 4.0. Studies of consumer behaviour in local search consistently show that businesses below 4.0 stars see substantially lower click-through rates than those above it — even when their review count is competitive.</p>
           <p>A business at 3.8 stars with 200 reviews is disadvantaged both algorithmically and in consumer perception. This is when protecting your rating becomes the priority — either through negative review removal (where policy violations exist) or through an accelerated positive review generation campaign to dilute the low-rating reviews.</p>
           <p>If your rating has already dropped, follow a{" "}
-            <Link href="/blog/reputation-recovery-strategy" className="text-primary underline underline-offset-2 hover:text-primary/80">reputation recovery strategy</Link>.</p>
+            <Link href="/blog/handle-negative-google-reviews-singapore" className="text-primary underline underline-offset-2 hover:text-primary/80">reputation recovery strategy</Link>.</p>
 
           <h2>The 4.3–4.7 Sweet Spot</h2>
           <p>Counterintuitively, a perfect 5.0 rating is not always optimal. Consumer research consistently shows that buyers find ratings in the 4.3–4.7 range more credible than 5.0. A 5.0 average with any meaningful number of reviews is perceived as potentially filtered or manipulated. A 4.5 average signals genuine reviews with natural variation.</p>

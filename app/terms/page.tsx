@@ -41,8 +41,13 @@ export default function TermsPage() {
           <div className="border-t border-muted" />
           <section>
             <h2 className="text-2xl font-bold mb-4">4.1 No Refunds</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">All fees paid under this Agreement are non-refundable and non-cancellable. Subscriber acknowledges and agrees that the Company will not issue, and Subscriber is not entitled to receive, any refunds, reimbursements, or credits of any kind, including but not limited to partial, prorated, discounted, or promotional refunds, regardless of whether the Service is used, unused, or terminated early by Subscriber.</p>
-            <p className="text-muted-foreground leading-relaxed">This no-refund policy applies to all subscription plans, credits, and any add-on or ancillary services, including but not limited to VIP Services, Done-For-You services, Warmup Services, and any other additional features or offerings.</p>
+            <p className="text-muted-foreground leading-relaxed mb-4">All fees paid under this Agreement are non-refundable and non-cancellable, except as expressly set out in Section 4.2 (Bad Review Removal Guarantee) below. Subscriber acknowledges and agrees that the Company will not issue, and Subscriber is not entitled to receive, any refunds, reimbursements, or credits of any kind, including but not limited to partial, prorated, discounted, or promotional refunds, regardless of whether the Service is used, unused, or terminated early by Subscriber.</p>
+            <p className="text-muted-foreground leading-relaxed">This no-refund policy applies to all subscription plans, credits, and any add-on or ancillary services, including but not limited to VIP Services, Done-For-You services, Warmup Services, and any other additional features or offerings, other than the Bad Review Removal service described in Section 4.2.</p>
+          </section>
+          <div className="border-t border-muted" />
+          <section>
+            <h2 className="text-2xl font-bold mb-4">4.2 Bad Review Removal Guarantee</h2>
+            <p className="text-muted-foreground leading-relaxed">The $200 per-review fee charged for the Company's Bad Review Removal service is the sole exception to Section 4.1. If the targeted review is not removed from Google within three (3) months of the fee being charged, the Company will refund that fee in full. This guarantee applies only to the per-review Bad Review Removal fee and does not extend to any subscription plan fee, credit, or any other add-on or ancillary service.</p>
           </section>
           <div className="border-t border-muted" />
           <section>

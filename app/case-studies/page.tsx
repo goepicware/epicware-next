@@ -67,10 +67,13 @@ export default function CaseStudiesIndexPage() {
         <h1 className="font-display font-bold text-foreground text-3xl lg:text-4xl mb-4 max-w-2xl">
           Real Singapore SMBs. Real Local SEO Results.
         </h1>
-        <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-14">
+        <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-6">
           From restaurant chains to clinics to salons, see what our{" "}
           <Link href="/" className="text-primary font-medium hover:underline">AI-powered digital marketing agency</Link>{" "}
           did for each client, and the numbers it produced.
+        </p>
+        <p className="text-muted-foreground leading-relaxed max-w-2xl mb-14">
+          Every case study below covers the same ground: where the business started (Maps rank, review count, review rating), what we changed (GBP optimisation, review automation, local SEO, or a combination), and where they ended up — measured over a fixed window, usually 60–90 days. We don't publish projections or best-case scenarios; every number here is from a client's actual Google Business Profile or website analytics at the time the case study was written.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

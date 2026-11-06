@@ -76,7 +76,7 @@ const organizationSchema = {
   description:
     "Epicware is an AI-powered digital marketing agency in Singapore: SEO, Google Maps, AI search and reviews, run by our team on our own AI software.",
   email: "hello@epicware.ai",
-  telephone: "+65 9001 3157",
+  telephone: "+65 8444 6582",
   address: {
     "@type": "PostalAddress",
     streetAddress: "78 Shenton Way, #07-15",

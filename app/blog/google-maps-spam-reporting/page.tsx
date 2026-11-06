@@ -512,7 +512,7 @@ export default function Post() {
         ctaContext="Epicware handles evidence-backed removal requests and monitors your listings across every outlet, so spam and fake reviews don't sit there unresolved."
         relatedPosts={[
           { title: "Fake or Unfair Google Reviews: What Singapore Businesses Can Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
-          { title: "How to Remove Bad Google Reviews From Your Singapore Business", href: "/blog/how-to-remove-bad-google-reviews" },
+          { title: "The Complete Guide to Removing Bad Google Reviews", href: "/resources/guides/bad-review-removal-guide" },
           { title: "Google Maps Ranking Factors Explained — Where Reviews Fit In", href: "/blog/google-maps-ranking-factors" },
           { title: "Google Review Policy Explained — What Qualifies for Removal", href: "/blog/google-review-policy-explained" },
         ]}
