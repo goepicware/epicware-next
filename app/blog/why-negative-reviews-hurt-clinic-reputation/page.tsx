@@ -433,7 +433,7 @@ export default function Post() {
           <ul>
             <li>
               <Link
-                href="/services/review-management/ai-review-response"
+                href="/services/review-management#ai-review-response"
                 className="text-blue-600 hover:underline"
               >
                 Negative Review Response Singapore — Build Trust
@@ -441,7 +441,7 @@ export default function Post() {
             </li>
             <li>
               <Link
-                href="/services/review-management/reputation-analytics"
+                href="/services/review-management#reputation-analytics"
                 className="text-blue-600 hover:underline"
               >
                 Reputation Analytics Singapore — Reviews &amp; Sentiment

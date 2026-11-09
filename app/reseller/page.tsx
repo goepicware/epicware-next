@@ -62,7 +62,7 @@ const eligiblePartners = [
 const resellableProducts = [
   { name: "EpicReview", description: "Automated WhatsApp and email review generation campaigns" },
   { name: "EpicResponse", description: "AI review response across all client locations" },
-  { name: "EpicMap", description: <Link href="/services/local-seo/rank-tracking" className="hover:underline">Hyperlocal Google Maps rank tracking</Link> },
+  { name: "EpicMap", description: <Link href="/services/local-seo#rank-tracking" className="hover:underline">Hyperlocal Google Maps rank tracking</Link> },
   { name: "Bad Review Removal", description: "Share the margin with your client or pass through at cost" },
   { name: "GBP Optimisation", description: <><Link href="/locations/singapore/google-business-profile" className="hover:underline">19-point Google Business Profile audit</Link> and implementation</> },
   { name: "EpicSocial", description: "Social media content management for local businesses" },

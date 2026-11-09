@@ -142,12 +142,12 @@ export default async function SingaporeDistrictPage({
     },
     {
       label: "Local Rank Tracking",
-      href: "/services/local-seo/rank-tracking",
+      href: "/services/local-seo#rank-tracking",
       desc: `See your Google Maps rank position across every district around ${d.name}.`,
     },
     {
       label: "Review Generation",
-      href: "/services/review-management/review-generation",
+      href: "/services/review-management#review-generation",
       desc: `Automated WhatsApp and email campaigns that turn ${d.name} customers into reviewers.`,
     },
     {

@@ -71,12 +71,12 @@ export default function Post() {
           </ul>
 
           <h2>AI Review Response as a Solution</h2>
-          <p>For businesses with high review volume or multiple outlets, <Link href="/services/review-management/ai-review-response" className="text-primary font-medium hover:underline">AI review response tools</Link> solve the scale problem. The AI monitors all GBP profiles, drafts a response to every new review in the business&apos;s tone, and presents it for approval or auto-posts it.</p>
+          <p>For businesses with high review volume or multiple outlets, <Link href="/services/review-management#ai-review-response" className="text-primary font-medium hover:underline">AI review response tools</Link> solve the scale problem. The AI monitors all GBP profiles, drafts a response to every new review in the business&apos;s tone, and presents it for approval or auto-posts it.</p>
           <p>The response quality matches what a skilled human would write — personalised, professional, and appropriately varied across review types. The time cost drops from minutes per review to seconds.</p>
           <p>When you&apos;re short on time, our <Link href="/tools/google-review-reply-generator" className="text-primary font-medium hover:underline">free Google review reply generator</Link> gives you a first draft to edit.</p>
         </>
       }
-      ctaHref="/services/review-management/ai-review-response"
+      ctaHref="/services/review-management#ai-review-response"
       ctaLabel="AI Review Response — Never Miss a Review"
       ctaContext="Epicware's AI review response monitors every new review across all your locations and drafts a response immediately."
       relatedPosts={[

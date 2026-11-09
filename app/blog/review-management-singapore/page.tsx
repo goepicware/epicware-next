@@ -5,12 +5,12 @@ import BlogArticle from "@/components/blog/BlogArticle";
 export const metadata: Metadata = {
   title: "Review Management for Singapore SMBs",
   description: "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews. The practical guide for SMB owners.",
-  alternates: { canonical: "https://www.epicware.ai/blog/locations/singapore/review-management" },
+  alternates: { canonical: "https://www.epicware.ai/blog/review-management-singapore" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title: "Review Management for Singapore SMBs — What It Involves | Epicware",
     description: "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews. The practical guide for SMB owners.",
-    url: "https://www.epicware.ai/blog/locations/singapore/review-management",
+    url: "https://www.epicware.ai/blog/review-management-singapore",
   },
 };
 
@@ -22,7 +22,7 @@ const schema = {
   "datePublished": "2026-06-01",
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/locations/singapore/review-management"
+  "url": "https://epicware.ai/blog/review-management-singapore"
 };
 
 export default function Post() {
@@ -40,7 +40,7 @@ export default function Post() {
               Review management
             </Link>{" "}
             is one of those terms that means different things to different people. For some, it means responding to negative reviews when they spot them. For others, it means running periodic{" "}
-            <Link href="/services/review-management/review-generation" className="text-primary font-medium hover:underline">
+            <Link href="/services/review-management#review-generation" className="text-primary font-medium hover:underline">
               review request campaigns
             </Link>{" "}
             to collect more reviews. Both are part of it — but review management as a practice covers more than either of these.

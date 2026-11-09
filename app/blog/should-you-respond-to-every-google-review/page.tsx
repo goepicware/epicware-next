@@ -147,7 +147,7 @@ export default function Post() {
             drafts one in seconds.</p>
         </>
       }
-      ctaHref="/services/review-management/ai-review-response"
+      ctaHref="/services/review-management#ai-review-response"
       ctaLabel="See AI Review Response"
       ctaContext="Epicware's AI review response drafts professional replies to every review in your brand voice — ready to post in one click."
       relatedPosts={[

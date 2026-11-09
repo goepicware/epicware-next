@@ -45,7 +45,7 @@ const FEATURES = [
   <>
     EpicMap{" "}
     <Link
-      href="/services/local-seo/rank-tracking"
+      href="/services/local-seo#rank-tracking"
       className="text-primary font-medium hover:underline"
     >
       rank grid

@@ -60,7 +60,7 @@ const CHILD_SERVICES = [
   },
   {
     name: "AI Review Response",
-    href: "/services/review-management/ai-review-response",
+    href: "/services/review-management#ai-review-response",
     description:
       "Generate personalised, on-brand replies to every review automatically. Stop copying and pasting the same generic response and start sounding human at scale.",
   },
@@ -72,19 +72,19 @@ const CHILD_SERVICES = [
   },
   {
     name: "Review Generation Campaigns",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Automated WhatsApp and email campaigns that ask happy customers for reviews at exactly the right moment — after a visit, after an order, after a positive interaction.",
   },
   {
     name: "Wall of Love (Review Widgets)",
-    href: "/services/review-management/review-widgets",
+    href: "/services/review-management#review-widgets",
     description:
       "Display your best Google reviews on your website automatically. Turn social proof into conversion on every page a potential customer visits.",
   },
   {
     name: "Reputation Analytics Dashboard",
-    href: "/services/review-management/reputation-analytics",
+    href: "/services/review-management#reputation-analytics",
     description:
       "See your review velocity, average rating trend, response rate, and competitor comparison in one live dashboard — not a monthly PDF that's already out of date.",
   },
@@ -272,14 +272,14 @@ export default function ReputationManagementPage() {
               for a full breakdown. Epicware&apos;s reputation suite covers the full picture. Review Management
               is the foundation — real-time monitoring across all your Google Business Profiles so you never miss a review,
               with instant alerts and a centralised inbox for every outlet you manage. Our{" "}
-              <Link href="/services/review-management/review-generation" className="text-primary font-medium hover:underline">
+              <Link href="/services/review-management#review-generation" className="text-primary font-medium hover:underline">
                 Google reviews service
               </Link>{" "}
               runs generation, monitoring, and AI responses from one dashboard.
             </p>
             <p>
               Once a review comes in,{" "}
-              <Link href="/services/review-management/ai-review-response" className="text-primary font-medium hover:underline">
+              <Link href="/services/review-management#ai-review-response" className="text-primary font-medium hover:underline">
                 AI Review Response
               </Link>{" "}
               generates a personalised reply that sounds like you wrote it — not a copy-paste template. The AI reads
@@ -300,7 +300,7 @@ export default function ReputationManagementPage() {
             </p>
             <p>
               On the proactive side,{" "}
-              <Link href="/services/review-management/review-generation" className="text-primary font-medium hover:underline">
+              <Link href="/services/review-management#review-generation" className="text-primary font-medium hover:underline">
                 Review Generation Campaigns
               </Link>{" "}
               automate the ask. The platform sends personalised WhatsApp and email messages to your customers after a visit or
@@ -308,12 +308,12 @@ export default function ReputationManagementPage() {
             </p>
             <p>
               Once you have strong reviews, put them to work. The{" "}
-              <Link href="/services/review-management/review-widgets" className="text-primary font-medium hover:underline">
+              <Link href="/services/review-management#review-widgets" className="text-primary font-medium hover:underline">
                 Wall of Love (Review Widgets)
               </Link>{" "}
               feature automatically pulls your best Google reviews onto your website — no manual updates, always live.
               Finally,{" "}
-              <Link href="/services/review-management/reputation-analytics" className="text-primary font-medium hover:underline">
+              <Link href="/services/review-management#reputation-analytics" className="text-primary font-medium hover:underline">
                 Reputation Analytics Dashboard
               </Link>{" "}
               gives you a live view of review velocity, rating trends, response rates, and how you compare against

@@ -58,7 +58,7 @@ export default function Page() {
 
           <h2>What Epicware Did: Month 1</h2>
           <p>GBP profile corrections were implemented in week 1: correct primary and secondary categories, full service lists with descriptions for all offered services, updated photo libraries (15+ photos per outlet including exterior, interior, styling stations, and before/after examples), and corrected operating hours.</p>
-          <p><Link href="/products/epicreview">EpicReview</Link> was integrated with the salon&apos;s booking system. The trigger: when a client&apos;s appointment was marked complete, a WhatsApp message was sent 30–45 minutes later — at the moment the client had left the salon and was likely to be sharing or reviewing their result. From then on, <Link href="/services/review-management/review-generation">automated review requests</Link> went out after appointments.</p>
+          <p><Link href="/products/epicreview">EpicReview</Link> was integrated with the salon&apos;s booking system. The trigger: when a client&apos;s appointment was marked complete, a WhatsApp message was sent 30–45 minutes later — at the moment the client had left the salon and was likely to be sharing or reviewing their result. From then on, <Link href="/services/review-management#review-generation">automated review requests</Link> went out after appointments.</p>
           <p>The message was personalised: the client&apos;s name, a reference to the service they received (&quot;glad you loved your balayage today&quot;), and a direct link to the specific outlet&apos;s Google review form.</p>
 
           <h2>Month 2: Velocity and Response</h2>

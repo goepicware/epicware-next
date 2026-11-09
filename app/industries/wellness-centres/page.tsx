@@ -42,7 +42,7 @@ const schema = [
 const services = [
   {
     label: "Review Generation",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Post-appointment WhatsApp review requests that capture positive client experiences.",
   },
@@ -66,12 +66,12 @@ const services = [
   },
   {
     label: "AI Review Response",
-    href: "/services/review-management/ai-review-response",
+    href: "/services/review-management#ai-review-response",
     description: "Professional, personalised responses to every client review.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description:
       "Track your Maps rank for every wellness keyword across Singapore districts.",
   },

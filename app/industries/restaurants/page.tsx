@@ -43,7 +43,7 @@ const schema = [
 const services = [
   {
     label: "Review Generation Campaigns",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Automated WhatsApp and email review requests timed 30 minutes after a meal.",
   },
@@ -61,13 +61,13 @@ const services = [
   },
   {
     label: "Local Rank Tracking",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description:
       "See exactly where your restaurant ranks on Google Maps across every Singapore district.",
   },
   {
     label: "AI Review Response",
-    href: "/services/review-management/ai-review-response",
+    href: "/services/review-management#ai-review-response",
     description:
       "Personalised AI-generated replies to every review — ready in seconds.",
   },

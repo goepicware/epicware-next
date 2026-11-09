@@ -40,7 +40,7 @@ const schema = {
 const FEATURES = [
   {
     name: "Review Request Campaigns",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Automated WhatsApp and email sequences timed for peak response — triggered after a visit, order, or appointment.",
   },

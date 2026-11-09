@@ -58,11 +58,11 @@ export default function Post() {
             <li>Note their review count and average rating</li>
           </ol>
           <p>This gives you the competitive ceiling for your specific location and keyword. If the top 3 businesses have 120, 95, and 87 reviews, your target to rank in the top 3 is roughly 80–100 reviews with a comparable rating. Check where you rank block by block with{" "}
-            <Link href="/services/local-seo/rank-tracking" className="text-primary font-medium hover:underline">
+            <Link href="/services/local-seo#rank-tracking" className="text-primary font-medium hover:underline">
               local rank tracking
             </Link>
             . Count the reviews of the three businesses above you; a{" "}
-            <Link href="/services/local-seo/competitor-analysis" className="text-primary font-medium hover:underline">
+            <Link href="/services/local-seo#competitor-analysis" className="text-primary font-medium hover:underline">
               local competitor analysis
             </Link>{" "}
             does this for every keyword.

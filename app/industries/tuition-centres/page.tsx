@@ -42,7 +42,7 @@ const schema = [
 const services = [
   {
     label: "Review Generation",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Automated review requests to parents after results and milestones.",
   },
@@ -54,13 +54,13 @@ const services = [
   },
   {
     label: "Local Rank Tracking",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description:
       "Track your rank for every tuition keyword across every Singapore district.",
   },
   {
     label: "AI Review Response",
-    href: "/services/review-management/ai-review-response",
+    href: "/services/review-management#ai-review-response",
     description:
       "Professional responses to parent reviews that reinforce your centre's credibility.",
   },
@@ -72,7 +72,7 @@ const services = [
   },
   {
     label: "Citation Building",
-    href: "/services/local-seo/citation-building",
+    href: "/services/local-seo#citation-building",
     description:
       "Consistent listings across Singapore education directories and local directories.",
   },

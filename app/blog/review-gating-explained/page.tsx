@@ -122,7 +122,7 @@ export default function Post() {
           <p>Epicware&apos;s review generation campaigns send requests to every customer — no pre-screening, no satisfaction gate, no conditional language. Every customer who completes a transaction receives the same message with a direct link. This approach is both policy-compliant and, in practice, more effective: customers who had a moderately good experience often leave positive reviews when asked directly, without any filtering step.</p>
         </>
       }
-      ctaHref="/services/review-management/review-generation"
+      ctaHref="/services/review-management#review-generation"
       ctaLabel="Compliant Review Generation"
       ctaContext="Epicware's campaigns ask every customer — no pre-screening, no gating. Policy-compliant by design."
       relatedPosts={[

@@ -472,7 +472,7 @@ export default function AestheticClinicSEOCaseStudyPage() {
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
                   Using EpicMap{" "}
-                  <Link href="/services/local-seo/rank-tracking" className="text-primary font-medium hover:underline">
+                  <Link href="/services/local-seo#rank-tracking" className="text-primary font-medium hover:underline">
                     grid tracking
                   </Link>
                   , we mapped exactly where each clinic was visible on Google Maps by

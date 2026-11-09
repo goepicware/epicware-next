@@ -48,7 +48,7 @@ const services = [
   },
   {
     label: "Review Generation",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Post-purchase review requests via WhatsApp and email.",
   },
@@ -65,7 +65,7 @@ const services = [
   },
   {
     label: "Local Rank Tracking",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description:
       "Track your rank for product category searches across Singapore districts.",
   },

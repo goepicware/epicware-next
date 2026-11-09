@@ -65,7 +65,7 @@ export default function Post() {
             <li><strong>Restaurant B:</strong> 80 reviews, 4.3 rating — with 3 new reviews this week</li>
           </ul>
           <p>A{" "}
-            <Link href="/services/local-seo/competitor-analysis" className="text-primary font-medium hover:underline">
+            <Link href="/services/local-seo#competitor-analysis" className="text-primary font-medium hover:underline">
               local competitor analysis
             </Link>{" "}
             shows you this comparison for your own keywords.</p>
@@ -101,7 +101,7 @@ export default function Post() {
             and keep review requests going out every month.</p>
         </>
       }
-      ctaHref="/services/review-management/review-generation"
+      ctaHref="/services/review-management#review-generation"
       ctaLabel="Build Review Velocity with Epicware"
       ctaContext="EpicReview's automated campaigns keep your review velocity consistent — generating new reviews weekly without manual effort."
       relatedPosts={[

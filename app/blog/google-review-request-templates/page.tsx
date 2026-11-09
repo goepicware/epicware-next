@@ -99,14 +99,14 @@ export default function Post() {
           <p>The system also handles timing automatically, sending each request at the optimal post-service window for your business type.</p>
         </>
       }
-      ctaHref="/services/review-management/review-generation"
+      ctaHref="/services/review-management#review-generation"
       ctaLabel="Automate Review Requests"
       ctaContext={
         <>
           Our{" "}
           <Link href="/" className="text-primary underline underline-offset-2 hover:text-primary/80">digital marketing team</Link>{" "}
           sends{" "}
-          <Link href="/services/review-management/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">WhatsApp campaigns</Link>{" "}
+          <Link href="/services/review-management#review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">WhatsApp campaigns</Link>{" "}
           personalised per customer, with your review link pre-loaded.
         </>
       }

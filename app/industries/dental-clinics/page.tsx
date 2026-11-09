@@ -54,7 +54,7 @@ const services = [
   },
   {
     label: "Review Generation",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Post-appointment review requests that convert satisfied patients into reviewers.",
   },
@@ -66,13 +66,13 @@ const services = [
   },
   {
     label: "Local Rank Tracking",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description:
       "Track your rank for every dental keyword across Singapore districts.",
   },
   {
     label: "Reputation Analytics",
-    href: "/services/review-management/reputation-analytics",
+    href: "/services/review-management#reputation-analytics",
     description:
       "Monitor your rating trends and review velocity across all clinic branches.",
   },
