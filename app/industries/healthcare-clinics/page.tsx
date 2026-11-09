@@ -48,7 +48,7 @@ const services = [
   },
   {
     label: "Review Generation",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "MOH-compliant post-appointment review requests via WhatsApp and email.",
   },
@@ -60,19 +60,19 @@ const services = [
   },
   {
     label: "Reputation Analytics",
-    href: "/services/review-management/reputation-analytics",
+    href: "/services/review-management#reputation-analytics",
     description:
       "Track rating trends and review velocity across all clinic branches.",
   },
   {
     label: "AI Review Response",
-    href: "/services/review-management/ai-review-response",
+    href: "/services/review-management#ai-review-response",
     description:
       "Clinically appropriate AI-generated responses to every patient review.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description:
       "See where your clinic ranks for every relevant search keyword by district.",
   },

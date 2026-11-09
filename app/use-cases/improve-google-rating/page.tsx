@@ -189,7 +189,7 @@ export default function ImproveGoogleRatingPage() {
                 reviews dilute the old negative ones.
               </p>
               <Link
-                href="/services/review-management/review-generation"
+                href="/services/review-management#review-generation"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-3 hover:underline"
               >
                 See Review Generation <ArrowRight className="w-4 h-4" />

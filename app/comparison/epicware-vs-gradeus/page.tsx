@@ -91,7 +91,7 @@ export default function Page() {
           a: (
             <>
               No. Grade.us is focused on review management and does not include GBP hyperlocal rank tracking or a 19-point GBP audit and optimisation service. Epicware includes EpicMap for district-level rank tracking across Singapore and a 19-point GBP audit as part of the platform. Our reports pair{" "}
-              <Link href="/services/local-seo/rank-tracking">local rank tracking</Link> with review data.
+              <Link href="/services/local-seo#rank-tracking">local rank tracking</Link> with review data.
             </>
           ),
         },

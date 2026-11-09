@@ -60,7 +60,7 @@ export default function Post() {
 
           <h2>Public Reviews: Google, Facebook</h2>
           <p><Link href="/blog/types-of-customer-review-platforms" className="text-primary font-medium hover:underline">Public review platforms</Link> — primarily Google, secondarily Facebook for Singapore businesses — shape your external reputation. These are the reviews potential customers read before making a decision to visit.</p>
-          <p>Your public review strategy should focus on volume, velocity, and response quality. <Link href="/services/review-management/review-generation" className="text-primary font-medium hover:underline">Review requests</Link> should go to every customer through WhatsApp or email. Responses should be prompt and professional.</p>
+          <p>Your public review strategy should focus on volume, velocity, and response quality. <Link href="/services/review-management#review-generation" className="text-primary font-medium hover:underline">Review requests</Link> should go to every customer through WhatsApp or email. Responses should be prompt and professional.</p>
 
           <h2>The Critical Compliance Line</h2>
           <p>Running private surveys and public review requests simultaneously is fully compliant — as long as you don&apos;t route customers between the two systems based on their private survey score. The violation occurs when:</p>

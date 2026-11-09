@@ -138,7 +138,7 @@ export default function Post() {
           </p>
           <p>
             The professional way to diagnose this is through{" "}
-            <Link href="/services/local-seo/rank-tracking" className="text-primary font-medium hover:underline">
+            <Link href="/services/local-seo#rank-tracking" className="text-primary font-medium hover:underline">
               geogrid rank tracking
             </Link>
             . A geogrid simulates searches

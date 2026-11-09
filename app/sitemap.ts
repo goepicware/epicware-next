@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { execSync } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 import { COUNTRIES } from "@/lib/site/countries";
 import { PAGED_SERVICES } from "@/lib/site/services";
 import { isCountryServiceLive, isHubLive, isSubFeatureLive } from "@/lib/site/content";
@@ -105,6 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // content leaves draft — see lib/site/content.ts.
     { url: `${BASE}/locations/singapore`, lastModified: pageDate("/locations/singapore"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/locations/malaysia`, lastModified: pageDate("/locations/malaysia"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/locations`, lastModified: pageDate("/locations"), changeFrequency: "monthly", priority: 0.7 },
 
     // Use cases
     { url: `${BASE}/use-cases/remove-bad-google-reviews`, lastModified: pageDate("/use-cases/remove-bad-google-reviews"), changeFrequency: "monthly", priority: 0.8 },
@@ -113,38 +116,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/use-cases/improve-google-rating`, lastModified: pageDate("/use-cases/improve-google-rating"), changeFrequency: "monthly", priority: 0.75 },
     { url: `${BASE}/use-cases/manage-multiple-gbp-locations`, lastModified: pageDate("/use-cases/manage-multiple-gbp-locations"), changeFrequency: "monthly", priority: 0.75 },
 
-    // Blog hub + posts
+    // Blog hub. Posts are discovered from app/blog/*/page.tsx below
+    // (blogPostPages), so a new post can never be left out of the sitemap.
     { url: `${BASE}/blog`, lastModified: pageDate("/blog"), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE}/blog/fake-or-unfair-google-reviews-what-to-do`, lastModified: pageDate("/blog/fake-or-unfair-google-reviews-what-to-do"), changeFrequency: "monthly", priority: 0.75 },
-    { url: `${BASE}/blog/google-review-policy-explained`, lastModified: pageDate("/blog/google-review-policy-explained"), changeFrequency: "monthly", priority: 0.75 },
-    { url: `${BASE}/blog/google-reviews-strategy`, lastModified: pageDate("/blog/google-reviews-strategy"), changeFrequency: "monthly", priority: 0.75 },
-    { url: `${BASE}/blog/google-maps-ranking-factors`, lastModified: pageDate("/blog/google-maps-ranking-factors"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/how-to-get-more-google-reviews`, lastModified: pageDate("/blog/how-to-get-more-google-reviews"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/best-time-to-ask-for-a-google-review`, lastModified: pageDate("/blog/best-time-to-ask-for-a-google-review"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/google-review-request-templates`, lastModified: pageDate("/blog/google-review-request-templates"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/how-to-create-google-review-link-qr-code`, lastModified: pageDate("/blog/how-to-create-google-review-link-qr-code"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/should-you-respond-to-every-google-review`, lastModified: pageDate("/blog/should-you-respond-to-every-google-review"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/why-review-recency-matters-for-local-rankings`, lastModified: pageDate("/blog/why-review-recency-matters-for-local-rankings"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/review-velocity-vs-total-review-count`, lastModified: pageDate("/blog/review-velocity-vs-total-review-count"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/do-keywords-in-reviews-help-local-seo`, lastModified: pageDate("/blog/do-keywords-in-reviews-help-local-seo"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/how-many-google-reviews-do-you-need-to-compete-locally`, lastModified: pageDate("/blog/how-many-google-reviews-do-you-need-to-compete-locally"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/can-you-incentivize-google-reviews`, lastModified: pageDate("/blog/can-you-incentivize-google-reviews"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/review-gating-explained`, lastModified: pageDate("/blog/review-gating-explained"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/do-photo-reviews-matter-for-local-seo`, lastModified: pageDate("/blog/do-photo-reviews-matter-for-local-seo"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/how-fast-should-you-respond-to-google-reviews`, lastModified: pageDate("/blog/how-fast-should-you-respond-to-google-reviews"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/reviews-vs-rating-what-matters-more`, lastModified: pageDate("/blog/reviews-vs-rating-what-matters-more"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/customer-feedback-system-private-vs-public-reviews`, lastModified: pageDate("/blog/customer-feedback-system-private-vs-public-reviews"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/review-management-singapore`, lastModified: pageDate("/blog/review-management-singapore"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/handle-negative-google-reviews-singapore`, lastModified: pageDate("/blog/handle-negative-google-reviews-singapore"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/how-to-hire-local-seo-agency-singapore`, lastModified: pageDate("/blog/how-to-hire-local-seo-agency-singapore"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/10-gbp-optimisation-tips-every-local-business-needs`, lastModified: pageDate("/blog/10-gbp-optimisation-tips-every-local-business-needs"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/what-is-seo-local-business`, lastModified: pageDate("/blog/what-is-seo-local-business"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/seo-vs-local-seo`, lastModified: pageDate("/blog/seo-vs-local-seo"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/seo-tips-small-business-owners`, lastModified: pageDate("/blog/seo-tips-small-business-owners"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/secondary-categories-google-business`, lastModified: pageDate("/blog/secondary-categories-google-business"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/restaurant-menu-seo`, lastModified: pageDate("/blog/restaurant-menu-seo"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/clinic-google-categories`, lastModified: pageDate("/blog/clinic-google-categories"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/blog/google-maps-spam-reporting`, lastModified: pageDate("/blog/google-maps-spam-reporting"), changeFrequency: "monthly", priority: 0.7 },
 
     // Guides
     { url: `${BASE}/resources/guides/restaurant-digital-growth-guide`, lastModified: pageDate("/resources/guides/restaurant-digital-growth-guide"), changeFrequency: "monthly", priority: 0.7 },
@@ -239,5 +213,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticPages, ...districtPages, ...countryHubPages, ...countryServicePages, ...subFeaturePages];
+  return [...staticPages, ...blogPostPages(), ...districtPages, ...countryHubPages, ...countryServicePages, ...subFeaturePages];
+}
+
+/**
+ * Every app/blog/{slug}/page.tsx that is indexable and canonical to itself.
+ * Posts marked noindex, or whose canonical points at another URL, are
+ * skipped — the sitemap must only list URLs we want Google to index.
+ */
+function blogPostPages(): MetadataRoute.Sitemap {
+  const blogDir = path.join(process.cwd(), "app", "blog");
+  return fs
+    .readdirSync(blogDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith("[") && !entry.name.startsWith("("))
+    .map((entry) => entry.name)
+    .filter((slug) => {
+      const file = path.join(blogDir, slug, "page.tsx");
+      if (!fs.existsSync(file)) return false;
+      const source = fs.readFileSync(file, "utf-8");
+      if (/index:\s*false|noindex/.test(source)) return false;
+      const canonical = source.match(/canonical:\s*["'`]([^"'`]+)["'`]/)?.[1];
+      return !canonical || canonical.replace(/\/$/, "") === `${BASE}/blog/${slug}`;
+    })
+    .sort()
+    .map((slug) => ({
+      url: `${BASE}/blog/${slug}`,
+      lastModified: pageDate(`/blog/${slug}`),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
 }

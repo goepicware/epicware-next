@@ -54,13 +54,13 @@ const SERVICES = [
   },
   {
     label: "Local Rank Tracking",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description:
       "See your Google Maps rank position across KL, PJ, Penang, and JB for your target keywords.",
   },
   {
     label: "Review Generation",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Automated WhatsApp and email review campaigns that convert satisfied Malaysian customers into reviewers.",
   },

@@ -53,7 +53,7 @@ const REPUTATION_SERVICES = [
   },
   {
     name: "AI Review Response",
-    href: "/services/review-management/ai-review-response",
+    href: "/services/review-management#ai-review-response",
     description: "Auto-generate personalised, brand-consistent replies to every review.",
   },
   {
@@ -63,17 +63,17 @@ const REPUTATION_SERVICES = [
   },
   {
     name: "Review Generation Campaigns",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description: "Automated WhatsApp and email campaigns that turn happy customers into Google reviews.",
   },
   {
     name: "Wall of Love (Review Widgets)",
-    href: "/services/review-management/review-widgets",
+    href: "/services/review-management#review-widgets",
     description: "Embed your best reviews on your website — live, auto-updating.",
   },
   {
     name: "Reputation Analytics Dashboard",
-    href: "/services/review-management/reputation-analytics",
+    href: "/services/review-management#reputation-analytics",
     description: "Track your rating trends, review velocity, and sentiment across all locations.",
   },
 ];
@@ -96,17 +96,17 @@ const LOCAL_SEO_SERVICES = [
   },
   {
     name: "Local Rank Tracking (EpicMap)",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description: "Visual map grid showing your keyword rank across every Singapore district.",
   },
   {
     name: "Citation Building",
-    href: "/services/local-seo/citation-building",
+    href: "/services/local-seo#citation-building",
     description: "Build consistent NAP citations across Singapore's top local directories.",
   },
   {
     name: "Competitor Analysis",
-    href: "/services/local-seo/competitor-analysis",
+    href: "/services/local-seo#competitor-analysis",
     description: "See exactly where competitors outrank you and why.",
   },
 ];

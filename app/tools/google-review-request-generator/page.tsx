@@ -144,7 +144,7 @@ export default function GoogleReviewRequestGeneratorPage() {
             <p className="text-xl text-foreground font-medium mb-3">
               Want{" "}
               <Link
-                href="/services/review-management/review-generation"
+                href="/services/review-management#review-generation"
                 className="text-primary hover:underline"
               >
                 review requests sent automatically

@@ -59,7 +59,7 @@ export default function EpicEngageEmailMarketingPage() {
             activity. A birthday greeting on the right day. A re-engagement sequence for customers who have not
             opened your emails in 90 days. Each post-visit email can carry an{" "}
             <Link
-              href="/services/review-management/review-generation"
+              href="/services/review-management#review-generation"
               className="text-primary font-medium hover:underline"
             >
               automated review request

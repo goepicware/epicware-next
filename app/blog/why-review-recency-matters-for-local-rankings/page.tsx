@@ -123,7 +123,7 @@ export default function Post() {
             The weight decay is steep and fast. Reviews lose ranking influence progressively between 30 and 180 days,
             dropping to just 10–20% influence after six months. That means a review posted in January is nearly
             worthless by July. Business owners who ran{" "}
-            <Link href="/services/review-management/review-generation" className="text-primary font-medium hover:underline">
+            <Link href="/services/review-management#review-generation" className="text-primary font-medium hover:underline">
               a review campaign
             </Link>{" "}
             once and stopped are essentially running on empty.

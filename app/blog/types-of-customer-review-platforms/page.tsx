@@ -192,7 +192,7 @@ export default function Post() {
             </p>
             <p>
               You can show your best reviews on your own site with a{" "}
-              <Link href="/services/review-management/review-widgets" className="text-primary font-medium hover:underline">
+              <Link href="/services/review-management#review-widgets" className="text-primary font-medium hover:underline">
                 Google review widget
               </Link>
               .

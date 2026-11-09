@@ -551,9 +551,9 @@ export default function Post() {
             <p>
               This is exactly the problem that Epicware was built to solve. It automates the
               high-frequency, high-impact local SEO tasks —{" "}
-              <Link href="/services/review-management/review-generation">review collection</Link>,{" "}
+              <Link href="/services/review-management#review-generation">review collection</Link>,{" "}
               GBP publishing, and{" "}
-              <Link href="/services/local-seo/rank-tracking">rank tracking</Link> — so owner-operators get real,
+              <Link href="/services/local-seo#rank-tracking">rank tracking</Link> — so owner-operators get real,
               measurable results without carrying the manual overhead themselves.
             </p>
 

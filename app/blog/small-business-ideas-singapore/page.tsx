@@ -554,7 +554,7 @@ export default function Post() {
             three years ago is consistently outranked by a newer operator with 40 reviews earned
             over the past 90 days. Building an automated{" "}
             <Link
-              href="/services/review-management/review-generation"
+              href="/services/review-management#review-generation"
               className="text-primary font-medium hover:underline"
             >
               review collection system

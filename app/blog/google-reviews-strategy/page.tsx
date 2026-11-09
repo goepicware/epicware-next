@@ -57,7 +57,7 @@ export default function Post() {
 
           <h3>Week 3–4: Launch Your First Review Campaign</h3>
           <p>Set up your first{" "}
-            <Link href="/services/review-management/review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">WhatsApp review request campaign</Link>
+            <Link href="/services/review-management#review-generation" className="text-primary underline underline-offset-2 hover:text-primary/80">WhatsApp review request campaign</Link>
             . Identify your 50 most recent customers and send a personalised message with your Google review link. Expect 15–30% to leave a review. This is your baseline measurement.</p>
 
           <h2>How do you build a systematic review generation process in month two?</h2>
@@ -92,7 +92,7 @@ export default function Post() {
 
           <h2>How does Epicware automate the 90-day review strategy framework?</h2>
           <p>EpicReview handles the review generation campaigns (WhatsApp and email), the AI review responses, and the bad review removal submissions. EpicMap handles the{" "}
-            <Link href="/services/local-seo/rank-tracking" className="text-primary underline underline-offset-2 hover:text-primary/80">rank tracking</Link>{" "}
+            <Link href="/services/local-seo#rank-tracking" className="text-primary underline underline-offset-2 hover:text-primary/80">rank tracking</Link>{" "}
             at district level. The entire framework runs from one dashboard without requiring daily manual intervention. This 90-day framework is the one our{" "}
             <Link href="/" className="text-primary underline underline-offset-2 hover:text-primary/80">digital marketing agency</Link>{" "}
             runs for new clients.</p>

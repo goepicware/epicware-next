@@ -61,7 +61,7 @@ export default function Page() {
       epicwareSummary={
         <>
           Epicware is built specifically for the Singapore and Southeast Asian market.{" "}
-          <Link href="/services/review-management/review-generation">WhatsApp review request campaigns</Link> are the primary channel (Singapore&apos;s dominant messaging platform), bad review removal is a first-class product, and GBP optimisation is calibrated for Singapore&apos;s hyperlocal geography. Unlike Birdeye&apos;s software, Epicware is a{" "}
+          <Link href="/services/review-management#review-generation">WhatsApp review request campaigns</Link> are the primary channel (Singapore&apos;s dominant messaging platform), bad review removal is a first-class product, and GBP optimisation is calibrated for Singapore&apos;s hyperlocal geography. Unlike Birdeye&apos;s software, Epicware is a{" "}
           <Link href="/">digital marketing agency in Singapore</Link> that does the work for you.
         </>
       }

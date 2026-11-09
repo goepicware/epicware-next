@@ -93,13 +93,13 @@ const schema = {
         name: "Local SEO services",
         itemListElement: [
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Google Business Profile Optimisation", url: "https://www.epicware.ai/locations/singapore/google-business-profile" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Keyword and Competitor Research", url: "https://www.epicware.ai/services/local-seo/competitor-analysis" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Keyword and Competitor Research", url: "https://www.epicware.ai/services/local-seo#competitor-analysis" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Location and Service-Area Pages" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Schema Markup" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Link Building and Business Listings", url: "https://www.epicware.ai/services/local-seo/citation-building" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Link Building and Business Listings", url: "https://www.epicware.ai/services/local-seo#citation-building" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Review Generation and Reputation Management", url: "https://www.epicware.ai/locations/singapore/review-management" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Negative Review Removal", url: "https://www.epicware.ai/locations/singapore/review-removal" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Rank Tracking", url: "https://www.epicware.ai/services/local-seo/rank-tracking" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Rank Tracking", url: "https://www.epicware.ai/services/local-seo#rank-tracking" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Multi-Outlet Management", url: "https://www.epicware.ai/use-cases/manage-multiple-gbp-locations" } },
         ],
       },
@@ -130,13 +130,13 @@ const schema = {
 
 const services = [
   { icon: Store, title: "Google Business Profile Optimisation", href: "/locations/singapore/google-business-profile", text: "A 19-point audit of your profile, the fixes done for you, and weekly posts that keep it active." },
-  { icon: Search, title: "Local Keyword and Competitor Research", href: "/services/local-seo/competitor-analysis", text: "The searches customers use in each district, and what the businesses ranking above you do differently." },
+  { icon: Search, title: "Local Keyword and Competitor Research", href: "/services/local-seo#competitor-analysis", text: "The searches customers use in each district, and what the businesses ranking above you do differently." },
   { icon: FileText, title: "Location and Service-Area Pages", href: null, text: "A page for every outlet, plus a page for each area you cover where you have no shop, written for local searches." },
   { icon: Code2, title: "Local Schema Markup", href: null, text: "LocalBusiness structured data on each location page, so search engines and AI tools can read your address, hours and services." },
-  { icon: Link2, title: "Local Link Building and Business Listings", href: "/services/local-seo/citation-building", text: "Links from Singapore sites, associations and partners, plus your details checked and corrected across 40+ directories." },
+  { icon: Link2, title: "Local Link Building and Business Listings", href: "/services/local-seo#citation-building", text: "Links from Singapore sites, associations and partners, plus your details checked and corrected across 40+ directories." },
   { icon: MessageSquareText, title: "Review Generation and Reputation Management", href: "/locations/singapore/review-management", text: "Review requests by WhatsApp and email after visits, replies to your reviews, and real-time alerts when new reviews arrive." },
   { icon: ShieldX, title: "Negative Review Removal", href: "/locations/singapore/review-removal", text: "Fake and policy-breaking reviews reported to Google with evidence and followed up; Google makes the final call." },
-  { icon: Grid3x3, title: "Local Rank Tracking", href: "/services/local-seo/rank-tracking", text: "EpicMap tracks your rank week by week on a grid of points across each district." },
+  { icon: Grid3x3, title: "Local Rank Tracking", href: "/services/local-seo#rank-tracking", text: "EpicMap tracks your rank week by week on a grid of points across each district." },
   { icon: Building2, title: "Multi-Outlet Management", href: "/use-cases/manage-multiple-gbp-locations", text: "Separate keyword lists, review tracking and rank grids for every outlet, in one login." },
 ];
 

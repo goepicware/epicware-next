@@ -238,7 +238,7 @@ export default function Post() {
               providers need accurate listings on SingHealth and HealthHub directories. The
               specific mix matters as much as the consistency itself, because AI systems like
               ChatGPT, Gemini, and Perplexity now draw on{" "}
-              <Link href="/services/local-seo/citation-building">citation data</Link> to build
+              <Link href="/services/local-seo#citation-building">citation data</Link> to build
               entity confidence — meaning your NAP needs to be consistent across AI-facing
               platforms too, not just traditional directories.
             </p>
@@ -554,7 +554,7 @@ export default function Post() {
 
             <h3>Citations and Behavioural Signals</h3>
             <p>
-              <Link href="/services/local-seo/citation-building">Citation building</Link> —
+              <Link href="/services/local-seo#citation-building">Citation building</Link> —
               getting your business listed in relevant online directories with consistent NAP —
               feeds directly into the prominence factor. For a new or under-optimised profile,
               submitting accurate listings to high-authority directories is one of the fastest

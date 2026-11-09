@@ -48,13 +48,13 @@ const services = [
   },
   {
     label: "Review Generation",
-    href: "/services/review-management/review-generation",
+    href: "/services/review-management#review-generation",
     description:
       "Post-treatment review requests that capture patient outcome stories.",
   },
   {
     label: "Local Rank Tracking",
-    href: "/services/local-seo/rank-tracking",
+    href: "/services/local-seo#rank-tracking",
     description:
       "Track your rank for condition-specific physio keywords across Singapore.",
   },
@@ -66,7 +66,7 @@ const services = [
   },
   {
     label: "AI Review Response",
-    href: "/services/review-management/ai-review-response",
+    href: "/services/review-management#ai-review-response",
     description: "Clinically appropriate responses to every patient review.",
   },
   {

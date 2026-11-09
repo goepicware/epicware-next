@@ -109,7 +109,7 @@ const schema = {
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Multi-Outlet Profiles", url: "https://www.epicware.ai/use-cases/manage-multiple-gbp-locations" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Holiday Hours and Edit Watch" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Competitor Spam Reporting" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Google Maps Rank Tracking", url: "https://www.epicware.ai/services/local-seo/rank-tracking" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Google Maps Rank Tracking", url: "https://www.epicware.ai/services/local-seo#rank-tracking" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Click and Call Reporting" } },
         ],
       },
@@ -180,7 +180,7 @@ const serviceGroups = [
     items: [
       { icon: CalendarHeart, title: "Holiday Hours and Edit Watch", href: null, text: "Hours set before every Singapore public holiday; unwanted edits caught and corrected." },
       { icon: Flag, title: "Competitor Spam Reporting", href: null, text: "Spam competitors reported with evidence and followed up until Google decides." },
-      { icon: Grid3x3, title: "Google Maps Rank Tracking", href: "/services/local-seo/rank-tracking", text: "EpicMap tracks your rank weekly on a grid across your districts." },
+      { icon: Grid3x3, title: "Google Maps Rank Tracking", href: "/services/local-seo#rank-tracking", text: "EpicMap tracks your rank weekly on a grid across your districts." },
       { icon: BarChart3, title: "Click and Call Reporting", href: null, text: "Tagged links show which site visits came from your profile, plus monthly call and direction reports." },
     ],
   },

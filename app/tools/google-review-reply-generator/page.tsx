@@ -137,7 +137,7 @@ export default function GoogleReviewReplyGeneratorPage() {
                 <p>
                   Writing thoughtful review responses takes time. Our{" "}
                   <Link
-                    href="/services/review-management/ai-review-response"
+                    href="/services/review-management#ai-review-response"
                     className="text-primary hover:underline"
                   >
                     AI review response service

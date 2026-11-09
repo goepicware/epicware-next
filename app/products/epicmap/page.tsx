@@ -244,7 +244,7 @@ export default function EpicMapPage() {
             </Link>{" "}
             offering. Specific sub-services that feed EpicMap data include{" "}
             <Link
-              href="/services/local-seo/rank-tracking"
+              href="/services/local-seo#rank-tracking"
               className="text-primary font-medium hover:underline"
             >
               Local Rank Tracking

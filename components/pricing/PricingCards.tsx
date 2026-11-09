@@ -14,7 +14,7 @@ const FEATURE_LINKS: { match: RegExp; href: string; key: string }[] = [
   { key: "local-seo", match: /local SEO/i, href: "/locations/singapore/local-seo" },
   { key: "ai-search", match: /AI search visibility/i, href: "/locations/singapore/ai-search-visibility" },
   { key: "bad-review", match: /Bad Review Removal/i, href: "/locations/singapore/review-removal" },
-  { key: "ai-review-response", match: /AI review responses/i, href: "/services/review-management/ai-review-response" },
+  { key: "ai-review-response", match: /AI review responses/i, href: "/services/review-management#ai-review-response" },
 ];
 
 function linkifyFeatureOnce(text: string, used: Set<string>) {
