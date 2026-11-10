@@ -623,7 +623,7 @@ export default function Post() {
             your business competes from the start rather than catching up at month six.
           </p>
           <p>
-            <Link href="/services/google-business-profile/setup" className="text-primary font-medium hover:underline">
+            <Link href="/services/google-business-profile" className="text-primary font-medium hover:underline">
               Set up your Google Business Profile
             </Link>{" "}
             before opening day.

@@ -101,9 +101,9 @@ const schema = {
         itemListElement: [
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Profile Audit and Fixes" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Category and Service Strategy" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Setup, Verification and Duplicates", url: "https://www.epicware.ai/services/google-business-profile/setup" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Setup, Verification and Duplicates", url: "https://www.epicware.ai/services/google-business-profile" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Suspension Recovery" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Weekly Google Posts", url: "https://www.epicware.ai/services/google-business-profile/post-scheduling" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Weekly Google Posts", url: "https://www.epicware.ai/services/google-business-profile" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Photos, Videos and Products" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Review Requests and Replies", url: "https://www.epicware.ai/locations/singapore/review-management" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Multi-Outlet Profiles", url: "https://www.epicware.ai/use-cases/manage-multiple-gbp-locations" } },
@@ -162,14 +162,14 @@ const serviceGroups = [
     items: [
       { icon: Wrench, title: "Profile Audit and Fixes", href: null, text: "The 19-point audit, then high-impact fixes within 48 hours of getting manager access." },
       { icon: Tag, title: "Category and Service Strategy", href: null, text: "Categories benchmarked against the profiles ranking above you; services written the way customers search." },
-      { icon: IdCard, title: "Setup, Verification and Duplicates", href: "/services/google-business-profile/setup", text: "New profiles taken through Google's verification; duplicates reported and unclaimed listings claimed in your name." },
+      { icon: IdCard, title: "Setup, Verification and Duplicates", href: "/services/google-business-profile", text: "New profiles taken through Google's verification; duplicates reported and unclaimed listings claimed in your name." },
       { icon: ShieldCheck, title: "Suspension Recovery", href: null, text: "We trace the likely cause, fix it and file the appeal; Google makes the final call." },
     ],
   },
   {
     label: "Grow",
     items: [
-      { icon: CalendarCheck, title: "Weekly Google Posts", href: "/services/google-business-profile/post-scheduling", text: "Offers, services and events posted weekly around your target keywords." },
+      { icon: CalendarCheck, title: "Weekly Google Posts", href: "/services/google-business-profile", text: "Offers, services and events posted weekly around your target keywords." },
       { icon: Camera, title: "Photos, Videos and Products", href: null, text: "Your photos and videos added regularly, with products and menus kept current." },
       { icon: Star, title: "Review Requests and Replies", href: "/locations/singapore/review-management", text: "Replies to your reviews, and review requests that follow Google's rules." },
       { icon: Building2, title: "Multi-Outlet Profiles", href: null, text: "Every outlet managed side by side; we apply for Google bulk verification if you have 10 or more." },

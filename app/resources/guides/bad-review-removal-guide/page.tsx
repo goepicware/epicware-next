@@ -84,7 +84,7 @@ export default function Page() {
           <p>Epicware&apos;s bad review removal service exists for businesses where the DIY route has failed, where multiple reviews need challenging simultaneously, or where the commercial impact of the review is high enough to justify professional handling.</p>
           <p>The model: $200 per review, payment only on successful removal. If the review stays up, there is no charge. This aligns Epicware&apos;s incentive directly with the client&apos;s outcome.</p>
           <p>The service covers: assessment to identify the strongest policy angle, formal submission with correct policy language and supporting evidence, systematic escalation through all available channels, and follow-up until all escalation paths are exhausted.</p>
-          <p>If the reviewer was never a customer at all, ask about <a href="/services/review-removal/fake-review-removal">fake review removal</a>.</p>
+          <p>If the reviewer was never a customer at all, ask about <a href="/services/review-removal">fake review removal</a>.</p>
 
           <h2>Frequently Asked Questions</h2>
           <h3>Can Google remove any negative review?</h3>
