@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { COUNTRIES } from "../lib/site/countries";
 import { SERVICES } from "../lib/site/services";
+import { REVIEW_REMOVAL_VARIANTS } from "../lib/site/reviewRemovalVariants";
 import { DEMONYMS } from "./lib/page-text";
 
 /**
@@ -65,6 +66,28 @@ function scanText(label: string, text: string | undefined, problems: string[]) {
   }
 }
 
+// City-level equivalent of the demonym patterns above — "Miami", "Los
+// Angeles" and "New York" aren't in DEMONYMS (that's country-level only),
+// but a variant page claiming local presence in its own city would be
+// exactly as dishonest as a country-level claim.
+const CITY_NAMES = REVIEW_REMOVAL_VARIANTS.filter((v) => v.kind === "city").map((v) => v.name);
+const cityPattern = CITY_NAMES.map((c) => c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|");
+const CITY_PATTERNS: { re: RegExp; label: string }[] = [
+  { re: new RegExp(`\\b(${cityPattern})-based\\b`, "i"), label: "[city]-based claim" },
+  { re: new RegExp(`\\bheadquartered in\\s+(${cityPattern})\\b`, "i"), label: "headquartered-in-[city] claim" },
+  { re: new RegExp(`\\b(our|a|local)\\s+office(s)?\\s+in\\s+(${cityPattern})\\b`, "i"), label: "local-office-in-[city] claim" },
+  { re: new RegExp(`\\bour\\s+(${cityPattern})\\s+team\\b`, "i"), label: "our-[city]-team claim" },
+  { re: new RegExp(`\\blocal team in\\s+(${cityPattern})\\b`, "i"), label: "local-team-in-[city] claim" },
+];
+
+function scanTextForCityPresenceClaims(label: string, text: string | undefined, problems: string[]) {
+  if (!text) return;
+  for (const { re, label: reason } of CITY_PATTERNS) {
+    const m = text.match(re);
+    if (m) problems.push(`${label}: ${reason} — "${m[0]}"`);
+  }
+}
+
 function scanSchemaForAddress(label: string, source: string, problems: string[]) {
   if (/PostalAddress|streetAddress/i.test(source)) {
     problems.push(`${label}: schema contains PostalAddress/streetAddress — use areaServed for target markets instead`);
@@ -99,6 +122,22 @@ function main() {
       scanText(id, content, problems);
       scanSchemaForAddress(id, raw, problems);
     }
+
+    if (country.slug === "usa") {
+      for (const variant of REVIEW_REMOVAL_VARIANTS) {
+        const filePath = path.join(ROOT, "content", "locations", "usa", "review-removal", `${variant.slug}.mdx`);
+        if (!fs.existsSync(filePath)) continue;
+        const raw = fs.readFileSync(filePath, "utf-8");
+        const { data, content } = matter(raw);
+        const id = `usa/review-removal/${variant.slug}`;
+        scanText(id, data.metaTitle, problems);
+        scanText(id, data.metaDescription, problems);
+        scanText(id, data.h1, problems);
+        scanText(id, content, problems);
+        scanTextForCityPresenceClaims(id, content, problems);
+        scanSchemaForAddress(id, raw, problems);
+      }
+    }
   }
 
   // Fixed route templates shared by every non-Singapore country — checked
@@ -109,6 +148,7 @@ function main() {
     "components/site/CountryHubLayout.tsx",
     "app/locations/[country]/page.tsx",
     "app/locations/[country]/[service]/page.tsx",
+    "app/locations/[country]/[service]/[variant]/page.tsx",
   ]) {
     const filePath = path.join(ROOT, rel);
     if (!fs.existsSync(filePath)) continue;

@@ -1,6 +1,7 @@
 import { COUNTRIES } from "../lib/site/countries";
 import { PAGED_SERVICES } from "../lib/site/services";
-import { isCountryServiceLive, isHubLive, isSubFeatureLive } from "../lib/site/content";
+import { REVIEW_REMOVAL_VARIANTS } from "../lib/site/reviewRemovalVariants";
+import { isCountryServiceLive, isHubLive, isSubFeatureLive, isCountryServiceVariantLive } from "../lib/site/content";
 import sitemap from "../app/sitemap";
 
 const BASE = "https://www.epicware.ai";
@@ -35,6 +36,12 @@ function noindexUrls(): string[] {
       if (!isSubFeatureLive(service.slug, feature.slug)) {
         urls.push(`${BASE}/services/${service.slug}/${feature.slug}`);
       }
+    }
+  }
+
+  for (const variant of REVIEW_REMOVAL_VARIANTS) {
+    if (!isCountryServiceVariantLive("usa", "review-removal", variant.slug)) {
+      urls.push(`${BASE}/locations/usa/review-removal/${variant.slug}`);
     }
   }
 

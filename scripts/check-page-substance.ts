@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { COUNTRIES } from "../lib/site/countries";
 import { SERVICES } from "../lib/site/services";
+import { REVIEW_REMOVAL_VARIANTS } from "../lib/site/reviewRemovalVariants";
 import { checkUrlStatus, persistUrlCache } from "./lib/url-cache";
 
 /**
@@ -150,6 +151,31 @@ async function main() {
       const raw = fs.readFileSync(hubPath, "utf-8");
       const { data, content } = matter(raw);
       results.push(await checkFrontmatter(`${country.slug}/hub`, data, content));
+    }
+
+    // City/platform variants under a country×service page — currently only
+    // usa/review-removal/{miami,los-angeles,new-york,yelp,google}. Same
+    // substance checks as the parent page, and folded into the same
+    // service's FAQ-reuse group below (a variant must not reuse a FAQ
+    // question verbatim from its own parent or siblings).
+    if (country.slug === "usa") {
+      for (const variant of REVIEW_REMOVAL_VARIANTS) {
+        const filePath = path.join(ROOT, "content", "locations", country.slug, "review-removal", `${variant.slug}.mdx`);
+        if (!fs.existsSync(filePath)) continue;
+        const raw = fs.readFileSync(filePath, "utf-8");
+        const { data, content } = matter(raw);
+        const id = `${country.slug}/review-removal/${variant.slug}`;
+        results.push(await checkFrontmatter(id, data, content));
+
+        if (Array.isArray(data.faqs)) {
+          const questions = (data.faqs as Array<{ question?: string }>)
+            .map((f) => (f?.question ?? "").trim().toLowerCase())
+            .filter(Boolean);
+          const arr = byService.get("review-removal") ?? [];
+          arr.push({ id, questions });
+          byService.set("review-removal", arr);
+        }
+      }
     }
   }
 
