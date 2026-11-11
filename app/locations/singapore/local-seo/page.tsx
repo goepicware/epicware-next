@@ -292,7 +292,11 @@ export default function LocalSEOSingaporePage() {
             <Link href="/blog/google-maps-ranking-factors" className="text-primary font-medium hover:underline">
               local ranking factors
             </Link>{" "}
-            explains each one.
+            explains each one, and our page on how to{" "}
+            <Link href="/use-cases/rank-higher-on-google-maps" className="text-primary font-medium hover:underline">
+              rank higher on Google Maps in Singapore
+            </Link>{" "}
+            shows how we find the gaps district by district.
           </p>
         </div>
       </section>

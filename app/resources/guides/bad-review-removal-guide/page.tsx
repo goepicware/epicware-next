@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
-  title: { absolute: "Bad Review Removal Guide: Remove Google Reviews | Epicware" },
-  description: "The complete guide to removing bad Google reviews: which reviews qualify, how to report them, how to escalate and what to do when Google says no.",
+  title: { absolute: "How to Remove a Google Review: Step-by-Step Guide | Epicware" },
+  description: "How to remove a Google review: which reviews break Google's policies, how to report them in Maps, how to escalate a rejected flag and what to do when Google says no.",
   alternates: { canonical: "https://www.epicware.ai/resources/guides/bad-review-removal-guide" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Bad Review Removal Guide: Remove Google Reviews | Epicware",
-    description: "The complete guide to removing bad Google reviews: which reviews qualify, how to report them, how to escalate and what to do when Google says no.",
+    title: "How to Remove a Google Review: Step-by-Step Guide | Epicware",
+    description: "How to remove a Google review: which reviews break Google's policies, how to report them in Maps, how to escalate a rejected flag and what to do when Google says no.",
     url: "https://www.epicware.ai/resources/guides/bad-review-removal-guide",
   },
 };
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Bad Review Removal Guide — Remove Google Reviews the Right Way",
+  "headline": "How to Remove a Google Review — Step-by-Step Guide",
   "description": "The complete guide to removing bad Google reviews from your Singapore business profile. Policy violations, removal process, escalation paths, and professional removal service.",
   "datePublished": "2026-06-01",
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
@@ -29,12 +29,13 @@ export default function Page() {
     <GuidePage
       schema={schema}
       badge="BAD REVIEW REMOVAL GUIDE"
-      h1="Bad Review Removal Guide — Remove Google Reviews the Right Way"
+      h1="How to Remove a Google Review — Step-by-Step Guide"
       subtitle="Everything Singapore business owners need to know about removing fake, malicious, and policy-violating Google reviews. The process, the policy, and the professional option."
       trustSignals={["$200/Review · Refund Guarantee", "Singapore-Built", "Free Assessment", "All Industries"]}
       imageSrc="/assets/review-management-illustration.png"
       intro={
         <>
+          <p>You can only remove a Google review that breaks Google&apos;s content policies, such as spam, a fake account, a conflict of interest or a personal attack. Report it in Google Maps (three dots, then &quot;Report review&quot;), and if the flag is rejected, file a formal removal request through Google Business Profile support with your evidence.</p>
           <p>Not every Google review that harms your business can be removed. But many can — and most business owners don&apos;t know the process, or attempt it incorrectly and give up after their first flag is rejected. This guide covers the complete removal process from assessment through escalation.</p>
           <p>Understanding which reviews qualify, how to submit the strongest possible removal request, and when to use a professional service will significantly improve your chances of successful removal.</p>
         </>
