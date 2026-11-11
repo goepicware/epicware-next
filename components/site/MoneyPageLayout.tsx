@@ -33,11 +33,14 @@ export default function MoneyPageLayout({
   serviceSlug,
   h1,
   body,
+  extraBreadcrumb,
 }: {
   countrySlug: string;
   serviceSlug: string;
   h1: string;
   body: string;
+  /** City/platform variant name (e.g. "Miami", "Yelp") for a 5th breadcrumb level — omitted on the parent country×service page. */
+  extraBreadcrumb?: string;
 }) {
   const country = getCountry(countrySlug) as Country;
   const service = getService(serviceSlug) as Service;
@@ -52,7 +55,10 @@ export default function MoneyPageLayout({
               { label: "Home", href: "/" },
               { label: "Locations", href: "/locations" },
               { label: country.displayName, href: `/locations/${country.slug}` },
-              { label: service.name },
+              extraBreadcrumb
+                ? { label: service.name, href: `/locations/${country.slug}/${service.slug}` }
+                : { label: service.name },
+              ...(extraBreadcrumb ? [{ label: extraBreadcrumb }] : []),
             ]}
           />
           <h1 className="font-display font-bold text-foreground mt-5 mb-4 leading-tight">

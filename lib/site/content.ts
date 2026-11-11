@@ -135,6 +135,33 @@ export function isHubLive(countrySlug: string): boolean {
   return getHubContent(countrySlug)?.frontmatter.draft === false;
 }
 
+/**
+ * Loads /content/locations/{country}/{service}/{variant}.mdx — the city
+ * and platform sub-pages under a country×service money page (currently
+ * only usa/review-removal/{miami,los-angeles,new-york,yelp,google}, see
+ * lib/site/reviewRemovalVariants.ts). Same frontmatter shape and
+ * substance-gate rules as the parent money page.
+ */
+export function getMoneyPageVariantContent(
+  country: string,
+  service: string,
+  variant: string
+): MoneyPageContent | null {
+  const filePath = path.join(CONTENT_ROOT, country, service, `${variant}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const { data, content } = matter(raw);
+  return {
+    frontmatter: data as MoneyPageFrontmatter,
+    body: content,
+  };
+}
+
+/** Whether /locations/{country}/{service}/{variant}/ is live (indexable, linkable) rather than a draft stub. */
+export function isCountryServiceVariantLive(country: string, service: string, variant: string): boolean {
+  return getMoneyPageVariantContent(country, service, variant)?.frontmatter.draft === false;
+}
+
 const SERVICES_CONTENT_ROOT = path.join(process.cwd(), "content", "services");
 
 export interface SubFeatureFrontmatter {
