@@ -1,12 +1,10 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import { mdxComponents } from "@/components/site/mdxComponents";
-import Breadcrumbs from "@/components/shared/Breadcrumbs";
+import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
-import { getService, type Service } from "@/lib/site/services";
+import { getService, getServiceFromPrice, type Service } from "@/lib/site/services";
 import { getCountry, type Country } from "@/lib/site/countries";
 import MoneyPageLinkRings from "@/components/site/MoneyPageLinkRings";
 import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
@@ -32,12 +30,15 @@ export default function MoneyPageLayout({
   countrySlug,
   serviceSlug,
   h1,
+  subtitle,
   body,
   extraBreadcrumb,
 }: {
   countrySlug: string;
   serviceSlug: string;
   h1: string;
+  /** Page's metaDescription, reused as the hero dek — already written as an accurate one-liner per page, so no separate copy field is needed. */
+  subtitle: string;
   body: string;
   /** City/platform variant name (e.g. "Miami", "Yelp") for a 5th breadcrumb level — omitted on the parent country×service page. */
   extraBreadcrumb?: string;
@@ -45,45 +46,45 @@ export default function MoneyPageLayout({
   const country = getCountry(countrySlug) as Country;
   const service = getService(serviceSlug) as Service;
   const hasLeadCTA = serviceSlug in LEAD_CTA_CONFIG;
+  const leadConfig = LEAD_CTA_CONFIG[serviceSlug];
+
+  const ctaPrimary = hasLeadCTA
+    ? { label: leadConfig.primaryLabel, href: `#${leadConfig.formAnchorId}` }
+    : { label: "Book a Free Demo", href: "/book-demo#form" };
+  const ctaSecondary = hasLeadCTA
+    ? { label: "Book a Strategy Call", href: `/book-demo?country=${countrySlug}&service=${serviceSlug}` }
+    : { label: "Free GBP Audit", href: "/free-audit" };
+
+  // Only truthful, data-backed signals — never a claim invented per service.
+  const trustSignals: string[] = [];
+  const priceSignal = getServiceFromPrice(service, countrySlug);
+  if (priceSignal) trustSignals.push(priceSignal);
+  if (serviceSlug === "review-removal") {
+    trustSignals.push("Refunded If Not Removed");
+    trustSignals.push("Evidence-Backed Reports");
+  }
+  trustSignals.push(`Serving ${country.displayName}`);
 
   return (
     <>
-      <section className="pt-28 pb-12 hero-gradient">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <Breadcrumbs
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Locations", href: "/locations" },
-              { label: country.displayName, href: `/locations/${country.slug}` },
-              extraBreadcrumb
-                ? { label: service.name, href: `/locations/${country.slug}/${service.slug}` }
-                : { label: service.name },
-              ...(extraBreadcrumb ? [{ label: extraBreadcrumb }] : []),
-            ]}
-          />
-          <h1 className="font-display font-bold text-foreground mt-5 mb-4 leading-tight">
-            {h1}
-          </h1>
-          {hasLeadCTA ? (
-            <ServiceLeadCTA countrySlug={countrySlug} serviceSlug={serviceSlug} variant="hero" />
-          ) : (
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/book-demo#form"
-                className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-foreground text-background font-semibold text-sm hover:bg-foreground/90 transition-colors"
-              >
-                Book a Free Demo <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/free-audit"
-                className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-border font-semibold text-sm hover:border-primary/40 transition-colors"
-              >
-                Free GBP Audit
-              </Link>
-            </div>
-          )}
-        </div>
-      </section>
+      <CategoryHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Locations", href: "/locations" },
+          { label: country.displayName, href: `/locations/${country.slug}` },
+          extraBreadcrumb
+            ? { label: service.name, href: `/locations/${country.slug}/${service.slug}` }
+            : { label: service.name },
+          ...(extraBreadcrumb ? [{ label: extraBreadcrumb }] : []),
+        ]}
+        badge={`${service.name.toUpperCase()} · ${(extraBreadcrumb ?? country.displayName).toUpperCase()}`}
+        h1={h1}
+        subtitle={subtitle}
+        ctaPrimary={ctaPrimary}
+        ctaSecondary={ctaSecondary}
+        trustSignals={trustSignals}
+        imageSrc={service.heroImage}
+      />
 
       <section className="py-12 lg:py-16">
         <div className="container mx-auto px-6 max-w-3xl">

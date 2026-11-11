@@ -67,6 +67,7 @@ export default async function LocationServiceVariantPage({
       countrySlug={country}
       serviceSlug={service}
       h1={content.frontmatter.h1}
+      subtitle={content.frontmatter.metaDescription}
       body={content.body}
       extraBreadcrumb={variantData.name}
     />
