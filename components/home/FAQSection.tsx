@@ -17,6 +17,12 @@ const FAQS: { q: string; a: React.ReactNode; schemaText: string }[] = [
       "Three things. Our team works inside our own AI software, so you see live rankings, reviews and AI mentions instead of a monthly PDF. We cover Google Maps, your website, AI search and reviews together. And we show proof with dates: real screenshots of clients ranked #1 on Google and AI search.",
   },
   {
+    q: "How do I choose the best digital marketing agency in Singapore?",
+    a: "Look for dated proof instead of vague claims — real screenshots of rankings, reviews or AI citations with dates on them. Ask whether they cover Google Maps, AI search and reviews alongside your website, or just one channel. Check whether you get live access to your own data or wait for a monthly PDF. And be wary of long lock-in contracts or guaranteed #1 rankings — no agency can honestly promise either.",
+    schemaText:
+      "Look for dated proof instead of vague claims — real screenshots of rankings, reviews or AI citations with dates on them. Ask whether they cover Google Maps, AI search and reviews alongside your website, or just one channel. Check whether you get live access to your own data or wait for a monthly PDF. And be wary of long lock-in contracts or guaranteed #1 rankings — no agency can honestly promise either.",
+  },
+  {
     q: "Is Epicware an AI digital marketing agency?",
     a: "Yes. Epicware is an AI-powered digital marketing agency in Singapore. Our team covers SEO, local SEO, AI search, reputation management and social content, and runs every account on our own AI software: EpicMap, EpicReview, EpicEngage and EpicSocial.",
     schemaText:
