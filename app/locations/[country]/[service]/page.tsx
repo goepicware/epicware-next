@@ -85,6 +85,8 @@ export default async function LocationServicePage({
       h1={content.frontmatter.h1}
       subtitle={content.frontmatter.metaDescription}
       body={content.body}
+      heroImage={content.frontmatter.heroImage}
+      secondaryImage={content.frontmatter.secondaryImage}
     />
   );
 }

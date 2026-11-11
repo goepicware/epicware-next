@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import { mdxComponents } from "@/components/site/mdxComponents";
@@ -33,6 +34,8 @@ export default function MoneyPageLayout({
   subtitle,
   body,
   extraBreadcrumb,
+  heroImage,
+  secondaryImage,
 }: {
   countrySlug: string;
   serviceSlug: string;
@@ -42,6 +45,10 @@ export default function MoneyPageLayout({
   body: string;
   /** City/platform variant name (e.g. "Miami", "Yelp") for a 5th breadcrumb level — omitted on the parent country×service page. */
   extraBreadcrumb?: string;
+  /** Page-specific hero image, overriding the service-level default (e.g. a city/platform illustration instead of the generic one). */
+  heroImage?: string;
+  /** Optional second illustration rendered between the body and the lead CTA. */
+  secondaryImage?: string;
 }) {
   const country = getCountry(countrySlug) as Country;
   const service = getService(serviceSlug) as Service;
@@ -83,7 +90,7 @@ export default function MoneyPageLayout({
         ctaPrimary={ctaPrimary}
         ctaSecondary={ctaSecondary}
         trustSignals={trustSignals}
-        imageSrc={service.heroImage}
+        imageSrc={heroImage ?? service.heroImage}
       />
 
       <section className="py-12 lg:py-16">
@@ -95,6 +102,20 @@ export default function MoneyPageLayout({
           />
         </div>
       </section>
+
+      {secondaryImage && (
+        <section className="pb-12 lg:pb-16">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <Image
+              src={secondaryImage}
+              alt=""
+              width={1216}
+              height={896}
+              className="w-full h-auto rounded-2xl"
+            />
+          </div>
+        </section>
+      )}
 
       {hasLeadCTA && (
         <section className="pb-12 lg:pb-16">

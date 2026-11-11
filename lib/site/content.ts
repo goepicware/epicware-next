@@ -41,6 +41,10 @@ export interface MoneyPageFrontmatter {
   pricing?: MoneyPagePricing;
   /** At least 5, no question reused verbatim from another country's page for the same service. */
   faqs?: MoneyPageFaq[];
+  /** Page-specific hero image, overriding the service-level default in lib/site/services.ts. */
+  heroImage?: string;
+  /** Optional second illustration rendered between the body and the lead CTA. */
+  secondaryImage?: string;
 }
 
 export interface MoneyPageContent {

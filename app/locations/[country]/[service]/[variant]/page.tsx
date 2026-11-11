@@ -70,6 +70,8 @@ export default async function LocationServiceVariantPage({
       subtitle={content.frontmatter.metaDescription}
       body={content.body}
       extraBreadcrumb={variantData.name}
+      heroImage={content.frontmatter.heroImage}
+      secondaryImage={content.frontmatter.secondaryImage}
     />
   );
 }
