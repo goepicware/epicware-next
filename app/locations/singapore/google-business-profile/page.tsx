@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PROOF } from "@/lib/site/proof";
+import { PROOF, formatGoogleRatingBadge } from "@/lib/site/proof";
 import {
   Tag,
   Star,
@@ -43,15 +43,15 @@ import MoneyPageLinkRings from "@/components/site/MoneyPageLinkRings";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "Google Business Profile Optimisation Singapore | Epicware" },
+  title: { absolute: "Best Google Maps SEO Agency in Singapore | Epicware" },
   description:
-    "GBP optimisation and Google Maps SEO in Singapore: a 19-point profile audit, priority fixes in 48 hours, weekly posts and rank tracking. Get a quote.",
+    "Best Google Maps SEO agency in Singapore? Epicware runs a 19-point GBP audit, fixes in 48 hours, weekly posts and rank tracking. Get a quote.",
   alternates: { canonical: "https://www.epicware.ai/locations/singapore/google-business-profile" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Google Business Profile Optimisation in Singapore | Epicware",
+    title: "Best Google Maps SEO Agency in Singapore | Epicware",
     description:
-      "GBP optimisation and Google Maps SEO in Singapore: a 19-point profile audit, priority fixes in 48 hours, weekly posts and rank tracking. Get a quote.",
+      "Best Google Maps SEO agency in Singapore? Epicware runs a 19-point GBP audit, fixes in 48 hours, weekly posts and rank tracking. Get a quote.",
     url: "https://www.epicware.ai/locations/singapore/google-business-profile",
   },
 };
@@ -63,12 +63,12 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.epicware.ai/locations/singapore/google-business-profile#webpage",
       url: "https://www.epicware.ai/locations/singapore/google-business-profile",
-      name: "Google Business Profile Optimisation Singapore | Epicware",
+      name: "Best Google Maps SEO Agency in Singapore | Epicware",
       description:
-        "GBP optimisation and Google Maps SEO services in Singapore: a 19-point profile audit, priority fixes in 48 hours, weekly posts and rank tracking.",
+        "Looking for the best Google Maps SEO agency in Singapore? Epicware runs a 19-point GBP audit, priority fixes in 48 hours, weekly posts and rank tracking.",
       inLanguage: "en-SG",
-      dateModified: "2026-10-16",
-      lastReviewed: "2026-10-16",
+      dateModified: "2026-11-11",
+      lastReviewed: "2026-11-11",
       reviewedBy: {
         "@type": "Person",
         name: "Vignesh Wadarajan",
@@ -126,6 +126,7 @@ const schema = {
         { "@type": "Question", name: "Should I add keywords to my business name?", acceptedAnswer: { "@type": "Answer", text: "No. Google's guidelines say your name should reflect your real-world business name, and adding unnecessary information can get your profile suspended. We use categories, services and posts instead." } },
         { "@type": "Question", name: "Can you fix a suspended Google Business Profile?", acceptedAnswer: { "@type": "Answer", text: "If your business qualifies for a profile, we find the likely cause, fix it and appeal with evidence such as your ACRA registration. Google decides; it says appeal reviews can take up to five business days." } },
         { "@type": "Question", name: "What happened to Q&A on Google Maps?", acceptedAnswer: { "@type": "Answer", text: "Google phased out Q&A on Business Profiles from late 2025. Its AI now answers customers' questions from your profile, reviews and website, so we keep your profile complete and replies up to date." } },
+        { "@type": "Question", name: "What makes the best Google Maps SEO agency in Singapore?", acceptedAnswer: { "@type": "Answer", text: "Look for someone who treats your Google Business Profile as the main asset, not an add-on to website SEO: a documented audit, category and service strategy benchmarked against who already ranks above you, weekly posts and review replies, and a rank grid you can check yourself across your districts. Be wary of anyone who guarantees a #1 Map Pack spot or suggests stuffing keywords into your business name — Google can suspend a profile for that." } },
       ],
     },
     {
@@ -228,6 +229,7 @@ const faqs = [
   { q: "Should I add keywords to my business name?", a: "No. Google's guidelines say your name should reflect your real-world business name, and adding unnecessary information can get your profile suspended. We use categories, services and posts instead.", href: "https://support.google.com/business/answer/7205772", anchor: "Google's guidelines", external: true },
   { q: "Can you fix a suspended Google Business Profile?", a: "If your business qualifies for a profile, we find the likely cause, fix it and appeal with evidence such as your ACRA registration. Google decides; it says appeal reviews can take up to five business days.", href: "https://support.google.com/business/answer/4567512", anchor: "appeal", external: true },
   { q: "What happened to Q&A on Google Maps?", a: "Google phased out Q&A on Business Profiles from late 2025. Its AI now answers customers' questions from your profile, reviews and website, so we keep your profile complete and replies up to date." },
+  { q: "What makes the best Google Maps SEO agency in Singapore?", a: "Look for someone who treats your Google Business Profile as the main asset, not an add-on to website SEO: a documented audit, category and service strategy benchmarked against who already ranks above you, weekly posts and review replies, and a rank grid you can check yourself across your districts. Be wary of anyone who guarantees a #1 Map Pack spot or suggests stuffing keywords into your business name — Google can suspend a profile for that." },
 ];
 
 export default function GbpOptimisationPage() {
@@ -271,7 +273,7 @@ export default function GbpOptimisationPage() {
                 ⭐ Rated on Google
               </a>
               <div className="flex flex-wrap gap-3">
-                {["19-Point GBP Audit", "Weekly Maps Rank Grids", `${PROOF.outletsManaged.value} Outlets Managed`, "10+ Years' Specialist Experience"].map((b) => (
+                {["19-Point GBP Audit", "Weekly Maps Rank Grids", `${PROOF.outletsManaged.value} Outlets Managed`, formatGoogleRatingBadge()].map((b) => (
                   <span key={b} className="inline-flex items-center bg-card/80 border border-border/60 rounded-full px-4 py-2 text-sm font-medium text-foreground/80 shadow-card">
                     {b}
                   </span>
