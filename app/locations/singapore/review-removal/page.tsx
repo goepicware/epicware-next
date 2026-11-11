@@ -3,7 +3,9 @@ import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import MoneyPageLinkRings from "@/components/site/MoneyPageLinkRings";
+import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
 
 export const metadata: Metadata = {
   title: { absolute: "Bad Google Review Removal in Singapore | Epicware" },
@@ -60,6 +62,8 @@ const CHILD_SERVICES = [
 ];
 
 export default function BadReviewRemovalSingaporePage() {
+  const leadConfig = LEAD_CTA_CONFIG["review-removal"];
+
   return (
     <>
       <script
@@ -77,8 +81,8 @@ export default function BadReviewRemovalSingaporePage() {
         badge="BAD REVIEW REMOVAL · SINGAPORE"
         h1="Bad Review Removal Singapore — $200 Per Review, Refunded If Not Removed"
         subtitle="One fake review from a competitor or a disgruntled non-customer can drop your Google rating below 4.0 and cost you thousands in lost business. Epicware removes it. $200 charged upfront — refunded in full if it isn't removed within 3 months."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
+        ctaPrimary={{ label: leadConfig.primaryLabel, href: `#${leadConfig.formAnchorId}` }}
+        ctaSecondary={{ label: "Book a Strategy Call", href: "/book-demo?country=singapore&service=review-removal" }}
         trustSignals={[
           "$200/Review · Refund Guarantee",
           "Singapore-Built",
@@ -225,6 +229,13 @@ export default function BadReviewRemovalSingaporePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Lead-capture form */}
+      <section className="pb-16 lg:pb-20">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <ServiceLeadCTA countrySlug="singapore" serviceSlug="review-removal" variant="bottom" />
         </div>
       </section>
 
