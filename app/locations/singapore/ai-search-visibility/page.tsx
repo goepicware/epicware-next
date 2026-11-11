@@ -4,7 +4,9 @@ import CategoryHero from "@/components/category/CategoryHero";
 import ServicesGrid from "@/components/category/ServicesGrid";
 import FinalCTA from "@/components/home/FinalCTA";
 import MoneyPageLinkRings from "@/components/site/MoneyPageLinkRings";
+import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
 
 export const metadata: Metadata = {
   title: { absolute: "GEO & AEO Agency in Singapore | AI Visibility | Epicware" },
@@ -58,6 +60,8 @@ const CHILD_SERVICES = [
 ];
 
 export default function AiSearchVisibilitySingaporePage() {
+  const leadConfig = LEAD_CTA_CONFIG["ai-search-visibility"];
+
   return (
     <>
       <script
@@ -75,8 +79,8 @@ export default function AiSearchVisibilitySingaporePage() {
         badge="AI & GEO VISIBILITY · SINGAPORE"
         h1="AI & GEO Visibility Singapore — Get Found by ChatGPT and Google AI"
         subtitle="ChatGPT, Perplexity, and Google's AI Overviews now answer Singapore local searches. If your business isn't optimised for these AI systems, you're invisible to the next generation of search."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
+        ctaPrimary={{ label: leadConfig.primaryLabel, href: `#${leadConfig.formAnchorId}` }}
+        ctaSecondary={{ label: "Book a Strategy Call", href: "/book-demo?country=singapore&service=ai-search-visibility" }}
         trustSignals={[
           "AI Overview Optimisation",
           "Answer Engine Optimisation",
@@ -198,6 +202,13 @@ export default function AiSearchVisibilitySingaporePage() {
         heading="AI & GEO Visibility Services"
         services={CHILD_SERVICES}
       />
+
+      {/* Lead-capture form */}
+      <section className="pb-16 lg:pb-20">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <ServiceLeadCTA countrySlug="singapore" serviceSlug="ai-search-visibility" variant="bottom" />
+        </div>
+      </section>
 
       <MoneyPageLinkRings countrySlug="singapore" serviceSlug="ai-search-visibility" />
 

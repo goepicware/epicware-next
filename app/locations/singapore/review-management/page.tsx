@@ -4,7 +4,9 @@ import CategoryHero from "@/components/category/CategoryHero";
 import ServicesGrid from "@/components/category/ServicesGrid";
 import FinalCTA from "@/components/home/FinalCTA";
 import MoneyPageLinkRings from "@/components/site/MoneyPageLinkRings";
+import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
 
 /**
  * Merged from app/reputation-management-singapore/page.tsx (used as the
@@ -91,6 +93,8 @@ const CHILD_SERVICES = [
 ];
 
 export default function ReputationManagementPage() {
+  const leadConfig = LEAD_CTA_CONFIG["review-management"];
+
   return (
     <>
       <script
@@ -114,8 +118,8 @@ export default function ReputationManagementPage() {
             Epicware&apos;s platform generates reviews, responds with AI, and removes the ones that shouldn&apos;t be there — all from one dashboard.
           </>
         }
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Get Free GBP Audit", href: "/free-audit" }}
+        ctaPrimary={{ label: leadConfig.primaryLabel, href: `#${leadConfig.formAnchorId}` }}
+        ctaSecondary={{ label: "Book a Strategy Call", href: "/book-demo?country=singapore&service=review-management" }}
         trustSignals={[
           "Multi-Outlet Ready",
           "Bad Review Removal Guaranteed",
@@ -413,6 +417,13 @@ export default function ReputationManagementPage() {
             </Link>{" "}
             — a well-ranked profile gets more of the review traffic worth protecting.
           </p>
+        </div>
+      </section>
+
+      {/* Lead-capture form */}
+      <section className="pb-16 lg:pb-20">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <ServiceLeadCTA countrySlug="singapore" serviceSlug="review-management" variant="bottom" />
         </div>
       </section>
 
