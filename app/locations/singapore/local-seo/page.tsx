@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PROOF } from "@/lib/site/proof";
+import { PROOF, formatGoogleRatingBadge } from "@/lib/site/proof";
 import {
   Store,
   Search,
@@ -251,7 +251,7 @@ export default function LocalSEOSingaporePage() {
                 ⭐ Rated on Google
               </a>
               <div className="flex flex-wrap gap-3">
-                {[`${PROOF.outletsManaged.value} Outlets Managed`, "10+ Years' Specialist Experience", "Listings Corrected on 40+ Directories", `${PROOF.reviewsRemoved.value} Negative Reviews Removed`].map((b) => (
+                {[`${PROOF.outletsManaged.value} Outlets Managed`, formatGoogleRatingBadge(), "Listings Corrected on 40+ Directories", `${PROOF.reviewsRemoved.value} Negative Reviews Removed`].map((b) => (
                   <span key={b} className="inline-flex items-center bg-card/80 border border-border/60 rounded-full px-4 py-2 text-sm font-medium text-foreground/80 shadow-card">
                     {b}
                   </span>
