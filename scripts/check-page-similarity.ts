@@ -3,6 +3,7 @@ import {
   loadSgDistrictPages,
   loadIndustryPages,
   loadServiceParentPages,
+  loadReviewRemovalVariantPages,
   districtNames,
   type PageDescriptor,
 } from "./lib/page-corpus";
@@ -132,9 +133,10 @@ function main() {
   const districtPages = loadSgDistrictPages();
   const industryPages = loadIndustryPages();
   const serviceParentPages = loadServiceParentPages();
+  const variantPages = loadReviewRemovalVariantPages();
 
   console.log(
-    `Loaded ${countryServicePages.length} country-service pages, ${districtPages.length} SG district pages, ${industryPages.length} industry pages, ${serviceParentPages.length} service-parent pages.`
+    `Loaded ${countryServicePages.length} country-service pages, ${districtPages.length} SG district pages, ${industryPages.length} industry pages, ${serviceParentPages.length} service-parent pages, ${variantPages.length} country-service-variant pages.`
   );
 
   const byService = groupBy(countryServicePages, (p) => p.service!);
@@ -155,13 +157,32 @@ function main() {
     return children.map((child) => comparePair(parent, child, names));
   });
 
+  // Variant pages (usa/review-removal/{miami,los-angeles,...}) vs each
+  // other, and vs the usa/review-removal money page they sit under —
+  // the pairing the full city×platform matrix would have made worst.
+  const variantSiblingPairs = allPairs(variantPages).map(([a, b]) => comparePair(a, b, names));
+  const variantParentPairs = variantPages.flatMap((variant) => {
+    const parent = countryServicePages.find((p) => p.country === variant.country && p.service === variant.service);
+    return parent ? [comparePair(parent, variant, names)] : [];
+  });
+
   printTable("Same service, across countries", sameServicePairs);
   printTable("Same country, across services", sameCountryPairs);
   printTable("Parent (/services/{service}/) vs child (/locations/{country}/{service}/)", parentChildPairs);
+  printTable("Review-removal variants, vs each other (miami/los-angeles/new-york/yelp/google)", variantSiblingPairs);
+  printTable("Review-removal variants vs usa/review-removal parent", variantParentPairs);
   printTable("SG district pages (calibration group)", districtPairs);
   printTable("Industry pages (calibration group)", industryPairs);
 
-  const all = [...sameServicePairs, ...sameCountryPairs, ...parentChildPairs, ...districtPairs, ...industryPairs];
+  const all = [
+    ...sameServicePairs,
+    ...sameCountryPairs,
+    ...parentChildPairs,
+    ...variantSiblingPairs,
+    ...variantParentPairs,
+    ...districtPairs,
+    ...industryPairs,
+  ];
   const failing = all.filter((r) => r.status === "FAIL");
   const warning = all.filter((r) => r.status === "WARN");
   const blocking = failing.filter(isBlocking);

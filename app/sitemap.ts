@@ -4,7 +4,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { COUNTRIES } from "@/lib/site/countries";
 import { PAGED_SERVICES } from "@/lib/site/services";
-import { isCountryServiceLive, isHubLive, isSubFeatureLive } from "@/lib/site/content";
+import { REVIEW_REMOVAL_VARIANTS } from "@/lib/site/reviewRemovalVariants";
+import { isCountryServiceLive, isHubLive, isSubFeatureLive, isCountryServiceVariantLive } from "@/lib/site/content";
 
 const BASE = "https://www.epicware.ai";
 
@@ -213,7 +214,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticPages, ...blogPostPages(), ...districtPages, ...countryHubPages, ...countryServicePages, ...subFeaturePages];
+  // City/platform variants under /locations/usa/review-removal/ — only
+  // once draft:false (see lib/site/reviewRemovalVariants.ts).
+  const reviewRemovalVariantPages: MetadataRoute.Sitemap = REVIEW_REMOVAL_VARIANTS.filter((v) =>
+    isCountryServiceVariantLive("usa", "review-removal", v.slug)
+  ).map((v) => ({
+    url: `${BASE}/locations/usa/review-removal/${v.slug}`,
+    lastModified: lastCommitDate(`content/locations/usa/review-removal/${v.slug}.mdx`),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticPages,
+    ...blogPostPages(),
+    ...districtPages,
+    ...countryHubPages,
+    ...countryServicePages,
+    ...subFeaturePages,
+    ...reviewRemovalVariantPages,
+  ];
 }
 
 /**

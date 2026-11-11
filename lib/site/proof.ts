@@ -120,12 +120,21 @@ export const PROOF = {
  * subscription tiers in lib/pricing-data.ts. Review removal is SGD 200 in
  * Singapore (confirmed throughout the site); USD 200 for the US market
  * confirmed by the business owner 2026-10-28 for the Phase 5 USA pages —
- * same number, not a currency conversion.
+ * same number, not a currency conversion. This is the Google-review
+ * price; every existing reference site-wide (Singapore, blog, case
+ * studies, comparisons) is Google-only and still accurate as-is.
+ *
+ * Yelp review removal is a separate, USD-only, US-market-only line item
+ * confirmed by the business owner 2026-11-11 at USD 350 — Yelp isn't
+ * offered in Singapore, so there is no SGD figure to set here.
  */
 export const PRICING = {
   reviewRemoval: {
     SGD: 200,
     USD: 200,
+  },
+  reviewRemovalYelp: {
+    USD: 350,
   },
 
   /**
