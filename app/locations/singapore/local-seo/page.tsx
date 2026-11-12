@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PROOF } from "@/lib/site/proof";
+import { PROOF, formatGoogleRatingBadge } from "@/lib/site/proof";
 import {
   Store,
   Search,
@@ -38,15 +38,15 @@ import MoneyPageLinkRings from "@/components/site/MoneyPageLinkRings";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "Local SEO Services Singapore | Local SEO Agency | Epicware" },
+  title: { absolute: "Best Local SEO Agency in Singapore | Epicware" },
   description:
-    `Local SEO in Singapore: citations, reviews and weekly rank tracking, from an AI local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
+    `Best local SEO agency in Singapore? Epicware runs citations, reviews and rank tracking on our own software — ${PROOF.outletsManaged.value} outlets managed.`,
   alternates: { canonical: "https://www.epicware.ai/locations/singapore/local-seo" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Local SEO Services Singapore | Local SEO Agency | Epicware",
+    title: "Best Local SEO Agency in Singapore | Epicware",
     description:
-      `Local SEO in Singapore: citations, reviews and weekly rank tracking, from an AI local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
+      `Best local SEO agency in Singapore? Epicware runs citations, reviews and rank tracking on our own software — ${PROOF.outletsManaged.value} outlets managed.`,
     url: "https://www.epicware.ai/locations/singapore/local-seo",
   },
 };
@@ -58,12 +58,12 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://www.epicware.ai/locations/singapore/local-seo#webpage",
       url: "https://www.epicware.ai/locations/singapore/local-seo",
-      name: "Local SEO Services Singapore | Local SEO Agency | Epicware",
+      name: "Best Local SEO Agency in Singapore | Epicware",
       description:
-        `Local SEO services in Singapore: citations, reviews, location pages and weekly rank tracking, from a local SEO agency that has managed ${PROOF.outletsManaged.value} outlets.`,
+        `Looking for the best local SEO agency in Singapore? Epicware runs citations, reviews, location pages and weekly rank tracking, and has managed ${PROOF.outletsManaged.value} outlets.`,
       inLanguage: "en-SG",
-      dateModified: "2026-10-16",
-      lastReviewed: "2026-10-16",
+      dateModified: "2026-11-11",
+      lastReviewed: "2026-11-11",
       reviewedBy: {
         "@type": "Person",
         name: "Vignesh Wadarajan",
@@ -207,6 +207,7 @@ const faqs = [
   { q: "Do I need a physical shop for local SEO?", a: "No, but you must meet customers in person. Service-area businesses, like aircon servicing and movers, should hide their address on Google and list the areas they serve instead. We track those areas." },
   { q: "Can you manage local SEO for multiple outlets?", a: "Yes. Each outlet gets its own keyword list, review tracking and rank grid, side by side in one dashboard. We have managed more than 100 outlets, including a five-outlet restaurant chain and a four-outlet salon chain." },
   { q: "How do I choose a local SEO agency or tool in Singapore?", a: "Ask for dated ranking proof for businesses like yours, a list of first-month fixes and your own login to see rankings across your district. Avoid anyone who guarantees #1 or offers to buy reviews." },
+  { q: "What makes the best local SEO agency in Singapore?", a: "Four things, in order: dated proof of real local ranking movement (not a template screenshot), a live login so you can check rankings yourself instead of waiting for a monthly report, coverage of Google Maps and your Google Business Profile — not just the website — and honesty about timelines and what can't be guaranteed. The 'best' answer differs by business: a single-outlet clinic and a six-outlet restaurant chain need different depth of multi-location reporting." },
 ];
 
 export default function LocalSEOSingaporePage() {
@@ -250,7 +251,7 @@ export default function LocalSEOSingaporePage() {
                 ⭐ Rated on Google
               </a>
               <div className="flex flex-wrap gap-3">
-                {[`${PROOF.outletsManaged.value} Outlets Managed`, "10+ Years' Specialist Experience", "Listings Corrected on 40+ Directories", `${PROOF.reviewsRemoved.value} Negative Reviews Removed`].map((b) => (
+                {[`${PROOF.outletsManaged.value} Outlets Managed`, formatGoogleRatingBadge(), "Listings Corrected on 40+ Directories", `${PROOF.reviewsRemoved.value} Negative Reviews Removed`].map((b) => (
                   <span key={b} className="inline-flex items-center bg-card/80 border border-border/60 rounded-full px-4 py-2 text-sm font-medium text-foreground/80 shadow-card">
                     {b}
                   </span>

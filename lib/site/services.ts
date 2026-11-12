@@ -44,6 +44,8 @@ export interface Service {
    * iterating SERVICES directly.
    */
   hasPage: boolean;
+  /** Hero illustration for CategoryHero on /locations/{country}/{service} pages. Omitted services fall back to CategoryHero's own default image. */
+  heroImage?: string;
 }
 
 export const SERVICES: Service[] = [
@@ -103,6 +105,8 @@ export const SERVICES: Service[] = [
     subFeatures: [],
     planKey: "foundation",
     hasPage: true,
+    // Same illustration Singapore's bespoke review-management page uses.
+    heroImage: "/assets/review-management-illustration.png",
   },
   {
     slug: "review-removal",
@@ -114,6 +118,8 @@ export const SERVICES: Service[] = [
     ],
     planKey: "reviewRemoval",
     hasPage: true,
+    // Same illustration Singapore's bespoke review-removal page uses.
+    heroImage: "/assets/review-management-illustration.png",
   },
   {
     slug: "paid-ads",

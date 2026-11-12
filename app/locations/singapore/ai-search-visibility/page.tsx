@@ -4,18 +4,20 @@ import CategoryHero from "@/components/category/CategoryHero";
 import ServicesGrid from "@/components/category/ServicesGrid";
 import FinalCTA from "@/components/home/FinalCTA";
 import MoneyPageLinkRings from "@/components/site/MoneyPageLinkRings";
+import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "GEO & AEO Agency in Singapore | AI Visibility | Epicware" },
+  title: { absolute: "Best GEO Agency in Singapore | AI Search Visibility | Epicware" },
   description:
-    "Epicware is a GEO and AEO agency in Singapore. We build your AI visibility so ChatGPT, Gemini, Perplexity and Google AI Overviews recommend you.",
+    "Looking for the best GEO or AI SEO agency in Singapore? Epicware builds AI visibility so ChatGPT, Gemini and Google AI Overviews recommend you.",
   alternates: { canonical: "https://www.epicware.ai/locations/singapore/ai-search-visibility" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "GEO & AEO Agency in Singapore | AI Visibility | Epicware",
+    title: "Best GEO Agency in Singapore | AI Search Visibility | Epicware",
     description:
-      "Epicware is a GEO and AEO agency in Singapore. We build your AI visibility so ChatGPT, Gemini, Perplexity and Google AI Overviews recommend you.",
+      "Looking for the best GEO or AI SEO agency in Singapore? Epicware builds AI visibility so ChatGPT, Gemini and Google AI Overviews recommend you.",
     url: "https://www.epicware.ai/locations/singapore/ai-search-visibility",
   },
 };
@@ -34,6 +36,31 @@ const serviceSchema = {
   },
   areaServed: { "@type": "Country", name: "Singapore" },
   url: "https://epicware.ai/locations/singapore/ai-search-visibility",
+};
+
+const FAQS: { q: string; a: string }[] = [
+  {
+    q: "What makes the best GEO agency in Singapore?",
+    a: "Three things: they track AI citations with dated proof, not a promise — showing you where ChatGPT, Perplexity or AI Overviews actually mention you by name; they cover entity consistency (your name, address and facts matching everywhere AI tools cross-check) and structured data, not just blog content; and they're honest that no one can guarantee a specific AI citation, since that call ultimately belongs to the AI platform, not the agency.",
+  },
+  {
+    q: "What makes the best AI SEO agency in Singapore?",
+    a: "AI SEO and GEO are the same discipline under two different names, so the bar is identical: real AI citation monitoring you can see yourself, work on both your website and your Google Business Profile (AI tools pull from both), and clarity on the difference between AI Overview optimisation (ranking inside Google's own AI panel) and being cited by chat assistants like ChatGPT, which pull from different sources.",
+  },
+  {
+    q: "Can an agency guarantee my business gets cited by ChatGPT?",
+    a: "No, and any agency that promises this is misleading you — ChatGPT decides what it cites, not the agency. What a credible AI visibility service can do is strengthen the signals AI tools rely on: structured data, consistent facts across the web, and a presence on the sources these tools actually draw from.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const CHILD_SERVICES = [
@@ -58,11 +85,17 @@ const CHILD_SERVICES = [
 ];
 
 export default function AiSearchVisibilitySingaporePage() {
+  const leadConfig = LEAD_CTA_CONFIG["ai-search-visibility"];
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <CategoryHero
@@ -75,8 +108,8 @@ export default function AiSearchVisibilitySingaporePage() {
         badge="AI & GEO VISIBILITY · SINGAPORE"
         h1="AI & GEO Visibility Singapore — Get Found by ChatGPT and Google AI"
         subtitle="ChatGPT, Perplexity, and Google's AI Overviews now answer Singapore local searches. If your business isn't optimised for these AI systems, you're invisible to the next generation of search."
-        ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
-        ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
+        ctaPrimary={{ label: leadConfig.primaryLabel, href: `#${leadConfig.formAnchorId}` }}
+        ctaSecondary={{ label: "Book a Strategy Call", href: "/book-demo?country=singapore&service=ai-search-visibility" }}
         trustSignals={[
           "AI Overview Optimisation",
           "Answer Engine Optimisation",
@@ -198,6 +231,30 @@ export default function AiSearchVisibilitySingaporePage() {
         heading="AI & GEO Visibility Services"
         services={CHILD_SERVICES}
       />
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="font-display text-foreground text-2xl mb-8 text-center">
+            GEO & AI Search Visibility Singapore: Frequently Asked Questions
+          </h2>
+          <div className="space-y-5">
+            {FAQS.map(({ q, a }) => (
+              <div key={q} className="rounded-2xl border border-border/60 bg-card p-5">
+                <p className="font-semibold text-foreground text-sm mb-2">{q}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lead-capture form */}
+      <section className="pb-16 lg:pb-20">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <ServiceLeadCTA countrySlug="singapore" serviceSlug="ai-search-visibility" variant="bottom" />
+        </div>
+      </section>
 
       <MoneyPageLinkRings countrySlug="singapore" serviceSlug="ai-search-visibility" />
 

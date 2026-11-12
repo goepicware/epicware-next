@@ -5,6 +5,7 @@ import { COUNTRIES } from "../../lib/site/countries";
 import { SERVICES } from "../../lib/site/services";
 import { DISTRICTS } from "../../lib/districts";
 import { getServiceContent } from "../../lib/site/serviceContent";
+import { REVIEW_REMOVAL_VARIANTS } from "../../lib/site/reviewRemovalVariants";
 import { extractTsxPage, extractMdxPage, type ExtractedPage } from "./page-text";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -12,7 +13,7 @@ const ROOT = path.join(__dirname, "..", "..");
 
 export interface PageDescriptor extends ExtractedPage {
   id: string;
-  group: "country-service" | "sg-district" | "industry" | "service-parent";
+  group: "country-service" | "sg-district" | "industry" | "service-parent" | "country-service-variant";
   country?: string;
   service?: string;
   isDraft: boolean;
@@ -117,6 +118,33 @@ export function loadIndustryPages(): PageDescriptor[] {
 
 export function districtNames(): string[] {
   return DISTRICTS.map((d) => d.name);
+}
+
+/**
+ * The city/platform variants under usa/review-removal — currently the
+ * only country×service combination with variants (see
+ * lib/site/reviewRemovalVariants.ts). Included in the doorway-page gate
+ * so a city page can't quietly converge on near-identical prose with
+ * its siblings or with the usa/review-removal parent.
+ */
+export function loadReviewRemovalVariantPages(): PageDescriptor[] {
+  const pages: PageDescriptor[] = [];
+  for (const variant of REVIEW_REMOVAL_VARIANTS) {
+    const filePath = path.join(ROOT, "content", "locations", "usa", "review-removal", `${variant.slug}.mdx`);
+    if (!fs.existsSync(filePath)) continue;
+    const raw = fs.readFileSync(filePath, "utf-8");
+    const { draft, ...page } = extractMdxPage(raw);
+    pages.push({
+      id: `usa/review-removal/${variant.slug}`,
+      group: "country-service-variant",
+      country: "usa",
+      service: "review-removal",
+      isDraft: draft,
+      filePath,
+      ...page,
+    });
+  }
+  return pages;
 }
 
 /**
