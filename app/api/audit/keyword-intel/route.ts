@@ -4,6 +4,15 @@ import { rateLimitResponse } from "@/lib/rate-limit";
 export const runtime = "nodejs";
 export const maxDuration = 30;
 
+type AuditCountry = "sg" | "us";
+
+// DataForSEO Maps Live Advanced location_code. Singapore keeps the value
+// already live in production, unverified/unchanged here (out of scope).
+// United States uses DataForSEO's documented country-level code (2840,
+// same as the Google Ads criteria ID).
+const LOCATION_CODES: Record<AuditCountry, number> = { sg: 1023254, us: 2840 };
+const COUNTRY_LABELS: Record<AuditCountry, string> = { sg: "Singapore", us: "the United States" };
+
 interface RequestBody {
   businessName: string;
   shortName: string;
@@ -17,6 +26,7 @@ interface RequestBody {
   rating?: number;
   reviews?: Array<{ text: string; rating: number }>;
   editorialSummary?: string;
+  country?: AuditCountry;
 }
 
 interface EnrichedKeyword {
@@ -147,12 +157,20 @@ function parseJsonArray(text: string): string[] {
 
 // ─── Blue Ocean: Source 1 — website content ──────────────────────────────────
 
+function geoKeywordRule(country: AuditCountry): string {
+  return country === "sg"
+    ? `- Include "singapore" or a Singapore location`
+    : `- Include a specific US city/neighbourhood from the address below, or "near me" — NOT a generic country name (Americans rarely search "near me united states")`;
+}
+
 async function claudeBlueOceanFromWebsite(
   businessName: string,
   websiteContent: string,
-  apiKey: string
+  apiKey: string,
+  country: AuditCountry
 ): Promise<string[]> {
-  const prompt = `You are a Singapore Local SEO expert analysing a business website.
+  const countryLabel = COUNTRY_LABELS[country];
+  const prompt = `You are a Local SEO expert analysing a business website in ${countryLabel}.
 
 Business: ${businessName}
 Website content:
@@ -162,13 +180,13 @@ Extract 3-5 BLUE OCEAN keywords — specific named services, signature offers, t
 
 Blue Ocean = niche and specific. Each term should:
 - Reference actual named treatments, dishes, or services mentioned in the content
-- Include "singapore" or a Singapore location
+${geoKeywordRule(country)}
 - NOT be a generic category term (avoid "restaurant singapore", "salon singapore")
 
 Good examples: "bojin facial tanjong pagar", "pico laser $59 singapore", "jain vegetarian food singapore", "nano hydra facial novena"
 
 Return ONLY a JSON array of 3-5 strings:
-["keyword one singapore", "keyword two singapore", "keyword three singapore"]`;
+["keyword one", "keyword two", "keyword three"]`;
 
   try {
     const text = await callClaude(prompt, apiKey, 300);
@@ -188,9 +206,11 @@ async function claudeBlueOceanFromGBP(
   placeTypes: string[],
   reviewsSample: string,
   editorialSummary: string,
-  apiKey: string
+  apiKey: string,
+  country: AuditCountry
 ): Promise<string[]> {
-  const prompt = `You are a Singapore Local SEO expert.
+  const countryLabel = COUNTRY_LABELS[country];
+  const prompt = `You are a Local SEO expert working on a business in ${countryLabel}.
 
 Generate 3-5 BLUE OCEAN keywords for this business based on its Google Business Profile data.
 Blue Ocean = niche and specific terms, NOT broad category terms.
@@ -205,8 +225,9 @@ Analyse the data above to infer:
 - Named services or treatments mentioned in reviews
 - Location-specific offers or standout features customers praise
 
-Return ONLY a JSON array of 3-5 strings. Include "singapore" in each:
-["keyword one singapore", "keyword two singapore", "keyword three singapore"]`;
+Return ONLY a JSON array of 3-5 strings.
+${geoKeywordRule(country)}
+["keyword one", "keyword two", "keyword three"]`;
 
   try {
     const text = await callClaude(prompt, apiKey, 300);
@@ -224,9 +245,11 @@ Return ONLY a JSON array of 3-5 strings. Include "singapore" in each:
 async function claudeBlueOceanFromCategory(
   businessName: string,
   placeTypes: string[],
-  apiKey: string
+  apiKey: string,
+  country: AuditCountry
 ): Promise<string[]> {
-  const prompt = `You are a Singapore Local SEO expert.
+  const countryLabel = COUNTRY_LABELS[country];
+  const prompt = `You are a Local SEO expert working on a business in ${countryLabel}.
 
 Generate 3-5 BLUE OCEAN keyword estimates for this business category.
 Blue Ocean = niche subtypes with lower competition than the main category.
@@ -234,12 +257,13 @@ Blue Ocean = niche subtypes with lower competition than the main category.
 Business: ${businessName}
 Category signals: ${placeTypes.slice(0, 6).join(", ")}
 
-Generate niche variations common in this category in Singapore — specific service types, dietary styles, treatment names, or occasion-specific terms that a typical business in this category might offer.
+Generate niche variations common in this category in ${countryLabel} — specific service types, dietary styles, treatment names, or occasion-specific terms that a typical business in this category might offer.
 
 Note: These are estimated — we don't have confirmed website data for this business.
 
-Return ONLY a JSON array of 3-5 strings. Include "singapore" in each:
-["keyword one singapore", "keyword two singapore", "keyword three singapore"]`;
+Return ONLY a JSON array of 3-5 strings.
+${geoKeywordRule(country)}
+["keyword one", "keyword two", "keyword three"]`;
 
   try {
     const text = await callClaude(prompt, apiKey, 300);
@@ -260,12 +284,13 @@ async function generateBlueOcean(
   placeTypes: string[],
   reviews: Array<{ text: string; rating: number }> | undefined,
   editorialSummary: string | undefined,
-  apiKey: string
+  apiKey: string,
+  country: AuditCountry
 ): Promise<{ keywords: string[]; source: string }> {
   // Source 1: Website (highest quality — confirmed specifics)
   if (websiteContent.length > 200) {
     console.log("[keyword-intel] Blue Ocean: trying Source 1 (website)");
-    const result = await claudeBlueOceanFromWebsite(businessName, websiteContent, apiKey);
+    const result = await claudeBlueOceanFromWebsite(businessName, websiteContent, apiKey, country);
     if (result.length > 0) return { keywords: result, source: "website" };
     console.log("[keyword-intel] Blue Ocean Source 1 empty — falling back");
   }
@@ -280,7 +305,7 @@ async function generateBlueOcean(
   if (reviewText.length > 50 || hasSummary) {
     console.log("[keyword-intel] Blue Ocean: trying Source 2 (GBP listing)");
     const result = await claudeBlueOceanFromGBP(
-      businessName, placeTypes, reviewText, editorialSummary ?? "", apiKey
+      businessName, placeTypes, reviewText, editorialSummary ?? "", apiKey, country
     );
     if (result.length > 0) return { keywords: result, source: "gbp_listing" };
     console.log("[keyword-intel] Blue Ocean Source 2 empty — falling back");
@@ -288,7 +313,7 @@ async function generateBlueOcean(
 
   // Source 3: Category knowledge (weakest — pure estimation)
   console.log("[keyword-intel] Blue Ocean: using Source 3 (category fallback)");
-  const result = await claudeBlueOceanFromCategory(businessName, placeTypes, apiKey);
+  const result = await claudeBlueOceanFromCategory(businessName, placeTypes, apiKey, country);
   return { keywords: result, source: "estimated" };
 }
 
@@ -299,25 +324,27 @@ async function getRedOceanKeywords(
   address: string,
   neighbourhood: string,
   placeTypes: string[],
-  apiKey: string
+  apiKey: string,
+  country: AuditCountry
 ): Promise<string[]> {
-  const prompt = `You are a Singapore Local SEO expert.
+  const countryLabel = COUNTRY_LABELS[country];
+  const prompt = `You are a Local SEO expert working on a business in ${countryLabel}.
 
 Business: ${businessName}
 Address: ${address}
-Neighbourhood: ${neighbourhood || "Singapore"}
+Neighbourhood: ${neighbourhood || countryLabel}
 Google business types: ${(placeTypes || []).slice(0, 5).join(", ")}
 
-Generate exactly 3 RED OCEAN keywords — broad category terms that many competitors are already fighting to rank for on Google Maps in Singapore.
+Generate exactly 3 RED OCEAN keywords — broad category terms that many competitors are already fighting to rank for on Google Maps in ${countryLabel}.
 
 Rules:
 - Each keyword must be a general category search (e.g., "digital marketing agency singapore")
-- Each keyword must include "singapore"
+${geoKeywordRule(country)}
 - These are the most searched terms in this business category
 - NOT business-specific — these are what ANY similar business would want to rank for
 - Return ONLY a JSON array of 3 strings, nothing else
 
-Return format: ["broad category term singapore", "another category term singapore", "third category term singapore"]`;
+Return format: ["broad category term", "another category term", "third category term"]`;
 
   try {
     const text = await callClaude(prompt, apiKey, 200);
@@ -353,6 +380,11 @@ function generateInsight(
   if (type === "red" && clientRank === 0) {
     return `Not found in top 20. ${compName} leads with ${compReviews} reviews vs your ${businessReviewCount} — not better service, just more SEO runway.`;
   }
+  // Already #1-#3: never frame this as something still to "overtake" —
+  // the opportunity is holding/defending the spot, not closing a gap.
+  if (type === "red" && clientRank >= 1 && clientRank <= 3) {
+    return `You're #${clientRank} at your location, right alongside ${compName} (${compReviews} reviews). Hold this position and keep closing the gap at surrounding points.`;
+  }
   if (type === "red" && clientRank <= 5) {
     return `You rank #${clientRank}. ${compName} leads with ${compReviews} reviews — close enough to overtake in 60 days.`;
   }
@@ -366,7 +398,7 @@ function generateWhyTheyRank(
   business: { reviewCount: number; rating: number }
 ): string {
   if (comp.reviewCount > business.reviewCount * 3) {
-    return `${comp.reviewCount.toLocaleString()} reviews vs your ${business.reviewCount} — review volume is Google's primary Maps ranking signal.`;
+    return `${comp.reviewCount.toLocaleString()} reviews vs your ${business.reviewCount} — review volume is a major ranking signal.`;
   }
   if (comp.reviewCount > business.reviewCount) {
     return `${comp.reviewCount.toLocaleString()} reviews to your ${business.reviewCount} — a gap closeable with a consistent review generation system.`;
@@ -442,7 +474,8 @@ async function getMapsDifficulty(
   shortName: string,
   clientAddress: string,
   businessReviewCount: number,
-  clientTypes: string[]
+  clientTypes: string[],
+  country: AuditCountry
 ): Promise<EnrichedKeyword> {
   const fallback = (msg = "Live data unavailable."): EnrichedKeyword => ({
     keyword,
@@ -472,7 +505,7 @@ async function getMapsDifficulty(
             keyword,
             location_coordinate: `${lat},${lng},2000`,
             language_code: "en",
-            location_code: 1023254,
+            location_code: LOCATION_CODES[country],
             device: "desktop",
             os: "windows",
           },
@@ -571,6 +604,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     rating = 4.0,
     reviews, editorialSummary,
   } = body;
+  const country: AuditCountry = body.country === "us" ? "us" : "sg";
 
   console.log("[keyword-intel] Input check:", {
     businessName,
@@ -603,7 +637,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     // Phase 1a: Website scrape + Red Ocean — parallel
     const [websiteContent, redRaw] = await Promise.all([
       websiteUrl ? scrapeWebsite(websiteUrl) : Promise.resolve(""),
-      getRedOceanKeywords(businessName, address, neighbourhood, placeTypes, apiKey),
+      getRedOceanKeywords(businessName, address, neighbourhood, placeTypes, apiKey, country),
     ]);
 
     console.log("[keyword-intel] Website scraped:", websiteContent.length, "chars");
@@ -611,7 +645,7 @@ export async function POST(req: Request): Promise<NextResponse> {
 
     // Phase 1b: Blue Ocean — three-source fallback (depends on websiteContent)
     const { keywords: blueRaw, source: blueOceanSource } = await generateBlueOcean(
-      businessName, websiteContent, placeTypes, reviews, editorialSummary, apiKey
+      businessName, websiteContent, placeTypes, reviews, editorialSummary, apiKey, country
     );
 
     console.log("[keyword-intel] Blue Ocean raw:", blueRaw, "source:", blueOceanSource);
@@ -635,7 +669,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     // Phase 2: DataForSEO Maps for each keyword — parallel
     const enriched = await Promise.all(
       combined.map(({ keyword, type }) =>
-        getMapsDifficulty(keyword, type, lat, lng, businessName, shortName, address, reviewCount, placeTypes)
+        getMapsDifficulty(keyword, type, lat, lng, businessName, shortName, address, reviewCount, placeTypes, country)
       )
     );
 

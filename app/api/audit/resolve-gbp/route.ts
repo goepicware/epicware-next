@@ -4,6 +4,11 @@ import { rateLimitResponse } from "@/lib/rate-limit";
 const PLACES_API = "https://maps.googleapis.com/maps/api/place";
 const SG_CENTER = "1.3521,103.8198";
 
+// No single center+radius usefully biases a Text Search across a country the
+// size of the US, so the US path relies on the query text alone (the
+// extracted name + any address fragment already in the share URL).
+type AuditCountry = "sg" | "us";
+
 function formatCategory(raw: string) {
   return raw.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
@@ -35,10 +40,10 @@ async function getPlaceDetails(placeId: string, key: string) {
   };
 }
 
-async function textSearch(query: string, key: string) {
+async function textSearch(query: string, key: string, country: AuditCountry) {
+  const bias = country === "sg" ? `&location=${SG_CENTER}&radius=50000` : "";
   const res = await fetch(
-    `${PLACES_API}/textsearch/json?query=${encodeURIComponent(query)}` +
-      `&location=${SG_CENTER}&radius=50000&key=${key}`
+    `${PLACES_API}/textsearch/json?query=${encodeURIComponent(query)}${bias}&key=${key}`
   );
   const data = await res.json();
   const placeId = data.results?.[0]?.place_id;
@@ -55,7 +60,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Maps API key not configured" }, { status: 500 });
   }
 
-  let body: { url?: string };
+  let body: { url?: string; country?: string };
   try {
     body = await req.json();
   } catch {
@@ -66,6 +71,7 @@ export async function POST(req: NextRequest) {
   if (!url) {
     return NextResponse.json({ error: "No URL provided" }, { status: 400 });
   }
+  const country: AuditCountry = body.country === "us" ? "us" : "sg";
 
   // Step 1 — follow redirects to get the final URL
   let finalUrl = url;
@@ -132,7 +138,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Step 3 — Places Text Search → Details
-  const result = await textSearch(searchQuery, key);
+  const result = await textSearch(searchQuery, key, country);
   if (!result) {
     return NextResponse.json(
       { error: "No matching business found", businessName: extractedName },

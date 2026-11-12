@@ -3,27 +3,32 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { ChevronLeft, ChevronRight, Check, Plus, AlertCircle, TriangleAlert } from "lucide-react";
 import type { EnrichedKeyword } from "./types";
+import { AUDIT_COUNTRIES, type AuditCountryId } from "./countries";
 
 // ─── Quick suggestions fallback ───────────────────────────────────────────────
 
-function getQuickSuggestions(businessName: string): string[] {
+function getQuickSuggestions(businessName: string, country: AuditCountryId): string[] {
+  // "near me" works as a geo qualifier in any market; the country name only
+  // gets appended for Singapore, where it's how people actually search
+  // (Americans search by city, not "near me usa").
+  const geo = country === "sg" ? " singapore" : "";
   const n = businessName.toLowerCase();
   if (n.includes("restaurant") || n.includes("food") || n.includes("cafe") || n.includes("kebab") || n.includes("boss"))
-    return ["restaurant singapore", "food near me singapore", "best restaurant singapore"];
+    return [`restaurant${geo}`, `food near me${geo}`, `best restaurant${geo}`];
   if (n.includes("aesthetic") || n.includes("clinic") || n.includes("medical") || n.includes("health"))
-    return ["aesthetic clinic singapore", "skin treatment singapore", "facial singapore"];
+    return [`aesthetic clinic${geo}`, `skin treatment${geo}`, `facial${geo}`];
   if (n.includes("seo") || n.includes("marketing") || n.includes("digital") || n.includes("agency"))
-    return ["seo agency singapore", "local seo singapore", "digital marketing singapore"];
+    return [`seo agency${geo}`, `local seo${geo}`, `digital marketing${geo}`];
   if (n.includes("salon") || n.includes("beauty") || n.includes("nail") || n.includes("hair"))
-    return ["beauty salon singapore", "nail salon singapore", "facial treatment singapore"];
+    return [`beauty salon${geo}`, `nail salon${geo}`, `facial treatment${geo}`];
   if (n.includes("dental") || n.includes("dentist"))
-    return ["dentist singapore", "dental clinic singapore", "teeth whitening singapore"];
+    return [`dentist${geo}`, `dental clinic${geo}`, `teeth whitening${geo}`];
   if (n.includes("hotel") || n.includes("hostel") || n.includes("accommodation"))
-    return ["hotel singapore", "hotel near me singapore", "best hotel singapore"];
+    return [`hotel${geo}`, `hotel near me${geo}`, `best hotel${geo}`];
   if (n.includes("gym") || n.includes("fitness") || n.includes("yoga") || n.includes("pilates"))
-    return ["gym singapore", "fitness class singapore", "personal trainer singapore"];
+    return [`gym${geo}`, `fitness class${geo}`, `personal trainer${geo}`];
   const first = businessName.split(/\s+[-–—|]\s+/)[0].split(" ")[0].toLowerCase();
-  return [`${first} singapore`, `best ${first} singapore`, `${first} near me singapore`];
+  return [`${first} near me`, `best ${first}${geo}`, `${first} near me${geo}`];
 }
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -34,6 +39,7 @@ interface Props {
   keywords: EnrichedKeyword[];
   enrichmentLoading: boolean;
   blueOceanSource?: string;
+  country: AuditCountryId;
   onConfirm: (keywords: string[]) => void;
   onBack: () => void;
 }
@@ -118,8 +124,9 @@ function KeywordChip({
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function StepKeywords({
-  businessName, keywords, enrichmentLoading, blueOceanSource, onConfirm, onBack,
+  businessName, keywords, enrichmentLoading, blueOceanSource, country, onConfirm, onBack,
 }: Props) {
+  const countryLabel = AUDIT_COUNTRIES[country].labelWithArticle;
   const redOcean = keywords.filter((k) => k.type === "red");
   const blueOcean = keywords.filter((k) => k.type === "blue");
   const allKnown = useMemo(() => new Set(keywords.map((k) => k.keyword)), [keywords]);
@@ -193,7 +200,7 @@ export default function StepKeywords({
         <div className={`bg-white rounded-2xl shadow-sm border border-gray-100 p-8 ${shake ? "kw-shake" : ""}`}>
           <h2 className="text-xl font-bold text-gray-900 mb-1">Choose keywords to audit</h2>
           <p className="text-gray-500 text-sm mb-6">
-            Select up to 3. We&apos;ll scan your Google Maps rankings for each across Singapore.
+            Select up to 3. We&apos;ll scan your Google Maps rankings for each across {countryLabel}.
           </p>
 
           {showMaxMsg && (
@@ -213,7 +220,7 @@ export default function StepKeywords({
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                {getQuickSuggestions(businessName).map((kw) => (
+                {getQuickSuggestions(businessName, country).map((kw) => (
                   <button
                     key={kw}
                     type="button"

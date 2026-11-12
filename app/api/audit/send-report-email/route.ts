@@ -8,8 +8,9 @@ interface ReportPayload {
   gbpRating: number; gbpReviewCount: number;
   scorecard: Scorecard; aiSummary: string;
   checkItems: CheckItemSummary[]; recommendations: string[];
-  invisibleGridPoints: number; totalGridPoints: number;
+  top3GridPoints: number; totalGridPoints: number;
   estimatedMonthlyRevenue: number; neighbourhood: string; shortBusinessName: string;
+  currencySymbol?: string; locale?: string;
 }
 
 function scoreBand(s: number) {
@@ -26,6 +27,8 @@ function statusBadge(status: "pass" | "fail" | "unknown") {
 
 function generateReportAttachmentHtml(report: ReportPayload, name: string, date: string): string {
   const overall = scoreBand(report.scorecard.overall);
+  const currencySymbol = report.currencySymbol ?? "S$";
+  const missingTop3 = report.totalGridPoints - report.top3GridPoints;
 
   const scorecardRows = [
     { label: "Profile", val: report.scorecard.profile },
@@ -89,11 +92,11 @@ function generateReportAttachmentHtml(report: ReportPayload, name: string, date:
 <div style="background:#2563EB;padding:18px 28px;">
   <p style="font-size:11px;color:#bfdbfe;font-weight:600;text-transform:uppercase;margin-bottom:4px;">Overall Score</p>
   <p style="font-size:32px;font-weight:800;color:#fff;line-height:1;">${report.scorecard.overall}<span style="font-size:14px;font-weight:400;color:#93c5fd;"> /100 — ${overall.label}</span></p>
-  <p style="font-size:12px;color:#bfdbfe;margin-top:8px;">${report.gbpReviewCount} reviews · ${report.gbpRating}★ rating · Estimated missed revenue: <strong style="color:#fff;">S$${report.estimatedMonthlyRevenue.toLocaleString()}/mo</strong></p>
+  <p style="font-size:12px;color:#bfdbfe;margin-top:8px;">${report.gbpReviewCount} reviews · ${report.gbpRating}★ rating · Estimated missed revenue: <strong style="color:#fff;">${currencySymbol}${report.estimatedMonthlyRevenue.toLocaleString()}/mo</strong></p>
 </div>
 
 <div class="section">
-  <p style="font-size:18px;font-weight:800;color:#0F1B2D;line-height:1.3;">${report.gbpReviewCount} reviews. ${report.gbpRating}★ rating.<br><span style="color:#dc2626;">Invisible in ${report.invisibleGridPoints} of ${report.totalGridPoints} grid points.</span></p>
+  <p style="font-size:18px;font-weight:800;color:#0F1B2D;line-height:1.3;">${report.gbpReviewCount} reviews. ${report.gbpRating}★ rating.<br><span style="color:#dc2626;">Top 3 in ${report.top3GridPoints} of ${report.totalGridPoints} grid points.</span></p>
 </div>
 
 <div class="section" style="background:#eff6ff;">
@@ -104,9 +107,9 @@ function generateReportAttachmentHtml(report: ReportPayload, name: string, date:
 <div class="section">
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
     <div style="padding:16px;text-align:center;">
-      <p style="font-size:26px;font-weight:800;color:#2563EB;">${report.invisibleGridPoints}/${report.totalGridPoints}</p>
-      <p style="font-size:11px;font-weight:700;color:#0f172a;margin-top:4px;">Grid points invisible</p>
-      <p style="font-size:10px;color:#6b7280;margin-top:3px;line-height:1.4;">You rank at centre — missing from ${report.invisibleGridPoints} surrounding areas</p>
+      <p style="font-size:26px;font-weight:800;color:#2563EB;">${report.top3GridPoints}/${report.totalGridPoints}</p>
+      <p style="font-size:11px;font-weight:700;color:#0f172a;margin-top:4px;">Grid points ranking top 3</p>
+      <p style="font-size:10px;color:#6b7280;margin-top:3px;line-height:1.4;">Missing from the top 3 at ${missingTop3} surrounding areas</p>
     </div>
     <div style="padding:16px;text-align:center;border-left:1px solid #e5e7eb;border-right:1px solid #e5e7eb;">
       <p style="font-size:26px;font-weight:800;color:#2563EB;">${report.gbpRating}★</p>
@@ -166,6 +169,9 @@ export async function POST(req: NextRequest) {
   const overall = scoreBand(report.scorecard.overall);
   const passes = report.checkItems.filter((c) => c.status === "pass").length;
   const fails = report.checkItems.filter((c) => c.status === "fail").length;
+  const currencySymbol = report.currencySymbol ?? "S$";
+  const locale = report.locale ?? "en-SG";
+  const missingTop3 = report.totalGridPoints - report.top3GridPoints;
 
   const scorecardRows = [
     { label: "Profile", val: report.scorecard.profile },
@@ -192,7 +198,7 @@ export async function POST(req: NextRequest) {
     </div>`
   ).join("");
 
-  const generatedDate = new Date().toLocaleString("en-SG", { timeZone: "Asia/Singapore", day: "numeric", month: "long", year: "numeric" });
+  const generatedDate = new Date().toLocaleString(locale, { day: "numeric", month: "long", year: "numeric" });
 
   const html = `<!DOCTYPE html><html><head><meta charset="utf-8"></head>
 <body style="margin:0;padding:0;background:#f0f4f8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
@@ -205,7 +211,7 @@ export async function POST(req: NextRequest) {
   <div style="background:#2563EB;padding:20px 28px;">
     <p style="margin:0 0 2px;font-size:12px;color:#bfdbfe;font-weight:600;text-transform:uppercase;">Overall Score</p>
     <p style="margin:0;font-size:36px;font-weight:800;color:#fff;line-height:1;">${report.scorecard.overall}<span style="font-size:16px;font-weight:400;color:#93c5fd;">/100 — ${overall.label}</span></p>
-    <p style="margin:8px 0 0;font-size:13px;color:#bfdbfe;">Estimated missed revenue: <strong style="color:#fff;">S$${report.estimatedMonthlyRevenue.toLocaleString()}/mo</strong></p>
+    <p style="margin:8px 0 0;font-size:13px;color:#bfdbfe;">Estimated missed revenue: <strong style="color:#fff;">${currencySymbol}${report.estimatedMonthlyRevenue.toLocaleString()}/mo</strong></p>
   </div>
   <div style="background:#fff;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 16px 16px;padding:28px;">
     <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:18px;margin-bottom:24px;">
@@ -219,7 +225,7 @@ export async function POST(req: NextRequest) {
     <table style="width:100%;border-collapse:collapse;margin-bottom:24px;">${checkRows}</table>
     <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:16px;margin-bottom:24px;">
       <p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#dc2626;">Map Visibility Gap</p>
-      <p style="margin:0;font-size:13px;color:#7f1d1d;">Invisible in <strong>${report.invisibleGridPoints} of ${report.totalGridPoints} grid points</strong> across ${report.neighbourhood}.</p>
+      <p style="margin:0;font-size:13px;color:#7f1d1d;">Missing from the top 3 at <strong>${missingTop3} of ${report.totalGridPoints} grid points</strong> across ${report.neighbourhood}.</p>
     </div>
     <h2 style="margin:0 0 14px;font-size:16px;font-weight:700;color:#0f172a;">Top Recommendations</h2>
     <div style="margin-bottom:28px;">${recsHtml}</div>
