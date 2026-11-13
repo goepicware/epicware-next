@@ -578,6 +578,12 @@ export default function FreeAuditWizard() {
   // button on the results screen, so however many attempts it takes to
   // get a 2xx, Google Ads still sees exactly one transaction_id.
   const [leadTransactionId] = useState(() => createLeadTransactionId());
+  // Honeypot + time-trap, checked server-side in app/api/audit-lead/route.ts.
+  // formRenderedAt is captured once at wizard mount (step 1), not step 4,
+  // since a bot that races through the whole wizard in under 2.5s is
+  // exactly the case this is meant to catch.
+  const [website, setWebsite] = useState("");
+  const [formRenderedAt] = useState(() => Date.now());
 
   // Step 5
   const [isProcessing, setIsProcessing] = useState(false);
@@ -711,6 +717,8 @@ export default function FreeAuditWizard() {
       websiteUrl,
       transactionId: leadTransactionId,
       ...getStoredClickIds(),
+      website,
+      formRenderedAt,
     });
 
     setStep(5); setIsProcessing(true);
@@ -774,7 +782,7 @@ export default function FreeAuditWizard() {
         setResult((prev) => (prev ? { ...prev, aiVisibility: aiVisData } : prev));
       }
     });
-  }, [name, email, phone, leadType, consent, placeId, keywords, selectedEnrichedKeywords, topCompetitors, radiusKm, gbpSnapshot, websiteUrl, leadTransactionId, submitLeadWithRetry, country]);
+  }, [name, email, phone, leadType, consent, placeId, keywords, selectedEnrichedKeywords, topCompetitors, radiusKm, gbpSnapshot, websiteUrl, leadTransactionId, submitLeadWithRetry, country, website, formRenderedAt]);
 
   const scoreColour = (s: number) => s >= 70 ? "text-emerald-600" : s >= 50 ? "text-yellow-600" : "text-red-600";
   const countryLabel = AUDIT_COUNTRIES[country].labelWithArticle;
@@ -1086,6 +1094,18 @@ ${result.enrichedKeywords.length > 0 ? `
                 <p className="text-blue-100 text-sm">Enter your details to unlock the full audit.</p>
               </div>
               <div className="p-6 space-y-4">
+                <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", height: 0, width: 0, overflow: "hidden" }}>
+                  <label htmlFor="free-audit-company-website">Company Website</label>
+                  <input
+                    id="free-audit-company-website"
+                    name="company_website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                  />
+                </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="col-span-2">
                     <label className="block text-xs font-semibold text-gray-600 mb-1">Full Name *</label>
@@ -1165,6 +1185,8 @@ ${result.enrichedKeywords.length > 0 ? `
                       websiteUrl,
                       transactionId: leadTransactionId,
                       ...getStoredClickIds(),
+                      website,
+                      formRenderedAt,
                     })}
                     className="text-amber-900 font-semibold underline shrink-0"
                   >

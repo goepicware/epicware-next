@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimitResponse } from "@/lib/rate-limit";
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Mirrors app/api/contact/route.ts's honeypot + time-trap — shared here
+// since every lead form (ServiceLeadCTA, AuditLeadForm, FreeAuditWizard,
+// landing LeadForm) posts to this one route.
+const MIN_SUBMIT_MS = 2500;
+
 /**
  * Durable capture, logged before anything that can fail (validation,
  * Resend). A lead must never be lost silently — if Supabase env vars
@@ -155,6 +161,7 @@ export async function POST(req: NextRequest) {
     clinicName, mapsLink, outlets,
     sourcePath,
     gclid, gbraid, wbraid,
+    website, formRenderedAt,
   } = body as {
     name?: string; email?: string; phone?: string; leadType?: string;
     businessName?: string; businessAddress?: string; websiteUrl?: string;
@@ -165,10 +172,29 @@ export async function POST(req: NextRequest) {
     reviewManagementProfileLink?: string;
     clinicName?: string; mapsLink?: string; outlets?: string;
     gclid?: string; gbraid?: string; wbraid?: string;
+    website?: string; formRenderedAt?: number;
   };
+
+  // Honeypot: real users never see or fill this field. Fake success (not
+  // a 400) so a bot doesn't learn to leave it blank next time.
+  if (typeof website === "string" && website.trim() !== "") {
+    console.log("[LEAD_BLOCKED]", JSON.stringify({ source: "audit-lead", reason: "honeypot", leadType, receivedAt: new Date().toISOString() }));
+    return NextResponse.json({ success: true });
+  }
+
+  // Time-trap: these forms all take at least a few seconds for a human to
+  // fill in. formRenderedAt is optional for now since not every lead form
+  // has been updated to send it yet — only enforced when present.
+  if (typeof formRenderedAt === "number" && Date.now() - formRenderedAt < MIN_SUBMIT_MS) {
+    console.log("[LEAD_BLOCKED]", JSON.stringify({ source: "audit-lead", reason: "too-fast", leadType, elapsedMs: Date.now() - formRenderedAt }));
+    return NextResponse.json({ success: true });
+  }
 
   if (!name?.trim() || !email?.trim()) {
     return NextResponse.json({ success: false, error: "Name and email are required" }, { status: 400 });
+  }
+  if (!EMAIL_RE.test(email)) {
+    return NextResponse.json({ success: false, error: "Invalid email address" }, { status: 400 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;

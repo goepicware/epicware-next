@@ -1,9 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
+import { rateLimitResponse } from "@/lib/rate-limit";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_FIELD_LENGTH = 200;
+// Bots that fill the ContactForm honeypot script their way through every
+// field far faster than a human reads and completes this form.
+const MIN_SUBMIT_MS = 2500;
 
 export async function POST(req: NextRequest) {
+  const limited = rateLimitResponse(req, "contact");
+  if (limited) return limited;
+
   try {
     const body = await req.json();
-    const { fullName, phone, email, companyName, industry, revenueRange, outlets, interestedIn } = body;
+    const { fullName, phone, email, companyName, industry, revenueRange, outlets, interestedIn, website, formRenderedAt } = body;
 
     // Durable capture, logged before anything that can fail — same pattern
     // as app/api/audit-lead/route.ts's backupLead. Also the only place
@@ -13,6 +23,32 @@ export async function POST(req: NextRequest) {
       console.log("[LEAD_BACKUP]", JSON.stringify({ source: "contact", receivedAt: new Date().toISOString(), body }));
     } catch {
       // never block the lead on a logging failure
+    }
+
+    // Honeypot: real users never see or fill this field (see ContactForm.tsx).
+    // Return a fake success instead of a 400 so the bot doesn't learn to
+    // leave it blank next time.
+    if (typeof website === "string" && website.trim() !== "") {
+      console.log("[LEAD_BLOCKED]", JSON.stringify({ source: "contact", reason: "honeypot", receivedAt: new Date().toISOString() }));
+      return NextResponse.json({ success: true });
+    }
+
+    if (typeof formRenderedAt !== "number" || Date.now() - formRenderedAt < MIN_SUBMIT_MS) {
+      console.log("[LEAD_BLOCKED]", JSON.stringify({ source: "contact", reason: "too-fast", elapsedMs: typeof formRenderedAt === "number" ? Date.now() - formRenderedAt : null }));
+      return NextResponse.json({ success: true });
+    }
+
+    const requiredFields = { fullName, phone, email, companyName, industry, interestedIn };
+    for (const [field, value] of Object.entries(requiredFields)) {
+      if (typeof value !== "string" || !value.trim()) {
+        return NextResponse.json({ error: `${field} is required` }, { status: 400 });
+      }
+      if (value.length > MAX_FIELD_LENGTH) {
+        return NextResponse.json({ error: `${field} is too long` }, { status: 400 });
+      }
+    }
+    if (!EMAIL_RE.test(email)) {
+      return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
     }
 
     const apiKey = process.env.RESEND_API_KEY;

@@ -104,6 +104,9 @@ function LeadForm({
   const [formError, setFormError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"idle" | "saved" | "failed">("idle");
+  // Honeypot + time-trap, checked server-side in app/api/audit-lead/route.ts.
+  const [website, setWebsite] = useState("");
+  const [formRenderedAt] = useState(() => Date.now());
 
   // Mirrors app/free-audit/FreeAuditWizard.tsx's submitLeadWithRetry: up
   // to 3 attempts with a short backoff, since the backend durably logs
@@ -174,10 +177,12 @@ function LeadForm({
         transactionId: createLeadTransactionId(),
         ...getStoredClickIds(),
         ...Object.fromEntries(config.fields.map((f) => [f.payloadKey, fieldValues[f.id] ?? ""])),
+        website,
+        formRenderedAt,
       });
       setSubmitting(false);
     },
-    [name, email, phone, fieldValues, countrySlug, sourcePath, config, submitWithRetry]
+    [name, email, phone, fieldValues, countrySlug, sourcePath, config, submitWithRetry, website, formRenderedAt]
   );
 
   if (saveStatus === "saved") {
@@ -195,6 +200,18 @@ function LeadForm({
       <h3 className="font-display font-bold text-foreground text-xl mb-1">{config.formTitle}</h3>
       <p className="text-sm text-muted-foreground mb-6">{config.formSubtitle}</p>
       <form onSubmit={handleSubmit} className="space-y-4">
+        <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", height: 0, width: 0, overflow: "hidden" }}>
+          <label htmlFor="lead-company-website">Company Website</label>
+          <input
+            id="lead-company-website"
+            name="company_website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <label htmlFor="lead-name" className="text-sm font-medium text-foreground">
