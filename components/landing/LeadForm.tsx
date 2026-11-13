@@ -33,7 +33,7 @@ export default function LeadForm() {
       const res = await fetch("/api/audit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ businessName, whatsapp, businessType, website, formRenderedAt }),
+        body: JSON.stringify({ leadType: "landing-whatsapp", businessName, whatsapp, businessType, website, formRenderedAt }),
       });
       const data = await res.json();
       if (data.success) {
