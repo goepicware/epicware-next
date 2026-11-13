@@ -9,13 +9,13 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "Best GEO Agency in Singapore | AI Search Visibility | Epicware" },
+  title: { absolute: "GEO Agency in Singapore | AI Search Visibility | Epicware" },
   description:
     "Looking for the best GEO or AI SEO agency in Singapore? Epicware builds AI visibility so ChatGPT, Gemini and Google AI Overviews recommend you.",
   alternates: { canonical: "https://www.epicware.ai/locations/singapore/ai-search-visibility" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Best GEO Agency in Singapore | AI Search Visibility | Epicware",
+    title: "GEO Agency in Singapore | AI Search Visibility | Epicware",
     description:
       "Looking for the best GEO or AI SEO agency in Singapore? Epicware builds AI visibility so ChatGPT, Gemini and Google AI Overviews recommend you.",
     url: "https://www.epicware.ai/locations/singapore/ai-search-visibility",

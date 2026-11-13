@@ -16,7 +16,7 @@ const MANUAL_CHECKS = "review replies, how often you post updates, keywords in t
 const AI_ASSISTANTS = "ChatGPT, Claude, Gemini, Perplexity, Llama and Grok";
 
 const STEPS = [
-  "Find your business on Google Maps by name, or paste its Maps link.",
+  "Choose your market (Singapore or the United States), then find your business on Google Maps by name or paste its Maps link.",
   "Confirm the profile and pick the keywords customers search for you (we suggest some).",
   "Set the area you serve, from 1 km to 10 km around your outlet.",
   "Enter your name and email so we can send you the report.",
@@ -62,8 +62,8 @@ export default function AuditExplainer() {
 
         <h3 className="mt-8 text-lg font-semibold text-gray-900">AI search visibility</h3>
         <p className="mt-2">
-          Each assistant gets the same question: which businesses it recommends for your keyword in your part of
-          Singapore. The report shows which assistants named you and which named a competitor instead. Read more on{" "}
+          Each assistant gets the same question: which businesses it recommends for your keyword around your
+          neighbourhood. The report shows which assistants named you and which named a competitor instead. Read more on{" "}
           <Link href="/services/ai-search-visibility" className="text-[#2563EB] underline">
             how AI search visibility works
           </Link>

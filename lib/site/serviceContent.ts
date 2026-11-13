@@ -194,7 +194,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   "local-seo": {
     slug: "local-seo",
     h1: "Local SEO Services That Put You in the Map Pack, Not Just the Report",
-    metaTitle: "Local SEO Services | Rank in Google Maps & the Local Pack | Epicware",
+    metaTitle: "Local SEO Services for Google Maps | Epicware",
     heroDescription:
       "When someone nearby searches for what you sell, Google shows three businesses on a map and everyone else gets scrolled past. Local SEO is the work that decides which three — categories, citations, competitor gaps and rank tracking, measured street by street on our own software.",
     metaDescription:
@@ -501,7 +501,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   "review-management": {
     slug: "review-management",
     h1: "Review Management That Turns Every Review Into a Reason to Choose You",
-    metaTitle: "Review Management Services | Monitor, Reply & Grow Reviews | Epicware",
+    metaTitle: "Review Management Services: Monitor & Reply | Epicware",
     heroDescription:
       "Your reviews are the first thing a stranger checks before they call. We keep new reviews coming in, make sure every one gets a thoughtful reply, and show you what customers are really saying — across every location, in one place.",
     metaDescription:
