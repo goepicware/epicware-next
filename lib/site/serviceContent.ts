@@ -651,7 +651,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
   "review-removal": {
     slug: "review-removal",
-    h1: "Review Removal",
+    h1: "Google Review Removal Service",
     heroDescription:
       "Removing fake and policy-violating reviews through Google's official channels — refunded in full if we can't get it taken down.",
     outcomes: [
