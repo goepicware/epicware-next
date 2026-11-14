@@ -38,7 +38,7 @@ export default function Page() {
       ]}
       subtitle={
         <>
-          Three <Link href="/services/review-removal/fake-review-removal">competitor-posted fake reviews</Link> were dragging a Singapore GP clinic network&apos;s rating below 4.0. Epicware removed them and built a review generation system that now generates 20+ verified patient reviews per month.
+          Three <Link href="/services/review-removal">competitor-posted fake reviews</Link> were dragging a Singapore GP clinic network&apos;s rating below 4.0. Epicware removed them and built a review generation system that now generates 20+ verified patient reviews per month.
         </>
       }
       trustSignals={["3 Fake Reviews Removed", "3.8 → 4.7 Rating", "Multi-Clinic", "Patient Trust Rebuilt"]}

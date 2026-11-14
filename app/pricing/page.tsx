@@ -8,15 +8,15 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { PRICING } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
-  title: { absolute: "Pricing: SEO, Local SEO & Reputation Plans | Epicware" },
+  title: { absolute: `SEO Pricing in Singapore: Plans from S$${PRICING.plans.foundation.monthly}/mo | Epicware` },
   description:
-    "Compare Epicware plans for local SEO, website SEO, AI search and review management. Clear monthly plans with no long lock-in. See what each includes.",
+    "SEO pricing in Singapore, published: Epicware plans run S$299 to S$3,800 a month for local SEO, Google Maps, AI search and reviews. Month to month.",
   alternates: { canonical: "https://www.epicware.ai/pricing" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Pricing: SEO, Local SEO & Reputation Plans | Epicware",
+    title: `SEO Pricing in Singapore: Plans from S$${PRICING.plans.foundation.monthly}/mo | Epicware`,
     description:
-      "Compare Epicware plans for local SEO, website SEO, AI search and review management. Clear monthly plans with no long lock-in. See what each includes.",
+      "SEO pricing in Singapore, published: Epicware plans run S$299 to S$3,800 a month for local SEO, Google Maps, AI search and reviews. Month to month.",
     url: "https://www.epicware.ai/pricing",
   },
 };
@@ -25,16 +25,20 @@ export const metadata: Metadata = {
 // accordion below and the FAQPage JSON-LD, so the two can never drift apart.
 const FAQS: { q: string; a: string }[] = [
   {
+    q: "How much does SEO cost in Singapore with Epicware?",
+    a: `Epicware's plans cost S$${PRICING.plans.foundation.monthly} to S$${PRICING.plans.fullStack.monthly.toLocaleString("en-SG")} a month. Foundation (S$${PRICING.plans.foundation.monthly}) covers review collection and Google Business Profile optimisation; Authority (S$${PRICING.plans.authority.monthly}) adds full local SEO and Maps rank tracking; Domination (S$${PRICING.plans.domination.monthly.toLocaleString("en-SG")}) adds website SEO, blog content and AI search work; Full Stack (S$${PRICING.plans.fullStack.monthly.toLocaleString("en-SG")} plus ad spend) adds Google and Meta ads. Each extra outlet is S$${PRICING.plans.foundation.perOutlet}/month, and annual billing saves 15%.`,
+  },
+  {
     q: "I've been burned by an SEO agency before. Why is Epicware different?",
     a: "Most agencies sell advice and leave the implementation to you, start their guarantee clock in month 2, and lock you into 6–12 months prepaid. On Domination and above, Epicware publishes every page, blog post and schema change for you, starts your guarantee on day 1, and works month to month. If we miss the ranking target, we keep working free until it's achieved.",
   },
   {
     q: "How much does local SEO cost for a small business in Singapore?",
-    a: "Epicware's Foundation plan starts at $299/month and covers review management, GBP optimisation, and rank tracking for one outlet. The Authority plan at $899/month adds AI social content scheduling, full local SEO, and EpicMap rank tracking. There are no setup fees and no lock-in contracts on any plan.",
+    a: "Epicware's Foundation plan starts at $299/month and covers review collection, AI review replies, GBP optimisation and keyword research for one outlet. The Authority plan at $899/month adds full local SEO, a 19-point GBP audit, Maps grid scans and rank tracking. There are no setup fees and no lock-in contracts on any plan.",
   },
   {
     q: "Which Epicware plan is right for a clinic or restaurant with one or two outlets?",
-    a: "Most single-outlet clinics, restaurants, and salons start on the Foundation plan ($299/month), which covers review management, GBP optimisation, and rank tracking. If you need AI-generated social content or competitor analysis across districts, the Authority plan ($899/month) is the next step. Additional outlets can be added to any plan at $99/month each.",
+    a: "Most single-outlet clinics, restaurants, and salons start on the Foundation plan ($299/month), which covers review collection, AI review replies, GBP optimisation and AI social posts. If you need full local SEO, Maps grid scans, rank tracking or ongoing competitor monitoring, the Authority plan ($899/month) is the next step. Additional outlets can be added to any plan at $99/month each.",
   },
   {
     q: "How does Epicware's pricing compare with other local SEO agencies in Singapore?",
@@ -89,7 +93,7 @@ const schemaPricing = {
       item: {
         "@type": "Product",
         name: "Foundation",
-        description: "Review management, GBP optimisation, and rank tracking for a single outlet.",
+        description: "Review collection, AI review replies, and GBP optimisation for a single outlet.",
         offers: {
           "@type": "Offer",
           price: String(PRICING.plans.foundation.monthly),
@@ -238,10 +242,10 @@ export default function PricingPage() {
             TRANSPARENT PRICING · NO LOCK-IN
           </div>
           <h1 className="font-display font-bold text-foreground mb-3 leading-tight">
-            Local SEO &amp; Reputation Management Pricing — Singapore
+            SEO Pricing in Singapore: Local SEO, Maps &amp; Reviews
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-4">
-            From getting your first 50 reviews to dominating Google Search, Maps, and AI results — pick the plan that matches where you are today.
+            Epicware&apos;s SEO plans in Singapore cost S${PRICING.plans.foundation.monthly} to S${PRICING.plans.fullStack.monthly.toLocaleString("en-SG")} a month, published here so you can compare before you call. Every plan is month to month with 30 days&apos; notice, and extra outlets are S${PRICING.plans.foundation.perOutlet}/month each.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
             {["No lock-in contracts", "Cancel anytime", "Bad review removal $200, refunded if not removed"].map((t) => (
