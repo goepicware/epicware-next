@@ -43,13 +43,13 @@ const schema = {
 const CHILD_SERVICES = [
   {
     name: "Fake Review Removal",
-    href: "/services/review-removal/fake-review-removal",
+    href: "/services/review-removal",
     description:
       "Remove reviews posted by competitors, bots, or non-customers. Coordinated fake review attacks handled with batch removal requests.",
   },
   {
     name: "Unfair Review Removal",
-    href: "/services/review-removal/unfair-review-removal",
+    href: "/services/review-removal",
     description:
       "Challenge ex-employee attacks, dispute-motivated 1-star reviews, and reviews containing false factual claims.",
   },
@@ -192,7 +192,7 @@ export default function BadReviewRemovalSingaporePage() {
           <h2 className="font-display text-foreground text-center mb-10">Types of Bad Review Removal</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {CHILD_SERVICES.map((service) => (
-              <Link key={service.href} href={service.href} className="card-feature group block h-full">
+              <Link key={service.name} href={service.href} className="card-feature group block h-full">
                 <div className="card-feature-inner p-7 flex flex-col gap-4 h-full">
                   <h3 className="font-display font-semibold text-foreground text-lg leading-snug">
                     {service.name}

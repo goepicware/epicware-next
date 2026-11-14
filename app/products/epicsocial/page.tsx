@@ -199,7 +199,7 @@ export default function EpicSocialPage() {
             <p>
               EpicSocial&apos;s GBP post scheduling connects directly to the{" "}
               <Link
-                href="/services/google-business-profile/post-scheduling"
+                href="/services/google-business-profile"
                 className="text-primary font-medium hover:underline"
               >
                 GBP Post Scheduling
