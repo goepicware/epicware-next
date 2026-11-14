@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimitResponse } from "@/lib/rate-limit";
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Mirrors app/api/contact/route.ts's honeypot + time-trap — shared here
+// since every lead form (ServiceLeadCTA, AuditLeadForm, FreeAuditWizard,
+// landing LeadForm) posts to this one route.
+const MIN_SUBMIT_MS = 2500;
+
 /**
  * Durable capture, logged before anything that can fail (validation,
  * Resend). A lead must never be lost silently — if Supabase env vars
@@ -155,6 +161,8 @@ export async function POST(req: NextRequest) {
     clinicName, mapsLink, outlets,
     sourcePath,
     gclid, gbraid, wbraid,
+    website, formRenderedAt,
+    whatsapp, businessType,
   } = body as {
     name?: string; email?: string; phone?: string; leadType?: string;
     businessName?: string; businessAddress?: string; websiteUrl?: string;
@@ -165,10 +173,103 @@ export async function POST(req: NextRequest) {
     reviewManagementProfileLink?: string;
     clinicName?: string; mapsLink?: string; outlets?: string;
     gclid?: string; gbraid?: string; wbraid?: string;
+    website?: string; formRenderedAt?: number;
+    whatsapp?: string; businessType?: string;
   };
+
+  // Honeypot: real users never see or fill this field. Fake success (not
+  // a 400) so a bot doesn't learn to leave it blank next time.
+  if (typeof website === "string" && website.trim() !== "") {
+    console.log("[LEAD_BLOCKED]", JSON.stringify({ source: "audit-lead", reason: "honeypot", leadType, receivedAt: new Date().toISOString() }));
+    return NextResponse.json({ success: true });
+  }
+
+  // Time-trap: these forms all take at least a few seconds for a human to
+  // fill in. formRenderedAt is optional for now since not every lead form
+  // has been updated to send it yet — only enforced when present.
+  if (typeof formRenderedAt === "number" && Date.now() - formRenderedAt < MIN_SUBMIT_MS) {
+    console.log("[LEAD_BLOCKED]", JSON.stringify({ source: "audit-lead", reason: "too-fast", leadType, elapsedMs: Date.now() - formRenderedAt }));
+    return NextResponse.json({ success: true });
+  }
+
+  // /audit-landing's LeadForm (components/landing/LeadForm.tsx) is a
+  // WhatsApp-only quick-audit funnel — it never collects name or email, so
+  // it's handled in its own self-contained branch here (own validation, own
+  // send, own early return) rather than through the name/email gate below —
+  // that keeps `name`/`email` narrowed to `string` for every other leadType
+  // that reaches sendCtaLeadEmail further down.
+  if (leadType === "landing-whatsapp") {
+    if (!businessName?.trim() || !whatsapp?.trim()) {
+      return NextResponse.json({ success: false, error: "Business name and WhatsApp number are required" }, { status: 400 });
+    }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.warn("[audit-lead] RESEND_API_KEY not set — lead backed up to logs only, not emailed");
+      return NextResponse.json({ success: true, emailSent: false });
+    }
+
+    if (shouldSkipSend) {
+      console.log("[audit-lead] X-Epicware-Test set without X-Epicware-Test-Send — payload and Resend config validated, send skipped");
+      return NextResponse.json({ success: true, emailSent: false, skipped: true });
+    }
+
+    const landingHtml = `
+      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
+        <div style="background: #16A34A; padding: 20px 24px; border-radius: 12px 12px 0 0;">
+          <h2 style="color: white; margin: 0; font-size: 18px;">📱 New WhatsApp Audit Lead</h2>
+        </div>
+        <div style="border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px; padding: 24px;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 0; color: #6b7280; width: 160px; font-size: 14px;">Business Name</td>
+              <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${businessName}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">WhatsApp</td>
+              <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${whatsapp}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 0; color: #6b7280; font-size: 14px;">Business Type</td>
+              <td style="padding: 10px 0; font-weight: 600; font-size: 14px;">${businessType || "—"}</td>
+            </tr>
+          </table>
+          <p style="margin: 20px 0 0; font-size: 12px; color: #9ca3af; text-align: center;">
+            Submitted ${new Date().toLocaleString("en-SG", { timeZone: "Asia/Singapore" })} SGT via epicware.ai/audit-landing
+          </p>
+        </div>
+      </div>
+    `;
+    const landingText = `New WhatsApp Audit Lead\n\nBusiness Name: ${businessName}\nWhatsApp: ${whatsapp}\nBusiness Type: ${businessType || "—"}`;
+
+    try {
+      const res = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+        body: JSON.stringify({
+          from: "Epicware Audit <noreply@epicware.ai>",
+          to: ["vignesh@epicware.ai"],
+          subject: `${isTest ? "[TEST] " : ""}WhatsApp Audit Lead — ${businessName}`,
+          text: landingText,
+          html: landingHtml,
+        }),
+      });
+      if (!res.ok) {
+        console.error("[audit-lead] Resend error (landing-whatsapp):", await res.text());
+        return NextResponse.json({ success: true, emailSent: false });
+      }
+    } catch (err) {
+      console.error("[audit-lead] Resend request threw (landing-whatsapp):", err);
+      return NextResponse.json({ success: true, emailSent: false });
+    }
+    return NextResponse.json({ success: true, emailSent: true });
+  }
 
   if (!name?.trim() || !email?.trim()) {
     return NextResponse.json({ success: false, error: "Name and email are required" }, { status: 400 });
+  }
+  if (!EMAIL_RE.test(email)) {
+    return NextResponse.json({ success: false, error: "Invalid email address" }, { status: 400 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;

@@ -59,6 +59,14 @@ export default function ContactForm() {
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
+  // Honeypot + time-trap, paired with server-side checks in
+  // app/api/contact/route.ts. Bots that fill every field (including this
+  // hidden one) or submit within a couple seconds of page load get a fake
+  // "success" with no email sent, rather than a 400 that would teach the
+  // bot to leave this field alone.
+  const [website, setWebsite] = useState("");
+  const [formRenderedAt] = useState(() => Date.now());
+
   const set = (field: string, value: string) =>
     setForm((prev) => ({ ...prev, [field]: value }));
 
@@ -70,7 +78,7 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, transactionId, ...getStoredClickIds() }),
+        body: JSON.stringify({ ...form, transactionId, ...getStoredClickIds(), website, formRenderedAt }),
       });
       if (!res.ok) throw new Error("Failed");
 
@@ -103,6 +111,19 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", height: 0, width: 0, overflow: "hidden" }}>
+        <label htmlFor="company_website">Company Website</label>
+        <input
+          id="company_website"
+          name="company_website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+        />
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="space-y-1.5">
           <label htmlFor="fullName" className="text-sm font-medium text-foreground">Full Name <span className="text-destructive">*</span></label>

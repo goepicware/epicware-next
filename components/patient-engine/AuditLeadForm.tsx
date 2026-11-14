@@ -36,6 +36,9 @@ export default function AuditLeadForm() {
   const [formError, setFormError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"idle" | "saved" | "failed">("idle");
+  // Honeypot + time-trap, checked server-side in app/api/audit-lead/route.ts.
+  const [website, setWebsite] = useState("");
+  const [formRenderedAt] = useState(() => Date.now());
 
   // Mirrors ServiceLeadCTA's submitWithRetry — up to 3 attempts with a
   // short backoff; the backend durably logs the lead (LEAD_BACKUP) before
@@ -111,10 +114,12 @@ export default function AuditLeadForm() {
         outlets,
         transactionId: createLeadTransactionId(),
         ...getStoredClickIds(),
+        website,
+        formRenderedAt,
       });
       setSubmitting(false);
     },
-    [name, email, phone, clinicName, mapsLink, outlets, submitWithRetry]
+    [name, email, phone, clinicName, mapsLink, outlets, submitWithRetry, website, formRenderedAt]
   );
 
   if (saveStatus === "saved") {
@@ -137,6 +142,18 @@ export default function AuditLeadForm() {
         what that&apos;s costing you.
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
+        <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", height: 0, width: 0, overflow: "hidden" }}>
+          <label htmlFor="pe-audit-company-website">Company Website</label>
+          <input
+            id="pe-audit-company-website"
+            name="company_website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <label htmlFor="pe-audit-name" className="text-sm font-medium text-foreground">

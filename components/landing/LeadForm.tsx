@@ -21,6 +21,9 @@ export default function LeadForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  // Honeypot + time-trap, checked server-side in app/api/audit-lead/route.ts.
+  const [website, setWebsite] = useState("");
+  const [formRenderedAt] = useState(() => Date.now());
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -30,7 +33,7 @@ export default function LeadForm() {
       const res = await fetch("/api/audit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ businessName, whatsapp, businessType }),
+        body: JSON.stringify({ leadType: "landing-whatsapp", businessName, whatsapp, businessType, website, formRenderedAt }),
       });
       const data = await res.json();
       if (data.success) {
@@ -66,6 +69,18 @@ export default function LeadForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px", height: 0, width: 0, overflow: "hidden" }}>
+                <label htmlFor="landing-company-website">Company Website</label>
+                <input
+                  id="landing-company-website"
+                  name="company_website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                />
+              </div>
               {/* Business Name */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-white/80 text-sm font-medium">Business Name</label>
