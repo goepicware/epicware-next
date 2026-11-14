@@ -307,7 +307,7 @@ export default function Post() {
             sources ChatGPT cites for each client. Our work as a{" "}
             <Link href="/locations/singapore/ai-search-visibility">GEO agency in Singapore</Link> starts
             with the sources AI tools quote.{" "}
-            <Link href="/services/ai-search-visibility/ai-citation-building">
+            <Link href="/services/ai-search-visibility">
               AI citation building
             </Link>{" "}
             gets your business onto the sources AI tools quote. Run a{" "}
@@ -361,7 +361,7 @@ export default function Post() {
           </p>
         </>
       }
-      ctaHref="/services/ai-search-visibility/ai-citation-building"
+      ctaHref="/services/ai-search-visibility"
       ctaLabel="Build Your AI Citation Profile"
       ctaContext="Epicware identifies and corrects inconsistencies across 100+ online data sources — ensuring your business appears accurately in AI-powered search results and local directories."
       relatedPosts={[

@@ -86,12 +86,12 @@ const LOCAL_SEO_SERVICES = [
   },
   {
     name: "GBP Post Scheduling",
-    href: "/services/google-business-profile/post-scheduling",
+    href: "/services/google-business-profile",
     description: "AI-generated weekly posts published to your GBP automatically.",
   },
   {
     name: "GBP Setup & Onboarding",
-    href: "/services/google-business-profile/setup",
+    href: "/services/google-business-profile",
     description: "Full GBP creation, verification, and configuration for new or unclaimed profiles.",
   },
   {
@@ -119,12 +119,12 @@ const AI_SERVICES = [
   },
   {
     name: "AI Citation Building",
-    href: "/services/ai-search-visibility/ai-citation-building",
+    href: "/services/ai-search-visibility",
     description: "Get your business cited as a source in AI-generated local responses.",
   },
   {
     name: "AEO (Answer Engine Optimisation)",
-    href: "/services/ai-search-visibility/aeo",
+    href: "/services/ai-search-visibility",
     description: "Structure your content so AI assistants recommend your business by name.",
   },
 ];
@@ -234,7 +234,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {REPUTATION_SERVICES.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+              <ServiceCard key={s.name} {...s} />
             ))}
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {LOCAL_SEO_SERVICES.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+              <ServiceCard key={s.name} {...s} />
             ))}
           </div>
         </div>
@@ -272,7 +272,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {AI_SERVICES.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+              <ServiceCard key={s.name} {...s} />
             ))}
           </div>
         </div>
@@ -291,7 +291,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl">
             {GROWTH_SERVICES.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+              <ServiceCard key={s.name} {...s} />
             ))}
           </div>
         </div>
