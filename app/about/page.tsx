@@ -246,7 +246,11 @@ export default function AboutPage() {
             Epicware is a digital marketing agency in Singapore with its own AI-powered software. Our
             specialists use it to get local businesses found on Google, Google Maps and AI search, win
             more reviews and protect their reputation. You never have to learn the software: our team
-            runs it for you.
+            runs it for you. See the full list of our{" "}
+            <Link href="/services" className="font-semibold text-primary hover:underline">
+              digital marketing services
+            </Link>
+            .
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
