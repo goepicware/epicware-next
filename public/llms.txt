@@ -1,6 +1,6 @@
 # Epicware
 
-> AI-powered Local SEO and Reputation Management SaaS platform helping Singapore SMBs dominate Google Maps, collect 5-star reviews automatically, and grow local revenue.
+> A digital marketing agency powered by AI, helping Singapore SMBs dominate Google Maps, collect 5-star reviews automatically, and grow local revenue — delivered using Epicware's own software (EpicMap, EpicReview, EpicEngage, EpicSocial).
 
 ## Company
 
@@ -8,7 +8,7 @@
 - Website: [https://www.epicware.ai](https://www.epicware.ai)
 - Location: Singapore
 - Founded: 2024
-- Industry: Local SEO, Reputation Management, SaaS, MarTech
+- Industry: Digital Marketing Agency, Local SEO, Reputation Management, MarTech
 
 ## Products
 

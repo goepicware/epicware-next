@@ -95,12 +95,13 @@ export default function HeroSection() {
             <div className="relative h-[420px] lg:h-[520px] overflow-hidden rounded-[36px]">
               <Image
                 src="/assets/HeroBanner.webp"
-                alt="AI Powered SEO Services in Singapore"
+                alt="AI-powered digital marketing agency in Singapore"
                 width={1448}
                 height={1086}
                 sizes="(max-width: 1024px) 100vw, 52vw"
                 className="h-full w-full object-cover object-center"
                 priority
+                fetchPriority="high"
               />
 
               <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#fbfbff] via-[#fbfbff]/70 to-transparent" />

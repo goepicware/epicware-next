@@ -94,7 +94,7 @@ const organizationSchema = {
   ],
   sameAs: [
     "https://share.google/K1DfMHlISqq4rUWnp",
-    "https://sg.linkedin.com/company/epicwareaisgL",
+    "https://sg.linkedin.com/company/epicwareaisg",
     "https://clutch.co/profile/epicware-0",
   ],
 };
@@ -112,7 +112,7 @@ const softwareSchema = {
     description: "Free GBP audit — no signup required",
   },
   description:
-    "Local SEO and Reputation Management SaaS platform for SMBs. Includes GBP optimisation, review generation, bad review removal, AI GEO visibility, and multi-outlet management.",
+    "AI-powered software suite (EpicMap, EpicReview, EpicEngage, EpicSocial) that powers Epicware's local SEO and reputation management services for Singapore SMBs — GBP optimisation, review generation, bad review removal, AI GEO visibility, and multi-outlet management.",
   url: "https://www.epicware.ai",
 };
 

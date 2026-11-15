@@ -235,7 +235,6 @@ export default function LocalSEOMappingSection() {
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 960px"
-                  priority
                 />
 
                 {/* Metric chips — anchored to bottom edge of map */}
