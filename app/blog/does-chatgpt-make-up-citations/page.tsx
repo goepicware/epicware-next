@@ -4,7 +4,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Does ChatGPT Make Up Citations? What It Means for Your Business",
+  title: "Does ChatGPT Make Up Citations? What to Know",
   description:
     "ChatGPT and AI search engines do hallucinate business citations — and the fix is accurate, consistent NAP data across the web. Here's why AI citations matter and what Singapore SMBs need to do.",
   alternates: { canonical: "https://www.epicware.ai/blog/does-chatgpt-make-up-citations" },
