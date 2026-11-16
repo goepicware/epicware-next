@@ -6,7 +6,7 @@ import { PROOF } from "@/lib/site/proof";
 const CANONICAL = "https://www.epicware.ai/blog/why-negative-reviews-hurt-clinic-reputation";
 
 export const metadata: Metadata = {
-  title: "Why Do Negative Reviews Hurt My Clinic's Reputation?",
+  title: "Why Negative Reviews Hurt Clinic Reputation",
   description:
     "Learn why negative reviews hurt your clinic's reputation in Singapore, and how Epicware helps clinics boost their online presence and attract more patients.",
   alternates: { canonical: CANONICAL },
