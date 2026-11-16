@@ -6,7 +6,7 @@ const CANONICAL =
   "https://www.epicware.ai/blog/google-business-reviews-guide";
 
 export const metadata: Metadata = {
-  title: "Google Business Reviews: Rankings and Reputation Guide",
+  title: "Google Business Reviews: Ranking & Reputation",
   description:
     "Learn how Google evaluates reviews across 6 ranking signals, why falling below 4 stars is a cliff not a slope, and how to build a review system that ranks.",
   alternates: { canonical: CANONICAL },

@@ -6,7 +6,7 @@ const CANONICAL =
   "https://www.epicware.ai/blog/reputation-management-for-local-businesses";
 
 export const metadata: Metadata = {
-  title: "Reputation Management for Local Businesses in 2026",
+  title: "Reputation Management for Local Businesses",
   description:
     "94% of consumers avoid businesses with poor reviews. What reputation management means for local SMBs in 2026, including the AI visibility gap most miss.",
   alternates: { canonical: CANONICAL },

@@ -3,7 +3,7 @@ import Link from "next/link";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
-  title: "Restaurant Multi-Outlet Growth Singapore — Case Study",
+  title: "Multi-Outlet Restaurant Case Study, Singapore",
   description: "How a Singapore F&B group managing 6 outlets grew from 45 to 200+ reviews per outlet, improved Maps rank, and centralised reputation management with Epicware.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/restaurant-multi-outlet-growth-singapore" },
   openGraph: {

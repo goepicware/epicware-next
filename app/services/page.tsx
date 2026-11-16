@@ -3,18 +3,18 @@ import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
-import { PROOF } from "@/lib/site/proof";
+import { PROOF, PRICING } from "@/lib/site/proof";
 
 export const metadata: Metadata = {
-  title: { absolute: "Services: SEO, Local SEO, AI Search & Reviews | Epicware" },
+  title: { absolute: "Digital Marketing Services in Singapore | Epicware" },
   description:
-    "Every Epicware service in one place: SEO, local SEO, Google Business Profile, AI search optimisation, review management and bad review removal.",
+    "Digital marketing services for Singapore SMBs: local SEO, Google Maps, AI search, reviews, bad review removal, social posting and Meta/Google ads.",
   alternates: { canonical: "https://www.epicware.ai/services" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Services: SEO, Local SEO, AI Search & Reviews | Epicware",
+    title: "Digital Marketing Services in Singapore | Epicware",
     description:
-      "Every Epicware service in one place: SEO, local SEO, Google Business Profile, AI search optimisation, review management and bad review removal.",
+      "Digital marketing services for Singapore SMBs: local SEO, Google Maps, AI search, reviews, bad review removal, social posting and Meta/Google ads.",
     url: "https://www.epicware.ai/services",
   },
 };
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Local SEO & Reputation Management Services Singapore",
-  serviceType: "Local SEO and Reputation Management",
+  name: "Digital Marketing Services Singapore",
+  serviceType: "Digital Marketing",
   description:
-    "Epicware's full service suite for Singapore SMBs — review management, GBP optimisation, bad review removal, AI visibility, and growth tools.",
+    "Epicware's digital marketing services for Singapore SMBs — local SEO, Google Business Profile optimisation, AI search visibility, review management, bad review removal, social scheduling, and Meta and Google ad management.",
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   areaServed: {
     "@type": "Country",
     name: "Singapore",
   },
-  url: "https://epicware.ai/services",
+  url: "https://www.epicware.ai/services",
 };
 
 const TRUST_SIGNALS = [
@@ -86,12 +86,12 @@ const LOCAL_SEO_SERVICES = [
   },
   {
     name: "GBP Post Scheduling",
-    href: "/services/google-business-profile/post-scheduling",
+    href: "/services/google-business-profile",
     description: "AI-generated weekly posts published to your GBP automatically.",
   },
   {
     name: "GBP Setup & Onboarding",
-    href: "/services/google-business-profile/setup",
+    href: "/services/google-business-profile",
     description: "Full GBP creation, verification, and configuration for new or unclaimed profiles.",
   },
   {
@@ -119,12 +119,12 @@ const AI_SERVICES = [
   },
   {
     name: "AI Citation Building",
-    href: "/services/ai-search-visibility/ai-citation-building",
+    href: "/services/ai-search-visibility",
     description: "Get your business cited as a source in AI-generated local responses.",
   },
   {
     name: "AEO (Answer Engine Optimisation)",
-    href: "/services/ai-search-visibility/aeo",
+    href: "/services/ai-search-visibility",
     description: "Structure your content so AI assistants recommend your business by name.",
   },
 ];
@@ -174,7 +174,7 @@ export default function ServicesPage() {
         </div>
         <div className="container mx-auto px-6 max-w-4xl relative z-10 text-center">
           <h1 className="font-display font-bold text-foreground mb-6 leading-tight">
-            Local SEO &amp; Reputation Management Services for Singapore SMBs
+            Digital Marketing Services for Singapore SMBs
           </h1>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
             Every service your business needs to rank higher, earn more reviews, and remove the ones
@@ -211,6 +211,15 @@ export default function ServicesPage() {
       {/* Opening paragraph */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6 max-w-3xl">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            Epicware&apos;s digital marketing services cover local SEO and Google Maps, website SEO, AI search
+            visibility, review management and bad review removal, social posting, and Meta and Google ad
+            management, all run by our team on our own software. Plans start at S$
+            {PRICING.plans.foundation.monthly}/month for reviews and Google Business Profile; paid ads are
+            managed on the Full Stack plan at S${PRICING.plans.fullStack.monthly.toLocaleString("en-SG")}/month
+            plus ad spend.{" "}
+            <Link href="/pricing" className="text-primary font-medium hover:underline">Compare plans and prices</Link>.
+          </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             You&apos;re here because you need something specific — more reviews, better Google Maps ranking, or a bad
             review that needs to come down. Epicware is a digital marketing agency powered by AI that handles all of it, running
@@ -234,7 +243,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {REPUTATION_SERVICES.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+              <ServiceCard key={s.name} {...s} />
             ))}
           </div>
         </div>
@@ -253,7 +262,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {LOCAL_SEO_SERVICES.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+              <ServiceCard key={s.name} {...s} />
             ))}
           </div>
         </div>
@@ -272,7 +281,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {AI_SERVICES.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+              <ServiceCard key={s.name} {...s} />
             ))}
           </div>
         </div>
@@ -291,7 +300,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl">
             {GROWTH_SERVICES.map((s) => (
-              <ServiceCard key={s.href} {...s} />
+              <ServiceCard key={s.name} {...s} />
             ))}
           </div>
         </div>
