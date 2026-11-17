@@ -4,7 +4,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Does ChatGPT Make Up Citations? What It Means for Your Business",
+  title: "Does ChatGPT Make Up Citations? What to Know",
   description:
     "ChatGPT and AI search engines do hallucinate business citations — and the fix is accurate, consistent NAP data across the web. Here's why AI citations matter and what Singapore SMBs need to do.",
   alternates: { canonical: "https://www.epicware.ai/blog/does-chatgpt-make-up-citations" },
@@ -307,7 +307,7 @@ export default function Post() {
             sources ChatGPT cites for each client. Our work as a{" "}
             <Link href="/locations/singapore/ai-search-visibility">GEO agency in Singapore</Link> starts
             with the sources AI tools quote.{" "}
-            <Link href="/services/ai-search-visibility/ai-citation-building">
+            <Link href="/services/ai-search-visibility">
               AI citation building
             </Link>{" "}
             gets your business onto the sources AI tools quote. Run a{" "}
@@ -361,7 +361,7 @@ export default function Post() {
           </p>
         </>
       }
-      ctaHref="/services/ai-search-visibility/ai-citation-building"
+      ctaHref="/services/ai-search-visibility"
       ctaLabel="Build Your AI Citation Profile"
       ctaContext="Epicware identifies and corrects inconsistencies across 100+ online data sources — ensuring your business appears accurately in AI-powered search results and local directories."
       relatedPosts={[

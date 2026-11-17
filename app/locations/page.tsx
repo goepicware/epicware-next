@@ -8,13 +8,13 @@ import { COUNTRIES } from "@/lib/site/countries";
 import { getHubContent } from "@/lib/site/content";
 
 export const metadata: Metadata = {
-  title: { absolute: "Epicware Locations — Local SEO & Reputation Management | Epicware" },
+  title: { absolute: "Locations: Local SEO & Reputation Services | Epicware" },
   description:
     "Epicware runs local SEO, Google Business Profile, and reputation management for Singapore businesses.",
   alternates: { canonical: "https://www.epicware.ai/locations" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Epicware Locations — Local SEO & Reputation Management | Epicware",
+    title: "Locations: Local SEO & Reputation Services | Epicware",
     description:
       "Epicware runs local SEO, Google Business Profile, and reputation management for Singapore businesses.",
     url: "https://www.epicware.ai/locations",

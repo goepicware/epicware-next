@@ -3,7 +3,7 @@ import Link from "next/link";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
-  title: "Salon Local SEO Singapore — Google Maps Case Study",
+  title: "Salon Local SEO Singapore: Case Study",
   description: "How a Singapore hair salon chain improved their Google Maps rank and grew to 150+ reviews per outlet using Epicware's review generation and GBP optimisation.",
   alternates: { canonical: "https://www.epicware.ai/case-studies/salon-whatsapp-automation" },
   openGraph: {

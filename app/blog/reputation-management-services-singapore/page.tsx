@@ -7,7 +7,7 @@ const CANONICAL =
   "https://www.epicware.ai/blog/reputation-management-services-singapore";
 
 export const metadata: Metadata = {
-  title: "Online Reputation Management Services for Singapore SMBs — 2026 Guide",
+  title: "Reputation Management Services in Singapore",
   description:
     "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, and how to choose what fits your stage.",
   alternates: { canonical: CANONICAL },

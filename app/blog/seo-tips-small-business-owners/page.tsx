@@ -6,7 +6,7 @@ const OG_IMAGE = "https://www.epicware.ai/assets/blog/seo-tips-small-business-ow
 const CANONICAL = "https://www.epicware.ai/blog/seo-tips-small-business-owners";
 
 export const metadata: Metadata = {
-  title: "SEO Tips for Small Business Owners That Actually Work",
+  title: "SEO Tips for Small Business Owners That Work",
   description:
     "Practical SEO tips for small businesses — Google Business Profile, reviews, local content, schema, and AI search. Outcome-focused and Singapore-relevant.",
   alternates: { canonical: CANONICAL },
