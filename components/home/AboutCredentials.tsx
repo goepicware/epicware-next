@@ -35,7 +35,11 @@ export default function AboutCredentials() {
             NinjaOS, an F&amp;B SaaS platform that processed over $120M in GMV before its 2021 exit.
             We&apos;ve grown local businesses ourselves, not just ranked them. That&apos;s why every
             client runs on our own AI software: an agency team doing the work, plus live data on every
-            ranking, review and AI mention.
+            ranking, review and AI mention. See our{" "}
+            <Link href="/services" className="font-semibold text-primary hover:underline">
+              digital marketing services
+            </Link>
+            .
           </p>
 
           <Link href="/about" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline mb-8">
