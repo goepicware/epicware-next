@@ -83,7 +83,7 @@ export default function MalaysiaPage() {
       <CategoryHero
         badge="EPICWARE · MALAYSIA"
         h1="Local SEO & Reputation Management for Malaysia SMBs"
-        subtitle="Epicware's platform manages Google Business Profiles, review generation, and bad review removal for businesses across Kuala Lumpur, Petaling Jaya, Penang, and Johor Bahru."
+        subtitle="Epicware's team manages Google Business Profiles, review generation, and bad review removal for businesses across Kuala Lumpur, Petaling Jaya, Penang, and Johor Bahru."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[

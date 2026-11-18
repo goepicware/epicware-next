@@ -178,7 +178,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
             Every service your business needs to rank higher, earn more reviews, and remove the ones
-            that shouldn&apos;t be there — all in one platform.
+            that shouldn&apos;t be there — run by one team on our own software.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Link
