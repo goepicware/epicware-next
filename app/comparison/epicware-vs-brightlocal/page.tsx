@@ -58,7 +58,7 @@ export default function Page() {
       subtitle="A feature-by-feature comparison of Epicware and BrightLocal for Singapore businesses and agencies managing local SEO."
       trustSignals={["Action vs Reporting", "Singapore Market", "WhatsApp Campaigns", "Bad Review Removal"]}
       competitorName="BrightLocal"
-      epicwareSummary="Epicware is built for Singapore SMB owners who want outcomes, not reports. The platform executes GBP optimisation, review generation, rank tracking, and bad review removal — with automation handling the ongoing work."
+      epicwareSummary="Epicware is built for Singapore SMB owners who want outcomes, not reports. Epicware's team runs GBP optimisation, review generation, rank tracking, and bad review removal — with automation handling the ongoing work."
       competitorSummary={
         <>
           BrightLocal is a UK-based local SEO platform primarily designed for agencies managing multiple client accounts. Its strengths are in reporting, citation auditing, and white-label client dashboards. It provides data and tracking; execution is typically done by the agency using the data. Epicware is that agency: an{" "}

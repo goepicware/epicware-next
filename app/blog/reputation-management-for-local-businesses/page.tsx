@@ -517,14 +517,14 @@ export default function Post() {
               dynamic is asymmetric: reputation built slowly, reputation damaged quickly.
             </p>
             <p>
-              Pricing has historically been the barrier. Agency-managed reputation services
-              typically require substantial monthly retainers, placing professional reputation
-              management beyond the realistic reach of most owner-operated SMBs. A SaaS-based
-              platform restructures this entirely. For most local service businesses, the cost of
+              Pricing has historically been the barrier. Reputation work done entirely by hand
+              takes staff hours every week, which is what put professional reputation management
+              beyond the realistic reach of most owner-operated SMBs. An agency that runs the work
+              on its own software changes that. For most local service businesses, the cost of
               automated review collection, monitoring, and response management is recoverable from
               a single additional booked appointment or table per week. One extra clinic
               consultation or salon booking per week, driven by a stronger rating and higher Map
-              Pack visibility, covers the platform cost many times over.
+              Pack visibility, covers the monthly fee many times over.
             </p>
             <p>
               The{" "}

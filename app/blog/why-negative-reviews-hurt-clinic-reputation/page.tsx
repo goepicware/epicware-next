@@ -300,7 +300,7 @@ export default function Post() {
             and beyond.
           </p>
           <p>
-            The platform allows clinics to track Google Maps rank, monitor AI search visibility, manage incoming
+            Epicware&apos;s team and software let clinics track Google Maps rank, monitor AI search visibility, manage incoming
             reviews, and efficiently{" "}
             <Link href="/locations/singapore/review-removal" className="text-blue-600 hover:underline">
               remove bad reviews

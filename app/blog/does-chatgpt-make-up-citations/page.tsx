@@ -297,8 +297,8 @@ export default function Post() {
           </p>
           <p>
             Epicware identifies and corrects inconsistencies across more than 100 online data sources,
-            targeting a 98% accuracy rate for business information. Our platform consolidates Google Maps
-            rank tracking, AI search visibility, and review management into one dashboard — giving
+            targeting a 98% accuracy rate for business information. Our software brings Google Maps
+            rank tracking, AI search visibility, and review management into one dashboard that our team runs — giving
             Singapore SMBs a single view of their local presence and the tools to maintain it without
             manual directory auditing every quarter.
           </p>

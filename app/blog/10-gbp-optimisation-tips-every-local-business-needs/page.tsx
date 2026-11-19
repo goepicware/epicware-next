@@ -254,7 +254,7 @@ export default function Post() {
             review management into a single dashboard built for Singapore SMBs. We surface what needs
             attention, track progress over time, and automate the highest-volume task — review request
             workflows — so every customer interaction becomes a potential review without additional staff
-            effort. Businesses on the platform consistently report increased local search enquiries within
+            effort. Businesses working with Epicware consistently report increased local search enquiries within
             the first six months of sustained optimisation.
           </p>
 

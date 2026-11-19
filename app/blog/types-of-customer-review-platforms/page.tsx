@@ -470,7 +470,7 @@ export default function Post() {
             />
             <p>
               Epicware is built for businesses that want real results from their local SEO and reputation management,
-              not just a dashboard full of data. The platform integrates{" "}
+              not just a dashboard full of data. Our team brings together{" "}
               <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                 Google Business Profile management
               </Link>

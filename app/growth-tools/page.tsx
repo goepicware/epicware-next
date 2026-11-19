@@ -129,7 +129,7 @@ export default function GrowthToolsPage() {
               </Link>{" "}
               connects to your customer database and triggers email campaigns based on behaviour. Post-visit review
               requests. 60-day win-back offers. Birthday greetings. Re-engagement sequences for inactive subscribers.
-              Configure the sequences once — the platform runs them automatically. Singapore businesses using EpicEngage
+              Set the sequences up once — EpicEngage runs them automatically. Singapore businesses using EpicEngage
               typically see 30–40% open rates on warm lists. See also the{" "}
               <Link href="/products/epicengage" className="text-primary font-medium hover:underline">EpicEngage product page</Link>.
             </p>
