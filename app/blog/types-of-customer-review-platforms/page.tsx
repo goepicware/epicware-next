@@ -9,7 +9,7 @@ const OG_IMAGE =
 const CANONICAL = "https://www.epicware.ai/blog/types-of-customer-review-platforms";
 
 export const metadata: Metadata = {
-  title: "Types of Customer Review Platforms: 2026 Business Guide",
+  title: "Types of Customer Review Platforms: 2026 Guide",
   description:
     "Explore the five types of customer review platforms and learn how to choose the right one to boost your business visibility and reputation in 2026.",
   alternates: { canonical: CANONICAL },
@@ -470,7 +470,7 @@ export default function Post() {
             />
             <p>
               Epicware is built for businesses that want real results from their local SEO and reputation management,
-              not just a dashboard full of data. The platform integrates{" "}
+              not just a dashboard full of data. Our team brings together{" "}
               <Link href="/locations/singapore/google-business-profile" className="text-primary font-medium hover:underline">
                 Google Business Profile management
               </Link>

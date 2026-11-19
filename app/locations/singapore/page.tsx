@@ -144,7 +144,7 @@ export default function SingaporeHubPage() {
             Ris, Bedok, and beyond — all within a 5km radius. Google Maps rank is
             decided by review count, rating, GBP completeness, and posting frequency —
             not just proximity. Epicware was built specifically for this environment.
-            The platform manages every Local SEO signal that matters in Singapore&apos;s
+            Our team, working in our own software, manages every Local SEO signal that matters in Singapore&apos;s
             hyperlocal search ecosystem.
           </p>
         </div>

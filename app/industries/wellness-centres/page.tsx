@@ -21,11 +21,16 @@ export const metadata: Metadata = {
 const schema = [
   {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Epicware Pte. Ltd.",
-  url: "https://epicware.ai",
+  "@type": "Service",
+  name: "Local SEO and Reputation Management for Singapore spas and wellness centres",
+  serviceType: "Local SEO",
   description:
-    "Local SEO and Reputation Management platform for Singapore spas and wellness centres.",
+    "Local SEO and reputation management service for Singapore spas and wellness centres.",
+  provider: {
+    "@type": "Organization",
+    name: "Epicware Pte. Ltd.",
+    url: "https://www.epicware.ai",
+  },
   areaServed: { "@type": "Country", name: "Singapore" },
 },
   {

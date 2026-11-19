@@ -6,7 +6,7 @@ import { PROOF } from "@/lib/site/proof";
 const CANONICAL = "https://www.epicware.ai/blog/why-negative-reviews-hurt-clinic-reputation";
 
 export const metadata: Metadata = {
-  title: "Why Do Negative Reviews Hurt My Clinic's Reputation?",
+  title: "Why Negative Reviews Hurt Clinic Reputation",
   description:
     "Learn why negative reviews hurt your clinic's reputation in Singapore, and how Epicware helps clinics boost their online presence and attract more patients.",
   alternates: { canonical: CANONICAL },
@@ -300,7 +300,7 @@ export default function Post() {
             and beyond.
           </p>
           <p>
-            The platform allows clinics to track Google Maps rank, monitor AI search visibility, manage incoming
+            Epicware&apos;s team and software let clinics track Google Maps rank, monitor AI search visibility, manage incoming
             reviews, and efficiently{" "}
             <Link href="/locations/singapore/review-removal" className="text-blue-600 hover:underline">
               remove bad reviews
@@ -329,7 +329,7 @@ export default function Post() {
             as being from a non-patient, containing hate speech, or being a spam attack. The success rate for removing
             genuinely fake reviews is high if sufficient proof is provided, though the process typically takes 5–10
             business days. A review from someone who was never a patient is a candidate for{" "}
-            <Link href="/services/review-removal/fake-review-removal" className="text-blue-600 hover:underline">
+            <Link href="/services/review-removal" className="text-blue-600 hover:underline">
               fake review removal
             </Link>
             .

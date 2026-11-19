@@ -190,7 +190,7 @@ export default function EpicEngagePage() {
           <h2 className="font-display text-foreground mb-6">How It Connects to the Rest of Epicware</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              EpicEngage is the customer retention layer of the Epicware platform. It works best
+              EpicEngage is the customer retention tool in Epicware&apos;s software. It works best
               when combined with{" "}
               <Link href="/products/epicreview" className="text-primary font-medium hover:underline">
                 EpicReview

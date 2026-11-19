@@ -45,7 +45,7 @@ const FAQS = [
   },
   {
     q: "Can Epicware manage multiple outlets on one account?",
-    a: "Yes. This client runs five outlets through a single Epicware dashboard, with individual keyword strategies, posting schedules and review workflows per location. Our platform is built for multi-outlet SMBs.",
+    a: "Yes. This client runs five outlets through a single Epicware dashboard, with individual keyword strategies, posting schedules and review workflows per location. Our team and software are built for multi-outlet SMBs.",
   },
   {
     q: "How do you rank a business inside AI Overviews and ChatGPT?",

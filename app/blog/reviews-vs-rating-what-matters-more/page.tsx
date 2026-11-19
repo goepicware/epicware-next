@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Reviews vs Rating: Which Matters More for Google Maps?",
+  title: "Reviews vs Rating: Which Matters More on Maps?",
   description: "Does Google Maps rank favour high review count or high star rating? The research-based answer and what it means for your local SEO strategy.",
   alternates: { canonical: "https://www.epicware.ai/blog/reviews-vs-rating-what-matters-more" },
   openGraph: {

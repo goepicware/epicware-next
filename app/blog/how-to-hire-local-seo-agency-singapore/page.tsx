@@ -314,7 +314,7 @@ export default function Post() {
       }
       ctaHref="/"
       ctaLabel="See How Epicware Works"
-      ctaContext="Epicware combines rank tracking, review generation, AI visibility monitoring, and reputation management in one platform built for Singapore SMBs."
+      ctaContext="Epicware's team runs rank tracking, review generation, AI visibility monitoring, and reputation management for Singapore SMBs on its own software."
       relatedPosts={[
         { title: "Google Maps Ranking Factors Explained", href: "/blog/google-maps-ranking-factors" },
         { title: "SEO vs Local SEO — What's the Actual Difference?", href: "/blog/seo-vs-local-seo" },
