@@ -83,7 +83,7 @@ export default function Post() {
           <p><strong>Conflicts of interest</strong> is the most actionable category for Singapore SMBs. If you can demonstrate that a reviewer has a financial connection to a competing business — even through publicly available information like their review history across your competitors — this is a strong basis for removal.</p>
           <p>Look at the reviewer&apos;s profile. If they have reviewed multiple businesses in your category, and their reviews of your competitors are consistently positive while yours is the only negative, this pattern supports a conflict of interest claim.</p>
           <p>Reviews from competitors, or from people who never visited, are the main target of{" "}
-            <Link href="/services/review-removal/fake-review-removal" className="text-primary font-medium hover:underline">
+            <Link href="/services/review-removal" className="text-primary font-medium hover:underline">
               fake review removal
             </Link>.
           </p>
