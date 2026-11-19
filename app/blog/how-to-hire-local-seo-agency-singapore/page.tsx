@@ -3,15 +3,15 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "How to Hire a Local SEO Agency in Singapore",
+  title: "Local SEO Services Singapore: How to Hire the Right Agency",
   description:
-    "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, and red flags to avoid when hiring an agency.",
+    "Comparing local SEO services in Singapore? Here's what real work looks like, the questions to ask, and red flags that signal a bad agency.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-to-hire-local-seo-agency-singapore" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "How to Hire a Local SEO Agency in Singapore (And What to Avoid) | Epicware",
+    title: "Local SEO Services Singapore: How to Hire the Right Agency | Epicware",
     description:
-      "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, and red flags to avoid when hiring an agency.",
+      "Comparing local SEO services in Singapore? Here's what real work looks like, the questions to ask, and red flags that signal a bad agency.",
     url: "https://www.epicware.ai/blog/how-to-hire-local-seo-agency-singapore",
   },
 };

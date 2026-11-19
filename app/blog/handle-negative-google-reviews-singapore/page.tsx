@@ -3,15 +3,15 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "How to Handle Negative Google Reviews in Singapore",
+  title: "How to Handle Negative Google Reviews (Step-by-Step)",
   description:
-    "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to protect your reputation.",
+    "A practical playbook for handling negative Google reviews: how to respond, when to request removal, and how to protect your business's reputation.",
   alternates: { canonical: "https://www.epicware.ai/blog/handle-negative-google-reviews-singapore" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "How to Handle Negative Google Reviews in Singapore | Epicware",
+    title: "How to Handle Negative Google Reviews (Step-by-Step) | Epicware",
     description:
-      "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to protect your reputation.",
+      "A practical playbook for handling negative Google reviews: how to respond, when to request removal, and how to protect your business's reputation.",
     url: "https://www.epicware.ai/blog/handle-negative-google-reviews-singapore",
   },
 };
