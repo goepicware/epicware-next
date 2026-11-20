@@ -76,6 +76,36 @@ const DISTRICT_META: Record<string, { title: string; description: string }> = {
     description:
       "Rank higher on Google Maps in Yishun. Our SEO team helps businesses near Northpoint City win nearby searches and more Google reviews.",
   },
+  "marina-bay": {
+    title: "AI SEO Agency in Marina Bay | Epicware",
+    description:
+      "Rank higher on Google Maps in Marina Bay. Our SEO team helps restaurants, bars and offices near Raffles Place and Marina Bay Sands win local searches.",
+  },
+  "jurong-east": {
+    title: "AI SEO Agency in Jurong East | Epicware",
+    description:
+      "Get found on Google Maps in Jurong East. Our SEO team helps businesses around the MRT interchange, JEM and Westgate out-rank the chains nearby.",
+  },
+  "paya-lebar": {
+    title: "AI SEO Agency in Paya Lebar | Epicware",
+    description:
+      "Rank higher on Google Maps in Paya Lebar. Our SEO team helps businesses near Paya Lebar Quarter and SingPost Centre win local searches and reviews.",
+  },
+  bugis: {
+    title: "AI SEO Agency in Bugis | Epicware",
+    description:
+      "Get found on Google Maps in Bugis. Our SEO team helps cafés, restaurants and shops around Bugis Junction and Haji Lane win local searches and reviews.",
+  },
+  novena: {
+    title: "AI SEO Agency in Novena | Epicware",
+    description:
+      "Rank higher on Google Maps in Novena. Our SEO team helps clinics and specialists near Novena Medical Centre grow their reviews and remove unfair ones.",
+  },
+  bishan: {
+    title: "AI SEO Agency in Bishan | Epicware",
+    description:
+      "Bishan families pick tuition, clinics and dinner spots by their Google reviews. We help businesses near Junction 8 earn that trust and reach the 3-Pack.",
+  },
 };
 
 export async function generateMetadata({
@@ -114,7 +144,7 @@ export default async function SingaporeDistrictPage({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
     telephone: "+6584446582",
     areaServed: {
       "@type": "City",
@@ -152,7 +182,7 @@ export default async function SingaporeDistrictPage({
     },
     {
       label: "GBP Post Scheduling",
-      href: "/services/google-business-profile/post-scheduling",
+      href: "/services/google-business-profile",
       desc: `Weekly AI-generated posts keeping your ${d.name} profile fresh and ranked.`,
     },
   ];

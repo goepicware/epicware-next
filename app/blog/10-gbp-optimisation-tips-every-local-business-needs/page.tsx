@@ -4,7 +4,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "10 GBP Optimisation Tips Every Local Business Needs",
+  title: "GBP Optimisation: 10 Tips for Local Businesses",
   description:
     "10 essential Google Business Profile tips for Singapore SMBs — category selection, photo strategy, and the mistakes that quietly suppress local rankings.",
   alternates: { canonical: "https://www.epicware.ai/blog/10-gbp-optimisation-tips-every-local-business-needs" },
@@ -123,7 +123,7 @@ export default function Post() {
               <strong>Post to your GBP at least weekly.</strong> Businesses that post twice or more per
               week see higher engagement than those posting less frequently. Use posts to highlight offers,
               events, and new services. Our{" "}
-              <Link href="/services/google-business-profile/post-scheduling" className="text-primary font-medium hover:underline">
+              <Link href="/services/google-business-profile" className="text-primary font-medium hover:underline">
                 GBP post scheduling
               </Link>{" "}
               service posts for you every week.
@@ -254,7 +254,7 @@ export default function Post() {
             review management into a single dashboard built for Singapore SMBs. We surface what needs
             attention, track progress over time, and automate the highest-volume task — review request
             workflows — so every customer interaction becomes a potential review without additional staff
-            effort. Businesses on the platform consistently report increased local search enquiries within
+            effort. Businesses working with Epicware consistently report increased local search enquiries within
             the first six months of sustained optimisation.
           </p>
 

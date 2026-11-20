@@ -409,7 +409,7 @@ export default function Post() {
               is paid upfront at $200 per review, refunded in full if the review isn&apos;t taken down —
               so you&apos;re never left paying for an outcome you didn&apos;t get, even though the charge
               happens before the work starts. Beyond review
-              removal, the platform gives multi-location businesses a single dashboard to monitor Google Maps
+              removal, Epicware&apos;s team gives multi-location businesses a single dashboard to monitor Google Maps
               rankings, flag suspicious edits to their own profiles, and manage review responses across every
               outlet from one place through EpicMap and{" "}
               <Link href="/products/epicreview" className="text-primary font-medium hover:underline">
@@ -507,7 +507,7 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/services/review-removal/fake-review-removal"
+        ctaHref="/services/review-removal"
         ctaLabel="See Our Fake Review Removal Service"
         ctaContext="Epicware handles evidence-backed removal requests and monitors your listings across every outlet, so spam and fake reviews don't sit there unresolved."
         relatedPosts={[

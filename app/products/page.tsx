@@ -8,11 +8,11 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 export const metadata: Metadata = {
   title: "Products — Local SEO & Reputation Tools",
   description:
-    "Four AI-native tools for Singapore SMBs. Rank higher, earn more reviews, remove bad ones, and grow — all from one platform. No agency. No retainer.",
+    "The four tools Epicware's team runs every client account on: EpicMap, EpicReview, EpicEngage and EpicSocial. Live rankings, reviews and AI mentions in one dashboard.",
   alternates: { canonical: "https://www.epicware.ai/products" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Epicware Products — Four Tools. One Platform. Built for Singapore SMBs.",
+    title: "Epicware Products — The Software Behind Every Account",
     description:
       "EpicMap tracks your rank. EpicReview manages your reputation. EpicEngage keeps customers coming back. EpicSocial keeps you visible.",
     url: "https://www.epicware.ai/products",
@@ -113,7 +113,7 @@ export default function ProductsHubPage() {
             EPICWARE PRODUCTS · SINGAPORE
           </div>
           <h1 className="font-display font-bold text-foreground mb-6 leading-[1.08]">
-            Four Products. One Platform.
+            Four Tools. One Team Running Them.
             <br />
             Built for Singapore SMBs.
           </h1>
@@ -162,7 +162,7 @@ export default function ProductsHubPage() {
           <p className="text-lg text-muted-foreground leading-relaxed">
             Most local SEO tools give you a dashboard full of numbers and leave you to figure out what
             to do next. Epicware&apos;s four products don&apos;t just show you the problem — they fix it. Each
-            module is built for a specific job, and they all work together inside one platform. No
+            module is built for a specific job, and they all work together inside one dashboard. No
             switching tabs. Run by our own team: Epicware is an{" "}
             <Link href="/" className="text-primary font-medium hover:underline">
               AI-powered digital marketing agency

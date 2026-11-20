@@ -50,6 +50,12 @@ const DISTRICTS = [
   { name: "Orchard", slug: "orchard" },
   { name: "Bedok", slug: "bedok" },
   { name: "Yishun", slug: "yishun" },
+  { name: "Marina Bay", slug: "marina-bay" },
+  { name: "Jurong East", slug: "jurong-east" },
+  { name: "Paya Lebar", slug: "paya-lebar" },
+  { name: "Bugis", slug: "bugis" },
+  { name: "Novena", slug: "novena" },
+  { name: "Bishan", slug: "bishan" },
 ];
 
 const INDUSTRIES = [
@@ -144,7 +150,7 @@ export default function SingaporeHubPage() {
             Ris, Bedok, and beyond — all within a 5km radius. Google Maps rank is
             decided by review count, rating, GBP completeness, and posting frequency —
             not just proximity. Epicware was built specifically for this environment.
-            The platform manages every Local SEO signal that matters in Singapore&apos;s
+            Our team, working in our own software, manages every Local SEO signal that matters in Singapore&apos;s
             hyperlocal search ecosystem.
           </p>
         </div>

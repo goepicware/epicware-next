@@ -105,7 +105,7 @@ export default function IndustriesHubPage() {
             Local SEO &amp; Reputation Management for Every Singapore Industry
           </h1>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            The same platform. ICP-specific results. Choose your industry to see
+            The same team and software, tuned to your industry. Choose yours to see
             exactly how Epicware works for your business type.
           </p>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">

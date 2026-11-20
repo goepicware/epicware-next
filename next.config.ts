@@ -44,6 +44,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Old next-sitemap output (removed 2026-11-20); app/sitemap.ts is the only sitemap
+      { source: "/sitemap-0.xml", destination: "/sitemap.xml", permanent: true },
       // Platform rename
       { source: "/platform", destination: "/services", permanent: true },
       // Old Phase 1 product URLs (new /products/* pages now exist — only redirect legacy slugs)
