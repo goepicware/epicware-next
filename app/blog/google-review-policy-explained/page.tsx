@@ -3,13 +3,13 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Google Review Policy Explained",
-  description: "Complete breakdown of Google's review content policies for Singapore business owners. Know exactly which reviews violate policy and can be removed.",
+  title: "Google Review Removal Policy Explained (What Qualifies)",
+  description: "A complete breakdown of Google's review policies: exactly which reviews violate the rules, how removal requests work, and what actually gets taken down.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-review-policy-explained" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Google Review Policy Explained — What Gets Removed & Why | Epicware",
-    description: "Complete breakdown of Google's review content policies for Singapore business owners. Know exactly which reviews violate policy and can be removed.",
+    title: "Google Review Removal Policy Explained (What Qualifies) | Epicware",
+    description: "A complete breakdown of Google's review policies: exactly which reviews violate the rules, how removal requests work, and what actually gets taken down.",
     url: "https://www.epicware.ai/blog/google-review-policy-explained",
   },
 };

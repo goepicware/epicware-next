@@ -7,16 +7,16 @@ const CANONICAL =
   "https://www.epicware.ai/blog/reputation-management-services-singapore";
 
 export const metadata: Metadata = {
-  title: "Reputation Management Services in Singapore",
+  title: "Online Reputation Management Singapore | 2026 Guide",
   description:
-    "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, and how to choose what fits your stage.",
+    "Compare the 5 types of online reputation management services in Singapore and find the right fit — plus what each actually costs in 2026.",
   alternates: { canonical: CANONICAL },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
     title:
-      "Online Reputation Management Services for Singapore SMBs — 2026 Guide | Epicware",
+      "Online Reputation Management Singapore | 2026 Guide | Epicware",
     description:
-      "A practical guide to ORM services for Singapore local businesses — the five service types, how to compare them, and how to choose what fits your stage.",
+      "Compare the 5 types of online reputation management services in Singapore and find the right fit — plus what each actually costs in 2026.",
     url: CANONICAL,
   },
 };

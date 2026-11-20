@@ -6,15 +6,15 @@ import { PROOF } from "@/lib/site/proof";
 const CANONICAL = "https://www.epicware.ai/blog/why-negative-reviews-hurt-clinic-reputation";
 
 export const metadata: Metadata = {
-  title: "Why Negative Reviews Hurt Clinic Reputation",
+  title: "How Negative Reviews Hurt Your Clinic's Reputation",
   description:
-    "Learn why negative reviews hurt your clinic's reputation in Singapore, and how Epicware helps clinics boost their online presence and attract more patients.",
+    "Negative reviews cost clinics new patients fast. See exactly how the damage happens — and the fastest way to recover and start winning patients back.",
   alternates: { canonical: CANONICAL },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Why Do Negative Reviews Hurt My Clinic's Reputation? | Epicware",
+    title: "How Negative Reviews Hurt Your Clinic's Reputation | Epicware",
     description:
-      "Learn why negative reviews hurt your clinic's reputation in Singapore, and how Epicware helps clinics boost their online presence and attract more patients.",
+      "Negative reviews cost clinics new patients fast. See exactly how the damage happens — and the fastest way to recover and start winning patients back.",
     url: CANONICAL,
   },
 };
