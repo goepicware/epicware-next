@@ -50,6 +50,12 @@ const DISTRICTS = [
   { name: "Orchard", slug: "orchard" },
   { name: "Bedok", slug: "bedok" },
   { name: "Yishun", slug: "yishun" },
+  { name: "Marina Bay", slug: "marina-bay" },
+  { name: "Jurong East", slug: "jurong-east" },
+  { name: "Paya Lebar", slug: "paya-lebar" },
+  { name: "Bugis", slug: "bugis" },
+  { name: "Novena", slug: "novena" },
+  { name: "Bishan", slug: "bishan" },
 ];
 
 const INDUSTRIES = [

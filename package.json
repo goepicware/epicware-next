@@ -6,7 +6,7 @@
     "dev": "next dev",
     "prebuild": "tsx scripts/check-page-similarity.ts && tsx scripts/check-page-substance.ts && tsx scripts/check-page-honesty.ts && tsx scripts/check-sitemap-noindex.ts && tsx scripts/check-no-raw-gtag-conversion.ts && tsx scripts/check-google-ads-tracking.ts && tsx scripts/check-meta-description-length.ts",
     "build": "next build",
-    "postbuild": "next-sitemap && tsx scripts/generate-llms-txt.ts",
+    "postbuild": "tsx scripts/generate-llms-txt.ts",
     "start": "next start",
     "lint": "next lint",
     "check:similarity": "tsx scripts/check-page-similarity.ts",
