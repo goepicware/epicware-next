@@ -32,6 +32,66 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "The GEO Worklist: Crawler Access, Schema, Citable Content",
+    summary:
+      "Fix AI visibility for your local business in order: unblock crawlers first, add LocalBusiness and Service schema second, then rewrite service pages so the service, area, and price are extractable.",
+    href: "/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content",
+    image: "/assets/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content/hero-code-screen.jpg",
+    category: "AI SEARCH VISIBILITY",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
+    title: "The Monthly Reputation Report: Six Numbers That Matter",
+    summary:
+      "Most Google reviews reports measure the wrong things. The six operational numbers that show whether review work is moving bookings, how to read them together, and what to leave off.",
+    href: "/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings",
+    image: "/assets/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings/hero-reviewing-report-charts.jpg",
+    category: "REPUTATION MANAGEMENT",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
+    title: "Google Business Profile Suspended? Fix It Before You Appeal",
+    summary:
+      "Why most Google Business Profile suspensions in Singapore are self-inflicted, how to spot a soft vs hard suspension, the fix-then-appeal sequence step by step, and how to avoid a second suspension after reinstatement.",
+    href: "/blog/google-business-profile-suspended-fix-it-before-you-appeal",
+    image: "/assets/blog/google-business-profile-suspended-fix-it-before-you-appeal/hero-sorry-were-closed-sign.jpg",
+    category: "GBP OPTIMISATION",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
+    title: "Whose Account Is It? GBP Ownership Terms to Fix First",
+    summary:
+      "Who should hold the verified owner on your Google Business Profile, the Google rules that decide how fast access can change hands, and the handover terms to sign before you hire an agency.",
+    href: "/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first",
+    image: "/assets/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first/hero-key-handover.jpg",
+    category: "GBP OPTIMISATION",
+    date: "Nov 2026",
+    readTime: "10 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
+    title: "AI Visibility Metrics That Matter Beyond ChatGPT Hype",
+    summary:
+      "A screenshot is not a metric. The four AI visibility metrics worth reporting — share of voice, citation rate, AI referral sessions, and branded query lift — and how to tie each one to calls and bookings.",
+    href: "/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype",
+    image: "/assets/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype/hero-analytics-dashboard-laptop.jpg",
+    category: "AI SEARCH VISIBILITY",
+    date: "Nov 2026",
+    readTime: "12 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
     title: "Don't Fill All Nine: Audit Your Google Business Secondary Categories",
     summary:
       "A practical audit guide for Google Business secondary categories — the IS/HAS test for deciding what stays, how many to actually use, common mistakes like category stuffing, and how category availability changes across regions for multi-location businesses.",
