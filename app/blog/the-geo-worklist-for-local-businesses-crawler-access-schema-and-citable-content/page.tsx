@@ -36,6 +36,8 @@ export default function Post() {
       ogImage={OG_IMAGE}
       badge="AI SEARCH VISIBILITY · GEO"
       h1="The GEO Worklist: Crawler Access, Schema, Citable Content"
+      author="Vignesh"
+      authorRole="Founder, Epicware"
       publishDate="November 2026"
       readTime="11 min read"
       intro={

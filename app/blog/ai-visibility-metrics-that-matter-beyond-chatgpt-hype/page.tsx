@@ -36,6 +36,8 @@ export default function Post() {
       ogImage={OG_IMAGE}
       badge="AI SEARCH VISIBILITY · METRICS"
       h1="AI Visibility Metrics That Matter Beyond ChatGPT Hype"
+      author="Vignesh"
+      authorRole="Founder, Epicware"
       publishDate="November 2026"
       readTime="12 min read"
       intro={

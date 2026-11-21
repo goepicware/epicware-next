@@ -32,6 +32,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "What Happens If You Buy Google Reviews in Singapore",
+    summary:
+      "CCS acted against 45 Singapore businesses that bought fake Google reviews, plus the provider that sold them. Where the risk actually lands, and what to do instead.",
+    href: "/blog/what-happens-if-you-buy-google-reviews-in-singapore",
+    image: "/assets/blog/what-happens-if-you-buy-google-reviews-in-singapore/hero-gavel.jpg",
+    category: "REVIEW POLICY",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
     title: "The GEO Worklist: Crawler Access, Schema, Citable Content",
     summary:
       "Fix AI visibility for your local business in order: unblock crawlers first, add LocalBusiness and Service schema second, then rewrite service pages so the service, area, and price are extractable.",

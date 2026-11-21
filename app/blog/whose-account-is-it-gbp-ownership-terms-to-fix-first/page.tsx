@@ -36,6 +36,8 @@ export default function Post() {
       ogImage={OG_IMAGE}
       badge="GBP OPTIMISATION · OWNERSHIP"
       h1="Whose Account Is It? GBP Ownership Terms to Fix First"
+      author="Vignesh"
+      authorRole="Founder, Epicware"
       publishDate="November 2026"
       readTime="10 min read"
       intro={

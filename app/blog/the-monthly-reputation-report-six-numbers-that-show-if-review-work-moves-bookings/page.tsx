@@ -36,6 +36,8 @@ export default function Post() {
       ogImage={OG_IMAGE}
       badge="REPUTATION MANAGEMENT · REPORTING"
       h1="The Monthly Reputation Report: Six Numbers That Matter"
+      author="Vignesh"
+      authorRole="Founder, Epicware"
       publishDate="November 2026"
       readTime="11 min read"
       intro={

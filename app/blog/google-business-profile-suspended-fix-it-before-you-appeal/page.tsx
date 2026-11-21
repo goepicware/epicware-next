@@ -36,6 +36,8 @@ export default function Post() {
       ogImage={OG_IMAGE}
       badge="GBP OPTIMISATION · SUSPENSIONS"
       h1="Google Business Profile Suspended? Fix It Before You Appeal"
+      author="Vignesh"
+      authorRole="Founder, Epicware"
       publishDate="November 2026"
       readTime="11 min read"
       intro={
