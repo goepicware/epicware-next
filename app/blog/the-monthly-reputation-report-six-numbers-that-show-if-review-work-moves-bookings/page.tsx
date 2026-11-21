@@ -34,6 +34,8 @@ export default function Post() {
     <BlogArticle
       schema={schema}
       ogImage={OG_IMAGE}
+      ogImageWidth={1125}
+      ogImageHeight={750}
       badge="REPUTATION MANAGEMENT · REPORTING"
       h1="The Monthly Reputation Report: Six Numbers That Matter"
       author="Vignesh"

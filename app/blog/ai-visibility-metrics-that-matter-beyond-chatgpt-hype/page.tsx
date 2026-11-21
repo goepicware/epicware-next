@@ -34,6 +34,8 @@ export default function Post() {
     <BlogArticle
       schema={schema}
       ogImage={OG_IMAGE}
+      ogImageWidth={1132}
+      ogImageHeight={750}
       badge="AI SEARCH VISIBILITY · METRICS"
       h1="AI Visibility Metrics That Matter Beyond ChatGPT Hype"
       author="Vignesh"

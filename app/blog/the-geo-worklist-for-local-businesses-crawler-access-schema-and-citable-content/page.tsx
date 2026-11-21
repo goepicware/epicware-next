@@ -34,6 +34,8 @@ export default function Post() {
     <BlogArticle
       schema={schema}
       ogImage={OG_IMAGE}
+      ogImageWidth={1000}
+      ogImageHeight={750}
       badge="AI SEARCH VISIBILITY · GEO"
       h1="The GEO Worklist: Crawler Access, Schema, Citable Content"
       author="Vignesh"

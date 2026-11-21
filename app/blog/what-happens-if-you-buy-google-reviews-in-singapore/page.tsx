@@ -34,6 +34,8 @@ export default function Post() {
     <BlogArticle
       schema={schema}
       ogImage={OG_IMAGE}
+      ogImageWidth={1125}
+      ogImageHeight={750}
       badge="REVIEW POLICY · ENFORCEMENT"
       h1="What Happens If You Buy Google Reviews in Singapore"
       author="Vignesh"

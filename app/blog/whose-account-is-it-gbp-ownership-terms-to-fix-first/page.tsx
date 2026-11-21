@@ -34,6 +34,8 @@ export default function Post() {
     <BlogArticle
       schema={schema}
       ogImage={OG_IMAGE}
+      ogImageWidth={1124}
+      ogImageHeight={750}
       badge="GBP OPTIMISATION · OWNERSHIP"
       h1="Whose Account Is It? GBP Ownership Terms to Fix First"
       author="Vignesh"

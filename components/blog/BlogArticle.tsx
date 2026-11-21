@@ -21,6 +21,8 @@ interface BlogArticleProps {
   relatedPosts: { title: string; href: string }[];
   author?: string;
   authorRole?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
 }
 
 export default function BlogArticle({
@@ -39,7 +41,10 @@ export default function BlogArticle({
   relatedPosts,
   author = "the Epicware Team",
   authorRole,
+  ogImageWidth = 1200,
+  ogImageHeight = 630,
 }: BlogArticleProps) {
+  const topBarAuthor = author.startsWith("the ") ? author.slice(4) : author;
   const datePublished = schema.datePublished as string | undefined;
   const publisher = schema.publisher as Record<string, unknown> | undefined;
   const schemaUrl = (schema.url as string | undefined)?.replace(
@@ -53,7 +58,7 @@ export default function BlogArticle({
     url: schemaUrl,
     dateModified: dateModified ?? datePublished,
     ...(ogImage
-      ? { image: { "@type": "ImageObject", url: ogImage, width: 1200, height: 630 } }
+      ? { image: { "@type": "ImageObject", url: ogImage, width: ogImageWidth, height: ogImageHeight } }
       : {}),
     publisher: {
       ...publisher,
@@ -98,9 +103,9 @@ export default function BlogArticle({
             {/* Author */}
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary/15 text-primary font-bold text-xs shrink-0">
-                E
+                {topBarAuthor.charAt(0).toUpperCase()}
               </span>
-              <span className="font-medium text-foreground/80">Epicware Team</span>
+              <span className="font-medium text-foreground/80">{topBarAuthor}</span>
             </div>
             <span className="text-border/60">·</span>
             {/* Date */}

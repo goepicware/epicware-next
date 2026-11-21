@@ -34,6 +34,8 @@ export default function Post() {
     <BlogArticle
       schema={schema}
       ogImage={OG_IMAGE}
+      ogImageWidth={1125}
+      ogImageHeight={750}
       badge="GBP OPTIMISATION · SUSPENSIONS"
       h1="Google Business Profile Suspended? Fix It Before You Appeal"
       author="Vignesh"

@@ -32,6 +32,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "Who Asks for the Review, and When? A Six-Moment Audit",
+    summary:
+      "Most local businesses ask for a review at one moment. Map all six, assign one owner each, and keep only the asks that convert.",
+    href: "/blog/who-asks-for-the-review-and-when-a-six-moment-audit",
+    image: "/assets/blog/who-asks-for-the-review-and-when-a-six-moment-audit/hero-handover.jpg",
+    category: "REVIEW GENERATION",
+    date: "Dec 2026",
+    readTime: "10 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
     title: "What Happens If You Buy Google Reviews in Singapore",
     summary:
       "CCS acted against 45 Singapore businesses that bought fake Google reviews, plus the provider that sold them. Where the risk actually lands, and what to do instead.",
