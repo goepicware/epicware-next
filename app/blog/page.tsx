@@ -32,6 +32,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "Share of Local Voice: The Geogrid Metric",
+    summary:
+      "Share of local voice shows how much of your service area you truly own in the Map Pack, by district. How to track and report it monthly.",
+    href: "/blog/share-of-local-voice-the-geogrid-metric",
+    image: "/assets/blog/share-of-local-voice-the-geogrid-metric/hero-map-grid.jpg",
+    category: "LOCAL SEO",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
     title: "Build a 30-Prompt Panel to Test AI Search Visibility",
     summary:
       "A repeatable monthly audit: 30 prompts run identically on ChatGPT, Gemini and Perplexity, then scored for mention, position and tone.",
