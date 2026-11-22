@@ -12,6 +12,10 @@ import { PAGED_SERVICES } from "@/lib/site/services";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
 
+// Legacy Meta Pixel, kept firing alongside the current one (NEXT_PUBLIC_META_PIXEL_ID)
+// so historical ad audiences tied to this pixel keep collecting data. Pixel IDs are public.
+const LEGACY_META_PIXEL_ID = "1607409017146467";
+
 export const metadata: Metadata = {
   title: {
     default: "Epicware — AI-Powered Growth Platform for Local Businesses",
@@ -56,6 +60,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </noscript>
         )}
+        {/* Legacy Meta Pixel noscript fallback */}
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${LEGACY_META_PIXEL_ID}&ev=PageView&noscript=1`}
+            alt=""
+          />
+        </noscript>
         <ClickIdCapture />
         <ClientLayoutWrapper liveCountryServices={liveCountryServices}>{children}</ClientLayoutWrapper>
         <SpeedInsights />
@@ -77,12 +92,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xtz7ugpkxl");`}
         </Script>
-        {/* Meta Pixel — base init only; PageView fired via trackPageView() hook for dedup */}
-        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
-          <Script id="meta-pixel" strategy="afterInteractive">
-            {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${process.env.NEXT_PUBLIC_META_PIXEL_ID}');`}
-          </Script>
-        )}
+        {/* Meta Pixel — base init only; PageView fired via trackPageView() hook for dedup.
+            Inits both the current pixel and the legacy one; fbq('track', ...) with no
+            explicit pixel ID fires for every inited pixel, so trackPageView() needs no changes. */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');${process.env.NEXT_PUBLIC_META_PIXEL_ID ? `fbq('init','${process.env.NEXT_PUBLIC_META_PIXEL_ID}');` : ""}fbq('init','${LEGACY_META_PIXEL_ID}');`}
+        </Script>
       </body>
     </html>
   );

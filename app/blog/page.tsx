@@ -32,6 +32,126 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "Share of Local Voice: The Geogrid Metric",
+    summary:
+      "Share of local voice shows how much of your service area you truly own in the Map Pack, by district. How to track and report it monthly.",
+    href: "/blog/share-of-local-voice-the-geogrid-metric",
+    image: "/assets/blog/share-of-local-voice-the-geogrid-metric/hero-map-grid.jpg",
+    category: "LOCAL SEO",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
+    title: "Build a 30-Prompt Panel to Test AI Search Visibility",
+    summary:
+      "A repeatable monthly audit: 30 prompts run identically on ChatGPT, Gemini and Perplexity, then scored for mention, position and tone.",
+    href: "/blog/build-a-30-prompt-panel-to-test-ai-search-visibility",
+    image: "/assets/blog/build-a-30-prompt-panel-to-test-ai-search-visibility/hero-chat-testing.jpg",
+    category: "AI SEARCH VISIBILITY",
+    date: "Nov 2026",
+    readTime: "13 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
+    title: "How Multi-Outlet Singapore Brands Should Run GBP Profiles",
+    summary:
+      "Ten outlets with ten overlapping Google profiles split their own local SEO. The hierarchy that stops sibling listings from competing.",
+    href: "/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles",
+    image: "/assets/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles/hero-storefronts.jpg",
+    category: "GBP OPTIMISATION",
+    date: "Nov 2026",
+    readTime: "12 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
+    title: "Who Asks for the Review, and When? A Six-Moment Audit",
+    summary:
+      "Most local businesses ask for a review at one moment. Map all six, assign one owner each, and keep only the asks that convert.",
+    href: "/blog/who-asks-for-the-review-and-when-a-six-moment-audit",
+    image: "/assets/blog/who-asks-for-the-review-and-when-a-six-moment-audit/hero-handover.jpg",
+    category: "REVIEW GENERATION",
+    date: "Dec 2026",
+    readTime: "10 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
+    title: "What Happens If You Buy Google Reviews in Singapore",
+    summary:
+      "CCS acted against 45 Singapore businesses that bought fake Google reviews, plus the provider that sold them. Where the risk actually lands, and what to do instead.",
+    href: "/blog/what-happens-if-you-buy-google-reviews-in-singapore",
+    image: "/assets/blog/what-happens-if-you-buy-google-reviews-in-singapore/hero-gavel.jpg",
+    category: "REVIEW POLICY",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
+    title: "The GEO Worklist: Crawler Access, Schema, Citable Content",
+    summary:
+      "Fix AI visibility for your local business in order: unblock crawlers first, add LocalBusiness and Service schema second, then rewrite service pages so the service, area, and price are extractable.",
+    href: "/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content",
+    image: "/assets/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content/hero-code-screen.jpg",
+    category: "AI SEARCH VISIBILITY",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
+    title: "The Monthly Reputation Report: Six Numbers That Matter",
+    summary:
+      "Most Google reviews reports measure the wrong things. The six operational numbers that show whether review work is moving bookings, how to read them together, and what to leave off.",
+    href: "/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings",
+    image: "/assets/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings/hero-reviewing-report-charts.jpg",
+    category: "REPUTATION MANAGEMENT",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
+    title: "Google Business Profile Suspended? Fix It Before You Appeal",
+    summary:
+      "Why most Google Business Profile suspensions in Singapore are self-inflicted, how to spot a soft vs hard suspension, the fix-then-appeal sequence step by step, and how to avoid a second suspension after reinstatement.",
+    href: "/blog/google-business-profile-suspended-fix-it-before-you-appeal",
+    image: "/assets/blog/google-business-profile-suspended-fix-it-before-you-appeal/hero-sorry-were-closed-sign.jpg",
+    category: "GBP OPTIMISATION",
+    date: "Nov 2026",
+    readTime: "11 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
+    title: "Whose Account Is It? GBP Ownership Terms to Fix First",
+    summary:
+      "Who should hold the verified owner on your Google Business Profile, the Google rules that decide how fast access can change hands, and the handover terms to sign before you hire an agency.",
+    href: "/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first",
+    image: "/assets/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first/hero-key-handover.jpg",
+    category: "GBP OPTIMISATION",
+    date: "Nov 2026",
+    readTime: "10 min",
+    isNew: true,
+    moment: "do",
+  },
+  {
+    title: "AI Visibility Metrics That Matter Beyond ChatGPT Hype",
+    summary:
+      "A screenshot is not a metric. The four AI visibility metrics worth reporting — share of voice, citation rate, AI referral sessions, and branded query lift — and how to tie each one to calls and bookings.",
+    href: "/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype",
+    image: "/assets/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype/hero-analytics-dashboard-laptop.jpg",
+    category: "AI SEARCH VISIBILITY",
+    date: "Nov 2026",
+    readTime: "12 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
     title: "Don't Fill All Nine: Audit Your Google Business Secondary Categories",
     summary:
       "A practical audit guide for Google Business secondary categories — the IS/HAS test for deciding what stays, how many to actually use, common mistakes like category stuffing, and how category availability changes across regions for multi-location businesses.",
