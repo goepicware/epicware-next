@@ -532,9 +532,9 @@ export default function AestheticClinicSEOCaseStudyPage() {
                   </Link>
                 </h3>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
-                  A compliant review generation system across both outlets — patients guided to leave genuine Google
-                  reviews, dissatisfied patients routed to private feedback first so the clinic could resolve issues
-                  before they became public.
+                  A compliant review generation system across both outlets — every patient got the same invitation
+                  to leave a genuine Google review, with a private feedback channel always open alongside it so the
+                  clinic could hear about and resolve issues quickly.
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
                   In parallel we audited every negative review for policy violations and ran formal removal requests

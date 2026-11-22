@@ -180,17 +180,17 @@ export default function EpicReviewPage() {
                 step: 1,
                 title: "Customer scans your QR",
                 description:
-                  "A branded standee at the table or counter captures them at peak happiness — right after a great experience. No staff involvement needed.",
+                  "A branded standee at the table or counter catches them right after the visit, while it's still top of mind. No staff involvement needed.",
                 image: "/assets/how-it-works-scan-qr.png",
                 alt: "Branded QR standee at restaurant table for review collection",
               },
               {
                 step: 2,
-                title: "Smart filter routes the review",
+                title: "Every customer gets the same ask",
                 description:
-                  "Happy customers go straight to Google. Unhappy ones are caught privately — protecting your public rating automatically.",
+                  "The same Google review link goes out to every customer, no filtering by how the visit went. A private feedback channel is always open alongside it, so problems reach you directly instead of showing up as a public review.",
                 image: "/assets/epicreview-screen.png",
-                alt: "EpicReview smart filter routing happy and unhappy customers",
+                alt: "EpicReview sending the same review request to every customer, with an always-open private feedback option",
               },
               {
                 step: 3,

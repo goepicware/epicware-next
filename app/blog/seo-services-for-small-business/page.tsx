@@ -344,11 +344,10 @@ export default function Post() {
             >
               <strong>EpicReview</strong>
             </Link>{" "}
-            is built to handle. It automates the complete workflow: sending review requests after
-            service interactions, routing happy customers directly to your Google Business Profile,
-            flagging negative feedback through a private channel before it reaches public
-            platforms, and providing ongoing analytics on review volume, sentiment trends, and
-            response rates.
+            is built to handle. It automates the complete workflow: sending the same review request
+            to every customer after a service interaction, keeping a private feedback channel open
+            alongside it so problems reach you directly, and providing ongoing analytics on review
+            volume, sentiment trends, and response rates.
           </p>
           <p>
             When you are evaluating search engine optimization services for small business, ask: is
