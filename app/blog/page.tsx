@@ -32,6 +32,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "How Multi-Outlet Singapore Brands Should Run GBP Profiles",
+    summary:
+      "Ten outlets with ten overlapping Google profiles split their own local SEO. The hierarchy that stops sibling listings from competing.",
+    href: "/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles",
+    image: "/assets/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles/hero-storefronts.jpg",
+    category: "GBP OPTIMISATION",
+    date: "Nov 2026",
+    readTime: "12 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
     title: "Who Asks for the Review, and When? A Six-Moment Audit",
     summary:
       "Most local businesses ask for a review at one moment. Map all six, assign one owner each, and keep only the asks that convert.",
