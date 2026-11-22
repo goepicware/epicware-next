@@ -32,6 +32,18 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const posts = [
   {
+    title: "Build a 30-Prompt Panel to Test AI Search Visibility",
+    summary:
+      "A repeatable monthly audit: 30 prompts run identically on ChatGPT, Gemini and Perplexity, then scored for mention, position and tone.",
+    href: "/blog/build-a-30-prompt-panel-to-test-ai-search-visibility",
+    image: "/assets/blog/build-a-30-prompt-panel-to-test-ai-search-visibility/hero-chat-testing.jpg",
+    category: "AI SEARCH VISIBILITY",
+    date: "Nov 2026",
+    readTime: "13 min",
+    isNew: true,
+    moment: "know",
+  },
+  {
     title: "How Multi-Outlet Singapore Brands Should Run GBP Profiles",
     summary:
       "Ten outlets with ten overlapping Google profiles split their own local SEO. The hierarchy that stops sibling listings from competing.",
