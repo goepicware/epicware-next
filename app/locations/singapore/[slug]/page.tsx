@@ -76,6 +76,36 @@ const DISTRICT_META: Record<string, { title: string; description: string }> = {
     description:
       "Rank higher on Google Maps in Yishun. Our SEO team helps businesses near Northpoint City win nearby searches and more Google reviews.",
   },
+  "marina-bay": {
+    title: "AI SEO Agency in Marina Bay | Epicware",
+    description:
+      "CBD lunch crowds and evening visitors near Marina Bay Sands pick restaurants and bars off the Google Maps 3-Pack. Epicware keeps your profile ranking for both.",
+  },
+  "jurong-east": {
+    title: "AI SEO Agency in Jurong East | Epicware",
+    description:
+      "Thousands pass through Jurong East's MRT interchange daily, comparing shops at JEM and Westgate on their phones in seconds. Epicware helps you win that comparison.",
+  },
+  "paya-lebar": {
+    title: "AI SEO Agency in Paya Lebar | Epicware",
+    description:
+      "PLQ brought a new professional lunch crowd to Paya Lebar. Epicware optimises your Google Business Profile so both office workers and locals find you first.",
+  },
+  bugis: {
+    title: "AI SEO Agency in Bugis | Epicware",
+    description:
+      "Tourists and locals both search Google before choosing where to eat near Haji Lane and Bugis Junction. Epicware builds the review profile that wins that search.",
+  },
+  novena: {
+    title: "AI SEO Agency in Novena | Epicware",
+    description:
+      "Patients choosing a clinic near Mount Elizabeth Novena Hospital decide almost entirely on Google reviews. Epicware protects and grows that reputation for you.",
+  },
+  bishan: {
+    title: "AI SEO Agency in Bishan | Epicware",
+    description:
+      "Bishan families return to businesses they trust for years, and Google reviews are how new residents find them. Epicware helps you earn that trust at scale.",
+  },
 };
 
 export async function generateMetadata({
