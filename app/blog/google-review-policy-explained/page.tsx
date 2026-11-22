@@ -124,6 +124,7 @@ export default function Post() {
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
         { title: "The Complete Guide to Removing Bad Google Reviews", href: "/resources/guides/bad-review-removal-guide" },
         { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
+        { title: "What Happens If You Buy Google Reviews in Singapore", href: "/blog/what-happens-if-you-buy-google-reviews-in-singapore" },
       ]}
     />
   );

@@ -369,6 +369,9 @@ export default function Post() {
         { title: "Why Review Recency Matters for Local Rankings", href: "/blog/why-review-recency-matters-for-local-rankings" },
         { title: "Review Velocity vs Total Review Count — Which Matters More for Google Maps?", href: "/blog/review-velocity-vs-total-review-count" },
         { title: "10 GBP Optimisation Tips Every Local Business Needs", href: "/blog/10-gbp-optimisation-tips-every-local-business-needs" },
+        { title: "The GEO Worklist: Crawler Access, Schema, Citable Content", href: "/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content" },
+        { title: "Build a 30-Prompt Panel to Test AI Search Visibility", href: "/blog/build-a-30-prompt-panel-to-test-ai-search-visibility" },
+        { title: "AI Visibility Metrics That Matter Beyond ChatGPT Hype", href: "/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype" },
       ]}
     />
   );

@@ -320,6 +320,9 @@ export default function Post() {
         { title: "How to Get More Google Reviews — Ethical Methods That Actually Work", href: "/blog/how-to-get-more-google-reviews" },
         { title: "Review Management for Singapore SMBs — What It Actually Involves", href: "/blog/review-management-singapore" },
         { title: "Restaurant Menu SEO for Multi-Location Operators", href: "/blog/restaurant-menu-seo" },
+        { title: "Google Business Profile Suspended? Fix It Before You Appeal", href: "/blog/google-business-profile-suspended-fix-it-before-you-appeal" },
+        { title: "How Multi-Outlet Singapore Brands Should Run GBP Profiles", href: "/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles" },
+        { title: "Whose Account Is It? GBP Ownership Terms to Fix First", href: "/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first" },
       ]}
     />
   );

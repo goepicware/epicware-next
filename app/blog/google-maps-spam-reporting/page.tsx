@@ -515,6 +515,7 @@ export default function Post() {
           { title: "The Complete Guide to Removing Bad Google Reviews", href: "/resources/guides/bad-review-removal-guide" },
           { title: "Google Maps Ranking Factors Explained — Where Reviews Fit In", href: "/blog/google-maps-ranking-factors" },
           { title: "Google Review Policy Explained — What Qualifies for Removal", href: "/blog/google-review-policy-explained" },
+          { title: "Google Business Profile Suspended? Fix It Before You Appeal", href: "/blog/google-business-profile-suspended-fix-it-before-you-appeal" },
         ]}
       />
     </>

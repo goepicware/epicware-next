@@ -841,6 +841,7 @@ export default function Post() {
             title: "Why Review Recency Matters for Local Rankings",
             href: "/blog/why-review-recency-matters-for-local-rankings",
           },
+          { title: "The Monthly Reputation Report: Six Numbers That Matter", href: "/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings" },
         ]}
       />
     </>

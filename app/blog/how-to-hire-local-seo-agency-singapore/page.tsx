@@ -320,6 +320,9 @@ export default function Post() {
         { title: "SEO vs Local SEO — What's the Actual Difference?", href: "/blog/seo-vs-local-seo" },
         { title: "Review Management Singapore", href: "/blog/review-management-singapore" },
         { title: "How Many Google Reviews Do You Need to Compete Locally?", href: "/blog/how-many-google-reviews-do-you-need-to-compete-locally" },
+        { title: "Whose Account Is It? GBP Ownership Terms to Fix First", href: "/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first" },
+        { title: "How Multi-Outlet Singapore Brands Should Run GBP Profiles", href: "/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles" },
+        { title: "Share of Local Voice: The Geogrid Metric", href: "/blog/share-of-local-voice-the-geogrid-metric" },
       ]}
     />
   );

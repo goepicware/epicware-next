@@ -1022,6 +1022,10 @@ export default function Post() {
             title: "25 Small Business Ideas in Singapore for 2026",
             href: "/blog/small-business-ideas-singapore",
           },
+          { title: "Whose Account Is It? GBP Ownership Terms to Fix First", href: "/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first" },
+          { title: "Share of Local Voice: The Geogrid Metric", href: "/blog/share-of-local-voice-the-geogrid-metric" },
+          { title: "The GEO Worklist: Crawler Access, Schema, Citable Content", href: "/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content" },
+          { title: "Build a 30-Prompt Panel to Test AI Search Visibility", href: "/blog/build-a-30-prompt-panel-to-test-ai-search-visibility" },
         ]}
       />
     </>

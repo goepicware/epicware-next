@@ -917,6 +917,8 @@ export default function Post() {
             title: "7 Things Small Businesses Must Demand From Any SEO Service",
             href: "/blog/seo-services-for-small-business",
           },
+          { title: "What Happens If You Buy Google Reviews in Singapore", href: "/blog/what-happens-if-you-buy-google-reviews-in-singapore" },
+          { title: "Who Asks for the Review, and When? A Six-Moment Audit", href: "/blog/who-asks-for-the-review-and-when-a-six-moment-audit" },
         ]}
       />
     </>

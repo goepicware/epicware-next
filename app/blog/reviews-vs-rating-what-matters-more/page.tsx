@@ -91,6 +91,8 @@ export default function Post() {
       relatedPosts={[
         { title: "Review Velocity vs Total Review Count", href: "/blog/review-velocity-vs-total-review-count" },
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
+        { title: "What Happens If You Buy Google Reviews in Singapore", href: "/blog/what-happens-if-you-buy-google-reviews-in-singapore" },
+        { title: "Who Asks for the Review, and When? A Six-Moment Audit", href: "/blog/who-asks-for-the-review-and-when-a-six-moment-audit" },
       ]}
     />
   );

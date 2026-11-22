@@ -671,6 +671,7 @@ export default function Post() {
             title: "How to Hire a Local SEO Agency in Singapore",
             href: "/blog/how-to-hire-local-seo-agency-singapore",
           },
+          { title: "The Monthly Reputation Report: Six Numbers That Matter", href: "/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings" },
         ]}
       />
     </>

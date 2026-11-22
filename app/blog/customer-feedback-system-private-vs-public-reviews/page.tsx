@@ -92,6 +92,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Review Gating Explained", href: "/blog/review-gating-explained" },
         { title: "Should You Respond to Every Google Review?", href: "/blog/should-you-respond-to-every-google-review" },
+        { title: "Who Asks for the Review, and When? A Six-Moment Audit", href: "/blog/who-asks-for-the-review-and-when-a-six-moment-audit" },
       ]}
     />
   );

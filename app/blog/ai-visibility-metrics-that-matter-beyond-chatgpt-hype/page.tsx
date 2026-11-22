@@ -282,6 +282,7 @@ export default function Post() {
         { title: "Does ChatGPT Make Up Citations? What It Means for Your Business", href: "/blog/does-chatgpt-make-up-citations" },
         { title: "Small Businesses in Singapore: The 2026 Visibility Reality", href: "/blog/small-businesses-singapore-visibility-2026" },
         { title: "Google Business Profile Suspended? Fix It Before You Appeal", href: "/blog/google-business-profile-suspended-fix-it-before-you-appeal" },
+        { title: "Build a 30-Prompt Panel to Test AI Search Visibility", href: "/blog/build-a-30-prompt-panel-to-test-ai-search-visibility" },
       ]}
     />
   );
