@@ -46,6 +46,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="preconnect" href="https://scripts.clarity.ms" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+      </head>
       <body className="font-sans antialiased">
         {/* Meta Pixel noscript fallback — for browsers with JS disabled */}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (

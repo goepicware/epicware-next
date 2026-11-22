@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 import { PROOF } from "@/lib/site/proof";
@@ -26,8 +27,8 @@ const schema = {
   description:
     "Learn why negative reviews hurt your clinic's reputation in Singapore, and how Epicware helps clinics boost their online presence and attract more patients.",
   datePublished: "2026-07-02",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
   url: CANONICAL,
 };
 
@@ -87,11 +88,13 @@ export default function Post() {
       }
       body={
         <>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://images.pexels.com/photos/21939167/pexels-photo-21939167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt="Upset patient holding a crumpled negative review, impacting a Singapore clinic's reputation."
+            width={940}
+            height={650}
             className="rounded-2xl w-full mb-8 object-cover"
+            priority
           />
 
           <h2 id="section-1">Why do negative reviews hurt my clinic&apos;s reputation?</h2>
@@ -166,10 +169,11 @@ export default function Post() {
             ]}
           />
 
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://images.pexels.com/photos/5881382/pexels-photo-5881382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt="A businesswoman looking worriedly at her laptop in a Singapore office."
+            width={940}
+            height={650}
             className="rounded-2xl w-full my-6 object-cover"
           />
 
