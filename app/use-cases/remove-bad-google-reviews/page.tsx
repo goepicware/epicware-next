@@ -32,10 +32,10 @@ const schema = {
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   areaServed: { "@type": "Country", name: "Singapore" },
-  url: "https://epicware.ai/use-cases/remove-bad-google-reviews",
+  url: "https://www.epicware.ai/use-cases/remove-bad-google-reviews",
 };
 
 const STEPS = [

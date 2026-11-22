@@ -20,9 +20,9 @@ const schema = {
   "headline": "How a Singapore Clinic Network Raised Their Google Rating to 4.7",
   "description": "How a Singapore GP clinic network removed 3 fake competitor reviews, raised their Google rating to 4.7, and built a consistent review generation system with Epicware.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/case-studies/clinic-review-growth-singapore"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/case-studies/clinic-review-growth-singapore"
 };
 
 export default function Page() {

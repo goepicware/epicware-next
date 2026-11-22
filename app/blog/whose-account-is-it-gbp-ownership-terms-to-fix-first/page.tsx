@@ -24,9 +24,9 @@ const schema = {
   "headline": "Whose Account Is It? GBP Ownership Terms to Fix First",
   "description": "Learn who should hold the verified owner on your Google Business Profile, how to log manager roles, and the handover terms to sign before you hire.",
   "datePublished": "2026-11-11",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first"
 };
 
 export default function Post() {

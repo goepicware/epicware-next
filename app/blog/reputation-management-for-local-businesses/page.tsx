@@ -30,14 +30,14 @@ const schema = {
   author: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   publisher: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
-  url: "https://epicware.ai/blog/reputation-management-for-local-businesses",
+  url: "https://www.epicware.ai/blog/reputation-management-for-local-businesses",
 };
 
 const faqSchema = {

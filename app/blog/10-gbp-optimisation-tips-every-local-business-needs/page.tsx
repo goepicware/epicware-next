@@ -24,9 +24,9 @@ const schema = {
   description:
     "10 essential Google Business Profile tips for Singapore SMBs — category selection, photo strategy, and the mistakes that quietly suppress local rankings.",
   datePublished: "2026-07-02",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/10-gbp-optimisation-tips-every-local-business-needs",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/10-gbp-optimisation-tips-every-local-business-needs",
 };
 
 export default function Post() {

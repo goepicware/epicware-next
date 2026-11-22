@@ -20,9 +20,9 @@ const schema = {
   "headline": "Restaurant Digital Growth Guide — Rank Higher, Get More Reviews, Fill Tables",
   "description": "The complete digital growth playbook for Singapore restaurant owners. GBP optimisation, review generation, and bad review removal strategies for F&B businesses.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/resources/guides/restaurant-digital-growth-guide"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/resources/guides/restaurant-digital-growth-guide"
 };
 
 export default function Page() {

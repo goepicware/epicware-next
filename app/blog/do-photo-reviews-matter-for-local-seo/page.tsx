@@ -20,9 +20,9 @@ const schema = {
   "headline": "Do Photo Reviews Matter for Local SEO?",
   "description": "How customer photos in Google reviews affect your local search visibility and click-through rate. The evidence and practical implications.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/do-photo-reviews-matter-for-local-seo"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/do-photo-reviews-matter-for-local-seo"
 };
 
 export default function Post() {

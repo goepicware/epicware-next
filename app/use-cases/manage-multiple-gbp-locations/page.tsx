@@ -33,10 +33,10 @@ const schema = {
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   areaServed: { "@type": "Country", name: "Singapore" },
-  url: "https://epicware.ai/use-cases/manage-multiple-gbp-locations",
+  url: "https://www.epicware.ai/use-cases/manage-multiple-gbp-locations",
 };
 
 const FEATURES = [

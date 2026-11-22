@@ -30,14 +30,14 @@ const schema = {
   author: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   publisher: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
-  url: "https://epicware.ai/blog/seo-services-for-small-business",
+  url: "https://www.epicware.ai/blog/seo-services-for-small-business",
 };
 
 export default function Post() {

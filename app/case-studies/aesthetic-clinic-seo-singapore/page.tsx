@@ -33,9 +33,9 @@ const articleSchema = {
   description:
     "How a Singapore medical aesthetic clinic hit #1 on Google and ChatGPT for Orchard and Hougang treatment keywords in 60 days — inside MOH advertising rules.",
   datePublished: "2026-09-05",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/case-studies/aesthetic-clinic-seo-singapore",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/case-studies/aesthetic-clinic-seo-singapore",
 };
 
 const FAQS = [

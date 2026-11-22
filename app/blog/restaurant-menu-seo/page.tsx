@@ -28,9 +28,9 @@ const schema = {
   description:
     "An operator-friendly playbook to get your menu found on Search, Maps, and AI — crawlable HTML, Menu/MenuItem JSON-LD, GBP sync, and an audit cadence.",
   datePublished: "2026-10-01",
-  author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/restaurant-menu-seo",
+  author: { "@type": "Person", name: "Vignesh", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/restaurant-menu-seo",
 };
 
 const faqSchema = {

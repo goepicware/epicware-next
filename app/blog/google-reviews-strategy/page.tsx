@@ -20,9 +20,9 @@ const schema = {
   "headline": "Google Reviews Strategy: 90-Day Framework for Singapore SMBs",
   "description": "A structured 90-day Google reviews strategy for Singapore businesses. Build review velocity, protect your rating, and rank higher on Google Maps.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/google-reviews-strategy"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/google-reviews-strategy"
 };
 
 export default function Post() {

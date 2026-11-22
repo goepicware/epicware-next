@@ -24,9 +24,9 @@ const schema = {
   "headline": "The GEO Worklist: Crawler Access, Schema, Citable Content",
   "description": "Fix AI visibility for your local business in order: unblock crawlers, add LocalBusiness and Service schema, then rewrite service pages so they're extractable.",
   "datePublished": "2026-11-21",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content"
 };
 
 export default function Post() {

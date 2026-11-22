@@ -21,9 +21,9 @@ const schema = {
   name: "EpicSocial Social Scheduling Singapore",
   serviceType: "Social Media Scheduling",
   description: "AI social media content generation and scheduling for Singapore SMBs across Facebook, Instagram, and GBP.",
-  provider: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
+  provider: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
   areaServed: { "@type": "Country", name: "Singapore" },
-  url: "https://epicware.ai/growth-tools/epicsocial-social-scheduling",
+  url: "https://www.epicware.ai/growth-tools/epicsocial-social-scheduling",
 };
 
 export default function EpicSocialSchedulingPage() {

@@ -20,9 +20,9 @@ const schema = {
   "headline": "How a Singapore Salon Chain Grew to 150+ Reviews and Ranked in the Top 3",
   "description": "How a Singapore hair salon chain improved their Google Maps rank and grew to 150+ reviews per outlet using Epicware's review generation and GBP optimisation.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/case-studies/salon-whatsapp-automation"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/case-studies/salon-whatsapp-automation"
 };
 
 export default function Page() {

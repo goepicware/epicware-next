@@ -144,7 +144,7 @@ export default async function SingaporeDistrictPage({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
     telephone: "+6584446582",
     areaServed: {
       "@type": "City",

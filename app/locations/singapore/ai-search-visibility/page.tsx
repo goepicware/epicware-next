@@ -32,10 +32,10 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   areaServed: { "@type": "Country", name: "Singapore" },
-  url: "https://epicware.ai/locations/singapore/ai-search-visibility",
+  url: "https://www.epicware.ai/locations/singapore/ai-search-visibility",
 };
 
 const FAQS: { q: string; a: string }[] = [

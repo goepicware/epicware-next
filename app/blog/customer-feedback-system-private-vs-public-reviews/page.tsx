@@ -20,9 +20,9 @@ const schema = {
   "headline": "Customer Feedback System — Private vs Public Reviews",
   "description": "How to design a customer feedback system that captures private feedback and generates public Google reviews — without violating review gating policy.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/customer-feedback-system-private-vs-public-reviews"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/customer-feedback-system-private-vs-public-reviews"
 };
 
 export default function Post() {

@@ -20,9 +20,9 @@ const schema = {
   "headline": "Review Gating Explained — What It Is and Why Google Bans It",
   "description": "Review gating is the practice of only directing happy customers to Google reviews. It violates Google policy and can get your profile suspended.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/review-gating-explained"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/review-gating-explained"
 };
 
 const faqSchema = {

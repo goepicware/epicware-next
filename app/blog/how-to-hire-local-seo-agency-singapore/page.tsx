@@ -23,9 +23,9 @@ const schema = {
   description:
     "A practical guide for Singapore SMB owners: what real local SEO work looks like, the right questions to ask, and red flags to avoid when hiring an agency.",
   datePublished: "2026-06-15",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/how-to-hire-local-seo-agency-singapore",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/how-to-hire-local-seo-agency-singapore",
 };
 
 export default function Post() {

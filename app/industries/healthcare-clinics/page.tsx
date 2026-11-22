@@ -23,7 +23,7 @@ const schema = [
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Epicware Pte. Ltd.",
-  url: "https://epicware.ai",
+  url: "https://www.epicware.ai",
   description:
     "Local SEO and Reputation Management platform for Singapore medical clinics. Patient review generation, GBP optimisation, and bad review removal.",
   areaServed: { "@type": "Country", name: "Singapore" },

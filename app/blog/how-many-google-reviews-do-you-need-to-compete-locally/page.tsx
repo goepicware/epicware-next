@@ -20,9 +20,9 @@ const schema = {
   "headline": "How Many Google Reviews Do You Need to Compete on Google Maps?",
   "description": "Benchmarks for review count by industry and Singapore district. How many reviews your business needs to appear in the Google Maps 3-Pack.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/how-many-google-reviews-do-you-need-to-compete-locally"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/how-many-google-reviews-do-you-need-to-compete-locally"
 };
 
 export default function Post() {

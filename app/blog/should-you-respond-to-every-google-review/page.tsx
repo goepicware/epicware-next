@@ -20,9 +20,9 @@ const schema = {
   "headline": "Should You Respond to Every Google Review? The Answer Is Yes",
   "description": "Why responding to every Google review — including positive ones — improves your local SEO rank and converts more profile views into visits.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/should-you-respond-to-every-google-review"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/should-you-respond-to-every-google-review"
 };
 
 const faqSchema = {

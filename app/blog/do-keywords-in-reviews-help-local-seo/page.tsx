@@ -20,9 +20,9 @@ const schema = {
   "headline": "Do Keywords in Google Reviews Help Local SEO?",
   "description": "Learn whether keywords mentioned in customer reviews affect Google Maps rankings. The nuanced answer and what it means for your review strategy.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/do-keywords-in-reviews-help-local-seo"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/do-keywords-in-reviews-help-local-seo"
 };
 
 export default function Post() {

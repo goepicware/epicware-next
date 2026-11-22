@@ -24,9 +24,9 @@ const schema = {
   "headline": "Google Business Profile Suspended? Fix It Before You Appeal",
   "description": "Most Google Business Profile suspensions in Singapore are self-inflicted. Fix the violation first, then appeal so your first appeal lands.",
   "datePublished": "2026-11-04",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/google-business-profile-suspended-fix-it-before-you-appeal"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/google-business-profile-suspended-fix-it-before-you-appeal"
 };
 
 export default function Post() {

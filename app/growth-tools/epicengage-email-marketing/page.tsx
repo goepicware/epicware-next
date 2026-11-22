@@ -21,9 +21,9 @@ const schema = {
   name: "EpicEngage Email Marketing Singapore",
   serviceType: "Email Marketing",
   description: "Behaviour-triggered email marketing automation for Singapore SMBs.",
-  provider: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
+  provider: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
   areaServed: { "@type": "Country", name: "Singapore" },
-  url: "https://epicware.ai/growth-tools/epicengage-email-marketing",
+  url: "https://www.epicware.ai/growth-tools/epicengage-email-marketing",
 };
 
 export default function EpicEngageEmailMarketingPage() {

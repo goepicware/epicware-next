@@ -27,9 +27,9 @@ const schema = {
   "description":
     "Share of local voice shows how much of your service area you truly own in the Map Pack, by district. How to track and report it monthly.",
   "datePublished": "2026-11-26",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/share-of-local-voice-the-geogrid-metric"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/share-of-local-voice-the-geogrid-metric"
 };
 
 export default function Post() {

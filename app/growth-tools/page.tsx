@@ -29,10 +29,10 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   areaServed: { "@type": "Country", name: "Singapore" },
-  url: "https://epicware.ai/growth-tools",
+  url: "https://www.epicware.ai/growth-tools",
 };
 
 const CHILD_SERVICES = [

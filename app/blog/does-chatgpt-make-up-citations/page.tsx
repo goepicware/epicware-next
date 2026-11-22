@@ -24,9 +24,9 @@ const schema = {
   description:
     "ChatGPT and AI search engines do hallucinate business citations — and the fix is accurate, consistent NAP data across the web. Here's why AI citations matter and what Singapore SMBs need to do.",
   datePublished: "2026-07-03",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/does-chatgpt-make-up-citations",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/does-chatgpt-make-up-citations",
 };
 
 export default function Post() {

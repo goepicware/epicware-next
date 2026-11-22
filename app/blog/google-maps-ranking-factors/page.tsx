@@ -20,9 +20,9 @@ const schema = {
   "headline": "Google Maps Ranking Factors Explained — Where Reviews Fit In",
   "description": "A complete breakdown of Google Maps ranking factors — relevance, distance, prominence — and how reviews, GBP completeness, and citations affect your rank.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/google-maps-ranking-factors"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/google-maps-ranking-factors"
 };
 
 export default function Post() {

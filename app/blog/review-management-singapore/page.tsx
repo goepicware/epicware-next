@@ -20,9 +20,9 @@ const schema = {
   "headline": "Review Management for Singapore SMBs — What It Actually Involves",
   "description": "What review management means for Singapore businesses — monitoring, responding, generating, and removing reviews. The practical guide for SMB owners.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/review-management-singapore"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/review-management-singapore"
 };
 
 export default function Post() {
