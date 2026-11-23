@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
@@ -36,12 +37,12 @@ const schema = {
   author: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   publisher: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   url: CANONICAL,
 };
@@ -189,9 +190,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/5444631/pexels-photo-5444631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Close-up of the Google Maps app icon on an iPhone screen, representing local search for nearby businesses"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>
@@ -308,9 +311,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/9821386/pexels-photo-9821386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Five bright yellow stars on a pastel background representing a five-star customer rating and online review"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>
@@ -465,9 +470,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/10020092/pexels-photo-10020092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="A tablet displaying an analytics dashboard with bar charts and performance graphs, illustrating business rank tracking"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>
@@ -632,9 +639,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/5410100/pexels-photo-5410100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="A female small business owner wearing an apron uses a smartphone while managing her local business"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>

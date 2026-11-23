@@ -21,9 +21,9 @@ const schema = [
   "headline": "Epicware vs QR Code Reviews — Automated vs Manual Review Collection",
   "description": "Compare Epicware's automated WhatsApp review campaigns against QR code review collection. Response rates, automation, and multi-outlet support compared.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/comparison/epicreview-vs-qr-code-review"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/comparison/epicreview-vs-qr-code-review"
 },
   {
   "@context": "https://schema.org",

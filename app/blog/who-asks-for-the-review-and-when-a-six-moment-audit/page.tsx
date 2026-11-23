@@ -27,9 +27,9 @@ const schema = {
   "description":
     "Most local businesses ask for a review at one moment. Map all six, assign one owner each, and keep only the asks that convert.",
   "datePublished": "2026-12-01",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/who-asks-for-the-review-and-when-a-six-moment-audit"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/who-asks-for-the-review-and-when-a-six-moment-audit"
 };
 
 export default function Post() {

@@ -28,9 +28,9 @@ const schema = {
   description:
     "A practical checklist for reporting spam and fraudulent listings on Google Maps — what evidence to gather, how to file a report, and how to win appeals.",
   datePublished: "2026-10-05",
-  author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/google-maps-spam-reporting",
+  author: { "@type": "Person", name: "Vignesh", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/google-maps-spam-reporting",
 };
 
 const faqSchema = {

@@ -32,9 +32,9 @@ const articleSchema = {
   description:
     "How Epicware grew a two-outlet Singapore hair salon's organic traffic 263% and first-page rankings 272% in four months — and turned it into booked chairs.",
   datePublished: "2026-09-19",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/case-studies/hair-salon-seo-singapore",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/case-studies/hair-salon-seo-singapore",
 };
 
 const FAQS = [

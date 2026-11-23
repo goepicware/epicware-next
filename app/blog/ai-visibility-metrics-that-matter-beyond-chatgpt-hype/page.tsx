@@ -24,9 +24,9 @@ const schema = {
   "headline": "AI Visibility Metrics That Matter Beyond ChatGPT Hype",
   "description": "A screenshot is not a metric. See the four AI visibility metrics worth reporting and how to tie each one to calls, bookings, and branded search.",
   "datePublished": "2026-11-13",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype"
 };
 
 export default function Post() {

@@ -23,9 +23,9 @@ const schema = {
   description:
     "SEO and Local SEO are not the same game. If your traffic went up but calls didn't — here's the distinction that explains why, and what Singapore SMBs should prioritise.",
   datePublished: "2026-06-14",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/seo-vs-local-seo",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/seo-vs-local-seo",
 };
 
 export default function Post() {

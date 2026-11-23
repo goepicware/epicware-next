@@ -20,9 +20,9 @@ const schema = {
   "headline": "Reviews vs Rating: Which Matters More for Google Maps Rank?",
   "description": "Does Google Maps rank favour high review count or high star rating? The research-based answer and what it means for your local SEO strategy.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/reviews-vs-rating-what-matters-more"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/reviews-vs-rating-what-matters-more"
 };
 
 export default function Post() {

@@ -20,9 +20,9 @@ const schema = {
   "headline": "Google Review Request Templates — WhatsApp, Email & SMS",
   "description": "Ready-to-use WhatsApp, email, and SMS templates for Google review requests. Tested formats that convert satisfied customers into reviewers.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/google-review-request-templates"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/google-review-request-templates"
 };
 
 export default function Post() {

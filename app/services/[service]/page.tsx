@@ -10,7 +10,7 @@ import { getService, PAGED_SERVICES } from "@/lib/site/services";
 import { COUNTRIES } from "@/lib/site/countries";
 import { getSubFeatureContent, isCountryServiceLive } from "@/lib/site/content";
 import { getServiceContent } from "@/lib/site/serviceContent";
-import { EPICWARE_GOOGLE_RATING, formatGoogleRatingBadge } from "@/lib/site/proof";
+import { formatGoogleRatingBadge } from "@/lib/site/proof";
 import ServiceLeadCTA from "@/components/site/ServiceLeadCTA";
 import ProcessTimeline from "@/components/visuals/ProcessTimeline";
 import MapPackHero from "@/components/visuals/local-seo/MapPackHero";
@@ -185,15 +185,8 @@ export default async function ServicePage({
     name: content.h1,
     serviceType: service.name,
     description: content.heroDescription,
-    provider: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-    url: `https://epicware.ai/services/${slug}`,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(EPICWARE_GOOGLE_RATING.value),
-      ratingCount: String(EPICWARE_GOOGLE_RATING.count),
-      bestRating: "5",
-      worstRating: "1",
-    },
+    provider: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+    url: `https://www.epicware.ai/services/${slug}`,
   };
 
   const faqSchema = {

@@ -3,13 +3,12 @@ import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { COUNTRIES } from "@/lib/site/countries";
-import { DISTRICTS } from "@/lib/districts";
 import { PAGED_SERVICES } from "@/lib/site/services";
 import { REVIEW_REMOVAL_VARIANTS } from "@/lib/site/reviewRemovalVariants";
 import { isCountryServiceLive, isHubLive, isSubFeatureLive, isCountryServiceVariantLive } from "@/lib/site/content";
+import { DISTRICTS as SINGAPORE_DISTRICTS } from "@/lib/districts";
 
 const BASE = "https://www.epicware.ai";
-
 
 // Last full restructure — used as the lastmod fallback when git history is
 // unavailable (e.g. a shallow clone on the build machine).
@@ -169,9 +168,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Singapore district pages — all rendered through the shared
-  // app/locations/singapore/[slug]/page.tsx dynamic route template. Read
-  // from lib/districts so a new district can't be left out of the sitemap.
-  const districtPages: MetadataRoute.Sitemap = DISTRICTS.map((d) => ({
+  // app/locations/singapore/[slug]/page.tsx dynamic route template.
+  // Sourced from lib/districts.ts so a new district can never be left out
+  // of the sitemap the way the old hardcoded 10-slug list was.
+  const districtPages: MetadataRoute.Sitemap = SINGAPORE_DISTRICTS.map((d) => ({
     url: `${BASE}/locations/singapore/${d.slug}`,
     lastModified: districtPageDate,
     changeFrequency: "monthly" as const,

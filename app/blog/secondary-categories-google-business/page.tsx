@@ -28,9 +28,9 @@ const schema = {
   description:
     "A practical audit guide for Google Business secondary categories — the IS/HAS test, how many to use, and common mistakes to avoid.",
   datePublished: "2026-10-08",
-  author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/secondary-categories-google-business",
+  author: { "@type": "Person", name: "Vignesh", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/secondary-categories-google-business",
 };
 
 const faqSchema = {

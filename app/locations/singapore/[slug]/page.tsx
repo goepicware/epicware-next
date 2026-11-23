@@ -79,32 +79,32 @@ const DISTRICT_META: Record<string, { title: string; description: string }> = {
   "marina-bay": {
     title: "AI SEO Agency in Marina Bay | Epicware",
     description:
-      "Rank higher on Google Maps in Marina Bay. Our SEO team helps restaurants, bars and offices near Raffles Place and Marina Bay Sands win local searches.",
+      "CBD lunch crowds and evening visitors near Marina Bay Sands pick restaurants and bars off the Google Maps 3-Pack. Epicware keeps your profile ranking for both.",
   },
   "jurong-east": {
     title: "AI SEO Agency in Jurong East | Epicware",
     description:
-      "Get found on Google Maps in Jurong East. Our SEO team helps businesses around the MRT interchange, JEM and Westgate out-rank the chains nearby.",
+      "Thousands pass through Jurong East's MRT interchange daily, comparing shops at JEM and Westgate on their phones in seconds. Epicware helps you win that comparison.",
   },
   "paya-lebar": {
     title: "AI SEO Agency in Paya Lebar | Epicware",
     description:
-      "Rank higher on Google Maps in Paya Lebar. Our SEO team helps businesses near Paya Lebar Quarter and SingPost Centre win local searches and reviews.",
+      "PLQ brought a new professional lunch crowd to Paya Lebar. Epicware optimises your Google Business Profile so both office workers and locals find you first.",
   },
   bugis: {
     title: "AI SEO Agency in Bugis | Epicware",
     description:
-      "Get found on Google Maps in Bugis. Our SEO team helps cafés, restaurants and shops around Bugis Junction and Haji Lane win local searches and reviews.",
+      "Tourists and locals both search Google before choosing where to eat near Haji Lane and Bugis Junction. Epicware builds the review profile that wins that search.",
   },
   novena: {
     title: "AI SEO Agency in Novena | Epicware",
     description:
-      "Rank higher on Google Maps in Novena. Our SEO team helps clinics and specialists near Novena Medical Centre grow their reviews and remove unfair ones.",
+      "Patients choosing a clinic near Mount Elizabeth Novena Hospital decide almost entirely on Google reviews. Epicware protects and grows that reputation for you.",
   },
   bishan: {
     title: "AI SEO Agency in Bishan | Epicware",
     description:
-      "Bishan families pick tuition, clinics and dinner spots by their Google reviews. We help businesses near Junction 8 earn that trust and reach the 3-Pack.",
+      "Bishan families return to businesses they trust for years, and Google reviews are how new residents find them. Epicware helps you earn that trust at scale.",
   },
 };
 

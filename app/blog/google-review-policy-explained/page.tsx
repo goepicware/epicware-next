@@ -20,9 +20,9 @@ const schema = {
   "headline": "Google Review Policy Explained — What Qualifies for Removal",
   "description": "Complete breakdown of Google's review content policies for Singapore business owners. Know exactly which reviews violate policy and can be removed.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/google-review-policy-explained"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/google-review-policy-explained"
 };
 
 export default function Post() {

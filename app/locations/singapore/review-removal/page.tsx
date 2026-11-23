@@ -31,13 +31,13 @@ const schema = {
   provider: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   areaServed: {
     "@type": "Country",
     name: "Singapore",
   },
-  url: "https://epicware.ai/locations/singapore/review-removal",
+  url: "https://www.epicware.ai/locations/singapore/review-removal",
 };
 
 const CHILD_SERVICES = [

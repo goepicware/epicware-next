@@ -20,9 +20,9 @@ const schema = {
   "headline": "How to Get More Google Reviews — Ethical Methods That Actually Work",
   "description": "A structured framework for increasing Google reviews for your Singapore business. WhatsApp templates, timing strategies, and automation options.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/how-to-get-more-google-reviews"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/how-to-get-more-google-reviews"
 };
 
 export default function Post() {

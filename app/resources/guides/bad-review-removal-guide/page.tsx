@@ -19,9 +19,9 @@ const schema = {
   "headline": "How to Remove a Google Review — Step-by-Step Guide",
   "description": "The complete guide to removing bad Google reviews from your Singapore business profile. Policy violations, removal process, escalation paths, and professional removal service.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/resources/guides/bad-review-removal-guide"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/resources/guides/bad-review-removal-guide"
 };
 
 export default function Page() {

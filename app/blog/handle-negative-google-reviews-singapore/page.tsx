@@ -23,9 +23,9 @@ const schema = {
   description:
     "A practical playbook for Singapore business owners: how to respond to negative Google reviews, when to request removal, and how to protect your reputation.",
   datePublished: "2026-06-17",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/handle-negative-google-reviews-singapore",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/handle-negative-google-reviews-singapore",
 };
 
 export default function Post() {

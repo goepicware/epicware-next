@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
@@ -32,9 +33,9 @@ const schema = {
   datePublished: "2026-06-25",
   image:
     "https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782282482944_Business-owner-checking-customer-reviews.jpeg",
-  author: { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/why-review-recency-matters-for-local-rankings",
+  author: { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/why-review-recency-matters-for-local-rankings",
 };
 
 const faqSchema = {
@@ -101,11 +102,13 @@ export default function Post() {
             For business owners, this means your review strategy cannot be a one-time campaign — it must be a continuous
             operational process tied directly to your Google Business Profile performance.
           </p>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782282482944_Business-owner-checking-customer-reviews.jpeg"
             alt="Business owner checking customer reviews"
+            width={1280}
+            height={720}
             className="w-full rounded-xl my-6 object-cover"
+            priority
           />
         </>
       }
@@ -154,10 +157,11 @@ export default function Post() {
           </p>
 
           <h2>How do recent reviews affect AI-powered search recommendations?</h2>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782282634007_Marketing-team-analyzing-review-data.jpeg"
             alt="Marketing team analyzing review data"
+            width={1280}
+            height={714}
             className="w-full rounded-xl my-6 object-cover"
           />
           <p>
@@ -171,10 +175,11 @@ export default function Post() {
             clinic still has the same staff, or whether your service quality has held up. A review from last week can.
             AI models treat recency as a proxy for reliability.
           </p>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782282417267_Infographic-describing-steps-to-maintain-review-recency.jpeg"
             alt="Steps to maintain review recency"
+            width={1080}
+            height={720}
             className="w-full rounded-xl my-6 object-cover"
           />
           <p>The data confirms this at scale:</p>
@@ -304,10 +309,11 @@ export default function Post() {
             They know their review velocity number the same way they know their weekly revenue. That level of attention
             separates businesses that rank consistently from those that spike and fade.
           </p>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782282288455_epicware.jpg"
             alt="Epicware local SEO platform"
+            width={1920}
+            height={1080}
             className="w-full rounded-xl my-6 object-cover"
           />
           <blockquote>— Vignesh, Epicware</blockquote>

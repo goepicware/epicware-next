@@ -20,9 +20,9 @@ const schema = {
   "headline": "Best Time to Ask for a Google Review — Timing Strategies by Industry",
   "description": "Learn when to ask for a Google review to maximise response rates. Industry-specific timing windows for restaurants, clinics, salons, and service businesses.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/best-time-to-ask-for-a-google-review"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/best-time-to-ask-for-a-google-review"
 };
 
 export default function Post() {

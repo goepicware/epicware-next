@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import HeroSection from "@/components/home/HeroSection";
 import UrgencySection from "@/components/home/UrgencySection";
 
@@ -187,6 +188,8 @@ export default function HomePage() {
 
       {/* 14. Final CTA */}
       <FinalCTA />
+      <StickyMobileCTA />
+      <div className="h-20 lg:hidden" />
     </>
   );
 }

@@ -91,7 +91,7 @@ const schemaPricing = {
       "@type": "ListItem",
       position: 1,
       item: {
-        "@type": "Product",
+        "@type": "Service",
         name: "Foundation",
         description: "Review collection, AI review replies, and GBP optimisation for a single outlet.",
         offers: {
@@ -100,7 +100,7 @@ const schemaPricing = {
           priceCurrency: "SGD",
           priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.plans.foundation.monthly), priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
-          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+          provider: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
       },
     },
@@ -108,7 +108,7 @@ const schemaPricing = {
       "@type": "ListItem",
       position: 2,
       item: {
-        "@type": "Product",
+        "@type": "Service",
         name: "Authority",
         description: "Full Local SEO and rank tracking with EpicMap, EpicReview, and EpicSocial.",
         offers: {
@@ -117,7 +117,7 @@ const schemaPricing = {
           priceCurrency: "SGD",
           priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.plans.authority.monthly), priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
-          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+          provider: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
       },
     },
@@ -125,7 +125,7 @@ const schemaPricing = {
       "@type": "ListItem",
       position: 3,
       item: {
-        "@type": "Product",
+        "@type": "Service",
         name: "Domination",
         description: "Full AI search visibility and SEO content on top of the Authority plan.",
         offers: {
@@ -134,7 +134,7 @@ const schemaPricing = {
           priceCurrency: "SGD",
           priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.plans.domination.monthly), priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
-          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+          provider: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
       },
     },
@@ -142,7 +142,7 @@ const schemaPricing = {
       "@type": "ListItem",
       position: 4,
       item: {
-        "@type": "Product",
+        "@type": "Service",
         name: "Full Stack",
         description: "Everything in Domination plus paid ad management across Meta and Google.",
         offers: {
@@ -151,7 +151,7 @@ const schemaPricing = {
           priceCurrency: "SGD",
           priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.plans.fullStack.monthly), priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
-          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+          provider: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
       },
     },
@@ -169,7 +169,7 @@ const schemaAddOns = {
       "@type": "ListItem",
       position: 1,
       item: {
-        "@type": "Product",
+        "@type": "Service",
         name: "Bad Review Removal",
         description: "Charged upfront. Refunded in full if not removed within 3 months.",
         offers: {
@@ -178,7 +178,7 @@ const schemaAddOns = {
           priceCurrency: "SGD",
           priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRICING.reviewRemoval.SGD), priceCurrency: "SGD", unitText: "per review" },
           url: "https://www.epicware.ai/pricing",
-          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+          provider: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
       },
     },
@@ -186,7 +186,7 @@ const schemaAddOns = {
       "@type": "ListItem",
       position: 2,
       item: {
-        "@type": "Product",
+        "@type": "Service",
         name: "10-Page Website Build",
         description: "A professionally designed 10-page website, built for local SEO and conversions.",
         offers: {
@@ -194,7 +194,7 @@ const schemaAddOns = {
           price: "3000",
           priceCurrency: "SGD",
           url: "https://www.epicware.ai/pricing",
-          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+          provider: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
       },
     },
@@ -202,7 +202,7 @@ const schemaAddOns = {
       "@type": "ListItem",
       position: 3,
       item: {
-        "@type": "Product",
+        "@type": "Service",
         name: "WordPress Maintenance",
         description: "Ongoing updates, security hardening, backups, and performance monitoring for your WordPress site.",
         offers: {
@@ -211,7 +211,7 @@ const schemaAddOns = {
           priceCurrency: "SGD",
           priceSpecification: { "@type": "UnitPriceSpecification", price: "500", priceCurrency: "SGD", unitCode: "MON" },
           url: "https://www.epicware.ai/pricing",
-          seller: { "@type": "Organization", name: "Epicware Pte. Ltd." },
+          provider: { "@type": "Organization", name: "Epicware Pte. Ltd." },
         },
       },
     },

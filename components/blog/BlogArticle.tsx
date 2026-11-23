@@ -48,7 +48,7 @@ export default function BlogArticle({
   const datePublished = schema.datePublished as string | undefined;
   const publisher = schema.publisher as Record<string, unknown> | undefined;
   const schemaUrl = (schema.url as string | undefined)?.replace(
-    "https://epicware.ai/",
+    "https://www.epicware.ai/",
     "https://www.epicware.ai/"
   );
 

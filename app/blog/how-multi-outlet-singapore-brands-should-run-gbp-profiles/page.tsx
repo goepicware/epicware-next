@@ -27,9 +27,9 @@ const schema = {
   "description":
     "Ten outlets with ten overlapping Google profiles split their own local SEO. The hierarchy that stops sibling listings from competing.",
   "datePublished": "2026-11-27",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles"
 };
 
 export default function Post() {

@@ -27,9 +27,9 @@ const schema = {
   "description":
     "A repeatable monthly audit: 30 prompts run identically on ChatGPT, Gemini and Perplexity, then scored for mention, position and sentiment.",
   "datePublished": "2026-11-23",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/build-a-30-prompt-panel-to-test-ai-search-visibility"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/build-a-30-prompt-panel-to-test-ai-search-visibility"
 };
 
 export default function Post() {

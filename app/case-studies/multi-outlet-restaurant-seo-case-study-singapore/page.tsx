@@ -33,9 +33,9 @@ const articleSchema = {
   description:
     "How Epicware grew a 5-outlet Singapore restaurant chain's organic traffic 24%, won #1 Google rankings and AI Overview citations. Real local SEO results.",
   datePublished: "2026-08-30",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
 };
 
 const FAQS = [
@@ -424,9 +424,9 @@ export default function MultiOutletRestaurantCaseStudyPage() {
                   <Link href="/locations/singapore/review-management" className="text-primary font-medium hover:underline">
                     review management system
                   </Link>{" "}
-                  in place across all five outlets — automated review requests via WhatsApp and email, happy
-                  customers guided to Google, unhappy customers routed to private feedback first so the team could
-                  recover the relationship before it became a public one-star.
+                  in place across all five outlets — automated review requests via WhatsApp and email sent to
+                  every customer alike, with a private feedback channel always open so the team could catch and
+                  recover a bad experience before it became a public one-star.
                 </p>
                 <p className="text-[15px] leading-relaxed text-foreground/90 mb-3">
                   Alongside that, we audited every existing negative review for policy violations and ran formal

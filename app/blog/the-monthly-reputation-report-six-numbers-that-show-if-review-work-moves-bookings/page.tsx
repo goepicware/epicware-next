@@ -24,9 +24,9 @@ const schema = {
   "headline": "The Monthly Reputation Report: Six Numbers That Matter",
   "description": "Most Google reviews reports measure the wrong things. Here are the six numbers that show whether review work is moving bookings, and what to leave off.",
   "datePublished": "2026-11-19",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings"
 };
 
 export default function Post() {

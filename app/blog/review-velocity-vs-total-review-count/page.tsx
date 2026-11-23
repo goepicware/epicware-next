@@ -20,9 +20,9 @@ const schema = {
   "headline": "Review Velocity vs Total Review Count — Which Matters More for Google Maps?",
   "description": "Understand whether Google Maps ranking is driven more by review count or review recency. The answer affects your entire review strategy.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/review-velocity-vs-total-review-count"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/review-velocity-vs-total-review-count"
 };
 
 export default function Post() {

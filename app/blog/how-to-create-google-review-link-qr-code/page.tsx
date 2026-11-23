@@ -20,9 +20,9 @@ const schema = {
   "headline": "How to Create a Google Review Link and QR Code",
   "description": "Step-by-step guide to generate your Google review link and create a QR code for your business. Use at checkout, on receipts, or in your window.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/how-to-create-google-review-link-qr-code"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/how-to-create-google-review-link-qr-code"
 };
 
 export default function Post() {

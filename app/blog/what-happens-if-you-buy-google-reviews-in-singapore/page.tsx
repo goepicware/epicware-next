@@ -24,9 +24,9 @@ const schema = {
   "headline": "What Happens If You Buy Google Reviews in Singapore",
   "description": "CCS acted against 45 businesses that bought fake Google reviews, plus the seller. See where the risk lands and what works instead.",
   "datePublished": "2026-11-23",
-  "author": { "@type": "Person", "name": "Vignesh", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/what-happens-if-you-buy-google-reviews-in-singapore"
+  "author": { "@type": "Person", "name": "Vignesh", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/what-happens-if-you-buy-google-reviews-in-singapore"
 };
 
 export default function Post() {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 import { PROOF } from "@/lib/site/proof";
@@ -29,9 +30,9 @@ const schema = {
   description:
     "Explore the five types of customer review platforms and learn how to choose the right one to boost your business visibility and reputation in 2026.",
   datePublished: "2026-06-29",
-  author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/types-of-customer-review-platforms",
+  author: { "@type": "Person", name: "Vignesh", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/types-of-customer-review-platforms",
 };
 
 const faqSchema = {
@@ -106,11 +107,13 @@ export default function Post() {
         readTime="8 min read"
         intro={
           <>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={OG_IMAGE}
               alt="Man reviewing printed customer review reports"
+              width={1280}
+              height={714}
               className="rounded-2xl w-full mb-8 object-cover"
+              priority
             />
             <p>
               Customer review platforms are defined as third-party websites and systems where consumers post public
@@ -155,10 +158,11 @@ export default function Post() {
             </p>
 
             <h2>2. Local search-facing platforms for small and medium businesses</h2>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782441016794_Team-discussing-customer-feedback-platform-types.jpeg"
               alt="Team discussing customer feedback platform types"
+              width={1280}
+              height={720}
               className="rounded-2xl w-full my-6"
             />
             <p>
@@ -462,10 +466,11 @@ export default function Post() {
               </Link>{" "}
               are for.
             </p>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://csuxjmfbwmkxiegfpljm.supabase.co/storage/v1/object/public/blog-images/organization-39439/1782282288455_epicware.jpg"
               alt="Epicware local SEO and review management platform"
+              width={1920}
+              height={1080}
               className="rounded-2xl w-full my-6"
             />
             <p>

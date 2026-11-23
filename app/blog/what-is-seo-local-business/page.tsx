@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
@@ -35,12 +36,12 @@ const schema = {
   author: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   publisher: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   url: CANONICAL,
 };
@@ -178,9 +179,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/7350921/pexels-photo-7350921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Person sitting at a table using a MacBook laptop with Google's homepage open on screen"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>
@@ -323,9 +326,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/30403062/pexels-photo-30403062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Close-up of a hand holding a smartphone displaying a Google satellite map with a red location pin"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>
@@ -409,9 +414,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/15863066/pexels-photo-15863066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Computer monitor displaying the OpenAI ChatGPT introduction page against a glowing purple background"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>

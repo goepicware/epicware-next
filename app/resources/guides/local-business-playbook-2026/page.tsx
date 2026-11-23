@@ -20,9 +20,9 @@ const schema = {
   "headline": "Local Business Playbook 2026 — Google Maps, AI Search & Reputation",
   "description": "The 2026 guide to local SEO for Singapore SMBs. AI search, Google Maps, GBP optimisation, and reputation management strategies that work in the current landscape.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/resources/guides/local-business-playbook-2026"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/resources/guides/local-business-playbook-2026"
 };
 
 export default function Page() {

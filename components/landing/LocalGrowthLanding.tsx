@@ -833,7 +833,7 @@ function Included() {
       items: [
         "Branded QR standee",
         "WhatsApp review automation",
-        "Smart sentiment routing",
+        "Private feedback channel",
         "Review monitoring & alerts",
         "AI-written review responses",
         "Bad review flagging & filing",

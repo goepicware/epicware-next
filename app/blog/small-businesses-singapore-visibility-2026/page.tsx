@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
@@ -29,14 +30,14 @@ const schema = {
   author: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
   publisher: {
     "@type": "Organization",
     name: "Epicware Pte. Ltd.",
-    url: "https://epicware.ai",
+    url: "https://www.epicware.ai",
   },
-  url: "https://epicware.ai/blog/small-businesses-singapore-visibility-2026",
+  url: "https://www.epicware.ai/blog/small-businesses-singapore-visibility-2026",
 };
 
 const faqSchema = {
@@ -205,9 +206,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/30705936/pexels-photo-30705936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Colourful Singapore shophouse facades on Bussorah Street"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>Singapore&apos;s 280,000 SMBs span everything from heritage shophouses to modern clinics and workshops — all competing for the same neighbourhood customer.</figcaption>
@@ -429,9 +432,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/11370617/pexels-photo-11370617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Five gold stars representing online review ratings"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>Online reviews have replaced the personal recommendation as the primary trust signal — 89% of consumers trust them equally, and 68% filter out anything below 4 stars.</figcaption>
@@ -538,9 +543,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/30530402/pexels-photo-30530402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="AI chat interface on a laptop screen representing generative AI search tools"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>ChatGPT, Gemini, and Perplexity are now fielding local recommendation queries at scale — and the signals they use to rank businesses are fundamentally different from traditional SEO.</figcaption>
@@ -811,9 +818,11 @@ export default function Post() {
             </p>
 
             <figure>
-              <img
+              <Image
                 src="https://images.pexels.com/photos/7857526/pexels-photo-7857526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Small business owner reviewing analytics on a laptop"
+                width={1260}
+                height={750}
                 className="w-full rounded-xl object-cover"
               />
               <figcaption>For most Singapore owner-operators, visibility comes down to five executable steps — not a large budget or a dedicated marketing team.</figcaption>

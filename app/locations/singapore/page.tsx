@@ -5,6 +5,7 @@ import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { PROOF } from "@/lib/site/proof";
+import { DISTRICTS } from "@/lib/districts";
 
 export const metadata: Metadata = {
   title: { absolute: "Singapore Areas We Serve | Local SEO by District | Epicware" },
@@ -26,7 +27,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Epicware Pte. Ltd.",
-  url: "https://epicware.ai",
+  url: "https://www.epicware.ai",
   telephone: "+6584446582",
   email: "hello@epicware.ai",
   address: {
@@ -38,25 +39,6 @@ const schema = {
   description:
     "AI-native Local SEO and Reputation Management platform for Singapore SMBs.",
 };
-
-const DISTRICTS = [
-  { name: "Jurong", slug: "jurong" },
-  { name: "Tampines", slug: "tampines" },
-  { name: "Woodlands", slug: "woodlands" },
-  { name: "Ang Mo Kio", slug: "ang-mo-kio" },
-  { name: "Toa Payoh", slug: "toa-payoh" },
-  { name: "Clementi", slug: "clementi" },
-  { name: "Buona Vista", slug: "buona-vista" },
-  { name: "Orchard", slug: "orchard" },
-  { name: "Bedok", slug: "bedok" },
-  { name: "Yishun", slug: "yishun" },
-  { name: "Marina Bay", slug: "marina-bay" },
-  { name: "Jurong East", slug: "jurong-east" },
-  { name: "Paya Lebar", slug: "paya-lebar" },
-  { name: "Bugis", slug: "bugis" },
-  { name: "Novena", slug: "novena" },
-  { name: "Bishan", slug: "bishan" },
-];
 
 const INDUSTRIES = [
   { label: "F&B Restaurants", href: "/industries/restaurants" },

@@ -132,10 +132,10 @@ function ReviewsBlock() {
             your online reputation before it affects calls, bookings, or walk-ins.
           </p>
           <p className="text-gray-500 leading-relaxed text-[0.9rem] border-l-2 border-amber-200 pl-4">
-            Happy customers are guided toward leaving a public Google review, while unhappy customers
-            are encouraged to share private feedback first — giving your team a chance to respond,
-            recover, and improve. We also help identify fake, spam, harmful, or policy-violating
-            reviews that may qualify for removal.
+            Every customer gets the same invitation to leave a Google review, with no filtering by
+            how the visit went. A separate private feedback channel is always open too, so your team
+            hears about problems quickly and can respond, recover, and improve. We also help identify
+            fake, spam, harmful, or policy-violating reviews that may qualify for removal.
           </p>
         </motion.div>
 

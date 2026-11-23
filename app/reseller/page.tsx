@@ -24,10 +24,10 @@ const schema = {
   "provider": {
     "@type": "Organization",
     "name": "Epicware Pte. Ltd.",
-    "url": "https://epicware.ai"
+    "url": "https://www.epicware.ai"
   },
   "areaServed": ["SG", "MY", "AE", "GB", "US"],
-  "url": "https://epicware.ai/reseller"
+  "url": "https://www.epicware.ai/reseller"
 };
 
 const tiers = [

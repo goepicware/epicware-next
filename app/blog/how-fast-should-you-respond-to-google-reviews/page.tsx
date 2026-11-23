@@ -20,9 +20,9 @@ const schema = {
   "headline": "How Fast Should You Respond to Google Reviews?",
   "description": "The ideal response time for positive and negative Google reviews — and what happens when you leave reviews unanswered for days.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/blog/how-fast-should-you-respond-to-google-reviews"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/blog/how-fast-should-you-respond-to-google-reviews"
 };
 
 export default function Post() {

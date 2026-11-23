@@ -28,9 +28,9 @@ const schema = {
   description:
     "Step-by-step checklist for clinic owners to pick and change Google Business Profile categories safely, avoid re-verification, and monitor impact for 2–4 weeks.",
   datePublished: "2026-09-30",
-  author: { "@type": "Person", name: "Vignesh", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/clinic-google-categories",
+  author: { "@type": "Person", name: "Vignesh", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/clinic-google-categories",
 };
 
 const faqSchema = {

@@ -21,9 +21,9 @@ const schema = [
   "headline": "Epicware vs Yext — Singapore Local SEO & Listings Management",
   "description": "Compare Epicware and Yext for Singapore SMBs. Listing management, review management, and pricing model compared.",
   "datePublished": "2026-06-01",
-  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://epicware.ai" },
-  "url": "https://epicware.ai/comparison/epicware-vs-yext"
+  "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
+  "url": "https://www.epicware.ai/comparison/epicware-vs-yext"
 },
   {
   "@context": "https://schema.org",

@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "img.youtube.com",
       },
+      {
+        protocol: "https",
+        hostname: "csuxjmfbwmkxiegfpljm.supabase.co",
+      },
     ],
   },
   async headers() {
@@ -26,14 +30,20 @@ const nextConfig: NextConfig = {
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(self)" },
+          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
           {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://maps.googleapis.com",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              // unsafe-eval dropped — not required by GTM/Clarity/Maps in production; keeps
+              // CSP's XSS mitigation meaningful. unsafe-inline stays for now: Next.js's own
+              // hydration bootstrap script is unnamed/un-nonced, so removing it needs a
+              // nonce-based middleware setup first, not a one-line change.
+              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://maps.googleapis.com",
+              "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https: blob:",
-              "font-src 'self' https://fonts.gstatic.com",
+              "font-src 'self'",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.google.com https://www.facebook.com https://*.clarity.ms https://maps.googleapis.com https://*.supabase.co",
               "frame-src 'self' https://www.googletagmanager.com",
             ].join("; "),

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
@@ -26,9 +27,9 @@ const schema = {
   description:
     "Practical SEO tips for small businesses — Google Business Profile, reviews, local content, schema, and AI search. Outcome-focused and Singapore-relevant.",
   datePublished: "2026-09-16",
-  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://epicware.ai" },
-  url: "https://epicware.ai/blog/seo-tips-small-business-owners",
+  author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
+  url: "https://www.epicware.ai/blog/seo-tips-small-business-owners",
 };
 
 export default function Post() {
@@ -42,11 +43,13 @@ export default function Post() {
       readTime="14 min read"
       intro={
         <>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/assets/blog/seo-tips-small-business-owners/hero-small-business-owner-laptop.jpg"
             alt="Small business owner reviewing online orders and performance on a laptop"
+            width={1600}
+            height={1068}
             className="rounded-2xl w-full mb-8 object-cover"
+            priority
           />
           <p>
             Your competitors are showing up on Google. You are not. That gap is not luck; it is strategy, and it is
@@ -112,10 +115,11 @@ export default function Post() {
           </p>
 
           <h2>Understand Where You Actually Rank Before You Do Anything Else</h2>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/assets/blog/seo-tips-small-business-owners/gbp-map-pin-location.jpg"
             alt="Hand placing a location pin on a printed street map"
+            width={1600}
+            height={1067}
             className="rounded-2xl w-full my-6"
           />
           <p>
@@ -271,10 +275,11 @@ export default function Post() {
           </p>
 
           <h2>Tip 2: Build a Review Engine, Not Just a Review Wishlist</h2>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/assets/blog/seo-tips-small-business-owners/reviews-customer-smartphone.jpg"
             alt="Customer smiling while reading messages on a smartphone"
+            width={1600}
+            height={2400}
             className="rounded-2xl w-full my-6"
           />
           <p>
@@ -338,10 +343,11 @@ export default function Post() {
           </p>
 
           <h2>Tip 3: Publish Local Content That Proves You Belong in Your Neighbourhood</h2>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/assets/blog/seo-tips-small-business-owners/local-shophouse-singapore.jpg"
             alt="Colourful traditional shophouse facade in Singapore's Chinatown"
+            width={1600}
+            height={1085}
             className="rounded-2xl w-full my-6"
           />
           <p>
@@ -463,10 +469,11 @@ export default function Post() {
           </p>
 
           <h2>Tip 5: Optimise for AI Search Before Your Competitor Realises It Is Happening</h2>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/assets/blog/seo-tips-small-business-owners/ai-chatgpt-search.jpg"
             alt="ChatGPT app open on a smartphone held in someone's hand"
+            width={1600}
+            height={2400}
             className="rounded-2xl w-full my-6"
           />
           <p>
@@ -538,10 +545,11 @@ export default function Post() {
           </p>
 
           <h2>Tip 6: Measure What Actually Matters and Set Realistic Timelines</h2>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/assets/blog/seo-tips-small-business-owners/analytics-dashboard-laptop.jpg"
             alt="Laptop screen displaying a performance graph"
+            width={1600}
+            height={1067}
             className="rounded-2xl w-full my-6"
           />
           <p>
