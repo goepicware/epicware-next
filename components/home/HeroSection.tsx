@@ -46,7 +46,7 @@ export default function HeroSection() {
           >
             From dominating Google Maps to getting recommended by ChatGPT and Gemini, Epicware
             combines custom AI automation software with local SEO strategies to turn local
-            searches into revenue.
+            searches into calls, bookings, and revenue.
           </p>
 
           <div className="hero-fade-up flex flex-wrap gap-3 mb-10" style={{ animationDelay: "190ms" }}>
