@@ -56,7 +56,7 @@ const FAQS = [
   },
   {
     q: "Can negative Google reviews actually be removed?",
-    a: "Reviews that violate Google's policies can be — fake reviews, competitor attacks, spam and off-topic content. We identify the violation, file the formal request and escalate through Google's channels. You pay $200 per review, and only if it's successfully removed.",
+    a: "Reviews that violate Google's policies can be — fake reviews, competitor attacks, spam and off-topic content. We identify the violation, file the formal request and escalate through Google's channels. You pay $200 per review upfront, refunded in full if it isn't removed within 3 months.",
   },
   {
     q: "What does Epicware actually do, month to month?",

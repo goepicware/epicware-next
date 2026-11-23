@@ -53,7 +53,7 @@ const FAQS = [
   },
   {
     q: "Can you really remove negative Google reviews?",
-    a: "We can remove reviews that violate Google's own policies — fake reviews, competitor attacks, spam, off-topic and policy-breaching content. We identify the violation, file the formal request and escalate through Google's channels. You pay $200 per review only if it's successfully removed.",
+    a: "We can remove reviews that violate Google's own policies — fake reviews, competitor attacks, spam, off-topic and policy-breaching content. We identify the violation, file the formal request and escalate through Google's channels. You pay $200 per review upfront, refunded in full if it isn't removed within 3 months.",
   },
   {
     q: "Does this work outside F&B?",

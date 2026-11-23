@@ -86,7 +86,7 @@ export default function Post() {
           <p>Keep responses short: 2–3 sentences. Don&apos;t repeat the negative claim in your response (which amplifies it in search). Don&apos;t use names. End with a contact invitation.</p>
 
           <h2>When to Get Professional Help</h2>
-          <p>If the DIY flag route has already failed, or if you have multiple reviews to challenge, professional removal services exist specifically for this. Epicware&apos;s bad review removal service charges $200 per review with payment only on successful removal. The team handles assessment, submission, escalation through all available channels, and follow-up.</p>
+          <p>If the DIY flag route has already failed, or if you have multiple reviews to challenge, professional removal services exist specifically for this. Epicware&apos;s bad review removal service charges $200 per review, paid upfront, with a full refund if the review isn&apos;t removed within 3 months. The team handles assessment, submission, escalation through all available channels, and follow-up.</p>
           <p>This is particularly valuable for reviews with high commercial impact — a 1-star review on a clinic or restaurant visible to thousands of potential customers per month is worth the $200 removal cost many times over.</p>
         </>
       }
