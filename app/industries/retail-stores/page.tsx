@@ -71,7 +71,7 @@ const services = [
   },
   {
     label: "GBP Post Scheduling",
-    href: "/services/google-business-profile/post-scheduling",
+    href: "/services/google-business-profile",
     description:
       "Weekly GBP posts featuring new arrivals, promotions, and store updates.",
   },

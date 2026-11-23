@@ -82,7 +82,11 @@ export default function Post() {
 
           <h2>Why does your Google Maps rank change depending on where in Singapore someone searches?</h2>
           <p>In Singapore, Google Maps rank changes dramatically every 500 metres. A business ranked #1 for &quot;restaurant&quot; in the Tampines MRT area may rank #4 just 800 metres away near Tampines Mall. This is the hyperlocal problem — and it&apos;s why rank tracking using a single search point gives a misleading picture of your actual visibility.</p>
-          <p>EpicMap tracks your rank at a grid level across your district, showing exactly where you&apos;re visible in the top 3 and where you&apos;re not. This matters because the majority of Maps clicks go to positions 1–3. Position 4 and beyond effectively don&apos;t exist for most searches.</p>
+          <p>EpicMap tracks your rank at a grid level across your district, showing exactly where you&apos;re visible in the top 3 and where you&apos;re not. This matters because the majority of Maps clicks go to positions 1–3. Position 4 and beyond effectively don&apos;t exist for most searches. Here is how to{" "}
+            <Link href="/use-cases/rank-higher-on-google-maps" className="text-primary font-medium hover:underline">
+              rank higher on Google Maps
+            </Link>{" "}
+            in the districts where you are missing.</p>
           <p>Our{" "}
             <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">
               local SEO services in Singapore
