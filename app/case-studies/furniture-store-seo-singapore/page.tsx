@@ -296,7 +296,7 @@ export default function FurnitureStoreSEOCaseStudyPage() {
             className="font-display font-bold text-foreground leading-[1.1] tracking-[-0.02em] mb-6"
             style={{ fontSize: "clamp(2rem, 4vw, 3.1rem)" }}
           >
-            From 1 Keyword to 22: How a Singapore Furniture Showroom Won Google, Maps and AI Search in 3 Months
+            From 1 Keyword to 22: How a Singapore Furniture Store Won Google, Maps and AI Search in 3 Months
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
             This furniture and mattress showroom in Ubi had a strong reputation and almost no search visibility.

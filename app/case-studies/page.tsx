@@ -13,7 +13,7 @@ const CASE_STUDIES = [
   {
     href: "/case-studies/furniture-store-seo-singapore",
     badge: "Furniture & Mattress Retail · Singapore · 1 Showroom",
-    title: "From 1 Keyword to 22: How a Singapore Furniture Showroom Won Google, Maps and AI Search",
+    title: "From 1 Keyword to 22: How a Singapore Furniture Store Won Google, Maps and AI Search",
     result: "1 → 22 page-one keywords, 7 #1 rankings, 3 AI Overview citations",
   },
   {
