@@ -182,7 +182,7 @@ export default async function SingaporeDistrictPage({
     },
     {
       label: "GBP Post Scheduling",
-      href: "/services/google-business-profile/post-scheduling",
+      href: "/services/google-business-profile",
       desc: `Weekly AI-generated posts keeping your ${d.name} profile fresh and ranked.`,
     },
   ];
