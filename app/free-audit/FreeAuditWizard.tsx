@@ -701,8 +701,9 @@ export default function FreeAuditWizard() {
   }, []);
 
   const handleLeadSubmit = useCallback(async () => {
-    if (!name.trim() || !email.trim()) { setLeadError("Name and email are required."); return; }
+    if (!name.trim() || !email.trim() || !phone.trim()) { setLeadError("Name, email and phone are required."); return; }
     if (!/\S+@\S+\.\S+/.test(email)) { setLeadError("Please enter a valid email address."); return; }
+    if (!/\d{7,}/.test(phone.replace(/[\s()-]/g, ""))) { setLeadError("Please enter a valid phone number."); return; }
     if (!consent) { setLeadError("Please accept the terms to continue."); return; }
     setLeadError(""); setSubmitting(true); setLeadSaveStatus("pending");
 
@@ -1121,7 +1122,7 @@ ${result.enrichedKeywords.length > 0 ? `
                     </div>
                   </div>
                   <div className="col-span-2 sm:col-span-1">
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Phone (optional)</label>
+                    <label className="block text-xs font-semibold text-gray-600 mb-1">Phone *</label>
                     <div className="relative">
                       <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                       <input type="tel" placeholder="+65 9123 4567" value={phone} onChange={(e) => setPhone(e.target.value)}

@@ -443,6 +443,14 @@ export async function POST(req: NextRequest) {
     });
   }
 
+  // Reaching here means none of the named leadType branches above matched,
+  // so this is the free-audit wizard's own default path (leadType "business"
+  // or "agency") — phone is mandatory there, unlike the other lead forms
+  // sharing this endpoint.
+  if (!phone?.trim()) {
+    return NextResponse.json({ success: false, error: "Phone number is required" }, { status: 400 });
+  }
+
   const kwList = Array.isArray(keywords) && keywords.length > 0
     ? keywords.map((k) => `• ${k}`).join("\n")
     : "None selected";
