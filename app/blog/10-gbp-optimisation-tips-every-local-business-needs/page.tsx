@@ -123,7 +123,7 @@ export default function Post() {
               <strong>Post to your GBP at least weekly.</strong> Businesses that post twice or more per
               week see higher engagement than those posting less frequently. Use posts to highlight offers,
               events, and new services. Our{" "}
-              <Link href="/services/google-business-profile/post-scheduling" className="text-primary font-medium hover:underline">
+              <Link href="/services/google-business-profile" className="text-primary font-medium hover:underline">
                 GBP post scheduling
               </Link>{" "}
               service posts for you every week.
