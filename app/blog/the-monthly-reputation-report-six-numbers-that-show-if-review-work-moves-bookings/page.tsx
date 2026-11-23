@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings/hero-reviewing-report-charts.jpg";
 
 export const metadata: Metadata = {
-  title: "The Monthly Reputation Report: Six Numbers That Matter",
+  title: "Monthly Reputation Report: Six Key Numbers",
   description: "Most Google reviews reports measure the wrong things. Here are the six numbers that show whether review work is moving bookings, and what to leave off.",
   alternates: { canonical: "https://www.epicware.ai/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings" },
   openGraph: {

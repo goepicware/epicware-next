@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content/hero-code-screen.jpg";
 
 export const metadata: Metadata = {
-  title: "The GEO Worklist: Crawler Access, Schema, Citable Content",
+  title: "The GEO Worklist for Local Businesses",
   description: "Fix AI visibility for your local business in order: unblock crawlers, add LocalBusiness and Service schema, then rewrite service pages so they're extractable.",
   alternates: { canonical: "https://www.epicware.ai/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content" },
   openGraph: {

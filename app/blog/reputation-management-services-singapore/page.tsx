@@ -483,8 +483,8 @@ export default function Post() {
             <h2>How does Epicware approach reputation management services for Singapore local businesses?</h2>
             <p>
               Epicware was built specifically for Singapore SMBs — not adapted from an enterprise tool.
-              The platform consolidates review generation, monitoring, AI-drafted responses, rank
-              tracking, and GBP management into a single dashboard, so a business owner managing
+              Our team runs review generation, monitoring, AI-drafted responses, rank
+              tracking, and GBP management from a single dashboard, so a business owner managing
               three outlets does not need to cross-reference five separate tools to understand what
               is happening with their online reputation.
             </p>
@@ -671,6 +671,7 @@ export default function Post() {
             title: "How to Hire a Local SEO Agency in Singapore",
             href: "/blog/how-to-hire-local-seo-agency-singapore",
           },
+          { title: "The Monthly Reputation Report: Six Numbers That Matter", href: "/blog/the-monthly-reputation-report-six-numbers-that-show-if-review-work-moves-bookings" },
         ]}
       />
     </>

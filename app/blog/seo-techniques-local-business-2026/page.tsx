@@ -844,8 +844,8 @@ export default function Post() {
               content publishing,{" "}
               <Link href="/products/epicmap">geogrid rank tracking</Link>, and{" "}
               <Link href="/locations/singapore/ai-search-visibility">AI visibility auditing</Link> together
-              in a single platform built specifically for local service SMBs. The full stack —
-              without the agency retainer.
+              in one dashboard, run by one team for local service SMBs on Epicware&apos;s own
+              software.
             </p>
 
             <h2>Conclusion</h2>
@@ -900,6 +900,9 @@ export default function Post() {
             title: "7 Things Small Businesses Must Demand From Any SEO Service",
             href: "/blog/seo-services-for-small-business",
           },
+          { title: "How Multi-Outlet Singapore Brands Should Run GBP Profiles", href: "/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles" },
+          { title: "Share of Local Voice: The Geogrid Metric", href: "/blog/share-of-local-voice-the-geogrid-metric" },
+          { title: "The GEO Worklist: Crawler Access, Schema, Citable Content", href: "/blog/the-geo-worklist-for-local-businesses-crawler-access-schema-and-citable-content" },
         ]}
       />
     </>

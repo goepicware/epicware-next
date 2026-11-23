@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first/hero-key-handover.jpg";
 
 export const metadata: Metadata = {
-  title: "Whose Account Is It? GBP Ownership Terms to Fix First",
+  title: "GBP Ownership: Whose Account Is It?",
   description: "Learn who should hold the verified owner on your Google Business Profile, how to log manager roles, and the handover terms to sign before you hire.",
   alternates: { canonical: "https://www.epicware.ai/blog/whose-account-is-it-gbp-ownership-terms-to-fix-first" },
   openGraph: {

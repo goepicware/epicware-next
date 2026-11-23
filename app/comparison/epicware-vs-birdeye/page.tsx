@@ -3,7 +3,7 @@ import Link from "next/link";
 import ComparisonPage from "@/components/content/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "Epicware vs Birdeye — Singapore Local SEO Platform",
+  title: "Epicware vs Birdeye: Local SEO & Reviews",
   description: "Compare Epicware and Birdeye for Singapore SMBs. Platform origin, pricing model, bad review removal, and Singapore-specific local SEO features compared.",
   alternates: { canonical: "https://www.epicware.ai/comparison/epicware-vs-birdeye" },
   openGraph: {

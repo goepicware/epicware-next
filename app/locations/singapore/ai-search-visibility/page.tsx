@@ -9,13 +9,13 @@ import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 import { LEAD_CTA_CONFIG } from "@/lib/site/leadCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "Best GEO Agency in Singapore | AI Search Visibility | Epicware" },
+  title: { absolute: "GEO Agency in Singapore | AI Search Visibility | Epicware" },
   description:
     "Looking for the best GEO or AI SEO agency in Singapore? Epicware builds AI visibility so ChatGPT, Gemini and Google AI Overviews recommend you.",
   alternates: { canonical: "https://www.epicware.ai/locations/singapore/ai-search-visibility" },
   openGraph: {
       images: [{ url: "/assets/HeroBanner-og.jpg", width: 1448, height: 1086, alt: "Epicware" }],
-    title: "Best GEO Agency in Singapore | AI Search Visibility | Epicware",
+    title: "GEO Agency in Singapore | AI Search Visibility | Epicware",
     description:
       "Looking for the best GEO or AI SEO agency in Singapore? Epicware builds AI visibility so ChatGPT, Gemini and Google AI Overviews recommend you.",
     url: "https://www.epicware.ai/locations/singapore/ai-search-visibility",
@@ -72,13 +72,13 @@ const CHILD_SERVICES = [
   },
   {
     name: "AI Citation Building",
-    href: "/services/ai-search-visibility/ai-citation-building",
+    href: "/services/ai-search-visibility",
     description:
       "Build your presence on the sources ChatGPT, Perplexity, and Google AI draw from — so your business gets cited when AI answers questions about your category.",
   },
   {
     name: "AEO (Answer Engine Optimisation)",
-    href: "/services/ai-search-visibility/aeo",
+    href: "/services/ai-search-visibility",
     description:
       "Structure your online presence so AI assistants recommend your business by name when Singapore customers ask for recommendations.",
   },
@@ -174,11 +174,11 @@ export default function AiSearchVisibilitySingaporePage() {
                 GEO Optimisation
               </Link>{" "}
               structures your web content and GBP for Google&apos;s AI Overview panel;{" "}
-              <Link href="/services/ai-search-visibility/ai-citation-building" className="text-primary font-medium hover:underline">
+              <Link href="/services/ai-search-visibility" className="text-primary font-medium hover:underline">
                 AI Citation Building
               </Link>{" "}
               builds your presence on the specific platforms that ChatGPT and Perplexity draw from; and{" "}
-              <Link href="/services/ai-search-visibility/aeo" className="text-primary font-medium hover:underline">
+              <Link href="/services/ai-search-visibility" className="text-primary font-medium hover:underline">
                 AEO (Answer Engine Optimisation)
               </Link>{" "}
               applies structured data markup and content structuring so AI systems can confidently identify and recommend

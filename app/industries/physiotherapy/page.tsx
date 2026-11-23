@@ -21,11 +21,16 @@ export const metadata: Metadata = {
 const schema = [
   {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Epicware Pte. Ltd.",
-  url: "https://www.epicware.ai",
+  "@type": "Service",
+  name: "Local SEO and Reputation Management for Singapore physiotherapy clinics",
+  serviceType: "Local SEO",
   description:
-    "Local SEO and Reputation Management platform for Singapore physiotherapy clinics. Condition-specific GBP optimisation and patient review generation.",
+    "Local SEO and reputation management service for Singapore physiotherapy clinics. Condition-specific GBP optimisation and patient review generation.",
+  provider: {
+    "@type": "Organization",
+    name: "Epicware Pte. Ltd.",
+    url: "https://www.epicware.ai",
+  },
   areaServed: { "@type": "Country", name: "Singapore" },
 },
   {
@@ -107,7 +112,7 @@ export default function PhysiotherapyPage() {
         <>
           Physiotherapy patients in Singapore search by condition: 'knee physio near me', 'back pain physiotherapy Ang Mo Kio', 'sports injury rehab Singapore'. As a{" "}
           <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">local SEO agency in Singapore</Link>, we help patients find you by condition and area.{" "}
-          A physio clinic that ranks for the right condition-specific keywords in its catchment area captures both self-referred patients and doctor-referral patients who do their own research before booking. Epicware's platform optimises your GBP for the condition-specific searches your patients are using and builds the review profile that converts those searches into appointments. Epicware is a{" "}
+          A physio clinic that ranks for the right condition-specific keywords in its catchment area captures both self-referred patients and doctor-referral patients who do their own research before booking. Epicware's team optimises your GBP for the condition-specific searches your patients are using and builds the review profile that converts those searches into appointments. Epicware is a{" "}
           <Link href="/" className="text-primary font-medium hover:underline">digital marketing agency</Link>{" "}
           that applies its clinic experience to physiotherapy practices.
            See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.

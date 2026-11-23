@@ -21,11 +21,16 @@ export const metadata: Metadata = {
 const schema = [
   {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Epicware Pte. Ltd.",
-  url: "https://www.epicware.ai",
+  "@type": "Service",
+  name: "Local SEO and Reputation Management for Singapore hair salons and beauty studios",
+  serviceType: "Local SEO",
   description:
-    "Local SEO and Reputation Management platform for Singapore hair salons and beauty studios.",
+    "Local SEO and reputation management service for Singapore hair salons and beauty studios.",
+  provider: {
+    "@type": "Organization",
+    name: "Epicware Pte. Ltd.",
+    url: "https://www.epicware.ai",
+  },
   areaServed: { "@type": "Country", name: "Singapore" },
 },
   {
@@ -107,7 +112,7 @@ export default function NailHairSalonsPage() {
         <>
           When someone searches 'hair colouring salon near Tampines' or 'nail art in Jurong', they are ready to book.{" "}
           Our <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">local SEO services</Link> help your salon show up in those results.{" "}
-          The salon that appears in the Google Maps 3-Pack with before-and-after photos, 80+ reviews, and a 4.7 rating wins that booking. Epicware's platform manages the review generation, GBP photo management, and rank tracking that keeps salons visible in the local searches that drive appointments.{" "}
+          The salon that appears in the Google Maps 3-Pack with before-and-after photos, 80+ reviews, and a 4.7 rating wins that booking. Epicware's team manages the review generation, GBP photo management, and rank tracking that keeps salons visible in the local searches that drive appointments.{" "}
           As an <Link href="/" className="text-primary font-medium hover:underline">AI marketing agency in Singapore</Link>, Epicware runs local search and reviews for salons.{" "}
           For <Link href="/use-cases/manage-multiple-gbp-locations" className="text-primary font-medium hover:underline">salon chains with multiple outlets</Link>, one dashboard manages every location.
            See our full <Link href="/locations/singapore/seo" className="text-primary font-medium hover:underline">SEO agency in Singapore</Link> services for more on ranking local businesses like yours.

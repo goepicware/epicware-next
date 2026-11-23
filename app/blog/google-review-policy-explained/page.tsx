@@ -83,7 +83,7 @@ export default function Post() {
           <p><strong>Conflicts of interest</strong> is the most actionable category for Singapore SMBs. If you can demonstrate that a reviewer has a financial connection to a competing business — even through publicly available information like their review history across your competitors — this is a strong basis for removal.</p>
           <p>Look at the reviewer&apos;s profile. If they have reviewed multiple businesses in your category, and their reviews of your competitors are consistently positive while yours is the only negative, this pattern supports a conflict of interest claim.</p>
           <p>Reviews from competitors, or from people who never visited, are the main target of{" "}
-            <Link href="/services/review-removal/fake-review-removal" className="text-primary font-medium hover:underline">
+            <Link href="/services/review-removal" className="text-primary font-medium hover:underline">
               fake review removal
             </Link>.
           </p>
@@ -124,6 +124,7 @@ export default function Post() {
         { title: "Fake or Unfair Google Reviews: What to Do", href: "/blog/fake-or-unfair-google-reviews-what-to-do" },
         { title: "The Complete Guide to Removing Bad Google Reviews", href: "/resources/guides/bad-review-removal-guide" },
         { title: "Remove Google Maps Spam: 6-Step Evidence Checklist to Win Appeals", href: "/blog/google-maps-spam-reporting" },
+        { title: "What Happens If You Buy Google Reviews in Singapore", href: "/blog/what-happens-if-you-buy-google-reviews-in-singapore" },
       ]}
     />
   );

@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/build-a-30-prompt-panel-to-test-ai-search-visibility/hero-chat-testing.jpg";
 
 export const metadata: Metadata = {
-  title: "Build a 30-Prompt Panel to Test AI Search Visibility",
+  title: "How to Test AI Search Visibility: 30 Prompts",
   description:
     "A repeatable monthly audit: 30 prompts run identically on ChatGPT, Gemini and Perplexity, then scored for mention, position and sentiment.",
   alternates: { canonical: "https://www.epicware.ai/blog/build-a-30-prompt-panel-to-test-ai-search-visibility" },

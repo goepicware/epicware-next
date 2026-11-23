@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogArticle from "@/components/blog/BlogArticle";
 
 export const metadata: Metadata = {
-  title: "Customer Feedback System — Private vs Public Reviews",
+  title: "Customer Feedback: Private vs Public Reviews",
   description: "How to design a customer feedback system that captures private feedback and generates public Google reviews — without violating review gating policy.",
   alternates: { canonical: "https://www.epicware.ai/blog/customer-feedback-system-private-vs-public-reviews" },
   openGraph: {
@@ -92,6 +92,7 @@ export default function Post() {
       relatedPosts={[
         { title: "Review Gating Explained", href: "/blog/review-gating-explained" },
         { title: "Should You Respond to Every Google Review?", href: "/blog/should-you-respond-to-every-google-review" },
+        { title: "Who Asks for the Review, and When? A Six-Moment Audit", href: "/blog/who-asks-for-the-review-and-when-a-six-moment-audit" },
       ]}
     />
   );

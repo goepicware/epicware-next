@@ -66,7 +66,7 @@ const SERVICES = [
   },
   {
     label: "GBP Post Scheduling",
-    href: "/services/google-business-profile/post-scheduling",
+    href: "/services/google-business-profile",
     description:
       "Weekly AI-generated GBP posts keeping your Malaysian business profile active and ranked.",
   },
@@ -83,7 +83,7 @@ export default function MalaysiaPage() {
       <CategoryHero
         badge="EPICWARE · MALAYSIA"
         h1="Local SEO & Reputation Management for Malaysia SMBs"
-        subtitle="Epicware's platform manages Google Business Profiles, review generation, and bad review removal for businesses across Kuala Lumpur, Petaling Jaya, Penang, and Johor Bahru."
+        subtitle="Epicware's team manages Google Business Profiles, review generation, and bad review removal for businesses across Kuala Lumpur, Petaling Jaya, Penang, and Johor Bahru."
         ctaPrimary={{ label: "Book a Free Demo", href: "/book-demo#form" }}
         ctaSecondary={{ label: "Free GBP Audit", href: "/free-audit" }}
         trustSignals={[

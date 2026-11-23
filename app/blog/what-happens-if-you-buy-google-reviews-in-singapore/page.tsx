@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/what-happens-if-you-buy-google-reviews-in-singapore/hero-gavel.jpg";
 
 export const metadata: Metadata = {
-  title: "What Happens If You Buy Google Reviews in Singapore",
+  title: "Buying Google Reviews in Singapore: The Risks",
   description: "CCS acted against 45 businesses that bought fake Google reviews, plus the seller. See where the risk lands and what works instead.",
   alternates: { canonical: "https://www.epicware.ai/blog/what-happens-if-you-buy-google-reviews-in-singapore" },
   openGraph: {

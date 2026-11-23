@@ -50,7 +50,7 @@ export default function Post() {
             </ul>
           </div>
           <h2>What Counts as a Fake or Unfair Review</h2>
-          <p>Not all negative reviews are removable — but some clearly are. The clearest case for <Link href="/services/review-removal/fake-review-removal" className="text-primary font-medium hover:underline">fake review removal</Link> is a review from someone who was never a customer. Reviews that misrepresent what happened may qualify for <Link href="/services/review-removal/unfair-review-removal" className="text-primary font-medium hover:underline">unfair review removal</Link>. Google&apos;s review policy identifies several categories that qualify for removal:</p>
+          <p>Not all negative reviews are removable — but some clearly are. The clearest case for <Link href="/services/review-removal" className="text-primary font-medium hover:underline">fake review removal</Link> is a review from someone who was never a customer. Reviews that misrepresent what happened may qualify for <Link href="/services/review-removal" className="text-primary font-medium hover:underline">unfair review removal</Link>. Google&apos;s review policy identifies several categories that qualify for removal:</p>
           <ul>
             <li><strong>Competitor-posted reviews</strong> — a direct conflict of interest. Reviews written by someone with a financial stake in a competing business.</li>
             <li><strong>Non-customer reviews</strong> — someone who never visited your business or purchased from you has no basis to review it.</li>

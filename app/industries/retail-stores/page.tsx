@@ -21,11 +21,16 @@ export const metadata: Metadata = {
 const schema = [
   {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Epicware Pte. Ltd.",
-  url: "https://www.epicware.ai",
+  "@type": "Service",
+  name: "Local SEO and Reputation Management for Singapore retail stores",
+  serviceType: "Local SEO",
   description:
-    "Local SEO and Reputation Management platform for Singapore retail stores. GBP accuracy management and review generation.",
+    "Local SEO and reputation management service for Singapore retail stores. GBP accuracy management and review generation.",
+  provider: {
+    "@type": "Organization",
+    name: "Epicware Pte. Ltd.",
+    url: "https://www.epicware.ai",
+  },
   areaServed: { "@type": "Country", name: "Singapore" },
 },
   {
@@ -71,7 +76,7 @@ const services = [
   },
   {
     label: "GBP Post Scheduling",
-    href: "/services/google-business-profile/post-scheduling",
+    href: "/services/google-business-profile",
     description:
       "Weekly GBP posts featuring new arrivals, promotions, and store updates.",
   },
@@ -118,7 +123,7 @@ export default function RetailStoresPage() {
       imageSrc="/assets/hero-image.jpg"
       openingParagraph={
         <>
-          When a shopper searches 'mobile phone accessories near me' or 'art supplies shop in Ang Mo Kio', they use Google Maps to decide which store to visit. A retail store with accurate hours, high-quality product photos, 60+ reviews, and regular GBP posts converts that search into a walk-in. Retail is intensely location-dependent, and Google Maps rank within the immediate catchment area determines foot traffic volume. Epicware's platform manages every GBP signal that affects that rank.{" "}
+          When a shopper searches 'mobile phone accessories near me' or 'art supplies shop in Ang Mo Kio', they use Google Maps to decide which store to visit. A retail store with accurate hours, high-quality product photos, 60+ reviews, and regular GBP posts converts that search into a walk-in. Retail is intensely location-dependent, and Google Maps rank within the immediate catchment area determines foot traffic volume. Epicware's team manages every GBP signal that affects that rank.{" "}
           <Link href="/locations/singapore/local-seo" className="text-primary font-medium hover:underline">Local SEO</Link>{" "}
           helps shoppers find each of your stores. Our{" "}
           <Link href="/" className="text-primary font-medium hover:underline">digital marketing team</Link>{" "}

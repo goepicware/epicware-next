@@ -924,7 +924,7 @@ function FAQ() {
     },
     {
       q: "Is this just for Singapore businesses?",
-      a: "We're built for Singapore SMBs but serve businesses in Malaysia, UAE, the UK, and the US. Our platform is optimised for dense, competitive local markets where review velocity and Map Pack rankings drive the most revenue.",
+      a: "We're built for Singapore SMBs but serve businesses in Malaysia, UAE, the UK, and the US. Our team and software are built for dense, competitive local markets where review velocity and Map Pack rankings drive the most revenue.",
     },
     {
       q: "How is Epicware different from an agency or other SEO tools?",

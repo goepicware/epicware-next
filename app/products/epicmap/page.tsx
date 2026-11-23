@@ -197,7 +197,12 @@ export default function EpicMapPage() {
                 EpicReview
               </Link>{" "}
               generates more reviews, EpicMap picks up the rank improvement on the grid. When you
-              fix GBP issues flagged in the audit, EpicMap tracks the rank movement week by week.
+              fix GBP issues flagged in the audit, EpicMap tracks the rank movement week by week. See how
+              that works when your goal is to{" "}
+              <Link href="/use-cases/rank-higher-on-google-maps" className="text-primary font-medium hover:underline">
+                rank higher on Google Maps
+              </Link>
+              .
             </p>
             <p>
               EpicMap links to the full local SEO service category and the{" "}
