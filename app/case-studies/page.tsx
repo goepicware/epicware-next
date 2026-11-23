@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 
 const CASE_STUDIES = [
   {
+    href: "/case-studies/google-review-removal-wins",
+    badge: "Review Removal · Singapore · 5 Businesses",
+    title: "Google Review Removal Wins: Five Real Removals Across Five Different Businesses",
+    result: "5 policy-violating reviews removed, 5 different industries",
+  },
+  {
     href: "/case-studies/furniture-store-seo-singapore",
     badge: "Furniture & Mattress Retail · Singapore · 1 Showroom",
     title: "From 1 Keyword to 22: How a Singapore Furniture Store Won Google, Maps and AI Search",

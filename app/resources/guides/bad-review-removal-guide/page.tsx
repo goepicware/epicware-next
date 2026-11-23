@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import GuidePage from "@/components/content/GuidePage";
 
 export const metadata: Metadata = {
@@ -85,6 +86,35 @@ export default function Page() {
           <p>The model: $200 per review, payment only on successful removal. If the review stays up, there is no charge. This aligns Epicware&apos;s incentive directly with the client&apos;s outcome.</p>
           <p>The service covers: assessment to identify the strongest policy angle, formal submission with correct policy language and supporting evidence, systematic escalation through all available channels, and follow-up until all escalation paths are exhausted.</p>
           <p>If the reviewer was never a customer at all, ask about <a href="/services/review-removal/fake-review-removal">fake review removal</a>.</p>
+
+          <h3>What a Successful Removal Actually Looks Like</h3>
+          <p>These are real Google Business Profile confirmation emails from removals Epicware has won. Where a client preferred not to have their business name shown, it&apos;s cropped out.</p>
+          <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-5 my-6">
+            <figure className="rounded-xl overflow-hidden border border-border/60 bg-card">
+              <Image
+                src="/assets/review-removal-proof/removal-1-pet-budgie.png"
+                alt="Google Business Profile email confirming a 1-star review was removed for violating Google's policies"
+                width={999}
+                height={652}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </figure>
+            <figure className="rounded-xl overflow-hidden border border-border/60 bg-card">
+              <Image
+                src="/assets/review-removal-proof/removal-4-cropped.png"
+                alt="Google Business Profile email confirming a 1-star review was removed for violating Google's policies, business name cropped out"
+                width={1321}
+                height={555}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+          <p>
+            See the full gallery of removals on our{" "}
+            <a href="/locations/singapore/review-removal">bad review removal service page</a>.
+          </p>
 
           <h2>Frequently Asked Questions</h2>
           <h3>Can Google remove any negative review?</h3>

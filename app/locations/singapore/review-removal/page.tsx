@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import CategoryHero from "@/components/category/CategoryHero";
 import FinalCTA from "@/components/home/FinalCTA";
@@ -39,6 +40,44 @@ const schema = {
   },
   url: "https://www.epicware.ai/locations/singapore/review-removal",
 };
+
+const REMOVAL_PROOF: { src: string; w: number; h: number; alt: string; note: string }[] = [
+  {
+    src: "/assets/review-removal-proof/removal-1-pet-budgie.png",
+    w: 999,
+    h: 652,
+    alt: "Google Business Profile email confirming a 1-star review was removed for violating Google's policies",
+    note: "Removed for a policy violation — reviewer had no verifiable customer relationship",
+  },
+  {
+    src: "/assets/review-removal-proof/removal-2-pet-ambulance.png",
+    w: 1453,
+    h: 619,
+    alt: "Google Business Profile email confirming an anonymous 1-star review was removed for violating Google's policies",
+    note: "Removed — anonymous account, no verifiable transaction",
+  },
+  {
+    src: "/assets/review-removal-proof/removal-3-talks-workshops.png",
+    w: 1177,
+    h: 649,
+    alt: "Google Business Profile email confirming a 1-star review was removed for violating Google's policies",
+    note: "Removed — generalised attack with no specific experience described",
+  },
+  {
+    src: "/assets/review-removal-proof/removal-4-cropped.png",
+    w: 1321,
+    h: 555,
+    alt: "Google Business Profile email confirming a 1-star review was removed for violating Google's policies (business name cropped out)",
+    note: "Removed for a client in the pet care industry (business name withheld)",
+  },
+  {
+    src: "/assets/review-removal-proof/removal-5-cropped.png",
+    w: 1023,
+    h: 490,
+    alt: "Google Business Profile email confirming a 1-star review was removed for violating Google's policies (business name cropped out)",
+    note: "Removed for a client in the home furnishings industry (business name withheld)",
+  },
+];
 
 const CHILD_SERVICES = [
   {
@@ -143,6 +182,25 @@ export default function BadReviewRemovalSingaporePage() {
               Timeline: removal is typically initiated within 24 hours of submission. Resolution time varies depending on
               Google&apos;s review cycle, but most cases are resolved within 7–21 days.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Real Removals */}
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <h2 className="font-display text-foreground mb-4 text-center">Real Removals We&apos;ve Won</h2>
+          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
+            These are Google&apos;s own confirmation emails, not a mockup. Where the client gave permission to show
+            their business name, we&apos;ve left it in; otherwise it&apos;s cropped out.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {REMOVAL_PROOF.map((item) => (
+              <figure key={item.src} className="rounded-2xl overflow-hidden border border-border/60 bg-card shadow-card">
+                <Image src={item.src} alt={item.alt} width={item.w} height={item.h} className="w-full h-auto" loading="lazy" />
+                <figcaption className="text-xs text-muted-foreground px-4 py-3 border-t border-border/40">{item.note}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
