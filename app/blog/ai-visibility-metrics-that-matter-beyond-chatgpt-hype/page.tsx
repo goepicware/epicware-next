@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype/hero-analytics-dashboard-laptop.jpg";
 
 export const metadata: Metadata = {
-  title: "AI Visibility Metrics That Matter Beyond ChatGPT Hype",
+  title: "AI Visibility Metrics That Actually Matter",
   description: "A screenshot is not a metric. See the four AI visibility metrics worth reporting and how to tie each one to calls, bookings, and branded search.",
   alternates: { canonical: "https://www.epicware.ai/blog/ai-visibility-metrics-that-matter-beyond-chatgpt-hype" },
   openGraph: {

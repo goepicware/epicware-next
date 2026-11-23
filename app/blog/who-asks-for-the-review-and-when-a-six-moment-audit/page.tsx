@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/who-asks-for-the-review-and-when-a-six-moment-audit/hero-handover.jpg";
 
 export const metadata: Metadata = {
-  title: "Who Asks for the Review, and When? A Six-Moment Audit",
+  title: "When to Ask for a Review: A Six-Moment Audit",
   description:
     "Most local businesses ask for a review at one moment. Map all six, assign one owner each, and keep only the asks that convert.",
   alternates: { canonical: "https://www.epicware.ai/blog/who-asks-for-the-review-and-when-a-six-moment-audit" },

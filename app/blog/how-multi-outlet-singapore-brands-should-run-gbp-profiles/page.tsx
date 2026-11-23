@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles/hero-storefronts.jpg";
 
 export const metadata: Metadata = {
-  title: "How Multi-Outlet Singapore Brands Should Run GBP Profiles",
+  title: "Running GBP Profiles for Multi-Outlet Brands",
   description:
     "Ten outlets with ten overlapping Google profiles split their own local SEO. The hierarchy that stops sibling listings from competing.",
   alternates: { canonical: "https://www.epicware.ai/blog/how-multi-outlet-singapore-brands-should-run-gbp-profiles" },

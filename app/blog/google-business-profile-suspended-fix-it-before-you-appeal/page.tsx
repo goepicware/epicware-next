@@ -7,7 +7,7 @@ const OG_IMAGE =
   "https://www.epicware.ai/assets/blog/google-business-profile-suspended-fix-it-before-you-appeal/hero-sorry-were-closed-sign.jpg";
 
 export const metadata: Metadata = {
-  title: "Google Business Profile Suspended? Fix It Before You Appeal",
+  title: "Google Business Profile Suspended: What to Do",
   description: "Most Google Business Profile suspensions in Singapore are self-inflicted. Fix the violation first, then appeal so your first appeal lands.",
   alternates: { canonical: "https://www.epicware.ai/blog/google-business-profile-suspended-fix-it-before-you-appeal" },
   openGraph: {
