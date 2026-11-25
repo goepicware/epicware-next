@@ -72,7 +72,6 @@ const schema = {
       },
       publisher: { "@id": "https://www.epicware.ai/#organization" },
       about: { "@id": "https://www.epicware.ai/locations/singapore/local-seo#service" },
-      breadcrumb: { "@id": "https://www.epicware.ai/locations/singapore/local-seo#breadcrumb" },
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: "https://www.epicware.ai/assets/epicmap-before-after.png",
@@ -115,14 +114,6 @@ const schema = {
         { "@type": "Question", name: "Do I need a physical shop for local SEO?", acceptedAnswer: { "@type": "Answer", text: "No, but you must meet customers in person. Service-area businesses, like aircon servicing and movers, should hide their address on Google and list the areas they serve instead. We track those areas." } },
         { "@type": "Question", name: "Can you manage local SEO for multiple outlets?", acceptedAnswer: { "@type": "Answer", text: "Yes. Each outlet gets its own keyword list, review tracking and rank grid, side by side in one dashboard. We have managed more than 100 outlets, including a five-outlet restaurant chain and a four-outlet salon chain." } },
         { "@type": "Question", name: "How do I choose a local SEO agency or tool in Singapore?", acceptedAnswer: { "@type": "Answer", text: "Ask for dated ranking proof for businesses like yours, a list of first-month fixes and your own login to see rankings across your district. Avoid anyone who guarantees #1 or offers to buy reviews." } },
-      ],
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.epicware.ai/locations/singapore/local-seo#breadcrumb",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai/" },
-        { "@type": "ListItem", position: 2, name: "Local SEO Services", item: "https://www.epicware.ai/locations/singapore/local-seo" },
       ],
     },
   ],

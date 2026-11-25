@@ -74,6 +74,7 @@ export default function RankHigherOnGoogleMapsPage() {
       />
 
       <CategoryHero
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Rank Higher on Google Maps" }]}
         badge="RANK HIGHER · GOOGLE MAPS"
         h1="Rank Higher on Google Maps in Singapore — See Your Position, Fix the Gaps"
         subtitle="The Google Maps 3-Pack captures over 70% of clicks for local searches. Epicware's EpicMap shows you exactly where you rank across every Singapore district — and fixes the gaps automatically."

@@ -28,6 +28,7 @@ const schema = {
 export default function Page() {
   return (
     <GuidePage
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "Guides", href: "/resources/guides" }, { label: "Bad Review Removal Guide" }]}
       schema={schema}
       badge="BAD REVIEW REMOVAL GUIDE"
       h1="Bad Review Removal Guide — Remove Google Reviews the Right Way"

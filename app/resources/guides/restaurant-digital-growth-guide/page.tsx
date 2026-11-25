@@ -28,6 +28,7 @@ const schema = {
 export default function Page() {
   return (
     <GuidePage
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "Guides", href: "/resources/guides" }, { label: "Restaurant Digital Growth Guide" }]}
       schema={schema}
       badge="RESTAURANT GUIDE · SINGAPORE"
       h1="Restaurant Digital Growth Guide — Rank Higher, Get More Reviews, Fill Tables"

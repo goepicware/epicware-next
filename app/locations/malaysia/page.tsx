@@ -81,6 +81,7 @@ export default function MalaysiaPage() {
       />
 
       <CategoryHero
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations" }, { label: "Malaysia" }]}
         badge="EPICWARE · MALAYSIA"
         h1="Local SEO & Reputation Management for Malaysia SMBs"
         subtitle="Epicware's platform manages Google Business Profiles, review generation, and bad review removal for businesses across Kuala Lumpur, Petaling Jaya, Penang, and Johor Bahru."

@@ -28,6 +28,7 @@ const schema = {
 export default function Page() {
   return (
     <GuidePage
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "Guides", href: "/resources/guides" }, { label: "Local Business Playbook 2026" }]}
       schema={schema}
       badge="LOCAL BUSINESS PLAYBOOK 2026"
       h1="Local Business Playbook 2026 — Google Maps, AI Search & Reputation"

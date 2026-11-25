@@ -28,15 +28,6 @@ const schema = [
     "Local SEO and Reputation Management platform for Singapore hair salons and beauty studios.",
   areaServed: { "@type": "Country", name: "Singapore" },
 },
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.epicware.ai/industries" },
-    { "@type": "ListItem", position: 3, name: "Hair & Beauty Salons", item: "https://www.epicware.ai/industries/nail-hair-salons" },
-  ],
-},
 ];
 
 const services = [
