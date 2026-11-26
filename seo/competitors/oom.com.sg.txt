@@ -189,6 +189,8 @@ https://www.oom.com.sg/?elementor_library=form-digital-marketing-footer
 https://www.oom.com.sg/?elementor_library=form-footer-page
 https://www.oom.com.sg/?elementor_library=form-popup-page
 https://www.oom.com.sg/?elementor_library=form-resource-page
+https://www.oom.com.sg/?elementor_library=geo-consult-popup
+https://www.oom.com.sg/?elementor_library=geo-new
 https://www.oom.com.sg/?elementor_library=geo-new-page-design
 https://www.oom.com.sg/?elementor_library=geo-readiness-assessment-result
 https://www.oom.com.sg/?elementor_library=geo-result
@@ -211,6 +213,7 @@ https://www.oom.com.sg/?elementor_library=new-site-backup
 https://www.oom.com.sg/?elementor_library=news-loop-item
 https://www.oom.com.sg/?elementor_library=not-found-geo-readiness-assessment-result
 https://www.oom.com.sg/?elementor_library=old-home-page-2025
+https://www.oom.com.sg/?elementor_library=old-seo
 https://www.oom.com.sg/?elementor_library=old-web-design-and-development-page
 https://www.oom.com.sg/?elementor_library=oom-agency-v2026
 https://www.oom.com.sg/?elementor_library=oom-awards-loop
@@ -246,6 +249,7 @@ https://www.oom.com.sg/?elementor_library=smm-service-facebook-video-ad
 https://www.oom.com.sg/?elementor_library=smm-service-instagram-ad
 https://www.oom.com.sg/?elementor_library=team-loop-item
 https://www.oom.com.sg/?elementor_library=team-loop-item-for-one-member
+https://www.oom.com.sg/?elementor_library=team-loop-item-for-two-member
 https://www.oom.com.sg/?elementor_library=template-awards
 https://www.oom.com.sg/?elementor_library=template-oom-at-a-glance
 https://www.oom.com.sg/?elementor_library=template-partner-of-digital-marketing
@@ -1200,6 +1204,7 @@ https://www.oom.com.sg/should-you-hire-an-seo-consultant-or-a-digital-marketing-
 https://www.oom.com.sg/should-you-outsource-your-digital-marketing/
 https://www.oom.com.sg/should-you-use-video-contents-on-your-website/
 https://www.oom.com.sg/singapore-smbs-do-you-really-need-a-website/
+https://www.oom.com.sg/singapore-sme-ai-adoption/
 https://www.oom.com.sg/sitemap/
 https://www.oom.com.sg/skyscraper-content-what-is-it-and-how-can-it-benefit-your-seo/
 https://www.oom.com.sg/skyscraper-content/
@@ -1254,7 +1259,6 @@ https://www.oom.com.sg/team/cherie-tan/
 https://www.oom.com.sg/team/claire-sun/
 https://www.oom.com.sg/team/ian-cheow/
 https://www.oom.com.sg/team/melissa-jane-ho/
-https://www.oom.com.sg/team/melvin-fam/
 https://www.oom.com.sg/team/mindy-pee/
 https://www.oom.com.sg/team/veronica-ang/
 https://www.oom.com.sg/team/wyvan-xu/

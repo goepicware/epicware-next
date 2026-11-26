@@ -21,6 +21,8 @@ const schema = [
   "headline": "Epicware vs BrightLocal — Singapore Local SEO Platform Comparison",
   "description": "Compare Epicware and BrightLocal for Singapore local SEO. GBP optimisation, review management, rank tracking, and bad review removal compared.",
   "datePublished": "2026-06-01",
+  "dateModified": "2026-10-27",
+  "image": { "@type": "ImageObject", "url": "https://www.epicware.ai/assets/HeroBanner-og.jpg", "width": 1448, "height": 1086 },
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "url": "https://www.epicware.ai/comparison/epicware-vs-brightlocal"

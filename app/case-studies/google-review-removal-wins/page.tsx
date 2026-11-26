@@ -20,6 +20,8 @@ const schema = {
   "headline": "Google Review Removal Wins: Five Real Removals Across Five Different Businesses",
   "description": "Five real Google Business Profile removal confirmations, across different Singapore businesses and violation types, won by Epicware's bad review removal service.",
   "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "image": { "@type": "ImageObject", "url": "https://www.epicware.ai/assets/HeroBanner-og.jpg", "width": 1448, "height": 1086 },
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "url": "https://www.epicware.ai/case-studies/google-review-removal-wins"

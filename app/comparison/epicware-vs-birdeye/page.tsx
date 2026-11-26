@@ -21,6 +21,8 @@ const schema = [
   "headline": "Epicware vs Birdeye — Singapore Local SEO & Reputation Management",
   "description": "Compare Epicware and Birdeye for Singapore SMBs. Platform origin, pricing model, bad review removal, and Singapore-specific local SEO features compared.",
   "datePublished": "2026-06-01",
+  "dateModified": "2026-11-09",
+  "image": { "@type": "ImageObject", "url": "https://www.epicware.ai/assets/HeroBanner-og.jpg", "width": 1448, "height": 1086 },
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "url": "https://www.epicware.ai/comparison/epicware-vs-birdeye"

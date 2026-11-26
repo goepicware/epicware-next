@@ -21,6 +21,8 @@ const schema = [
   "headline": "Epicware vs Grade.us — Review Management Platform Comparison",
   "description": "Compare Epicware and Grade.us for review management. Features, pricing, bad review removal, and Singapore market suitability compared.",
   "datePublished": "2026-06-01",
+  "dateModified": "2026-11-09",
+  "image": { "@type": "ImageObject", "url": "https://www.epicware.ai/assets/HeroBanner-og.jpg", "width": 1448, "height": 1086 },
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "url": "https://www.epicware.ai/comparison/epicware-vs-gradeus"
