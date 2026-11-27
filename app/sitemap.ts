@@ -114,7 +114,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/use-cases/manage-multiple-gbp-locations`, lastModified: pageDate("/use-cases/manage-multiple-gbp-locations"), changeFrequency: "monthly", priority: 0.75 },
 
     // Blog hub. Posts are discovered from app/blog/*/page.tsx below
-    // (blogPostPages), so a new post can never be left out of the sitemap.
+    // (discoveredPages), so a new post can never be left out of the sitemap.
     { url: `${BASE}/blog`, lastModified: pageDate("/blog"), changeFrequency: "weekly", priority: 0.8 },
 
     // Guides
@@ -129,13 +129,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/comparison/epicware-vs-yext`, lastModified: pageDate("/comparison/epicware-vs-yext"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/comparison/epicware-vs-gradeus`, lastModified: pageDate("/comparison/epicware-vs-gradeus"), changeFrequency: "monthly", priority: 0.7 },
 
-    // Case studies
-    { url: `${BASE}/case-studies/aesthetic-clinic-seo-singapore`, lastModified: pageDate("/case-studies/aesthetic-clinic-seo-singapore"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/case-studies/restaurant-multi-outlet-growth-singapore`, lastModified: pageDate("/case-studies/restaurant-multi-outlet-growth-singapore"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/case-studies/clinic-review-growth-singapore`, lastModified: pageDate("/case-studies/clinic-review-growth-singapore"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/case-studies/salon-whatsapp-automation`, lastModified: pageDate("/case-studies/salon-whatsapp-automation"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/case-studies/multi-outlet-restaurant-seo-case-study-singapore`, lastModified: pageDate("/case-studies/multi-outlet-restaurant-seo-case-study-singapore"), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/case-studies/hair-salon-seo-singapore`, lastModified: pageDate("/case-studies/hair-salon-seo-singapore"), changeFrequency: "monthly", priority: 0.7 },
+    // Case studies are discovered from app/case-studies/*/page.tsx below
+    // (discoveredPages), same as blog posts.
 
     // Authority pages
     { url: `${BASE}/about`, lastModified: pageDate("/about"), changeFrequency: "monthly", priority: 0.7 },
@@ -225,7 +220,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
-    ...blogPostPages(),
+    ...discoveredPages("blog"),
+    ...discoveredPages("case-studies"),
     ...districtPages,
     ...countryHubPages,
     ...countryServicePages,
@@ -235,28 +231,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
 }
 
 /**
- * Every app/blog/{slug}/page.tsx that is indexable and canonical to itself.
- * Posts marked noindex, or whose canonical points at another URL, are
+ * Every app/{section}/{slug}/page.tsx that is indexable and canonical to
+ * itself. Pages marked noindex, or whose canonical points at another URL, are
  * skipped — the sitemap must only list URLs we want Google to index.
  */
-function blogPostPages(): MetadataRoute.Sitemap {
-  const blogDir = path.join(process.cwd(), "app", "blog");
+function discoveredPages(section: "blog" | "case-studies"): MetadataRoute.Sitemap {
+  const sectionDir = path.join(process.cwd(), "app", section);
   return fs
-    .readdirSync(blogDir, { withFileTypes: true })
+    .readdirSync(sectionDir, { withFileTypes: true })
     .filter((entry) => entry.isDirectory() && !entry.name.startsWith("[") && !entry.name.startsWith("("))
     .map((entry) => entry.name)
     .filter((slug) => {
-      const file = path.join(blogDir, slug, "page.tsx");
+      const file = path.join(sectionDir, slug, "page.tsx");
       if (!fs.existsSync(file)) return false;
       const source = fs.readFileSync(file, "utf-8");
-      if (/index:\s*false|noindex/.test(source)) return false;
+      // Match robots metadata only; a page may mention noindex in its copy.
+      if (/index:\s*false|robots:\s*["'`][^"'`]*noindex/.test(source)) return false;
       const canonical = source.match(/canonical:\s*["'`]([^"'`]+)["'`]/)?.[1];
-      return !canonical || canonical.replace(/\/$/, "") === `${BASE}/blog/${slug}`;
+      return !canonical || canonical.replace(/\/$/, "") === `${BASE}/${section}/${slug}`;
     })
     .sort()
     .map((slug) => ({
-      url: `${BASE}/blog/${slug}`,
-      lastModified: pageDate(`/blog/${slug}`),
+      url: `${BASE}/${section}/${slug}`,
+      lastModified: pageDate(`/${section}/${slug}`),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));

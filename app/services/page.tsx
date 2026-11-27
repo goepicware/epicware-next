@@ -59,7 +59,7 @@ const REPUTATION_SERVICES = [
   {
     name: "Bad Review Removal ⭐",
     href: "/locations/singapore/review-removal",
-    description: "Remove fake, malicious, or policy-violating Google reviews. Pay only on success.",
+    description: "Remove fake, malicious, or policy-violating Google reviews. $200 upfront per review, refunded in full if not removed within 3 months.",
   },
   {
     name: "Review Generation Campaigns",

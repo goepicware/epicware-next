@@ -289,6 +289,12 @@ const WONT_DO = [
 
 const CASE_STUDIES = [
   {
+    tag: "Furniture & mattress retail · 1 showroom",
+    title: "From 1 Keyword to 22: How a Singapore Furniture Store Won Google, Maps and AI Search",
+    stats: ["1 → 22 page-one keywords", "7 #1 rankings", "3 AI Overview citations"],
+    href: "/case-studies/furniture-store-seo-singapore",
+  },
+  {
     tag: "Medical Aesthetics · 2 outlets",
     title: "Top 3 in 60 Days: How a Singapore Medical Aesthetic Clinic Won Orchard and Hougang",
     stats: ["#1 Map Pack, Hougang", "#1 ChatGPT recommendation, Orchard", "+25% calls & enquiries"],
@@ -1061,8 +1067,8 @@ export default function SeoAgencySingaporePage() {
           </div>
           <p className="text-sm text-muted-foreground">
             {/* "5 markets" removed — Epicware is Singapore-built with no confirmed active presence in 4 other markets; don't claim one.
-                "5 published case studies" corrected to 6 — actual count of app/case-studies/* subdirectories. */}
-            {PROOF.outletsManaged.value} outlets managed · 6 dated #1 results · 6 published case studies
+                "5 published case studies" corrected to 8 — actual count of app/case-studies/* subdirectories. */}
+            {PROOF.outletsManaged.value} outlets managed · 6 dated #1 results · 8 published case studies
           </p>
         </div>
       </section>

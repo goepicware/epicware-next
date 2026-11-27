@@ -151,7 +151,14 @@ export default function RetailStoresPage() {
           sends WhatsApp or email requests after a purchase, converting satisfied
           customers into reviewers. EpicSocial manages social posts and GBP posts
           showcasing new stock, promotions, and seasonal collections. For fake or
-          competitor-posted reviews, Bad Review Removal handles the removal process.
+          competitor-posted reviews, Bad Review Removal handles the removal process. See{" "}
+          <Link
+            href="/case-studies/furniture-store-seo-singapore"
+            className="text-primary font-medium hover:underline"
+          >
+            how a Singapore furniture store went from 1 to 22 page-one keywords
+          </Link>{" "}
+          in three months.
         </p>
       }
       services={services}

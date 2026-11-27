@@ -161,6 +161,11 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         href: "/case-studies/aesthetic-clinic-seo-singapore",
         stat: "Clinic case study",
       },
+      {
+        title: "Furniture Store SEO Case Study Singapore",
+        href: "/case-studies/furniture-store-seo-singapore",
+        stat: "1 → 22 page-one keywords in 3 months",
+      },
     ],
     faqs: [
       {
@@ -657,7 +662,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     outcomes: [
       "Each flagged review assessed against Google's actual content policies before anything is submitted",
       "Formal removal requests filed through Google's official channels, with escalation if the first request is rejected",
-      "A pay-only-if-successful structure, so the incentive is aligned with actually getting the review removed",
+      "A flat fee per review, paid upfront and refunded in full if the review isn't removed within 3 months",
       "Genuine negative reviews that don't violate policy left alone — removal isn't a tool for suppressing fair criticism",
     ],
     process: [
@@ -677,9 +682,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
           "If the first request is rejected, we escalate rather than stopping — first requests don't always succeed even for genuine violations.",
       },
       {
-        title: "Pay only if removed",
+        title: "Removed or refunded",
         description:
-          "You're charged per review, refunded in full if it isn't successfully removed — we don't get paid for trying, only for the outcome.",
+          "You pay per review upfront, so work starts straight away. If the review isn't removed within 3 months, you get a full refund.",
       },
     ],
     software: {
@@ -709,7 +714,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       {
         question: "What happens if the review isn't removed?",
         answer:
-          "You're refunded in full. The fee is tied to the outcome, not the attempt.",
+          "You get a full refund if the review isn't removed within 3 months of paying. The fee is charged upfront when the case begins.",
       },
       {
         question: "How long does removal take?",
