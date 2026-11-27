@@ -32,6 +32,8 @@ const articleSchema = {
   description:
     "How Epicware took a Singapore furniture and mattress showroom from 1 to 22 page-one keywords in 3 months, with Google AI Overview citations.",
   datePublished: "2026-11-12",
+  dateModified: "2026-11-23",
+  image: { "@type": "ImageObject", url: "https://www.epicware.ai/assets/HeroBanner-og.jpg", width: 1448, height: 1086 },
   author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
   url: "https://www.epicware.ai/case-studies/furniture-store-seo-singapore",

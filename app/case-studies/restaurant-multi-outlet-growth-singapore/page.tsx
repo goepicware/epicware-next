@@ -20,6 +20,8 @@ const schema = {
   "headline": "How a Singapore Restaurant Group Grew to 200+ Reviews Per Outlet",
   "description": "How a Singapore F&B group managing 6 outlets grew from 45 to 200+ reviews per outlet, improved Maps rank, and centralised reputation management with Epicware.",
   "datePublished": "2026-06-01",
+  "dateModified": "2026-10-27",
+  "image": { "@type": "ImageObject", "url": "https://www.epicware.ai/assets/HeroBanner-og.jpg", "width": 1448, "height": 1086 },
   "author": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "publisher": { "@type": "Organization", "name": "Epicware Pte. Ltd.", "url": "https://www.epicware.ai" },
   "url": "https://www.epicware.ai/case-studies/restaurant-multi-outlet-growth-singapore"

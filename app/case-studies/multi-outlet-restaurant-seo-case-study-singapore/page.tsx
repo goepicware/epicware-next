@@ -33,6 +33,8 @@ const articleSchema = {
   description:
     "How Epicware grew a 5-outlet Singapore restaurant chain's organic traffic 24%, won #1 Google rankings and AI Overview citations. Real local SEO results.",
   datePublished: "2026-08-30",
+  dateModified: "2026-11-23",
+  image: { "@type": "ImageObject", url: "https://www.epicware.ai/assets/HeroBanner-og.jpg", width: 1448, height: 1086 },
   author: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
   publisher: { "@type": "Organization", name: "Epicware Pte. Ltd.", url: "https://www.epicware.ai" },
   url: "https://www.epicware.ai/case-studies/multi-outlet-restaurant-seo-case-study-singapore",
