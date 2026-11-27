@@ -86,6 +86,7 @@ export default function ImproveGoogleRatingPage() {
       />
 
       <CategoryHero
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Improve Your Google Rating" }]}
         badge="IMPROVE GOOGLE RATING · SINGAPORE"
         h1="Improve Your Google Rating in Singapore — The Two-Part Fix"
         subtitle="A rating below 4.0 costs you customers. Epicware improves your Google rating through two simultaneous actions: removing the reviews that shouldn't be there, and generating more positive reviews from your satisfied customers."

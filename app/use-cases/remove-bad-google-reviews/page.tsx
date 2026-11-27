@@ -83,6 +83,7 @@ export default function RemoveBadGoogleReviewsPage() {
       />
 
       <CategoryHero
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Remove Bad Google Reviews" }]}
         badge="REMOVE BAD REVIEWS · SINGAPORE"
         h1="How to Remove Bad Google Reviews From Your Singapore Business"
         subtitle="Not every negative review deserves to be there. Fake reviews from competitors, policy-violating attacks, and reviews from people who never visited can all be removed. Epicware handles the entire removal process — $200 charged upfront, refunded in full if the review isn't removed within 3 months."

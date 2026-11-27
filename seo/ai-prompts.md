@@ -2,7 +2,7 @@
 
 25 questions a buyer would ask an AI assistant. Weekly: ask ChatGPT, Perplexity, Gemini and Google AI Overviews; record if Epicware is named, what is said, which sources are cited, and anything wrong.
 
-Status 2026-11-09: no checks yet. No AI-tracking tool is connected (Opinly LLM visibility is a paid add-on).
+Status 2026-11-16: still no checks. No AI-tracking tool is connected (Opinly LLM visibility is a paid add-on, confirmed disabled 2026-11-16).
 
 | # | Question |
 |---|---|

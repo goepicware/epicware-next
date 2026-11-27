@@ -28,15 +28,6 @@ const schema = [
     "Local SEO and Reputation Management platform for Singapore car workshops and auto service centres.",
   areaServed: { "@type": "Country", name: "Singapore" },
 },
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.epicware.ai/industries" },
-    { "@type": "ListItem", position: 3, name: "Car Workshops", item: "https://www.epicware.ai/industries/car-workshops" },
-  ],
-},
 ];
 
 const services = [

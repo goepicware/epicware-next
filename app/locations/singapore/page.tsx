@@ -100,6 +100,7 @@ export default function SingaporeHubPage() {
       />
 
       <CategoryHero
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations" }, { label: "Singapore" }]}
         badge="EPICWARE · SINGAPORE"
         h1="Local Business Growth Solutions Across Singapore"
         subtitle={

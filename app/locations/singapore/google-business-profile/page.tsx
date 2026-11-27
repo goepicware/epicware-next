@@ -77,7 +77,6 @@ const schema = {
       },
       publisher: { "@id": "https://www.epicware.ai/#organization" },
       about: { "@id": "https://www.epicware.ai/locations/singapore/google-business-profile#service" },
-      breadcrumb: { "@id": "https://www.epicware.ai/locations/singapore/google-business-profile#breadcrumb" },
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: "https://www.epicware.ai/assets/epicmap-before-after.png",
@@ -127,15 +126,6 @@ const schema = {
         { "@type": "Question", name: "Can you fix a suspended Google Business Profile?", acceptedAnswer: { "@type": "Answer", text: "If your business qualifies for a profile, we find the likely cause, fix it and appeal with evidence such as your ACRA registration. Google decides; it says appeal reviews can take up to five business days." } },
         { "@type": "Question", name: "What happened to Q&A on Google Maps?", acceptedAnswer: { "@type": "Answer", text: "Google phased out Q&A on Business Profiles from late 2025. Its AI now answers customers' questions from your profile, reviews and website, so we keep your profile complete and replies up to date." } },
         { "@type": "Question", name: "What makes the best Google Maps SEO agency in Singapore?", acceptedAnswer: { "@type": "Answer", text: "Look for someone who treats your Google Business Profile as the main asset, not an add-on to website SEO: a documented audit, category and service strategy benchmarked against who already ranks above you, weekly posts and review replies, and a rank grid you can check yourself across your districts. Be wary of anyone who guarantees a #1 Map Pack spot or suggests stuffing keywords into your business name — Google can suspend a profile for that." } },
-      ],
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.epicware.ai/locations/singapore/google-business-profile#breadcrumb",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.epicware.ai/" },
-        { "@type": "ListItem", position: 2, name: "Local SEO Services", item: "https://www.epicware.ai/locations/singapore/local-seo" },
-        { "@type": "ListItem", position: 3, name: "GBP Optimisation", item: "https://www.epicware.ai/locations/singapore/google-business-profile" },
       ],
     },
   ],

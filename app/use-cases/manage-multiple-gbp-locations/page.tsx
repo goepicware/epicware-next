@@ -93,6 +93,7 @@ export default function ManageMultipleGBPLocationsPage() {
       />
 
       <CategoryHero
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Manage Multiple Google Business Profiles" }]}
         badge="MULTI-OUTLET MANAGEMENT · SINGAPORE"
         h1="Manage Multiple Google Business Profiles From One Dashboard"
         subtitle={
