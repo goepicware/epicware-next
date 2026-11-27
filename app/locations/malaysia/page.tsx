@@ -66,7 +66,7 @@ const SERVICES = [
   },
   {
     label: "GBP Post Scheduling",
-    href: "/services/google-business-profile/post-scheduling",
+    href: "/services/google-business-profile",
     description:
       "Weekly AI-generated GBP posts keeping your Malaysian business profile active and ranked.",
   },

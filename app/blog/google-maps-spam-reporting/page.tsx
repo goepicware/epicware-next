@@ -507,7 +507,7 @@ export default function Post() {
             </div>
           </>
         }
-        ctaHref="/services/review-removal/fake-review-removal"
+        ctaHref="/services/review-removal"
         ctaLabel="See Our Fake Review Removal Service"
         ctaContext="Epicware handles evidence-backed removal requests and monitors your listings across every outlet, so spam and fake reviews don't sit there unresolved."
         relatedPosts={[

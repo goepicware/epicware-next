@@ -85,7 +85,7 @@ export default function Page() {
           <p>Epicware&apos;s bad review removal service exists for businesses where the DIY route has failed, where multiple reviews need challenging simultaneously, or where the commercial impact of the review is high enough to justify professional handling.</p>
           <p>The model: $200 per review, charged upfront. If the review isn&apos;t removed within 3 months, you get a full refund. This lets Epicware start work immediately instead of waiting to get paid.</p>
           <p>The service covers: assessment to identify the strongest policy angle, formal submission with correct policy language and supporting evidence, systematic escalation through all available channels, and follow-up until all escalation paths are exhausted.</p>
-          <p>If the reviewer was never a customer at all, ask about <a href="/services/review-removal/fake-review-removal">fake review removal</a>.</p>
+          <p>If the reviewer was never a customer at all, ask about <a href="/services/review-removal">fake review removal</a>.</p>
 
           <h3>What a Successful Removal Actually Looks Like</h3>
           <p>These are real Google Business Profile confirmation emails from removals Epicware has won. Where a client preferred not to have their business name shown, it&apos;s cropped out.</p>
