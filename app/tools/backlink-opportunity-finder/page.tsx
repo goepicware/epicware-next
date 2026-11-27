@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BacklinkTool from "@/components/tools/BacklinkTool";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
 
 export const metadata: Metadata = {
@@ -20,7 +21,17 @@ export default function BacklinkOpportunityFinderPage() {
   return (
     <>
       <h1 className="sr-only">Free Backlink Opportunity Finder</h1>
-      <BacklinkTool />
+      <BacklinkTool
+        header={
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Tools", href: "/tools" },
+              { label: "Backlink Opportunity Finder" },
+            ]}
+          />
+        }
+      />
 
       <section className="py-12 border-t border-border/40">
         <div className="container mx-auto px-6 max-w-3xl">
