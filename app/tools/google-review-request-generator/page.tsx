@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Clock, Heart, CheckCircle2, Users, ArrowRight } from "lucide-react";
 import ReviewRequestGenerator from "@/components/tools/ReviewRequestGenerator";
 import StickyMobileCTA from "@/components/products/StickyMobileCTA";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: { absolute: "Free Google Review Request Generator | Epicware" },
@@ -64,8 +65,17 @@ export default function GoogleReviewRequestGeneratorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
       {/* Hero */}
-      <section className="hero-gradient pt-32 pb-10">
+      <section className="hero-gradient pt-28 pb-10">
         <div className="container mx-auto px-6 max-w-4xl">
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Tools", href: "/tools" },
+                { label: "Review Request Generator" },
+              ]}
+            />
+          </div>
           <div className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/60 border border-border/60 text-sm font-semibold text-foreground">
               Free Tool

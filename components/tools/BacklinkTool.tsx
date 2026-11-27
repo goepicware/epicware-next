@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, type ReactNode } from "react";
 import BacklinkForm from "@/components/backlink/BacklinkForm";
 import BacklinkLoading from "@/components/backlink/BacklinkLoading";
 import BacklinkResults from "@/components/backlink/BacklinkResults";
@@ -11,7 +11,7 @@ import { hashInputs } from "@/components/backlink/types";
 type PageState = "form" | "generating" | "results";
 const CACHE_PREFIX = "backlink_cache_";
 
-export default function BacklinkTool() {
+export default function BacklinkTool({ header }: { header?: ReactNode }) {
   const [state, setState] = useState<PageState>("form");
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
   const [formInputs, setFormInputs] = useState<FormInputs | null>(null);
@@ -75,7 +75,8 @@ export default function BacklinkTool() {
     : "backlink_status_default";
 
   return (
-    <div className="container mx-auto px-4 lg:px-8 pt-32 pb-20">
+    <div className="container mx-auto px-4 lg:px-8 pt-28 pb-20">
+      {header && <div className="mb-6">{header}</div>}
       {state === "form" && <BacklinkForm onSubmit={handleSubmit} />}
       {state === "generating" && <BacklinkLoading />}
       {state === "results" && dashboardData && formInputs && (
